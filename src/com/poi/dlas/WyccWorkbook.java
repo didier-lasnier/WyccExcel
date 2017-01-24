@@ -27,6 +27,11 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import com.dlas.dao.h2db;
 import com.dlas.dao.hsqltext;
 
+import org.hibernate.HibernateException ;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
 
 public class WyccWorkbook {
       public  XSSFWorkbook currentworkbook;
@@ -202,7 +207,7 @@ public class WyccWorkbook {
 			  return number; 
 		  	} 
 		 } 
-	public void readData(XSSFWorkbook workbook,int sheetNumber,int fromRow ,Statement stmt  ){
+	public void readData(XSSFWorkbook workbook,int sheetNumber,int fromRow ,Statement stmt  ) throws SQLException{
 		// on recupére la ligne
 		
 		XSSFRow currentRow = workbook.getSheetAt(sheetNumber).getRow(fromRow);
@@ -253,7 +258,13 @@ public class WyccWorkbook {
 			}
 			
 		 }
-
+		 h2db  db = new h2db();
+		 try {
+			Session session =db.getSession();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
