@@ -1,0 +1,2766 @@
+[2017-01-19 22:28:30,577]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-19 22:44:39,849]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-19 22:44:40,008]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-19 22:44:40,010]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-19 22:44:44,339]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-01-19 22:44:44,521]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp5264626019891554378.tmp
+[2017-01-19 22:44:44,540]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-01-19 22:44:44,541]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-01-19 22:44:44,541]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-01-19 22:44:45,266]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-01-19 22:44:45,372]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-01-19 22:44:45,497]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-01-19 22:44:45,596]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-01-19 22:44:46,553]-[AWT-EventQueue-0] INFO  wycc  - DONE !
+[2017-01-19 22:44:46,591]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-01-19 22:44:46,592]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-01-19 22:44:46,594]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-01-19 22:44:46,596]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-01-19 22:45:09,603]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-01-19 22:45:10,649]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/documentstest/TEST10.XLSX
+[2017-01-19 23:32:34,994]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-19 23:32:35,121]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-19 23:32:35,122]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-19 23:32:38,444]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-01-19 23:32:38,568]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp9095082282901505855.tmp
+[2017-01-19 23:32:38,588]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-01-19 23:32:38,588]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-01-19 23:32:38,588]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-01-19 23:32:39,027]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-01-19 23:32:39,078]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-01-19 23:32:39,206]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-01-19 23:32:39,257]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-01-19 23:32:39,912]-[AWT-EventQueue-0] INFO  wycc  - DONE !
+[2017-01-19 23:32:39,957]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-01-19 23:32:39,961]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-01-19 23:32:39,979]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-01-19 23:32:39,981]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-01-19 23:32:48,325]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-01-19 23:32:49,357]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/TEst11.xlsx
+[2017-01-20 00:10:57,944]-[main] INFO  wycc  - CelluleTest
+[2017-01-20 00:22:50,603]-[main] INFO  wycc  - CelluleTest
+[2017-01-20 00:26:02,936]-[main] INFO  wycc  - CelluleTest
+[2017-01-20 00:26:02,978]-[main] INFO  wycc  - {}
+[2017-01-20 00:35:20,148]-[main] INFO  wycc  - Cellule
+[2017-01-20 00:35:20,276]-[main] INFO  wycc  - {}
+[2017-01-20 00:39:37,773]-[main] INFO  wycc  - CelluleClient:
+[2017-01-20 00:39:37,914]-[main] INFO  wycc  - {}
+[2017-01-21 17:46:28,613]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 17:46:28,792]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 17:46:28,793]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 17:48:21,844]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 17:48:21,926]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 17:48:21,928]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 17:56:09,014]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 17:56:09,094]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 17:56:09,095]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 17:59:05,506]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 17:59:08,381]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 17:59:08,384]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 18:39:55,253]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 18:39:57,931]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 18:39:57,936]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 18:42:46,433]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 18:42:48,143]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 18:42:48,147]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 18:45:25,652]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 18:45:32,374]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 18:45:32,377]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 19:03:05,633]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 19:03:05,698]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 19:03:05,699]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 19:04:26,964]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 19:04:27,030]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 19:04:27,031]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 19:04:50,805]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 19:04:50,893]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 19:04:50,895]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 19:07:12,004]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 19:07:14,807]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 19:07:14,810]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 19:16:47,138]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 19:17:00,390]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 19:17:00,394]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 19:20:48,084]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 19:20:50,996]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 19:20:50,999]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 21:02:00,054]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 21:02:01,996]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 21:02:01,999]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-21 21:03:29,326]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-21 21:03:32,676]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-21 21:03:32,680]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 12:44:25,332]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 12:44:27,680]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 12:44:27,686]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 12:44:37,485]-[AWT-EventQueue-0] INFO  wycc  - AbsolutePath : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./WYCC.xlsx
+[2017-01-22 12:44:50,366]-[AWT-EventQueue-0] INFO  wycc  - CanonicalPath /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/WYCC.xlsx
+[2017-01-22 12:45:02,145]-[AWT-EventQueue-0] INFO  wycc  - Path /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./WYCC.xlsx
+[2017-01-22 12:45:09,062]-[AWT-EventQueue-0] INFO  wycc  - Parent /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.
+[2017-01-22 21:52:08,091]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 21:52:09,830]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 21:52:09,833]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 21:52:21,827]-[AWT-EventQueue-0] INFO  wycc  - AbsolutePath : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./WYCC.xlsx
+[2017-01-22 21:52:23,064]-[AWT-EventQueue-0] INFO  wycc  - CanonicalPath /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/WYCC.xlsx
+[2017-01-22 21:52:28,003]-[AWT-EventQueue-0] INFO  wycc  - Path /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./WYCC.xlsx
+[2017-01-22 21:52:29,388]-[AWT-EventQueue-0] INFO  wycc  - Parent /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.
+[2017-01-22 21:59:16,174]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 21:59:17,650]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 21:59:17,653]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 21:59:27,335]-[AWT-EventQueue-0] INFO  wycc  - AbsolutePath : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./WYCC.xlsx
+[2017-01-22 21:59:28,212]-[AWT-EventQueue-0] INFO  wycc  - CanonicalPath /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/WYCC.xlsx
+[2017-01-22 21:59:30,201]-[AWT-EventQueue-0] INFO  wycc  - Path /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./WYCC.xlsx
+[2017-01-22 21:59:32,226]-[AWT-EventQueue-0] INFO  wycc  - Parent /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.
+[2017-01-22 22:01:49,783]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 22:01:51,833]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 22:01:51,840]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 22:01:57,019]-[AWT-EventQueue-0] INFO  wycc  - AbsolutePath : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./WYCC.xlsx
+[2017-01-22 22:01:57,591]-[AWT-EventQueue-0] INFO  wycc  - CanonicalPath /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/WYCC.xlsx
+[2017-01-22 22:01:58,233]-[AWT-EventQueue-0] INFO  wycc  - Path /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./WYCC.xlsx
+[2017-01-22 22:01:59,437]-[AWT-EventQueue-0] INFO  wycc  - Parent /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.
+[2017-01-22 22:04:17,555]-[AWT-EventQueue-0] INFO  wycc  - AbsolutePath : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./WYCC.xlsx
+[2017-01-22 22:04:19,165]-[AWT-EventQueue-0] INFO  wycc  - CanonicalPath /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/WYCC.xlsx
+[2017-01-22 22:04:19,942]-[AWT-EventQueue-0] INFO  wycc  - Path /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./WYCC.xlsx
+[2017-01-22 22:08:23,749]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 22:08:23,841]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 22:08:23,842]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 22:09:22,185]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 22:09:22,266]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 22:09:22,267]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 22:09:26,773]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,777]-[AWT-EventQueue-0] INFO  wycc  - rating
+[2017-01-22 22:09:26,777]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,777]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,778]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,778]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,778]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,778]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,780]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,781]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,781]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,781]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,781]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,783]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,784]-[AWT-EventQueue-0] INFO  wycc  - EUR
+[2017-01-22 22:09:26,784]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,784]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,784]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,784]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,785]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,785]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,785]-[AWT-EventQueue-0] INFO  wycc  - DAILY
+[2017-01-22 22:09:26,785]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,785]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,786]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,794]-[AWT-EventQueue-0] INFO  wycc  - 0.12
+[2017-01-22 22:09:26,795]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 22:09:26,795]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,795]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 22:09:26,795]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 22:09:26,796]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,796]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,796]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 22:09:26,796]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,796]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 22:09:26,797]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,797]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 22:09:26,797]-[AWT-EventQueue-0] INFO  wycc  - Period
+[2017-01-22 22:09:26,797]-[AWT-EventQueue-0] INFO  wycc  - DAILY
+[2017-01-22 22:09:26,797]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,798]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,798]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,798]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 22:09:26,798]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,800]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 22:09:26,800]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 22:09:26,800]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,800]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,801]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,801]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,801]-[AWT-EventQueue-0] INFO  wycc  - Period
+[2017-01-22 22:09:26,801]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,801]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,801]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,802]-[AWT-EventQueue-0] INFO  wycc  - Annual
+[2017-01-22 22:09:26,802]-[AWT-EventQueue-0] INFO  wycc  - Period
+[2017-01-22 22:09:26,802]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,802]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,803]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,803]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,803]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,803]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 22:09:26,804]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 22:09:26,804]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,804]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 22:09:26,805]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,805]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,805]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 22:09:26,805]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,805]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,806]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,806]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,807]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,807]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,807]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 22:09:26,808]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 22:09:26,808]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,808]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 22:09:26,808]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,808]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,809]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,809]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,810]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,811]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,811]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,812]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 22:09:26,812]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 22:09:26,813]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,814]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 22:09:26,814]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,814]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,815]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,815]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,816]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,816]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,816]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,816]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 22:09:26,817]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 22:09:26,817]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,817]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 22:09:26,817]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,818]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,818]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,818]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,819]-[AWT-EventQueue-0] INFO  wycc  - Rate
+[2017-01-22 22:09:26,819]-[AWT-EventQueue-0] INFO  wycc  - WYCC Commission
+[2017-01-22 22:09:26,820]-[AWT-EventQueue-0] INFO  wycc  - Cie Fees
+[2017-01-22 22:09:26,820]-[AWT-EventQueue-0] INFO  wycc  - Total
+[2017-01-22 22:09:26,822]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,822]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,823]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,823]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,823]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,823]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,824]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,824]-[AWT-EventQueue-0] INFO  wycc  - Rate
+[2017-01-22 22:09:26,824]-[AWT-EventQueue-0] INFO  wycc  - Total
+[2017-01-22 22:09:26,824]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,825]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,825]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,825]-[AWT-EventQueue-0] INFO  wycc  - Rate
+[2017-01-22 22:09:26,826]-[AWT-EventQueue-0] INFO  wycc  - Total
+[2017-01-22 22:09:26,826]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,826]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,826]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,826]-[AWT-EventQueue-0] INFO  wycc  - Rate
+[2017-01-22 22:09:26,826]-[AWT-EventQueue-0] INFO  wycc  - Total
+[2017-01-22 22:09:26,827]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,827]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:09:26,827]-[AWT-EventQueue-0] INFO  wycc  - Rate
+[2017-01-22 22:09:26,827]-[AWT-EventQueue-0] INFO  wycc  - Total
+[2017-01-22 22:09:26,827]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:13:49,920]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 22:13:49,980]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 22:13:49,981]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 22:14:54,695]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 22:14:54,793]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 22:14:54,794]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 22:16:13,925]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 22:16:17,327]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 22:16:17,330]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 22:19:32,870]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 22:19:32,936]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 22:19:32,937]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 22:21:05,995]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 22:21:06,080]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 22:21:06,081]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 22:32:46,353]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 22:32:48,349]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 22:32:48,354]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 22:33:06,366]-[AWT-EventQueue-0] INFO  wycc  - 131
+[2017-01-22 22:53:24,148]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 22:53:24,275]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 22:53:24,279]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 22:53:46,780]-[AWT-EventQueue-0] INFO  wycc  - 19
+[2017-01-22 22:53:48,107]-[AWT-EventQueue-0] INFO  wycc  - 131
+[2017-01-22 22:57:43,184]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 22:57:43,295]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 22:57:43,299]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 22:58:03,342]-[AWT-EventQueue-0] INFO  wycc  - 19
+[2017-01-22 22:58:04,084]-[AWT-EventQueue-0] INFO  wycc  - 131
+[2017-01-22 22:58:09,841]-[AWT-EventQueue-0] INFO  wycc  - TOTAL GLOBAL WYCC
+[2017-01-22 22:58:27,080]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:35,113]-[AWT-EventQueue-0] INFO  wycc  - 67079.68759772876
+[2017-01-22 22:58:39,622]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,623]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,623]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,623]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,624]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,624]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,624]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,624]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,627]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,627]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,627]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,627]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,628]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,628]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,628]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,628]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,629]-[AWT-EventQueue-0] INFO  wycc  - 33.198904109589044
+[2017-01-22 22:58:39,629]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,629]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,629]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,630]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,630]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,630]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,630]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,630]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,631]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,631]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,631]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,631]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,635]-[AWT-EventQueue-0] INFO  wycc  - 9841.75
+[2017-01-22 22:58:39,635]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,635]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,635]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,636]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,637]-[AWT-EventQueue-0] INFO  wycc  - 74780.360276136
+[2017-01-22 22:58:39,639]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,639]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,640]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,640]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,640]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,640]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,640]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,640]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,640]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,641]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,641]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,641]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,641]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,642]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,642]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,642]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,642]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,642]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,643]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,643]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,643]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,643]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,643]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,644]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,644]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,644]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,644]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,644]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,644]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,645]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,645]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,645]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,645]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,645]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,647]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,647]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,647]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,647]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,648]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,648]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,648]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,649]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,649]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,649]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,649]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,651]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 22:58:39,651]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,652]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,652]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,653]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,653]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,653]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,653]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,654]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,654]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,654]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,654]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,654]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,654]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,655]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,655]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,655]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,655]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,655]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,655]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,656]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,656]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,656]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,656]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,656]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,656]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,657]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,657]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 22:58:39,657]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:39,759]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 23:05:39,846]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 23:05:39,847]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 23:05:45,230]-[AWT-EventQueue-0] INFO  wycc  - 19
+[2017-01-22 23:05:45,230]-[AWT-EventQueue-0] INFO  wycc  - 131
+[2017-01-22 23:05:45,237]-[AWT-EventQueue-0] INFO  wycc  - TOTAL GLOBAL WYCC
+[2017-01-22 23:05:45,237]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,244]-[AWT-EventQueue-0] INFO  wycc  - 67079.68759772876
+[2017-01-22 23:05:45,244]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,244]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,246]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,246]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,247]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,247]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,247]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,248]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,249]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,250]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,250]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,250]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,250]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,254]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,254]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,255]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,256]-[AWT-EventQueue-0] INFO  wycc  - 33.198904109589044
+[2017-01-22 23:05:45,258]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,258]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,258]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,258]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,259]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,259]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,259]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,259]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,260]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,261]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,261]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,261]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,262]-[AWT-EventQueue-0] INFO  wycc  - 9841.75
+[2017-01-22 23:05:45,262]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,263]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,263]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,263]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,264]-[AWT-EventQueue-0] INFO  wycc  - 74780.360276136
+[2017-01-22 23:05:45,265]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,266]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,266]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,266]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,266]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,266]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,267]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,267]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,268]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,268]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,268]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,268]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,268]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,269]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,269]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,269]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,269]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,271]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,271]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,271]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,272]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,272]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,272]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,272]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,272]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,273]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,273]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,273]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,273]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,274]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,274]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,274]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,275]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,275]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,275]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,275]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,275]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,275]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,276]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,276]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,276]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,276]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,276]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,276]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,276]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,277]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:05:45,277]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,277]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,278]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,278]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,278]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,278]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,278]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,279]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,279]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,279]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,279]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,280]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,280]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,280]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,280]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,280]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,281]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,281]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,281]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,281]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,281]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,281]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,281]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,282]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,282]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,282]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,282]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,282]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,282]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:05:45,282]-[AWT-EventQueue-0] INFO  wycc  - 131
+[2017-01-22 23:05:45,283]-[AWT-EventQueue-0] INFO  wycc  - Client:
+[2017-01-22 23:05:45,283]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,283]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,283]-[AWT-EventQueue-0] INFO  wycc  - UVEA MARINE SERVICES
+[2017-01-22 23:05:45,283]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,284]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,284]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,284]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,284]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,285]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,286]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,286]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,286]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,286]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,286]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,286]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,287]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,287]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,287]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,287]-[AWT-EventQueue-0] INFO  wycc  - TOTAL WYCC
+[2017-01-22 23:05:45,287]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,287]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,288]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,290]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,291]-[AWT-EventQueue-0] INFO  wycc  - 271194.0258461545
+[2017-01-22 23:05:45,291]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,292]-[AWT-EventQueue-0] INFO  wycc  - 27109.367163076804
+[2017-01-22 23:05:45,293]-[AWT-EventQueue-0] INFO  wycc  - 265760.00990769215
+[2017-01-22 23:05:45,295]-[AWT-EventQueue-0] INFO  wycc  - 239184.10891692172
+[2017-01-22 23:05:45,296]-[AWT-EventQueue-0] INFO  wycc  - 248751.40927360236
+[2017-01-22 23:05:45,297]-[AWT-EventQueue-0] INFO  wycc  - 8690.0
+[2017-01-22 23:05:45,297]-[AWT-EventQueue-0] INFO  wycc  - 257441.3692736025
+[2017-01-22 23:05:45,298]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,298]-[AWT-EventQueue-0] INFO  wycc  - 64889.33143334606
+[2017-01-22 23:05:45,299]-[AWT-EventQueue-0] INFO  wycc  - 2190.356164383561
+[2017-01-22 23:05:45,299]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,299]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,300]-[AWT-EventQueue-0] INFO  wycc  - 67079.68759772876
+[2017-01-22 23:05:45,301]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,301]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,301]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,301]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,301]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,301]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,301]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,303]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,304]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,304]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,304]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,304]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,305]-[AWT-EventQueue-0] INFO  wycc  - 33.198904109589044
+[2017-01-22 23:05:45,305]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,305]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,305]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,306]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,306]-[AWT-EventQueue-0] INFO  wycc  - 9841.75
+[2017-01-22 23:05:45,306]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,306]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,306]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,306]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,306]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,307]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,307]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,307]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,307]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,307]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,308]-[AWT-EventQueue-0] INFO  wycc  - 2649.318859079997
+[2017-01-22 23:05:45,308]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,308]-[AWT-EventQueue-0] INFO  wycc  - 2649.318859079997
+[2017-01-22 23:05:45,308]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,308]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,309]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,309]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,309]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,309]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,309]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,309]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,310]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,310]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,310]-[AWT-EventQueue-0] INFO  wycc  - 19672.909549742417
+[2017-01-22 23:05:45,310]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,310]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,311]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,311]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,311]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,311]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,311]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,311]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,311]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,312]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,312]-[AWT-EventQueue-0] INFO  wycc  - 18837.077723793427
+[2017-01-22 23:05:45,313]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,313]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,313]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,313]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,313]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,313]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,314]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,314]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,314]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,314]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,314]-[AWT-EventQueue-0] INFO  wycc  - 33621.05414352015
+[2017-01-22 23:05:45,314]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,314]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,315]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,315]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,315]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,315]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:05:45,315]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,315]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,315]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,315]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,316]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,316]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,316]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,316]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,316]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,316]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,316]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,316]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,316]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,317]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,317]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,317]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,317]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,317]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,317]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,317]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,317]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,318]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,318]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,318]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:05:45,318]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:05:45,319]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,319]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,319]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,320]-[AWT-EventQueue-0] INFO  wycc  - Certificate N 
+[2017-01-22 23:05:45,321]-[AWT-EventQueue-0] INFO  wycc  - 12456.0
+[2017-01-22 23:05:45,321]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,322]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,322]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,322]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,322]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,322]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,323]-[AWT-EventQueue-0] INFO  wycc  - Quarterly date:
+[2017-01-22 23:05:45,323]-[AWT-EventQueue-0] INFO  wycc  - 7/1/13
+[2017-01-22 23:05:45,324]-[AWT-EventQueue-0] INFO  wycc  - 9/30/13
+[2017-01-22 23:05:45,325]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,325]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,325]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,325]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,326]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,327]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,327]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,327]-[AWT-EventQueue-0] INFO  wycc  - Employer Contributions
+[2017-01-22 23:05:45,327]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,327]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,327]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,328]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,328]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,328]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,328]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,328]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,328]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,328]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,329]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,329]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,329]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,329]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,329]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,329]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,330]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,330]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,330]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,330]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,331]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,331]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,331]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,331]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,331]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,331]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,331]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,331]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,331]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,332]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,332]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,332]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,332]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,332]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,332]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,332]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,332]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,333]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,334]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,334]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,334]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,334]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,334]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,334]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,334]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,335]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,335]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,335]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,336]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,336]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,336]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,336]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,336]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,336]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,336]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,337]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,337]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,337]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,337]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,337]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,337]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,337]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,338]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,338]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,338]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,338]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,338]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,338]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,338]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,339]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,339]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,339]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,339]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,339]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,339]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,339]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,340]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,340]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,340]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,340]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,340]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,340]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,340]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,340]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,341]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,341]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,341]-[AWT-EventQueue-0] INFO  wycc  - Employee Contributions
+[2017-01-22 23:05:45,342]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,342]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,342]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,342]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,342]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,342]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,342]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,342]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,342]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,342]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,343]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,343]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,343]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,343]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,343]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,343]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,343]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,343]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,343]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,343]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,344]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,344]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,344]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,344]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:05:45,344]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:05:45,344]-[AWT-EventQueue-0] INFO  wycc  - Reference Number
+[2017-01-22 23:05:45,344]-[AWT-EventQueue-0] INFO  wycc  - Type of Position
+[2017-01-22 23:05:45,345]-[AWT-EventQueue-0] INFO  wycc  - Position
+[2017-01-22 23:05:45,345]-[AWT-EventQueue-0] INFO  wycc  - Name, Surname
+[2017-01-22 23:05:45,345]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,345]-[AWT-EventQueue-0] INFO  wycc  - Vessel or Corporate
+[2017-01-22 23:05:45,345]-[AWT-EventQueue-0] INFO  wycc  - Crew Manning agency
+[2017-01-22 23:05:45,347]-[AWT-EventQueue-0] INFO  wycc  - Insurance Status
+[2017-01-22 23:05:45,347]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,348]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,348]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,348]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,349]-[AWT-EventQueue-0] INFO  wycc  - Start Date
+[2017-01-22 23:05:45,350]-[AWT-EventQueue-0] INFO  wycc  - End Date
+[2017-01-22 23:05:45,353]-[AWT-EventQueue-0] INFO  wycc  - Currency
+[2017-01-22 23:05:45,353]-[AWT-EventQueue-0] INFO  wycc  - Nb of Months
+[2017-01-22 23:05:45,353]-[AWT-EventQueue-0] INFO  wycc  - Nb of Days
+[2017-01-22 23:05:45,353]-[AWT-EventQueue-0] INFO  wycc  - Salary July      
+[2017-01-22 23:05:45,353]-[AWT-EventQueue-0] INFO  wycc  - Salary August      
+[2017-01-22 23:05:45,354]-[AWT-EventQueue-0] INFO  wycc  - Salary September
+[2017-01-22 23:05:45,354]-[AWT-EventQueue-0] INFO  wycc  - TOTAL Salaries
+[2017-01-22 23:05:45,354]-[AWT-EventQueue-0] INFO  wycc  - Health
+[2017-01-22 23:05:45,354]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,354]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,354]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,354]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,354]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,355]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,355]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,355]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,355]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,355]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,355]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,356]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,356]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,356]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,367]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,367]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,367]-[AWT-EventQueue-0] INFO  wycc  - Assistance & Repatriation
+[2017-01-22 23:05:45,367]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,367]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,367]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,367]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,369]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,370]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,370]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,370]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,370]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,370]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,371]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,371]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,371]-[AWT-EventQueue-0] INFO  wycc  - Health Family
+[2017-01-22 23:05:45,371]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,371]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,372]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,372]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,372]-[AWT-EventQueue-0] INFO  wycc  -   LOL after accident
+[2017-01-22 23:05:45,372]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,372]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,372]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,372]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,372]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,373]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,373]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,373]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,373]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,373]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,373]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,373]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,373]-[AWT-EventQueue-0] INFO  wycc  - LOL after Accident & illness
+[2017-01-22 23:05:45,374]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,374]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,374]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,374]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,374]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,374]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,374]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,374]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,374]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,375]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,375]-[AWT-EventQueue-0] INFO  wycc  - PTD after Accident & illness
+[2017-01-22 23:05:45,375]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,375]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,376]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,376]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,376]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,376]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,376]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,376]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,376]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,376]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,376]-[AWT-EventQueue-0] INFO  wycc  - TTD after accident and illness
+[2017-01-22 23:05:45,376]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,376]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,377]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,377]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,378]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,381]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,381]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,381]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,382]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,383]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,383]-[AWT-EventQueue-0] INFO  wycc  - Retirement Plan
+[2017-01-22 23:05:45,383]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,383]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,383]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,383]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,383]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,383]-[AWT-EventQueue-0] INFO  wycc  - Health 
+Assistance & Repatriation
+[2017-01-22 23:05:45,384]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,384]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,384]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,384]-[AWT-EventQueue-0] INFO  wycc  - LOL & PTD after accident
+[2017-01-22 23:05:45,384]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,384]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,387]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,388]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,388]-[AWT-EventQueue-0] INFO  wycc  - LOL after Accident & illness
+[2017-01-22 23:05:45,396]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,398]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,399]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,399]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,399]-[AWT-EventQueue-0] INFO  wycc  - TTD after accident and illness
+[2017-01-22 23:05:45,399]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,400]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,400]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,402]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,403]-[AWT-EventQueue-0] INFO  wycc  - Retirement Plan
+[2017-01-22 23:05:45,403]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,403]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,404]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,404]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,404]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:05:45,404]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:05:45,404]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,404]-[AWT-EventQueue-0] INFO  wycc  - officer
+[2017-01-22 23:05:45,404]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,404]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,404]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,404]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,404]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,453]-[AWT-EventQueue-0] INFO  wycc  - Period Covered
+Yearly, Working Period, Private Life, On-duty+on-leave
+[2017-01-22 23:05:45,454]-[AWT-EventQueue-0] INFO  wycc  - Single or family
+[2017-01-22 23:05:45,454]-[AWT-EventQueue-0] INFO  wycc  - Nationality
+[2017-01-22 23:05:45,454]-[AWT-EventQueue-0] INFO  wycc  - Country of residence
+[2017-01-22 23:05:45,454]-[AWT-EventQueue-0] INFO  wycc  - Number of Children
+[2017-01-22 23:05:45,454]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,455]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,455]-[AWT-EventQueue-0] INFO  wycc  - USD
+[2017-01-22 23:05:45,455]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,455]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,455]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,455]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,455]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,455]-[AWT-EventQueue-0] INFO  wycc  - Benefits
+[2017-01-22 23:05:45,455]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,455]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,456]-[AWT-EventQueue-0] INFO  wycc  - Formula
+[2017-01-22 23:05:45,456]-[AWT-EventQueue-0] INFO  wycc  - Cie Annual premium without commission
+[2017-01-22 23:05:45,456]-[AWT-EventQueue-0] INFO  wycc  - discount or Increase
+[2017-01-22 23:05:45,456]-[AWT-EventQueue-0] INFO  wycc  - Commission
+[2017-01-22 23:05:45,456]-[AWT-EventQueue-0] INFO  wycc  - Cie Premium HT + commission
+[2017-01-22 23:05:45,456]-[AWT-EventQueue-0] INFO  wycc  -  Cie Premium HT with discount 
+[2017-01-22 23:05:45,456]-[AWT-EventQueue-0] INFO  wycc  - Cie Annual Premium +Tax discount
+[2017-01-22 23:05:45,456]-[AWT-EventQueue-0] INFO  wycc  - WYCC Annual Fees
+[2017-01-22 23:05:45,456]-[AWT-EventQueue-0] INFO  wycc  - Client Annual Premium without surcom +Tax
+[2017-01-22 23:05:45,457]-[AWT-EventQueue-0] INFO  wycc  - WYCC Surcom
+[2017-01-22 23:05:45,457]-[AWT-EventQueue-0] INFO  wycc  - Cie  Premium for period withTax
+[2017-01-22 23:05:45,457]-[AWT-EventQueue-0] INFO  wycc  - WYCC period Fees
+[2017-01-22 23:05:45,457]-[AWT-EventQueue-0] INFO  wycc  - Client Premium for period without surcom + Tax
+[2017-01-22 23:05:45,457]-[AWT-EventQueue-0] INFO  wycc  - WYCC Period Surcom
+[2017-01-22 23:05:45,457]-[AWT-EventQueue-0] INFO  wycc  - Client Premium for period
+[2017-01-22 23:05:45,457]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,457]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,457]-[AWT-EventQueue-0] INFO  wycc  - Formula
+[2017-01-22 23:05:45,458]-[AWT-EventQueue-0] INFO  wycc  - Cie Annual premium without commission
+[2017-01-22 23:05:45,458]-[AWT-EventQueue-0] INFO  wycc  - Commission
+[2017-01-22 23:05:45,458]-[AWT-EventQueue-0] INFO  wycc  - Cie Premium HT + commission
+[2017-01-22 23:05:45,458]-[AWT-EventQueue-0] INFO  wycc  -  Cie Premium HT with discount 
+[2017-01-22 23:05:45,458]-[AWT-EventQueue-0] INFO  wycc  - Cie Annual Premium +Tax discount
+[2017-01-22 23:05:45,459]-[AWT-EventQueue-0] INFO  wycc  - WYCC Annual Fees
+[2017-01-22 23:05:45,461]-[AWT-EventQueue-0] INFO  wycc  - Client Annual Premium +Tax
+[2017-01-22 23:05:45,461]-[AWT-EventQueue-0] INFO  wycc  - Cie  Premium for period withTax
+[2017-01-22 23:05:45,461]-[AWT-EventQueue-0] INFO  wycc  - WYCC period Fees
+[2017-01-22 23:05:45,462]-[AWT-EventQueue-0] INFO  wycc  - Client Premium for period
+[2017-01-22 23:05:45,462]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,462]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,462]-[AWT-EventQueue-0] INFO  wycc  - Formula
+[2017-01-22 23:05:45,462]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,462]-[AWT-EventQueue-0] INFO  wycc  - Premium
+[2017-01-22 23:05:45,462]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,462]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,463]-[AWT-EventQueue-0] INFO  wycc  - Sum insured
+[2017-01-22 23:05:45,463]-[AWT-EventQueue-0] INFO  wycc  - Cie Rate
+[2017-01-22 23:05:45,463]-[AWT-EventQueue-0] INFO  wycc  - Cie Total HT
+[2017-01-22 23:05:45,463]-[AWT-EventQueue-0] INFO  wycc  - WYCC Commission
+[2017-01-22 23:05:45,463]-[AWT-EventQueue-0] INFO  wycc  - Cie Tax
+[2017-01-22 23:05:45,463]-[AWT-EventQueue-0] INFO  wycc  - Cie Total TC
+[2017-01-22 23:05:45,463]-[AWT-EventQueue-0] INFO  wycc  - WYCC Fees
+[2017-01-22 23:05:45,464]-[AWT-EventQueue-0] INFO  wycc  - Client Rate
+[2017-01-22 23:05:45,464]-[AWT-EventQueue-0] INFO  wycc  - Client Total without surcom
+[2017-01-22 23:05:45,464]-[AWT-EventQueue-0] INFO  wycc  - Surcom
+[2017-01-22 23:05:45,464]-[AWT-EventQueue-0] INFO  wycc  - Client Total
+[2017-01-22 23:05:45,464]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,464]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,464]-[AWT-EventQueue-0] INFO  wycc  - Sum insured
+[2017-01-22 23:05:45,464]-[AWT-EventQueue-0] INFO  wycc  - Cie Rate
+[2017-01-22 23:05:45,464]-[AWT-EventQueue-0] INFO  wycc  - Cie Total HT
+[2017-01-22 23:05:45,465]-[AWT-EventQueue-0] INFO  wycc  - WYCC Commission
+[2017-01-22 23:05:45,465]-[AWT-EventQueue-0] INFO  wycc  - Cie Tax
+[2017-01-22 23:05:45,465]-[AWT-EventQueue-0] INFO  wycc  - Cie Total TC
+[2017-01-22 23:05:45,465]-[AWT-EventQueue-0] INFO  wycc  - WYCC Fees
+[2017-01-22 23:05:45,465]-[AWT-EventQueue-0] INFO  wycc  - Client Rate
+[2017-01-22 23:05:45,465]-[AWT-EventQueue-0] INFO  wycc  - Client Total
+[2017-01-22 23:05:45,465]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,465]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,465]-[AWT-EventQueue-0] INFO  wycc  - Sum insured
+[2017-01-22 23:05:45,466]-[AWT-EventQueue-0] INFO  wycc  - Cie Rate
+[2017-01-22 23:05:45,466]-[AWT-EventQueue-0] INFO  wycc  - Cie Total HT
+[2017-01-22 23:05:45,466]-[AWT-EventQueue-0] INFO  wycc  - WYCC Commission
+[2017-01-22 23:05:45,466]-[AWT-EventQueue-0] INFO  wycc  - Cie Tax
+[2017-01-22 23:05:45,466]-[AWT-EventQueue-0] INFO  wycc  - Cie Total TC
+[2017-01-22 23:05:45,466]-[AWT-EventQueue-0] INFO  wycc  - WYCC Fees
+[2017-01-22 23:05:45,466]-[AWT-EventQueue-0] INFO  wycc  - Client Rate
+[2017-01-22 23:05:45,466]-[AWT-EventQueue-0] INFO  wycc  - Client Total
+[2017-01-22 23:05:45,466]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,466]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,467]-[AWT-EventQueue-0] INFO  wycc  - Sum insured
+[2017-01-22 23:05:45,467]-[AWT-EventQueue-0] INFO  wycc  - Cie Rate
+[2017-01-22 23:05:45,467]-[AWT-EventQueue-0] INFO  wycc  - Cie Total HT
+[2017-01-22 23:05:45,467]-[AWT-EventQueue-0] INFO  wycc  - WYCC Commission
+[2017-01-22 23:05:45,467]-[AWT-EventQueue-0] INFO  wycc  - Cie Tax
+[2017-01-22 23:05:45,467]-[AWT-EventQueue-0] INFO  wycc  - Cie Total TC
+[2017-01-22 23:05:45,469]-[AWT-EventQueue-0] INFO  wycc  - WYCC Fees
+[2017-01-22 23:05:45,469]-[AWT-EventQueue-0] INFO  wycc  - Client Rate
+[2017-01-22 23:05:45,469]-[AWT-EventQueue-0] INFO  wycc  - Client Total
+[2017-01-22 23:05:45,470]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,470]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,471]-[AWT-EventQueue-0] INFO  wycc  - Premium
+[2017-01-22 23:05:45,471]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,471]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,472]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,472]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,472]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,472]-[AWT-EventQueue-0] INFO  wycc  - Formula
+[2017-01-22 23:05:45,472]-[AWT-EventQueue-0] INFO  wycc  - Premium
+[2017-01-22 23:05:45,472]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,472]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,472]-[AWT-EventQueue-0] INFO  wycc  - Sum insured
+[2017-01-22 23:05:45,473]-[AWT-EventQueue-0] INFO  wycc  - Premium
+[2017-01-22 23:05:45,473]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,473]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,473]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,473]-[AWT-EventQueue-0] INFO  wycc  - Sum insured
+[2017-01-22 23:05:45,473]-[AWT-EventQueue-0] INFO  wycc  - Premium
+[2017-01-22 23:05:45,473]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,473]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,473]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,473]-[AWT-EventQueue-0] INFO  wycc  - Sum insured
+[2017-01-22 23:05:45,473]-[AWT-EventQueue-0] INFO  wycc  - Premium
+[2017-01-22 23:05:45,474]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,474]-[AWT-EventQueue-0] INFO  wycc  - Insurance Company
+[2017-01-22 23:05:45,474]-[AWT-EventQueue-0] INFO  wycc  - Policy N°
+[2017-01-22 23:05:45,474]-[AWT-EventQueue-0] INFO  wycc  - Premium
+[2017-01-22 23:05:45,474]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,474]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,474]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:05:45,474]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:05:45,474]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,474]-[AWT-EventQueue-0] INFO  wycc  - rating
+[2017-01-22 23:05:45,475]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,475]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,475]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,475]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,475]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,475]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,475]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,475]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,475]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,476]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,476]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,476]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,476]-[AWT-EventQueue-0] INFO  wycc  - EUR
+[2017-01-22 23:05:45,476]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,476]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,476]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,476]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,476]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,476]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,477]-[AWT-EventQueue-0] INFO  wycc  - DAILY
+[2017-01-22 23:05:45,477]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,477]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,477]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,477]-[AWT-EventQueue-0] INFO  wycc  - 0.12
+[2017-01-22 23:05:45,477]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:05:45,477]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,478]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:05:45,478]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:05:45,478]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,478]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,478]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:05:45,478]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,479]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:05:45,479]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,479]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:05:45,479]-[AWT-EventQueue-0] INFO  wycc  - Period
+[2017-01-22 23:05:45,479]-[AWT-EventQueue-0] INFO  wycc  - DAILY
+[2017-01-22 23:05:45,479]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,479]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,479]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,480]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:05:45,480]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,480]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:05:45,481]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:05:45,481]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,481]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,481]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,481]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,481]-[AWT-EventQueue-0] INFO  wycc  - Period
+[2017-01-22 23:05:45,481]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,481]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,481]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,481]-[AWT-EventQueue-0] INFO  wycc  - Annual
+[2017-01-22 23:05:45,482]-[AWT-EventQueue-0] INFO  wycc  - Period
+[2017-01-22 23:05:45,482]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,482]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,482]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,482]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,482]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,482]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:05:45,482]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:05:45,483]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,483]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:05:45,483]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,483]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,483]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:05:45,483]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,483]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,484]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,484]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,484]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,484]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,484]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:05:45,484]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:05:45,484]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,484]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:05:45,484]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,485]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,485]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,485]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,485]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,485]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,485]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,485]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:05:45,485]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:05:45,485]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,486]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:05:45,486]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,486]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,486]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,486]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,486]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,486]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,487]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,487]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:05:45,487]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:05:45,487]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,487]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:05:45,487]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,487]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,487]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,487]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,488]-[AWT-EventQueue-0] INFO  wycc  - Rate
+[2017-01-22 23:05:45,488]-[AWT-EventQueue-0] INFO  wycc  - WYCC Commission
+[2017-01-22 23:05:45,488]-[AWT-EventQueue-0] INFO  wycc  - Cie Fees
+[2017-01-22 23:05:45,489]-[AWT-EventQueue-0] INFO  wycc  - Total
+[2017-01-22 23:05:45,489]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,489]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,490]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,490]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,490]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,490]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,490]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,490]-[AWT-EventQueue-0] INFO  wycc  - Rate
+[2017-01-22 23:05:45,490]-[AWT-EventQueue-0] INFO  wycc  - Total
+[2017-01-22 23:05:45,490]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,491]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,491]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,491]-[AWT-EventQueue-0] INFO  wycc  - Rate
+[2017-01-22 23:05:45,491]-[AWT-EventQueue-0] INFO  wycc  - Total
+[2017-01-22 23:05:45,491]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,491]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,491]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,491]-[AWT-EventQueue-0] INFO  wycc  - Rate
+[2017-01-22 23:05:45,491]-[AWT-EventQueue-0] INFO  wycc  - Total
+[2017-01-22 23:05:45,491]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,491]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:05:45,492]-[AWT-EventQueue-0] INFO  wycc  - Rate
+[2017-01-22 23:05:45,492]-[AWT-EventQueue-0] INFO  wycc  - Total
+[2017-01-22 23:05:45,492]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:23,987]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 23:13:24,087]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 23:13:24,088]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 23:13:27,839]-[AWT-EventQueue-0] INFO  wycc  - 19
+[2017-01-22 23:13:27,839]-[AWT-EventQueue-0] INFO  wycc  - 131
+[2017-01-22 23:13:27,843]-[AWT-EventQueue-0] INFO  wycc  - Row : 0 Column : 19 value : TOTAL GLOBAL WYCC
+[2017-01-22 23:13:27,843]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,850]-[AWT-EventQueue-0] INFO  wycc  - 67079.68759772876
+[2017-01-22 23:13:27,850]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,850]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,850]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,850]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,851]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,851]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,851]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,851]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,852]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,853]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,853]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,853]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,853]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,853]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,854]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,854]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,854]-[AWT-EventQueue-0] INFO  wycc  - 33.198904109589044
+[2017-01-22 23:13:27,854]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,855]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,855]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,855]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,855]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,855]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,855]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,856]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,856]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,856]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,856]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,856]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,857]-[AWT-EventQueue-0] INFO  wycc  - 9841.75
+[2017-01-22 23:13:27,857]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,857]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,857]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,857]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,858]-[AWT-EventQueue-0] INFO  wycc  - 74780.360276136
+[2017-01-22 23:13:27,858]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,860]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,861]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,861]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,861]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,861]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,861]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,861]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,862]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,862]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,862]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,862]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,862]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,862]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,862]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,863]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,863]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,863]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,863]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,863]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,863]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,864]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,864]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,864]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,864]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,864]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,864]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,865]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,865]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,865]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,865]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,865]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,865]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,866]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,866]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,866]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,866]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,866]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,866]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,866]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,867]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,867]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,867]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,867]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,867]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,868]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:13:27,868]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,868]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,868]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,869]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,869]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,869]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,869]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,869]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,869]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,869]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,870]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,870]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,870]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,870]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,870]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,870]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,870]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,871]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,871]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,871]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,871]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,871]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,871]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,871]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,872]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,872]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,872]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,872]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,872]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:13:27,872]-[AWT-EventQueue-0] INFO  wycc  - 131
+[2017-01-22 23:13:27,873]-[AWT-EventQueue-0] INFO  wycc  - Row : 1 Column : 0 value : Client:
+[2017-01-22 23:13:27,873]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,873]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,873]-[AWT-EventQueue-0] INFO  wycc  - Row : 1 Column : 3 value : UVEA MARINE SERVICES
+[2017-01-22 23:13:27,873]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,874]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,874]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,874]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,874]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,874]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,874]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,875]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,875]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,875]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,875]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,875]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,875]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,876]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,876]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,876]-[AWT-EventQueue-0] INFO  wycc  - Row : 1 Column : 19 value : TOTAL WYCC
+[2017-01-22 23:13:27,876]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,876]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,876]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,877]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,877]-[AWT-EventQueue-0] INFO  wycc  - 271194.0258461545
+[2017-01-22 23:13:27,877]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,877]-[AWT-EventQueue-0] INFO  wycc  - 27109.367163076804
+[2017-01-22 23:13:27,878]-[AWT-EventQueue-0] INFO  wycc  - 265760.00990769215
+[2017-01-22 23:13:27,878]-[AWT-EventQueue-0] INFO  wycc  - 239184.10891692172
+[2017-01-22 23:13:27,878]-[AWT-EventQueue-0] INFO  wycc  - 248751.40927360236
+[2017-01-22 23:13:27,878]-[AWT-EventQueue-0] INFO  wycc  - 8690.0
+[2017-01-22 23:13:27,879]-[AWT-EventQueue-0] INFO  wycc  - 257441.3692736025
+[2017-01-22 23:13:27,879]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,879]-[AWT-EventQueue-0] INFO  wycc  - 64889.33143334606
+[2017-01-22 23:13:27,879]-[AWT-EventQueue-0] INFO  wycc  - 2190.356164383561
+[2017-01-22 23:13:27,879]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,880]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,880]-[AWT-EventQueue-0] INFO  wycc  - 67079.68759772876
+[2017-01-22 23:13:27,880]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,880]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,880]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,880]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,881]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,881]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,881]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,881]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,881]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,881]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,881]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,881]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,882]-[AWT-EventQueue-0] INFO  wycc  - 33.198904109589044
+[2017-01-22 23:13:27,882]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,882]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,882]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,882]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,883]-[AWT-EventQueue-0] INFO  wycc  - 9841.75
+[2017-01-22 23:13:27,883]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,883]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,883]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,883]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,883]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,883]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,883]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,884]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,884]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,884]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,884]-[AWT-EventQueue-0] INFO  wycc  - 2649.318859079997
+[2017-01-22 23:13:27,884]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,885]-[AWT-EventQueue-0] INFO  wycc  - 2649.318859079997
+[2017-01-22 23:13:27,885]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,885]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,885]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,885]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,886]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,886]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,886]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,886]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,886]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,886]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,887]-[AWT-EventQueue-0] INFO  wycc  - 19672.909549742417
+[2017-01-22 23:13:27,887]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,887]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,887]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,887]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,887]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,887]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,888]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,888]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,888]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,888]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,888]-[AWT-EventQueue-0] INFO  wycc  - 18837.077723793427
+[2017-01-22 23:13:27,889]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,889]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,889]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,889]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,889]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,889]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,889]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,890]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,890]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,890]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,890]-[AWT-EventQueue-0] INFO  wycc  - 33621.05414352015
+[2017-01-22 23:13:27,890]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,891]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,891]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,891]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,891]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,891]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:13:27,892]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,892]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,892]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,892]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,892]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,892]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,892]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,892]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,893]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,893]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,893]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,893]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,893]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,893]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,893]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,893]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,893]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,893]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,893]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,894]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,894]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,894]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,894]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,894]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:13:27,894]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:13:27,895]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,895]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,895]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,895]-[AWT-EventQueue-0] INFO  wycc  - Row : 2 Column : 3 value : Certificate N 
+[2017-01-22 23:13:27,896]-[AWT-EventQueue-0] INFO  wycc  - 12456.0
+[2017-01-22 23:13:27,896]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,896]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,896]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,896]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,897]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,897]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,897]-[AWT-EventQueue-0] INFO  wycc  - Row : 2 Column : 11 value : Quarterly date:
+[2017-01-22 23:13:27,898]-[AWT-EventQueue-0] INFO  wycc  - 7/1/13
+[2017-01-22 23:13:27,901]-[AWT-EventQueue-0] INFO  wycc  - 9/30/13
+[2017-01-22 23:13:27,901]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,901]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,901]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,901]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,902]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,902]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,902]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,902]-[AWT-EventQueue-0] INFO  wycc  - Row : 2 Column : 21 value : Employer Contributions
+[2017-01-22 23:13:27,902]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,902]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,902]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,903]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,903]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,903]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,903]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,903]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,903]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,903]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,904]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,904]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,904]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,904]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,904]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,904]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,905]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,905]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,905]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,905]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,905]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,905]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,905]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,905]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,906]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,906]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,906]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,906]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,906]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,906]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,906]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,906]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,907]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,907]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,907]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,907]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,907]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,907]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,907]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,907]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,908]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,908]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,908]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,908]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,908]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,908]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,908]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,908]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,908]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,908]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,909]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,910]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,911]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,911]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,911]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,911]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,912]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,912]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,912]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,912]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,912]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,912]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,913]-[AWT-EventQueue-0] INFO  wycc  - Row : 2 Column : 108 value : Employee Contributions
+[2017-01-22 23:13:27,913]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,913]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,913]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,913]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,913]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,914]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,915]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,915]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,915]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,915]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,915]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,915]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:13:27,915]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:13:27,915]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 0 value : Reference Number
+[2017-01-22 23:13:27,915]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 1 value : Type of Position
+[2017-01-22 23:13:27,916]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 2 value : Position
+[2017-01-22 23:13:27,916]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 3 value : Name, Surname
+[2017-01-22 23:13:27,916]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,916]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 5 value : Vessel or Corporate
+[2017-01-22 23:13:27,916]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 6 value : Crew Manning agency
+[2017-01-22 23:13:27,917]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 7 value : Insurance Status
+[2017-01-22 23:13:27,917]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,917]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,917]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,917]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,918]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 12 value : Start Date
+[2017-01-22 23:13:27,918]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 13 value : End Date
+[2017-01-22 23:13:27,918]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : Currency
+[2017-01-22 23:13:27,918]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 15 value : Nb of Months
+[2017-01-22 23:13:27,918]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 16 value : Nb of Days
+[2017-01-22 23:13:27,918]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 17 value : Salary July      
+[2017-01-22 23:13:27,918]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 18 value : Salary August      
+[2017-01-22 23:13:27,918]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 19 value : Salary September
+[2017-01-22 23:13:27,919]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 20 value : TOTAL Salaries
+[2017-01-22 23:13:27,919]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 21 value : Health
+[2017-01-22 23:13:27,919]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,919]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,919]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,919]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,919]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,919]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,919]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,920]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,920]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,920]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,920]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,920]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,920]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,920]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,920]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,921]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,921]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 38 value : Assistance & Repatriation
+[2017-01-22 23:13:27,921]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,921]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,921]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,921]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,921]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,921]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,921]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,922]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,922]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,922]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,922]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,922]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,922]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 51 value : Health Family
+[2017-01-22 23:13:27,922]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,923]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,923]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,923]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,923]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 56 value :   LOL after accident
+[2017-01-22 23:13:27,923]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,923]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,923]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,923]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,924]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,924]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,924]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,924]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,924]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,924]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,924]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,924]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,924]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 69 value : LOL after Accident & illness
+[2017-01-22 23:13:27,925]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,925]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,925]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,925]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,925]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,925]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,925]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,925]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,925]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,926]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,926]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 80 value : PTD after Accident & illness
+[2017-01-22 23:13:27,926]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,926]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,926]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,926]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,926]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,926]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,926]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,927]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,927]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,927]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,927]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 91 value : TTD after accident and illness
+[2017-01-22 23:13:27,927]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,927]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,927]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,927]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,927]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,928]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,928]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,928]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,928]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,928]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,928]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 102 value : Retirement Plan
+[2017-01-22 23:13:27,928]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,928]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,929]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,929]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,929]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,929]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 108 value : Health 
+Assistance & Repatriation
+[2017-01-22 23:13:27,929]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,929]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,929]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,929]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 112 value : LOL & PTD after accident
+[2017-01-22 23:13:27,929]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,930]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,930]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,930]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,930]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 117 value : LOL after Accident & illness
+[2017-01-22 23:13:27,930]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,930]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,930]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,930]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,931]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 122 value : TTD after accident and illness
+[2017-01-22 23:13:27,931]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,931]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,931]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,931]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,931]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 127 value : Retirement Plan
+[2017-01-22 23:13:27,931]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,931]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,932]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,932]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,932]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:13:27,932]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:13:27,932]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,932]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 1 value : officer
+[2017-01-22 23:13:27,932]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,932]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,932]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,933]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,933]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,940]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 7 value : Period Covered
+Yearly, Working Period, Private Life, On-duty+on-leave
+[2017-01-22 23:13:27,940]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 8 value : Single or family
+[2017-01-22 23:13:27,941]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 9 value : Nationality
+[2017-01-22 23:13:27,941]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 10 value : Country of residence
+[2017-01-22 23:13:27,941]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 11 value : Number of Children
+[2017-01-22 23:13:27,941]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,941]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,941]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 14 value : USD
+[2017-01-22 23:13:27,941]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,941]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,941]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,942]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,942]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,942]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 20 value : Benefits
+[2017-01-22 23:13:27,942]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 21 value : Insurance Company
+[2017-01-22 23:13:27,942]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 22 value : Policy N°
+[2017-01-22 23:13:27,942]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 23 value : Formula
+[2017-01-22 23:13:27,942]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 24 value : Cie Annual premium without commission
+[2017-01-22 23:13:27,942]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 25 value : discount or Increase
+[2017-01-22 23:13:27,943]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 26 value : Commission
+[2017-01-22 23:13:27,943]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 27 value : Cie Premium HT + commission
+[2017-01-22 23:13:27,943]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 28 value :  Cie Premium HT with discount 
+[2017-01-22 23:13:27,943]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 29 value : Cie Annual Premium +Tax discount
+[2017-01-22 23:13:27,943]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 30 value : WYCC Annual Fees
+[2017-01-22 23:13:27,943]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 31 value : Client Annual Premium without surcom +Tax
+[2017-01-22 23:13:27,943]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 32 value : WYCC Surcom
+[2017-01-22 23:13:27,944]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 33 value : Cie  Premium for period withTax
+[2017-01-22 23:13:27,944]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 34 value : WYCC period Fees
+[2017-01-22 23:13:27,944]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 35 value : Client Premium for period without surcom + Tax
+[2017-01-22 23:13:27,944]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 36 value : WYCC Period Surcom
+[2017-01-22 23:13:27,944]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 37 value : Client Premium for period
+[2017-01-22 23:13:27,944]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 38 value : Insurance Company
+[2017-01-22 23:13:27,944]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 39 value : Policy N°
+[2017-01-22 23:13:27,944]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 40 value : Formula
+[2017-01-22 23:13:27,944]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 41 value : Cie Annual premium without commission
+[2017-01-22 23:13:27,944]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 42 value : Commission
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 43 value : Cie Premium HT + commission
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 44 value :  Cie Premium HT with discount 
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 45 value : Cie Annual Premium +Tax discount
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 46 value : WYCC Annual Fees
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 47 value : Client Annual Premium +Tax
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 48 value : Cie  Premium for period withTax
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 49 value : WYCC period Fees
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 50 value : Client Premium for period
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 51 value : Insurance Company
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 52 value : Policy N°
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 53 value : Formula
+[2017-01-22 23:13:27,945]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,946]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 55 value : Premium
+[2017-01-22 23:13:27,946]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 56 value : Insurance Company
+[2017-01-22 23:13:27,946]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 57 value : Policy N°
+[2017-01-22 23:13:27,946]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 58 value : Sum insured
+[2017-01-22 23:13:27,946]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 59 value : Cie Rate
+[2017-01-22 23:13:27,946]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 60 value : Cie Total HT
+[2017-01-22 23:13:27,946]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 61 value : WYCC Commission
+[2017-01-22 23:13:27,946]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 62 value : Cie Tax
+[2017-01-22 23:13:27,947]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 63 value : Cie Total TC
+[2017-01-22 23:13:27,947]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 64 value : WYCC Fees
+[2017-01-22 23:13:27,947]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 65 value : Client Rate
+[2017-01-22 23:13:27,947]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 66 value : Client Total without surcom
+[2017-01-22 23:13:27,947]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 67 value : Surcom
+[2017-01-22 23:13:27,947]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 68 value : Client Total
+[2017-01-22 23:13:27,947]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 69 value : Insurance Company
+[2017-01-22 23:13:27,947]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 70 value : Policy N°
+[2017-01-22 23:13:27,948]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 71 value : Sum insured
+[2017-01-22 23:13:27,948]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 72 value : Cie Rate
+[2017-01-22 23:13:27,948]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 73 value : Cie Total HT
+[2017-01-22 23:13:27,948]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 74 value : WYCC Commission
+[2017-01-22 23:13:27,948]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 75 value : Cie Tax
+[2017-01-22 23:13:27,948]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 76 value : Cie Total TC
+[2017-01-22 23:13:27,948]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 77 value : WYCC Fees
+[2017-01-22 23:13:27,948]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 78 value : Client Rate
+[2017-01-22 23:13:27,948]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 79 value : Client Total
+[2017-01-22 23:13:27,949]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 80 value : Insurance Company
+[2017-01-22 23:13:27,949]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 81 value : Policy N°
+[2017-01-22 23:13:27,949]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 82 value : Sum insured
+[2017-01-22 23:13:27,949]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 83 value : Cie Rate
+[2017-01-22 23:13:27,949]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 84 value : Cie Total HT
+[2017-01-22 23:13:27,949]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 85 value : WYCC Commission
+[2017-01-22 23:13:27,949]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 86 value : Cie Tax
+[2017-01-22 23:13:27,949]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 87 value : Cie Total TC
+[2017-01-22 23:13:27,949]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 88 value : WYCC Fees
+[2017-01-22 23:13:27,950]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 89 value : Client Rate
+[2017-01-22 23:13:27,950]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 90 value : Client Total
+[2017-01-22 23:13:27,950]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 91 value : Insurance Company
+[2017-01-22 23:13:27,950]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 92 value : Policy N°
+[2017-01-22 23:13:27,950]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 93 value : Sum insured
+[2017-01-22 23:13:27,950]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 94 value : Cie Rate
+[2017-01-22 23:13:27,950]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 95 value : Cie Total HT
+[2017-01-22 23:13:27,950]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 96 value : WYCC Commission
+[2017-01-22 23:13:27,950]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 97 value : Cie Tax
+[2017-01-22 23:13:27,951]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 98 value : Cie Total TC
+[2017-01-22 23:13:27,951]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 99 value : WYCC Fees
+[2017-01-22 23:13:27,951]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 100 value : Client Rate
+[2017-01-22 23:13:27,951]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 101 value : Client Total
+[2017-01-22 23:13:27,951]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 102 value : Insurance Company
+[2017-01-22 23:13:27,951]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 103 value : Policy N°
+[2017-01-22 23:13:27,951]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 104 value : Premium
+[2017-01-22 23:13:27,951]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,952]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,952]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,952]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 108 value : Insurance Company
+[2017-01-22 23:13:27,952]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 109 value : Policy N°
+[2017-01-22 23:13:27,952]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 110 value : Formula
+[2017-01-22 23:13:27,952]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 111 value : Premium
+[2017-01-22 23:13:27,952]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 112 value : Insurance Company
+[2017-01-22 23:13:27,952]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 113 value : Policy N°
+[2017-01-22 23:13:27,953]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 114 value : Sum insured
+[2017-01-22 23:13:27,953]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 115 value : Premium
+[2017-01-22 23:13:27,953]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,953]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 117 value : Insurance Company
+[2017-01-22 23:13:27,953]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 118 value : Policy N°
+[2017-01-22 23:13:27,953]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 119 value : Sum insured
+[2017-01-22 23:13:27,953]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 120 value : Premium
+[2017-01-22 23:13:27,953]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,954]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 122 value : Insurance Company
+[2017-01-22 23:13:27,954]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 123 value : Policy N°
+[2017-01-22 23:13:27,954]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 124 value : Sum insured
+[2017-01-22 23:13:27,954]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 125 value : Premium
+[2017-01-22 23:13:27,954]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,954]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 127 value : Insurance Company
+[2017-01-22 23:13:27,954]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 128 value : Policy N°
+[2017-01-22 23:13:27,954]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 129 value : Premium
+[2017-01-22 23:13:27,954]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,954]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,955]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:13:27,955]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:13:27,955]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,955]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 1 value : rating
+[2017-01-22 23:13:27,955]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,955]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,955]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,955]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,956]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,956]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,956]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,956]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,956]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,956]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,956]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,956]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,956]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 14 value : EUR
+[2017-01-22 23:13:27,957]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,958]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,958]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,958]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,959]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,959]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,959]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 21 value : DAILY
+[2017-01-22 23:13:27,959]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,959]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,959]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,959]-[AWT-EventQueue-0] INFO  wycc  - 0.12
+[2017-01-22 23:13:27,959]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:13:27,960]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,960]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:13:27,960]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:13:27,960]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,960]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,960]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:13:27,960]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,960]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:13:27,961]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,961]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:13:27,961]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 37 value : Period
+[2017-01-22 23:13:27,961]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 38 value : DAILY
+[2017-01-22 23:13:27,961]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,961]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,961]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,961]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:13:27,961]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,962]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:13:27,962]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:13:27,962]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,962]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,962]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,962]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,963]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 50 value : Period
+[2017-01-22 23:13:27,963]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,963]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,963]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,963]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 54 value : Annual
+[2017-01-22 23:13:27,964]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 55 value : Period
+[2017-01-22 23:13:27,964]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,964]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,964]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,964]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,965]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,965]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:13:27,969]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:13:27,969]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,969]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:13:27,969]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,969]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,969]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:13:27,970]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,970]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,970]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,970]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,970]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,970]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,970]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:13:27,970]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:13:27,970]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,971]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:13:27,971]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,971]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,971]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,971]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,971]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,971]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,971]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,971]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:13:27,971]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:13:27,972]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,972]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:13:27,972]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,972]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,972]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,972]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,972]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,972]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,973]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,973]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:13:27,975]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:13:27,975]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,976]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:13:27,976]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,976]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,976]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,976]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,977]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 104 value : Rate
+[2017-01-22 23:13:27,977]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 105 value : WYCC Commission
+[2017-01-22 23:13:27,977]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 106 value : Cie Fees
+[2017-01-22 23:13:27,977]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 107 value : Total
+[2017-01-22 23:13:27,977]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,977]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,977]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,977]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,977]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,977]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 115 value : Rate
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 116 value : Total
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 120 value : Rate
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 121 value : Total
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 125 value : Rate
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 126 value : Total
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,978]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:13:27,979]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 129 value : Rate
+[2017-01-22 23:13:27,979]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 130 value : Total
+[2017-01-22 23:13:27,979]-[AWT-EventQueue-0] INFO  wycc  - 
+[2017-01-22 23:14:21,677]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-01-22 23:14:21,762]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-01-22 23:14:21,763]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-01-22 23:14:26,750]-[AWT-EventQueue-0] INFO  wycc  - 19
+[2017-01-22 23:14:26,750]-[AWT-EventQueue-0] INFO  wycc  - 131
+[2017-01-22 23:14:26,757]-[AWT-EventQueue-0] INFO  wycc  - Row : 0 Column : 19 value : TOTAL GLOBAL WYCC
+[2017-01-22 23:14:26,758]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,765]-[AWT-EventQueue-0] INFO  wycc  - 67079.68759772876
+[2017-01-22 23:14:26,765]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,765]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,765]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,766]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,766]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,766]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,766]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,767]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,769]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,769]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,771]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,772]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,772]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,772]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,772]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,772]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,773]-[AWT-EventQueue-0] INFO  wycc  - 33.198904109589044
+[2017-01-22 23:14:26,773]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,773]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,774]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,774]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,774]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,774]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,774]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,775]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,775]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,775]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,775]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,775]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,776]-[AWT-EventQueue-0] INFO  wycc  - 9841.75
+[2017-01-22 23:14:26,776]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,776]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,776]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,776]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,777]-[AWT-EventQueue-0] INFO  wycc  - 74780.360276136
+[2017-01-22 23:14:26,778]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,778]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,778]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,778]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,778]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,778]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,779]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,779]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,779]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,779]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,779]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,779]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,780]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,780]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,780]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,780]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,780]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,781]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,781]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,781]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,781]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,781]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,781]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,782]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,782]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,782]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,782]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,782]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,782]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,783]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,783]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,783]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,783]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,783]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,783]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,784]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,784]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,784]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,784]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,784]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,785]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,785]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,785]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,785]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,785]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,786]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:14:26,786]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,786]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,786]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,787]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,788]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,788]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,788]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,788]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,788]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,788]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,789]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,789]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,789]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,789]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,789]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,789]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,790]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,790]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,790]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,790]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,790]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,790]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,791]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,791]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,791]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,791]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,791]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,791]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,792]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:14:26,792]-[AWT-EventQueue-0] INFO  wycc  - 131
+[2017-01-22 23:14:26,792]-[AWT-EventQueue-0] INFO  wycc  - Row : 1 Column : 0 value : Client:
+[2017-01-22 23:14:26,792]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,792]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,792]-[AWT-EventQueue-0] INFO  wycc  - Row : 1 Column : 3 value : UVEA MARINE SERVICES
+[2017-01-22 23:14:26,793]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,793]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,793]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,793]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,794]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,795]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,795]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,795]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,795]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,796]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,796]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,796]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,796]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,796]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,796]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,796]-[AWT-EventQueue-0] INFO  wycc  - Row : 1 Column : 19 value : TOTAL WYCC
+[2017-01-22 23:14:26,797]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,797]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,797]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,797]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,797]-[AWT-EventQueue-0] INFO  wycc  - 271194.0258461545
+[2017-01-22 23:14:26,798]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,798]-[AWT-EventQueue-0] INFO  wycc  - 27109.367163076804
+[2017-01-22 23:14:26,798]-[AWT-EventQueue-0] INFO  wycc  - 265760.00990769215
+[2017-01-22 23:14:26,799]-[AWT-EventQueue-0] INFO  wycc  - 239184.10891692172
+[2017-01-22 23:14:26,799]-[AWT-EventQueue-0] INFO  wycc  - 248751.40927360236
+[2017-01-22 23:14:26,799]-[AWT-EventQueue-0] INFO  wycc  - 8690.0
+[2017-01-22 23:14:26,800]-[AWT-EventQueue-0] INFO  wycc  - 257441.3692736025
+[2017-01-22 23:14:26,825]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,826]-[AWT-EventQueue-0] INFO  wycc  - 64889.33143334606
+[2017-01-22 23:14:26,826]-[AWT-EventQueue-0] INFO  wycc  - 2190.356164383561
+[2017-01-22 23:14:26,827]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,827]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,828]-[AWT-EventQueue-0] INFO  wycc  - 67079.68759772876
+[2017-01-22 23:14:26,828]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,828]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,828]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,829]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,832]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,832]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,833]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,833]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,833]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,834]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,834]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,834]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,835]-[AWT-EventQueue-0] INFO  wycc  - 33.198904109589044
+[2017-01-22 23:14:26,835]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,835]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,836]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,836]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,836]-[AWT-EventQueue-0] INFO  wycc  - 9841.75
+[2017-01-22 23:14:26,836]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,837]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,837]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,837]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,837]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,837]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,837]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,837]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,838]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,838]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,838]-[AWT-EventQueue-0] INFO  wycc  - 2649.318859079997
+[2017-01-22 23:14:26,838]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,838]-[AWT-EventQueue-0] INFO  wycc  - 2649.318859079997
+[2017-01-22 23:14:26,838]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,839]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,839]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,839]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,839]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,839]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,839]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,839]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,839]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,839]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,840]-[AWT-EventQueue-0] INFO  wycc  - 19672.909549742417
+[2017-01-22 23:14:26,840]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,840]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,840]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,840]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,840]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,840]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,840]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,841]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,841]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,841]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,841]-[AWT-EventQueue-0] INFO  wycc  - 18837.077723793427
+[2017-01-22 23:14:26,841]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,841]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,841]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,841]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,841]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,841]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,842]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,842]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,842]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,842]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,842]-[AWT-EventQueue-0] INFO  wycc  - 33621.05414352015
+[2017-01-22 23:14:26,842]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,842]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,843]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,843]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,843]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,843]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:14:26,843]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,843]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,843]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,844]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,845]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,845]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,845]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,845]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,845]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,845]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,845]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,845]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:14:26,845]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:14:26,846]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,846]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,846]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,847]-[AWT-EventQueue-0] INFO  wycc  - Row : 2 Column : 3 value : Certificate N 
+[2017-01-22 23:14:26,847]-[AWT-EventQueue-0] INFO  wycc  - 12456.0
+[2017-01-22 23:14:26,848]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,848]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,848]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,848]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,848]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,848]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,849]-[AWT-EventQueue-0] INFO  wycc  - Row : 2 Column : 11 value : Quarterly date:
+[2017-01-22 23:14:26,849]-[AWT-EventQueue-0] INFO  wycc  - 7/1/13
+[2017-01-22 23:14:26,853]-[AWT-EventQueue-0] INFO  wycc  - 9/30/13
+[2017-01-22 23:14:26,854]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,854]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,854]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,854]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,855]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,855]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,855]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,855]-[AWT-EventQueue-0] INFO  wycc  - Row : 2 Column : 21 value : Employer Contributions
+[2017-01-22 23:14:26,855]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,856]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,856]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,856]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,856]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,856]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,856]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,856]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,857]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,857]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,857]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,857]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,857]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,857]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,858]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,858]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,858]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,858]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,858]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,858]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,858]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,858]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,859]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,860]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,861]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,861]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,861]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,861]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,861]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,861]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,861]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,861]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,862]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,862]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,862]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,862]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,862]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,862]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,862]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,862]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,862]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,862]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,862]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,863]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - Row : 2 Column : 108 value : Employee Contributions
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,864]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,865]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,866]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,866]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,866]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,866]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,866]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,866]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:14:26,866]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:14:26,866]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 0 value : Reference Number
+[2017-01-22 23:14:26,867]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 1 value : Type of Position
+[2017-01-22 23:14:26,867]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 2 value : Position
+[2017-01-22 23:14:26,867]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 3 value : Name, Surname
+[2017-01-22 23:14:26,867]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,867]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 5 value : Vessel or Corporate
+[2017-01-22 23:14:26,867]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 6 value : Crew Manning agency
+[2017-01-22 23:14:26,868]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 7 value : Insurance Status
+[2017-01-22 23:14:26,868]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,868]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,868]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,868]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,868]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 12 value : Start Date
+[2017-01-22 23:14:26,868]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 13 value : End Date
+[2017-01-22 23:14:26,869]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : Currency
+[2017-01-22 23:14:26,869]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 15 value : Nb of Months
+[2017-01-22 23:14:26,869]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 16 value : Nb of Days
+[2017-01-22 23:14:26,869]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 17 value : Salary July      
+[2017-01-22 23:14:26,869]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 18 value : Salary August      
+[2017-01-22 23:14:26,869]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 19 value : Salary September
+[2017-01-22 23:14:26,869]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 20 value : TOTAL Salaries
+[2017-01-22 23:14:26,870]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 21 value : Health
+[2017-01-22 23:14:26,870]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,870]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,870]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,870]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,870]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,870]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,870]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,870]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 38 value : Assistance & Repatriation
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,871]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 51 value : Health Family
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,872]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 56 value :   LOL after accident
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,873]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 69 value : LOL after Accident & illness
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,874]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 80 value : PTD after Accident & illness
+[2017-01-22 23:14:26,875]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,875]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,875]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,875]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,875]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,875]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,875]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,875]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,875]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,876]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,876]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 91 value : TTD after accident and illness
+[2017-01-22 23:14:26,876]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,876]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,876]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,876]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,876]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,876]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,876]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,877]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,877]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,877]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,877]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 102 value : Retirement Plan
+[2017-01-22 23:14:26,877]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,877]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,877]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,877]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,877]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,878]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 108 value : Health 
+Assistance & Repatriation
+[2017-01-22 23:14:26,878]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,878]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,878]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,878]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 112 value : LOL & PTD after accident
+[2017-01-22 23:14:26,878]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,878]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,878]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,878]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,879]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 117 value : LOL after Accident & illness
+[2017-01-22 23:14:26,879]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,879]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,879]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,879]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,879]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 122 value : TTD after accident and illness
+[2017-01-22 23:14:26,879]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,879]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,880]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,880]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,880]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 127 value : Retirement Plan
+[2017-01-22 23:14:26,880]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,880]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,881]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,881]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,881]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:14:26,881]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:14:26,881]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,881]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 1 value : officer
+[2017-01-22 23:14:26,881]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,881]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,882]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,882]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,882]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,889]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 7 value : Period Covered
+Yearly, Working Period, Private Life, On-duty+on-leave
+[2017-01-22 23:14:26,889]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 8 value : Single or family
+[2017-01-22 23:14:26,889]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 9 value : Nationality
+[2017-01-22 23:14:26,890]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 10 value : Country of residence
+[2017-01-22 23:14:26,890]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 11 value : Number of Children
+[2017-01-22 23:14:26,890]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,890]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,890]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 14 value : USD
+[2017-01-22 23:14:26,890]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,890]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,891]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,891]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,891]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,891]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 20 value : Benefits
+[2017-01-22 23:14:26,891]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 21 value : Insurance Company
+[2017-01-22 23:14:26,891]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 22 value : Policy N°
+[2017-01-22 23:14:26,891]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 23 value : Formula
+[2017-01-22 23:14:26,892]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 24 value : Cie Annual premium without commission
+[2017-01-22 23:14:26,892]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 25 value : discount or Increase
+[2017-01-22 23:14:26,892]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 26 value : Commission
+[2017-01-22 23:14:26,892]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 27 value : Cie Premium HT + commission
+[2017-01-22 23:14:26,892]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 28 value :  Cie Premium HT with discount 
+[2017-01-22 23:14:26,892]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 29 value : Cie Annual Premium +Tax discount
+[2017-01-22 23:14:26,892]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 30 value : WYCC Annual Fees
+[2017-01-22 23:14:26,892]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 31 value : Client Annual Premium without surcom +Tax
+[2017-01-22 23:14:26,893]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 32 value : WYCC Surcom
+[2017-01-22 23:14:26,893]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 33 value : Cie  Premium for period withTax
+[2017-01-22 23:14:26,893]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 34 value : WYCC period Fees
+[2017-01-22 23:14:26,893]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 35 value : Client Premium for period without surcom + Tax
+[2017-01-22 23:14:26,893]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 36 value : WYCC Period Surcom
+[2017-01-22 23:14:26,893]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 37 value : Client Premium for period
+[2017-01-22 23:14:26,893]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 38 value : Insurance Company
+[2017-01-22 23:14:26,893]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 39 value : Policy N°
+[2017-01-22 23:14:26,894]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 40 value : Formula
+[2017-01-22 23:14:26,894]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 41 value : Cie Annual premium without commission
+[2017-01-22 23:14:26,894]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 42 value : Commission
+[2017-01-22 23:14:26,894]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 43 value : Cie Premium HT + commission
+[2017-01-22 23:14:26,894]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 44 value :  Cie Premium HT with discount 
+[2017-01-22 23:14:26,894]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 45 value : Cie Annual Premium +Tax discount
+[2017-01-22 23:14:26,894]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 46 value : WYCC Annual Fees
+[2017-01-22 23:14:26,894]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 47 value : Client Annual Premium +Tax
+[2017-01-22 23:14:26,895]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 48 value : Cie  Premium for period withTax
+[2017-01-22 23:14:26,895]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 49 value : WYCC period Fees
+[2017-01-22 23:14:26,895]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 50 value : Client Premium for period
+[2017-01-22 23:14:26,895]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 51 value : Insurance Company
+[2017-01-22 23:14:26,895]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 52 value : Policy N°
+[2017-01-22 23:14:26,895]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 53 value : Formula
+[2017-01-22 23:14:26,895]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,895]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 55 value : Premium
+[2017-01-22 23:14:26,896]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 56 value : Insurance Company
+[2017-01-22 23:14:26,896]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 57 value : Policy N°
+[2017-01-22 23:14:26,896]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 58 value : Sum insured
+[2017-01-22 23:14:26,896]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 59 value : Cie Rate
+[2017-01-22 23:14:26,896]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 60 value : Cie Total HT
+[2017-01-22 23:14:26,896]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 61 value : WYCC Commission
+[2017-01-22 23:14:26,896]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 62 value : Cie Tax
+[2017-01-22 23:14:26,896]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 63 value : Cie Total TC
+[2017-01-22 23:14:26,896]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 64 value : WYCC Fees
+[2017-01-22 23:14:26,897]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 65 value : Client Rate
+[2017-01-22 23:14:26,897]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 66 value : Client Total without surcom
+[2017-01-22 23:14:26,897]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 67 value : Surcom
+[2017-01-22 23:14:26,897]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 68 value : Client Total
+[2017-01-22 23:14:26,897]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 69 value : Insurance Company
+[2017-01-22 23:14:26,897]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 70 value : Policy N°
+[2017-01-22 23:14:26,897]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 71 value : Sum insured
+[2017-01-22 23:14:26,897]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 72 value : Cie Rate
+[2017-01-22 23:14:26,897]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 73 value : Cie Total HT
+[2017-01-22 23:14:26,898]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 74 value : WYCC Commission
+[2017-01-22 23:14:26,898]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 75 value : Cie Tax
+[2017-01-22 23:14:26,898]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 76 value : Cie Total TC
+[2017-01-22 23:14:26,898]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 77 value : WYCC Fees
+[2017-01-22 23:14:26,898]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 78 value : Client Rate
+[2017-01-22 23:14:26,898]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 79 value : Client Total
+[2017-01-22 23:14:26,898]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 80 value : Insurance Company
+[2017-01-22 23:14:26,898]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 81 value : Policy N°
+[2017-01-22 23:14:26,899]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 82 value : Sum insured
+[2017-01-22 23:14:26,899]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 83 value : Cie Rate
+[2017-01-22 23:14:26,899]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 84 value : Cie Total HT
+[2017-01-22 23:14:26,899]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 85 value : WYCC Commission
+[2017-01-22 23:14:26,899]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 86 value : Cie Tax
+[2017-01-22 23:14:26,899]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 87 value : Cie Total TC
+[2017-01-22 23:14:26,899]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 88 value : WYCC Fees
+[2017-01-22 23:14:26,900]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 89 value : Client Rate
+[2017-01-22 23:14:26,900]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 90 value : Client Total
+[2017-01-22 23:14:26,900]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 91 value : Insurance Company
+[2017-01-22 23:14:26,900]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 92 value : Policy N°
+[2017-01-22 23:14:26,900]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 93 value : Sum insured
+[2017-01-22 23:14:26,900]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 94 value : Cie Rate
+[2017-01-22 23:14:26,900]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 95 value : Cie Total HT
+[2017-01-22 23:14:26,901]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 96 value : WYCC Commission
+[2017-01-22 23:14:26,901]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 97 value : Cie Tax
+[2017-01-22 23:14:26,901]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 98 value : Cie Total TC
+[2017-01-22 23:14:26,901]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 99 value : WYCC Fees
+[2017-01-22 23:14:26,901]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 100 value : Client Rate
+[2017-01-22 23:14:26,901]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 101 value : Client Total
+[2017-01-22 23:14:26,901]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 102 value : Insurance Company
+[2017-01-22 23:14:26,901]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 103 value : Policy N°
+[2017-01-22 23:14:26,901]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 104 value : Premium
+[2017-01-22 23:14:26,901]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,902]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,902]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,902]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 108 value : Insurance Company
+[2017-01-22 23:14:26,902]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 109 value : Policy N°
+[2017-01-22 23:14:26,902]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 110 value : Formula
+[2017-01-22 23:14:26,902]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 111 value : Premium
+[2017-01-22 23:14:26,902]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 112 value : Insurance Company
+[2017-01-22 23:14:26,902]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 113 value : Policy N°
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 114 value : Sum insured
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 115 value : Premium
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 117 value : Insurance Company
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 118 value : Policy N°
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 119 value : Sum insured
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 120 value : Premium
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 122 value : Insurance Company
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 123 value : Policy N°
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 124 value : Sum insured
+[2017-01-22 23:14:26,903]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 125 value : Premium
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 127 value : Insurance Company
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 128 value : Policy N°
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 129 value : Premium
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - 0
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - 132
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 1 value : rating
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,904]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 14 value : EUR
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,905]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 21 value : DAILY
+[2017-01-22 23:14:26,906]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,906]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,906]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,906]-[AWT-EventQueue-0] INFO  wycc  - 0.12
+[2017-01-22 23:14:26,906]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:14:26,906]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,906]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:14:26,907]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:14:26,907]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,907]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,907]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:14:26,907]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,912]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:14:26,912]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,913]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:14:26,913]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 37 value : Period
+[2017-01-22 23:14:26,913]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 38 value : DAILY
+[2017-01-22 23:14:26,913]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,913]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,913]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,914]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:14:26,914]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,914]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:14:26,914]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:14:26,914]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,914]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,915]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,915]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,915]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 50 value : Period
+[2017-01-22 23:14:26,915]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,915]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,915]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,915]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 54 value : Annual
+[2017-01-22 23:14:26,916]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 55 value : Period
+[2017-01-22 23:14:26,916]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,916]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,916]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,916]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,916]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,917]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:14:26,917]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:14:26,917]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,917]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:14:26,918]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,918]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,918]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-01-22 23:14:26,918]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,918]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,918]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,918]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,919]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,919]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,919]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:14:26,919]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:14:26,919]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,919]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:14:26,920]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,920]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,920]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,920]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,920]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,920]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,920]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,920]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:14:26,921]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:14:26,921]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,921]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:14:26,921]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,921]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,921]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,921]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,922]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,922]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,922]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,922]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-01-22 23:14:26,922]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-01-22 23:14:26,922]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,923]-[AWT-EventQueue-0] INFO  wycc  - 0.2
+[2017-01-22 23:14:26,923]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,923]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,923]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,923]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,923]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 104 value : Rate
+[2017-01-22 23:14:26,923]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 105 value : WYCC Commission
+[2017-01-22 23:14:26,923]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 106 value : Cie Fees
+[2017-01-22 23:14:26,924]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 107 value : Total
+[2017-01-22 23:14:26,924]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,924]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,924]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,924]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,924]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,925]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,925]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,925]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 115 value : Rate
+[2017-01-22 23:14:26,925]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 116 value : Total
+[2017-01-22 23:14:26,925]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,925]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,925]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,926]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 120 value : Rate
+[2017-01-22 23:14:26,926]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 121 value : Total
+[2017-01-22 23:14:26,926]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,926]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,926]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,926]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 125 value : Rate
+[2017-01-22 23:14:26,926]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 126 value : Total
+[2017-01-22 23:14:26,926]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,926]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-01-22 23:14:26,927]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 129 value : Rate
+[2017-01-22 23:14:26,927]-[AWT-EventQueue-0] INFO  wycc  - Row : 5 Column : 130 value : Total
+[2017-01-22 23:14:26,927]-[AWT-EventQueue-0] INFO  wycc  - nothing

@@ -1,0 +1,39 @@
+"Export date";"Export start";"Export end";"Certificate ID";"Certificate number";Certificate;"Certificate type";"Effective date";"Renewal date";"Radiation date";"Invoice type";"Prices of year";Currency;;Subscriber;Broker;Co-subscriber
+"19/12/2016 16:00:05";12/11/2016;11/11/2017;480;12600;"HUTIANE-TRANSPORTES MARITIMOS, UNIPEESOAL LDA";YACHTING;12/11/2014;11/11/2017;;Regularisation;2016;EUR;;1760;55;
+;;;;;;;;;;;;;;"HUTIANE-TRANSPORTES MARITIMOS UNIPESSOAL LDA";"ICS SA";
+;;;;;;;;;;;;;;"Rua Nova do Pina, N°4B";"41, avenue de la gare";
+;;;;;;;;;;;;;;P-9000-067;1611;
+;;;;;;;;;;;;;;"Santa Luzia, Funchal";Luxembourg;
+;;;;;;;;;;;;;;Portugal;Luxembourg;
+"Past invoices"
+ID;Reference;"Start date";"End date";"Date export";"Date import";"Prices of year";Status;HT;Tax;Fees;Premium
+606;i201601260002;12/11/2016;11/12/2017;19/12/2016;19/12/2016;2016;"IMPAYEE_ADVANCE - BOTH";7548,95;301,958;64;7938,908
+
+
+
+
+
+"ID insurance company";"Insurance company";"ID formula";Formula;"Policy number";Brokerage;"Wycc commission";Fees;HT;TC;"Limited Fees";"Limited HT";"Limited TC";;"Past invoices HT";"Past invoices TC";;"Total HT";"Total TC";"Total TC with fees"
+1000;"AIG Luxembourg";45;Perfect;L2022479;0;25;64;2711,53856;2820,0001024;0;0;0;;2711,54;2820,0016;;-0,0014400000004571;-0,0014976000006754;63,998502399999
+1003;"Anker Verzekeringen n,v,";11;"Formula 3";240322;0;27,5;0;4837,4068965517;5030,9031724138;0;0;0;;4837,41;5030,9064;;-0,0031034482753967;-0,0032275862067763;-0,0032275862067763
+
+
+
+
+
+
+Contribution;"Contribution ID";"Contribution amount";;"Past invoices contribution amount";;"Total contribution amount"
+WCA;1;24;;24;;0
+
+
+
+
+Tax;-0,00018173793159804
+Fees;0
+"Total HT";-0,0045434482758537
+"Total TC";-0,0047251862074518
+2;;;;42,5;730;24;;7938,9032748138
+Information;;;;;;;;;Module;;;;;;;;;;;;;;Period;;;;;;;Module;;;;;;;;;;;;;;Period;;;;;;;Module;;;;;;;;;;;;;;Period;;;;;;;Module;;;;;;;;;;;;;;Period;;;;;;;Module;;;;;;;;;;;;;;Period;;;;;;;Module;;;;;;;;;;;;;;Period;;;;;;;Module;;;;;;;;;;;;;;Period;;;;;;;Module;;;;;;;;;;;;;;Period;;;;;;
+"Internal ID";Gender;Name;Firstname;"Date of birth";"Worked days";"Worked months";Errors;Premium;"Type of module";"Insurance company";Formula;"Policy number";Currency;"Number of days";"Number of months";Premium;Rate;"Calculation mode";"Discount (%)";"Company commission (%)";"Broker commission (%)";"Tax (%)";"Sum insured";"Company HT";"Company TC";"Wycc fees";"Contribution type";Contribution;"Client premium";"Type of module";"Insurance company";Formula;"Policy number";Currency;"Number of days";"Number of months";Premium;Rate;"Calculation mode";"Discount (%)";"Company commission (%)";"Broker commission (%)";"Tax (%)";"Sum insured";"Company HT";"Company TC";"Wycc fees";"Contribution type";Contribution;"Client premium";"Type of module";"Insurance company";Formula;"Policy number";Currency;"Number of days";"Number of months";Premium;Rate;"Calculation mode";"Discount (%)";"Company commission (%)";"Broker commission (%)";"Tax (%)";"Sum insured";"Company HT";"Company TC";"Wycc fees";"Contribution type";Contribution;"Client premium";"Type of module";"Insurance company";Formula;"Policy number";Currency;"Number of days";"Number of months";Premium;Rate;"Calculation mode";"Discount (%)";"Company commission (%)";"Broker commission (%)";"Tax (%)";"Sum insured";"Company HT";"Company TC";"Wycc fees";"Contribution type";Contribution;"Client premium";"Type of module";"Insurance company";Formula;"Policy number";Currency;"Number of days";"Number of months";Premium;Rate;"Calculation mode";"Discount (%)";"Company commission (%)";"Broker commission (%)";"Tax (%)";"Sum insured";"Company HT";"Company TC";"Wycc fees";"Contribution type";Contribution;"Client premium";"Type of module";"Insurance company";Formula;"Policy number";Currency;"Number of days";"Number of months";Premium;Rate;"Calculation mode";"Discount (%)";"Company commission (%)";"Broker commission (%)";"Tax (%)";"Sum insured";"Company HT";"Company TC";"Wycc fees";"Contribution type";Contribution;"Client premium";"Type of module";"Insurance company";Formula;"Policy number";Currency;"Number of days";"Number of months";Premium;Rate;"Calculation mode";"Discount (%)";"Company commission (%)";"Broker commission (%)";"Tax (%)";"Sum insured";"Company HT";"Company TC";"Wycc fees";"Contribution type";Contribution;"Client premium";"Type of module";"Insurance company";Formula;"Policy number";Currency;"Number of days";"Number of months";Premium;Rate;"Calculation mode";"Discount (%)";"Company commission (%)";"Broker commission (%)";"Tax (%)";"Sum insured";"Company HT";"Company TC";"Wycc fees";"Contribution type";Contribution;"Client premium"
+130534;M;MATTER;Arnaud;28/09/1984;365;12;;4975,6322718897;"Healthcare Plan";"AIG Luxembourg";Perfect;L2022479;EUR;365;12;874,0385;;monthly;0;25;0;4;500000;1165,3846666667;1212,0000533333;32;WCA;12;1256,0000533333;"Assistance and Repatriation";"AIG Luxembourg";Perfect;L2022479;EUR;365;12;142,78846;;monthly;0;25;0;4;25000;190,38461333333;197,99999786667;0;;;197,99999786667;"Death Accident";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;0,05010;daily;0;27,5;0;4;252000;174,14068965517;181,10631724138;0;;;181,10631724138;"Death Illness";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;0,12530;daily;0;27,5;0;4;252000;435,52551724138;452,94653793103;0;;;452,94653793103;"Permanent Disability Accident";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;0,06190;daily;0;27,5;0;4;252000;215,15586206897;223,76209655172;0;;;223,76209655172;"Permanent Disability Illness";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;0,14890;daily;0;27,5;0;4;252000;517,55586206897;538,25809655172;0;;;538,25809655172;"Temporary Disability Accident";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;0,58830;daily;0;27,5;0;4;84000;681,61655172414;708,8812137931;0;;;708,8812137931;"Temporary Disability Illness";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;1,1757;daily;0;27,5;0;4;84000;1362,1903448276;1416,6779586207;0;;;1416,6779586207
+131262;F;BERTHE;Muriel;08/06/1961;365;12;;2963,2710029241;"Healthcare Plan";"AIG Luxembourg";Perfect;L2022479;EUR;365;12;874,0385;;monthly;0;25;0;4;500000;1165,3846666667;1212,0000533333;32;WCA;12;1256,0000533333;"Assistance and Repatriation";"AIG Luxembourg";Perfect;L2022479;EUR;365;12;142,78846;;monthly;0;25;0;4;25000;190,38461333333;197,99999786667;0;;;197,99999786667;"Death Accident";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;0,05010;daily;0;27,5;0;4;108000;74,631724137931;77,616993103448;0;;;77,616993103448;"Death Illness";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;0,12530;daily;0;27,5;0;4;108000;186,65379310345;194,11994482759;0;;;194,11994482759;"Permanent Disability Accident";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;0,06190;daily;0;27,5;0;4;108000;92,209655172414;95,89804137931;0;;;95,89804137931;"Permanent Disability Illness";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;0,14890;daily;0;27,5;0;4;108000;221,80965517241;230,68204137931;0;;;230,68204137931;"Temporary Disability Accident";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;0,58830;daily;0;27,5;0;4;36000;292,12137931034;303,80623448276;0;;;303,80623448276;"Temporary Disability Illness";"Anker Verzekeringen n,v,";"Formula 3";240322;EUR;365;12;;1,1757;daily;0;27,5;0;4;36000;583,79586206897;607,14769655172;0;;;607,14769655172
