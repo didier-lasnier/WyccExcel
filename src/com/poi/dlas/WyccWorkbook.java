@@ -250,17 +250,12 @@ public class WyccWorkbook {
 				   logger.info("nothing"); 
 			   else  
 				   logger.info(String.valueOf(cell.getBooleanCellValue())); 
-			try {
-				stmt.executeUpdate("INSERT INTO  CELLULE () VALUES ("+stylCell(cell)+") ");
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			
 		 }
 		 h2db  db = new h2db();
 		 try {
 			Session session =db.getSession();
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
