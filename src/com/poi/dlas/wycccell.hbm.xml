@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dlas.dao.wycccell" table="SETTINGSCELL">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="cellrow" type="java.lang.Long">
+                    <column name="CELLROW" />
+        </property> 
+        <property name="cellcolumn" type="java.lang.Long">
+                    <column name="CELLCOLUMN" />
+        </property> 
+        <property name="sheetnum" type="java.lang.Long">
+                    <column name="SHEETNUM" />
+         </property> 
+        <property name="halignement" type="java.lang.Long">
+                    <column name="HALIGNEMENT" />
+        </property>  
+        <property name="valignement" type="java.lang.Long">
+                    <column name="VALIGNEMENT" />
+        </property>  
+        <property name="borderbottom" type="java.lang.Long">
+                    <column name="BORDERBOTTOM" />
+        </property>  
+        <property name="bordertop" type="java.lang.Long">
+                    <column name="BORDERTOP" />
+        </property>  
+        <property name="borterleft" type="java.lang.Long">
+                    <column name="BORTERLEFT" />
+        </property> 
+        <property name="borderright" type="java.lang.Long">
+                    <column name="BORDERRIGHT" />
+        </property> 
+        <property name="dataformat" type="java.lang.Long">
+                    <column name="dataformat" />
+        </property>  
+        <property name="dataformatstring" type="java.lang.String">
+                    <column name="DATAFORMATSTRING" />
+        </property> 
+        <property name="baxkgroundcolor" type="java.lang.Long">
+                    <column name="BAXKGROUNDCOLOR" />
+        </property>  
+        <property name="pattern" type="java.lang.Long">
+                    <column name="PATTERN" />
+        </property>  
+        <property name="fontindex" type="java.lang.Long">
+                    <column name="FONTINDEX" />
+        </property>  
+        <property name="indention" type="java.lang.Long">
+                    <column name="INDENTION" />
+        </property> 
+        <property name="bordercolorbottom" type="java.lang.Long">
+                    <column name="BORDERCOLORBOTTOM" />
+        </property>  
+        <property name="bordercolortop" type="java.lang.Long">
+                    <column name="BORDERCOLORTOP" />
+        </property>  
+        <property name="bordercolorright" type="java.lang.Long">
+                    <column name="BORDERCOLORRIGHT" />
+        </property>  
+        <property name="bordercolorleft" type="java.lang.Long">
+                    <column name="BORDERCOLORLEFT" />
+        </property>  
+        <property name="valeurcell" type="java.lang.String">
+                    <column name="VALEURCELL" />
+        </property> 
+    </class>
+</hibernate-mapping>

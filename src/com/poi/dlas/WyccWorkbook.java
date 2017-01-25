@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Calendar;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
@@ -26,11 +27,16 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 
 import com.dlas.dao.h2db;
 import com.dlas.dao.hsqltext;
+import com.dlas.dao.wycccell;
+
+
+import com.dlas.dao.ObjectDao;
 
 import org.hibernate.HibernateException ;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 
 public class WyccWorkbook {
@@ -146,23 +152,30 @@ public class WyccWorkbook {
 			//  FileOutputStream out = new FileOutputStream(xlsfileWycc.getAbsolutePath() );
 			    File directory = new File (".");
 			     String fileCharSep =System.getProperty("file.separator");
-			    h2db db=new h2db();
-			    db.getDatabase(directory);
+//			    h2db db=new h2db();
+//			    db.getDatabase(directory);
+//
+//			    Statement stmt = db.connectiondb.createStatement();
+				   ObjectDao myobj= new ObjectDao();
+				   Session lasession = myobj.getSessionDao();
 
-			    Statement stmt = db.connectiondb.createStatement();
-			   
 
-
-			    
 				  try {
 				 // XSSFWorkbook workbook = this.currentworkbook; 
 					  XSSFSheet sheet = this.currentworkbook.getSheetAt(0); 
 				  
 					  int firstSheet =0;
 					  int firstrow =0;
-					  for (int i=firstrow;i<=5;i++){
-					  readData(this.currentworkbook,0,i,stmt);
+					  
+					 lasession.beginTransaction();
+					 Query query = lasession.createSQLQuery("DELETE FROM SETTINGSCELL");
+					 int result = query.executeUpdate();
+					 lasession.getTransaction().commit();
+					  for (int i=firstrow;i<=6;i++){
+					  readData(this.currentworkbook,0,i,lasession);
 					  }
+					  lasession.close();
+					  
 				 // out.close();
 				  this.currentworkbook.close();
 				  	}
@@ -170,8 +183,8 @@ public class WyccWorkbook {
 					   e.printStackTrace(); 
 					  }  
 			  
-			   stmt.close();
-			    db.closeDbConnection(db.connectiondb);
+//			     stmt.close();
+//			    db.closeDbConnection(db.connectiondb);
 			    
 			  } catch (Exception e) { 
 			   e.printStackTrace(); 
@@ -207,7 +220,7 @@ public class WyccWorkbook {
 			  return number; 
 		  	} 
 		 } 
-	public void readData(XSSFWorkbook workbook,int sheetNumber,int fromRow ,Statement stmt  ) throws SQLException{
+	public void readData(XSSFWorkbook workbook,int sheetNumber,int fromRow ,Session lasession  ) throws SQLException{
 		// on recupére la ligne
 		
 		XSSFRow currentRow = workbook.getSheetAt(sheetNumber).getRow(fromRow);
@@ -217,16 +230,22 @@ public class WyccWorkbook {
 		//on lit la cellule
 		 Row row=workbook.getSheetAt(sheetNumber).getRow(fromRow);
 		 int firstcell = row.getFirstCellNum();
-	 
+
 		 for(int j=firstcell;j< lastCell;j++){ 
-			// int First = row.getFirstCellNum();
-			Cell cell = row.getCell(j); 
+			 String cellText =null;
+			 String cellformule=null;
+			 Cell cell = row.getCell(j); 
 			
-			if(cell.getCellType()==Cell.CELL_TYPE_STRING) 
+			if(cell.getCellType()==Cell.CELL_TYPE_STRING) {
 			    logger.info("Row : "+fromRow+ " Column : "+j+" value : "+ cell.getStringCellValue() ); 
+				cellText = cell.getStringCellValue();
+					}
+			else if (cell.getCellType()==Cell.CELL_TYPE_FORMULA ) {
+				 cellformule=cell.getCellFormula();
+			}
 			   else if(cell.getCellType()==Cell.CELL_TYPE_NUMERIC || cell.getCellType()==Cell.CELL_TYPE_FORMULA ){ 
 			     
-			    String cellText  = String.valueOf(cell.getNumericCellValue()); 
+			     cellText  = String.valueOf(cell.getNumericCellValue()); 
 			    if (HSSFDateUtil.isCellDateFormatted(cell)) { 
 			            // format in form of M/D/YY 
 			     double d = cell.getNumericCellValue(); 
@@ -250,16 +269,16 @@ public class WyccWorkbook {
 				   logger.info("nothing"); 
 			   else  
 				   logger.info(String.valueOf(cell.getBooleanCellValue())); 
-			
+
+			 wycccell wycccell=new wycccell();
+			 
+			 wycccell=StylCellDao(cell,cellText,cellformule);
+			 
+			 lasession.beginTransaction();
+			 lasession.save(wycccell);
+			 lasession.getTransaction().commit();
 		 }
-		 h2db  db = new h2db();
-		 try {
-			Session session =db.getSession();
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		     
 		
 	}
 	
@@ -289,6 +308,20 @@ public class WyccWorkbook {
 		
 		return sqlstmt;
 		}
-	
+
+	public wycccell StylCellDao (Cell thecell,String cellText ,String cellformule){
+		
+		return new wycccell(thecell.getRowIndex() , thecell.getColumnIndex() , 0,
+				thecell.getCellStyle().getAlignment() , thecell.getCellStyle().getVerticalAlignment() ,
+				thecell.getCellStyle().getBorderBottom() ,
+				thecell.getCellStyle().getBorderTop() ,thecell.getCellStyle().getBorderLeft() ,
+				thecell.getCellStyle().getBorderRight() ,
+				thecell.getCellStyle().getDataFormat() , thecell.getCellStyle().getDataFormatString(),
+				thecell.getCellStyle().getFillBackgroundColor() , 
+				thecell.getCellStyle().getFillPattern() , thecell.getCellStyle().getIndex() ,
+				thecell.getCellStyle().getIndention() , thecell.getCellStyle().getBottomBorderColor() ,
+				thecell.getCellStyle().getBottomBorderColor() ,thecell.getCellStyle().getRightBorderColor() , 
+				thecell.getCellStyle().getLeftBorderColor(),cellText,cellformule );
+		}
 	
 }
