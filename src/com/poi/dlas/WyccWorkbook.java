@@ -30,6 +30,9 @@ import com.dlas.dao.hsqltext;
 import com.dlas.dao.wycccell;
 
 
+
+//import au.com.ozblog.hibernate.h2.example.User;
+
 import com.dlas.dao.ObjectDao;
 
 import org.hibernate.HibernateException ;
@@ -165,13 +168,13 @@ public class WyccWorkbook {
 					  XSSFSheet sheet = this.currentworkbook.getSheetAt(0); 
 				  
 					  int firstSheet =0;
-					  int firstrow =0;
+					  int firstrow =3;
 					  
 					 lasession.beginTransaction();
 					 Query query = lasession.createSQLQuery("DELETE FROM SETTINGSCELL");
 					 int result = query.executeUpdate();
 					 lasession.getTransaction().commit();
-					  for (int i=firstrow;i<=6;i++){
+					  for (int i=firstrow;i<=4;i++){
 					  readData(this.currentworkbook,0,i,lasession);
 					  }
 					  lasession.close();
@@ -198,6 +201,27 @@ public class WyccWorkbook {
 		
 	}
 	
+	public void readformula (){
+		
+		   ObjectDao myobj= new ObjectDao();
+		   Session lasession = myobj.getSessionDao();
+		// now lets pull events from the database and list them
+		  
+		   lasession.beginTransaction();
+		List result = lasession.createQuery("from wycccell").list();
+		
+		for (wycccell event : (List<wycccell>) result) {
+			if (event.getformulecell() != null) {
+			 
+			   String laformule = event.getformulecell().replace("5", "%d");
+			   //int occurance = StringUtils.countOccurrencesOf("a.b.c.d", ".");
+			   int introw=event.getCellrow()+1;
+			   System.out.println(laformule+"****** : "+String.format(laformule,introw,introw) );
+			}
+		}
+		lasession.getTransaction().commit();
+		lasession.close();
+	}
 	public int getRowCount(XSSFWorkbook workbook,String sheetName){ 
 		  int index = workbook.getSheetIndex(sheetName); 
 		  if(index==-1) 
@@ -235,48 +259,52 @@ public class WyccWorkbook {
 			 String cellText =null;
 			 String cellformule=null;
 			 Cell cell = row.getCell(j); 
+			 
+			if (cell != null) {
+				if(cell.getCellType()==Cell.CELL_TYPE_STRING) {
+				    logger.info("Row : "+fromRow+ " Column : "+j+" value : "+ cell.getStringCellValue() ); 
+					cellText = cell.getStringCellValue();
+						}
+				else if (cell.getCellType()==Cell.CELL_TYPE_FORMULA ) {
+					 cellformule=cell.getCellFormula();
+				}
+				
+				else if(cell.getCellType()==Cell.CELL_TYPE_NUMERIC || cell.getCellType()==Cell.CELL_TYPE_FORMULA ){ 
+				     
+				     cellText  = String.valueOf(cell.getNumericCellValue()); 
+				    if (HSSFDateUtil.isCellDateFormatted(cell)) { 
+				            // format in form of M/D/YY 
+				     double d = cell.getNumericCellValue(); 
+				 
+				     Calendar cal =Calendar.getInstance(); 
+				     cal.setTime(HSSFDateUtil.getJavaDate(d)); 
+				             cellText = 
+				              (String.valueOf(cal.get(Calendar.YEAR))).substring(2); 
+				            cellText = cal.get(Calendar.MONTH)+1 + "/" + 
+				                       cal.get(Calendar.DAY_OF_MONTH) + "/" + 
+				                       cellText; 
+				             
+				           // System.out.println(cellText); 
+				 
+				          } 
+				 
+				     
+				     
+				    logger.info( cellText); 
+				   }else if(cell.getCellType()==Cell.CELL_TYPE_BLANK) 
+					   logger.info("nothing"); 
+				   else  
+					   logger.info(String.valueOf(cell.getBooleanCellValue())); 
+				
+	
+				 wycccell wycccell=new wycccell();
+				 
+				 wycccell=StylCellDao(cell,cellText,cellformule);
 			
-			if(cell.getCellType()==Cell.CELL_TYPE_STRING) {
-			    logger.info("Row : "+fromRow+ " Column : "+j+" value : "+ cell.getStringCellValue() ); 
-				cellText = cell.getStringCellValue();
-					}
-			else if (cell.getCellType()==Cell.CELL_TYPE_FORMULA ) {
-				 cellformule=cell.getCellFormula();
+				 lasession.beginTransaction();
+				 lasession.save(wycccell);
+				 lasession.getTransaction().commit();
 			}
-			   else if(cell.getCellType()==Cell.CELL_TYPE_NUMERIC || cell.getCellType()==Cell.CELL_TYPE_FORMULA ){ 
-			     
-			     cellText  = String.valueOf(cell.getNumericCellValue()); 
-			    if (HSSFDateUtil.isCellDateFormatted(cell)) { 
-			            // format in form of M/D/YY 
-			     double d = cell.getNumericCellValue(); 
-			 
-			     Calendar cal =Calendar.getInstance(); 
-			     cal.setTime(HSSFDateUtil.getJavaDate(d)); 
-			             cellText = 
-			              (String.valueOf(cal.get(Calendar.YEAR))).substring(2); 
-			            cellText = cal.get(Calendar.MONTH)+1 + "/" + 
-			                       cal.get(Calendar.DAY_OF_MONTH) + "/" + 
-			                       cellText; 
-			             
-			           // System.out.println(cellText); 
-			 
-			          } 
-			 
-			     
-			     
-			    logger.info( cellText); 
-			   }else if(cell.getCellType()==Cell.CELL_TYPE_BLANK) 
-				   logger.info("nothing"); 
-			   else  
-				   logger.info(String.valueOf(cell.getBooleanCellValue())); 
-
-			 wycccell wycccell=new wycccell();
-			 
-			 wycccell=StylCellDao(cell,cellText,cellformule);
-			 
-			 lasession.beginTransaction();
-			 lasession.save(wycccell);
-			 lasession.getTransaction().commit();
 		 }
 		     
 		
@@ -311,7 +339,10 @@ public class WyccWorkbook {
 
 	public wycccell StylCellDao (Cell thecell,String cellText ,String cellformule){
 		
-		return new wycccell(thecell.getRowIndex() , thecell.getColumnIndex() , 0,
+	
+		return new wycccell(
+				thecell.getRowIndex() , 
+				thecell.getColumnIndex() , 0,
 				thecell.getCellStyle().getAlignment() , thecell.getCellStyle().getVerticalAlignment() ,
 				thecell.getCellStyle().getBorderBottom() ,
 				thecell.getCellStyle().getBorderTop() ,thecell.getCellStyle().getBorderLeft() ,
@@ -322,6 +353,8 @@ public class WyccWorkbook {
 				thecell.getCellStyle().getIndention() , thecell.getCellStyle().getBottomBorderColor() ,
 				thecell.getCellStyle().getBottomBorderColor() ,thecell.getCellStyle().getRightBorderColor() , 
 				thecell.getCellStyle().getLeftBorderColor(),cellText,cellformule );
+		
+			
 		}
 	
 }

@@ -376,14 +376,14 @@ public class wycccell {
 		 * @return the formulecell
 		 */
 		public String getformulecell() {
-			return valeurcell;
+			return formulecell;
 		}
 
 		/**
 		 * @param formulecell the formulecell to set
 		 */
-		public void setformulecell(String valeurcell) {
-			this.valeurcell = valeurcell;
+		public void setformulecell(String formulecell) {
+			this.formulecell = formulecell;
 		}		
 				
 }

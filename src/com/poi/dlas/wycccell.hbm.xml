@@ -67,5 +67,8 @@
         <property name="valeurcell" type="java.lang.String">
                     <column name="VALEURCELL" />
         </property> 
+                <property name="formulecell" type="java.lang.String">
+                    <column name="FORMULECELL" />
+        </property> 
     </class>
 </hibernate-mapping>
