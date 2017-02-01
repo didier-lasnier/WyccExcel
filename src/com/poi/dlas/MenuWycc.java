@@ -62,27 +62,7 @@ public class MenuWycc {
         });
         menu.add(menuItem);
         
-        menuItem = new JMenuItem("Lire un fichier Excel...",
-                KeyEvent.VK_R);
-		//menuItem.setMnemonic(KeyEvent.VK_T); //used constructor instead
-		menuItem.setAccelerator(KeyStroke.getKeyStroke(
-		KeyEvent.VK_R, ActionEvent.META_MASK));
-		menuItem.getAccessibleContext().setAccessibleDescription(
-		"This doesn't really do anything");
-		menuItem.addActionListener(new ActionListener() {
-				@Override
-				public void actionPerformed(ActionEvent e)
-					{
-							ReadFileXlsx a= new ReadFileXlsx();
-						try {
-							a.readxls();
-						} catch (Exception e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
-					}
-			});
-		menu.add(menuItem);
+        
 
         menuItem = new JMenuItem("Génére fichier excel...",
                 KeyEvent.VK_E);
@@ -98,6 +78,29 @@ public class MenuWycc {
 							ReadFileXlsx a= new ReadFileXlsx();
 						try {
 							a.generexls();
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					}
+			});
+		menu.add(menuItem);
+		
+		
+		menuItem = new JMenuItem("Lire un fichier Excel...",
+                KeyEvent.VK_R);
+		//menuItem.setMnemonic(KeyEvent.VK_T); //used constructor instead
+		menuItem.setAccelerator(KeyStroke.getKeyStroke(
+		KeyEvent.VK_R, ActionEvent.META_MASK));
+		menuItem.getAccessibleContext().setAccessibleDescription(
+		"This doesn't really do anything");
+		menuItem.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e)
+					{
+							ReadFileXlsx a= new ReadFileXlsx();
+						try {
+							a.readxls();
 						} catch (Exception e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();

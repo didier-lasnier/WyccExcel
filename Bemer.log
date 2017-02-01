@@ -10815,3 +10815,916 @@ amount
 [2017-02-01 00:31:53,906]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
 [2017-02-01 00:31:54,082]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 [2017-02-01 00:31:54,579]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 18:12:04,937]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 18:12:04,960]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 18:12:05,315]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 18:12:05,500]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 18:12:05,527]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 18:12:05,528]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 18:12:05,528]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 18:12:05,530]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 18:12:05,866]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 18:12:06,765]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 19:00:53,475]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 19:00:53,504]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 19:00:53,836]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 19:00:54,020]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 19:00:54,053]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 19:00:54,053]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 19:00:54,054]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 19:00:54,058]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 19:00:54,413]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 19:01:10,235]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 19:07:05,434]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 19:07:05,441]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 19:07:05,805]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 19:07:05,932]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 19:07:05,935]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 19:07:05,935]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 19:07:05,936]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 19:07:05,938]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 19:07:06,154]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 19:07:14,128]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 19:10:02,737]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 19:10:02,743]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 19:10:03,014]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 19:10:03,140]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 19:10:03,143]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 19:10:03,144]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 19:10:03,144]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 19:10:03,147]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 19:10:03,361]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 19:10:25,878]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 19:10:33,372]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 19:10:33,373]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 19:10:33,374]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 19:10:33,375]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 19:10:33,377]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 19:10:33,380]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 19:10:35,511]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 19:58:22,083]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 19:58:22,089]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 19:58:22,303]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 19:58:22,420]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 19:58:22,424]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 19:58:22,425]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 19:58:22,425]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 19:58:22,427]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 19:58:22,620]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 19:58:23,131]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 19:58:23,270]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 19:58:23,271]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 19:58:23,271]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 19:58:23,272]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 19:58:23,272]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 19:58:23,274]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 19:58:23,319]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 21:29:13,041]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 21:29:13,046]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 21:29:13,248]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 21:29:13,366]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 21:29:13,371]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 21:29:13,372]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 21:29:13,372]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 21:29:13,376]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 21:29:13,564]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 21:29:14,068]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 21:29:14,188]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 21:29:14,189]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 21:29:14,189]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 21:29:14,189]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 21:29:14,189]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 21:29:14,190]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 21:29:14,910]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 21:29:15,170]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-01 21:29:15,171]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-01 21:29:15,173]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-01 21:29:15,173]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-01 21:29:31,871]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-01 21:29:32,099]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-01 21:29:32,100]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-01 21:29:32,104]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-01 21:29:32,104]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-01 21:30:02,174]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-01 21:31:51,619]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 21:31:51,624]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 21:31:51,884]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 21:31:51,999]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 21:31:52,003]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 21:31:52,003]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 21:31:52,004]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 21:31:52,006]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 21:31:52,177]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 21:31:52,693]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 21:31:52,818]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 21:31:52,819]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 21:31:52,819]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 21:31:52,819]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 21:31:52,819]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 21:31:52,820]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 21:31:53,229]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 21:31:53,563]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-01 21:31:53,565]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-01 21:31:53,566]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-01 21:31:53,567]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-01 21:32:07,755]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-01 21:50:37,653]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-01 21:50:37,717]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-01 21:50:37,718]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-01 21:50:41,746]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 21:50:41,748]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 21:50:41,956]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 21:50:42,030]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 21:50:42,034]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 21:50:42,035]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 21:50:42,035]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 21:50:42,038]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 21:50:42,269]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 21:51:45,546]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-01 21:51:45,613]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-01 21:51:45,614]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-01 21:51:48,824]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 21:51:48,826]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 21:51:49,043]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 21:51:49,120]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 21:51:49,124]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 21:51:49,125]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 21:51:49,125]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 21:51:49,128]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 21:51:49,340]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 21:51:49,929]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 0 value : monthly salary
+[2017-02-01 21:51:49,986]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 1 value : nb of days
+[2017-02-01 21:51:49,988]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 2 value : Nb of Months
+[2017-02-01 21:51:49,998]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 3 value : Type of module
+[2017-02-01 21:51:50,007]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 4 value : Insurance company
+[2017-02-01 21:51:50,018]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 5 value : Formula
+[2017-02-01 21:51:50,023]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 6 value : Policy number
+[2017-02-01 21:51:50,028]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 7 value : Currency
+[2017-02-01 21:51:50,030]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 8 value : Calculation mode
+[2017-02-01 21:51:50,033]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 9 value : Rate
+[2017-02-01 21:51:50,036]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 10 value : sum insured
+(%)
+[2017-02-01 21:51:50,039]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 11 value : sum insured 
+amount
+[2017-02-01 21:51:50,042]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 12 value : Cie Net Premium  without tax without com
+[2017-02-01 21:51:50,075]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 13 value : Discount / increase (%)
+[2017-02-01 21:51:50,079]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : Cie Net Premium  without tax without com with discount/increase
+[2017-02-01 21:51:50,088]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 15 value : Total Cie commission (%)
+[2017-02-01 21:51:50,095]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 16 value : Cie Premium  without tax (included com+dicount)
+[2017-02-01 21:51:50,102]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 17 value : Total Cie commission amount
+[2017-02-01 21:51:50,109]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 18 value : Broker commission included (%)
+[2017-02-01 21:51:50,115]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 19 value : Broker commission included amount
+[2017-02-01 21:51:50,120]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 20 value : WYCC commission included (%)
+[2017-02-01 21:51:50,124]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 21 value : WYCC commission included amount
+[2017-02-01 21:51:50,130]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 22 value : Tax 
+(%)
+[2017-02-01 21:51:50,135]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 23 value : Tax 
+amount
+[2017-02-01 21:51:50,138]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 24 value : Premium Tc
+[2017-02-01 21:51:50,140]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 25 value : WYCC Fees 
+(%)
+[2017-02-01 21:51:50,153]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 26 value : WYCC Fees 
+Amount or fixed sum
+[2017-02-01 21:51:50,158]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 27 value : Premium Tax and Fees included
+[2017-02-01 21:51:50,170]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 28 value : Total Surcom  
+(%)
+[2017-02-01 21:51:50,178]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 29 value : Premium with surcom
+[2017-02-01 21:51:50,185]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 30 value : Total Surcom  
+amount
+[2017-02-01 21:51:50,190]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 31 value : Broker Surcom  
+(%)
+[2017-02-01 21:51:50,194]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 32 value : Broker Surcom  
+amount
+[2017-02-01 21:51:50,198]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 33 value : WYCC surcom  
+(%)
+[2017-02-01 21:51:50,204]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 34 value : WYCC surcom  
+amount
+[2017-02-01 21:51:50,209]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 35 value : Total client Premium  without bank + broker fees
+[2017-02-01 21:51:50,221]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 36 value : Cie Net Premium  without tax without com
+[2017-02-01 21:51:50,224]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 37 value : Discount / increase (%)
+[2017-02-01 21:51:50,228]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 38 value : Cie Net Premium  without tax without com with discount/increase
+[2017-02-01 21:51:50,230]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 39 value : Total Cie commission (%)
+[2017-02-01 21:51:50,233]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 40 value : Cie Premium  without tax (included com+dicount)
+[2017-02-01 21:51:50,238]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 41 value : Total Cie commission amount
+[2017-02-01 21:51:50,240]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 42 value : Broker commission included (%)
+[2017-02-01 21:51:50,243]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 43 value : Broker commission included amount
+[2017-02-01 21:51:50,245]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 44 value : WYCC commission included (%)
+[2017-02-01 21:51:50,247]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 45 value : WYCC commission included amount
+[2017-02-01 21:51:50,251]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 46 value : Tax 
+(%)
+[2017-02-01 21:51:50,254]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 47 value : Tax 
+amount
+[2017-02-01 21:51:50,262]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 48 value : Premium Tc
+[2017-02-01 21:51:50,265]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 49 value : WYCC Fees 
+(%)
+[2017-02-01 21:51:50,268]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 50 value : WYCC Fees 
+Amount or fixed sum
+[2017-02-01 21:51:50,271]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 51 value : Premium Tax and Fees included
+[2017-02-01 21:51:50,274]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 52 value : Total Surcom  
+(%)
+[2017-02-01 21:51:50,277]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 53 value : Premium with surcom
+[2017-02-01 21:51:50,280]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 54 value : Total Surcom  
+amount
+[2017-02-01 21:51:50,283]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 55 value : Broker Surcom  
+(%)
+[2017-02-01 21:51:50,286]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 56 value : Broker Surcom  
+amount
+[2017-02-01 21:51:50,288]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 57 value : WYCC surcom  
+(%)
+[2017-02-01 21:51:50,290]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 58 value : WYCC surcom  
+amount
+[2017-02-01 21:51:50,293]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 59 value : Total client Premium  without bank + broker fees
+[2017-02-01 21:51:50,296]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-02-01 21:51:50,299]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 61 value : WCA
+[2017-02-01 21:51:50,303]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 62 value : WCA
+[2017-02-01 21:51:50,305]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 63 value : Frequency of payment
+[2017-02-01 21:51:50,308]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 64 value : Frequency of payment Fees 
+(%)
+[2017-02-01 21:51:50,311]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 65 value : Broker  add fees cotisation
+amount
+[2017-02-01 21:51:50,313]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 66 value : Broker add Bank Fees
+%
+[2017-02-01 21:51:50,315]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 67 value : Broker add Bank Fees
+amount
+[2017-02-01 21:51:50,320]-[AWT-EventQueue-0] INFO  wycc  - 5000.0
+[2017-02-01 21:51:50,324]-[AWT-EventQueue-0] INFO  wycc  - 365.0
+[2017-02-01 21:51:50,326]-[AWT-EventQueue-0] INFO  wycc  - 12.0
+[2017-02-01 21:51:50,329]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 3 value : Healthcare Plan
+[2017-02-01 21:51:50,332]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 4 value : AIG Luxembourg
+[2017-02-01 21:51:50,335]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 5 value : Perfect
+[2017-02-01 21:51:50,338]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 6 value : L2022479
+[2017-02-01 21:51:50,340]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 7 value : EUR
+[2017-02-01 21:51:50,343]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 8 value : monthly
+[2017-02-01 21:51:50,345]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 9 value : not applicable
+[2017-02-01 21:51:50,348]-[AWT-EventQueue-0] INFO  wycc  - 500000.0
+[2017-02-01 21:51:50,351]-[AWT-EventQueue-0] INFO  wycc  - 874.0385
+[2017-02-01 21:51:50,354]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-02-01 21:51:50,359]-[AWT-EventQueue-0] INFO  wycc  - 0.25
+[2017-02-01 21:51:50,368]-[AWT-EventQueue-0] INFO  wycc  - 0.15
+[2017-02-01 21:51:50,378]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-02-01 21:51:50,387]-[AWT-EventQueue-0] INFO  wycc  - 0.03
+[2017-02-01 21:51:50,396]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-02-01 21:51:50,404]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-02-01 21:51:50,531]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-02-01 21:51:50,545]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 63 value : Annual
+[2017-02-01 22:01:27,140]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 22:01:27,145]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 22:01:27,361]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 22:01:27,471]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 22:01:27,475]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 22:01:27,476]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 22:01:27,476]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 22:01:27,478]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 22:02:03,068]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 22:02:03,072]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 22:02:03,267]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 22:02:03,372]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 22:02:03,377]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 22:02:03,377]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 22:02:03,377]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 22:02:03,379]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 22:02:03,559]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 22:02:04,064]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 22:02:04,182]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 22:02:04,182]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 22:02:04,183]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 22:02:04,183]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 22:02:04,183]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 22:02:04,194]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 22:02:04,569]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 22:02:04,884]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-01 22:02:04,885]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-01 22:02:04,887]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-01 22:02:04,887]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-01 22:02:19,322]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-01 22:51:27,022]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-01 22:51:27,087]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-01 22:51:27,089]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-01 22:51:30,033]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 22:51:30,035]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 22:51:30,278]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 22:51:30,348]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 22:51:30,351]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 22:51:30,351]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 22:51:30,352]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 22:51:30,355]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 22:51:30,531]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 22:51:31,152]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 0 value : monthly salary
+[2017-02-01 22:51:31,193]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 1 value : nb of days
+[2017-02-01 22:51:31,195]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 2 value : Nb of Months
+[2017-02-01 22:51:31,198]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 3 value : Type of module
+[2017-02-01 22:51:31,201]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 4 value : Insurance company
+[2017-02-01 22:51:31,203]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 5 value : Formula
+[2017-02-01 22:51:31,206]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 6 value : Policy number
+[2017-02-01 22:51:31,210]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 7 value : Currency
+[2017-02-01 22:51:31,213]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 8 value : Calculation mode
+[2017-02-01 22:51:31,215]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 9 value : Rate
+[2017-02-01 22:51:31,217]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 10 value : sum insured
+(%)
+[2017-02-01 22:51:31,219]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 11 value : sum insured 
+amount
+[2017-02-01 22:51:31,237]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 12 value : Cie Net Premium  without tax without com
+[2017-02-01 22:51:31,244]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 13 value : Discount / increase (%)
+[2017-02-01 22:51:31,246]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : Cie Net Premium  without tax without com with discount/increase
+[2017-02-01 22:51:31,249]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 15 value : Total Cie commission (%)
+[2017-02-01 22:51:31,252]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 16 value : Cie Premium  without tax (included com+dicount)
+[2017-02-01 22:51:31,254]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 17 value : Total Cie commission amount
+[2017-02-01 22:51:31,257]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 18 value : Broker commission included (%)
+[2017-02-01 22:51:31,259]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 19 value : Broker commission included amount
+[2017-02-01 22:51:31,262]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 20 value : WYCC commission included (%)
+[2017-02-01 22:51:31,264]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 21 value : WYCC commission included amount
+[2017-02-01 22:51:31,267]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 22 value : Tax 
+(%)
+[2017-02-01 22:51:31,270]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 23 value : Tax 
+amount
+[2017-02-01 22:51:31,273]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 24 value : Premium Tc
+[2017-02-01 22:51:31,275]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 25 value : WYCC Fees 
+(%)
+[2017-02-01 22:51:31,281]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 26 value : WYCC Fees 
+Amount or fixed sum
+[2017-02-01 22:51:31,287]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 27 value : Premium Tax and Fees included
+[2017-02-01 22:51:31,291]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 28 value : Total Surcom  
+(%)
+[2017-02-01 22:51:31,300]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 29 value : Premium with surcom
+[2017-02-01 22:51:31,304]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 30 value : Total Surcom  
+amount
+[2017-02-01 22:51:31,310]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 31 value : Broker Surcom  
+(%)
+[2017-02-01 22:51:31,317]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 32 value : Broker Surcom  
+amount
+[2017-02-01 22:51:31,323]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 33 value : WYCC surcom  
+(%)
+[2017-02-01 22:51:31,325]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 34 value : WYCC surcom  
+amount
+[2017-02-01 22:51:31,328]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 35 value : Total client Premium  without bank + broker fees
+[2017-02-01 22:51:31,330]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 36 value : Cie Net Premium  without tax without com
+[2017-02-01 22:51:31,338]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 37 value : Discount / increase (%)
+[2017-02-01 22:51:31,361]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 38 value : Cie Net Premium  without tax without com with discount/increase
+[2017-02-01 22:51:31,370]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 39 value : Total Cie commission (%)
+[2017-02-01 22:51:31,373]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 40 value : Cie Premium  without tax (included com+dicount)
+[2017-02-01 22:51:31,375]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 41 value : Total Cie commission amount
+[2017-02-01 22:51:31,378]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 42 value : Broker commission included (%)
+[2017-02-01 22:51:31,381]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 43 value : Broker commission included amount
+[2017-02-01 22:51:31,383]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 44 value : WYCC commission included (%)
+[2017-02-01 22:51:31,385]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 45 value : WYCC commission included amount
+[2017-02-01 22:51:31,387]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 46 value : Tax 
+(%)
+[2017-02-01 22:51:31,390]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 47 value : Tax 
+amount
+[2017-02-01 22:51:31,395]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 48 value : Premium Tc
+[2017-02-01 22:51:31,399]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 49 value : WYCC Fees 
+(%)
+[2017-02-01 22:51:31,402]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 50 value : WYCC Fees 
+Amount or fixed sum
+[2017-02-01 22:51:31,404]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 51 value : Premium Tax and Fees included
+[2017-02-01 22:51:31,406]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 52 value : Total Surcom  
+(%)
+[2017-02-01 22:51:31,408]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 53 value : Premium with surcom
+[2017-02-01 22:51:31,411]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 54 value : Total Surcom  
+amount
+[2017-02-01 22:51:31,413]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 55 value : Broker Surcom  
+(%)
+[2017-02-01 22:51:31,415]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 56 value : Broker Surcom  
+amount
+[2017-02-01 22:51:31,418]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 57 value : WYCC surcom  
+(%)
+[2017-02-01 22:51:31,420]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 58 value : WYCC surcom  
+amount
+[2017-02-01 22:51:31,422]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 59 value : Total client Premium  without bank + broker fees
+[2017-02-01 22:51:31,425]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-02-01 22:51:31,427]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 61 value : WCA
+[2017-02-01 22:51:31,429]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 62 value : WCA
+[2017-02-01 22:51:31,432]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 63 value : Frequency of payment
+[2017-02-01 22:51:31,436]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 64 value : Frequency of payment Fees 
+(%)
+[2017-02-01 22:51:31,439]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 65 value : Broker  add fees cotisation
+amount
+[2017-02-01 22:51:31,441]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 66 value : Broker add Bank Fees
+%
+[2017-02-01 22:51:31,444]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 67 value : Broker add Bank Fees
+amount
+[2017-02-01 22:51:31,450]-[AWT-EventQueue-0] INFO  wycc  - 5000.0
+[2017-02-01 22:51:31,452]-[AWT-EventQueue-0] INFO  wycc  - 365.0
+[2017-02-01 22:51:31,455]-[AWT-EventQueue-0] INFO  wycc  - 12.0
+[2017-02-01 22:51:31,457]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 3 value : Healthcare Plan
+[2017-02-01 22:51:31,460]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 4 value : AIG Luxembourg
+[2017-02-01 22:51:31,462]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 5 value : Perfect
+[2017-02-01 22:51:31,465]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 6 value : L2022479
+[2017-02-01 22:51:31,468]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 7 value : EUR
+[2017-02-01 22:51:31,471]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 8 value : monthly
+[2017-02-01 22:51:31,473]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 9 value : not applicable
+[2017-02-01 22:51:31,478]-[AWT-EventQueue-0] INFO  wycc  - 500000.0
+[2017-02-01 22:51:31,481]-[AWT-EventQueue-0] INFO  wycc  - 874.0385
+[2017-02-01 22:51:31,485]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-02-01 22:51:31,491]-[AWT-EventQueue-0] INFO  wycc  - 0.25
+[2017-02-01 22:51:31,497]-[AWT-EventQueue-0] INFO  wycc  - 0.15
+[2017-02-01 22:51:31,509]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-02-01 22:51:31,517]-[AWT-EventQueue-0] INFO  wycc  - 0.03
+[2017-02-01 22:51:31,525]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-02-01 22:51:31,534]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-02-01 22:51:31,663]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-02-01 22:51:31,674]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 63 value : Annual
+[2017-02-01 22:52:00,818]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 22:52:00,818]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 22:52:00,818]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 22:52:00,818]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 22:52:00,818]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 22:52:00,819]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 22:52:00,844]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 22:52:00,948]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 22:52:00,949]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 22:52:00,949]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 22:52:00,950]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 22:52:00,950]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 22:52:00,950]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 22:52:01,023]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 22:52:01,841]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-01 22:52:01,842]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-01 22:52:01,843]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-01 22:52:01,844]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-01 22:52:17,677]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-01 23:27:00,478]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-01 23:27:00,546]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-01 23:27:00,547]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-01 23:27:03,094]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 23:27:03,095]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 23:27:03,287]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 23:27:03,356]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:27:03,361]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:27:03,362]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:27:03,363]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:27:03,365]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:27:29,400]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-01 23:27:29,469]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-01 23:27:29,471]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-01 23:27:31,570]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 23:27:31,571]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 23:27:31,760]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 23:27:31,831]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:27:31,835]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:27:31,836]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:27:31,836]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:27:31,838]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:27:32,021]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:27:32,614]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 0 value : monthly salary
+[2017-02-01 23:27:32,666]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 42122, SQLState: 42S22
+[2017-02-01 23:27:32,666]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column "FRONTGROUNDCOLOR" not found; SQL statement:
+insert into PUBLIC.SETTINGSCELL (BAXKGROUNDCOLOR, BODERBOTTOM, BODERCOLORBOTTEM, BORDERCOLORIGHT, BORDERCOLORRIGHT, BORDERCOLORTOP, BORDERRIGHT, BORDERTOP, BORDERLEFT, CELLCOLUMN, CELLROW, DATAFORMAT, DATAFORMATSTRING, FONTINDEX, FORMULECELL, FRONTGROUNDCOLOR, HALIGNEMENT, INDENTION, PATTERN, SHEETNUM, TYPECELL, VALEURCELL, VALIGNEMENT, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42122-193]
+[2017-02-01 23:27:32,670]-[AWT-EventQueue-0] ERROR org.hibernate.internal.ExceptionMapperStandardImpl  - HHH000346: Error during managed flush [org.hibernate.exception.SQLGrammarException: could not prepare statement]
+[2017-02-01 23:28:11,066]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-01 23:28:11,154]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-01 23:28:11,156]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-01 23:28:20,762]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 23:28:20,764]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 23:28:20,981]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 23:28:21,052]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:28:21,056]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:28:21,057]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:28:21,059]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:28:21,061]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:28:21,275]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:28:21,907]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 0 value : monthly salary
+[2017-02-01 23:28:21,949]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 42122, SQLState: 42S22
+[2017-02-01 23:28:21,950]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column "FRONTGROUNDCOLOR" not found; SQL statement:
+insert into PUBLIC.SETTINGSCELL (BAXKGROUNDCOLOR, BODERBOTTOM, BODERCOLORBOTTEM, BORDERCOLORIGHT, BORDERCOLORRIGHT, BORDERCOLORTOP, BORDERRIGHT, BORDERTOP, BORDERLEFT, CELLCOLUMN, CELLROW, DATAFORMAT, DATAFORMATSTRING, FONTINDEX, FORMULECELL, FRONTGROUNDCOLOR, HALIGNEMENT, INDENTION, PATTERN, SHEETNUM, TYPECELL, VALEURCELL, VALIGNEMENT, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42122-193]
+[2017-02-01 23:28:21,952]-[AWT-EventQueue-0] ERROR org.hibernate.internal.ExceptionMapperStandardImpl  - HHH000346: Error during managed flush [org.hibernate.exception.SQLGrammarException: could not prepare statement]
+[2017-02-01 23:30:04,509]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-01 23:30:04,571]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-01 23:30:04,573]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-01 23:30:06,845]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 23:30:06,847]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 23:30:07,041]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 23:30:07,109]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:30:07,112]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:30:07,112]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:30:07,113]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:30:07,117]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:30:07,312]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:30:07,862]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 0 value : monthly salary
+[2017-02-01 23:30:07,904]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 1 value : nb of days
+[2017-02-01 23:30:07,906]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 2 value : Nb of Months
+[2017-02-01 23:30:07,908]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 3 value : Type of module
+[2017-02-01 23:30:07,917]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 4 value : Insurance company
+[2017-02-01 23:30:07,926]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 5 value : Formula
+[2017-02-01 23:30:07,933]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 6 value : Policy number
+[2017-02-01 23:30:07,939]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 7 value : Currency
+[2017-02-01 23:30:07,942]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 8 value : Calculation mode
+[2017-02-01 23:30:07,944]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 9 value : Rate
+[2017-02-01 23:30:07,949]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 10 value : sum insured
+(%)
+[2017-02-01 23:30:07,954]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 11 value : sum insured 
+amount
+[2017-02-01 23:30:07,957]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 12 value : Cie Net Premium  without tax without com
+[2017-02-01 23:30:07,963]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 13 value : Discount / increase (%)
+[2017-02-01 23:30:07,965]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : Cie Net Premium  without tax without com with discount/increase
+[2017-02-01 23:30:07,970]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 15 value : Total Cie commission (%)
+[2017-02-01 23:30:07,994]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 16 value : Cie Premium  without tax (included com+dicount)
+[2017-02-01 23:30:07,997]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 17 value : Total Cie commission amount
+[2017-02-01 23:30:07,999]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 18 value : Broker commission included (%)
+[2017-02-01 23:30:08,006]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 19 value : Broker commission included amount
+[2017-02-01 23:30:08,008]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 20 value : WYCC commission included (%)
+[2017-02-01 23:30:08,015]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 21 value : WYCC commission included amount
+[2017-02-01 23:30:08,024]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 22 value : Tax 
+(%)
+[2017-02-01 23:30:08,038]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 23 value : Tax 
+amount
+[2017-02-01 23:30:08,045]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 24 value : Premium Tc
+[2017-02-01 23:30:08,049]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 25 value : WYCC Fees 
+(%)
+[2017-02-01 23:30:08,055]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 26 value : WYCC Fees 
+Amount or fixed sum
+[2017-02-01 23:30:08,059]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 27 value : Premium Tax and Fees included
+[2017-02-01 23:30:08,063]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 28 value : Total Surcom  
+(%)
+[2017-02-01 23:30:08,065]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 29 value : Premium with surcom
+[2017-02-01 23:30:08,070]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 30 value : Total Surcom  
+amount
+[2017-02-01 23:30:08,074]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 31 value : Broker Surcom  
+(%)
+[2017-02-01 23:30:08,078]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 32 value : Broker Surcom  
+amount
+[2017-02-01 23:30:08,084]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 33 value : WYCC surcom  
+(%)
+[2017-02-01 23:30:08,089]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 34 value : WYCC surcom  
+amount
+[2017-02-01 23:30:08,091]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 35 value : Total client Premium  without bank + broker fees
+[2017-02-01 23:30:08,095]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 36 value : Cie Net Premium  without tax without com
+[2017-02-01 23:30:08,202]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 37 value : Discount / increase (%)
+[2017-02-01 23:30:08,205]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 38 value : Cie Net Premium  without tax without com with discount/increase
+[2017-02-01 23:30:08,209]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 39 value : Total Cie commission (%)
+[2017-02-01 23:30:08,214]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 40 value : Cie Premium  without tax (included com+dicount)
+[2017-02-01 23:30:08,216]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 41 value : Total Cie commission amount
+[2017-02-01 23:30:08,218]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 42 value : Broker commission included (%)
+[2017-02-01 23:30:08,221]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 43 value : Broker commission included amount
+[2017-02-01 23:30:08,225]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 44 value : WYCC commission included (%)
+[2017-02-01 23:30:08,229]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 45 value : WYCC commission included amount
+[2017-02-01 23:30:08,232]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 46 value : Tax 
+(%)
+[2017-02-01 23:30:08,235]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 47 value : Tax 
+amount
+[2017-02-01 23:30:08,241]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 48 value : Premium Tc
+[2017-02-01 23:30:08,244]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 49 value : WYCC Fees 
+(%)
+[2017-02-01 23:30:08,247]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 50 value : WYCC Fees 
+Amount or fixed sum
+[2017-02-01 23:30:08,251]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 51 value : Premium Tax and Fees included
+[2017-02-01 23:30:08,256]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 52 value : Total Surcom  
+(%)
+[2017-02-01 23:30:08,259]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 53 value : Premium with surcom
+[2017-02-01 23:30:08,261]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 54 value : Total Surcom  
+amount
+[2017-02-01 23:30:08,263]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 55 value : Broker Surcom  
+(%)
+[2017-02-01 23:30:08,267]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 56 value : Broker Surcom  
+amount
+[2017-02-01 23:30:08,271]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 57 value : WYCC surcom  
+(%)
+[2017-02-01 23:30:08,274]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 58 value : WYCC surcom  
+amount
+[2017-02-01 23:30:08,278]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 59 value : Total client Premium  without bank + broker fees
+[2017-02-01 23:30:08,280]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-02-01 23:30:08,281]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 61 value : WCA
+[2017-02-01 23:30:08,283]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 62 value : WCA
+[2017-02-01 23:30:08,288]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 63 value : Frequency of payment
+[2017-02-01 23:30:08,291]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 64 value : Frequency of payment Fees 
+(%)
+[2017-02-01 23:30:08,294]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 65 value : Broker  add fees cotisation
+amount
+[2017-02-01 23:30:08,296]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 66 value : Broker add Bank Fees
+%
+[2017-02-01 23:30:08,299]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 67 value : Broker add Bank Fees
+amount
+[2017-02-01 23:30:08,307]-[AWT-EventQueue-0] INFO  wycc  - 5000.0
+[2017-02-01 23:30:08,315]-[AWT-EventQueue-0] INFO  wycc  - 365.0
+[2017-02-01 23:30:08,319]-[AWT-EventQueue-0] INFO  wycc  - 12.0
+[2017-02-01 23:30:08,321]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 3 value : Healthcare Plan
+[2017-02-01 23:30:08,323]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 4 value : AIG Luxembourg
+[2017-02-01 23:30:08,327]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 5 value : Perfect
+[2017-02-01 23:30:08,329]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 6 value : L2022479
+[2017-02-01 23:30:08,332]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 7 value : EUR
+[2017-02-01 23:30:08,337]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 8 value : monthly
+[2017-02-01 23:30:08,340]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 9 value : not applicable
+[2017-02-01 23:30:08,343]-[AWT-EventQueue-0] INFO  wycc  - 500000.0
+[2017-02-01 23:30:08,345]-[AWT-EventQueue-0] INFO  wycc  - 874.0385
+[2017-02-01 23:30:08,347]-[AWT-EventQueue-0] INFO  wycc  - 0.0
+[2017-02-01 23:30:08,353]-[AWT-EventQueue-0] INFO  wycc  - 0.25
+[2017-02-01 23:30:08,367]-[AWT-EventQueue-0] INFO  wycc  - 0.15
+[2017-02-01 23:30:08,384]-[AWT-EventQueue-0] INFO  wycc  - 0.04
+[2017-02-01 23:30:08,392]-[AWT-EventQueue-0] INFO  wycc  - 0.03
+[2017-02-01 23:30:08,404]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-02-01 23:30:08,414]-[AWT-EventQueue-0] INFO  wycc  - 0.1
+[2017-02-01 23:30:08,561]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-02-01 23:30:08,575]-[AWT-EventQueue-0] INFO  wycc  - Row : 4 Column : 63 value : Annual
+[2017-02-01 23:30:15,027]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:30:15,028]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:30:15,028]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:30:15,028]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:30:15,029]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:30:15,029]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:30:15,055]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:30:15,166]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:30:15,167]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:30:15,168]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:30:15,168]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:30:15,168]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:30:15,169]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:30:15,235]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:30:15,915]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-01 23:30:15,916]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-01 23:30:15,917]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-01 23:30:15,918]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-01 23:30:28,074]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-01 23:34:17,773]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 23:34:17,777]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 23:34:17,986]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 23:34:18,099]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:34:18,102]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:34:18,102]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:34:18,102]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:34:18,104]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:34:43,056]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 23:34:43,060]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 23:34:43,270]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 23:34:43,377]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:34:43,381]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:34:43,382]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:34:43,382]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:34:43,384]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:34:43,568]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:34:44,074]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:34:44,205]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:34:44,206]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:34:44,206]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:34:44,206]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:34:44,206]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:34:44,218]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:34:44,579]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:34:45,504]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-01 23:34:45,508]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-01 23:34:45,511]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-01 23:34:45,512]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-01 23:35:00,469]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-01 23:40:07,118]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 23:40:07,122]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 23:40:07,316]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 23:40:07,425]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:40:07,430]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:40:07,430]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:40:07,430]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:40:07,433]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:40:07,605]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:40:08,092]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:40:08,233]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:40:08,233]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:40:08,233]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:40:08,234]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:40:08,234]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:40:08,247]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:40:08,650]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:40:09,373]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-01 23:40:09,375]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-01 23:40:09,377]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-01 23:40:09,378]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-01 23:40:19,587]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-01 23:44:02,679]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 23:44:02,684]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 23:44:02,888]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 23:44:03,002]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:44:03,006]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:44:03,007]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:44:03,007]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:44:03,009]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:44:03,185]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:44:03,685]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:44:03,825]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:44:03,826]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:44:03,826]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:44:03,827]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:44:03,827]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:44:03,829]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:44:04,274]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:44:05,073]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-01 23:44:05,074]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-01 23:44:05,076]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-01 23:44:05,077]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-01 23:44:13,468]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-01 23:46:29,825]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 23:46:29,829]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 23:46:30,033]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 23:46:30,145]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:46:30,150]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:46:30,150]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:46:30,150]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:46:30,153]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:46:30,352]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:46:30,870]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:46:31,002]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:46:31,002]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:46:31,002]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:46:31,003]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:46:31,003]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:46:31,014]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:46:31,401]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:46:32,264]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-01 23:46:32,266]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-01 23:46:32,268]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-01 23:46:32,269]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-01 23:46:41,794]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-01 23:48:20,730]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-01 23:48:20,735]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-01 23:48:20,942]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-01 23:48:21,052]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:48:21,056]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:48:21,056]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:48:21,056]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:48:21,058]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:48:21,244]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:48:21,761]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:48:21,903]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-01 23:48:21,904]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-01 23:48:21,904]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-01 23:48:21,904]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-01 23:48:21,905]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-01 23:48:21,920]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-01 23:48:22,335]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-01 23:48:23,144]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-01 23:48:23,145]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-01 23:48:23,147]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-01 23:48:23,148]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-01 23:48:35,235]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-02 00:03:06,526]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-02 00:03:06,531]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-02 00:03:06,734]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-02 00:03:06,843]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:03:06,847]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:03:06,848]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:03:06,848]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:03:06,850]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:03:07,034]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:03:07,574]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:03:07,698]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:03:07,698]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:03:07,699]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:03:07,699]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:03:07,699]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:03:07,715]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:03:08,082]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:03:08,975]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-02 00:03:08,976]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-02 00:03:08,977]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-02 00:03:08,978]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-02 00:03:20,894]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-02 00:13:17,703]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-02 00:13:17,709]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-02 00:13:17,927]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-02 00:13:18,045]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:13:18,049]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:13:18,049]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:13:18,050]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:13:18,052]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:13:18,254]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:13:18,881]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:13:19,077]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:13:19,078]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:13:19,079]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:13:19,079]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:13:19,079]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:13:19,093]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:13:19,528]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:13:20,525]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-02 00:13:20,528]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-02 00:13:20,529]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-02 00:13:20,529]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-02 00:13:47,342]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-02 00:14:41,914]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-02 00:14:41,919]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-02 00:14:42,122]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-02 00:14:42,228]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:14:42,234]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:14:42,235]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:14:42,235]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:14:42,238]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:14:42,430]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:14:42,927]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:14:43,068]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:14:43,069]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:14:43,070]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:14:43,070]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:14:43,071]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:14:43,089]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:14:43,487]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:14:44,268]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-02 00:14:44,270]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-02 00:14:44,273]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-02 00:14:44,274]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-02 00:14:57,319]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-02 00:17:00,698]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-02 00:17:00,704]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-02 00:17:00,922]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-02 00:17:01,034]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:17:01,039]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:17:01,039]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:17:01,040]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:17:01,042]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:17:01,273]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:17:01,795]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:17:01,939]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:17:01,940]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:17:01,940]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:17:01,941]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:17:01,941]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:17:01,955]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:17:02,372]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:17:03,138]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-02 00:17:03,141]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-02 00:17:03,144]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-02 00:17:03,144]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-02 00:17:20,375]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-02 00:19:16,441]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-02 00:19:16,446]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-02 00:19:16,641]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-02 00:19:16,749]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:19:16,753]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:19:16,753]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:19:16,754]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:19:16,756]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:19:16,931]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:19:17,439]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:19:17,592]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:19:17,592]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:19:17,593]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:19:17,593]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:19:17,593]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:19:17,609]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:19:18,025]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:19:18,820]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-02 00:19:18,822]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-02 00:19:18,824]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-02 00:19:18,825]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-02 00:19:36,195]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-02 00:21:44,358]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-02 00:21:44,362]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-02 00:21:44,595]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-02 00:21:44,711]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:21:44,715]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:21:44,716]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:21:44,716]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:21:44,718]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:21:44,907]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:21:45,430]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:21:45,573]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:21:45,574]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:21:45,575]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:21:45,575]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:21:45,575]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:21:45,576]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:21:46,010]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:21:46,743]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-02 00:21:46,745]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-02 00:21:46,747]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-02 00:21:46,747]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-02 00:21:58,967]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-02 00:29:20,498]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-02 00:29:20,503]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-02 00:29:20,699]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-02 00:29:20,821]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:29:20,824]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:29:20,825]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:29:20,825]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:29:20,828]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:29:21,017]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:29:21,537]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:29:21,683]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:29:21,684]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:29:21,684]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:29:21,685]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:29:21,686]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:29:21,687]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:29:22,124]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:29:22,934]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-02 00:29:22,936]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-02 00:29:22,938]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-02 00:29:22,938]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-02 00:29:36,305]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-02 00:30:42,655]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-02 00:30:42,662]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-02 00:30:42,873]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-02 00:30:42,981]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:30:42,985]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:30:42,985]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:30:42,986]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:30:42,988]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:30:43,191]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:30:43,700]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:30:43,832]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-02 00:30:43,832]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-02 00:30:43,833]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-02 00:30:43,833]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-02 00:30:43,834]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-02 00:30:43,835]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-02 00:30:44,266]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-02 00:30:44,964]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-02 00:30:44,967]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-02 00:30:44,968]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-02 00:30:44,968]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-02 00:30:55,180]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection

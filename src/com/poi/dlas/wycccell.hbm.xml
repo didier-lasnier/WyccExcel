@@ -43,6 +43,9 @@
         <property name="baxkgroundcolor" type="java.lang.Long">
                     <column name="BAXKGROUNDCOLOR" />
         </property>  
+        <property name="frontgroundcolor" type="java.lang.Long">
+                    <column name="FRONTGROUNDCOLOR" />
+        </property>  
         <property name="pattern" type="java.lang.Long">
                     <column name="PATTERN" />
         </property>  
@@ -67,8 +70,11 @@
         <property name="valeurcell" type="java.lang.String">
                     <column name="VALEURCELL" />
         </property> 
-                <property name="formulecell" type="java.lang.String">
+        <property name="formulecell" type="java.lang.String">
                     <column name="FORMULECELL" />
-        </property> 
+        </property>
+        <property name="typecell" type="java.lang.Long">
+                    <column name="TYPECELL" />
+        </property>
     </class>
 </hibernate-mapping>

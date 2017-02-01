@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="h2_embedded-159faa3723c-21ac92bc8d8b230f" provider="generic" driver="h2_embedded" name="H2 - wyccdb" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="" url="jdbc:h2:./db/wyccdb" user="wycc" password="BB0FIyGi" type="dev"/>
+	</data-source>
+</data-sources>
