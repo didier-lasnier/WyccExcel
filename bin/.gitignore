@@ -1,2 +1,3 @@
 /com/
-/settingscell.hbm.xml
+/hibernate.cfg.xml
+/log4J.properties
