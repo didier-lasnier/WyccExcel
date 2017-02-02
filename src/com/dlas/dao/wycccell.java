@@ -38,6 +38,8 @@ public class wycccell {
 			private String dataformatstring;
 			@Column(name = "BAXKGROUNDCOLOR")
 			private int baxkgroundcolor ;
+			@Column(name = "FRONTGROUNDCOLOR")
+			private int frontgroundcolor ;
 			@Column(name = "PATTERN")
 			private int pattern ;
 			@Column(name = "FONTINDEX")
@@ -56,6 +58,8 @@ public class wycccell {
 			private String valeurcell ;
 			@Column(name = "FORMULECELL")
 			private String formulecell ;
+			@Column(name = "TYPECELL")
+			private int typecell ;
 			
 			
 		public wycccell(){
@@ -66,31 +70,34 @@ public class wycccell {
 				int halignement , int valignement , int borderbottom ,
 				int bordertop , int borterleft , int borderright ,
 				int dataformat , String dataformatstring,
-				int baxkgroundcolor , int pattern , int fontindex ,
+				int baxkgroundcolor ,int frontgroundcolor, int pattern , int fontindex ,
 				float indention , int bordercolorbottom ,
-				int bordercolortop , int bordercolorright , int bordercolorleft,String valeurcell,String formulecell ){
+				int bordercolortop , int bordercolorright , int bordercolorleft,String valeurcell,String formulecell,int typecell ){
 			
-			this.cellrow = cellrow ;
-			this.cellcolumn = cellcolumn ;
-			this.sheetnum = sheetnum ;
-			this.halignement = halignement ;
-			this.valignement = valignement ;
-			this.borderbottom = borderbottom ;
-			this.bordertop = bordertop ;
-			this.borterleft = borterleft ;
-			this.borderright = borderright ;
-			this.dataformat = dataformat ;
-			this.dataformatstring= dataformatstring;
-			this.baxkgroundcolor = baxkgroundcolor ;
-			this.pattern = pattern ;
-			this.fontindex = fontindex ;
-			this.indention= indention;
+			this.cellrow           = cellrow ;
+			this.cellcolumn        = cellcolumn ;
+			this.sheetnum          = sheetnum ;
+			this.halignement       = halignement ;
+			this.valignement       = valignement ;
+			this.borderbottom      = borderbottom ;
+			this.bordertop         = bordertop ;
+			this.borterleft        = borterleft ;
+			this.borderright       = borderright ;
+			this.dataformat        = dataformat ;
+			this.dataformatstring  = dataformatstring;
+			this.baxkgroundcolor   = baxkgroundcolor ;
+			this.frontgroundcolor  = frontgroundcolor;
+			this.pattern           = pattern ;
+			this.fontindex         = fontindex ;
+			this.indention         = indention;
 			this.bordercolorbottom = bordercolorbottom ;
-			this.bordercolortop = bordercolortop ;
-			this.bordercolorright = bordercolorright ;
-			this.bordercolorleft = bordercolorleft ;
-			this.valeurcell      =valeurcell;
-			this.formulecell     =formulecell;
+			this.bordercolortop    = bordercolortop ;
+			this.bordercolorright  = bordercolorright ;
+			this.bordercolorleft   = bordercolorleft ;
+			this.valeurcell        = valeurcell;
+			this.formulecell       = formulecell;
+			this.typecell          = typecell;
+			
 		}
 
 		/**
@@ -260,6 +267,19 @@ public class wycccell {
 		public void setBaxkgroundcolor(int baxkgroundcolor) {
 			this.baxkgroundcolor = baxkgroundcolor;
 		}
+		/**
+		 * @return the baxkgroundcolor
+		 */
+		public int getFrontgroundcolor() {
+			return frontgroundcolor;
+		}
+
+		/**
+		 * @param baxkgroundcolor the baxkgroundcolor to set
+		 */
+		public void setFrontgroundcolor(int frontgroundcolor) {
+			this.frontgroundcolor = frontgroundcolor;
+		}
 
 		/**
 		 * @return the pattern
@@ -376,14 +396,26 @@ public class wycccell {
 		 * @return the formulecell
 		 */
 		public String getformulecell() {
-			return valeurcell;
+			return formulecell;
 		}
 
 		/**
 		 * @param formulecell the formulecell to set
 		 */
-		public void setformulecell(String valeurcell) {
-			this.valeurcell = valeurcell;
+		public void setformulecell(String formulecell) {
+			this.formulecell = formulecell;
 		}		
-				
+		/**
+		 * @return the typecell
+		 */
+		public int gettypecell() {
+			return typecell;
+		}
+
+		/**
+		 * @param formulecell the formulecell to set
+		 */
+		public void settypecell(int typecell) {
+			this.typecell = typecell;
+		}				
 }
