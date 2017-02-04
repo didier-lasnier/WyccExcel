@@ -7448,3 +7448,1625 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:/Volumes/LaC
 	at org.h2.mvstore.FileStore.open(FileStore.java:173)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:348)
 	... 76 more
+2017-02-03 00:25:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "NEXMVT" not found; SQL statement:
+SELECT NBREMVT,RANKMVT,NEXMVT,wycc_id,company1,fromula1,start_movement,end_movement FROM MVT_NUM ORDER BY wycc_id,ranKmvt [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 00:26:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "FROMULA1" not found; SQL statement:
+SELECT NBREMVT,RANKMVT,NEXTMVT,wycc_id,company1,fromula1,start_movement,end_movement FROM MVT_NUM ORDER BY wycc_id,ranKmvt [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 00:26:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "MONTHLY_SAMLARY" not found; SQL statement:
+SELECT NBREMVT,RANKMVT,NEXTMVT,wycc_id,company1,formula1,start_movement,end_movement,monthly_samlary FROM MVT_NUM ORDER BY wycc_id,ranKmvt [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 00:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "SUME" not found; SQL statement:
+SELECT NBREMVT,RANKMVT,NEXTMVT,wycc_id,company1,formula1,min(start_movement ),max(end_movement ),monthly_salary,sum( Months ),sume( days) FROM MVT_NUM 
+GROUP BY wycc_id,company1,formula1 ORDER BY wycc_id [90022-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2421)
+	at org.h2.command.Parser.readFunction(Parser.java:2473)
+	at org.h2.command.Parser.readTerm(Parser.java:2807)
+	at org.h2.command.Parser.readFactor(Parser.java:2324)
+	at org.h2.command.Parser.readSum(Parser.java:2311)
+	at org.h2.command.Parser.readConcat(Parser.java:2281)
+	at org.h2.command.Parser.readCondition(Parser.java:2128)
+	at org.h2.command.Parser.readAnd(Parser.java:2100)
+	at org.h2.command.Parser.readExpression(Parser.java:2092)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:2004)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2036)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1891)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:445)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 00:30:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "RANKMVT" must be in the GROUP BY list; SQL statement:
+SELECT NBREMVT,RANKMVT,NEXTMVT,wycc_id,monthly_salary,company1,formula1,min(start_movement ),max(end_movement ),sum( Months ),sum( days) FROM MVT_NUM 
+GROUP BY wycc_id,company1,formula1 ORDER BY wycc_id [90016-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:169)
+	at org.h2.command.dml.Select.queryGroup(Select.java:365)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:650)
+	at org.h2.command.dml.Query.query(Query.java:341)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:110)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:179)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 00:32:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "MEND_MOVEMENT" not found; SQL statement:
+SELECT  NBREMVT,RANKMVT,NEXTMVT,wycc_id,monthly_salary,company1,formula1,start_movement ,mend_movement, Months, days FROM MVT_NUM ORDER BY wycc_id [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 00:36:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "WYCC" not found; SQL statement:
+SELECT wycc, nexmvt,count(*) FROM MVT_NUM GROUP BY wycc, nexmvt [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 00:36:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "NEXMVT" not found; SQL statement:
+SELECT wycc_id, nexmvt,count(*) FROM MVT_NUM GROUP BY wycc, nexmvt [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 00:36:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "WYCC" not found; SQL statement:
+SELECT wycc_id, nextmvt,count(*) FROM MVT_NUM GROUP BY wycc, nexmvt [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 00:38:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "NEXTWVT" not found; SQL statement:
+SELECT * FROM ( 
+SELECT wycc_id, nextmvt,count(*) nbre FROM MVT_NUM GROUP BY wycc_id, nextmvt)
+WHERE nextwvt =0 AND nbre>1 [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:178)
+	at org.h2.expression.ConditionAndOr.optimize(ConditionAndOr.java:130)
+	at org.h2.command.dml.Select.prepare(Select.java:856)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 19:46:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "RANKPARENT" not found; SQL statement:
+with list (niveau, wycc_id,start_movement,end_movement,dateofnextmvt, rankmvt, rankparent) as
+    (
+        select 1 niveau ,wycc_id,start_movement,end_movement,dateofnextmvt,rankmvt,rankparent
+        from mvt_num yt1
+        where rankparent= 0 and wycc_id='2017'
+        union all
+        select l.niveau+1 niveau, m.wycc_id,l.start_movement,m.end_movement,m.dateofnextmvt,m.rankmvt,m.rankparent
+        from mvt_num m
+        join list l
+        on
+            (
+                m.wycc_id=l.wycc_id and m.start_movement=l.dateofnextmvt
+            )
+        where m.wycc_id='2017'
+    )
+select *
+from list [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.dml.SelectUnion.prepare(SelectUnion.java:304)
+	at org.h2.command.Parser.parseWith(Parser.java:4769)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 19:59:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "WYCC" not found; SQL statement:
+SELECT 
+ WYCC_ID, ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id ) nbre , 
+ ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME(yt2.start_movement,'dd/MM/yyyy') < DATEADD( 'DAY', 1,  PARSEDATETIME(yt1.end_movement,'dd/MM/yyyy') ) ) rang,
+ ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME(yt2.start_movement,'dd/MM/yyyy') = DATEADD( 'DAY', 1, PARSEDATETIME(yt1.end_movement,'dd/MM/yyyy') ) ) suivi, 
+ ( SELECT MIN( PARSEDATETIME( yt2.start_movement, 'dd/MM/yyyy' ) ) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME(yt2.start_movement,'dd/MM/yyyy') > PARSEDATETIME(yt1.end_movement,'dd/MM/yyyy') ) nextdate
+ FROM PUBLIC.MVT YT1  WHERE wycc ='2017' ORDER BY 1,3 [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:178)
+	at org.h2.command.dml.Select.prepare(Select.java:856)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 21:35:16 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb.mv.db [1.4.193/7]" [50000-193]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:379)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:362)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2923)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2468)
+	at org.h2.engine.Database.open(Database.java:695)
+	at org.h2.engine.Database.openDatabase(Database.java:273)
+	at org.h2.engine.Database.<init>(Database.java:267)
+	at org.h2.engine.Engine.openSession(Engine.java:64)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.engine.Engine.createSession(Engine.java:27)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:115)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:99)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:188)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:159)
+	at com.dlas.dao.h2db.getDatabase(h2db.java:57)
+	at com.poi.actionuser.Actionuser.lanceLecture(Actionuser.java:52)
+	at com.poi.dlas.MenuWycc$1.actionPerformed(MenuWycc.java:56)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:125)
+	at java.awt.MenuItem.processActionEvent(MenuItem.java:669)
+	at java.awt.MenuItem.processEvent(MenuItem.java:628)
+	at java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:351)
+	at java.awt.MenuComponent.dispatchEvent(MenuComponent.java:339)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:761)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb.mv.db [1.4.193/7]" [50000-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 54 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb.mv.db [1.4.193/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:765)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:348)
+	... 49 more
+2017-02-03 21:38:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT WYCC_ID,START_MOVEMENT,END_MOVEMENT,NEXTMVT,DATEOFNEXTMVT,RANKMVT,RANKPARENT FROM MVT_NUM YT1 ORDER BY WYCC_ID, RANKMVT WHERE[*]  WYCC_ID='2017' "; SQL statement:
+Select wycc_id,start_movement,end_movement,NEXTMVT,DATEOFNEXTMVT,RANKMVT,rankparent FROM MVT_NUM YT1 ORDER BY wycc_id, rankmvt where  wycc_id='2017' [42000-193]
+2017-02-03 21:42:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT WYCC_ID,START_MOVEMENT,END_MOVEMENT,NEXTMVT,DATEOFNEXTMVT,RANKMVT,RANKPARENT FROM MVT_NUM YT1 ORDER BY WYCC_ID, RANKMVT WHERE[*]  WYCC_ID='2017' "; SQL statement:
+Select wycc_id,start_movement,end_movement,NEXTMVT,DATEOFNEXTMVT,RANKMVT,rankparent FROM MVT_NUM YT1 ORDER BY wycc_id, rankmvt where  wycc_id='2017' [42000-193]
+2017-02-03 21:58:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ROWID" not found; SQL statement:
+Select rowid,wycc_id,start_movement,end_movement,NEXTMVT,DATEOFNEXTMVT,RANKMVT,rankparent FROM MVT_NUM YT1 ORDER BY wycc_id, rankmvt [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 21:59:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "RANG" not found; SQL statement:
+with 
+list (rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select rang,1 niveau, wycc_id,start_movement,end_movement,DATEOFNEXTMVT,RANKMVT,rankparent FROM MVT_NUM YT1  where nextmvt= 0 AND wycc_id='2017'
+ union all
+ SELECT l.rang, niveau+1 niveau, m.wycc_id,l.start_movement,m.end_movement,m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE  m.wycc_id='2017' AND nextmvt != 0
+ )
+ select * from list [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.dml.SelectUnion.prepare(SelectUnion.java:304)
+	at org.h2.command.Parser.parseWith(Parser.java:4769)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 22:00:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "NXTMVT" not found; SQL statement:
+with 
+list (rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select nxtmvt rang,1 niveau, wycc_id,start_movement,end_movement,DATEOFNEXTMVT,RANKMVT,rankparent FROM MVT_NUM YT1  where nextmvt= 0 AND wycc_id='2017'
+ union all
+ SELECT l.rang, niveau+1 niveau, m.wycc_id,l.start_movement,m.end_movement,m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE  m.wycc_id='2017' AND nextmvt != 0
+ )
+ select * from list [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Alias.optimize(Alias.java:51)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.dml.SelectUnion.prepare(SelectUnion.java:304)
+	at org.h2.command.Parser.parseWith(Parser.java:4769)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 22:05:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "MVT_NUM_ID"; SQL statement:
+with list (MVT_NUM_ID,niveau, wycc_id,start_movement,end_movement,dateofnextmvt, rankmvt, rankparent) as
+    (
+        select MVT_NUM_ID,1 niveau ,wycc_id,start_movement,end_movement,dateofnextmvt,rankmvt,rankparent
+        from mvt_num yt1
+        where rankparent= 0 and wycc_id='2017'
+        union all
+        select MVT_NUM_ID,l.niveau+1 niveau, m.wycc_id,l.start_movement,m.end_movement,m.dateofnextmvt,m.rankmvt,m.rankparent
+        from mvt_num m
+        join list l
+        on
+            (
+                m.wycc_id=l.wycc_id and m.start_movement=l.dateofnextmvt
+            )
+        where m.wycc_id='2017'
+    )
+select *
+from list [90059-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:124)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:94)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1243)
+	at org.h2.command.dml.Select.init(Select.java:828)
+	at org.h2.command.dml.SelectUnion.init(SelectUnion.java:279)
+	at org.h2.command.Parser.parseSelect(Parser.java:1703)
+	at org.h2.command.Parser.parseWith(Parser.java:4767)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 22:08:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "RANG" not found; SQL statement:
+with 
+list (MVT_NUM_ID,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select MVT_NUM_ID, rang,1 niveau, wycc_id,start_movement,end_movement,DATEOFNEXTMVT,RANKMVT,rankparent FROM MVT_NUM YT1  where nextmvt= 0 AND wycc_id='2017'
+ union all
+ SELECT l.MVT_NUM_ID,l.rang, niveau+1 niveau, m.wycc_id,l.start_movement,m.end_movement,m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE  m.wycc_id='2017' AND nextmvt != 0
+ )
+ select * from list [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.dml.SelectUnion.prepare(SelectUnion.java:304)
+	at org.h2.command.Parser.parseWith(Parser.java:4769)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 22:08:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.IndexOutOfBoundsException: Index: 8, Size: 8" [50000-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.message.DbException.toSQLException(DbException.java:268)
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:352)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 8, Size: 8
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at org.h2.command.Parser.parseWith(Parser.java:4773)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	... 8 more
+2017-02-03 22:09:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "L.MVT_NUM_ID" not found; SQL statement:
+with 
+list (rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select MVT_NUM_ID rang,1 niveau, wycc_id,start_movement,end_movement,DATEOFNEXTMVT,RANKMVT,rankparent FROM MVT_NUM YT1  where nextmvt= 0 AND wycc_id='2017'
+ union all
+ SELECT l.MVT_NUM_ID rang, niveau+1 niveau, m.wycc_id,l.start_movement,m.end_movement,m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE  m.wycc_id='2017' AND nextmvt != 0
+ )
+ select * from list [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Alias.optimize(Alias.java:51)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.dml.SelectUnion.prepare(SelectUnion.java:305)
+	at org.h2.command.Parser.parseWith(Parser.java:4769)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 22:23:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "FIRSTNAME" not found; SQL statement:
+with 
+list (rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,firstname,structure_name,'' crewmanning,period,family_covered,nationality,country,children, MVT_NUM_ID rang,1 niveau, wycc_id,start_movement,end_movement,DATEOFNEXTMVT,RANKMVT,rankparent FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.firstname, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,l.rang, niveau+1 niveau, m.wycc_id,l.start_movement,m.end_movement,m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,min( start_movement) , max(END_movement ) from list GROUP BY wycc_id [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.dml.SelectUnion.prepare(SelectUnion.java:304)
+	at org.h2.command.Parser.parseWith(Parser.java:4769)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 22:29:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "SALARY_MONTHLY" not found; SQL statement:
+SELECT wycc_id,start_movement,end_movement,salary_monthly FROM MVT_NUM [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 22:33:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "DATE" constant "01/01/2016"; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,
+ MVT_NUM_ID rang,1 niveau, wycc_id, CASE WHEN start_movement <'01/01/2016' THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else PARSEDATETIME(start_movement,'dd/MM/yyyy') END start_movement,end_movement,DATEOFNEXTMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,
+ l.rang, niveau+1 niveau, m.wycc_id,l.start_movement,m.end_movement,m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min( start_movement) , max(END_movement )
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [22007-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueDate.parse(ValueDate.java:81)
+	at org.h2.value.Value.convertTo(Value.java:928)
+	at org.h2.expression.Comparison.getValue(Comparison.java:256)
+	at org.h2.expression.Function.getSimpleValue(Function.java:1054)
+	at org.h2.expression.Function.getValueWithArgs(Function.java:1193)
+	at org.h2.expression.Function.getValue(Function.java:588)
+	at org.h2.expression.Alias.getValue(Alias.java:36)
+	at org.h2.command.dml.Select.queryFlat(Select.java:549)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:655)
+	at org.h2.command.dml.Query.query(Query.java:322)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.index.ViewIndex.findRecursive(ViewIndex.java:207)
+	at org.h2.index.ViewIndex.find(ViewIndex.java:286)
+	at org.h2.index.ViewIndex.find(ViewIndex.java:160)
+	at org.h2.index.BaseIndex.find(BaseIndex.java:128)
+	at org.h2.index.IndexCursor.find(IndexCursor.java:169)
+	at org.h2.table.TableFilter.next(TableFilter.java:467)
+	at org.h2.command.dml.Select.queryGroup(Select.java:336)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:650)
+	at org.h2.command.dml.Query.query(Query.java:341)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:110)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:179)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.IllegalArgumentException: 01/01/2016
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:313)
+	at org.h2.value.ValueDate.parse(ValueDate.java:79)
+	... 33 more
+2017-02-03 22:34:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "DATE" constant "01/01/2016"; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,
+ MVT_NUM_ID rang,1 niveau, wycc_id, CASE WHEN start_movement <'01/01/2016' THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else PARSEDATETIME(start_movement,'dd/MM/yyyy') END start_movement,end_movement,DATEOFNEXTMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,
+ l.rang, niveau+1 niveau, m.wycc_id,l.start_movement,m.end_movement,m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min( start_movement) , max(END_movement )
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [22007-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueDate.parse(ValueDate.java:81)
+	at org.h2.value.Value.convertTo(Value.java:928)
+	at org.h2.expression.Comparison.getValue(Comparison.java:256)
+	at org.h2.expression.Function.getSimpleValue(Function.java:1054)
+	at org.h2.expression.Function.getValueWithArgs(Function.java:1193)
+	at org.h2.expression.Function.getValue(Function.java:588)
+	at org.h2.expression.Alias.getValue(Alias.java:36)
+	at org.h2.command.dml.Select.queryFlat(Select.java:549)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:655)
+	at org.h2.command.dml.Query.query(Query.java:322)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.index.ViewIndex.findRecursive(ViewIndex.java:207)
+	at org.h2.index.ViewIndex.find(ViewIndex.java:286)
+	at org.h2.index.ViewIndex.find(ViewIndex.java:160)
+	at org.h2.index.BaseIndex.find(BaseIndex.java:128)
+	at org.h2.index.IndexCursor.find(IndexCursor.java:169)
+	at org.h2.table.TableFilter.next(TableFilter.java:467)
+	at org.h2.command.dml.Select.queryGroup(Select.java:336)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:650)
+	at org.h2.command.dml.Query.query(Query.java:341)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:110)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:179)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.IllegalArgumentException: 01/01/2016
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:313)
+	at org.h2.value.ValueDate.parse(ValueDate.java:79)
+	... 33 more
+2017-02-03 22:34:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "DATE" constant "01/01/2016"; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,
+ MVT_NUM_ID rang,1 niveau, wycc_id, CASE WHEN start_movement <'01/01/2016' THEN '01/01/2016' else PARSEDATETIME(start_movement,'dd/MM/yyyy') END start_movement,end_movement,DATEOFNEXTMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,
+ l.rang, niveau+1 niveau, m.wycc_id,l.start_movement,m.end_movement,m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min( start_movement) , max(END_movement )
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [22007-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueDate.parse(ValueDate.java:81)
+	at org.h2.value.Value.convertTo(Value.java:928)
+	at org.h2.expression.Comparison.getValue(Comparison.java:256)
+	at org.h2.expression.Function.getSimpleValue(Function.java:1054)
+	at org.h2.expression.Function.getValueWithArgs(Function.java:1193)
+	at org.h2.expression.Function.getValue(Function.java:588)
+	at org.h2.expression.Alias.getValue(Alias.java:36)
+	at org.h2.command.dml.Select.queryFlat(Select.java:549)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:655)
+	at org.h2.command.dml.Query.query(Query.java:322)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.index.ViewIndex.findRecursive(ViewIndex.java:207)
+	at org.h2.index.ViewIndex.find(ViewIndex.java:286)
+	at org.h2.index.ViewIndex.find(ViewIndex.java:160)
+	at org.h2.index.BaseIndex.find(BaseIndex.java:128)
+	at org.h2.index.IndexCursor.find(IndexCursor.java:169)
+	at org.h2.table.TableFilter.next(TableFilter.java:467)
+	at org.h2.command.dml.Select.queryGroup(Select.java:336)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:650)
+	at org.h2.command.dml.Query.query(Query.java:341)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:110)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:179)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.IllegalArgumentException: 01/01/2016
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:313)
+	at org.h2.value.ValueDate.parse(ValueDate.java:79)
+	... 33 more
+2017-02-03 22:35:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error parsing "2016-07-04"; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,
+ MVT_NUM_ID rang,1 niveau, wycc_id, CASE WHEN start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else PARSEDATETIME(start_movement,'dd/MM/yyyy') END start_movement,end_movement,DATEOFNEXTMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,
+ l.rang, niveau+1 niveau, m.wycc_id,l.start_movement,m.end_movement,m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min( start_movement) , max(END_movement )
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [90014-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.util.DateTimeUtils.parseDateTime(DateTimeUtils.java:620)
+	at org.h2.expression.Function.getValueWithArgs(Function.java:1508)
+	at org.h2.expression.Function.getValue(Function.java:588)
+	at org.h2.expression.Function.getSimpleValue(Function.java:1081)
+	at org.h2.expression.Function.getValueWithArgs(Function.java:1193)
+	at org.h2.expression.Function.getValue(Function.java:588)
+	at org.h2.expression.Alias.getValue(Alias.java:36)
+	at org.h2.command.dml.Select.queryFlat(Select.java:549)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:655)
+	at org.h2.command.dml.Query.query(Query.java:322)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.index.ViewIndex.findRecursive(ViewIndex.java:207)
+	at org.h2.index.ViewIndex.find(ViewIndex.java:286)
+	at org.h2.index.ViewIndex.find(ViewIndex.java:160)
+	at org.h2.index.BaseIndex.find(BaseIndex.java:128)
+	at org.h2.index.IndexCursor.find(IndexCursor.java:169)
+	at org.h2.table.TableFilter.next(TableFilter.java:467)
+	at org.h2.command.dml.Select.queryGroup(Select.java:336)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:650)
+	at org.h2.command.dml.Query.query(Query.java:341)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:110)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:179)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.text.ParseException: Unparseable date: "2016-07-04"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at org.h2.util.DateTimeUtils.parseDateTime(DateTimeUtils.java:616)
+	... 33 more
+2017-02-03 22:49:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MIN( START_MOVEMENT) , MAX(END_MOVEMENT ),(MAX(END_MOVEMENT )-MIN( START_MOVEMENT)) JOUR,MONTH(MIN( START_MOVEMENT))-MONTH( MAX(END_MOVEMENT ) )
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,
+ min( start_movement) , max(END_movement ),(max(END_movement )-min( start_movement)) Jour,MONTH(min( start_movement))-MONTH( max(END_movement ) )
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:49:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MIN( START_MOVEMENT) , MAX(END_MOVEMENT ),(MAX(END_MOVEMENT )-MIN( START_MOVEMENT)) JOUR,MONTH(MIN( START_MOVEMENT))-MONTH( MAX(END_MOVEMENT ) )
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,
+ min( start_movement) , max(END_movement ),(max(END_movement )-min( start_movement)) Jour,MONTH(min( start_movement))-MONTH( max(END_movement ) )
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:51:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MIN( START_MOVEMENT) , MAX(END_MOVEMENT ),(MAX(END_MOVEMENT )-MIN( START_MOVEMENT)) JOUR,MONTH(MIN(START_MOVEMENT)) - MONTH(MAX(END_MOVEMENT))
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,
+ min( start_movement) , max(END_movement ),(max(END_movement )-min( start_movement)) Jour,MONTH(min(start_movement)) - MONTH(max(END_movement))
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:52:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MIN( START_MOVEMENT) , MAX(END_MOVEMENT ),(MAX(END_MOVEMENT )-MIN( START_MOVEMENT)) JOUR,MONTH(MIN(START_MOVEMENT))
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,
+ min( start_movement) , max(END_movement ),(max(END_movement )-min( start_movement)) Jour,MONTH(min(start_movement))
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:54:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MIN( START_MOVEMENT) , MAX(END_MOVEMENT ),(MAX(END_MOVEMENT )-MIN( START_MOVEMENT)) JOUR,(MAX(END_MOVEMENT )-MIN( START_MOVEMENT))/30
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,
+ min( start_movement) , max(END_movement ),(max(END_movement )-min( start_movement)) Jour,(max(END_movement )-min( start_movement))/30
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:54:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MIN( START_MOVEMENT) , MAX(END_MOVEMENT ),(MAX(END_MOVEMENT )-MIN( START_MOVEMENT)) JOUR,(MAX(END_MOVEMENT )-MIN( START_MOVEMENT))
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,
+ min( start_movement) , max(END_movement ),(max(END_movement )-min( start_movement)) Jour,(max(END_movement )-min( start_movement))
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:54:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MIN( START_MOVEMENT) , MAX(END_MOVEMENT ),(MAX(END_MOVEMENT )-MIN( START_MOVEMENT)) JOUR
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,
+ min( start_movement) , max(END_movement ),(max(END_movement )-min( start_movement)) Jour
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:55:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MIN( START_MOVEMENT) , MAX(END_MOVEMENT ),(MAX(END_MOVEMENT )-MIN( START_MOVEMENT))
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,
+ min( start_movement) , max(END_movement ),(max(END_movement )-min( start_movement))
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:55:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MIN( START_MOVEMENT) , MAX(END_MOVEMENT )
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,
+ min( start_movement) , max(END_movement )
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:56:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MIN( START_MOVEMENT) , MAX(END_MOVEMENT )
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,
+ min( start_movement) , max(END_movement )
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:57:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,MIN(START_MOVEMENT) , MAX(END_MOVEMENT)
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min(start_movement) , max(END_movement)
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:57:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,MIN(START_MOVEMENT) , MAX(END_MOVEMENT)
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min(start_movement) , max(end_movement)
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:58:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "M[*].DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,MIN(START_MOVEMENT) , MAX(END_MOVEMENT)
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "MERGE, {"; SQL statement:
+m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min(start_movement) , max(end_movement)
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 22:59:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "WITH 
+LIST (POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY
+      ,CHILDREN,RANG,NIVEAU,WYCC_ID,START_MOVEMENT,END_MOVEMENT,DATEOFNEXTMVT, RANKMVT, RANKPARENT) AS
+( 
+ SELECT POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,'' CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MVT_NUM_ID RANG,1 NIVEAU, WYCC_ID, 
+ CASE WHEN START_MOVEMENT <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') ELSE START_MOVEMENT END START_MOVEMENT, 
+ CASE WHEN END_MOVEMENT >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') ELSE END_MOVEMENT END END_MOVEMENT,
+ DATEOFNEXTMVT,RANKMVT,RANKPARENT
+ FROM MVT_NUM YT1  WHERE NEXTMVT= 0 
+ UNION ALL
+ SELECT M.POSITIONCREW, M.NAME, M.FIRST_NAME, M.STRUCTURE_NAME,'' CREWMANNING, M.PERIOD, M.FAMILY_COVERED, M.NATIONALITY, M.COUNTRY, M.CHILDREN,
+ L.RANG, NIVEAU+1 NIVEAU, M.WYCC_ID,
+  CASE WHEN M.START_MOVEMENT <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') ELSE M.START_MOVEMENT END START_MOVEMENT, 
+ CASE WHEN M.END_MOVEMENT >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') ELSE M.END_MOVEMENT END END_MOVEMENT,
+ M.DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,MIN(START_MOVEMENT) , MAX(END_MOVEMENT),
+ MAX(END_MOVEMENT)-MIN(START_MOVEMENT),
+ FROM LIST GROUP[*] BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; expected "., (, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,
+ MVT_NUM_ID rang,1 niveau, wycc_id, 
+ CASE WHEN start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else start_movement END start_movement, 
+ CASE WHEN end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else end_movement END end_movement,
+ DATEOFNEXTMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,
+ l.rang, niveau+1 niveau, m.wycc_id,
+  CASE WHEN m.start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else m.start_movement END start_movement, 
+ CASE WHEN m.end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else m.end_movement END end_movement,
+ m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min(start_movement) , max(end_movement),
+ max(end_movement)-min(start_movement),
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42001-193]
+2017-02-03 23:06:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "WITH 
+LIST (POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY
+      ,CHILDREN,RANG,NIVEAU,WYCC_ID,START_MOVEMENT,END_MOVEMENT,DATEOFNEXTMVT, RANKMVT, RANKPARENT) AS
+( 
+ SELECT POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,'' CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,
+ MVT_NUM_ID RANG,1 NIVEAU, WYCC_ID, 
+ CASE WHEN START_MOVEMENT <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') ELSE START_MOVEMENT END START_MOVEMENT, 
+ CASE WHEN END_MOVEMENT >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') ELSE END_MOVEMENT END END_MOVEMENT,
+ DATEOFNEXTMVT,RANKMVT,RANKPARENT
+ FROM MVT_NUM YT1  WHERE NEXTMVT= 0 
+ UNION ALL
+ SELECT M.POSITIONCREW, M.NAME, M.FIRST_NAME, M.STRUCTURE_NAME,'' CREWMANNING, M.PERIOD, M.FAMILY_COVERED, M.NATIONALITY, M.COUNTRY, M.CHILDREN,
+ L.RANG, NIVEAU+1 NIVEAU, M.WYCC_ID,
+  CASE WHEN M.START_MOVEMENT <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') ELSE M.START_MOVEMENT END START_MOVEMENT, 
+ CASE WHEN M.END_MOVEMENT >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') ELSE M.END_MOVEMENT END END_MOVEMENT,
+ M.DATEOFNEXTMVT,M.RANKMVT,M.RANKPARENT FROM MVT_NUM M
+ JOIN LIST L ON (M.WYCC_ID=L.WYCC_ID AND M.START_MOVEMENT=L.DATEOFNEXTMVT ) WHERE   NEXTMVT != 0
+ )
+ SELECT WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN,MIN(START_MOVEMENT) , MAX(END_MOVEMENT),
+ MAX(END_MOVEMENT)-MIN(START_MOVEMENT) JOUR ,MONTH( MAX(END_MOVEMENT))-MONTH(MIN(START_MOVEMENT) )+1 MOIS,DAY_OF_MONTH(MIN(START_MOVEMENT))
+ DAY_OF_MONTH([*]MAX(END_MOVEMENT))
+ FROM LIST GROUP BY WYCC_ID,POSITIONCREW,NAME,FIRST_NAME,STRUCTURE_NAME,CREWMANNING,PERIOD,FAMILY_COVERED,NATIONALITY,COUNTRY,CHILDREN 
+ ORDER BY WYCC_ID,RANG "; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,
+ MVT_NUM_ID rang,1 niveau, wycc_id, 
+ CASE WHEN start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else start_movement END start_movement, 
+ CASE WHEN end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else end_movement END end_movement,
+ DATEOFNEXTMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,
+ l.rang, niveau+1 niveau, m.wycc_id,
+  CASE WHEN m.start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else m.start_movement END start_movement, 
+ CASE WHEN m.end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else m.end_movement END end_movement,
+ m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min(start_movement) , max(end_movement),
+ max(end_movement)-min(start_movement) jour ,MONTH( max(end_movement))-MONTH(min(start_movement) )+1 mois,DAY_OF_MONTH(min(start_movement))
+ DAY_OF_MONTH(max(end_movement))
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [42000-193]
+2017-02-03 23:08:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "MONTHLY_SALARY"; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,monthly_salary,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,monthly_salary,
+ MVT_NUM_ID rang,1 niveau, wycc_id, 
+ CASE WHEN start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else start_movement END start_movement, 
+ CASE WHEN end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else end_movement END end_movement,
+ DATEOFNEXTMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,monthly_salary,
+ l.rang, niveau+1 niveau, m.wycc_id,
+  CASE WHEN m.start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else m.start_movement END start_movement, 
+ CASE WHEN m.end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else m.end_movement END end_movement,
+ m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min(start_movement) , max(end_movement),
+ max(end_movement)-min(start_movement) jour ,MONTH( max(end_movement))-MONTH(min(start_movement) )+1 mois,DAY_OF_MONTH(min(start_movement)),
+ DAY_OF_MONTH(max(end_movement))
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,monthly_salary, 
+ ORDER BY wycc_id,rang [90059-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:124)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:94)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1243)
+	at org.h2.command.dml.Select.init(Select.java:828)
+	at org.h2.command.dml.SelectUnion.init(SelectUnion.java:279)
+	at org.h2.command.Parser.parseSelect(Parser.java:1703)
+	at org.h2.command.Parser.parseWith(Parser.java:4767)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 23:09:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "MONTHLY_SALARY"; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,monthly_salary,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,monthly_salary,
+ MVT_NUM_ID rang,1 niveau, wycc_id, 
+ CASE WHEN start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else start_movement END start_movement, 
+ CASE WHEN end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else end_movement END end_movement,
+ DATEOFNEXTMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,monthly_salary,
+ l.rang, niveau+1 niveau, m.wycc_id,
+  CASE WHEN m.start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else m.start_movement END start_movement, 
+ CASE WHEN m.end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else m.end_movement END end_movement,
+ m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min(start_movement) , max(end_movement),
+ max(end_movement)-min(start_movement) jour ,MONTH( max(end_movement))-MONTH(min(start_movement) )+1 mois,DAY_OF_MONTH(min(start_movement)),
+ DAY_OF_MONTH(max(end_movement)),Sum( monthly_salary) monthly_salary
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children, 
+ ORDER BY wycc_id,rang [90059-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:124)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:94)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1243)
+	at org.h2.command.dml.Select.init(Select.java:828)
+	at org.h2.command.dml.SelectUnion.init(SelectUnion.java:279)
+	at org.h2.command.Parser.parseSelect(Parser.java:1703)
+	at org.h2.command.Parser.parseWith(Parser.java:4767)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-03 23:09:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "MONTHLY_SALARY"; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,monthly_salary,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,monthly_salary,
+ MVT_NUM_ID rang,1 niveau, wycc_id, 
+ CASE WHEN start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else start_movement END start_movement, 
+ CASE WHEN end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else end_movement END end_movement,
+ DATEOFNEXTMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,monthly_salary,
+ l.rang, niveau+1 niveau, m.wycc_id,
+  CASE WHEN m.start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else m.start_movement END start_movement, 
+ CASE WHEN m.end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else m.end_movement END end_movement,
+ m.DATEOFNEXTMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min(start_movement) , max(end_movement),
+ max(end_movement)-min(start_movement) jour ,MONTH( max(end_movement))-MONTH(min(start_movement) )+1 mois,DAY_OF_MONTH(min(start_movement)),
+ DAY_OF_MONTH(max(end_movement)),Sum( monthly_salary) monthly_salary
+ from list GROUP BY wycc_id,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY wycc_id,rang [90059-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:124)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:94)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1243)
+	at org.h2.command.dml.Select.init(Select.java:828)
+	at org.h2.command.dml.SelectUnion.init(SelectUnion.java:279)
+	at org.h2.command.Parser.parseSelect(Parser.java:1703)
+	at org.h2.command.Parser.parseWith(Parser.java:4767)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-04 00:14:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO MVT  SELECT * FROM CSVREAD('/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp6341230704912576224.tmp') [21002-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:282)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:126)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:115)
+	at com.poi.actionuser.Actionuser.lanceLecture(Actionuser.java:60)
+	at com.poi.dlas.MenuWycc$1.actionPerformed(MenuWycc.java:56)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:125)
+	at java.awt.MenuItem.processActionEvent(MenuItem.java:669)
+	at java.awt.MenuItem.processEvent(MenuItem.java:628)
+	at java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:351)
+	at java.awt.MenuComponent.dispatchEvent(MenuComponent.java:339)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:761)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-04 00:20:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO MVT  SELECT * FROM CSVREAD('/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp956605434542462685.tmp') [21002-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:282)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:126)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:115)
+	at com.poi.actionuser.Actionuser.lanceLecture(Actionuser.java:60)
+	at com.poi.dlas.MenuWycc$1.actionPerformed(MenuWycc.java:56)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:125)
+	at java.awt.MenuItem.processActionEvent(MenuItem.java:669)
+	at java.awt.MenuItem.processEvent(MenuItem.java:628)
+	at java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:351)
+	at java.awt.MenuComponent.dispatchEvent(MenuComponent.java:339)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:761)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-04 01:08:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO PUBLIC.MVT_NUM (STRUCTURE_NAME, CERTIFICATE, CERTIFICATE_START, CERTIFICATE_RENEWAL, CERTIFICATE_CANCELLATION, AMENDMENT_START, AMENDMENT_END, WYCC_ID, CLAIMS_MANAGER_ID, GENDER, NAME, FIRST_NAME, DATE_OF_BIRTH, EMAIL, POSITION_TYPE, POSITIONCREW, MONTHLY_SALARY, SALARY_CURRENCY, PERIOD, DAYS, MONTHS,  FAMILY_COVERED, RETIREMENT_PLAN, START_MOVEMENT, END_MOVEMENT, EMPLOYER, CHILDREN, COUNTRY, NATIONALITY, COMPANY1, FORMULA1, POLICY_NUMBER1, CURRENCY1,  EXCESS1, DURATION1, TOTAL_AMOUNT_INSURED1, CIE_HT_BASIS1, COMPANY2, FORMULA2, POLICY_NUMBER2, CURRENCY2, EXCESS2, DURATION2, TOTAL_AMOUNT_INSURED2, CIE_HT_BASIS2, COMPANY3, FORMULA3, POLICY_NUMBER3, CURRENCY3, EXCESS3, DURATION3, TOTAL_AMOUNT_INSURED3, CIE_HT_BASIS3, COMPANY4, FORMULA4, POLICY_NUMBER4, CURRENCY4, EXCESS4, DURATION4, TOTAL_AMOUNT_INSURED4, CIE_HT_BASIS4, COMPANY5, FORMULA5, POLICY_NUMBER5, CURRENCY5, EXCESS5, DURATION5, TOTAL_AMOUNT_INSURED5, CIE_HT_BASIS5, COMPANY6, FORMULA, POLICY_NUMBER6, CURRENCY6, EXCESS6, DURATION6, TOTAL_AMOUNT_INSURED6, CIE_HT_BASIS6, COMPANY7, FORMULA7, POLICY_NUMBER7, CURRENCY7, EXCESS67, DURATION7, TOTAL_AMOUNT_INSURED7, CIE_HT_BASIS7, COMPANY8, FORMULA8, POLICY_NUMBER8, CURRENCY8, EXCESS8, DURATION8, TOTAL_AMOUNT_INSURED8,CIE_HT_BASIS8, NBREMVT,RANKMVT, NEXTMVT,DATEOFNEXTMVT,DATEOFPREVMVT)SELECT STRUCTURE_NAME,CERTIFICATE,CERTIFICATE_START,CERTIFICATE_RENEWAL,CERTIFICATE_CANCELLATION,AMENDMENT_START,AMENDMENT_END, WYCC_ID,CLAIMS_MANAGER_ID,GENDER,NAME,FIRST_NAME,DATE_OF_BIRTH,EMAIL,POSITION_TYPE,POSITIONCREW, CAST( CASE WHEN REPLACE(MONTHLY_SALARY,',','.')!='' THEN REPLACE(MONTHLY_SALARY,',','.') ELSE  '0' END  AS NUMBER), SALARY_CURRENCY,PERIOD ,CAST(DAYS AS NUMBER),CAST(MONTHS AS NUMBER),FAMILY_COVERED,RETIREMENT_PLAN, PARSEDATETIME(START_MOVEMENT,'dd/MM/yyyy') START_MOVEMENT, PARSEDATETIME(END_MOVEMENT,'dd/MM/yyyy') END_MOVEMENT, EMPLOYER,CHILDREN,COUNTRY,NATIONALITY,COMPANY1,FORMULA1,POLICY_NUMBER1,CURRENCY1,EXCESS1,DURATION1, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED1,',','.')!='' THEN REPLACE(TOTAL_AMOUNT_INSURED1,',','.')  ELSE  '0' END  AS NUMBER) , CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS1,'%','') ,',','.') !=''  THEN REPLACE(REPLACE(CIE_HT_BASIS1,'%','') ,',','.') ELSE  '0' END  AS NUMBER), COMPANY2,FORMULA2,POLICY_NUMBER2,CURRENCY2,EXCESS2,DURATION2, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED2,',','.')!=''  THEN REPLACE(TOTAL_AMOUNT_INSURED2,',','.') ELSE  '0' END  AS NUMBER), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS2,'%',''),',','.') !='' THEN REPLACE(REPLACE(CIE_HT_BASIS2,'%',''),',','.') ELSE  '0' END  AS NUMBER), COMPANY3,FORMULA3,POLICY_NUMBER3,CURRENCY3,EXCESS3,DURATION3, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED3,',','.')!='' THEN REPLACE(TOTAL_AMOUNT_INSURED3,',','.') ELSE  '0' END  AS NUMBER), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS3,'%',''),',','.') !='' THEN REPLACE(REPLACE(CIE_HT_BASIS3,'%',''),',','.') ELSE  '0' END  AS NUMBER), COMPANY4,FORMULA4,POLICY_NUMBER4,CURRENCY4,EXCESS4,DURATION4, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED4,',','.') !='' THEN REPLACE(TOTAL_AMOUNT_INSURED4,',','.') ELSE  '0' END  AS NUMBER), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS4,'%',''),',','.') !='' THEN REPLACE(REPLACE(CIE_HT_BASIS4,'%',''),',','.') ELSE  '0' END  AS NUMBER), COMPANY5, FORMULA5, POLICY_NUMBER5, CURRENCY5, EXCESS5, DURATION5, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED5,',','.') !='' THEN REPLACE(TOTAL_AMOUNT_INSURED5,',','.') ELSE  '0' END  AS NUMBER), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS5,'%',''),',','.') !='' THEN REPLACE(REPLACE(CIE_HT_BASIS5,'%',''),',','.') ELSE  '0' END  AS NUMBER), COMPANY6, FORMULA, POLICY_NUMBER6, CURRENCY6, EXCESS6, DURATION6, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED6,',','.') !='' THEN REPLACE(TOTAL_AMOUNT_INSURED6,',','.') ELSE  '0' END  AS NUMBER), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS6,'%',''),',','.') !='' THEN REPLACE(REPLACE(CIE_HT_BASIS6,'%',''),',','.') ELSE  '0' END  AS NUMBER), COMPANY7, FORMULA7, POLICY_NUMBER7, CURRENCY7, EXCESS67, DURATION7, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED7,',','.')  !='' THEN REPLACE(TOTAL_AMOUNT_INSURED7,',','.') ELSE  '0' END  AS NUMBER), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS7,'%',''),',','.') !='' THEN REPLACE(REPLACE(CIE_HT_BASIS7,'%',''),',','.') ELSE  '0' END  AS NUMBER), COMPANY8, FORMULA8, POLICY_NUMBER8, CURRENCY8, EXCESS8, DURATION8, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED8,',','.') !='' THEN REPLACE(TOTAL_AMOUNT_INSURED8,',','.') ELSE  '0' END  AS NUMBER), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS8,'%',''),',','.') !='' THEN REPLACE(REPLACE(CIE_HT_BASIS8,'%',''),',','.') ELSE  '0' END  AS NUMBER), ( SELECT COUNT(*) FROM MVT YT2 WHERE YT2.WYCC_ID = YT1.WYCC_ID ),  ( SELECT COUNT(*) FROM MVT YT2 WHERE YT2.WYCC_ID = YT1.WYCC_ID AND PARSEDATETIME(YT2.START_MOVEMENT,'dd/MM/yyyy') < DATEADD( 'DAY', 1,  PARSEDATETIME(YT1.END_MOVEMENT,'dd/MM/yyyy') ) ), ( SELECT COUNT(*) FROM MVT YT2 WHERE YT2.WYCC_ID = YT1.WYCC_ID AND PARSEDATETIME(YT2.END_MOVEMENT,'dd/MM/yyyy') = DATEADD( 'DAY', -1, PARSEDATETIME(YT1.START_MOVEMENT,'dd/MM/yyyy') ) ),  ( SELECT MIN( PARSEDATETIME( YT2.START_MOVEMENT, 'dd/MM/yyyy' ) ) FROM MVT YT2 WHERE YT2.WYCC_ID = YT1.WYCC_ID AND PARSEDATETIME(YT2.START_MOVEMENT,'dd/MM/yyyy') > PARSEDATETIME(YT1.END_MOVEMENT,'dd/MM/yyyy') ) ([*] SELECT MAX( PARSEDATETIME( YT2.END_MOVEMENT, 'dd/MM/yyyy' )) FROM MVT YT2 WHERE YT2.WYCC_ID = YT1.WYCC_ID AND PARSEDATETIME( YT2.END_MOVEMENT, 'dd/MM/yyyy' ) < PARSEDATETIME( YT1.START_MOVEMENT, 'dd/MM/yyyy' ) ) DATEPREV FROM PUBLIC.MVT YT1 "; SQL statement:
+INSERT INTO PUBLIC.MVT_NUM (STRUCTURE_NAME, CERTIFICATE, CERTIFICATE_START, CERTIFICATE_RENEWAL, CERTIFICATE_CANCELLATION, AMENDMENT_START, AMENDMENT_END, WYCC_ID, CLAIMS_MANAGER_ID, GENDER, NAME, FIRST_NAME, DATE_OF_BIRTH, EMAIL, POSITION_TYPE, POSITIONCREW, MONTHLY_SALARY, SALARY_CURRENCY, PERIOD, DAYS, MONTHS,  FAMILY_COVERED, RETIREMENT_PLAN, START_MOVEMENT, END_MOVEMENT, EMPLOYER, CHILDREN, COUNTRY, NATIONALITY, COMPANY1, FORMULA1, POLICY_NUMBER1, CURRENCY1,  EXCESS1, DURATION1, TOTAL_AMOUNT_INSURED1, CIE_HT_BASIS1, COMPANY2, FORMULA2, POLICY_NUMBER2, CURRENCY2, EXCESS2, DURATION2, TOTAL_AMOUNT_INSURED2, CIE_HT_BASIS2, COMPANY3, FORMULA3, POLICY_NUMBER3, CURRENCY3, EXCESS3, DURATION3, TOTAL_AMOUNT_INSURED3, CIE_HT_BASIS3, COMPANY4, FORMULA4, POLICY_NUMBER4, CURRENCY4, EXCESS4, DURATION4, TOTAL_AMOUNT_INSURED4, CIE_HT_BASIS4, COMPANY5, FORMULA5, POLICY_NUMBER5, CURRENCY5, EXCESS5, DURATION5, TOTAL_AMOUNT_INSURED5, CIE_HT_BASIS5, COMPANY6, FORMULA, POLICY_NUMBER6, CURRENCY6, EXCESS6, DURATION6, TOTAL_AMOUNT_INSURED6, CIE_HT_BASIS6, COMPANY7, FORMULA7, POLICY_NUMBER7, CURRENCY7, EXCESS67, DURATION7, TOTAL_AMOUNT_INSURED7, CIE_HT_BASIS7, COMPANY8, FORMULA8, POLICY_NUMBER8, CURRENCY8, EXCESS8, DURATION8, TOTAL_AMOUNT_INSURED8,CIE_HT_BASIS8, NBREMVT,RANKMVT, NEXTMVT,DATEOFNEXTMVT,DATEOFPREVMVT)SELECT STRUCTURE_NAME,CERTIFICATE,CERTIFICATE_START,CERTIFICATE_RENEWAL,CERTIFICATE_CANCELLATION,AMENDMENT_START,AMENDMENT_END, WYCC_ID,CLAIMS_MANAGER_ID,GENDER,NAME,FIRST_NAME,DATE_OF_BIRTH,EMAIL,POSITION_TYPE,POSITIONCREW, CAST( CASE WHEN REPLACE(MONTHLY_SALARY,',','.')!='' then REPLACE(MONTHLY_SALARY,',','.') else  '0' end  as Number), SALARY_CURRENCY,PERIOD ,cast(DAYS as number),cast(MONTHS as number),FAMILY_COVERED,RETIREMENT_PLAN, PARSEDATETIME(START_MOVEMENT,'dd/MM/yyyy') START_MOVEMENT, PARSEDATETIME(END_MOVEMENT,'dd/MM/yyyy') END_MOVEMENT, EMPLOYER,CHILDREN,COUNTRY,NATIONALITY,COMPANY1,FORMULA1,POLICY_NUMBER1,CURRENCY1,EXCESS1,DURATION1, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED1,',','.')!='' then REPLACE(TOTAL_AMOUNT_INSURED1,',','.')  else  '0' end  as Number) , CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS1,'%','') ,',','.') !=''  then REPLACE(REPLACE(CIE_HT_BASIS1,'%','') ,',','.') else  '0' end  as Number), COMPANY2,FORMULA2,POLICY_NUMBER2,CURRENCY2,EXCESS2,DURATION2, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED2,',','.')!=''  then REPLACE(TOTAL_AMOUNT_INSURED2,',','.') else  '0' end  as Number), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS2,'%',''),',','.') !='' then REPLACE(REPLACE(CIE_HT_BASIS2,'%',''),',','.') else  '0' end  as Number), COMPANY3,FORMULA3,POLICY_NUMBER3,CURRENCY3,EXCESS3,DURATION3, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED3,',','.')!='' then REPLACE(TOTAL_AMOUNT_INSURED3,',','.') else  '0' end  as Number), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS3,'%',''),',','.') !='' then REPLACE(REPLACE(CIE_HT_BASIS3,'%',''),',','.') else  '0' end  as Number), COMPANY4,FORMULA4,POLICY_NUMBER4,CURRENCY4,EXCESS4,DURATION4, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED4,',','.') !='' then REPLACE(TOTAL_AMOUNT_INSURED4,',','.') else  '0' end  as Number), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS4,'%',''),',','.') !='' then REPLACE(REPLACE(CIE_HT_BASIS4,'%',''),',','.') else  '0' end  as Number), COMPANY5, FORMULA5, POLICY_NUMBER5, CURRENCY5, EXCESS5, DURATION5, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED5,',','.') !='' then REPLACE(TOTAL_AMOUNT_INSURED5,',','.') else  '0' end  as Number), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS5,'%',''),',','.') !='' then REPLACE(REPLACE(CIE_HT_BASIS5,'%',''),',','.') else  '0' end  as Number), COMPANY6, FORMULA, POLICY_NUMBER6, CURRENCY6, EXCESS6, DURATION6, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED6,',','.') !='' then REPLACE(TOTAL_AMOUNT_INSURED6,',','.') else  '0' end  as Number), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS6,'%',''),',','.') !='' then REPLACE(REPLACE(CIE_HT_BASIS6,'%',''),',','.') else  '0' end  as Number), COMPANY7, FORMULA7, POLICY_NUMBER7, CURRENCY7, EXCESS67, DURATION7, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED7,',','.')  !='' then REPLACE(TOTAL_AMOUNT_INSURED7,',','.') else  '0' end  as Number), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS7,'%',''),',','.') !='' then REPLACE(REPLACE(CIE_HT_BASIS7,'%',''),',','.') else  '0' end  as Number), COMPANY8, FORMULA8, POLICY_NUMBER8, CURRENCY8, EXCESS8, DURATION8, CAST( CASE WHEN REPLACE(TOTAL_AMOUNT_INSURED8,',','.') !='' then REPLACE(TOTAL_AMOUNT_INSURED8,',','.') else  '0' end  as Number), CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS8,'%',''),',','.') !='' then REPLACE(REPLACE(CIE_HT_BASIS8,'%',''),',','.') else  '0' end  as Number), ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id ),  ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME(yt2.start_movement,'dd/MM/yyyy') < DATEADD( 'DAY', 1,  PARSEDATETIME(yt1.end_movement,'dd/MM/yyyy') ) ), ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME(yt2.end_movement,'dd/MM/yyyy') = DATEADD( 'DAY', -1, PARSEDATETIME(yt1.start_movement,'dd/MM/yyyy') ) ),  ( SELECT MIN( PARSEDATETIME( yt2.start_movement, 'dd/MM/yyyy' ) ) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME(yt2.start_movement,'dd/MM/yyyy') > PARSEDATETIME(yt1.end_movement,'dd/MM/yyyy') ) ( SELECT Max( PARSEDATETIME( yt2.end_movement, 'dd/MM/yyyy' )) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME( yt2.end_movement, 'dd/MM/yyyy' ) < PARSEDATETIME( yt1.start_movement, 'dd/MM/yyyy' ) ) dateprev FROM PUBLIC.MVT YT1 [42000-193]
+2017-02-04 01:20:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "RANK" not found; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,monthly_salary,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT,DATEOFPREVMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,monthly_salary,
+ MVT_NUM_ID rang,1 niveau, wycc_id, 
+ CASE WHEN start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else start_movement END start_movement, 
+ CASE WHEN end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else end_movement END end_movement,
+ DATEOFNEXTMVT,DATEOFPREVMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,m.monthly_salary,
+ l.rang, niveau+1 niveau, m.wycc_id,
+  CASE WHEN m.start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else m.start_movement END start_movement, 
+ CASE WHEN m.end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else m.end_movement END end_movement,
+ m.DATEOFNEXTMVT,m.DATEOFPREVMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,rank(),PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min(start_movement) , max(end_movement),
+ Max(DATEOFNEXTMVT),min(DATEOFPREVMVT),max(end_movement)-min(start_movement) jour ,MONTH( max(end_movement))-MONTH(min(start_movement) )+1 mois,DAY_OF_MONTH(min(start_movement)) DresteJ, DAY_OF_MONTH(max(end_movement)) EresteJ,
+ Sum( monthly_salary) monthly_salary
+ from list  GROUP BY wycc_id,rang,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY 1,2,13 [90022-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2421)
+	at org.h2.command.Parser.readFunction(Parser.java:2473)
+	at org.h2.command.Parser.readTerm(Parser.java:2807)
+	at org.h2.command.Parser.readFactor(Parser.java:2324)
+	at org.h2.command.Parser.readSum(Parser.java:2311)
+	at org.h2.command.Parser.readConcat(Parser.java:2281)
+	at org.h2.command.Parser.readCondition(Parser.java:2128)
+	at org.h2.command.Parser.readAnd(Parser.java:2100)
+	at org.h2.command.Parser.readExpression(Parser.java:2092)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:2004)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2036)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1891)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseWith(Parser.java:4785)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1889)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:481)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-04 01:20:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "RANK" not found; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,monthly_salary,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT,DATEOFPREVMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,monthly_salary,
+ MVT_NUM_ID rang,1 niveau, wycc_id, 
+ CASE WHEN start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else start_movement END start_movement, 
+ CASE WHEN end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else end_movement END end_movement,
+ DATEOFNEXTMVT,DATEOFPREVMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,m.monthly_salary,
+ l.rang, niveau+1 niveau, m.wycc_id,
+  CASE WHEN m.start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else m.start_movement END start_movement, 
+ CASE WHEN m.end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else m.end_movement END end_movement,
+ m.DATEOFNEXTMVT,m.DATEOFPREVMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,rank,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min(start_movement) , max(end_movement),
+ Max(DATEOFNEXTMVT),min(DATEOFPREVMVT),max(end_movement)-min(start_movement) jour ,MONTH( max(end_movement))-MONTH(min(start_movement) )+1 mois,DAY_OF_MONTH(min(start_movement)) DresteJ, DAY_OF_MONTH(max(end_movement)) EresteJ,
+ Sum( monthly_salary) monthly_salary
+ from list  GROUP BY wycc_id,rang,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY 1,2,13 [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-04 01:26:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "NIVEAU" must be in the GROUP BY list; SQL statement:
+with 
+list (PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country
+      ,children,monthly_salary,rang,niveau,wycc_id,start_movement,end_movement,DATEOFNEXTMVT,DATEOFPREVMVT, RANKMVT, rankparent) as
+( 
+ Select PositionCrew,name,first_name,structure_name,'' crewmanning,period,family_covered,nationality,country,children,monthly_salary,
+ MVT_NUM_ID rang,1 niveau, wycc_id, 
+ CASE WHEN start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else start_movement END start_movement, 
+ CASE WHEN end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else end_movement END end_movement,
+ DATEOFNEXTMVT,DATEOFPREVMVT,RANKMVT,rankparent
+ FROM MVT_NUM YT1  where nextmvt= 0 
+ union all
+ SELECT m.PositionCrew, m.name, m.first_name, m.structure_name,'' crewmanning, m.period, m.family_covered, m.nationality, m.country, m.children,m.monthly_salary,
+ l.rang, niveau+1 niveau, m.wycc_id,
+  CASE WHEN m.start_movement <PARSEDATETIME('01/01/2016','dd/MM/yyyy') THEN PARSEDATETIME('01/01/2016','dd/MM/yyyy') else m.start_movement END start_movement, 
+ CASE WHEN m.end_movement >PARSEDATETIME('31/12/2016','dd/MM/yyyy') THEN PARSEDATETIME('31/12/2016','dd/MM/yyyy') else m.end_movement END end_movement,
+ m.DATEOFNEXTMVT,m.DATEOFPREVMVT,m.RANKMVT,m.rankparent FROM MVT_NUM m
+ join list l on (m.wycc_id=l.wycc_id and m.start_movement=l.DATEOFNEXTMVT ) WHERE   nextmvt != 0
+ )
+ select wycc_id,niveau,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children,min(start_movement) , max(end_movement),
+ Max(DATEOFNEXTMVT),min(DATEOFPREVMVT),max(end_movement)-min(start_movement) jour ,MONTH( max(end_movement))-MONTH(min(start_movement) )+1 mois,DAY_OF_MONTH(min(start_movement)) DresteJ, DAY_OF_MONTH(max(end_movement)) EresteJ,
+ Sum( monthly_salary) monthly_salary
+ from list  GROUP BY wycc_id,rang,PositionCrew,name,first_name,structure_name,crewmanning,period,family_covered,nationality,country,children 
+ ORDER BY 1,2,13 [90016-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:169)
+	at org.h2.command.dml.Select.queryGroup(Select.java:365)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:650)
+	at org.h2.command.dml.Query.query(Query.java:341)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:110)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:179)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

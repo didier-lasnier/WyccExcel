@@ -17,7 +17,7 @@ public class hsqltext {
 		sqlstmt = sqlstmt+ " CURRENCY4, EXCESS4, DURATION4, TOTAL_AMOUNT_INSURED4, CIE_HT_BASIS4, COMPANY5, FORMULA5, POLICY_NUMBER5, CURRENCY5, EXCESS5, DURATION5, TOTAL_AMOUNT_INSURED5,";
 		sqlstmt = sqlstmt+ " CIE_HT_BASIS5, COMPANY6, FORMULA, POLICY_NUMBER6, CURRENCY6, EXCESS6, DURATION6, TOTAL_AMOUNT_INSURED6, CIE_HT_BASIS6, COMPANY7, FORMULA7, POLICY_NUMBER7,";
 		sqlstmt = sqlstmt+ " CURRENCY7, EXCESS67, DURATION7, TOTAL_AMOUNT_INSURED7, CIE_HT_BASIS7, COMPANY8, FORMULA8, POLICY_NUMBER8, CURRENCY8, EXCESS8, DURATION8, TOTAL_AMOUNT_INSURED8,";
-		sqlstmt = sqlstmt+ "CIE_HT_BASIS8, NBREMVT,RANKMVT, NEXTMVT,DATEOFNEXTMVT)";
+		sqlstmt = sqlstmt+ "CIE_HT_BASIS8, NBREMVT,RANKMVT, NEXTMVT,DATEOFNEXTMVT,DATEOFPREVMVT)";
 		sqlstmt = sqlstmt+"SELECT STRUCTURE_NAME,CERTIFICATE,CERTIFICATE_START,CERTIFICATE_RENEWAL,CERTIFICATE_CANCELLATION,AMENDMENT_START,AMENDMENT_END,";
 		sqlstmt = sqlstmt+" WYCC_ID,CLAIMS_MANAGER_ID,GENDER,NAME,FIRST_NAME,DATE_OF_BIRTH,EMAIL,POSITION_TYPE,POSITIONCREW,";
 		sqlstmt = sqlstmt+" CAST( CASE WHEN REPLACE(MONTHLY_SALARY,',','.')!='' then REPLACE(MONTHLY_SALARY,',','.') else  '0' end  as Number),";
@@ -50,8 +50,9 @@ public class hsqltext {
 		sqlstmt = sqlstmt+" CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS8,'%',''),',','.') !='' then REPLACE(REPLACE(CIE_HT_BASIS8,'%',''),',','.') else  '0' end  as Number),";
 		sqlstmt = sqlstmt+" ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id ), ";
 		sqlstmt = sqlstmt+" ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME(yt2.start_movement,'dd/MM/yyyy') < DATEADD( 'DAY', 1,  PARSEDATETIME(yt1.end_movement,'dd/MM/yyyy') ) ),";
-		sqlstmt = sqlstmt+" ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME(yt2.start_movement,'dd/MM/yyyy') = DATEADD( 'DAY', 1, PARSEDATETIME(yt1.end_movement,'dd/MM/yyyy') ) ), ";
-		sqlstmt = sqlstmt+" ( SELECT MIN( PARSEDATETIME( yt2.start_movement, 'dd/MM/yyyy' ) ) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME(yt2.start_movement,'dd/MM/yyyy') > PARSEDATETIME(yt1.end_movement,'dd/MM/yyyy') )";
+		sqlstmt = sqlstmt+" ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME(yt2.end_movement,'dd/MM/yyyy') = DATEADD( 'DAY', -1, PARSEDATETIME(yt1.start_movement,'dd/MM/yyyy') ) ), ";
+		sqlstmt = sqlstmt+" ( SELECT MIN( PARSEDATETIME( yt2.start_movement, 'dd/MM/yyyy' ) ) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME(yt2.start_movement,'dd/MM/yyyy') > PARSEDATETIME(yt1.end_movement,'dd/MM/yyyy') ),";
+		sqlstmt = sqlstmt+" ( SELECT Max( PARSEDATETIME( yt2.end_movement, 'dd/MM/yyyy' )) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND PARSEDATETIME( yt2.end_movement, 'dd/MM/yyyy' ) < PARSEDATETIME( yt1.start_movement, 'dd/MM/yyyy' ) ) dateprev";
 		sqlstmt = sqlstmt+" FROM PUBLIC.MVT YT1";
 		return 	sqlstmt;
 	}

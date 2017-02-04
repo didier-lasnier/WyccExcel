@@ -11728,3 +11728,205 @@ amount
 [2017-02-02 00:30:44,968]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
 [2017-02-02 00:30:44,968]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
 [2017-02-02 00:30:55,180]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-03 21:35:03,678]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-03 21:35:03,795]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-03 21:35:03,796]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-03 21:35:15,830]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-03 21:35:15,879]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp7591662751569639726.tmp
+[2017-02-03 21:35:15,898]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-03 21:35:15,898]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-03 21:35:15,899]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-03 21:35:50,623]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-03 21:35:50,808]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-03 21:35:50,810]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-03 21:35:58,302]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-03 21:35:58,388]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp5474354967804169159.tmp
+[2017-02-03 21:35:58,405]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-03 21:35:58,405]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-03 21:35:58,406]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-03 21:35:58,703]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-03 21:35:58,731]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-03 21:35:58,806]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-02-03 21:35:58,832]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-03 21:35:59,195]-[AWT-EventQueue-0] INFO  wycc  - DONE !
+[2017-02-03 21:35:59,225]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-03 21:35:59,226]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-03 21:35:59,228]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-03 21:35:59,229]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-03 21:36:29,465]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-03 21:49:06,022]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-03 21:49:06,089]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-03 21:49:06,090]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-03 21:49:17,206]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-03 21:49:17,239]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp575639441294126304.tmp
+[2017-02-03 21:49:17,254]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-03 21:49:17,255]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-03 21:49:17,255]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-03 21:49:17,453]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-03 21:49:17,480]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-03 21:49:17,548]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-02-03 21:49:17,575]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-03 21:49:17,943]-[AWT-EventQueue-0] INFO  wycc  - DONE !
+[2017-02-03 21:49:17,974]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-03 21:49:17,974]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-03 21:49:17,976]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-03 21:49:17,977]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-03 21:49:41,861]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-03 21:55:19,260]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-03 21:55:19,332]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-03 21:55:19,334]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-03 21:55:22,784]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-03 21:55:22,897]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp8870584666302984138.tmp
+[2017-02-03 21:55:22,916]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-03 21:55:22,917]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-03 21:55:22,917]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-03 21:55:23,119]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-03 21:55:23,149]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-03 21:55:23,213]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-02-03 21:55:23,242]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-03 21:55:23,605]-[AWT-EventQueue-0] INFO  wycc  - DONE !
+[2017-02-03 21:55:23,639]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-03 21:55:23,640]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-03 21:55:23,641]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-03 21:55:23,643]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-03 21:55:28,894]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-03 22:04:09,629]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-03 22:04:09,712]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-03 22:04:09,714]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-03 22:04:12,838]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-03 22:04:12,977]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp92028825029722800.tmp
+[2017-02-03 22:04:12,994]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-03 22:04:12,994]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-03 22:04:12,995]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-03 22:04:13,185]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-03 22:04:13,217]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-03 22:04:13,293]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-02-03 22:04:13,294]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-03 22:04:13,688]-[AWT-EventQueue-0] INFO  wycc  - DONE !
+[2017-02-03 22:04:13,721]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-03 22:04:13,722]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-03 22:04:13,723]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-03 22:04:13,725]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-03 22:04:21,792]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-04 00:07:20,174]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-04 00:07:20,240]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-04 00:07:20,241]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-04 00:07:26,068]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-04 00:07:26,087]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp8511442799314104603.tmp
+[2017-02-04 00:07:26,090]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-04 00:07:26,091]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-04 00:07:26,091]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-04 00:07:26,319]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-04 00:07:26,347]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 00:07:26,383]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-02-04 00:07:26,410]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 00:07:26,448]-[AWT-EventQueue-0] INFO  wycc  - DONE !
+[2017-02-04 00:07:26,475]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-04 00:07:26,476]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-04 00:07:26,490]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-04 00:07:26,494]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-04 00:07:40,667]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-04 00:14:38,212]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-04 00:14:38,291]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-04 00:14:38,292]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-04 00:14:42,855]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-04 00:14:42,876]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp6341230704912576224.tmp
+[2017-02-04 00:14:42,880]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-04 00:14:42,881]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-04 00:14:42,881]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-04 00:14:43,086]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-04 00:14:43,090]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 00:20:02,443]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-04 00:20:02,505]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-04 00:20:02,507]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-04 00:20:06,168]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-04 00:20:06,187]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp956605434542462685.tmp
+[2017-02-04 00:20:06,193]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-04 00:20:06,193]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-04 00:20:06,193]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-04 00:20:06,388]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-04 00:20:06,391]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 00:25:56,590]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-04 00:25:56,658]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-04 00:25:56,660]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-04 00:26:01,730]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-04 00:26:01,750]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp7668644777434288792.tmp
+[2017-02-04 00:26:01,754]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-04 00:26:01,754]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-04 00:26:01,755]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-04 00:26:01,953]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-04 00:26:01,955]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 00:26:01,981]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-02-04 00:26:01,982]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 00:26:02,051]-[AWT-EventQueue-0] INFO  wycc  - DONE !
+[2017-02-04 00:26:02,074]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-04 00:26:02,075]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-04 00:26:02,085]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-04 00:26:02,087]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-04 00:26:12,090]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-04 00:33:20,548]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-04 00:33:20,613]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-04 00:33:20,616]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-04 00:33:25,508]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-04 00:33:25,524]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp5464844310125483701.tmp
+[2017-02-04 00:33:25,528]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-04 00:33:25,528]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-04 00:33:25,529]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-04 00:33:25,726]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-04 00:33:25,731]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 00:33:25,757]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-02-04 00:33:25,760]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 00:33:25,833]-[AWT-EventQueue-0] INFO  wycc  - DONE !
+[2017-02-04 00:33:25,857]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-04 00:33:25,858]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-04 00:33:25,868]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-04 00:33:25,870]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-04 00:33:38,151]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-04 00:36:49,685]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-04 00:36:49,748]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-04 00:36:49,749]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-04 00:36:57,789]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-04 00:36:57,806]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp782037206790204813.tmp
+[2017-02-04 00:36:57,810]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-04 00:36:57,810]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-04 00:36:57,810]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-04 00:36:58,005]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-04 00:36:58,009]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 00:36:58,033]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-02-04 00:36:58,036]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 00:36:58,105]-[AWT-EventQueue-0] INFO  wycc  - DONE !
+[2017-02-04 00:36:58,132]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-04 00:36:58,133]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-04 00:36:58,146]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-04 00:36:58,147]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-04 00:37:05,229]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-04 01:08:03,156]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-04 01:08:03,250]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-04 01:08:03,251]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-04 01:08:17,122]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-04 01:08:17,211]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp2894511496453776613.tmp
+[2017-02-04 01:08:17,217]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-04 01:08:17,218]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-04 01:08:17,218]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-04 01:08:17,601]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-04 01:08:17,608]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 01:08:17,645]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-02-04 01:08:17,647]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 01:09:52,395]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-04 01:09:52,459]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-04 01:09:52,460]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-04 01:09:56,609]-[AWT-EventQueue-0] INFO  wycc  - read file csv
+[2017-02-04 01:09:56,629]-[AWT-EventQueue-0] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/./tmp/tmp8656540343502457408.tmp
+[2017-02-04 01:09:56,633]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
+[2017-02-04 01:09:56,633]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
+[2017-02-04 01:09:56,633]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-04 01:09:56,825]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt
+[2017-02-04 01:09:56,830]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 01:09:56,854]-[AWT-EventQueue-0] INFO  wycc  - delete from mvt_num
+[2017-02-04 01:09:56,855]-[AWT-EventQueue-0] INFO  wycc  - read csv file into from mvt
+[2017-02-04 01:09:56,935]-[AWT-EventQueue-0] INFO  wycc  - DONE !
+[2017-02-04 01:09:56,960]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-04 01:09:56,961]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-04 01:09:56,972]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-04 01:09:56,974]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-04 01:10:07,179]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
