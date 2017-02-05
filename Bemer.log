@@ -288,3 +288,995 @@ select beneficiai0_.BENEFICIAIRIES_ID as BENEFICI1_0_, beneficiai0_.DRESTEJ as D
 [2017-02-05 02:17:21,522]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
 [2017-02-05 02:17:21,523]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
 [2017-02-05 02:17:35,585]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-05 15:00:04,630]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 15:00:04,776]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 15:00:04,777]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 15:00:08,835]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 15:00:08,838]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 15:00:09,151]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 15:00:09,311]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 15:00:09,337]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 15:00:09,338]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 15:00:09,338]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 15:00:09,341]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 15:00:09,775]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 15:00:10,772]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 15:00:10,882]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 15:00:10,882]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.hibernate_sequence [50000-193]
+[2017-02-05 15:06:36,283]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 15:06:36,354]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 15:06:36,355]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 15:06:39,914]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 15:06:39,916]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 15:06:40,118]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 15:06:40,189]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 15:06:40,192]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 15:06:40,192]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 15:06:40,193]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 15:06:40,195]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 15:06:40,460]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 15:06:41,210]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 15:06:41,240]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 15:06:41,241]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.hibernate_sequence [50000-193]
+[2017-02-05 15:16:37,152]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 15:16:37,271]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 15:16:37,272]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 15:16:44,412]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 15:16:44,419]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 15:16:44,702]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 15:16:44,845]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 15:16:44,870]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 15:16:44,871]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 15:16:44,871]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 15:16:44,874]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 15:16:45,184]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 15:16:46,272]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 15:16:46,375]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 15:16:46,375]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.hibernate_sequence [50000-193]
+[2017-02-05 15:19:19,369]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 15:19:19,445]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 15:19:19,447]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 15:19:22,323]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 15:19:22,325]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 15:19:22,533]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 15:19:22,617]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 15:19:22,621]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 15:19:22,622]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 15:19:22,622]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 15:19:22,625]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 15:19:22,872]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 15:19:23,476]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 15:19:23,552]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 15:19:23,553]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.hibernate_sequence [50000-193]
+[2017-02-05 15:20:51,050]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 15:20:51,126]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 15:20:51,128]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 15:20:54,309]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 15:20:54,310]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 15:20:54,518]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 15:20:54,590]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 15:20:54,594]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 15:20:54,594]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 15:20:54,595]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 15:20:54,597]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 15:20:54,853]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 15:20:55,442]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 15:20:55,463]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 15:20:55,463]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.hibernate_sequence [50000-193]
+[2017-02-05 15:22:41,576]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 15:22:41,665]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 15:22:41,666]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 15:22:47,532]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 15:22:47,534]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 15:22:47,765]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 15:22:47,854]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 15:22:47,858]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 15:22:47,859]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 15:22:47,860]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 15:22:47,863]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 15:22:48,193]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 15:23:15,119]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 15:23:52,472]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 15:23:52,472]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.hibernate_sequence [50000-193]
+[2017-02-05 15:28:17,729]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 15:28:17,793]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 15:28:17,794]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 15:28:25,247]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 15:28:25,248]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 15:28:25,463]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 15:28:25,538]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 15:28:25,542]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 15:28:25,542]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 15:28:25,543]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 15:28:25,545]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 15:28:25,799]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 15:28:26,534]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 15:32:08,671]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 15:32:08,735]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 15:32:08,737]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 15:32:12,640]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 15:32:12,641]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 15:32:12,855]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 15:32:12,930]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 15:32:12,933]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 15:32:12,934]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 15:32:12,934]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 15:32:12,939]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 15:32:13,193]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 15:32:13,749]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 15:32:46,845]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 15:32:46,914]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 15:32:46,915]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 15:32:49,504]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 15:32:49,506]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 15:32:49,714]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 15:32:49,791]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 15:32:49,795]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 15:32:49,796]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 15:32:49,796]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 15:32:49,798]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 15:32:50,033]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 15:32:50,665]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 15:32:50,706]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 15:32:50,706]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+insert into PUBLIC.SETTINGSCELL (id, BAXKGROUNDCOLOR, BODERBOTTOM, BODERCOLORBOTTEM, BORDERCOLORIGHT, BORDERCOLORRIGHT, BORDERCOLORTOP, BORDERRIGHT, BORDERTOP, BORDERLEFT, CELLCOLUMN, CELLROW, DATAFORMAT, DATAFORMATSTRING, FONTINDEX, FORMULECELL, FRONTGROUNDCOLOR, HALIGNEMENT, INDENTION, PATTERN, SHEETNUM, TYPECELL, VALEURCELL, VALIGNEMENT) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [50000-193]
+[2017-02-05 15:39:16,518]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 15:39:16,600]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 15:39:16,601]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 15:39:19,363]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 15:39:19,364]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 15:39:19,578]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 15:39:19,651]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 15:39:19,654]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 15:39:19,655]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 15:39:19,655]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 15:39:19,658]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 15:39:19,918]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 15:39:20,552]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 15:39:20,593]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 15:39:20,594]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+insert into PUBLIC.SETTINGSCELL (id, BAXKGROUNDCOLOR, BODERBOTTOM, BODERCOLORBOTTEM, BORDERCOLORIGHT, BORDERCOLORRIGHT, BORDERCOLORTOP, BORDERRIGHT, BORDERTOP, BORDERLEFT, CELLCOLUMN, CELLROW, DATAFORMAT, DATAFORMATSTRING, FONTINDEX, FORMULECELL, FRONTGROUNDCOLOR, HALIGNEMENT, INDENTION, PATTERN, SHEETNUM, TYPECELL, VALEURCELL, VALIGNEMENT) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [50000-193]
+[2017-02-05 19:19:31,434]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 19:19:31,505]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 19:19:31,506]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 19:19:34,457]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 19:19:34,458]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 19:19:34,658]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 19:19:34,732]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 19:19:34,736]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 19:19:34,737]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 19:19:34,737]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 19:19:34,740]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 19:19:34,985]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 19:19:35,541]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 19:19:35,574]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 19:19:35,574]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+insert into PUBLIC.SETTINGSCELL (id, BAXKGROUNDCOLOR, BODERBOTTOM, BODERCOLORBOTTEM, BORDERCOLORIGHT, BORDERCOLORRIGHT, BORDERCOLORTOP, BORDERRIGHT, BORDERTOP, BORDERLEFT, CELLCOLUMN, CELLROW, DATAFORMAT, DATAFORMATSTRING, FONTINDEX, FORMULECELL, FRONTGROUNDCOLOR, HALIGNEMENT, INDENTION, PATTERN, SHEETNUM, TYPECELL, VALEURCELL, VALIGNEMENT) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [50000-193]
+[2017-02-05 19:44:46,476]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 19:44:46,482]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 19:44:46,683]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 19:44:46,793]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 19:44:46,797]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 19:44:46,797]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 19:44:46,797]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 19:44:46,799]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 19:44:47,035]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 19:44:47,618]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-05 19:44:48,960]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-05 19:44:48,962]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-05 19:44:48,966]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-05 19:44:48,967]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-05 19:45:04,304]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-05 19:45:07,978]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 19:45:07,980]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 19:45:07,981]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 19:45:07,981]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 19:45:07,981]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 19:45:07,982]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 19:45:08,017]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-05 19:45:08,386]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-05 19:45:08,388]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-05 19:45:08,390]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-05 19:45:08,390]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-05 19:45:20,658]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-05 19:45:24,282]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 19:45:24,302]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 19:45:24,303]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 19:45:26,057]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 19:45:26,058]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 19:45:26,058]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 19:45:26,059]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 19:45:26,059]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 19:45:26,060]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 19:45:26,107]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 19:45:26,127]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 19:45:26,127]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+insert into PUBLIC.SETTINGSCELL (id, BAXKGROUNDCOLOR, BODERBOTTOM, BODERCOLORBOTTEM, BORDERCOLORIGHT, BORDERCOLORRIGHT, BORDERCOLORTOP, BORDERRIGHT, BORDERTOP, BORDERLEFT, CELLCOLUMN, CELLROW, DATAFORMAT, DATAFORMATSTRING, FONTINDEX, FORMULECELL, FRONTGROUNDCOLOR, HALIGNEMENT, INDENTION, PATTERN, SHEETNUM, TYPECELL, VALEURCELL, VALIGNEMENT) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [50000-193]
+[2017-02-05 20:29:17,994]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 20:29:18,072]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 20:29:18,074]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 20:29:21,006]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 20:29:21,008]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 20:29:21,205]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 20:29:21,278]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 20:29:21,281]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 20:29:21,282]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 20:29:21,282]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 20:29:21,285]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 20:29:21,538]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 20:29:22,118]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 20:29:22,151]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 20:29:22,152]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+insert into PUBLIC.SETTINGSCELL (id, BAXKGROUNDCOLOR, BODERBOTTOM, BODERCOLORBOTTEM, BORDERCOLORIGHT, BORDERCOLORRIGHT, BORDERCOLORTOP, BORDERRIGHT, BORDERTOP, BORDERLEFT, CELLCOLUMN, CELLROW, DATAFORMAT, DATAFORMATSTRING, FONTINDEX, FORMULECELL, FRONTGROUNDCOLOR, HALIGNEMENT, INDENTION, PATTERN, SHEETNUM, TYPECELL, VALEURCELL, VALIGNEMENT) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [50000-193]
+[2017-02-05 20:32:50,676]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 20:32:50,756]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 20:32:50,758]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 20:32:53,279]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 20:32:53,281]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 20:32:53,484]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 20:32:53,554]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 20:32:53,558]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 20:32:53,559]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 20:32:53,559]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 20:32:53,561]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 20:33:25,772]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 20:33:25,836]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 20:33:25,837]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 20:33:28,566]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 20:33:28,568]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 20:33:28,758]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 20:33:28,824]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 20:33:28,828]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 20:33:28,828]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 20:33:28,829]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 20:33:28,833]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 20:33:29,071]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 20:33:29,683]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 20:33:29,719]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 20:33:29,719]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+insert into PUBLIC.SETTINGSCELL (ID, BAXKGROUNDCOLOR, BODERBOTTOM, BODERCOLORBOTTEM, BORDERCOLORIGHT, BORDERCOLORRIGHT, BORDERCOLORTOP, BORDERRIGHT, BORDERTOP, BORDERLEFT, CELLCOLUMN, CELLROW, DATAFORMAT, DATAFORMATSTRING, FONTINDEX, FORMULECELL, FRONTGROUNDCOLOR, HALIGNEMENT, INDENTION, PATTERN, SHEETNUM, TYPECELL, VALEURCELL, VALIGNEMENT) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [50000-193]
+[2017-02-05 21:27:53,899]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 21:27:53,904]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 21:27:54,111]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 21:27:54,224]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 21:27:54,228]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 21:27:54,228]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 21:27:54,229]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 21:27:54,231]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 21:28:28,470]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 21:28:28,474]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 21:28:28,671]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 21:28:28,782]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 21:28:28,786]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 21:28:28,788]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 21:28:28,788]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 21:28:28,790]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 21:28:29,012]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 21:28:29,526]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-05 21:28:30,882]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog Création fileChooser
+[2017-02-05 21:28:30,884]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setFileSelectionMode
+[2017-02-05 21:28:30,887]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setAcceptAllFileFilterUsed
+[2017-02-05 21:28:30,887]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
+[2017-02-05 21:28:36,348]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
+[2017-02-05 21:28:49,582]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 21:28:49,659]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 21:28:49,660]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 21:28:52,640]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 21:28:52,641]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 21:28:52,844]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 21:28:52,919]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 21:28:52,922]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 21:28:52,923]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 21:28:52,924]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 21:28:52,926]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 21:28:53,170]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 21:28:53,738]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 21:28:53,759]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 21:28:53,760]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.SEQ_SETTINGSCELL [50000-193]
+[2017-02-05 21:34:36,074]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 21:34:36,145]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 21:34:36,146]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 21:34:38,780]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 21:34:38,781]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 21:34:38,991]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 21:34:39,064]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 21:34:39,069]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 21:34:39,070]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 21:34:39,070]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 21:34:39,073]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 21:34:39,313]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 21:34:39,880]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 21:34:39,901]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 21:34:39,901]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.SEQ_SETTINGSCELL [50000-193]
+[2017-02-05 21:49:58,081]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 21:49:58,146]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 21:49:58,149]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 21:50:00,489]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 21:50:00,490]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 21:50:00,685]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 21:50:00,760]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 21:50:00,765]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 21:50:00,766]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 21:50:00,766]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 21:50:00,769]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 21:50:30,674]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 21:50:30,740]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 21:50:30,741]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 21:50:33,340]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 21:50:33,341]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 21:50:33,539]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 21:50:33,607]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 21:50:33,610]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 21:50:33,611]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 21:50:33,612]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 21:50:33,615]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 21:50:33,854]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 21:50:34,430]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 21:50:34,435]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-05 21:50:34,467]-[AWT-EventQueue-0] ERROR org.hibernate.hql.internal.ast.ErrorCounter  - line 1:14: unexpected token: VALUE
+[2017-02-05 21:50:34,468]-[AWT-EventQueue-0] ERROR org.hibernate.hql.internal.ast.ErrorCounter  - line 1:14: unexpected token: VALUE
+line 1:14: unexpected token: VALUE
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.expressionOrVector(HqlBaseParser.java:4708)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.primaryExpression(HqlBaseParser.java:950)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.atom(HqlBaseParser.java:3542)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.unaryExpression(HqlBaseParser.java:3395)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.multiplyExpression(HqlBaseParser.java:3267)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.additiveExpression(HqlBaseParser.java:2924)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.concatenation(HqlBaseParser.java:609)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.relationalExpression(HqlBaseParser.java:2691)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.equalityExpression(HqlBaseParser.java:2552)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.negatedExpression(HqlBaseParser.java:2516)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.logicalAndExpression(HqlBaseParser.java:2432)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.logicalOrExpression(HqlBaseParser.java:2397)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.expression(HqlBaseParser.java:2110)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.aliasedExpression(HqlBaseParser.java:2351)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectedPropertiesList(HqlBaseParser.java:1384)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1294)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1034)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:742)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:313)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:195)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:278)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:186)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:141)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:77)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:545)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:654)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:102)
+	at com.poi.dlas.WyccWorkbook.readData(WyccWorkbook.java:515)
+	at com.poi.dlas.WyccWorkbook.getWorkbook(WyccWorkbook.java:179)
+	at com.poi.actionuser.ReadFileXlsx.readxls(ReadFileXlsx.java:66)
+	at com.poi.dlas.MenuWycc$3.actionPerformed(MenuWycc.java:103)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:125)
+	at java.awt.MenuItem.processActionEvent(MenuItem.java:669)
+	at java.awt.MenuItem.processEvent(MenuItem.java:628)
+	at java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:351)
+	at java.awt.MenuComponent.dispatchEvent(MenuComponent.java:339)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:761)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+[2017-02-05 21:50:34,473]-[AWT-EventQueue-0] WARN  org.hibernate.hql.internal.ast.HqlParser  - HHH000203: processEqualityExpression() : No expression to process!
+[2017-02-05 22:04:50,565]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:04:50,640]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:04:50,641]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:04:54,530]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:04:54,532]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:04:54,728]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:04:54,800]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:04:54,804]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:04:54,805]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:04:54,806]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:04:54,808]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:05:20,623]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:05:20,719]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:05:20,720]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:05:23,787]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:05:23,788]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:05:23,989]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:05:24,063]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:05:24,069]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:05:24,070]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:05:24,070]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:05:24,072]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:05:24,314]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:05:24,888]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:05:24,906]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 22:05:24,906]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.SEQ_SETTINGSCELL [50000-193]
+[2017-02-05 22:11:07,837]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:11:07,906]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:11:07,907]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:11:10,443]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:11:10,445]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:11:10,647]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:11:10,726]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:11:10,730]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:11:10,731]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:11:10,731]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:11:10,734]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:11:10,980]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:11:11,591]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:11:11,614]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 22:11:11,615]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.SEQ_SETTINGSCELL [50000-193]
+[2017-02-05 22:19:27,300]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:19:27,374]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:19:27,375]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:19:29,770]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:19:29,771]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:19:29,967]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:19:30,041]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:19:30,046]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:19:30,048]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:19:30,048]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:19:30,051]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:19:30,307]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:19:30,892]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:19:30,910]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 22:19:30,910]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.SEQ_SETTINGSCELL [50000-193]
+[2017-02-05 22:29:05,356]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:29:05,469]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:29:05,470]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:29:08,499]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:29:08,501]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:29:08,722]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:29:08,796]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:29:08,799]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:29:08,800]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:29:08,801]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:29:08,805]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:29:09,034]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:29:09,614]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:29:09,634]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 22:29:09,634]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.SEQ_SETTINGSCELL [50000-193]
+[2017-02-05 22:33:15,049]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:33:15,116]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:33:15,117]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:33:17,757]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:33:17,759]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:33:18,030]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:33:18,101]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:33:18,108]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:33:18,108]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:33:18,109]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:33:18,111]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:33:41,128]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:33:41,194]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:33:41,195]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:33:43,368]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:33:43,369]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:33:43,591]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:33:43,663]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:33:43,666]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:33:43,666]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:33:43,667]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:33:43,669]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:33:43,906]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:33:44,486]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:33:44,524]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 42122, SQLState: 42S22
+[2017-02-05 22:33:44,524]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column "WYCC_ID" not found; SQL statement:
+insert into PUBLIC.SETTINGSCELL (BAXKGROUNDCOLOR, BODERBOTTOM, BODERCOLORBOTTEM, BORDERCOLORIGHT, BORDERCOLORRIGHT, BORDERCOLORTOP, BORDERRIGHT, BORDERTOP, BORDERLEFT, CELLCOLUMN, CELLROW, DATAFORMAT, DATAFORMATSTRING, FONTINDEX, FORMULECELL, FRONTGROUNDCOLOR, HALIGNEMENT, INDENTION, PATTERN, SHEETNUM, TYPECELL, VALEURCELL, VALIGNEMENT, WYCC_ID) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42122-193]
+[2017-02-05 22:33:44,527]-[AWT-EventQueue-0] ERROR org.hibernate.internal.ExceptionMapperStandardImpl  - HHH000346: Error during managed flush [org.hibernate.exception.SQLGrammarException: could not prepare statement]
+[2017-02-05 22:35:49,401]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:35:49,480]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:35:49,481]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:35:51,858]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:35:51,860]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:35:52,060]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:35:52,128]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:35:52,132]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:35:52,133]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:35:52,133]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:35:52,136]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:35:52,377]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:35:52,999]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:35:53,038]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 15 value : nb of days
+[2017-02-05 22:37:51,078]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:37:51,160]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:37:51,162]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:37:55,716]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:37:55,718]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:37:56,040]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:37:56,177]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:37:56,202]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:37:56,203]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:37:56,204]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:37:56,206]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:37:56,527]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:37:57,588]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:37:57,677]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 15 value : nb of days
+[2017-02-05 22:41:07,422]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:41:07,489]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:41:07,490]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:41:09,971]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:41:09,973]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:41:10,176]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:41:10,244]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:41:10,248]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:41:10,249]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:41:10,249]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:41:10,252]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:41:10,491]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:41:11,050]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:41:11,087]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 15 value : nb of days
+[2017-02-05 22:47:28,111]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:47:28,241]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:47:28,245]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:47:31,658]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:47:31,659]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:47:31,905]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:47:31,994]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:47:31,999]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:47:31,999]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:47:32,000]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:47:32,004]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:47:32,356]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:47:47,507]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:47:52,164]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-05 22:47:52,293]-[AWT-EventQueue-0] ERROR org.hibernate.hql.internal.ast.ErrorCounter  - line 1:14: unexpected token: VALUE
+[2017-02-05 22:47:52,295]-[AWT-EventQueue-0] ERROR org.hibernate.hql.internal.ast.ErrorCounter  - line 1:14: unexpected token: VALUE
+line 1:14: unexpected token: VALUE
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.expressionOrVector(HqlBaseParser.java:4708)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.primaryExpression(HqlBaseParser.java:950)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.atom(HqlBaseParser.java:3542)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.unaryExpression(HqlBaseParser.java:3395)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.multiplyExpression(HqlBaseParser.java:3267)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.additiveExpression(HqlBaseParser.java:2924)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.concatenation(HqlBaseParser.java:609)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.relationalExpression(HqlBaseParser.java:2691)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.equalityExpression(HqlBaseParser.java:2552)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.negatedExpression(HqlBaseParser.java:2516)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.logicalAndExpression(HqlBaseParser.java:2432)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.logicalOrExpression(HqlBaseParser.java:2397)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.expression(HqlBaseParser.java:2110)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.aliasedExpression(HqlBaseParser.java:2351)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectedPropertiesList(HqlBaseParser.java:1384)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1294)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1034)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:742)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:313)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:195)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:278)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:186)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:141)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:77)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:545)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:654)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:102)
+	at com.poi.dlas.WyccWorkbook.readData(WyccWorkbook.java:515)
+	at com.poi.dlas.WyccWorkbook.getWorkbook(WyccWorkbook.java:179)
+	at com.poi.actionuser.ReadFileXlsx.readxls(ReadFileXlsx.java:66)
+	at com.poi.dlas.MenuWycc$3.actionPerformed(MenuWycc.java:103)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:125)
+	at java.awt.MenuItem.processActionEvent(MenuItem.java:669)
+	at java.awt.MenuItem.processEvent(MenuItem.java:628)
+	at java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:351)
+	at java.awt.MenuComponent.dispatchEvent(MenuComponent.java:339)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:761)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+[2017-02-05 22:47:52,317]-[AWT-EventQueue-0] WARN  org.hibernate.hql.internal.ast.HqlParser  - HHH000203: processEqualityExpression() : No expression to process!
+[2017-02-05 22:52:54,539]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:52:54,604]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:52:54,605]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:52:57,188]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:52:57,190]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:52:57,400]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:52:57,475]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:52:57,479]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:52:57,480]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:52:57,480]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:52:57,483]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:52:57,728]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:52:58,294]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:52:58,312]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 42001, SQLState: 42001
+[2017-02-05 22:52:58,313]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Syntax error in SQL statement "SELECT (NEXT VALUE FOR PUBLIC.SEQ_SETTINGSCELL[*]"; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+SELECT (NEXT VALUE FOR PUBLIC.SEQ_SETTINGSCELL [42001-193]
+[2017-02-05 22:53:47,213]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:53:47,274]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:53:47,276]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:53:56,994]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:53:56,995]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:53:57,196]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:53:57,270]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:53:57,273]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:53:57,274]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:53:57,274]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:53:57,277]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:53:57,529]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:53:58,107]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:53:58,130]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 22:53:58,130]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+SELECT (NEXT VALUE FOR PUBLIC.SEQ_SETTINGSCELL) FROM DUAL [50000-193]
+[2017-02-05 22:55:08,237]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:55:08,303]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:55:08,305]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:55:11,161]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:55:11,163]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:55:11,366]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:55:11,438]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:55:11,442]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:55:11,443]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:55:11,443]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:55:11,446]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:55:11,694]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:55:12,286]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:55:12,295]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 22:55:12,295]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+SELECT (NEXT VALUE FOR SEQ_SETTINGSCELL) FROM DUAL [50000-193]
+[2017-02-05 22:57:11,334]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 22:57:11,397]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 22:57:11,402]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 22:57:14,768]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 22:57:14,769]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 22:57:14,967]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 22:57:15,040]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 22:57:15,044]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 22:57:15,044]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 22:57:15,045]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 22:57:15,047]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 22:57:15,294]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 22:57:15,880]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 22:57:15,915]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 15 value : nb of days
+[2017-02-05 22:57:15,917]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 16 value : Nb of Months
+[2017-02-05 22:57:15,919]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 17 value : Type of module
+[2017-02-05 22:57:15,922]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 18 value : Insurance company
+[2017-02-05 22:57:15,925]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 19 value : Formula
+[2017-02-05 22:57:15,929]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 20 value : Policy number
+[2017-02-05 22:57:15,938]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 21 value : Currency
+[2017-02-05 22:57:15,941]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 22 value : Calculation mode
+[2017-02-05 22:57:15,943]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 23 value : Rate
+[2017-02-05 22:57:15,945]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 24 value : sum insured
+(%)
+[2017-02-05 22:57:15,949]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 25 value : sum insured 
+amount
+[2017-02-05 22:57:15,952]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 26 value : Cie Net Premium  without tax without com
+[2017-02-05 22:57:15,986]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 27 value : Discount / increase (%)
+[2017-02-05 22:57:15,998]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 28 value : Cie Net Premium  without tax without com with discount/increase
+[2017-02-05 22:57:16,003]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 29 value : Total Cie commission (%)
+[2017-02-05 22:57:16,006]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 30 value : Cie Premium  without tax (included com+dicount)
+[2017-02-05 22:57:16,009]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 31 value : Total Cie commission amount
+[2017-02-05 22:57:16,012]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 32 value : Broker commission included (%)
+[2017-02-05 22:57:16,015]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 33 value : Broker commission included amount
+[2017-02-05 22:57:16,018]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 34 value : WYCC commission included (%)
+[2017-02-05 22:57:16,021]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 35 value : WYCC commission included amount
+[2017-02-05 22:57:16,025]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 36 value : Tax 
+(%)
+[2017-02-05 22:57:16,028]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 37 value : Tax 
+amount
+[2017-02-05 22:57:16,031]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 38 value : Premium Tc
+[2017-02-05 22:57:16,039]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 39 value : WYCC Fees 
+(%)
+[2017-02-05 22:57:16,042]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 40 value : WYCC Fees 
+Amount or fixed sum
+[2017-02-05 22:57:16,052]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 41 value : Premium Tax and Fees included
+[2017-02-05 22:57:16,059]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 42 value : Total Surcom  
+(%)
+[2017-02-05 22:57:16,063]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 43 value : Premium with surcom
+[2017-02-05 22:57:16,066]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 44 value : Total Surcom  
+amount
+[2017-02-05 22:57:16,069]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 45 value : Broker Surcom  
+(%)
+[2017-02-05 22:57:16,072]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 46 value : Broker Surcom  
+amount
+[2017-02-05 22:57:16,075]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 47 value : WYCC surcom  
+(%)
+[2017-02-05 22:57:16,077]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 48 value : WYCC surcom  
+amount
+[2017-02-05 22:57:16,079]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 49 value : Total client Premium  without bank + broker fees
+[2017-02-05 22:57:16,090]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 50 value : Cie Net Premium  without tax without com
+[2017-02-05 22:57:16,193]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 51 value : Discount / increase (%)
+[2017-02-05 22:57:16,197]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 52 value : Cie Net Premium  without tax without com with discount/increase
+[2017-02-05 22:57:16,201]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 53 value : Total Cie commission (%)
+[2017-02-05 22:57:16,204]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 54 value : Cie Premium  without tax (included com+dicount)
+[2017-02-05 22:57:16,208]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 55 value : Total Cie commission amount
+[2017-02-05 22:57:16,211]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 56 value : Broker commission included (%)
+[2017-02-05 22:57:16,214]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 57 value : Broker commission included amount
+[2017-02-05 22:57:16,216]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 58 value : WYCC commission included (%)
+[2017-02-05 22:57:16,218]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 59 value : WYCC commission included amount
+[2017-02-05 22:57:16,221]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 60 value : Tax 
+(%)
+[2017-02-05 22:57:16,223]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 61 value : Tax 
+amount
+[2017-02-05 22:57:16,225]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 62 value : Premium Tc
+[2017-02-05 22:57:16,228]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 63 value : WYCC Fees 
+(%)
+[2017-02-05 22:57:16,230]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 64 value : WYCC Fees 
+Amount or fixed sum
+[2017-02-05 22:57:16,233]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 65 value : Premium Tax and Fees included
+[2017-02-05 22:57:16,235]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 66 value : Total Surcom  
+(%)
+[2017-02-05 22:57:16,238]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 67 value : Premium with surcom
+[2017-02-05 22:57:16,240]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 68 value : Total Surcom  
+amount
+[2017-02-05 22:57:16,243]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 69 value : Broker Surcom  
+(%)
+[2017-02-05 22:57:16,245]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 70 value : Broker Surcom  
+amount
+[2017-02-05 22:57:16,249]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 71 value : WYCC surcom  
+(%)
+[2017-02-05 22:57:16,252]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 72 value : WYCC surcom  
+amount
+[2017-02-05 22:57:16,256]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 73 value : Total client Premium  without bank + broker fees
+[2017-02-05 22:57:16,258]-[AWT-EventQueue-0] INFO  wycc  - nothing
+[2017-02-05 22:57:16,262]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 75 value : WCA
+[2017-02-05 22:57:16,264]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 76 value : WCA
+[2017-02-05 22:57:16,267]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 77 value : Frequency of payment
+[2017-02-05 22:57:16,272]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 78 value : Frequency of payment Fees 
+(%)
+[2017-02-05 22:57:16,274]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 79 value : Broker  add fees cotisation
+amount
+[2017-02-05 22:57:16,277]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 80 value : Broker add Bank Fees
+%
+[2017-02-05 22:57:16,279]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 81 value : Broker add Bank Fees
+amount
+[2017-02-05 22:57:16,283]-[AWT-EventQueue-0] INFO  wycc  - 5000.0
+[2017-02-05 23:09:50,154]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:09:50,235]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:09:50,236]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:09:53,122]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:09:53,124]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:09:53,318]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:09:53,394]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:09:53,397]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:09:53,397]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:09:53,398]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:09:53,401]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:09:53,659]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:09:54,239]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:09:54,254]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-05 23:11:32,631]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:11:32,712]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:11:32,713]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:11:35,524]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:11:35,527]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:11:35,806]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:11:35,896]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:11:35,900]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:11:35,901]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:11:35,902]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:11:35,907]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:11:36,222]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:11:36,836]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:11:36,851]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 42102, SQLState: 42S02
+[2017-02-05 23:11:36,852]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Table "WYCCCELL" not found; SQL statement:
+select max(cell_id) from wycccell [42102-193]
+[2017-02-05 23:12:10,497]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:12:10,595]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:12:10,598]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:12:15,016]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:12:15,022]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:12:15,305]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:12:15,410]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:12:15,417]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:12:15,418]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:12:15,418]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:12:15,422]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:12:15,816]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:12:21,322]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:18:08,750]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:18:08,821]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:18:08,823]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:18:11,240]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:18:11,241]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:18:11,457]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:18:11,530]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:18:11,535]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:18:11,535]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:18:11,536]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:18:11,539]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:18:11,803]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:18:12,452]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:18:52,284]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:18:52,378]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:18:52,381]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:18:56,172]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:18:56,174]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:18:56,437]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:18:56,525]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:18:56,530]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:18:56,530]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:18:56,531]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:18:56,534]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:18:56,982]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:19:02,962]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:22:53,094]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:22:53,199]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:22:53,201]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:22:59,988]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:22:59,991]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:23:00,306]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:23:00,403]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:23:00,408]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:23:00,410]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:23:00,410]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:23:00,416]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:23:00,751]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:23:07,531]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:27:17,299]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:27:17,362]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:27:17,363]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:27:20,018]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:27:20,019]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:27:20,225]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:27:20,293]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:27:20,298]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:27:20,299]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:27:20,299]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:27:20,301]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:27:20,546]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:27:21,109]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:33:26,513]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:33:26,593]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:33:26,594]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:33:30,796]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:33:30,797]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:33:31,008]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:33:31,081]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:33:31,085]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:33:31,086]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:33:31,086]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:33:31,089]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:33:31,326]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:33:31,915]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:34:54,476]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:34:54,569]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:34:54,572]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:34:59,043]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:34:59,054]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:34:59,305]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:34:59,395]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:34:59,400]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:34:59,400]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:34:59,401]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:34:59,405]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:34:59,750]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:35:09,142]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:38:16,764]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:38:16,855]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:38:16,857]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:38:20,566]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:38:20,569]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:38:20,792]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:38:20,892]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:38:20,896]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:38:20,897]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:38:20,898]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:38:20,901]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:38:21,236]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:38:25,153]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:43:05,712]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:43:05,740]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:43:05,745]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:43:08,495]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:43:08,496]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:43:08,496]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:43:08,497]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:43:08,497]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:43:08,499]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:43:15,578]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:44:55,428]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:44:55,504]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:44:55,505]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:44:57,780]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:44:57,782]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:44:57,974]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:44:58,047]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:44:58,051]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:44:58,051]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:44:58,052]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:44:58,054]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:44:58,306]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:44:58,896]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:54:18,206]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:54:18,272]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:54:18,274]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:54:20,969]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:54:20,970]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:54:21,177]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:54:21,247]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:54:21,252]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:54:21,253]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:54:21,253]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:54:21,257]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:54:21,504]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:54:22,116]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-05 23:54:22,136]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 50000, SQLState: HY000
+[2017-02-05 23:54:22,136]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - General error: "java.lang.RuntimeException: Unexpected code path"; SQL statement:
+call next value for PUBLIC.hibernate_sequence [50000-193]
+[2017-02-05 23:59:47,452]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-05 23:59:47,541]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-05 23:59:47,543]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-05 23:59:51,250]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-05 23:59:51,253]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-05 23:59:51,488]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-05 23:59:51,578]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-05 23:59:51,581]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-05 23:59:51,582]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-05 23:59:51,582]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-05 23:59:51,587]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-05 23:59:51,891]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-05 23:59:59,647]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-06 00:00:14,309]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 42122, SQLState: 42S22
+[2017-02-06 00:00:14,310]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column "ID" not found; SQL statement:
+insert into PUBLIC.SETTINGSCELL (BAXKGROUNDCOLOR, BODERBOTTOM, BODERCOLORBOTTEM, BORDERCOLORIGHT, BORDERCOLORRIGHT, BORDERCOLORTOP, BORDERRIGHT, BORDERTOP, BORDERLEFT, CELLCOLUMN, CELLROW, DATAFORMAT, DATAFORMATSTRING, FONTINDEX, FORMULECELL, FRONTGROUNDCOLOR, HALIGNEMENT, INDENTION, PATTERN, SHEETNUM, TYPECELL, VALEURCELL, VALIGNEMENT, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42122-193]
+[2017-02-06 00:00:14,317]-[AWT-EventQueue-0] ERROR org.hibernate.internal.ExceptionMapperStandardImpl  - HHH000346: Error during managed flush [org.hibernate.exception.SQLGrammarException: could not prepare statement]
+[2017-02-06 00:01:59,070]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-06 00:01:59,197]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-06 00:01:59,199]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-06 00:02:02,972]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-06 00:02:02,975]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-06 00:02:03,259]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-06 00:02:03,359]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-06 00:02:03,368]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-06 00:02:03,370]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-06 00:02:03,370]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-06 00:02:03,376]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-06 00:02:51,979]-[AWT-EventQueue-0] INFO  wycc  - Select file csv
+[2017-02-06 00:02:52,073]-[AWT-EventQueue-0] INFO  file  - Création fileChooser
+[2017-02-06 00:02:52,075]-[AWT-EventQueue-0] INFO  file  - showOpenFileDialog.setDialogTitle
+[2017-02-06 00:02:56,475]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-06 00:02:56,477]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-06 00:02:56,712]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-06 00:02:56,808]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-06 00:02:56,813]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-06 00:02:56,813]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-06 00:02:56,814]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-06 00:02:56,817]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-06 00:02:57,159]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-06 00:03:04,067]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 14 value : monthly salary
+[2017-02-06 00:03:06,694]-[AWT-EventQueue-0] INFO  wycc  - Row : 3 Column : 15 value : nb of days

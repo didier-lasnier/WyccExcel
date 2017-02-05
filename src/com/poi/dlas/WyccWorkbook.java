@@ -190,9 +190,7 @@ public class WyccWorkbook {
 			    
 			  } catch (Exception e) { 
 			   e.printStackTrace(); 
-			  } 
-		  
-		   
+			  } 	   
 		  
 	}
 	public void readXlsfile(XSSFWorkbook workbook,int sheetnumber ) {
@@ -321,7 +319,7 @@ public class WyccWorkbook {
 		   ObjectDao myobj= new ObjectDao();
 		   Session lasession = myobj.getSessionDao();
 		// now lets pull events from the database and list them
-		   lasession.beginTransaction();
+		    lasession.beginTransaction();
 			List resultdistinct = lasession.createQuery("select distinct cellrow from wycccell").list();
 			lasession.getTransaction().commit();
 			//lasession.close();
@@ -509,12 +507,25 @@ public class WyccWorkbook {
 					   logger.info("nothing"); 
 				   else  
 					   logger.info(String.valueOf(cell.getBooleanCellValue())); 
-				
-	
-				 //wycccell wycccell=new wycccell();
-				 
-				 wycccell wycccell=StylCellDao(cell,cellText,cellformule,celltype );
 			
+				 wycccell wycccell=StylCellDao(cell,cellText,cellformule,celltype );
+/*				    lasession.beginTransaction();
+				    
+					List resultdistinct = lasession.createSQLQuery("select max(cell_id) from SETTINGSCELL").list();
+					lasession.getTransaction().commit();
+					//lasession.close();
+					
+					int seq=0;
+					if (resultdistinct !=null ) {
+						for (int introw : (List<Integer>) resultdistinct){
+							 System.out.println("****** : "+introw );
+							 seq++;
+						}
+						
+					}
+
+				  wycccell.setId(seq);*/
+				  
 				 lasession.beginTransaction();
 				 lasession.save(wycccell);
 				 lasession.getTransaction().commit();
@@ -529,6 +540,7 @@ public class WyccWorkbook {
 			int sheetnum =0;
 			
 		return new wycccell(
+				
 				thecell.getRowIndex() , 
 				thecell.getColumnIndex() , 
 				sheetnum,

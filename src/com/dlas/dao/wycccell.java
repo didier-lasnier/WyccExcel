@@ -3,17 +3,77 @@ package com.dlas.dao;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import java.sql.Timestamp;
 
 
 @Entity
-@Table(name = "SETTINGSCELL")
+@Table(name = "SETTINGSCELL", schema="PUBLIC")
+//@SequenceGenerator(name="ID", sequenceName = "SEQ_SETTINGSCELL", initialValue=1, allocationSize=20)
 public class wycccell {
-	 		@Id 
-	 		@GeneratedValue
+	 		@Id
+	 		@Column(name = "CELL_ID")
+//	 		@GeneratedValue(strategy = GenerationType.AUTO)
 	 		private long id;
+			/**
+			 * @return the id
+			 */
+			public long getId() {
+				return id;
+			}
+
+			/**
+			 * @param id the id to set
+			 */
+			public void setId(long id) {
+				this.id = id;
+			}
+
+			/**
+			 * @return the valeurcell
+			 */
+			public String getValeurcell() {
+				return valeurcell;
+			}
+
+			/**
+			 * @param valeurcell the valeurcell to set
+			 */
+			public void setValeurcell(String valeurcell) {
+				this.valeurcell = valeurcell;
+			}
+
+			/**
+			 * @return the formulecell
+			 */
+			public String getFormulecell() {
+				return formulecell;
+			}
+
+			/**
+			 * @param formulecell the formulecell to set
+			 */
+			public void setFormulecell(String formulecell) {
+				this.formulecell = formulecell;
+			}
+
+			/**
+			 * @return the typecell
+			 */
+			public int getTypecell() {
+				return typecell;
+			}
+
+			/**
+			 * @param typecell the typecell to set
+			 */
+			public void setTypecell(int typecell) {
+				this.typecell = typecell;
+			}
+
 			@Column(name = "CELLROW")
 			private int cellrow ;
 			@Column(name = "CELLCOLUMN")
@@ -73,7 +133,7 @@ public class wycccell {
 				int baxkgroundcolor ,int frontgroundcolor, int pattern , int fontindex ,
 				float indention , int bordercolorbottom ,
 				int bordercolortop , int bordercolorright , int bordercolorleft,String valeurcell,String formulecell,int typecell ){
-			
+//			this.id                =(Long) null;
 			this.cellrow           = cellrow ;
 			this.cellcolumn        = cellcolumn ;
 			this.sheetnum          = sheetnum ;

@@ -3,4 +3,7 @@
 	<data-source id="h2_embedded-159faa3723c-21ac92bc8d8b230f" provider="generic" driver="h2_embedded" name="H2 - wyccdb" save-password="true" show-system-objects="true" read-only="false">
 		<connection server="" database="" url="jdbc:h2:./db/wyccdb" user="wycc" password="BB0FIyGi" type="dev"/>
 	</data-source>
+	<data-source id="h2_embedded-15a0bb4b8d6-5fcc6d545e3e115c" provider="generic" driver="h2_embedded" name="H2 - wyccdb" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="" url="jdbc:h2:./db/wyccdb" user="wycc" password="BB0FIyGi" type="test"/>
+	</data-source>
 </data-sources>

@@ -86,14 +86,7 @@ public class Actionuser {
 		         db.closeDbConnection(db.connectiondb);
 		         theSavefile.deleteOnExit();
 		         logger.info("DONE !");
-/*
-		         File theXlsfile=FileDialogOpen.saveFileDialog(directory);
 
-
-		         // on génére le fichier xls
-		         WyccWorkbook myWrkBk = new WyccWorkbook();
-		         myWrkBk.createWorkbook(theXlsfile);
-		 */
 		     }
 		     
 		     //System.exit(0);
