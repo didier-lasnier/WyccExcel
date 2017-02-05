@@ -32,12 +32,13 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import com.dlas.dao.h2db;
 import com.dlas.dao.hsqltext;
 import com.dlas.dao.wycccell;
-
+import com.poi.actionuser.Explorateur;
 
 
 //import au.com.ozblog.hibernate.h2.example.User;
 
 import com.dlas.dao.ObjectDao;
+import com.dlas.dao.beneficiairies;
 
 import org.hibernate.HibernateException ;
 import org.hibernate.Session;
@@ -159,16 +160,12 @@ public class WyccWorkbook {
 			//  FileOutputStream out = new FileOutputStream(xlsfileWycc.getAbsolutePath() );
 			    File directory = new File (".");
 			     String fileCharSep =System.getProperty("file.separator");
-//			    h2db db=new h2db();
-//			    db.getDatabase(directory);
-//
-//			    Statement stmt = db.connectiondb.createStatement();
+
 				   ObjectDao myobj= new ObjectDao();
 				   Session lasession = myobj.getSessionDao();
 
 
 				  try {
-				 // XSSFWorkbook workbook = this.currentworkbook; 
 					  XSSFSheet sheet = this.currentworkbook.getSheetAt(0); 
 				  
 					  int firstSheet =0;
@@ -189,9 +186,7 @@ public class WyccWorkbook {
 				  catch (Exception e) { 
 					   e.printStackTrace(); 
 					  }  
-			  
-//			     stmt.close();
-//			    db.closeDbConnection(db.connectiondb);
+
 			    
 			  } catch (Exception e) { 
 			   e.printStackTrace(); 
@@ -205,6 +200,122 @@ public class WyccWorkbook {
 		
 	}
 	
+	public void setBeneficiairies(){
+			ObjectDao myobj= new ObjectDao();
+			Session lasession = myobj.getSessionDao();
+			lasession.beginTransaction();
+			List resultdistinct = lasession.createQuery("from beneficiairies").list();
+			lasession.getTransaction().commit();
+			XSSFWorkbook newworkbook = new XSSFWorkbook(); 
+			XSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
+			int introw=3;
+			 for (beneficiairies event : (List<beneficiairies>) resultdistinct){
+				 XSSFRow row = spreadsheet.createRow(introw);
+				 Explorateur exp =new Explorateur();
+				 exp.explorerMethodes(event);
+				 
+				 int j=0;
+				 XSSFCell cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getWyccid() );
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getPositioncrew() );
+				 
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getName() );
+				 
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getFirstname() );
+				 
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getStructurename() );
+				 
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getFamilycovered() );
+
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getNationality() );
+
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getCountry() );
+				 
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getChildren());
+				 				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getStartmovement() );
+				 
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getEndmovement() );
+				 
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getMonthlysalary() );
+				 
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getSalaryCurrency() );
+				 
+				 j++;
+				 cell = (XSSFCell) row.createCell(j); 
+				 cell.setCellValue(event.getToinvoice() );
+				 
+/*				 for (int j=1;j<=event.ColumnCount();j++){
+					 
+					
+				 }*/
+				 
+				 introw++;
+			 }
+			
+			
+			
+			
+			
+			String filepath = null;
+			File theXlsfile = null;
+		    File directory = new File (".");
+		    String fileCharSep =System.getProperty("file.separator");
+			FileDialog FileDialogOpen = new FileDialog();
+			try {
+				theXlsfile=FileDialogOpen.saveFileDialog(directory);
+			} catch (InvocationTargetException | InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			 try {
+				filepath = theXlsfile.getCanonicalPath();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			FileOutputStream out;
+			
+			try {
+				out = new FileOutputStream( new File(filepath));
+				newworkbook.write(out);
+				out.close();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}	     
+		
+			
+			
+		 lasession.close();
+			 
+	}
 	public void readformula (){
 		
 		   ObjectDao myobj= new ObjectDao();

@@ -56,26 +56,44 @@ public class Actionuser {
 
 		         logger.info("delete from mvt");
 		         stmt.executeUpdate("DELETE FROM MVT");
+		         stmt.close();
+		         
+		         stmt = db.connectiondb.createStatement();
 		         logger.info("read csv file into from mvt");
 		         stmt.executeUpdate("INSERT INTO MVT  SELECT * FROM CSVREAD('"+file+"')");//, null, 'charset=UTF-8 fieldSeparator=;')");
-
+		         stmt.close();
+		         
+		         stmt = db.connectiondb.createStatement();
 		         logger.info("delete from mvt_num");
 		         stmt.executeUpdate("DELETE FROM MVT_NUM");
+		         stmt.close();
+		         
+		         stmt = db.connectiondb.createStatement();		         
 		         logger.info("read csv file into from mvt");
 		         stmt.executeUpdate(sqlstmt.insertmvtnum());//, null, 'charset=UTF-8 fieldSeparator=;')");
-
 		         stmt.close();
+		         
+		         stmt = db.connectiondb.createStatement();
+		         logger.info("delete from beneficiaries_tab");
+		         stmt.executeUpdate("DELETE FROM BENEFICIAIRIES_TAB");
+		         stmt.close();
+		         
+		         stmt = db.connectiondb.createStatement();		         
+		         logger.info("read csv file into from mvt");
+		         stmt.executeUpdate(sqlstmt.insertbeneficiairies() );//, null, 'charset=UTF-8 fieldSeparator=;')");
+		         stmt.close();
+		         
 		         db.closeDbConnection(db.connectiondb);
 		         theSavefile.deleteOnExit();
 		         logger.info("DONE !");
-
+/*
 		         File theXlsfile=FileDialogOpen.saveFileDialog(directory);
 
 
 		         // on génére le fichier xls
 		         WyccWorkbook myWrkBk = new WyccWorkbook();
 		         myWrkBk.createWorkbook(theXlsfile);
-		 
+		 */
 		     }
 		     
 		     //System.exit(0);

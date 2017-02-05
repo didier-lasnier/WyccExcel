@@ -32,7 +32,7 @@
        <!-- <property name="hbm2ddl.auto">create</property> -->
 
         <mapping class="com.dlas.dao.wycccell"/>
-
+	    <mapping class="com.dlas.dao.beneficiairies"/>
     </session-factory>
 
 </hibernate-configuration>

@@ -95,7 +95,7 @@ public class ReadFileXlsx {
 			//XSSFWorkbook wrkbk=new XSSFWorkbook(out);
 			WyccWorkbook wyccwrkbk=new WyccWorkbook();
 			//wyccwrkbk.setWorkBook(wrkbk);
-			wyccwrkbk.readformula(); 
-		     
+			//wyccwrkbk.readformula(); 
+			wyccwrkbk.setBeneficiairies();
 	  }
 }

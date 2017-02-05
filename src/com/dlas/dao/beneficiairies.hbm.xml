@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 5 f??vr. 2017 02:12:19 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.dlas.dao.beneficiairies" table="BENEFICIAIRIES">
+        <id name="beneficiairiesid" type="java.lang.String">
+            <column name="BENEFICIAIRIES_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="wyccid" type="java.lang.String">
+            <column name="WYCC_ID" />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="firstname" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+        <property name="structurename" type="java.lang.String">
+            <column name="STRUCTURE_NAME" />
+        </property>
+        <property name="familycovered" type="java.lang.String">
+            <column name="FAMILY_COVERED" />
+        </property>
+        <property name="children" type="java.lang.String">
+            <column name="CHILDREN" />
+        </property>
+        <property name="nationality" type="java.lang.String">
+            <column name="NATIONALITY" />
+        </property>
+        <property name="country" type="java.lang.String">
+            <column name="COUNTRY" />
+        </property>
+        <property name="positioncrew" type="java.lang.String">
+            <column name="POSITIONCREW" />
+        </property>
+        <property name="line" type="java.lang.Integer">
+            <column name="LINE" />
+        </property>
+        <property name="startmovement" type="java.util.Date">
+            <column name="START_MOVEMENT" />
+        </property>
+        <property name="prevmvt" type="java.util.Date">
+            <column name="PREVMVT" />
+        </property>
+        <property name="endcomp" type="java.lang.Integer">
+            <column name="ENDCOMP" />
+        </property>
+        <property name="endmovement" type="java.util.Date">
+            <column name="END_MOVEMENT" />
+        </property>
+        <property name="nextmvt" type="java.util.Date">
+            <column name="NEXTMVT" />
+        </property>
+        <property name="nextcomp" type="java.lang.Integer">
+            <column name="NEXTCOMP" />
+        </property>
+        <property name="monthlysalary" type="java.lang.Integer">
+            <column name="MONTHLY_SALARY" />
+        </property>
+        <property name="salarycurrency" type="java.lang.String" access="field">
+            <column name="SALARY_CURRENCY" />
+        </property>
+        <property name="drestej" type="java.lang.Integer">
+            <column name="DRESTEJ" />
+        </property>
+        <property name="erestej" type="java.lang.Integer">
+            <column name="ERESTEJ" />
+        </property>
+        <property name="toinvoice" type="float">
+            <column name="TO_INVOICE" />
+        </property>
+        <property name="jour" type="java.lang.Integer">
+            <column name="JOUR" />
+        </property>
+    </class>
+</hibernate-mapping>
