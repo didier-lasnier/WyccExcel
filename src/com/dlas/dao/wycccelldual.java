@@ -11,9 +11,9 @@ import java.sql.Timestamp;
 
 
 @Entity
-@Table(name = "SETTINGSCELL", schema="PUBLIC")
+@Table(name = "SETTINGSCELLDUAL", schema="PUBLIC")
 //@SequenceGenerator(name="ID", sequenceName = "SEQ_SETTINGSCELL", initialValue=1, allocationSize=20)
-public class wycccell {
+public class wycccelldual {
 	 		@Id
 	 		@Column(name = "CELL_ID")
 //	 		@GeneratedValue(strategy = GenerationType.AUTO)
@@ -122,11 +122,11 @@ public class wycccell {
 			private int typecell ;
 			
 			
-		public wycccell(){
+		public wycccelldual(){
 			
 		}
 		
-		public wycccell(int cellrow , int cellcolumn , int sheetnum,
+		public wycccelldual(int cellrow , int cellcolumn , int sheetnum,
 				int halignement , int valignement , int borderbottom ,
 				int bordertop , int borterleft , int borderright ,
 				int dataformat , String dataformatstring,

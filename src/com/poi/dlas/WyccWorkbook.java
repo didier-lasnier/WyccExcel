@@ -31,7 +31,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 
 import com.dlas.dao.h2db;
 import com.dlas.dao.hsqltext;
-import com.dlas.dao.wycccell;
+import com.dlas.dao.SETTINGSCELL;
 import com.poi.actionuser.Explorateur;
 
 
@@ -175,6 +175,8 @@ public class WyccWorkbook {
 					 Query query = lasession.createSQLQuery("DELETE FROM SETTINGSCELL");
 					 int result = query.executeUpdate();
 					 lasession.getTransaction().commit();
+					 lasession.close();
+					 
 					  for (int i=firstrow;i<=4;i++){
 					  readData(this.currentworkbook,0,i,lasession);
 					  }
@@ -344,7 +346,7 @@ public class WyccWorkbook {
 
 			 XSSFRow row = spreadsheet.createRow(introw);
 
-				for (wycccell event : (List<wycccell>) result) {
+				for (SETTINGSCELL event : (List<SETTINGSCELL>) result) {
 					XSSFCell cell = (XSSFCell) row.createCell(event.getCellcolumn());
 					XSSFCellStyle style1 = newworkbook.createCellStyle();
 
@@ -454,7 +456,7 @@ public class WyccWorkbook {
 			  return number; 
 		  	} 
 		 } 
-	public void readData(XSSFWorkbook workbook,int sheetNumber,int fromRow ,Session lasession  ) throws SQLException{
+	public void readData(XSSFWorkbook workbook,int sheetNumber,int fromRow ,Session lasession  ) throws SQLException, IOException{
 		// on recupére la ligne
 		
 		XSSFRow currentRow = workbook.getSheetAt(sheetNumber).getRow(fromRow);
@@ -508,38 +510,109 @@ public class WyccWorkbook {
 				   else  
 					   logger.info(String.valueOf(cell.getBooleanCellValue())); 
 			
-				 wycccell wycccell=StylCellDao(cell,cellText,cellformule,celltype );
-/*				    lasession.beginTransaction();
-				    
-					List resultdistinct = lasession.createSQLQuery("select max(cell_id) from SETTINGSCELL").list();
-					lasession.getTransaction().commit();
-					//lasession.close();
-					
-					int seq=0;
-					if (resultdistinct !=null ) {
-						for (int introw : (List<Integer>) resultdistinct){
-							 System.out.println("****** : "+introw );
-							 seq++;
-						}
-						
-					}
+				 SETTINGSCELL wycccell=StylCellDao(cell,cellText,cellformule,celltype );
+				 
+			     File directory = new File (".");
+			     String fileCharSep =System.getProperty("file.separator");
 
-				  wycccell.setId(seq);*/
-				  
-				 lasession.beginTransaction();
-				 lasession.save(wycccell);
-				 lasession.getTransaction().commit();
+		         h2db db=new h2db();
+		         db.getDatabase(directory);
+		         String  sqlstmt1 = "INSERT INTO PUBLIC.SETTINGSCELL (";
+		         sqlstmt1 = sqlstmt1+" CELL_ID,";
+		         sqlstmt1 = sqlstmt1+" BAXKGROUNDCOLOR,";
+		         sqlstmt1 = sqlstmt1+" BODERBOTTOM,";
+		         sqlstmt1 = sqlstmt1+" BODERCOLORBOTTEM,";
+		         sqlstmt1 = sqlstmt1+" BORDERCOLORIGHT,";
+		         sqlstmt1 = sqlstmt1+" BORDERCOLORRIGHT,";
+		         sqlstmt1 = sqlstmt1+" BORDERCOLORTOP,";
+		         sqlstmt1 = sqlstmt1+" BORDERRIGHT,";
+		         sqlstmt1 = sqlstmt1+" BORDERTOP,";
+		         sqlstmt1 = sqlstmt1+" BORDERLEFT,";
+		         sqlstmt1 = sqlstmt1+" CELLCOLUMN,";
+		         sqlstmt1 = sqlstmt1+" CELLROW,";
+		         sqlstmt1 = sqlstmt1+" DATAFORMAT,";
+		         sqlstmt1 = sqlstmt1+" DATAFORMATSTRING,";
+		         sqlstmt1 = sqlstmt1+" FONTINDEX,";
+		         sqlstmt1 = sqlstmt1+" FORMULECELL,";
+		         sqlstmt1 = sqlstmt1+" HALIGNEMENT,";
+		         sqlstmt1 = sqlstmt1+" INDENTION,";
+		         sqlstmt1 = sqlstmt1+" PATTERN,";
+		         sqlstmt1 = sqlstmt1+" SHEETNUM,";
+		         sqlstmt1 = sqlstmt1+" VALEURCELL,";
+		         sqlstmt1 = sqlstmt1+" VALIGNEMENT,";
+		         sqlstmt1 = sqlstmt1+" TYPECELL,";
+		         sqlstmt1 = sqlstmt1+" FRONTGROUNDCOLOR)";
+		         sqlstmt1 = sqlstmt1+" VALUES (";
+		        sqlstmt1 = sqlstmt1+" NULL,";
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getFillBackgroundColor()+",";  
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getBorderBottom()+",";        
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getBottomBorderColor()+",";   
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getBorderRight()+",";         
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getRightBorderColor()+",";    
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getTopBorderColor()+",";      
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getBorderRight()+",";         
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getBorderTop()+",";           
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getBorderLeft()+",";          
+		         sqlstmt1 = sqlstmt1+" "+cell.getColumnIndex()+",";                        
+		         sqlstmt1 = sqlstmt1+" "+cell.getRowIndex()+",";                           
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getDataFormat()+",";          
+		         sqlstmt1 = sqlstmt1+" '"+cell.getCellStyle().getDataFormatString()+"',";    
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getFontIndex()+",";           
+		         sqlstmt1 = sqlstmt1+" '"+cellformule+"',";                                   
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getAlignment()+",";           
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getIndention()+",";           
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getFillPattern()+",";         
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getIndex()+",";               
+		         sqlstmt1 = sqlstmt1+" '"+cellText+"',";                                      
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getVerticalAlignment()+",";   
+		         sqlstmt1 = sqlstmt1+" "+celltype+",";                            
+		         sqlstmt1 = sqlstmt1+" "+cell.getCellStyle().getFillForegroundColor()+") ;"; 
+		         
+		         Statement stmt = db.connectiondb.createStatement();
+		         stmt.executeUpdate(sqlstmt1);
+		         stmt.close();
+				 
+				 
+/*				 lasession.beginTransaction();
+				//Query query = lasession.createQuery("insert into wycccell (id,baxkgroundcolor,boderbottom,bodercolorbottem,bordercoloright, bordercolorright, bordercolortop, borderright, bordertop, borderleft, cellcolumn, cellrow, dataformat, dataformatstring, fontindex, formulecell, halignement, indention, pattern, sheetnum, valeurcell, valignement, typecell, frontgroundcolor) SELECT NULL, :baxkgroundcolor, :boderbottom, :bodercolorbottem, :bordercoloright, :bordercolorright, :bordercolortop, :borderright, :bordertop, :borderleft, :cellcolumn, :cellrow, :dataformat, :dataformatstring, :fontindex, :formulecell, :halignement, :indention, :pattern, :sheetnum, :valeurcell, :valignement, :typecell, :frontgroundcolor FROM wyccceldual");
+				Query query = lasession.createQuery("insert into wycccell (id,baxkgroundcolor) SELECT NULL, :baxkgroundcolor FROM wyccceldual");
+	
+				 query.setParameter("baxkgroundcolor",cell.getCellStyle().getFillBackgroundColor());//baxkgroundcolor);
+				 query.setParameter("boderbottom",cell.getCellStyle().getBorderBottom());// boderbottom);
+				 query.setParameter("bodercolorbottem",cell.getCellStyle().getBottomBorderColor()); //bodercolorbottem);
+				 query.setParameter("bordercoloright",cell.getCellStyle().getRightBorderColor());//bordercoloright);
+				 query.setParameter("bordercolorright",cell.getCellStyle().getBorderRight());//bordercolorright);
+				 query.setParameter("bordercolortop",cell.getCellStyle().getTopBorderColor());//bordercolortop);
+				 query.setParameter("borderright",cell.getCellStyle().getBorderRight());//borderright);
+				 query.setParameter("bordertop",cell.getCellStyle().getBorderTop());//bordertop);
+				 query.setParameter("borderleft",cell.getCellStyle().getBorderLeft());//borderleft);
+				 query.setParameter("cellcolumn",cell.getColumnIndex());//cellcolumn);
+				 query.setParameter("cellrow",cell.getRowIndex());//cellrow);
+				 query.setParameter("dataformat",cell.getCellStyle().getDataFormat());//dataformat);
+				 query.setParameter("dataformatstring",cell.getCellStyle().getDataFormatString());//dataformatstring);
+				 query.setParameter("fontindex",cell.getCellStyle().getFontIndex());//fontindex);
+				 query.setParameter("formulecell",cellformule);//formulecell);
+				 query.setParameter("halignement",cell.getCellStyle().getAlignment());//halignement);
+				 query.setParameter("indention",cell.getCellStyle().getIndention());//indention);
+				 query.setParameter("pattern",cell.getCellStyle().getFillPattern());//pattern);
+				 query.setParameter("sheetnum",cell.getCellStyle().getIndex());//sheetnum);
+				 query.setParameter("valeurcell",cellText);//valeurcell);
+				 query.setParameter("valignement",cell.getCellStyle().getVerticalAlignment());//valignement);
+				 query.setParameter("typecell",celltype);
+				 query.setParameter("frontgroundcolor",cell.getCellStyle().getFillForegroundColor());//frontgroundcolor);
+				 List result =query.list();
+				 lasession.getTransaction().commit();*/
 			}
 		 }
 		     
 		
 	}
 	
-	public wycccell StylCellDao (Cell thecell,String cellText ,String cellformule,int celltype){
+	public SETTINGSCELL StylCellDao (Cell thecell,String cellText ,String cellformule,int celltype){
 		
 			int sheetnum =0;
 			
-		return new wycccell(
+		return new SETTINGSCELL(
 				
 				thecell.getRowIndex() , 
 				thecell.getColumnIndex() , 

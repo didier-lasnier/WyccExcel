@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 5 f??vr. 2017 15:18:17 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 7 f??vr. 2017 00:34:40 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="com.dlas.dao.wycccell" table="SETTINGSCELL">
-        <id name="id" type="long" access="field">
-            <column name="CELL_ID" />
+    <class name="com.dlas.dao.SETTINGSCELL" table="SETTINGSCELL">
+        <id name="id" type="long">
+            <column name="ID" />
             <generator class="assigned" />
         </id>
         <property name="cellrow" type="int">
@@ -68,13 +68,13 @@
         <property name="bordercolorleft" type="int">
             <column name="BORDERCOLORLEFT" />
         </property>
-        <property name="valeurcell" type="java.lang.String" access="field">
+        <property name="valeurcell" type="java.lang.String">
             <column name="VALEURCELL" />
         </property>
-        <property name="formulecell" type="java.lang.String" access="field">
+        <property name="formulecell" type="java.lang.String">
             <column name="FORMULECELL" />
         </property>
-        <property name="typecell" type="int" access="field">
+        <property name="typecell" type="int">
             <column name="TYPECELL" />
         </property>
     </class>

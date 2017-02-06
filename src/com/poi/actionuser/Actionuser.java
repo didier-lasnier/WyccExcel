@@ -78,11 +78,11 @@ public class Actionuser {
 		         stmt.executeUpdate("DELETE FROM BENEFICIAIRIES_TAB");
 		         stmt.close();
 		         
-		         stmt = db.connectiondb.createStatement();		         
+/*		         stmt = db.connectiondb.createStatement();		         
 		         logger.info("read csv file into from mvt");
 		         stmt.executeUpdate(sqlstmt.insertbeneficiairies() );//, null, 'charset=UTF-8 fieldSeparator=;')");
 		         stmt.close();
-		         
+		         */
 		         db.closeDbConnection(db.connectiondb);
 		         theSavefile.deleteOnExit();
 		         logger.info("DONE !");
