@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "SETTINGSCELL", schema="PUBLIC")
 //@SequenceGenerator(name="ID", sequenceName = "SEQ_SETTINGSCELL", initialValue=1, allocationSize=20)
-public class SETTINGSCELL {
+public class Wycccell {
 	 		@Id
 	 		@Column(name = "CELL_ID")
 //	 		@GeneratedValue(strategy = GenerationType.AUTO)
@@ -122,11 +122,11 @@ public class SETTINGSCELL {
 			private int typecell ;
 			
 			
-		public SETTINGSCELL(){
+		public Wycccell(){
 			
 		}
 		
-		public SETTINGSCELL(int cellrow , int cellcolumn , int sheetnum,
+		public Wycccell(int cellrow , int cellcolumn , int sheetnum,
 				int halignement , int valignement , int borderbottom ,
 				int bordertop , int borterleft , int borderright ,
 				int dataformat , String dataformatstring,

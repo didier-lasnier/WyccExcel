@@ -665,3 +665,429 @@ org.h2.jdbc.JdbcSQLException: Column "LINE" not found; SQL statement:
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+02-07 00:46:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "BENEFICIAI0_.BENEFICIAIRIES_ID" not found; SQL statement:
+select beneficiai0_.BENEFICIAIRIES_ID as BENEFICI1_0_, beneficiai0_.CHILDREN as CHILDREN2_0_, beneficiai0_.COUNTRY as COUNTRY3_0_, beneficiai0_.DRESTEJ as DRESTEJ4_0_, beneficiai0_.ENDCOMP as ENDCOMP5_0_, beneficiai0_.END_MOVEMENT as END_MOVE6_0_, beneficiai0_.ERESTEJ as ERESTEJ7_0_, beneficiai0_.FAMILY_COVERED as FAMILY_C8_0_, beneficiai0_.FIRST_NAME as FIRST_NA9_0_, beneficiai0_.JOUR as JOUR10_0_, beneficiai0_.LINE as LINE11_0_, beneficiai0_.MONTHLY_SALARY as MONTHLY12_0_, beneficiai0_.NAME as NAME13_0_, beneficiai0_.NATIONALITY as NATIONA14_0_, beneficiai0_.NEXTCOMP as NEXTCOM15_0_, beneficiai0_.NEXTMVT as NEXTMVT16_0_, beneficiai0_.POSITIONCREW as POSITIO17_0_, beneficiai0_.PREVMVT as PREVMVT18_0_, beneficiai0_.SALARY_CURRENCY as SALARY_19_0_, beneficiai0_.START_MOVEMENT as START_M20_0_, beneficiai0_.STRUCTURE_NAME as STRUCTU21_0_, beneficiai0_.TO_INVOICE as TO_INVO22_0_, beneficiai0_.WYCC_ID as WYCC_ID23_0_ from PUBLIC.BENEFICIAIRIES beneficiai0_ [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.expression.Alias.optimize(Alias.java:52)
+	at org.h2.command.dml.Select.prepare(Select.java:831)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1940)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1909)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1887)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:932)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349)
+	at org.hibernate.loader.Loader.doList(Loader.java:2615)
+	at org.hibernate.loader.Loader.doList(Loader.java:2598)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2430)
+	at org.hibernate.loader.Loader.list(Loader.java:2425)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:502)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:370)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:216)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1481)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1441)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1410)
+	at com.poi.dlas.WyccWorkbook.setBeneficiairies(WyccWorkbook.java:207)
+	at com.poi.actionuser.ReadFileXlsx.generexls(ReadFileXlsx.java:99)
+	at com.poi.dlas.MenuWycc$2.actionPerformed(MenuWycc.java:80)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:125)
+	at java.awt.MenuItem.processActionEvent(MenuItem.java:669)
+	at java.awt.MenuItem.processEvent(MenuItem.java:628)
+	at java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:351)
+	at java.awt.MenuComponent.dispatchEvent(MenuComponent.java:339)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:761)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+02-07 00:59:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "BENEFICIAI0_.BENEFICIAIRIES_ID" not found; SQL statement:
+select beneficiai0_.BENEFICIAIRIES_ID as BENEFICI1_0_, beneficiai0_.CHILDREN as CHILDREN2_0_, beneficiai0_.COUNTRY as COUNTRY3_0_, beneficiai0_.DRESTEJ as DRESTEJ4_0_, beneficiai0_.ENDCOMP as ENDCOMP5_0_, beneficiai0_.END_MOVEMENT as END_MOVE6_0_, beneficiai0_.ERESTEJ as ERESTEJ7_0_, beneficiai0_.FAMILY_COVERED as FAMILY_C8_0_, beneficiai0_.FIRST_NAME as FIRST_NA9_0_, beneficiai0_.JOUR as JOUR10_0_, beneficiai0_.LINE as LINE11_0_, beneficiai0_.MONTHLY_SALARY as MONTHLY12_0_, beneficiai0_.NAME as NAME13_0_, beneficiai0_.NATIONALITY as NATIONA14_0_, beneficiai0_.NEXTCOMP as NEXTCOM15_0_, beneficiai0_.NEXTMVT as NEXTMVT16_0_, beneficiai0_.POSITIONCREW as POSITIO17_0_, beneficiai0_.PREVMVT as PREVMVT18_0_, beneficiai0_.SALARY_CURRENCY as SALARY_19_0_, beneficiai0_.START_MOVEMENT as START_M20_0_, beneficiai0_.STRUCTURE_NAME as STRUCTU21_0_, beneficiai0_.TO_INVOICE as TO_INVO22_0_, beneficiai0_.WYCC_ID as WYCC_ID23_0_ from PUBLIC.BENEFICIAIRIES beneficiai0_ [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.expression.Alias.optimize(Alias.java:52)
+	at org.h2.command.dml.Select.prepare(Select.java:831)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1940)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1909)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1887)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:932)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349)
+	at org.hibernate.loader.Loader.doList(Loader.java:2615)
+	at org.hibernate.loader.Loader.doList(Loader.java:2598)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2430)
+	at org.hibernate.loader.Loader.list(Loader.java:2425)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:502)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:370)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:216)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1481)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1441)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1410)
+	at com.poi.dlas.WyccWorkbook.setBeneficiairies(WyccWorkbook.java:207)
+	at com.poi.actionuser.ReadFileXlsx.generexls(ReadFileXlsx.java:99)
+	at com.poi.dlas.MenuWycc$2.actionPerformed(MenuWycc.java:80)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:125)
+	at java.awt.MenuItem.processActionEvent(MenuItem.java:669)
+	at java.awt.MenuItem.processEvent(MenuItem.java:628)
+	at java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:351)
+	at java.awt.MenuComponent.dispatchEvent(MenuComponent.java:339)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:761)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-07 01:04:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT
+    (TO_CHAR(LINE*100000) * CAST( WYCC_ID AS INTEGER),
+    WYCC_ID,
+    NAME,
+    FIRST_NAME,
+    LINE,
+    STRUCTURE_NAME,
+    FAMILY_COVERED,
+    CHILDREN,
+    NATIONALITY,
+    COUNTRY,
+    POSITIONCREW,
+    START_MOVEMENT,
+    PREVMVT,
+    DATEDIFF('DAY', START_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(PREVMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) AS[*] ENDCOMP,
+    END_MOVEMENT,
+    NEXTMVT,
+    DATEDIFF('DAY', END_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(NEXTMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) AS NEXTCOMP,
+    MONTHLY_SALARY,
+    SALARY_CURRENCY,
+    DRESTEJ,
+    ERESTEJ,
+    JOUR,
+    ((CASE WHEN (LINE = 1) THEN (MOIS + 1) ELSE MOIS END + CASE WHEN ((LINE <> 1)
+        AND (DATEDIFF('DAY', START_MOVEMENT, DATEADD('DAY', 1, PARSEDATETIME(FORMATDATETIME(PREVMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) = 0)) THEN ROUND(((30 - DRESTEJ) / 30.0), 5) ELSE 0 END) + CASE WHEN ((LINE <> 1)
+        AND (DATEDIFF('DAY', END_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(NEXTMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) = 0)) THEN ROUND((ERESTEJ / 30.0), 5) ELSE 0 END) AS TO_INVOICE
+FROM PUBLIC.LISTMVT;"; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+SELECT
+    (TO_CHAR(LINE*100000) * CAST( WYCC_ID AS INTEGER),
+    WYCC_ID,
+    NAME,
+    FIRST_NAME,
+    LINE,
+    STRUCTURE_NAME,
+    FAMILY_COVERED,
+    CHILDREN,
+    NATIONALITY,
+    COUNTRY,
+    POSITIONCREW,
+    START_MOVEMENT,
+    PREVMVT,
+    DATEDIFF('DAY', START_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(PREVMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) AS ENDCOMP,
+    END_MOVEMENT,
+    NEXTMVT,
+    DATEDIFF('DAY', END_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(NEXTMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) AS NEXTCOMP,
+    MONTHLY_SALARY,
+    SALARY_CURRENCY,
+    DRESTEJ,
+    ERESTEJ,
+    JOUR,
+    ((CASE WHEN (LINE = 1) THEN (MOIS + 1) ELSE MOIS END + CASE WHEN ((LINE <> 1)
+        AND (DATEDIFF('DAY', START_MOVEMENT, DATEADD('DAY', 1, PARSEDATETIME(FORMATDATETIME(PREVMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) = 0)) THEN ROUND(((30 - DRESTEJ) / 30.0), 5) ELSE 0 END) + CASE WHEN ((LINE <> 1)
+        AND (DATEDIFF('DAY', END_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(NEXTMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) = 0)) THEN ROUND((ERESTEJ / 30.0), 5) ELSE 0 END) AS TO_INVOICE
+FROM PUBLIC.LISTMVT; [42001-193]
+2017-02-07 01:05:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "100000128369"; SQL statement:
+SELECT
+    CAST(TO_CHAR(LINE*100000)|| WYCC_ID AS INTEGER),
+    WYCC_ID,
+    NAME,
+    FIRST_NAME,
+    LINE,
+    STRUCTURE_NAME,
+    FAMILY_COVERED,
+    CHILDREN,
+    NATIONALITY,
+    COUNTRY,
+    POSITIONCREW,
+    START_MOVEMENT,
+    PREVMVT,
+    DATEDIFF('DAY', START_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(PREVMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) AS ENDCOMP,
+    END_MOVEMENT,
+    NEXTMVT,
+    DATEDIFF('DAY', END_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(NEXTMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) AS NEXTCOMP,
+    MONTHLY_SALARY,
+    SALARY_CURRENCY,
+    DRESTEJ,
+    ERESTEJ,
+    JOUR,
+    ((CASE WHEN (LINE = 1) THEN (MOIS + 1) ELSE MOIS END + CASE WHEN ((LINE <> 1)
+        AND (DATEDIFF('DAY', START_MOVEMENT, DATEADD('DAY', 1, PARSEDATETIME(FORMATDATETIME(PREVMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) = 0)) THEN ROUND(((30 - DRESTEJ) / 30.0), 5) ELSE 0 END) + CASE WHEN ((LINE <> 1)
+        AND (DATEDIFF('DAY', END_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(NEXTMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) = 0)) THEN ROUND((ERESTEJ / 30.0), 5) ELSE 0 END) AS TO_INVOICE
+FROM PUBLIC.LISTMVT [22018-193]
+2017-02-07 01:05:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "5000130284"; SQL statement:
+SELECT
+    CAST(TO_CHAR(LINE*1000)|| WYCC_ID AS INTEGER),
+    WYCC_ID,
+    NAME,
+    FIRST_NAME,
+    LINE,
+    STRUCTURE_NAME,
+    FAMILY_COVERED,
+    CHILDREN,
+    NATIONALITY,
+    COUNTRY,
+    POSITIONCREW,
+    START_MOVEMENT,
+    PREVMVT,
+    DATEDIFF('DAY', START_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(PREVMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) AS ENDCOMP,
+    END_MOVEMENT,
+    NEXTMVT,
+    DATEDIFF('DAY', END_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(NEXTMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) AS NEXTCOMP,
+    MONTHLY_SALARY,
+    SALARY_CURRENCY,
+    DRESTEJ,
+    ERESTEJ,
+    JOUR,
+    ((CASE WHEN (LINE = 1) THEN (MOIS + 1) ELSE MOIS END + CASE WHEN ((LINE <> 1)
+        AND (DATEDIFF('DAY', START_MOVEMENT, DATEADD('DAY', 1, PARSEDATETIME(FORMATDATETIME(PREVMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) = 0)) THEN ROUND(((30 - DRESTEJ) / 30.0), 5) ELSE 0 END) + CASE WHEN ((LINE <> 1)
+        AND (DATEDIFF('DAY', END_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(NEXTMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) = 0)) THEN ROUND((ERESTEJ / 30.0), 5) ELSE 0 END) AS TO_INVOICE
+FROM PUBLIC.LISTMVT [22018-193]
+2017-02-07 01:06:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "5000130284"; SQL statement:
+SELECT
+    CAST((TO_CHAR(LINE*1000)|| WYCC_ID) AS INTEGER),
+    WYCC_ID,
+    NAME,
+    FIRST_NAME,
+    LINE,
+    STRUCTURE_NAME,
+    FAMILY_COVERED,
+    CHILDREN,
+    NATIONALITY,
+    COUNTRY,
+    POSITIONCREW,
+    START_MOVEMENT,
+    PREVMVT,
+    DATEDIFF('DAY', START_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(PREVMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) AS ENDCOMP,
+    END_MOVEMENT,
+    NEXTMVT,
+    DATEDIFF('DAY', END_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(NEXTMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) AS NEXTCOMP,
+    MONTHLY_SALARY,
+    SALARY_CURRENCY,
+    DRESTEJ,
+    ERESTEJ,
+    JOUR,
+    ((CASE WHEN (LINE = 1) THEN (MOIS + 1) ELSE MOIS END + CASE WHEN ((LINE <> 1)
+        AND (DATEDIFF('DAY', START_MOVEMENT, DATEADD('DAY', 1, PARSEDATETIME(FORMATDATETIME(PREVMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) = 0)) THEN ROUND(((30 - DRESTEJ) / 30.0), 5) ELSE 0 END) + CASE WHEN ((LINE <> 1)
+        AND (DATEDIFF('DAY', END_MOVEMENT, DATEADD('DAY', -1, PARSEDATETIME(FORMATDATETIME(NEXTMVT, 'dd/MM/yyyy hh:mm:ss'), 'dd/MM/yyyy'))) = 0)) THEN ROUND((ERESTEJ / 30.0), 5) ELSE 0 END) AS TO_INVOICE
+FROM PUBLIC.LISTMVT [22018-193]
+02-07 01:09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "BENEFICIAI0_.BENEFICIAIRIES_ID" not found; SQL statement:
+select beneficiai0_.BENEFICIAIRIES_ID as BENEFICI1_0_, beneficiai0_.CHILDREN as CHILDREN2_0_, beneficiai0_.COUNTRY as COUNTRY3_0_, beneficiai0_.DRESTEJ as DRESTEJ4_0_, beneficiai0_.ENDCOMP as ENDCOMP5_0_, beneficiai0_.END_MOVEMENT as END_MOVE6_0_, beneficiai0_.ERESTEJ as ERESTEJ7_0_, beneficiai0_.FAMILY_COVERED as FAMILY_C8_0_, beneficiai0_.FIRST_NAME as FIRST_NA9_0_, beneficiai0_.JOUR as JOUR10_0_, beneficiai0_.LINE as LINE11_0_, beneficiai0_.MONTHLY_SALARY as MONTHLY12_0_, beneficiai0_.NAME as NAME13_0_, beneficiai0_.NATIONALITY as NATIONA14_0_, beneficiai0_.NEXTCOMP as NEXTCOM15_0_, beneficiai0_.NEXTMVT as NEXTMVT16_0_, beneficiai0_.POSITIONCREW as POSITIO17_0_, beneficiai0_.PREVMVT as PREVMVT18_0_, beneficiai0_.SALARY_CURRENCY as SALARY_19_0_, beneficiai0_.START_MOVEMENT as START_M20_0_, beneficiai0_.STRUCTURE_NAME as STRUCTU21_0_, beneficiai0_.TO_INVOICE as TO_INVO22_0_, beneficiai0_.WYCC_ID as WYCC_ID23_0_ from PUBLIC.BENEFICIAIRIES beneficiai0_ [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.expression.Alias.optimize(Alias.java:52)
+	at org.h2.command.dml.Select.prepare(Select.java:831)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:146)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:148)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1940)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1909)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1887)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:932)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349)
+	at org.hibernate.loader.Loader.doList(Loader.java:2615)
+	at org.hibernate.loader.Loader.doList(Loader.java:2598)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2430)
+	at org.hibernate.loader.Loader.list(Loader.java:2425)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:502)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:370)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:216)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1481)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1441)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1410)
+	at com.poi.dlas.WyccWorkbook.setBeneficiairies(WyccWorkbook.java:207)
+	at com.poi.actionuser.ReadFileXlsx.generexls(ReadFileXlsx.java:99)
+	at com.poi.dlas.MenuWycc$2.actionPerformed(MenuWycc.java:80)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:125)
+	at java.awt.MenuItem.processActionEvent(MenuItem.java:669)
+	at java.awt.MenuItem.processEvent(MenuItem.java:628)
+	at java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:351)
+	at java.awt.MenuComponent.dispatchEvent(MenuComponent.java:339)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:761)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-07 01:10:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "BENEFICIAI0_.BENEFICIAIRIES_ID" not found; SQL statement:
+select beneficiai0_.BENEFICIAIRIES_ID as BENEFICI1_0_, beneficiai0_.CHILDREN as CHILDREN2_0_, beneficiai0_.COUNTRY as COUNTRY3_0_, beneficiai0_.DRESTEJ as DRESTEJ4_0_, beneficiai0_.ENDCOMP as ENDCOMP5_0_, beneficiai0_.END_MOVEMENT as END_MOVE6_0_, beneficiai0_.ERESTEJ as ERESTEJ7_0_, beneficiai0_.FAMILY_COVERED as FAMILY_C8_0_, beneficiai0_.FIRST_NAME as FIRST_NA9_0_, beneficiai0_.JOUR as JOUR10_0_, beneficiai0_.LINE as LINE11_0_, beneficiai0_.MONTHLY_SALARY as MONTHLY12_0_, beneficiai0_.NAME as NAME13_0_, beneficiai0_.NATIONALITY as NATIONA14_0_, beneficiai0_.NEXTCOMP as NEXTCOM15_0_, beneficiai0_.NEXTMVT as NEXTMVT16_0_, beneficiai0_.POSITIONCREW as POSITIO17_0_, beneficiai0_.PREVMVT as PREVMVT18_0_, beneficiai0_.SALARY_CURRENCY as SALARY_19_0_, beneficiai0_.START_MOVEMENT as START_M20_0_, beneficiai0_.STRUCTURE_NAME as STRUCTU21_0_, beneficiai0_.TO_INVOICE as TO_INVO22_0_, beneficiai0_.WYCC_ID as WYCC_ID23_0_ from PUBLIC.BENEFICIAIRIES [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Alias.optimize(Alias.java:51)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-07 01:11:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "BENEFICIAI0_.BENEFICIAIRIES_ID" not found; SQL statement:
+select beneficiai0_.BENEFICIAIRIES_ID as BENEFICI1_0_, beneficiai0_.CHILDREN as CHILDREN2_0_, beneficiai0_.COUNTRY as COUNTRY3_0_, beneficiai0_.DRESTEJ as DRESTEJ4_0_, beneficiai0_.ENDCOMP as ENDCOMP5_0_, beneficiai0_.END_MOVEMENT as END_MOVE6_0_, beneficiai0_.ERESTEJ as ERESTEJ7_0_, beneficiai0_.FAMILY_COVERED as FAMILY_C8_0_, beneficiai0_.FIRST_NAME as FIRST_NA9_0_, beneficiai0_.JOUR as JOUR10_0_, beneficiai0_.LINE as LINE11_0_, beneficiai0_.MONTHLY_SALARY as MONTHLY12_0_, beneficiai0_.NAME as NAME13_0_, beneficiai0_.NATIONALITY as NATIONA14_0_, beneficiai0_.NEXTCOMP as NEXTCOM15_0_, beneficiai0_.NEXTMVT as NEXTMVT16_0_, beneficiai0_.POSITIONCREW as POSITIO17_0_, beneficiai0_.PREVMVT as PREVMVT18_0_, beneficiai0_.SALARY_CURRENCY as SALARY_19_0_, beneficiai0_.START_MOVEMENT as START_M20_0_, beneficiai0_.STRUCTURE_NAME as STRUCTU21_0_, beneficiai0_.TO_INVOICE as TO_INVO22_0_, beneficiai0_.WYCC_ID as WYCC_ID23_0_ from PUBLIC.BENEFICIAIRIES [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Alias.optimize(Alias.java:51)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-07 01:12:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "BENEFICIAI0_.CHILDREN" not found; SQL statement:
+select BENEFICIAIRIES_ID as BENEFICI1_0_, beneficiai0_.CHILDREN as CHILDREN2_0_, beneficiai0_.COUNTRY as COUNTRY3_0_, beneficiai0_.DRESTEJ as DRESTEJ4_0_, beneficiai0_.ENDCOMP as ENDCOMP5_0_, beneficiai0_.END_MOVEMENT as END_MOVE6_0_, beneficiai0_.ERESTEJ as ERESTEJ7_0_, beneficiai0_.FAMILY_COVERED as FAMILY_C8_0_, beneficiai0_.FIRST_NAME as FIRST_NA9_0_, beneficiai0_.JOUR as JOUR10_0_, beneficiai0_.LINE as LINE11_0_, beneficiai0_.MONTHLY_SALARY as MONTHLY12_0_, beneficiai0_.NAME as NAME13_0_, beneficiai0_.NATIONALITY as NATIONA14_0_, beneficiai0_.NEXTCOMP as NEXTCOM15_0_, beneficiai0_.NEXTMVT as NEXTMVT16_0_, beneficiai0_.POSITIONCREW as POSITIO17_0_, beneficiai0_.PREVMVT as PREVMVT18_0_, beneficiai0_.SALARY_CURRENCY as SALARY_19_0_, beneficiai0_.START_MOVEMENT as START_M20_0_, beneficiai0_.STRUCTURE_NAME as STRUCTU21_0_, beneficiai0_.TO_INVOICE as TO_INVO22_0_, beneficiai0_.WYCC_ID as WYCC_ID23_0_ from PUBLIC.BENEFICIAIRIES [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Alias.optimize(Alias.java:51)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-02-07 01:13:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "BENEFICIAI0_.ENDCOMP" not found; SQL statement:
+select BENEFICIAIRIES_ID as BENEFICI1_0_, CHILDREN as CHILDREN2_0_, COUNTRY as COUNTRY3_0_, DRESTEJ as DRESTEJ4_0_, beneficiai0_.ENDCOMP as ENDCOMP5_0_, END_MOVEMENT as END_MOVE6_0_, beneficiai0_.ERESTEJ as ERESTEJ7_0_, beneficiai0_.FAMILY_COVERED as FAMILY_C8_0_, beneficiai0_.FIRST_NAME as FIRST_NA9_0_, beneficiai0_.JOUR as JOUR10_0_, beneficiai0_.LINE as LINE11_0_, beneficiai0_.MONTHLY_SALARY as MONTHLY12_0_, beneficiai0_.NAME as NAME13_0_, beneficiai0_.NATIONALITY as NATIONA14_0_, beneficiai0_.NEXTCOMP as NEXTCOM15_0_, beneficiai0_.NEXTMVT as NEXTMVT16_0_, beneficiai0_.POSITIONCREW as POSITIO17_0_, beneficiai0_.PREVMVT as PREVMVT18_0_, beneficiai0_.SALARY_CURRENCY as SALARY_19_0_, beneficiai0_.START_MOVEMENT as START_M20_0_, beneficiai0_.STRUCTURE_NAME as STRUCTU21_0_, beneficiai0_.TO_INVOICE as TO_INVO22_0_, beneficiai0_.WYCC_ID as WYCC_ID23_0_ from PUBLIC.BENEFICIAIRIES [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Alias.optimize(Alias.java:51)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:345)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:138)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:344)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:708)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1686)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:92)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:103)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

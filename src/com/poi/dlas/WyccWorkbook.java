@@ -31,7 +31,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 
 import com.dlas.dao.h2db;
 import com.dlas.dao.hsqltext;
-import com.dlas.dao.SETTINGSCELL;
+import com.dlas.dao.Wycccell;
 import com.poi.actionuser.Explorateur;
 
 
@@ -346,7 +346,7 @@ public class WyccWorkbook {
 
 			 XSSFRow row = spreadsheet.createRow(introw);
 
-				for (SETTINGSCELL event : (List<SETTINGSCELL>) result) {
+				for (Wycccell event : (List<Wycccell>) result) {
 					XSSFCell cell = (XSSFCell) row.createCell(event.getCellcolumn());
 					XSSFCellStyle style1 = newworkbook.createCellStyle();
 
@@ -510,7 +510,7 @@ public class WyccWorkbook {
 				   else  
 					   logger.info(String.valueOf(cell.getBooleanCellValue())); 
 			
-				 SETTINGSCELL wycccell=StylCellDao(cell,cellText,cellformule,celltype );
+				 Wycccell wycccell=StylCellDao(cell,cellText,cellformule,celltype );
 				 
 			     File directory = new File (".");
 			     String fileCharSep =System.getProperty("file.separator");
@@ -608,11 +608,11 @@ public class WyccWorkbook {
 		
 	}
 	
-	public SETTINGSCELL StylCellDao (Cell thecell,String cellText ,String cellformule,int celltype){
+	public Wycccell StylCellDao (Cell thecell,String cellText ,String cellformule,int celltype){
 		
 			int sheetnum =0;
 			
-		return new SETTINGSCELL(
+		return new Wycccell(
 				
 				thecell.getRowIndex() , 
 				thecell.getColumnIndex() , 

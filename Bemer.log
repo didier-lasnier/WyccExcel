@@ -2423,3 +2423,73 @@ amount
 [2017-02-07 00:44:11,788]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava
 [2017-02-07 00:44:11,788]-[AWT-EventQueue-0] INFO  wycc  - /Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/.******
 [2017-02-07 00:44:11,788]-[AWT-EventQueue-0] INFO  wycc  - jdbc:h2:/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/db/wyccdb******
+[2017-02-07 00:46:50,421]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-07 00:46:50,447]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-07 00:46:50,793]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-07 00:46:51,014]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-07 00:46:51,021]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-07 00:46:51,021]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-07 00:46:51,021]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-07 00:46:51,023]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-07 00:46:51,431]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-07 00:46:52,281]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-07 00:46:52,514]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 42122, SQLState: 42S22
+[2017-02-07 00:46:52,515]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column "BENEFICIAI0_.BENEFICIAIRIES_ID" not found; SQL statement:
+select beneficiai0_.BENEFICIAIRIES_ID as BENEFICI1_0_, beneficiai0_.CHILDREN as CHILDREN2_0_, beneficiai0_.COUNTRY as COUNTRY3_0_, beneficiai0_.DRESTEJ as DRESTEJ4_0_, beneficiai0_.ENDCOMP as ENDCOMP5_0_, beneficiai0_.END_MOVEMENT as END_MOVE6_0_, beneficiai0_.ERESTEJ as ERESTEJ7_0_, beneficiai0_.FAMILY_COVERED as FAMILY_C8_0_, beneficiai0_.FIRST_NAME as FIRST_NA9_0_, beneficiai0_.JOUR as JOUR10_0_, beneficiai0_.LINE as LINE11_0_, beneficiai0_.MONTHLY_SALARY as MONTHLY12_0_, beneficiai0_.NAME as NAME13_0_, beneficiai0_.NATIONALITY as NATIONA14_0_, beneficiai0_.NEXTCOMP as NEXTCOM15_0_, beneficiai0_.NEXTMVT as NEXTMVT16_0_, beneficiai0_.POSITIONCREW as POSITIO17_0_, beneficiai0_.PREVMVT as PREVMVT18_0_, beneficiai0_.SALARY_CURRENCY as SALARY_19_0_, beneficiai0_.START_MOVEMENT as START_M20_0_, beneficiai0_.STRUCTURE_NAME as STRUCTU21_0_, beneficiai0_.TO_INVOICE as TO_INVO22_0_, beneficiai0_.WYCC_ID as WYCC_ID23_0_ from PUBLIC.BENEFICIAIRIES beneficiai0_ [42122-176]
+[2017-02-07 00:58:23,566]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-07 00:58:23,571]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-07 00:58:23,766]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-07 00:58:23,866]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-07 00:58:23,870]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-07 00:58:23,871]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-07 00:58:23,871]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-07 00:58:23,874]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-07 00:58:24,113]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-07 00:59:15,982]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-07 00:59:15,986]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-07 00:59:16,190]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-07 00:59:16,295]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-07 00:59:16,299]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-07 00:59:16,300]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-07 00:59:16,300]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-07 00:59:16,302]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-07 00:59:16,532]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-07 00:59:36,104]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-07 00:59:36,108]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-07 00:59:36,306]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-07 00:59:36,415]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-07 00:59:36,419]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-07 00:59:36,419]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-07 00:59:36,420]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-07 00:59:36,422]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-07 00:59:36,655]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-07 00:59:37,149]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-07 00:59:37,251]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 42122, SQLState: 42S22
+[2017-02-07 00:59:37,252]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column "BENEFICIAI0_.BENEFICIAIRIES_ID" not found; SQL statement:
+select beneficiai0_.BENEFICIAIRIES_ID as BENEFICI1_0_, beneficiai0_.CHILDREN as CHILDREN2_0_, beneficiai0_.COUNTRY as COUNTRY3_0_, beneficiai0_.DRESTEJ as DRESTEJ4_0_, beneficiai0_.ENDCOMP as ENDCOMP5_0_, beneficiai0_.END_MOVEMENT as END_MOVE6_0_, beneficiai0_.ERESTEJ as ERESTEJ7_0_, beneficiai0_.FAMILY_COVERED as FAMILY_C8_0_, beneficiai0_.FIRST_NAME as FIRST_NA9_0_, beneficiai0_.JOUR as JOUR10_0_, beneficiai0_.LINE as LINE11_0_, beneficiai0_.MONTHLY_SALARY as MONTHLY12_0_, beneficiai0_.NAME as NAME13_0_, beneficiai0_.NATIONALITY as NATIONA14_0_, beneficiai0_.NEXTCOMP as NEXTCOM15_0_, beneficiai0_.NEXTMVT as NEXTMVT16_0_, beneficiai0_.POSITIONCREW as POSITIO17_0_, beneficiai0_.PREVMVT as PREVMVT18_0_, beneficiai0_.SALARY_CURRENCY as SALARY_19_0_, beneficiai0_.START_MOVEMENT as START_M20_0_, beneficiai0_.STRUCTURE_NAME as STRUCTU21_0_, beneficiai0_.TO_INVOICE as TO_INVO22_0_, beneficiai0_.WYCC_ID as WYCC_ID23_0_ from PUBLIC.BENEFICIAIRIES beneficiai0_ [42122-176]
+[2017-02-07 01:08:56,894]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-07 01:08:56,927]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-07 01:08:57,374]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-07 01:08:57,612]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-07 01:08:57,633]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb]
+[2017-02-07 01:08:57,633]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-07 01:08:57,633]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-07 01:08:57,638]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-07 01:08:58,385]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-07 01:08:59,887]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-07 01:09:00,134]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 42122, SQLState: 42S22
+[2017-02-07 01:09:00,135]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column "BENEFICIAI0_.BENEFICIAIRIES_ID" not found; SQL statement:
+select beneficiai0_.BENEFICIAIRIES_ID as BENEFICI1_0_, beneficiai0_.CHILDREN as CHILDREN2_0_, beneficiai0_.COUNTRY as COUNTRY3_0_, beneficiai0_.DRESTEJ as DRESTEJ4_0_, beneficiai0_.ENDCOMP as ENDCOMP5_0_, beneficiai0_.END_MOVEMENT as END_MOVE6_0_, beneficiai0_.ERESTEJ as ERESTEJ7_0_, beneficiai0_.FAMILY_COVERED as FAMILY_C8_0_, beneficiai0_.FIRST_NAME as FIRST_NA9_0_, beneficiai0_.JOUR as JOUR10_0_, beneficiai0_.LINE as LINE11_0_, beneficiai0_.MONTHLY_SALARY as MONTHLY12_0_, beneficiai0_.NAME as NAME13_0_, beneficiai0_.NATIONALITY as NATIONA14_0_, beneficiai0_.NEXTCOMP as NEXTCOM15_0_, beneficiai0_.NEXTMVT as NEXTMVT16_0_, beneficiai0_.POSITIONCREW as POSITIO17_0_, beneficiai0_.PREVMVT as PREVMVT18_0_, beneficiai0_.SALARY_CURRENCY as SALARY_19_0_, beneficiai0_.START_MOVEMENT as START_M20_0_, beneficiai0_.STRUCTURE_NAME as STRUCTU21_0_, beneficiai0_.TO_INVOICE as TO_INVO22_0_, beneficiai0_.WYCC_ID as WYCC_ID23_0_ from PUBLIC.BENEFICIAIRIES beneficiai0_ [42122-176]
+[2017-02-07 01:19:09,619]-[AWT-EventQueue-0] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-02-07 01:19:09,623]-[AWT-EventQueue-0] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-02-07 01:19:09,813]-[AWT-EventQueue-0] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-02-07 01:19:09,921]-[AWT-EventQueue-0] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-02-07 01:19:09,925]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./db/wyccdb,ALIAS_COLUMN_NAME=TRUE]
+[2017-02-07 01:19:09,925]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-02-07 01:19:09,926]-[AWT-EventQueue-0] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-02-07 01:19:09,928]-[AWT-EventQueue-0] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-02-07 01:19:10,139]-[AWT-EventQueue-0] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2017-02-07 01:19:10,683]-[AWT-EventQueue-0] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-02-07 01:19:10,787]-[AWT-EventQueue-0] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 42102, SQLState: 42S02
+[2017-02-07 01:19:10,787]-[AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Table "BENEFICIAIRIES" not found; SQL statement:
+select beneficiai0_.BENEFICIAIRIES_ID as BENEFICI1_0_, beneficiai0_.CHILDREN as CHILDREN2_0_, beneficiai0_.COUNTRY as COUNTRY3_0_, beneficiai0_.DRESTEJ as DRESTEJ4_0_, beneficiai0_.ENDCOMP as ENDCOMP5_0_, beneficiai0_.END_MOVEMENT as END_MOVE6_0_, beneficiai0_.ERESTEJ as ERESTEJ7_0_, beneficiai0_.FAMILY_COVERED as FAMILY_C8_0_, beneficiai0_.FIRST_NAME as FIRST_NA9_0_, beneficiai0_.JOUR as JOUR10_0_, beneficiai0_.LINE as LINE11_0_, beneficiai0_.MONTHLY_SALARY as MONTHLY12_0_, beneficiai0_.NAME as NAME13_0_, beneficiai0_.NATIONALITY as NATIONA14_0_, beneficiai0_.NEXTCOMP as NEXTCOM15_0_, beneficiai0_.NEXTMVT as NEXTMVT16_0_, beneficiai0_.POSITIONCREW as POSITIO17_0_, beneficiai0_.PREVMVT as PREVMVT18_0_, beneficiai0_.SALARY_CURRENCY as SALARY_19_0_, beneficiai0_.START_MOVEMENT as START_M20_0_, beneficiai0_.STRUCTURE_NAME as STRUCTU21_0_, beneficiai0_.TO_INVOICE as TO_INVO22_0_, beneficiai0_.WYCC_ID as WYCC_ID23_0_ from PUBLIC.BENEFICIAIRIES beneficiai0_ [42102-176]

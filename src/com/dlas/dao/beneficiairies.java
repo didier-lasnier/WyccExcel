@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class beneficiairies {
 	@Id
 	@Column(name="BENEFICIAIRIES_ID")
-	private String     beneficiairiesid;
+	private double     beneficiairiesid;
 	@Column(name="WYCC_ID")
 	private String     wyccid         ;
 	@Column(name="NAME")
@@ -63,14 +63,14 @@ public class beneficiairies {
 	/**
 	 * @return the beneficiairiesid
 	 */
-	public String getBeneficiairiesid() {
+	public Double getBeneficiairiesid() {
 		return beneficiairiesid;
 	}
 
 	/**
 	 * @param beneficiairiesid the beneficiairiesid to set
 	 */
-	public void setBeneficiairiesid(String beneficiairiesid) {
+	public void setBeneficiairiesid(Double beneficiairiesid) {
 		this.beneficiairiesid = beneficiairiesid;
 	}
 

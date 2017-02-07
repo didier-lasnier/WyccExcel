@@ -10,7 +10,7 @@
 
         <!-- Database connection settings -->
         <property name="connection.driver_class">org.h2.Driver</property>
-        <property name="connection.url">jdbc:h2:./db/wyccdb</property>
+        <property name="connection.url">jdbc:h2:./db/wyccdb,ALIAS_COLUMN_NAME=TRUE</property>
         <property name="connection.username">wycc</property>
         <property name="connection.password">wycc</property>
         
@@ -31,9 +31,10 @@
         <!-- Drop and re-create the database schema on startup -->
        <!-- <property name="hbm2ddl.auto">create</property> -->
 
-        <mapping class="com.dlas.dao.SETTINGSCELL"/>
+
         <mapping class="com.dlas.dao.wycccelldual"/>
 	    <mapping class="com.dlas.dao.beneficiairies"/>
+	    <mapping class="com.dlas.dao.Wycccell"/>
     </session-factory>
 
 </hibernate-configuration>
