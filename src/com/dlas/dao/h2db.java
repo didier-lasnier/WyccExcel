@@ -2,16 +2,17 @@ package com.dlas.dao;
 
 
 import org.apache.log4j.Logger;
-import org.h2.jdbcx.JdbcDataSource;
+//import org.h2.jdbcx.JdbcDataSource;
+import org.hsqldb.jdbc.*;
 import org.hibernate.HibernateException ;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-
+import org.hsqldb.jdbc.JDBCDriver;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 //import java.sql.DriverManager;
 //import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -31,9 +32,7 @@ public class h2db {
 			SessionFactory sessionFactory;
 			sessionFactory = new Configuration().configure()
 					.buildSessionFactory();
-			Session session = sessionFactory.openSession();
-		 
-		 
+			Session session = sessionFactory.openSession();	 
 		 return session;
 		 
 	 }
@@ -45,16 +44,23 @@ public class h2db {
 		 logger.info(directory.getCanonicalFile());
 		 logger.info(directory.getAbsolutePath()+"******" );
 		 
-		 String connectionString="jdbc:h2:"+directory.getCanonicalPath()+fileCharSep+"db"+fileCharSep+"wyccdb";
-		 logger.info(connectionString+"******" );
-		 JdbcDataSource ds = new JdbcDataSource();
-		 ds.setURL(connectionString);
-		 ds.setUser("wycc");
-		 ds.setPassword("wycc");
 		 Connection conn=null;
-		
+
+			
+		// String connectionString="jdbc:h2:"+directory.getCanonicalPath()+fileCharSep+"db"+fileCharSep+"DBwycc";
+		 String connectionString="jdbc:hsqldb:"+directory.getCanonicalPath()+fileCharSep+"db"+fileCharSep+"hsql";
+		 logger.info(connectionString+"******" );
+		//	 jdbcDataSource ds = new jdbcDataSource();
+		 try {
+			Class.forName("org.hsqldb.jdbcDriver");
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
 			try {
-				conn = ds.getConnection();
+				
+				conn=DriverManager.getConnection(connectionString, "wycc", "wycc");
 				this.connectiondb=conn;
 				
 			} catch (SQLException e) {

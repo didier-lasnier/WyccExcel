@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
@@ -82,7 +83,7 @@ public class ReadFileXlsx {
 		     
 	  }
 
-	  public void generexls() throws InvalidFormatException {
+	  public void generexls() throws InvalidFormatException, SQLException, IOException {
 		  File directory = new File (".");
 		     String fileCharSep =System.getProperty("file.separator");
 
@@ -97,5 +98,22 @@ public class ReadFileXlsx {
 			//wyccwrkbk.setWorkBook(wrkbk);
 			//wyccwrkbk.readformula(); 
 			wyccwrkbk.setBeneficiairies();
+	  }
+	  
+	  public void generexlstest() throws InvalidFormatException, SQLException, IOException {
+		  File directory = new File (".");
+		     String fileCharSep =System.getProperty("file.separator");
+
+		     //Open csv file
+		     new FileDialog();
+		     //theOpenfile=FileDialogOpen.openFileDialog(directory);
+			//FileInputStream out =  new FileInputStream(  new File(theOpenfile.getCanonicalPath()));
+			// on a le dialogue des fichiers
+			//org.apache.poi.ss.usermodel.Workbook wrkbk = WorkbookFactory.create(theOpenfile);
+			//XSSFWorkbook wrkbk=new XSSFWorkbook(out);
+			WyccWorkbook wyccwrkbk=new WyccWorkbook();
+			//wyccwrkbk.setWorkBook(wrkbk);
+			wyccwrkbk.readformula(); 
+			//wyccwrkbk.setBeneficiairies();
 	  }
 }

@@ -120,12 +120,46 @@ public class Wycccell {
 			private String formulecell ;
 			@Column(name = "TYPECELL")
 			private int typecell ;
-			
+			@Column(name = "CALCULMODE")
+			private int calculmode ;
 			
 		public Wycccell(){
 			
 		}
 		
+		public Wycccell(long id, int cellrow, int cellcolumn, int sheetnum, int halignement, int valignement,
+				int borderbottom, int bordertop, int borterleft, int borderright, int dataformat,
+				String dataformatstring, int baxkgroundcolor, int frontgroundcolor, int pattern, int fontindex,
+				float indention, int bordercolorbottom, int bordercolortop, int bordercolorright, int bordercolorleft,
+				String valeurcell, String formulecell, int typecell, int calculmode) {
+			super();
+			this.id = id;
+			this.cellrow = cellrow;
+			this.cellcolumn = cellcolumn;
+			this.sheetnum = sheetnum;
+			this.halignement = halignement;
+			this.valignement = valignement;
+			this.borderbottom = borderbottom;
+			this.bordertop = bordertop;
+			this.borterleft = borterleft;
+			this.borderright = borderright;
+			this.dataformat = dataformat;
+			this.dataformatstring = dataformatstring;
+			this.baxkgroundcolor = baxkgroundcolor;
+			this.frontgroundcolor = frontgroundcolor;
+			this.pattern = pattern;
+			this.fontindex = fontindex;
+			this.indention = indention;
+			this.bordercolorbottom = bordercolorbottom;
+			this.bordercolortop = bordercolortop;
+			this.bordercolorright = bordercolorright;
+			this.bordercolorleft = bordercolorleft;
+			this.valeurcell = valeurcell;
+			this.formulecell = formulecell;
+			this.typecell = typecell;
+			this.calculmode = calculmode;
+		}
+
 		public Wycccell(int cellrow , int cellcolumn , int sheetnum,
 				int halignement , int valignement , int borderbottom ,
 				int bordertop , int borterleft , int borderright ,
@@ -440,42 +474,18 @@ public class Wycccell {
 		}
 
 		/**
-		 * @return the valeurcell
+		 * @return the calculmode
 		 */
-		public String getvaleurcell() {
-			return valeurcell;
+		public int getCalculmode() {
+			return calculmode;
 		}
 
 		/**
-		 * @param valeurcell the valeurcell to set
+		 * @param calculmode the calculmode to set
 		 */
-		public void setvaleurcell(String valeurcell) {
-			this.valeurcell = valeurcell;
-		}		
-		/**
-		 * @return the formulecell
-		 */
-		public String getformulecell() {
-			return formulecell;
+		public void setCalculmode(int calculmode) {
+			this.calculmode = calculmode;
 		}
 
-		/**
-		 * @param formulecell the formulecell to set
-		 */
-		public void setformulecell(String formulecell) {
-			this.formulecell = formulecell;
-		}		
-		/**
-		 * @return the typecell
-		 */
-		public int gettypecell() {
-			return typecell;
-		}
 
-		/**
-		 * @param formulecell the formulecell to set
-		 */
-		public void settypecell(int typecell) {
-			this.typecell = typecell;
-		}				
 }

@@ -9,8 +9,8 @@
     <session-factory>
 
         <!-- Database connection settings -->
-        <property name="connection.driver_class">org.h2.Driver</property>
-        <property name="connection.url">jdbc:h2:./db/wyccdb,ALIAS_COLUMN_NAME=TRUE</property>
+        <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="connection.url">jdbc:hsqldb:file:/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql</property>
         <property name="connection.username">wycc</property>
         <property name="connection.password">wycc</property>
         
@@ -20,8 +20,8 @@
         <property name="connection.pool_size">1</property>
 
         <!-- SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
-
+       <!--  <property name="dialect">org.hibernate.dialect.H2Dialect</property> -->
+		<property name="dialect">org.hibernate.dialect.HSQLDialect</property>
         <!-- Disable the second-level cache  -->
         <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
 
@@ -32,9 +32,9 @@
        <!-- <property name="hbm2ddl.auto">create</property> -->
 
 
-        <mapping class="com.dlas.dao.wycccelldual"/>
-	    <mapping class="com.dlas.dao.beneficiairies"/>
+	    <mapping class="com.dlas.dao.beneficiaries"/>
 	    <mapping class="com.dlas.dao.Wycccell"/>
+	    <mapping class="com.dlas.dao.Modul"/>
     </session-factory>
 
 </hibernate-configuration>

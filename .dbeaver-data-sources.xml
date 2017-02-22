@@ -6,4 +6,7 @@
 	<data-source id="h2_embedded-15a0bb4b8d6-5fcc6d545e3e115c" provider="generic" driver="h2_embedded" name="H2 - wyccdb" save-password="true" show-system-objects="true" read-only="false">
 		<connection server="" database="" url="jdbc:h2:./db/wyccdb" user="wycc" password="BB0FIyGi" type="test"/>
 	</data-source>
+	<data-source id="7D361826-99FE-BADF-1BA3-3DA58E170F31-15a2e2085b9-6d9b7e1d144b7a5c" provider="generic" driver="7D361826-99FE-BADF-1BA3-3DA58E170F31" name="HSQLDB - hsql" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="" url="jdbc:hsqldb:file:/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql" user="wycc" password="BB0FIyGi" type="dev"/>
+	</data-source>
 </data-sources>
