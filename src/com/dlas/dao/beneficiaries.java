@@ -61,38 +61,64 @@ public class beneficiaries {
 	private float      toinvoice      ;
 	@Column(name="JOUR")
 	private Integer    jour            ;
+
+    @Column(name="COMPANY1")
+	private String company1;
     @Column(name="FORMULE_NAME1")
-	private String formulename1;
+	private String formulename1;   
 	@Column(name="TOTAL_AMOUNT_INSURED1")
 	private String totalamountinsured1;
+	
+    @Column(name="COMPANY2")
+	private String company2;
 	@Column(name="FORMULE_NAME2")
 	private String formulename2;
 	@Column(name="TOTAL_AMOUNT_INSURED2")
 	private String totalamountinsured2;
+	
+    @Column(name="COMPANY3")
+	private String company3;
 	@Column(name="FORMULE_NAME3")
 	private String formulename3;
 	@Column(name="TOTAL_AMOUNT_INSURED3")
 	private String totalamountinsured3;
+	
+    @Column(name="COMPANY4")
+	private String company4;
 	@Column(name="FORMULE_NAME4")
 	private String formulename4;
 	@Column(name="TOTAL_AMOUNT_INSURED4")
 	private String totalamountinsured4;
+	
+    @Column(name="COMPANY5")
+	private String company5;
 	@Column(name="FORMULE_NAME5")
 	private String formulename5;
 	@Column(name="TOTAL_AMOUNT_INSURED5")
 	private String totalamountinsured5;
+	
+    @Column(name="COMPANY6")
+	private String company6;
 	@Column(name="FORMULE_NAME6")
 	private String formulename6;
 	@Column(name="TOTAL_AMOUNT_INSURED6")
 	private String totalamountinsured6;
+	
+    @Column(name="COMPANY7")
+	private String company7;
 	@Column(name="FORMULE_NAME7")
 	private String formulename7;
 	@Column(name="TOTAL_AMOUNT_INSURED7")
 	private String totalamountinsured7;
+	
+    @Column(name="COMPANY8")
+	private String company8;
 	@Column(name="FORMULE_NAME8")
 	private String formulename8;
 	@Column(name="TOTAL_AMOUNT_INSURED8")
 	private String totalamountinsured8;
+	
+	
 	/**
 	 * @return the beneficiairiesid
 	 */
@@ -153,6 +179,70 @@ public class beneficiaries {
 		this.formulename8 = formulename8;
 		this.totalamountinsured8 = totalamountinsured8;
 	}
+
+	
+	public beneficiaries(double beneficiairiesid, String wyccid, String name, String firstname, String structurename,
+			String familycovered, String children, String nationality, String country, String positioncrew,
+			String periodeinsurance, Integer line, Date startmovement, Date prevmvt, Integer endcomp, Date endmovement,
+			Date nextmvt, Integer nextcomp, Integer monthlysalary, String salarycurrency, Integer drestej,
+			Integer erestej, float toinvoice, Integer jour, String company1, String formulename1,
+			String totalamountinsured1, String company2, String formulename2, String totalamountinsured2,
+			String company3, String formulename3, String totalamountinsured3, String company4, String formulename4,
+			String totalamountinsured4, String company5, String formulename5, String totalamountinsured5,
+			String company6, String formulename6, String totalamountinsured6, String company7, String formulename7,
+			String totalamountinsured7, String company8, String formulename8, String totalamountinsured8) {
+		super();
+		this.beneficiairiesid = beneficiairiesid;
+		this.wyccid = wyccid;
+		this.name = name;
+		this.firstname = firstname;
+		this.structurename = structurename;
+		this.familycovered = familycovered;
+		this.children = children;
+		this.nationality = nationality;
+		this.country = country;
+		this.positioncrew = positioncrew;
+		this.periodeinsurance = periodeinsurance;
+		this.line = line;
+		this.startmovement = startmovement;
+		this.prevmvt = prevmvt;
+		this.endcomp = endcomp;
+		this.endmovement = endmovement;
+		this.nextmvt = nextmvt;
+		this.nextcomp = nextcomp;
+		this.monthlysalary = monthlysalary;
+		this.salarycurrency = salarycurrency;
+		this.drestej = drestej;
+		this.erestej = erestej;
+		this.toinvoice = toinvoice;
+		this.jour = jour;
+		this.company1 = company1;
+		this.formulename1 = formulename1;
+		this.totalamountinsured1 = totalamountinsured1;
+		this.company2 = company2;
+		this.formulename2 = formulename2;
+		this.totalamountinsured2 = totalamountinsured2;
+		this.company3 = company3;
+		this.formulename3 = formulename3;
+		this.totalamountinsured3 = totalamountinsured3;
+		this.company4 = company4;
+		this.formulename4 = formulename4;
+		this.totalamountinsured4 = totalamountinsured4;
+		this.company5 = company5;
+		this.formulename5 = formulename5;
+		this.totalamountinsured5 = totalamountinsured5;
+		this.company6 = company6;
+		this.formulename6 = formulename6;
+		this.totalamountinsured6 = totalamountinsured6;
+		this.company7 = company7;
+		this.formulename7 = formulename7;
+		this.totalamountinsured7 = totalamountinsured7;
+		this.company8 = company8;
+		this.formulename8 = formulename8;
+		this.totalamountinsured8 = totalamountinsured8;
+	}
+
+
 
 	/**
 	 * @param beneficiairiesid the beneficiairiesid to set
@@ -730,5 +820,149 @@ public class beneficiaries {
 	 */
 	public void setPeriodeinsurance(String periodeinsurance) {
 		this.periodeinsurance = periodeinsurance;
+	}
+
+
+
+	/**
+	 * @return the company1
+	 */
+	public String getCompany1() {
+		return company1;
+	}
+
+
+
+	/**
+	 * @return the company2
+	 */
+	public String getCompany2() {
+		return company2;
+	}
+
+
+
+	/**
+	 * @return the company3
+	 */
+	public String getCompany3() {
+		return company3;
+	}
+
+
+
+	/**
+	 * @return the company4
+	 */
+	public String getCompany4() {
+		return company4;
+	}
+
+
+
+	/**
+	 * @return the company5
+	 */
+	public String getCompany5() {
+		return company5;
+	}
+
+
+
+	/**
+	 * @return the company6
+	 */
+	public String getCompany6() {
+		return company6;
+	}
+
+
+
+	/**
+	 * @return the company7
+	 */
+	public String getCompany7() {
+		return company7;
+	}
+
+
+
+	/**
+	 * @return the company8
+	 */
+	public String getCompany8() {
+		return company8;
+	}
+
+
+
+	/**
+	 * @param company1 the company1 to set
+	 */
+	public void setCompany1(String company1) {
+		this.company1 = company1;
+	}
+
+
+
+	/**
+	 * @param company2 the company2 to set
+	 */
+	public void setCompany2(String company2) {
+		this.company2 = company2;
+	}
+
+
+
+	/**
+	 * @param company3 the company3 to set
+	 */
+	public void setCompany3(String company3) {
+		this.company3 = company3;
+	}
+
+
+
+	/**
+	 * @param company4 the company4 to set
+	 */
+	public void setCompany4(String company4) {
+		this.company4 = company4;
+	}
+
+
+
+	/**
+	 * @param company5 the company5 to set
+	 */
+	public void setCompany5(String company5) {
+		this.company5 = company5;
+	}
+
+
+
+	/**
+	 * @param company6 the company6 to set
+	 */
+	public void setCompany6(String company6) {
+		this.company6 = company6;
+	}
+
+
+
+	/**
+	 * @param company7 the company7 to set
+	 */
+	public void setCompany7(String company7) {
+		this.company7 = company7;
+	}
+
+
+
+	/**
+	 * @param company8 the company8 to set
+	 */
+	public void setCompany8(String company8) {
+		this.company8 = company8;
 	}
 }

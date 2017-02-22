@@ -241,10 +241,10 @@ public class WyccWorkbook {
 	        String  sqlstmt1 = "SELECT WYCC_ID, NAME, FIRST_NAME, LINE, STRUCTURE_NAME, FAMILY_COVERED, CHILDREN, NATIONALITY, COUNTRY,";
 	        sqlstmt1 =sqlstmt1+" PERIOD_INSURANCE, POSITIONCREW, START_MOVEMENT, PREVMVT, ENDCOMP, END_MOVEMENT, NEXTMVT, NEXTCOMP,";
 	        sqlstmt1 =sqlstmt1+ " MONTHLY_SALARY, SALARY_CURRENCY, DRESTEJ, ERESTEJ, TO_INVOICE, JOUR,MOIS FROM PUBLIC.BENEFICIARIES_TAB";
-	        sqlstmt1 =sqlstmt1+ " formule_name1, total_amount_insured1, formule_name2, total_amount_insured2,";
-	        sqlstmt1 =sqlstmt1+ " formule_name3, total_amount_insured3, formule_name4, total_amount_insured4,";
-	        sqlstmt1 =sqlstmt1+ " formule_name5, total_amount_insured5, formule_name6, total_amount_insured6,";
-	        sqlstmt1 =sqlstmt1+ " formule_name7, total_amount_insured7, formule_name8, total_amount_insured8";
+	        sqlstmt1 =sqlstmt1+ " company1, formule_name1, total_amount_insured1, company2, formule_name2, total_amount_insured2,";
+	        sqlstmt1 =sqlstmt1+ " company3, formule_name3, total_amount_insured3, company4, formule_name4, total_amount_insured4,";
+	        sqlstmt1 =sqlstmt1+ " company5, formule_name5, total_amount_insured5, company6, formule_name6, total_amount_insured6,";
+	        sqlstmt1 =sqlstmt1+ " company7, formule_name7, total_amount_insured7, company8, formule_name8, total_amount_insured8";
 
 	        Statement stmt = db.connectiondb.createStatement();
 	        //PreparedStatement stmt = db.connectiondb.prepareStatement("SELECT BENEFICIARIES_ID, WYCC_ID, NAME, FIRST_NAME, LINE, STRUCTURE_NAME, FAMILY_COVERED, CHILDREN, NATIONALITY, COUNTRY, POSITIONCREW, START_MOVEMENT, PREVMVT, ENDCOMP, END_MOVEMENT, NEXTMVT, NEXTCOMP, MONTHLY_SALARY, SALARY_CURRENCY, DRESTEJ, ERESTEJ, TO_INVOICE, JOUR FROM PUBLIC.BENEFICIARIES_TAB WHERE WYCC_ID IS NOT NULL");
