@@ -32,10 +32,10 @@ public class Modul {
 		@Column(name = "CALCULMODE")
 		private String calculmode;
 		@Column(name = "DISPLAYORDER")
-		private String dispalyorder;		
+		private String displayorder;		
 		@Column(name = "MODULE_CATEGORY")
 		private String modulcategory;	
-		
+	
 		public Modul(long modulid, String modulfournisseur, String modullabel, String modulprice, String modulscope,
 				int forfaitpercentage, String calculmode, String dispalyorder, String modulcategory) {
 			super();
@@ -46,7 +46,7 @@ public class Modul {
 			this.modulscope = modulscope;
 			this.forfaitpercentage = forfaitpercentage;
 			this.calculmode = calculmode;
-			this.dispalyorder = dispalyorder;
+			this.displayorder = dispalyorder;
 			this.modulcategory = modulcategory;
 		}
 
@@ -60,7 +60,7 @@ public class Modul {
 			this.modulscope = modulscope;
 			this.forfaitpercentage = forfaitpercentage;
 			this.calculmode = calculmode;
-			this.dispalyorder = dispalyorder;
+			this.displayorder = dispalyorder;
 		}
 
 		public Modul() {
@@ -163,8 +163,8 @@ public class Modul {
 		/**
 		 * @return the dispalyorder
 		 */
-		public String getDispalyorder() {
-			return dispalyorder;
+		public String getDisplayorder() {
+			return displayorder;
 		}
 
 		/**
@@ -184,8 +184,8 @@ public class Modul {
 		/**
 		 * @param dispalyorder the dispalyorder to set
 		 */
-		public void setDispalyorder(String dispalyorder) {
-			this.dispalyorder = dispalyorder;
+		public void setDisplayorder(String dispalyorder) {
+			this.displayorder = dispalyorder;
 		}
 
 		/**

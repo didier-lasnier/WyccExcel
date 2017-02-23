@@ -241,15 +241,17 @@ public class WyccWorkbook {
 	        String  sqlstmt1 = "SELECT WYCC_ID, NAME, FIRST_NAME, LINE, STRUCTURE_NAME, FAMILY_COVERED, CHILDREN, NATIONALITY, COUNTRY,";
 	        sqlstmt1 =sqlstmt1+" PERIOD_INSURANCE, POSITIONCREW, START_MOVEMENT, PREVMVT, ENDCOMP, END_MOVEMENT, NEXTMVT, NEXTCOMP,";
 	        sqlstmt1 =sqlstmt1+ " MONTHLY_SALARY, SALARY_CURRENCY, DRESTEJ, ERESTEJ, TO_INVOICE, JOUR,MOIS,";
-	        sqlstmt1 =sqlstmt1+ " company1,formule1, formule_name1, total_amount_insured1, company2,formule2, formule_name2, total_amount_insured2,";
-	        sqlstmt1 =sqlstmt1+ " company3,formule3, formule_name3, total_amount_insured3, company4,formule4, formule_name4, total_amount_insured4,";
-	        sqlstmt1 =sqlstmt1+ " company5,formule5, formule_name5, total_amount_insured5, company6,formule6, formule_name6, total_amount_insured6,";
-	        sqlstmt1 =sqlstmt1+ " company7,formule7, formule_name7, total_amount_insured7, company8,formule8, formule_name8, total_amount_insured8";
+	        sqlstmt1 =sqlstmt1+ " company1,formule1, formule_name1,police_number1, total_amount_insured1, company2,formule2, formule_name2,police_number2, total_amount_insured2,";
+	        sqlstmt1 =sqlstmt1+ " company3,formule3, formule_name3,police_number3, total_amount_insured3, company4,formule4, formule_name4,police_number4, total_amount_insured4,";
+	        sqlstmt1 =sqlstmt1+ " company5,formule5, formule_name5,police_number5, total_amount_insured5, company6,formule6, formule_name6,police_number6, total_amount_insured6,";
+	        sqlstmt1 =sqlstmt1+ " company7,formule7, formule_name7,police_number7, total_amount_insured7, company8,formule8, formule_name8,police_number8, total_amount_insured8";
 	        sqlstmt1 =sqlstmt1+ " FROM PUBLIC.BENEFICIARIES_TAB";
 	        
 
 
 	        Statement stmt = db.connectiondb.createStatement();
+	       // db.connectiondb.prepareCall(sql, resultSetType, resultSetConcurrency)
+	      
 	        //PreparedStatement stmt = db.connectiondb.prepareStatement("SELECT BENEFICIARIES_ID, WYCC_ID, NAME, FIRST_NAME, LINE, STRUCTURE_NAME, FAMILY_COVERED, CHILDREN, NATIONALITY, COUNTRY, POSITIONCREW, START_MOVEMENT, PREVMVT, ENDCOMP, END_MOVEMENT, NEXTMVT, NEXTCOMP, MONTHLY_SALARY, SALARY_CURRENCY, DRESTEJ, ERESTEJ, TO_INVOICE, JOUR FROM PUBLIC.BENEFICIARIES_TAB WHERE WYCC_ID IS NOT NULL");
 	        ResultSet rs=stmt.executeQuery(sqlstmt1);		
 			XSSFWorkbook newworkbook = new XSSFWorkbook(); 
@@ -495,6 +497,7 @@ public class WyccWorkbook {
 		   ObjectDao myobj= new ObjectDao();
 		   Session lasession = myobj.getSessionDao();
 		// now lets pull events from the database and list them
+		   //PROPER(FORMULECELL,col)
 		    lasession.beginTransaction();
 		    Query query=lasession.createQuery("select distinct cellrow from Wycccell where calculmode = :calculmode");
 		    query.setString("calculmode",param);	    
@@ -756,45 +759,93 @@ public class WyccWorkbook {
 				
 				if ((event.getFormulecell() != null) ) {
 				   
-				   String laformule = event.getFormulecell().replace("5", "%d");
-				   laformule = laformule.replace("14", "%d");
+				   String laformule = event.getFormulecell();
 				   
-				   //int occurance = StringUtils.countOccurrencesOf("a.b.c.d", ".");
+				   laformule=laformule.replace("5", "%d");
+				   laformule = laformule.replace("14", "%d");
 				   int therow=event.getCellrow()+1;
 				   laformule=String.format(laformule,therow,therow) ;
+				   
 				   cell.setCellFormula(laformule);
-				   //System.out.println(laformule+"****** : "+String.format(laformule,therow,therow) );
 				}
+				
+				
 				String lavaleur =null;
 				if ((event.getValeurcell() != null) ) {
-	
-					lavaleur = event.getValeurcell();
-						  
-						if (event.getTypecell() == Cell.CELL_TYPE_NUMERIC ) {
-							float myfloat = Float.parseFloat(lavaleur);
-							cell.setCellValue(myfloat);
-						}
-						else if (event.getTypecell() == Cell.CELL_TYPE_STRING )  {
-							cell.setCellValue(lavaleur );
-						}
-						
-						cell.setCellStyle(style1);	
+					
+					if (nocol ==(17+(57*(itera-1))))
+					{
+						lavaleur = modul.getModulcategory();	
+					}else if (nocol ==(18+(57*(itera-1))))
+					{
+						lavaleur = modul.getModulfournisseur();	
+					}else if (nocol ==(19+(57*(itera-1))))
+					{
+						lavaleur = modul.getModullabel();	
+					}else if (nocol ==(23+(57*(itera-1))))
+					{
+						  if  (modul.getCalculmode().equals("MONTHLY")){
+							  lavaleur = event.getValeurcell();
+						  } else if (modul.getCalculmode().equals("DAILY"))
+							  {
+							  if (event.getCellcolumn() ==(26+(57*(itera-1))) && introw==4){
+								     lavaleur = modul.getModulprice();//valuecell; 
+								     float myfloat = Float.parseFloat(lavaleur);
+									 cell.setCellValue(myfloat);
+								 }
+							 }	
 					}
-				  if  (modul.getCalculmode().equals("MONTHLY")){
-					  if (event.getCellcolumn() ==(26+(57*(itera-1))) && introw==4){
-						     lavaleur = modul.getModulprice();//valuecell; 
-						     float myfloat = Float.parseFloat(lavaleur);
-							 cell.setCellValue(myfloat);
-						 }
-				  } else if (modul.getCalculmode().equals("DAILY"))
-				  {
-					  
-				  }
-				}
-			}	  
-
-	}
-	
+					else if (nocol ==(24+(57*(itera-1))))
+					{
+						  if  (modul.getCalculmode().equals("MONTHLY")){
+							  lavaleur = event.getValeurcell();
+						  } else if (modul.getCalculmode().equals("DAILY"))
+							  {
+							  	float myfloat=modul.getForfaitpercentage()/100;
+							  	 lavaleur = String.valueOf(myfloat) ;//valuecell; 
+							      myfloat = Float.parseFloat(lavaleur);
+								 cell.setCellValue(myfloat);							  
+							  }	
+					}
+					else if (nocol ==(25+(57*(itera-1))))
+					{
+						  if  (modul.getCalculmode().equals("MONTHLY")){
+							  lavaleur = event.getValeurcell();
+							  
+						  } else if (modul.getCalculmode().equals("DAILY"))
+							  {
+							  lavaleur = event.getValeurcell();							  
+							  }	
+					}					
+					else if (nocol ==(26+(57*(itera-1))))
+					{
+						  if  (modul.getCalculmode().equals("MONTHLY")){
+							  lavaleur = modul.getModulprice();//valuecell; 
+							     float myfloat = Float.parseFloat(lavaleur);
+								 cell.setCellValue(myfloat);				
+						  } else if (modul.getCalculmode().equals("DAILY"))
+							  {
+							     lavaleur = modul.getModulprice();//valuecell; 
+							     float myfloat = Float.parseFloat(lavaleur);
+								 cell.setCellValue(myfloat);							  
+							  }	
+					}
+					
+					else{
+						lavaleur = event.getValeurcell();
+					}
+					if (event.getTypecell() == Cell.CELL_TYPE_NUMERIC ) {
+						float myfloat = Float.parseFloat(lavaleur);
+						cell.setCellValue(myfloat);
+					}
+					else if (event.getTypecell() == Cell.CELL_TYPE_STRING )  {
+						cell.setCellValue(lavaleur );
+					}
+					cell.setCellStyle(style1);	
+					}
+				}	  
+			}
+	}	
 	public void setFormulaHeader(int introw,List result,XSSFWorkbook newworkbook,XSSFRow row){
 		
 		for (Wycccell event : (List<Wycccell>) result) {
@@ -852,4 +903,17 @@ public class WyccWorkbook {
 		
 		
 	}
+    
+	public String getNewFormule(Session lasession, String formule, int col ){
+		lasession.beginTransaction();
+		Query query = lasession.createQuery(" SELECT PROPER(:formule,:col) from DUAL ");
+		query.setString("modulfournisseur",rs.getString("COMPANY1"));
+		query.setString("modullabel",rs.getString("FORMULE1"));
+		query.setMaxResults(1);
+		modul=(Modul) query.uniqueResult();
+		lasession.getTransaction().commit();
+	}
+	}
+
+
 }
