@@ -121,7 +121,7 @@ public class Wycccell {
 			@Column(name = "TYPECELL")
 			private int typecell ;
 			@Column(name = "CALCULMODE")
-			private int calculmode ;
+			private String calculmode ;
 			
 		public Wycccell(){
 			
@@ -131,7 +131,7 @@ public class Wycccell {
 				int borderbottom, int bordertop, int borterleft, int borderright, int dataformat,
 				String dataformatstring, int baxkgroundcolor, int frontgroundcolor, int pattern, int fontindex,
 				float indention, int bordercolorbottom, int bordercolortop, int bordercolorright, int bordercolorleft,
-				String valeurcell, String formulecell, int typecell, int calculmode) {
+				String valeurcell, String formulecell, int typecell, String calculmode) {
 			super();
 			this.id = id;
 			this.cellrow = cellrow;
@@ -476,14 +476,14 @@ public class Wycccell {
 		/**
 		 * @return the calculmode
 		 */
-		public int getCalculmode() {
+		public String getCalculmode() {
 			return calculmode;
 		}
 
 		/**
 		 * @param calculmode the calculmode to set
 		 */
-		public void setCalculmode(int calculmode) {
+		public void setCalculmode(String calculmode) {
 			this.calculmode = calculmode;
 		}
 

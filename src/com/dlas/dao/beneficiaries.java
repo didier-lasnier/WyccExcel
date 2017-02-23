@@ -64,57 +64,89 @@ public class beneficiaries {
 
     @Column(name="COMPANY1")
 	private String company1;
+    @Column(name="FORMULE1")
+   	private String formule1;   
     @Column(name="FORMULE_NAME1")
 	private String formulename1;   
+    @Column(name="POLICE_NUMBER1")
+ 	private String policenumber1;   
 	@Column(name="TOTAL_AMOUNT_INSURED1")
 	private String totalamountinsured1;
 	
     @Column(name="COMPANY2")
 	private String company2;
+    @Column(name="FORMULE2")
+   	private String formule2; 
 	@Column(name="FORMULE_NAME2")
 	private String formulename2;
+    @Column(name="POLICE_NUMBER2")
+ 	private String policenumber2; 
 	@Column(name="TOTAL_AMOUNT_INSURED2")
 	private String totalamountinsured2;
 	
     @Column(name="COMPANY3")
 	private String company3;
+    @Column(name="FORMULE3")
+   	private String formule3; 
 	@Column(name="FORMULE_NAME3")
 	private String formulename3;
+    @Column(name="POLICE_NUMBER3")
+ 	private String policenumber3; 
 	@Column(name="TOTAL_AMOUNT_INSURED3")
 	private String totalamountinsured3;
 	
     @Column(name="COMPANY4")
 	private String company4;
+    @Column(name="FORMULE4")
+   	private String formule4; 
 	@Column(name="FORMULE_NAME4")
 	private String formulename4;
+    @Column(name="POLICE_NUMBER4")
+ 	private String policenumber4; 
 	@Column(name="TOTAL_AMOUNT_INSURED4")
 	private String totalamountinsured4;
 	
     @Column(name="COMPANY5")
 	private String company5;
+    @Column(name="FORMULE5")
+   	private String formule5; 
 	@Column(name="FORMULE_NAME5")
 	private String formulename5;
+    @Column(name="POLICE_NUMBER5")
+ 	private String policenumber5; 
 	@Column(name="TOTAL_AMOUNT_INSURED5")
 	private String totalamountinsured5;
 	
     @Column(name="COMPANY6")
 	private String company6;
+    @Column(name="FORMULE6")
+   	private String formule6; 
 	@Column(name="FORMULE_NAME6")
 	private String formulename6;
+    @Column(name="POLICE_NUMBER6")
+ 	private String policenumber6; 
 	@Column(name="TOTAL_AMOUNT_INSURED6")
 	private String totalamountinsured6;
 	
     @Column(name="COMPANY7")
 	private String company7;
+    @Column(name="FORMULE7")
+   	private String formule7; 
 	@Column(name="FORMULE_NAME7")
 	private String formulename7;
+    @Column(name="POLICE_NUMBER7")
+ 	private String policenumber7; 
 	@Column(name="TOTAL_AMOUNT_INSURED7")
 	private String totalamountinsured7;
 	
     @Column(name="COMPANY8")
 	private String company8;
+    @Column(name="FORMULE8")
+   	private String formule8; 
 	@Column(name="FORMULE_NAME8")
 	private String formulename8;
+    @Column(name="POLICE_NUMBER8")
+ 	private String policenumber8; 
 	@Column(name="TOTAL_AMOUNT_INSURED8")
 	private String totalamountinsured8;
 	
@@ -239,6 +271,162 @@ public class beneficiaries {
 		this.totalamountinsured7 = totalamountinsured7;
 		this.company8 = company8;
 		this.formulename8 = formulename8;
+		this.totalamountinsured8 = totalamountinsured8;
+	}
+
+
+
+	public beneficiaries(double beneficiairiesid, String wyccid, String name, String firstname, String structurename,
+			String familycovered, String children, String nationality, String country, String positioncrew,
+			String periodeinsurance, Integer line, Date startmovement, Date prevmvt, Integer endcomp, Date endmovement,
+			Date nextmvt, Integer nextcomp, Integer monthlysalary, String salarycurrency, Integer drestej,
+			Integer erestej, float toinvoice, Integer jour, String company1, String formulename1, String policenumber1,
+			String totalamountinsured1, String company2, String formulename2, String policenumber2,
+			String totalamountinsured2, String company3, String formulename3, String policenumber3,
+			String totalamountinsured3, String company4, String formulename4, String policenumber4,
+			String totalamountinsured4, String company5, String formulename5, String policenumber5,
+			String totalamountinsured5, String company6, String formulename6, String policenumber6,
+			String totalamountinsured6, String company7, String formulename7, String policenumber7,
+			String totalamountinsured7, String company8, String formulename8, String policenumber8,
+			String totalamountinsured8) {
+		super();
+		this.beneficiairiesid = beneficiairiesid;
+		this.wyccid = wyccid;
+		this.name = name;
+		this.firstname = firstname;
+		this.structurename = structurename;
+		this.familycovered = familycovered;
+		this.children = children;
+		this.nationality = nationality;
+		this.country = country;
+		this.positioncrew = positioncrew;
+		this.periodeinsurance = periodeinsurance;
+		this.line = line;
+		this.startmovement = startmovement;
+		this.prevmvt = prevmvt;
+		this.endcomp = endcomp;
+		this.endmovement = endmovement;
+		this.nextmvt = nextmvt;
+		this.nextcomp = nextcomp;
+		this.monthlysalary = monthlysalary;
+		this.salarycurrency = salarycurrency;
+		this.drestej = drestej;
+		this.erestej = erestej;
+		this.toinvoice = toinvoice;
+		this.jour = jour;
+		this.company1 = company1;
+		this.formulename1 = formulename1;
+		this.policenumber1 = policenumber1;
+		this.totalamountinsured1 = totalamountinsured1;
+		this.company2 = company2;
+		this.formulename2 = formulename2;
+		this.policenumber2 = policenumber2;
+		this.totalamountinsured2 = totalamountinsured2;
+		this.company3 = company3;
+		this.formulename3 = formulename3;
+		this.policenumber3 = policenumber3;
+		this.totalamountinsured3 = totalamountinsured3;
+		this.company4 = company4;
+		this.formulename4 = formulename4;
+		this.policenumber4 = policenumber4;
+		this.totalamountinsured4 = totalamountinsured4;
+		this.company5 = company5;
+		this.formulename5 = formulename5;
+		this.policenumber5 = policenumber5;
+		this.totalamountinsured5 = totalamountinsured5;
+		this.company6 = company6;
+		this.formulename6 = formulename6;
+		this.policenumber6 = policenumber6;
+		this.totalamountinsured6 = totalamountinsured6;
+		this.company7 = company7;
+		this.formulename7 = formulename7;
+		this.policenumber7 = policenumber7;
+		this.totalamountinsured7 = totalamountinsured7;
+		this.company8 = company8;
+		this.formulename8 = formulename8;
+		this.policenumber8 = policenumber8;
+		this.totalamountinsured8 = totalamountinsured8;
+	}
+
+
+
+	public beneficiaries(double beneficiairiesid, String wyccid, String name, String firstname, String structurename,
+			String familycovered, String children, String nationality, String country, String positioncrew,
+			String periodeinsurance, Integer line, Date startmovement, Date prevmvt, Integer endcomp, Date endmovement,
+			Date nextmvt, Integer nextcomp, Integer monthlysalary, String salarycurrency, Integer drestej,
+			Integer erestej, float toinvoice, Integer jour, String company1, String formule1, String formulename1,
+			String policenumber1, String totalamountinsured1, String company2, String formule2, String formulename2,
+			String policenumber2, String totalamountinsured2, String company3, String formule3, String formulename3,
+			String policenumber3, String totalamountinsured3, String company4, String formule4, String formulename4,
+			String policenumber4, String totalamountinsured4, String company5, String formule5, String formulename5,
+			String policenumber5, String totalamountinsured5, String company6, String formule6, String formulename6,
+			String policenumber6, String totalamountinsured6, String company7, String formule7, String formulename7,
+			String policenumber7, String totalamountinsured7, String company8, String formule8, String formulename8,
+			String policenumber8, String totalamountinsured8) {
+		super();
+		this.beneficiairiesid = beneficiairiesid;
+		this.wyccid = wyccid;
+		this.name = name;
+		this.firstname = firstname;
+		this.structurename = structurename;
+		this.familycovered = familycovered;
+		this.children = children;
+		this.nationality = nationality;
+		this.country = country;
+		this.positioncrew = positioncrew;
+		this.periodeinsurance = periodeinsurance;
+		this.line = line;
+		this.startmovement = startmovement;
+		this.prevmvt = prevmvt;
+		this.endcomp = endcomp;
+		this.endmovement = endmovement;
+		this.nextmvt = nextmvt;
+		this.nextcomp = nextcomp;
+		this.monthlysalary = monthlysalary;
+		this.salarycurrency = salarycurrency;
+		this.drestej = drestej;
+		this.erestej = erestej;
+		this.toinvoice = toinvoice;
+		this.jour = jour;
+		this.company1 = company1;
+		this.formule1 = formule1;
+		this.formulename1 = formulename1;
+		this.policenumber1 = policenumber1;
+		this.totalamountinsured1 = totalamountinsured1;
+		this.company2 = company2;
+		this.formule2 = formule2;
+		this.formulename2 = formulename2;
+		this.policenumber2 = policenumber2;
+		this.totalamountinsured2 = totalamountinsured2;
+		this.company3 = company3;
+		this.formule3 = formule3;
+		this.formulename3 = formulename3;
+		this.policenumber3 = policenumber3;
+		this.totalamountinsured3 = totalamountinsured3;
+		this.company4 = company4;
+		this.formule4 = formule4;
+		this.formulename4 = formulename4;
+		this.policenumber4 = policenumber4;
+		this.totalamountinsured4 = totalamountinsured4;
+		this.company5 = company5;
+		this.formule5 = formule5;
+		this.formulename5 = formulename5;
+		this.policenumber5 = policenumber5;
+		this.totalamountinsured5 = totalamountinsured5;
+		this.company6 = company6;
+		this.formule6 = formule6;
+		this.formulename6 = formulename6;
+		this.policenumber6 = policenumber6;
+		this.totalamountinsured6 = totalamountinsured6;
+		this.company7 = company7;
+		this.formule7 = formule7;
+		this.formulename7 = formulename7;
+		this.policenumber7 = policenumber7;
+		this.totalamountinsured7 = totalamountinsured7;
+		this.company8 = company8;
+		this.formule8 = formule8;
+		this.formulename8 = formulename8;
+		this.policenumber8 = policenumber8;
 		this.totalamountinsured8 = totalamountinsured8;
 	}
 
@@ -964,5 +1152,293 @@ public class beneficiaries {
 	 */
 	public void setCompany8(String company8) {
 		this.company8 = company8;
+	}
+
+
+
+	/**
+	 * @return the policenumber1
+	 */
+	public String getPolicenumber1() {
+		return policenumber1;
+	}
+
+
+
+	/**
+	 * @return the policenumber2
+	 */
+	public String getPolicenumber2() {
+		return policenumber2;
+	}
+
+
+
+	/**
+	 * @return the policenumber3
+	 */
+	public String getPolicenumber3() {
+		return policenumber3;
+	}
+
+
+
+	/**
+	 * @return the policenumber4
+	 */
+	public String getPolicenumber4() {
+		return policenumber4;
+	}
+
+
+
+	/**
+	 * @return the policenumber5
+	 */
+	public String getPolicenumber5() {
+		return policenumber5;
+	}
+
+
+
+	/**
+	 * @return the policenumber6
+	 */
+	public String getPolicenumber6() {
+		return policenumber6;
+	}
+
+
+
+	/**
+	 * @return the policenumber7
+	 */
+	public String getPolicenumber7() {
+		return policenumber7;
+	}
+
+
+
+	/**
+	 * @return the policenumber8
+	 */
+	public String getPolicenumber8() {
+		return policenumber8;
+	}
+
+
+
+	/**
+	 * @param policenumber1 the policenumber1 to set
+	 */
+	public void setPolicenumber1(String policenumber1) {
+		this.policenumber1 = policenumber1;
+	}
+
+
+
+	/**
+	 * @param policenumber2 the policenumber2 to set
+	 */
+	public void setPolicenumber2(String policenumber2) {
+		this.policenumber2 = policenumber2;
+	}
+
+
+
+	/**
+	 * @param policenumber3 the policenumber3 to set
+	 */
+	public void setPolicenumber3(String policenumber3) {
+		this.policenumber3 = policenumber3;
+	}
+
+
+
+	/**
+	 * @param policenumber4 the policenumber4 to set
+	 */
+	public void setPolicenumber4(String policenumber4) {
+		this.policenumber4 = policenumber4;
+	}
+
+
+
+	/**
+	 * @param policenumber5 the policenumber5 to set
+	 */
+	public void setPolicenumber5(String policenumber5) {
+		this.policenumber5 = policenumber5;
+	}
+
+
+
+	/**
+	 * @param policenumber6 the policenumber6 to set
+	 */
+	public void setPolicenumber6(String policenumber6) {
+		this.policenumber6 = policenumber6;
+	}
+
+
+
+	/**
+	 * @param policenumber7 the policenumber7 to set
+	 */
+	public void setPolicenumber7(String policenumber7) {
+		this.policenumber7 = policenumber7;
+	}
+
+
+
+	/**
+	 * @param policenumber8 the policenumber8 to set
+	 */
+	public void setPolicenumber8(String policenumber8) {
+		this.policenumber8 = policenumber8;
+	}
+
+
+
+	/**
+	 * @return the formule1
+	 */
+	public String getFormule1() {
+		return formule1;
+	}
+
+
+
+	/**
+	 * @return the formule2
+	 */
+	public String getFormule2() {
+		return formule2;
+	}
+
+
+
+	/**
+	 * @return the formule3
+	 */
+	public String getFormule3() {
+		return formule3;
+	}
+
+
+
+	/**
+	 * @return the formule4
+	 */
+	public String getFormule4() {
+		return formule4;
+	}
+
+
+
+	/**
+	 * @return the formule5
+	 */
+	public String getFormule5() {
+		return formule5;
+	}
+
+
+
+	/**
+	 * @return the formule6
+	 */
+	public String getFormule6() {
+		return formule6;
+	}
+
+
+
+	/**
+	 * @return the formule7
+	 */
+	public String getFormule7() {
+		return formule7;
+	}
+
+
+
+	/**
+	 * @return the formule8
+	 */
+	public String getFormule8() {
+		return formule8;
+	}
+
+
+
+	/**
+	 * @param formule1 the formule1 to set
+	 */
+	public void setFormule1(String formule1) {
+		this.formule1 = formule1;
+	}
+
+
+
+	/**
+	 * @param formule2 the formule2 to set
+	 */
+	public void setFormule2(String formule2) {
+		this.formule2 = formule2;
+	}
+
+
+
+	/**
+	 * @param formule3 the formule3 to set
+	 */
+	public void setFormule3(String formule3) {
+		this.formule3 = formule3;
+	}
+
+
+
+	/**
+	 * @param formule4 the formule4 to set
+	 */
+	public void setFormule4(String formule4) {
+		this.formule4 = formule4;
+	}
+
+
+
+	/**
+	 * @param formule5 the formule5 to set
+	 */
+	public void setFormule5(String formule5) {
+		this.formule5 = formule5;
+	}
+
+
+
+	/**
+	 * @param formule6 the formule6 to set
+	 */
+	public void setFormule6(String formule6) {
+		this.formule6 = formule6;
+	}
+
+
+
+	/**
+	 * @param formule7 the formule7 to set
+	 */
+	public void setFormule7(String formule7) {
+		this.formule7 = formule7;
+	}
+
+
+
+	/**
+	 * @param formule8 the formule8 to set
+	 */
+	public void setFormule8(String formule8) {
+		this.formule8 = formule8;
 	}
 }

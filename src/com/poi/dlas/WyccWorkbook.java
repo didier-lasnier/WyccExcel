@@ -195,8 +195,8 @@ public class WyccWorkbook {
 					  readData(this.currentworkbook,0,i,lasession);
 					  }
 					 
-					  firstrow =10;
-					  for (int i=firstrow;i<=11;i++){
+					  firstrow =12;
+					  for (int i=firstrow;i<=13;i++){
 						  readData(this.currentworkbook,0,i,lasession);
 						  }
 					  lasession.close();
@@ -234,17 +234,20 @@ public class WyccWorkbook {
 			File directory = new File (".");
 		    String fileCharSep =System.getProperty("file.separator");
 		    
-		    List result=readformula();
+//		    List result=readformula();
 		    
 	        h2db db=new h2db();
 	        db.getDatabase(directory);
 	        String  sqlstmt1 = "SELECT WYCC_ID, NAME, FIRST_NAME, LINE, STRUCTURE_NAME, FAMILY_COVERED, CHILDREN, NATIONALITY, COUNTRY,";
 	        sqlstmt1 =sqlstmt1+" PERIOD_INSURANCE, POSITIONCREW, START_MOVEMENT, PREVMVT, ENDCOMP, END_MOVEMENT, NEXTMVT, NEXTCOMP,";
-	        sqlstmt1 =sqlstmt1+ " MONTHLY_SALARY, SALARY_CURRENCY, DRESTEJ, ERESTEJ, TO_INVOICE, JOUR,MOIS FROM PUBLIC.BENEFICIARIES_TAB";
-	        sqlstmt1 =sqlstmt1+ " company1, formule_name1, total_amount_insured1, company2, formule_name2, total_amount_insured2,";
-	        sqlstmt1 =sqlstmt1+ " company3, formule_name3, total_amount_insured3, company4, formule_name4, total_amount_insured4,";
-	        sqlstmt1 =sqlstmt1+ " company5, formule_name5, total_amount_insured5, company6, formule_name6, total_amount_insured6,";
-	        sqlstmt1 =sqlstmt1+ " company7, formule_name7, total_amount_insured7, company8, formule_name8, total_amount_insured8";
+	        sqlstmt1 =sqlstmt1+ " MONTHLY_SALARY, SALARY_CURRENCY, DRESTEJ, ERESTEJ, TO_INVOICE, JOUR,MOIS,";
+	        sqlstmt1 =sqlstmt1+ " company1,formule1, formule_name1, total_amount_insured1, company2,formule2, formule_name2, total_amount_insured2,";
+	        sqlstmt1 =sqlstmt1+ " company3,formule3, formule_name3, total_amount_insured3, company4,formule4, formule_name4, total_amount_insured4,";
+	        sqlstmt1 =sqlstmt1+ " company5,formule5, formule_name5, total_amount_insured5, company6,formule6, formule_name6, total_amount_insured6,";
+	        sqlstmt1 =sqlstmt1+ " company7,formule7, formule_name7, total_amount_insured7, company8,formule8, formule_name8, total_amount_insured8";
+	        sqlstmt1 =sqlstmt1+ " FROM PUBLIC.BENEFICIARIES_TAB";
+	        
+
 
 	        Statement stmt = db.connectiondb.createStatement();
 	        //PreparedStatement stmt = db.connectiondb.prepareStatement("SELECT BENEFICIARIES_ID, WYCC_ID, NAME, FIRST_NAME, LINE, STRUCTURE_NAME, FAMILY_COVERED, CHILDREN, NATIONALITY, COUNTRY, POSITIONCREW, START_MOVEMENT, PREVMVT, ENDCOMP, END_MOVEMENT, NEXTMVT, NEXTCOMP, MONTHLY_SALARY, SALARY_CURRENCY, DRESTEJ, ERESTEJ, TO_INVOICE, JOUR FROM PUBLIC.BENEFICIARIES_TAB WHERE WYCC_ID IS NOT NULL");
@@ -331,24 +334,93 @@ public class WyccWorkbook {
 				 j++;
 				 cell = (XSSFCell) row.createCell(j); 
 				 cell.setCellValue(rs.getFloat("TO_INVOICE") );
-// A COMLETER
+				// First benefits  
 				lasession.beginTransaction();
-//				Query query = lasession.createQuery("from Modul where modulfournisseur = :modulfournisseur and modullabel = :modullabel and modulscope = :modulscope");
-//				query.setString("modulfournisseur", rs.getString("formule_name1"));
-				Query query = lasession.createQuery("from Modul where modullabel = :modullabel and modulscope = :modulscope");
-				query.setString("modullabel",rs.getString("formule_name1"));
-				if (rs.getString("FAMILY_COVERED")=="NO") {
-					query.setString("modulscope", "Single");
+				Query query = lasession.createQuery("from Modul where modulfournisseur=:modulfournisseur and modullabel = :modullabel and modulcategory= :modulcategory  and modulscope = :modulscope ");
+				query.setString("modulfournisseur",rs.getString("COMPANY1"));
+				query.setString("modullabel",rs.getString("FORMULE1"));
+				query.setString("modulcategory",rs.getString("formule_name1"));
+				String modulscope =rs.getString("FAMILY_COVERED");
+				String modulscope1 =rs.getString("FAMILY_COVERED");
+				if (rs.getString("FAMILY_COVERED").equals("NO")) {
+					modulscope= "Single";
 				}
 				else
 				{
-					query.setString("modulscope", "Family");
+					modulscope= "Family";
 				}
-				
+				query.setString("modulscope", modulscope);
 				query.setMaxResults(1);
 				modul=(Modul) query.uniqueResult();
 				lasession.getTransaction().commit();
-				setFormula(introw,result,newworkbook,row,26, modul.getModulprice());
+				logger.info("modulfournisseur : "+rs.getString("COMPANY1"));
+				logger.info("modullabel : "      +rs.getString("FORMULE1"));
+				logger.info("modulcategory : "   +rs.getString("formule_name1"));
+				logger.info("modulscope : "      +modulscope);
+				logger.info("modulscope1 : "     +modulscope1);
+				
+				List result=readformula(modul.getCalculmode());
+				setFormula(introw,result,newworkbook,row,1, modul);		
+				
+				// Second benefits  
+				lasession.beginTransaction();
+				query = lasession.createQuery("from Modul where modulfournisseur=:modulfournisseur and modullabel = :modullabel and modulcategory= :modulcategory  and modulscope = :modulscope ");
+				query.setString("modulfournisseur",rs.getString("COMPANY2"));
+				query.setString("modullabel",rs.getString("FORMULE2"));
+				query.setString("modulcategory",rs.getString("formule_name2"));
+				 modulscope =rs.getString("FAMILY_COVERED");
+				 modulscope1 =rs.getString("FAMILY_COVERED");
+				 if (rs.getString("FAMILY_COVERED").equals("NO")) {
+					 modulscope= "Single";
+					}
+					else
+					{
+						modulscope= "Family";
+					}
+				//modulscope= "Single";
+				query.setString("modulscope", modulscope);
+				query.setMaxResults(1);
+				modul=(Modul) query.uniqueResult();
+				lasession.getTransaction().commit();
+				logger.info("modulfournisseur : "+rs.getString("COMPANY2"));
+				logger.info("modullabel : "      +rs.getString("FORMULE2"));
+				logger.info("modulcategory : "   +rs.getString("formule_name2"));
+				logger.info("modulscope : "      +modulscope);
+				logger.info("modulscope1 : "     +modulscope1);
+				
+				result=readformula(modul.getCalculmode());
+				setFormula(introw,result,newworkbook,row,2, modul);	
+				
+				/*
+				// Third benefits  
+				lasession.beginTransaction();
+				 query = lasession.createQuery("from Modul where modulfournisseur=:modulfournisseur and modullabel = :modullabel and modulcategory= :modulcategory  and modulscope = :modulscope ");
+				query.setString("modulfournisseur",rs.getString("COMPANY3"));
+				query.setString("modullabel",rs.getString("FORMULE2"));
+				query.setString("modulcategory",rs.getString("formule_name3"));
+				 modulscope =rs.getString("FAMILY_COVERED");
+				 modulscope1 =rs.getString("FAMILY_COVERED");
+				if (rs.getString("FAMILY_COVERED")=="NO") {
+					modulscope1= "Single";
+				}
+				else
+				{
+					modulscope1= "Family";
+				}
+				modulscope= "Single";
+				query.setString("modulscope", modulscope);
+				query.setMaxResults(1);
+				modul=(Modul) query.uniqueResult();
+				lasession.getTransaction().commit();
+				logger.info("modulfournisseur : "+rs.getString("COMPANY3"));
+				logger.info("modullabel : "      +rs.getString("FORMULE3"));
+				logger.info("modulcategory : "   +rs.getString("formule_name3"));
+				logger.info("modulscope : "      +modulscope);
+				logger.info("modulscope1 : "     +modulscope1);
+				
+				 result=readformula(modul.getCalculmode());
+				setFormula(introw,result,newworkbook,row,3, modul);	
+				*/
 				 introw++;
 			 }
 			stmt.close();
@@ -424,7 +496,9 @@ public class WyccWorkbook {
 		   Session lasession = myobj.getSessionDao();
 		// now lets pull events from the database and list them
 		    lasession.beginTransaction();
-			List resultdistinct = lasession.createQuery("select distinct cellrow from Wycccell where ").list();
+		    Query query=lasession.createQuery("select distinct cellrow from Wycccell where calculmode = :calculmode");
+		    query.setString("calculmode",param);	    
+			List resultdistinct = query.list();			
 			lasession.getTransaction().commit();
 			//lasession.close();
 			for (int introw : (List<Integer>) resultdistinct){
@@ -437,7 +511,7 @@ public class WyccWorkbook {
 			int introw=(int) resultdistinct.get(1);
 		  //for (int introw : (List<Integer>) resultdistinct){
 			lasession.beginTransaction();
-			Query query = lasession.createQuery("from Wycccell where cellrow = :introw");
+			query = lasession.createQuery("from Wycccell where cellrow = :introw");
 			query.setParameter("introw", introw);
 			
 			List result =query.list();
@@ -647,20 +721,16 @@ public class WyccWorkbook {
 			
 		}
 	
-	public void setFormula(int introw,List result,XSSFWorkbook newworkbook,XSSFRow row, int noCell, String valuecell){
+	public void setFormula(int introw,List result,XSSFWorkbook newworkbook,XSSFRow row, int itera, Modul modul){
 		
-		// on est sur une ligne on va la cree
-//		 XSSFWorkbook newworkbook = new XSSFWorkbook(); 
-//		 XSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
-//
-//		
-//		 XSSFRow row = spreadsheet.createRow(introw);
-
+           int offsetCol =57;
+           int nocol =0;
 			for (Wycccell event : (List<Wycccell>) result) {
 				
 				
 				if (event.getCellcolumn() >= 17 ){
-				XSSFCell cell = (XSSFCell) row.createCell(event.getCellcolumn());
+				nocol=event.getCellcolumn()+(57*(itera-1));
+				XSSFCell cell = (XSSFCell) row.createCell(nocol);
 				XSSFCellStyle style1 = newworkbook.createCellStyle();
 
 				style1.setBorderBottom((short) event.getBorderbottom());
@@ -687,6 +757,8 @@ public class WyccWorkbook {
 				if ((event.getFormulecell() != null) ) {
 				   
 				   String laformule = event.getFormulecell().replace("5", "%d");
+				   laformule = laformule.replace("14", "%d");
+				   
 				   //int occurance = StringUtils.countOccurrencesOf("a.b.c.d", ".");
 				   int therow=event.getCellrow()+1;
 				   laformule=String.format(laformule,therow,therow) ;
@@ -708,13 +780,16 @@ public class WyccWorkbook {
 						
 						cell.setCellStyle(style1);	
 					}
-				
-				  if (event.getCellcolumn() ==26 && introw==4){
-					     lavaleur = valuecell; 
-					     float myfloat = Float.parseFloat(lavaleur);
-						 cell.setCellValue(myfloat);
-					 }
-
+				  if  (modul.getCalculmode().equals("MONTHLY")){
+					  if (event.getCellcolumn() ==(26+(57*(itera-1))) && introw==4){
+						     lavaleur = modul.getModulprice();//valuecell; 
+						     float myfloat = Float.parseFloat(lavaleur);
+							 cell.setCellValue(myfloat);
+						 }
+				  } else if (modul.getCalculmode().equals("DAILY"))
+				  {
+					  
+				  }
 				}
 			}	  
 

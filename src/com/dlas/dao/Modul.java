@@ -27,14 +27,29 @@ public class Modul {
 		private String modulprice;
 		@Column(name = "MODUL_SCOPE")
 		private String modulscope;
-		@Column(name = "FORFFAIT_PERCENTAGE")
+		@Column(name = "FORFAIT_PERCENTAGE")
 		private int forfaitpercentage;
 		@Column(name = "CALCULMODE")
 		private String calculmode;
 		@Column(name = "DISPLAYORDER")
 		private String dispalyorder;		
-
+		@Column(name = "MODULE_CATEGORY")
+		private String modulcategory;	
 		
+		public Modul(long modulid, String modulfournisseur, String modullabel, String modulprice, String modulscope,
+				int forfaitpercentage, String calculmode, String dispalyorder, String modulcategory) {
+			super();
+			this.modulid = modulid;
+			this.modulfournisseur = modulfournisseur;
+			this.modullabel = modullabel;
+			this.modulprice = modulprice;
+			this.modulscope = modulscope;
+			this.forfaitpercentage = forfaitpercentage;
+			this.calculmode = calculmode;
+			this.dispalyorder = dispalyorder;
+			this.modulcategory = modulcategory;
+		}
+
 		public Modul(long modulid, String modulfournisseur, String modullabel, String modulprice, String modulscope,
 				int forfaitpercentage, String calculmode, String dispalyorder) {
 			super();
@@ -171,6 +186,20 @@ public class Modul {
 		 */
 		public void setDispalyorder(String dispalyorder) {
 			this.dispalyorder = dispalyorder;
+		}
+
+		/**
+		 * @return the modulcategory
+		 */
+		public String getModulcategory() {
+			return modulcategory;
+		}
+
+		/**
+		 * @param modulcategory the modulcategory to set
+		 */
+		public void setModulcategory(String modulcategory) {
+			this.modulcategory = modulcategory;
 		}
 		
 		
