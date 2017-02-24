@@ -34,6 +34,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import com.dlas.dao.h2db;
 
 import com.dlas.dao.hsqltext;
+import com.dlas.tools.Tools;
 import com.dlas.dao.Wycccell;
 import com.dlas.dao.Modul;
 import com.poi.actionuser.Explorateur;
@@ -765,8 +766,9 @@ public class WyccWorkbook {
 				   laformule = laformule.replace("14", "%d");
 				   int therow=event.getCellrow()+1;
 				   laformule=String.format(laformule,therow,therow) ;
-				   
-				   cell.setCellFormula(laformule);
+				   Tools newformule =new Tools();
+				   String lanewformule = newformule.getNewNumColonne(laformule, "[$,A-Z]*", 26, 57*(itera-1));
+				   cell.setCellFormula(lanewformule);
 				}
 				
 				
@@ -903,17 +905,5 @@ public class WyccWorkbook {
 		
 		
 	}
-    
-	public String getNewFormule(Session lasession, String formule, int col ){
-		lasession.beginTransaction();
-		Query query = lasession.createQuery(" SELECT PROPER(:formule,:col) from DUAL ");
-		query.setString("modulfournisseur",rs.getString("COMPANY1"));
-		query.setString("modullabel",rs.getString("FORMULE1"));
-		query.setMaxResults(1);
-		modul=(Modul) query.uniqueResult();
-		lasession.getTransaction().commit();
-	}
-	}
-
 
 }
