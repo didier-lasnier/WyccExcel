@@ -23,25 +23,34 @@ public class Tools {
 					 if (m.group().length()  !=0){
 						 int colInt=0;
 						 int compteur =1;
+						 int ascii=0;
 						 while (compteur<=m.group().length() ){
 							
 							 if (compteur < m.group().length()){
-								 colInt=colInt+(colStart*(m.group().length()-compteur));				
-							 }
+								 ascii =(int) m.group().substring(compteur-1, compteur).charAt(0)-64;
+								 colInt=colInt+(colStart*ascii);				
+							 }	
 							 else {
-								 int ascii = (int) m.group().substring(compteur-1, compteur).charAt(0);
-								 colInt=colInt+( ascii - 64) ;
+								  ascii = (int) m.group().substring(compteur-1, compteur).charAt(0);
+								  colInt=colInt+( ascii - 64) ;
 							 }
 							 compteur++;	
 						 }
-	
+
 						 String replacement="";
-						 if (colInt >=26){
-							 replacement=Character.toString((char) (64+((colOffset+colInt)/26)));
+						 int colonenumber=0;
+
+						 colonenumber=64+((colOffset+colInt)/26);	
+						 if ((colOffset+colInt) > 26) {
+							  if ((colOffset+colInt)%26!=0){ 
+								  replacement=Character.toString((char) colonenumber );
+							  } else {
+								  replacement=Character.toString((char) (colonenumber-1) );
+							  }
 						 }
 						  //String replacement=Character.toString((char) (64+((colOffset+colInt)/26)))
 						 if ((colOffset+colInt)%26 == 0) {
-							 replacement=replacement+Character.toString((char) (65) ); 
+							 replacement=replacement+"Z"; 
 						 }
 						 else {
 							 replacement=replacement+Character.toString((char) (64+((colOffset+colInt)%26)));
