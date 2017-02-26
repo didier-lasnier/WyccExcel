@@ -2261,3 +2261,31 @@
 [2017-02-25 17:49:30,962]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.setDialogTitle
 [2017-02-25 17:49:48,170]-[AWT-EventQueue-0] INFO  file  - showSaveFileDialog.userSelection
 [2017-02-25 17:49:49,003]-[AWT-EventQueue-0] INFO  wycc  - DONE ! setBeneficiaire
+[2017-02-26 00:12:33,089]-[main] INFO  wycc  - read file csv
+[2017-02-26 00:12:33,137]-[main] INFO  wycc  - theSavefile Done : /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel/tmp/tmp8761506481927317923.tmp
+[2017-02-26 00:12:33,155]-[main] INFO  wycc  - /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel
+[2017-02-26 00:12:33,156]-[main] INFO  wycc  - /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel/.******
+[2017-02-26 00:12:33,156]-[main] INFO  wycc  - jdbc:hsqldb:/Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel/db/hsql******
+[2017-02-26 00:12:33,480]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-02-26 00:13:16,422]-[main] INFO  wycc  - delete from mvt
+[2017-02-26 00:13:16,461]-[main] INFO  wycc  - read csv file into from mvt
+[2017-02-26 00:13:16,463]-[main] INFO  wycc  - Select file csv : /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel/documentstest/accounting_data_export_14-01-2017 11-04-12MW Afritec.csv
+[2017-02-26 00:13:16,578]-[main] INFO  wycc  - delete from mvt_num
+[2017-02-26 00:13:22,068]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - Checkpoint start
+[2017-02-26 00:13:22,069]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - checkpointClose start
+[2017-02-26 00:13:22,072]-[main] INFO  wycc  - read csv file into from mvt
+[2017-02-26 00:13:22,105]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - checkpointClose synched
+[2017-02-26 00:13:22,376]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - checkpointClose script done
+[2017-02-26 00:13:22,453]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - checkpointClose end
+[2017-02-26 00:13:22,454]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - Checkpoint end - txts: 360
+[2017-02-26 00:13:29,175]-[main] INFO  wycc  - delete from lismvthier
+[2017-02-26 00:13:29,175]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - Checkpoint start
+[2017-02-26 00:13:29,175]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - checkpointClose start
+[2017-02-26 00:13:29,213]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - checkpointClose synched
+[2017-02-26 00:13:33,433]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - checkpointClose script done
+[2017-02-26 00:13:33,442]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - checkpointClose end
+[2017-02-26 00:13:33,442]-[HSQLDB Timer @7fac631b] INFO  hsqldb.db..ENGINE  - Checkpoint end - txts: 364
+[2017-02-26 00:13:33,447]-[main] INFO  wycc  - insert from lismvthier
+[2017-02-26 00:13:36,449]-[main] INFO  wycc  - delete from beneficiaire
+[2017-02-26 00:13:36,660]-[main] INFO  wycc  - Insert Beneficiaries
+[2017-02-26 00:13:37,194]-[main] INFO  wycc  - DONE !

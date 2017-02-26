@@ -1,6 +1,5 @@
 package com.dlas.dao;
 
-
 import java.util.Date;
 
 import org.hibernate.annotations.Columns;
@@ -13,23 +12,23 @@ import javax.persistence.Table;
 
 public class Mvt extends MvtCsv {
 
-    @Column(name="FORMULE_NAME1")
+	@Column(name = "FORMULE_NAME1")
 	private String formulename1;
-	@Column(name="FORMULE_NAME2")
+	@Column(name = "FORMULE_NAME2")
 	private String formulename2;
-	@Column(name="FORMULE_NAME3")
+	@Column(name = "FORMULE_NAME3")
 	private String formulename3;
-	@Column(name="FORMULE_NAME4")
+	@Column(name = "FORMULE_NAME4")
 	private String formulename4;
-	@Column(name="FORMULE_NAME5")
+	@Column(name = "FORMULE_NAME5")
 	private String formulename5;
-	@Column(name="FORMULE_NAME6")
+	@Column(name = "FORMULE_NAME6")
 	private String formulename6;
-	@Column(name="FORMULE_NAME7")
+	@Column(name = "FORMULE_NAME7")
 	private String formulename7;
-	@Column(name="FORMULE_NAME8")
+	@Column(name = "FORMULE_NAME8")
 	private String formulename8;
-	
+
 	public Mvt(String structurename, String certificate, String certificatestart, String certificaterenewal,
 			String certificatecancellation, String amendmentstart, String amendmentend, String wyccid,
 			String claimsmanagerid, String gender, String name, String firstname, String dateofbirth, String email,
@@ -50,25 +49,19 @@ public class Mvt extends MvtCsv {
 			String currency8, String excess8, String duration8, String totalamountinsured8, String ciehtbasis8,
 			String formulename1, String formulename2, String formulename3, String formulename4, String formulename5,
 			String formulename6, String formulename7, String formulename8) {
-		super(structurename, certificate, certificatestart, certificaterenewal,
-				 certificatecancellation, amendmentstart, amendmentend, wyccid,
-				 claimsmanagerid, gender, name, firstname, dateofbirth, email,
-				 positiontype, positioncrew, monthlysalary, salarycurrency, period,
-				 days, months, familycovered, retirementplan, startmovement,
-				 endmovement, employer, children, country, nationality, company1,
-				 formula1, policynumber1, currency1, excess1, duration1,
-				 totalamountinsured1, ciehtbasis1, company2, formula2, policynumber2,
-				 currency2, excess2, duration2, totalamountinsured2, ciehtbasis2,
-				 company3, formula3, policynumber3, currency3, excess3, duration3,
-				 totalamountinsured3, ciehtbasis3, company4, formula4, policynumber4,
-				 currency4, excess4, duration4, totalamountinsured4, ciehtbasis4,
-				 company5, formula5, policynumber5, currency5, excess5, duration5,
-				 totalamountinsured5, ciehtbasis5, company6, formula, policynumber6,
-				 currency6, excess6, duration6, totalamountinsured6, ciehtbasis6,
-				 company7, formula7, policynumber7, currency7, excess67, duration7,
-				 totalamountinsured7, ciehtbasis7, company8, formula8, policynumber8,
-				 currency8, excess8, duration8, totalamountinsured8, ciehtbasis8);
-		
+		super(structurename, certificate, certificatestart, certificaterenewal, certificatecancellation, amendmentstart,
+				amendmentend, wyccid, claimsmanagerid, gender, name, firstname, dateofbirth, email, positiontype,
+				positioncrew, monthlysalary, salarycurrency, period, days, months, familycovered, retirementplan,
+				startmovement, endmovement, employer, children, country, nationality, company1, formula1, policynumber1,
+				currency1, excess1, duration1, totalamountinsured1, ciehtbasis1, company2, formula2, policynumber2,
+				currency2, excess2, duration2, totalamountinsured2, ciehtbasis2, company3, formula3, policynumber3,
+				currency3, excess3, duration3, totalamountinsured3, ciehtbasis3, company4, formula4, policynumber4,
+				currency4, excess4, duration4, totalamountinsured4, ciehtbasis4, company5, formula5, policynumber5,
+				currency5, excess5, duration5, totalamountinsured5, ciehtbasis5, company6, formula, policynumber6,
+				currency6, excess6, duration6, totalamountinsured6, ciehtbasis6, company7, formula7, policynumber7,
+				currency7, excess67, duration7, totalamountinsured7, ciehtbasis7, company8, formula8, policynumber8,
+				currency8, excess8, duration8, totalamountinsured8, ciehtbasis8);
+
 		this.formulename1 = formulename1;
 		this.formulename2 = formulename2;
 		this.formulename3 = formulename3;
@@ -79,11 +72,9 @@ public class Mvt extends MvtCsv {
 		this.formulename8 = formulename8;
 	}
 
-
 	public Mvt() {
-	
-	}
 
+	}
 
 	/**
 	 * @return the formulename1
@@ -92,14 +83,12 @@ public class Mvt extends MvtCsv {
 		return formulename1;
 	}
 
-
 	/**
 	 * @return the formulename2
 	 */
 	public String getFormulename2() {
 		return formulename2;
 	}
-
 
 	/**
 	 * @return the formulename3
@@ -108,14 +97,12 @@ public class Mvt extends MvtCsv {
 		return formulename3;
 	}
 
-
 	/**
 	 * @return the formulename4
 	 */
 	public String getFormulename4() {
 		return formulename4;
 	}
-
 
 	/**
 	 * @return the formulename5
@@ -124,14 +111,12 @@ public class Mvt extends MvtCsv {
 		return formulename5;
 	}
 
-
 	/**
 	 * @return the formulename6
 	 */
 	public String getFormulename6() {
 		return formulename6;
 	}
-
 
 	/**
 	 * @return the formulename7
@@ -140,7 +125,6 @@ public class Mvt extends MvtCsv {
 		return formulename7;
 	}
 
-
 	/**
 	 * @return the formulename8
 	 */
@@ -148,69 +132,68 @@ public class Mvt extends MvtCsv {
 		return formulename8;
 	}
 
-
 	/**
-	 * @param formulename1 the formulename1 to set
+	 * @param formulename1
+	 *            the formulename1 to set
 	 */
 	public void setFormulename1(String formulename1) {
 		this.formulename1 = formulename1;
 	}
 
-
 	/**
-	 * @param formulename2 the formulename2 to set
+	 * @param formulename2
+	 *            the formulename2 to set
 	 */
 	public void setFormulename2(String formulename2) {
 		this.formulename2 = formulename2;
 	}
 
-
 	/**
-	 * @param formulename3 the formulename3 to set
+	 * @param formulename3
+	 *            the formulename3 to set
 	 */
 	public void setFormulename3(String formulename3) {
 		this.formulename3 = formulename3;
 	}
 
-
 	/**
-	 * @param formulename4 the formulename4 to set
+	 * @param formulename4
+	 *            the formulename4 to set
 	 */
 	public void setFormulename4(String formulename4) {
 		this.formulename4 = formulename4;
 	}
 
-
 	/**
-	 * @param formulename5 the formulename5 to set
+	 * @param formulename5
+	 *            the formulename5 to set
 	 */
 	public void setFormulename5(String formulename5) {
 		this.formulename5 = formulename5;
 	}
 
-
 	/**
-	 * @param formulename6 the formulename6 to set
+	 * @param formulename6
+	 *            the formulename6 to set
 	 */
 	public void setFormulename6(String formulename6) {
 		this.formulename6 = formulename6;
 	}
 
-
 	/**
-	 * @param formulename7 the formulename7 to set
+	 * @param formulename7
+	 *            the formulename7 to set
 	 */
 	public void setFormulename7(String formulename7) {
 		this.formulename7 = formulename7;
 	}
 
-
 	/**
-	 * @param formulename8 the formulename8 to set
+	 * @param formulename8
+	 *            the formulename8 to set
 	 */
 	public void setFormulename8(String formulename8) {
 		this.formulename8 = formulename8;
 	}
-	
-	
+
 }

@@ -12,485 +12,507 @@ import org.hibernate.annotations.Formula;
 
 import java.sql.Timestamp;
 
-
 @Entity
-@Table(name = "SETTINGSCELL", schema="PUBLIC")
-//@SequenceGenerator(name="ID", sequenceName = "SEQ_SETTINGSCELL", initialValue=1, allocationSize=20)
+@Table(name = "SETTINGSCELL", schema = "PUBLIC")
+// @SequenceGenerator(name="ID", sequenceName = "SEQ_SETTINGSCELL",
+// initialValue=1, allocationSize=20)
 public class Wycccell {
-	 		@Id
-	 		@Column(name = "CELL_ID")
-//	 		@GeneratedValue(strategy = GenerationType.AUTO)
-	 		private long id;
-			/**
-			 * @return the id
-			 */
-			public long getId() {
-				return id;
-			}
+	@Id
+	@Column(name = "CELL_ID")
+	// @GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 
-			/**
-			 * @param id the id to set
-			 */
-			public void setId(long id) {
-				this.id = id;
-			}
+	/**
+	 * @return the id
+	 */
+	public long getId() {
+		return id;
+	}
 
-			/**
-			 * @return the valeurcell
-			 */
-			public String getValeurcell() {
-				return valeurcell;
-			}
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(long id) {
+		this.id = id;
+	}
 
-			/**
-			 * @param valeurcell the valeurcell to set
-			 */
-			public void setValeurcell(String valeurcell) {
-				this.valeurcell = valeurcell;
-			}
+	/**
+	 * @return the valeurcell
+	 */
+	public String getValeurcell() {
+		return valeurcell;
+	}
 
-			/**
-			 * @return the formulecell
-			 */
-			public String getFormulecell() {
-				return formulecell;
-			}
+	/**
+	 * @param valeurcell
+	 *            the valeurcell to set
+	 */
+	public void setValeurcell(String valeurcell) {
+		this.valeurcell = valeurcell;
+	}
 
-			/**
-			 * @param formulecell the formulecell to set
-			 */
-			public void setFormulecell(String formulecell) {
-				this.formulecell = formulecell;
-			}
+	/**
+	 * @return the formulecell
+	 */
+	public String getFormulecell() {
+		return formulecell;
+	}
 
-			/**
-			 * @return the typecell
-			 */
-			public int getTypecell() {
-				return typecell;
-			}
+	/**
+	 * @param formulecell
+	 *            the formulecell to set
+	 */
+	public void setFormulecell(String formulecell) {
+		this.formulecell = formulecell;
+	}
 
-			/**
-			 * @param typecell the typecell to set
-			 */
-			public void setTypecell(int typecell) {
-				this.typecell = typecell;
-			}
+	/**
+	 * @return the typecell
+	 */
+	public int getTypecell() {
+		return typecell;
+	}
 
-			@Column(name = "CELLROW")
-			private int cellrow ;
-			@Column(name = "CELLCOLUMN")
-			private int cellcolumn ;
-			@Column(name = "SHEETNUM")
-			private int sheetnum ;
-			@Column(name = "HALIGNEMENT")
-			private int halignement ;
-			@Column(name = "VALIGNEMENT")
-			private int valignement ;
-			@Column(name = "BODERBOTTOM")
-			private int borderbottom ;
-			@Column(name = "BORDERTOP")
-			private int bordertop ;
-			@Column(name = "BORDERLEFT")
-			private int borterleft ;
-			@Column(name = "BORDERRIGHT")
-			private int borderright ;
-			@Column(name = "DATAFORMAT")
-			private int dataformat ;
-			@Column(name = "DATAFORMATSTRING")
-			private String dataformatstring;
-			@Column(name = "BAXKGROUNDCOLOR")
-			private int baxkgroundcolor ;
-			@Column(name = "FRONTGROUNDCOLOR")
-			private int frontgroundcolor ;
-			@Column(name = "PATTERN")
-			private int pattern ;
-			@Column(name = "FONTINDEX")
-			private int fontindex ;
-			@Column(name = "INDENTION")
-			private float indention ;
-			@Column(name = "BODERCOLORBOTTEM")
-			private int bordercolorbottom ;
-			@Column(name = "BORDERCOLORTOP")
-			private int bordercolortop ;
-			@Column(name = "BORDERCOLORRIGHT")
-			private int bordercolorright ;
-			@Column(name = "BORDERCOLORIGHT")
-			private int bordercolorleft ;
-			@Column(name = "VALEURCELL")
-			private String valeurcell ;
-			@Column(name = "FORMULECELL")
-			private String formulecell ;
-			@Column(name = "TYPECELL")
-			private int typecell ;
-			@Column(name = "CALCULMODE")
-			private String calculmode ;
+	/**
+	 * @param typecell
+	 *            the typecell to set
+	 */
+	public void setTypecell(int typecell) {
+		this.typecell = typecell;
+	}
 
-			
-			
-		public Wycccell(){
-			
-		}
-		
-		public Wycccell(long id, int cellrow, int cellcolumn, int sheetnum, int halignement, int valignement,
-				int borderbottom, int bordertop, int borterleft, int borderright, int dataformat,
-				String dataformatstring, int baxkgroundcolor, int frontgroundcolor, int pattern, int fontindex,
-				float indention, int bordercolorbottom, int bordercolortop, int bordercolorright, int bordercolorleft,
-				String valeurcell, String formulecell, int typecell, String calculmode) {
-			super();
-			this.id = id;
-			this.cellrow = cellrow;
-			this.cellcolumn = cellcolumn;
-			this.sheetnum = sheetnum;
-			this.halignement = halignement;
-			this.valignement = valignement;
-			this.borderbottom = borderbottom;
-			this.bordertop = bordertop;
-			this.borterleft = borterleft;
-			this.borderright = borderright;
-			this.dataformat = dataformat;
-			this.dataformatstring = dataformatstring;
-			this.baxkgroundcolor = baxkgroundcolor;
-			this.frontgroundcolor = frontgroundcolor;
-			this.pattern = pattern;
-			this.fontindex = fontindex;
-			this.indention = indention;
-			this.bordercolorbottom = bordercolorbottom;
-			this.bordercolortop = bordercolortop;
-			this.bordercolorright = bordercolorright;
-			this.bordercolorleft = bordercolorleft;
-			this.valeurcell = valeurcell;
-			this.formulecell = formulecell;
-			this.typecell = typecell;
-			this.calculmode = calculmode;
-		}
+	@Column(name = "CELLROW")
+	private int cellrow;
+	@Column(name = "CELLCOLUMN")
+	private int cellcolumn;
+	@Column(name = "SHEETNUM")
+	private int sheetnum;
+	@Column(name = "HALIGNEMENT")
+	private int halignement;
+	@Column(name = "VALIGNEMENT")
+	private int valignement;
+	@Column(name = "BODERBOTTOM")
+	private int borderbottom;
+	@Column(name = "BORDERTOP")
+	private int bordertop;
+	@Column(name = "BORDERLEFT")
+	private int borterleft;
+	@Column(name = "BORDERRIGHT")
+	private int borderright;
+	@Column(name = "DATAFORMAT")
+	private int dataformat;
+	@Column(name = "DATAFORMATSTRING")
+	private String dataformatstring;
+	@Column(name = "BAXKGROUNDCOLOR")
+	private int baxkgroundcolor;
+	@Column(name = "FRONTGROUNDCOLOR")
+	private int frontgroundcolor;
+	@Column(name = "PATTERN")
+	private int pattern;
+	@Column(name = "FONTINDEX")
+	private int fontindex;
+	@Column(name = "INDENTION")
+	private float indention;
+	@Column(name = "BODERCOLORBOTTEM")
+	private int bordercolorbottom;
+	@Column(name = "BORDERCOLORTOP")
+	private int bordercolortop;
+	@Column(name = "BORDERCOLORRIGHT")
+	private int bordercolorright;
+	@Column(name = "BORDERCOLORIGHT")
+	private int bordercolorleft;
+	@Column(name = "VALEURCELL")
+	private String valeurcell;
+	@Column(name = "FORMULECELL")
+	private String formulecell;
+	@Column(name = "TYPECELL")
+	private int typecell;
+	@Column(name = "CALCULMODE")
+	private String calculmode;
 
-		public Wycccell(int cellrow , int cellcolumn , int sheetnum,
-				int halignement , int valignement , int borderbottom ,
-				int bordertop , int borterleft , int borderright ,
-				int dataformat , String dataformatstring,
-				int baxkgroundcolor ,int frontgroundcolor, int pattern , int fontindex ,
-				float indention , int bordercolorbottom ,
-				int bordercolortop , int bordercolorright , int bordercolorleft,String valeurcell,String formulecell,int typecell ){
-//			this.id                =(Long) null;
-			this.cellrow           = cellrow ;
-			this.cellcolumn        = cellcolumn ;
-			this.sheetnum          = sheetnum ;
-			this.halignement       = halignement ;
-			this.valignement       = valignement ;
-			this.borderbottom      = borderbottom ;
-			this.bordertop         = bordertop ;
-			this.borterleft        = borterleft ;
-			this.borderright       = borderright ;
-			this.dataformat        = dataformat ;
-			this.dataformatstring  = dataformatstring;
-			this.baxkgroundcolor   = baxkgroundcolor ;
-			this.frontgroundcolor  = frontgroundcolor;
-			this.pattern           = pattern ;
-			this.fontindex         = fontindex ;
-			this.indention         = indention;
-			this.bordercolorbottom = bordercolorbottom ;
-			this.bordercolortop    = bordercolortop ;
-			this.bordercolorright  = bordercolorright ;
-			this.bordercolorleft   = bordercolorleft ;
-			this.valeurcell        = valeurcell;
-			this.formulecell       = formulecell;
-			this.typecell          = typecell;
-			
-		}
+	public Wycccell() {
 
-		/**
-		 * @return the cellrow
-		 */
-		public int getCellrow() {
-			return cellrow;
-		}
+	}
 
-		/**
-		 * @param cellrow the cellrow to set
-		 */
-		public void setCellrow(int cellrow) {
-			this.cellrow = cellrow;
-		}
+	public Wycccell(long id, int cellrow, int cellcolumn, int sheetnum, int halignement, int valignement,
+			int borderbottom, int bordertop, int borterleft, int borderright, int dataformat, String dataformatstring,
+			int baxkgroundcolor, int frontgroundcolor, int pattern, int fontindex, float indention,
+			int bordercolorbottom, int bordercolortop, int bordercolorright, int bordercolorleft, String valeurcell,
+			String formulecell, int typecell, String calculmode) {
+		super();
+		this.id = id;
+		this.cellrow = cellrow;
+		this.cellcolumn = cellcolumn;
+		this.sheetnum = sheetnum;
+		this.halignement = halignement;
+		this.valignement = valignement;
+		this.borderbottom = borderbottom;
+		this.bordertop = bordertop;
+		this.borterleft = borterleft;
+		this.borderright = borderright;
+		this.dataformat = dataformat;
+		this.dataformatstring = dataformatstring;
+		this.baxkgroundcolor = baxkgroundcolor;
+		this.frontgroundcolor = frontgroundcolor;
+		this.pattern = pattern;
+		this.fontindex = fontindex;
+		this.indention = indention;
+		this.bordercolorbottom = bordercolorbottom;
+		this.bordercolortop = bordercolortop;
+		this.bordercolorright = bordercolorright;
+		this.bordercolorleft = bordercolorleft;
+		this.valeurcell = valeurcell;
+		this.formulecell = formulecell;
+		this.typecell = typecell;
+		this.calculmode = calculmode;
+	}
 
-		/**
-		 * @return the cellcolumn
-		 */
-		public int getCellcolumn() {
-			return cellcolumn;
-		}
+	public Wycccell(int cellrow, int cellcolumn, int sheetnum, int halignement, int valignement, int borderbottom,
+			int bordertop, int borterleft, int borderright, int dataformat, String dataformatstring,
+			int baxkgroundcolor, int frontgroundcolor, int pattern, int fontindex, float indention,
+			int bordercolorbottom, int bordercolortop, int bordercolorright, int bordercolorleft, String valeurcell,
+			String formulecell, int typecell) {
+		// this.id =(Long) null;
+		this.cellrow = cellrow;
+		this.cellcolumn = cellcolumn;
+		this.sheetnum = sheetnum;
+		this.halignement = halignement;
+		this.valignement = valignement;
+		this.borderbottom = borderbottom;
+		this.bordertop = bordertop;
+		this.borterleft = borterleft;
+		this.borderright = borderright;
+		this.dataformat = dataformat;
+		this.dataformatstring = dataformatstring;
+		this.baxkgroundcolor = baxkgroundcolor;
+		this.frontgroundcolor = frontgroundcolor;
+		this.pattern = pattern;
+		this.fontindex = fontindex;
+		this.indention = indention;
+		this.bordercolorbottom = bordercolorbottom;
+		this.bordercolortop = bordercolortop;
+		this.bordercolorright = bordercolorright;
+		this.bordercolorleft = bordercolorleft;
+		this.valeurcell = valeurcell;
+		this.formulecell = formulecell;
+		this.typecell = typecell;
 
-		/**
-		 * @param cellcolumn the cellcolumn to set
-		 */
-		public void setCellcolumn(int cellcolumn) {
-			this.cellcolumn = cellcolumn;
-		}
+	}
 
-		/**
-		 * @return the sheetnum
-		 */
-		public int getSheetnum() {
-			return sheetnum;
-		}
+	/**
+	 * @return the cellrow
+	 */
+	public int getCellrow() {
+		return cellrow;
+	}
 
-		/**
-		 * @param sheetnum the sheetnum to set
-		 */
-		public void setSheetnum(int sheetnum) {
-			this.sheetnum = sheetnum;
-		}
+	/**
+	 * @param cellrow
+	 *            the cellrow to set
+	 */
+	public void setCellrow(int cellrow) {
+		this.cellrow = cellrow;
+	}
 
-		/**
-		 * @return the halignement
-		 */
-		public int getHalignement() {
-			return halignement;
-		}
+	/**
+	 * @return the cellcolumn
+	 */
+	public int getCellcolumn() {
+		return cellcolumn;
+	}
 
-		/**
-		 * @param halignement the halignement to set
-		 */
-		public void setHalignement(int halignement) {
-			this.halignement = halignement;
-		}
+	/**
+	 * @param cellcolumn
+	 *            the cellcolumn to set
+	 */
+	public void setCellcolumn(int cellcolumn) {
+		this.cellcolumn = cellcolumn;
+	}
 
-		/**
-		 * @return the valignement
-		 */
-		public int getValignement() {
-			return valignement;
-		}
+	/**
+	 * @return the sheetnum
+	 */
+	public int getSheetnum() {
+		return sheetnum;
+	}
 
-		/**
-		 * @param valignement the valignement to set
-		 */
-		public void setValignement(int valignement) {
-			this.valignement = valignement;
-		}
+	/**
+	 * @param sheetnum
+	 *            the sheetnum to set
+	 */
+	public void setSheetnum(int sheetnum) {
+		this.sheetnum = sheetnum;
+	}
 
-		/**
-		 * @return the borderbottom
-		 */
-		public int getBorderbottom() {
-			return borderbottom;
-		}
+	/**
+	 * @return the halignement
+	 */
+	public int getHalignement() {
+		return halignement;
+	}
 
-		/**
-		 * @param borderbottom the borderbottom to set
-		 */
-		public void setBorderbottom(int borderbottom) {
-			this.borderbottom = borderbottom;
-		}
+	/**
+	 * @param halignement
+	 *            the halignement to set
+	 */
+	public void setHalignement(int halignement) {
+		this.halignement = halignement;
+	}
 
-		/**
-		 * @return the bordertop
-		 */
-		public int getBordertop() {
-			return bordertop;
-		}
+	/**
+	 * @return the valignement
+	 */
+	public int getValignement() {
+		return valignement;
+	}
 
-		/**
-		 * @param bordertop the bordertop to set
-		 */
-		public void setBordertop(int bordertop) {
-			this.bordertop = bordertop;
-		}
+	/**
+	 * @param valignement
+	 *            the valignement to set
+	 */
+	public void setValignement(int valignement) {
+		this.valignement = valignement;
+	}
 
-		/**
-		 * @return the borterleft
-		 */
-		public int getBorterleft() {
-			return borterleft;
-		}
+	/**
+	 * @return the borderbottom
+	 */
+	public int getBorderbottom() {
+		return borderbottom;
+	}
 
-		/**
-		 * @param borterleft the borterleft to set
-		 */
-		public void setBorterleft(int borterleft) {
-			this.borterleft = borterleft;
-		}
+	/**
+	 * @param borderbottom
+	 *            the borderbottom to set
+	 */
+	public void setBorderbottom(int borderbottom) {
+		this.borderbottom = borderbottom;
+	}
 
-		/**
-		 * @return the borderright
-		 */
-		public int getBorderright() {
-			return borderright;
-		}
+	/**
+	 * @return the bordertop
+	 */
+	public int getBordertop() {
+		return bordertop;
+	}
 
-		/**
-		 * @param borderright the borderright to set
-		 */
-		public void setBorderright(int borderright) {
-			this.borderright = borderright;
-		}
+	/**
+	 * @param bordertop
+	 *            the bordertop to set
+	 */
+	public void setBordertop(int bordertop) {
+		this.bordertop = bordertop;
+	}
 
-		/**
-		 * @return the dataformat
-		 */
-		public int getDataformat() {
-			return dataformat;
-		}
+	/**
+	 * @return the borterleft
+	 */
+	public int getBorterleft() {
+		return borterleft;
+	}
 
-		/**
-		 * @param dataformat the dataformat to set
-		 */
-		public void setDataformat(int dataformat) {
-			this.dataformat = dataformat;
-		}
+	/**
+	 * @param borterleft
+	 *            the borterleft to set
+	 */
+	public void setBorterleft(int borterleft) {
+		this.borterleft = borterleft;
+	}
 
-		/**
-		 * @return the dataformatstring
-		 */
-		public String getDataformatstring() {
-			return dataformatstring;
-		}
+	/**
+	 * @return the borderright
+	 */
+	public int getBorderright() {
+		return borderright;
+	}
 
-		/**
-		 * @param dataformatstring the dataformatstring to set
-		 */
-		public void setDataformatstring(String dataformatstring) {
-			this.dataformatstring = dataformatstring;
-		}
+	/**
+	 * @param borderright
+	 *            the borderright to set
+	 */
+	public void setBorderright(int borderright) {
+		this.borderright = borderright;
+	}
 
-		/**
-		 * @return the baxkgroundcolor
-		 */
-		public int getBaxkgroundcolor() {
-			return baxkgroundcolor;
-		}
+	/**
+	 * @return the dataformat
+	 */
+	public int getDataformat() {
+		return dataformat;
+	}
 
-		/**
-		 * @param baxkgroundcolor the baxkgroundcolor to set
-		 */
-		public void setBaxkgroundcolor(int baxkgroundcolor) {
-			this.baxkgroundcolor = baxkgroundcolor;
-		}
-		/**
-		 * @return the baxkgroundcolor
-		 */
-		public int getFrontgroundcolor() {
-			return frontgroundcolor;
-		}
+	/**
+	 * @param dataformat
+	 *            the dataformat to set
+	 */
+	public void setDataformat(int dataformat) {
+		this.dataformat = dataformat;
+	}
 
-		/**
-		 * @param baxkgroundcolor the baxkgroundcolor to set
-		 */
-		public void setFrontgroundcolor(int frontgroundcolor) {
-			this.frontgroundcolor = frontgroundcolor;
-		}
+	/**
+	 * @return the dataformatstring
+	 */
+	public String getDataformatstring() {
+		return dataformatstring;
+	}
 
-		/**
-		 * @return the pattern
-		 */
-		public int getPattern() {
-			return pattern;
-		}
+	/**
+	 * @param dataformatstring
+	 *            the dataformatstring to set
+	 */
+	public void setDataformatstring(String dataformatstring) {
+		this.dataformatstring = dataformatstring;
+	}
 
-		/**
-		 * @param pattern the pattern to set
-		 */
-		public void setPattern(int pattern) {
-			this.pattern = pattern;
-		}
+	/**
+	 * @return the baxkgroundcolor
+	 */
+	public int getBaxkgroundcolor() {
+		return baxkgroundcolor;
+	}
 
-		/**
-		 * @return the fontindex
-		 */
-		public int getFontindex() {
-			return fontindex;
-		}
+	/**
+	 * @param baxkgroundcolor
+	 *            the baxkgroundcolor to set
+	 */
+	public void setBaxkgroundcolor(int baxkgroundcolor) {
+		this.baxkgroundcolor = baxkgroundcolor;
+	}
 
-		/**
-		 * @param fontindex the fontindex to set
-		 */
-		public void setFontindex(int fontindex) {
-			this.fontindex = fontindex;
-		}
+	/**
+	 * @return the baxkgroundcolor
+	 */
+	public int getFrontgroundcolor() {
+		return frontgroundcolor;
+	}
 
-		/**
-		 * @return the indention
-		 */
-		public float getIndention() {
-			return indention;
-		}
+	/**
+	 * @param baxkgroundcolor
+	 *            the baxkgroundcolor to set
+	 */
+	public void setFrontgroundcolor(int frontgroundcolor) {
+		this.frontgroundcolor = frontgroundcolor;
+	}
 
-		/**
-		 * @param indention the indention to set
-		 */
-		public void setIndention(float indention) {
-			this.indention = indention;
-		}
+	/**
+	 * @return the pattern
+	 */
+	public int getPattern() {
+		return pattern;
+	}
 
-		/**
-		 * @return the bordercolorbottom
-		 */
-		public int getBordercolorbottom() {
-			return bordercolorbottom;
-		}
+	/**
+	 * @param pattern
+	 *            the pattern to set
+	 */
+	public void setPattern(int pattern) {
+		this.pattern = pattern;
+	}
 
-		/**
-		 * @param bordercolorbottom the bordercolorbottom to set
-		 */
-		public void setBordercolorbottom(int bordercolorbottom) {
-			this.bordercolorbottom = bordercolorbottom;
-		}
+	/**
+	 * @return the fontindex
+	 */
+	public int getFontindex() {
+		return fontindex;
+	}
 
-		/**
-		 * @return the bordercolortop
-		 */
-		public int getBordercolortop() {
-			return bordercolortop;
-		}
+	/**
+	 * @param fontindex
+	 *            the fontindex to set
+	 */
+	public void setFontindex(int fontindex) {
+		this.fontindex = fontindex;
+	}
 
-		/**
-		 * @param bordercolortop the bordercolortop to set
-		 */
-		public void setBordercolortop(int bordercolortop) {
-			this.bordercolortop = bordercolortop;
-		}
+	/**
+	 * @return the indention
+	 */
+	public float getIndention() {
+		return indention;
+	}
 
-		/**
-		 * @return the bordercolorright
-		 */
-		public int getBordercolorright() {
-			return bordercolorright;
-		}
+	/**
+	 * @param indention
+	 *            the indention to set
+	 */
+	public void setIndention(float indention) {
+		this.indention = indention;
+	}
 
-		/**
-		 * @param bordercolorright the bordercolorright to set
-		 */
-		public void setBordercolorright(int bordercolorright) {
-			this.bordercolorright = bordercolorright;
-		}
+	/**
+	 * @return the bordercolorbottom
+	 */
+	public int getBordercolorbottom() {
+		return bordercolorbottom;
+	}
 
-		/**
-		 * @return the bordercolorleft
-		 */
-		public int getBordercolorleft() {
-			return bordercolorleft;
-		}
+	/**
+	 * @param bordercolorbottom
+	 *            the bordercolorbottom to set
+	 */
+	public void setBordercolorbottom(int bordercolorbottom) {
+		this.bordercolorbottom = bordercolorbottom;
+	}
 
-		/**
-		 * @param bordercolorleft the bordercolorleft to set
-		 */
-		public void setBordercolorleft(int bordercolorleft) {
-			this.bordercolorleft = bordercolorleft;
-		}
+	/**
+	 * @return the bordercolortop
+	 */
+	public int getBordercolortop() {
+		return bordercolortop;
+	}
 
-		/**
-		 * @return the calculmode
-		 */
-		public String getCalculmode() {
-			return calculmode;
-		}
+	/**
+	 * @param bordercolortop
+	 *            the bordercolortop to set
+	 */
+	public void setBordercolortop(int bordercolortop) {
+		this.bordercolortop = bordercolortop;
+	}
 
-		/**
-		 * @param calculmode the calculmode to set
-		 */
-		public void setCalculmode(String calculmode) {
-			this.calculmode = calculmode;
-		}
+	/**
+	 * @return the bordercolorright
+	 */
+	public int getBordercolorright() {
+		return bordercolorright;
+	}
 
+	/**
+	 * @param bordercolorright
+	 *            the bordercolorright to set
+	 */
+	public void setBordercolorright(int bordercolorright) {
+		this.bordercolorright = bordercolorright;
+	}
+
+	/**
+	 * @return the bordercolorleft
+	 */
+	public int getBordercolorleft() {
+		return bordercolorleft;
+	}
+
+	/**
+	 * @param bordercolorleft
+	 *            the bordercolorleft to set
+	 */
+	public void setBordercolorleft(int bordercolorleft) {
+		this.bordercolorleft = bordercolorleft;
+	}
+
+	/**
+	 * @return the calculmode
+	 */
+	public String getCalculmode() {
+		return calculmode;
+	}
+
+	/**
+	 * @param calculmode
+	 *            the calculmode to set
+	 */
+	public void setCalculmode(String calculmode) {
+		this.calculmode = calculmode;
+	}
 
 }
