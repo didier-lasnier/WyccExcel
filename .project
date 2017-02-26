@@ -21,4 +21,10 @@
 		<nature>org.jkiss.dbeaver.DBeaverNature</nature>
 		<nature>org.hibernate.eclipse.console.hibernateNature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>Images</name>
+			<value>file:/Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel/img</value>
+		</variable>
+	</variableList>
 </projectDescription>

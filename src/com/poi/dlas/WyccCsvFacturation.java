@@ -16,8 +16,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==================================================================== */
 
-
 package com.poi.dlas;
+
 //import org.apache.poi.xssf.usermodel.*;
 //import org.apache.poi.ss.usermodel.*;
 //import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -42,97 +42,96 @@ import org.apache.log4j.Logger;
 //import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.poi.dlas.FileDialog;
+import com.poi.dlas.FileDialogOld;
 import com.poi.dlas.managecsv;
 import com.poi.dlas.WyccWorkbook;
 
 import com.dlas.dao.*;
 
 /**
-* A business plan demo
-* Usage:
-*  BusinessPlan -xls|xlsx
-*
-* @author Yegor Kozlov
-*/
+ * A business plan demo Usage: BusinessPlan -xls|xlsx
+ *
+ * @author Yegor Kozlov
+ */
 public class WyccCsvFacturation {
 
-	
- 
- static Logger logger = Logger.getLogger("wycc");
- 
- public static void main(String[] args) {
-     //Schedule a job for the event-dispatching thread:
-     //creating and showing this application's GUI.
-	 MenuWycc theMenu =new MenuWycc();
-	// needed on mac os x
-	 
-	 System.setProperty("apple.laf.useScreenMenuBar", "true");
+	static Logger logger = Logger.getLogger("wycc");
 
-     javax.swing.SwingUtilities.invokeLater(new Runnable() {
-         @Override
-		public void run() {
-             MenuWycc.createAndShowGUI();
-             
-         }
-     });
- }
- 
- public static void lanceLecture()  throws Exception {
-	 
-  //   Workbook wb;
-     File directory = new File (".");
-     String fileCharSep =System.getProperty("file.separator");
+/*	public static void main(String[] args) {
+		// Schedule a job for the event-dispatching thread:
+		// creating and showing this application's GUI.
+		MenuWycc theMenu = new MenuWycc();
+		// needed on mac os x
 
-     //Open csv file
-     new FileDialog();
-     // launch SAveDialog
-     
-     FileDialog FileDialogOpen = new FileDialog();
-     logger.info("Select file csv");
-     File theOpenfile=null;
-     theOpenfile=FileDialogOpen.openFileDialog(directory);
-     if (theOpenfile!=null) 
-     {
-    	// read file csv
-         managecsv csvdata = new managecsv();
-         logger.info("read file csv");
-         List<String[]> csvrows= csvdata.getRowsFromFile (theOpenfile);
+		System.setProperty("apple.laf.useScreenMenuBar", "true");
 
-         //   new FileDialog();
-         // FileDialog FileDialogSave =new FileDialog(FileDialog.SAVEDIAG);
+		javax.swing.SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				MenuWycc.createAndShowGUI();
 
-         File  theSavefile =File.createTempFile("tmp", null, new File (directory.getAbsolutePath()+fileCharSep+"tmp" ) );
-         String file = theSavefile.getAbsolutePath();
-         logger.info("theSavefile Done : " + file);
-         csvdata.setRowToFile(csvrows, theSavefile);
+			}
+		});
+	}
+*/
+	public static void lanceLecture() throws Exception {
 
-         // Write the output to a file
-         h2db db=new h2db();
-         db.getDatabase(directory);
-         hsqltext sqlstmt = new hsqltext();
+		// Workbook wb;
+		File directory = new File(".");
+		String fileCharSep = System.getProperty("file.separator");
 
-         Statement stmt = db.connectiondb.createStatement();
+		// Open csv file
+		new FileDialogOld();
+		// launch SAveDialog
 
-         logger.info("delete from mvt");
-         stmt.executeUpdate("DELETE FROM MVT");
-         logger.info("read csv file into from mvt");
-         stmt.executeUpdate("INSERT INTO MVT  SELECT * FROM CSVREAD('"+file+"')");//, null, 'charset=UTF-8 fieldSeparator=;')");
+		FileDialogOld FileDialogOpen = new FileDialogOld();
+		logger.info("Select file csv");
+		File theOpenfile = null;
+		theOpenfile = FileDialogOpen.openFileDialog(directory);
+		if (theOpenfile != null) {
+			// read file csv
+			managecsv csvdata = new managecsv();
+			logger.info("read file csv");
+			List<String[]> csvrows = csvdata.getRowsFromFile(theOpenfile);
 
-         logger.info("delete from mvt_num");
-         stmt.executeUpdate("DELETE FROM MVT_NUM");
-         logger.info("read csv file into from mvt");
-         stmt.executeUpdate(sqlstmt.insertmvtnum());//, null, 'charset=UTF-8 fieldSeparator=;')");
+			// new FileDialog();
+			// FileDialog FileDialogSave =new FileDialog(FileDialog.SAVEDIAG);
 
-         stmt.close();
-         db.closeDbConnection(db.connectiondb);
-         theSavefile.deleteOnExit();
-         logger.info("DONE !");
+			File theSavefile = File.createTempFile("tmp", null,
+					new File(directory.getAbsolutePath() + fileCharSep + "tmp"));
+			String file = theSavefile.getAbsolutePath();
+			logger.info("theSavefile Done : " + file);
+			csvdata.setRowToFile(csvrows, theSavefile);
 
- 
-     }
-     
-     //System.exit(0);
- }
+			// Write the output to a file
+			h2db db = new h2db();
+			db.getDatabase(directory);
+			hsqltext sqlstmt = new hsqltext();
+
+			Statement stmt = db.connectiondb.createStatement();
+
+			logger.info("delete from mvt");
+			stmt.executeUpdate("DELETE FROM MVT");
+			logger.info("read csv file into from mvt");
+			stmt.executeUpdate("INSERT INTO MVT  SELECT * FROM CSVREAD('" + file + "')");// ,
+																							// null,
+																							// 'charset=UTF-8
+																							// fieldSeparator=;')");
+
+			logger.info("delete from mvt_num");
+			stmt.executeUpdate("DELETE FROM MVT_NUM");
+			logger.info("read csv file into from mvt");
+			stmt.executeUpdate(sqlstmt.insertmvtnum());// , null, 'charset=UTF-8
+														// fieldSeparator=;')");
+
+			stmt.close();
+			db.closeDbConnection(db.connectiondb);
+			theSavefile.deleteOnExit();
+			logger.info("DONE !");
+
+		}
+
+		// System.exit(0);
+	}
 
 }
