@@ -2,6 +2,13 @@ package com.poi.dlas;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.Format;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 import org.apache.log4j.Logger;
 import org.eclipse.swt.SWT;
@@ -24,14 +31,19 @@ import org.eclipse.wb.swt.SWTResourceManager;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.DateTime;
+
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Canvas;
 
 public class FileDialogApp {
 	Display d;
-
 	Shell s;
+	private DateTime InStartDate;
+	private DateTime InEndDate;
+	
+	private DateTime StartDate;
+	private DateTime EndDate;
 	
 	static Logger logger = Logger.getLogger("wycc");
 //	private final FormToolkit formToolkit = new FormToolkit(d.getDefault());
@@ -66,30 +78,33 @@ public class FileDialogApp {
 		exitItem.setAccelerator(SWT.CTRL + 'Q');
 		
 		class Open implements SelectionListener {
-
+				
 			public void widgetSelected(SelectionEvent event) {
-				widgetOpen();
+				widgetOpen(StartDate,EndDate);
 			}
 
 			public void widgetDefaultSelected(SelectionEvent event) {
 			}
 			
 			public void widgetSelectedBtn(SelectionEvent event) {
-				widgetOpen();
+				widgetOpen(StartDate,EndDate);
 			}
-			public void widgetOpen(){
+			public void widgetOpen(DateTime StartD, DateTime EndD){
 				File directory = new File(".");
 				String fileCharSep = System.getProperty("file.separator");
+				
 				try {
-				FileDialog fd = new FileDialog(s, SWT.OPEN);
-				fd.setText("Open");
-				fd.setFilterPath(directory.getCanonicalPath());
-				String[] filterExt = { "*.csv","*.txt" };
-				fd.setFilterExtensions(filterExt);
-				String selected = fd.open();
+					FileDialog fd = new FileDialog(s, SWT.OPEN);
+					fd.setText("Open");
+					fd.setFilterPath(directory.getCanonicalPath());
+					String[] filterExt = { "*.csv","*.txt" };
+					fd.setFilterExtensions(filterExt);
+					String selected = fd.open();
 				if (selected !=null) {
 					Actionuser a = new Actionuser();
-					a.lanceLecture(selected);
+					
+					a.lanceLecture(selected, StartD, EndD);
+					
 					}
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -186,10 +201,11 @@ public class FileDialogApp {
 		
 		exitItem.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				MessageBox messageBox = new MessageBox(s, SWT.ICON_QUESTION | SWT.YES | SWT.NO);
-				messageBox.setMessage("Do you really want to exit?");
+				MessageBox messageBox = new MessageBox(s, SWT.ICON_QUESTION | SWT.YES | SWT.NO);					
+				messageBox.setMessage("Do you really want to exit? ");
 				messageBox.setText("Exiting Application");
 				int response = messageBox.open();
+				
 				if (response == SWT.YES)
 					s.close();
 					d.dispose();
@@ -203,25 +219,25 @@ public class FileDialogApp {
 		lblStartDate.setBounds(190, 50, 80, 22);
 		lblStartDate.setText("Start date :");
 		
-		DateTime StartDate = new DateTime(s, SWT.BORDER);
+		StartDate = new DateTime(s, SWT.BORDER | SWT.DATE | SWT.DROP_DOWN);
 		StartDate.setDay(1);
 		StartDate.setMonth(0);
 		//StartDate.setYear(2016);
 		StartDate.setBounds(308, 50, 150, 22);
 		
-		Label lblNewLabel = new Label(s, SWT.NONE);
+		Label lblNewLabel = new Label(s, SWT.BORDER | SWT.DATE | SWT.DROP_DOWN);
 		lblNewLabel.setFont(SWTResourceManager.getFont("Arial", 14, SWT.NORMAL));
 		lblNewLabel.setBounds(190, 95, 80, 21);
 		lblNewLabel.setText("End date :");
 		
-		DateTime EndDate = new DateTime(s, SWT.BORDER);
+		EndDate = new DateTime(s, SWT.BORDER);
 		EndDate.setBounds(308, 94, 150, 22);
-		EndDate.setDay(31);
-		EndDate.setMonth(11);
+		EndDate.setDate(2017, 11, 31);
 		Button btnOk = new Button(s, SWT.NONE);
 		btnOk.setBounds(392, 224, 120, 35);
 		btnOk.setText("Quit");
 		btnOk.addListener(SWT.Selection, new Listener() {
+			
 		      public void handleEvent(Event event) {
 		    	s.close();
 		        d.dispose();
@@ -240,7 +256,8 @@ public class FileDialogApp {
 		btnReadCsv.setText("Read csv..");
 		btnReadCsv.addListener(SWT.Selection, new Listener() {
 		      public void handleEvent(Event event) {
-			        new Open();
+		    	   String str =StartDate.toString();
+			        new Open().widgetOpen(StartDate,EndDate);
 			      }
 			    });
 		Button btnSaveXls = new Button(s, SWT.BORDER | SWT.FLAT);

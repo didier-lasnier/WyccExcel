@@ -626,7 +626,7 @@ public class hsqltext {
 		return sqlstmt;
 	}
 
-	public String insertRootListMvthier() {
+	public String insertRootListMvthier(String StartDateStr, String EndDateStr) {
 		String sqlstmt = null;
 		sqlstmt = " INSERT INTO PUBLIC.LISTMVTHIER";
 		sqlstmt = sqlstmt + " (lv1, positioncrew, name, first_name, structure_name,";
@@ -653,9 +653,9 @@ public class hsqltext {
 				+ "					  m.children,  m.monthly_salary,  m.salary_currency,   m.rankmvt as niveau,";
 		sqlstmt = sqlstmt + "					  m.wycc_id,";
 		sqlstmt = sqlstmt
-				+ "					 case when ( m.start_movement < timestamp '2016-01-01 00:00:00.0') then timestamp '2016-01-01 00:00:00.0' else  m.start_movement end as start_movement,";
+				+ "					 case when ( m.start_movement < timestamp '"+StartDateStr+"') then timestamp '"+StartDateStr+"' else  m.start_movement end as start_movement,";
 		sqlstmt = sqlstmt
-				+ "					 case when ( m.end_movement > timestamp '2016-12-31 00:00:00.0') then timestamp '2016-12-31 00:00:00.0' else  m.end_movement end as end_movement,";
+				+ "					 case when ( m.end_movement > timestamp '"+EndDateStr+"') then timestamp '"+EndDateStr+"' else  m.end_movement end as end_movement,";
 		sqlstmt = sqlstmt
 				+ "					  m.dateofnextmvt,  m.dateofprevmvt,  m.rankmvt,  m.rankparent,  m.nextmvt";
 		sqlstmt = sqlstmt + "		from PUBLIC.mvt_num m where nextmvt = 0 ";
@@ -669,7 +669,7 @@ public class hsqltext {
 		return sqlstmt;
 	}
 
-	public String insertLevelNListMvthier() {
+	public String insertLevelNListMvthier(String StartDateStr, String EndDateStr) {
 		String sqlstmt = null;
 		sqlstmt = " INSERT INTO PUBLIC.LISTMVTHIER";
 		sqlstmt = sqlstmt + " (lv1, positioncrew, name, first_name, structure_name,";
@@ -696,9 +696,9 @@ public class hsqltext {
 				+ "					  m.children,  m.monthly_salary,  m.salary_currency,   m.rankmvt as niveau,";
 		sqlstmt = sqlstmt + "					  m.wycc_id,";
 		sqlstmt = sqlstmt
-				+ "					 case when ( m.start_movement < timestamp '2016-01-01 00:00:00.0') then timestamp '2016-01-01 00:00:00.0' else  m.start_movement end as start_movement,";
+				+ "					 case when ( m.start_movement < timestamp '"+StartDateStr+"') then timestamp '"+StartDateStr+"' else  m.start_movement end as start_movement,";
 		sqlstmt = sqlstmt
-				+ "					 case when ( m.end_movement > timestamp '2016-12-31 00:00:00.0') then timestamp '2016-12-31 00:00:00.0' else  m.end_movement end as end_movement,";
+				+ "					 case when ( m.end_movement > timestamp '"+EndDateStr+"') then timestamp '"+EndDateStr+"' else  m.end_movement end as end_movement,";
 		sqlstmt = sqlstmt
 				+ "					  m.dateofnextmvt,  m.dateofprevmvt,  m.rankmvt,  m.rankparent,  m.nextmvt";
 		sqlstmt = sqlstmt + "		from PUBLIC.mvt_num m where nextmvt = ? ";

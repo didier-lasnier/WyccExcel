@@ -45,7 +45,7 @@ public class MenuWycc {
 			public void actionPerformed(ActionEvent e) {
 				Actionuser a = new Actionuser();
 				try {
-					a.lanceLecture();
+					//a.lanceLecture();
 					// a.lireCSV();
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
