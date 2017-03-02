@@ -1,8 +1,12 @@
 package com.poi.actionuser;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -11,9 +15,14 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.eclipse.swt.widgets.DateTime;
 
+import com.dlas.dao.MvtCsv;
 import com.dlas.dao.h2db;
 import com.dlas.dao.hsqltext;
+import com.dlas.tools.CSVMappedMvt;
 import com.dlas.tools.CsvTools;
+import com.dlas.tools.MappingStrategy;
+import com.opencsv.CSVReader;
+import com.opencsv.bean.CsvToBean;
 import com.poi.dlas.FileDialogOld;
 import com.poi.dlas.WyccWorkbook;
 import com.poi.dlas.managecsv;
@@ -155,6 +164,43 @@ public class Actionuser {
 			csfile.readcsvfile(prepStmt, theCSVfile.getAbsolutePath());
 			prepStmt.close();
 		}
+	}
+
+	public void readcsvheader(PreparedStatement stmt, String filenamecsv) throws IOException, SQLException {
+		// Build reader instance
+		// Read data.csv
+		// Default seperator is comma
+		// Default quote character is double quote
+		// Start reading from line number 2 (line numbers start from zero)
+		CSVReader reader = null;
+		MappingStrategy mapping = new MappingStrategy();
+		try {
+			reader = new CSVReader(new FileReader(filenamecsv), ';', '"', 4);
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// Read CSV line by line and use the string array as you want
+		CsvToBean<MvtCsv> csvToBean = new CsvToBean<MvtCsv>();
+		CSVMappedMvt objectCSV = new CSVMappedMvt();
+
+		List<MvtCsv> list = csvToBean.parse(mapping.setColumMapping(), reader);
+
+		String[] nextLine;
+		int i = 5;
+		MvtCsv recordmodule = null;
+		for (MvtCsv object : list) {
+			if (i == 5) {
+				recordmodule = object;
+			} else if (i >= 7) {
+
+			}
+
+			i++;
+		}
+
 	}
 
 }

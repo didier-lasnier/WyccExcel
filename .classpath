@@ -55,5 +55,7 @@
 	<classpathentry kind="lib" path="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.jface.text_3.11.2.v20161113-1700.jar" sourcepath="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.jface.text_3.11.2.v20161113-1700.jar"/>
 	<classpathentry kind="lib" path="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.ui.workbench_3.108.2.v20161025-2029.jar" sourcepath="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.ui.workbench_3.108.2.v20161025-2029.jar"/>
 	<classpathentry kind="lib" path="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.ui.forms_3.7.0.v20160518-1929.jar" sourcepath="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.ui.forms_3.7.0.v20160518-1929.jar"/>
+	<classpathentry kind="lib" path="swing2swt.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/WindowBuilder"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

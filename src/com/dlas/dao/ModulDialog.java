@@ -16,6 +16,7 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Table;
 
 public class ModulDialog extends Dialog {
 
@@ -118,7 +119,7 @@ public class ModulDialog extends Dialog {
 	 */
 	@Override
 	protected Point getInitialSize() {
-		return new Point(450, 300);
+		return new Point(671, 486);
 	}
 
 	private DataBindingContext initDataBindings() {

@@ -16,6 +16,7 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.FileDialog;
@@ -24,6 +25,7 @@ import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 
+import com.jcg.rca.main.Snippet007FullSelection.MyModel;
 import com.poi.actionuser.Actionuser;
 import com.poi.actionuser.ReadFileXlsx;
 
@@ -35,6 +37,20 @@ import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Canvas;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.ProgressBar;
+import org.eclipse.swt.widgets.Table;
+import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.jface.viewers.ColumnLabelProvider;
+import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.viewers.TableViewerColumn;
+import org.eclipse.jface.viewers.TextCellEditor;
+import org.eclipse.jface.viewers.CellEditor;
+import org.eclipse.jface.viewers.ColumnLabelProvider;
+import org.eclipse.jface.viewers.ColumnViewer;
+import org.eclipse.jface.viewers.EditingSupport;
+
+
 
 public class FileDialogApp {
 	Display d;
@@ -45,15 +61,18 @@ public class FileDialogApp {
 	private DateTime StartDate;
 	private DateTime EndDate;
 	
+	private String filepathtxt;
+	private String filepath;
+	
 	static Logger logger = Logger.getLogger("wycc");
+	private Table table;
 //	private final FormToolkit formToolkit = new FormToolkit(d.getDefault());
 //	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 
 	FileDialogApp() {
 		d = new Display();
 		s = new Shell(d);
-		s.setImage(SWTResourceManager.getImage("./img/yatching.jpg"));
-		s.setSize(522, 311);
+		s.setSize(589, 443);
 
 		s.setText("Wycc Invoice");
 		// create the menu system
@@ -234,7 +253,7 @@ public class FileDialogApp {
 		EndDate.setBounds(308, 94, 150, 22);
 		EndDate.setDate(2017, 11, 31);
 		Button btnOk = new Button(s, SWT.NONE);
-		btnOk.setBounds(392, 224, 120, 35);
+		btnOk.setBounds(459, 376, 120, 35);
 		btnOk.setText("Quit");
 		btnOk.addListener(SWT.Selection, new Listener() {
 			
@@ -246,8 +265,8 @@ public class FileDialogApp {
 		    });
 		
 		Label lbl_logo = new Label(s, SWT.NONE);
-		lbl_logo.setImage(SWTResourceManager.getImage("./img/newlogo_bleu.jpg"));
-		lbl_logo.setBounds(10, 10, 177, 147);
+		lbl_logo.setImage(SWTResourceManager.getImage("/Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel/img/newlogo_bleu.jpg"));
+		lbl_logo.setBounds(7, 0, 158, 129);
 //		formToolkit.adapt(lbl_logo, true, true);
 		lbl_logo.setText("logo");
 		
@@ -271,9 +290,38 @@ public class FileDialogApp {
 		Button btnReadFormula = new Button(s, SWT.BORDER | SWT.FLAT);
 		btnReadFormula.setBounds(351, 162, 94, 28);
 		btnReadFormula.setText("Read formula..");
+		
+		TableViewer tableViewer = new TableViewer(s, SWT.BORDER | SWT.FULL_SELECTION);
+		table = tableViewer.getTable();
+		table.setBounds(22, 223, 538, 81);
+		
+	    table.setLayoutData(new GridData(GridData.FILL_BOTH));
+
+	    // Add the first name column
+	    TableColumn tc = new TableColumn(table, SWT.LEFT);
+	    tc.setText("Company");
+	    TableViewerColumn viewerColumn1 = new TableViewerColumn(tableViewer, tc);
+		viewerColumn1.setLabelProvider(new ColumnLabelProvider());
+		viewerColumn1.setEditingSupport(new EditColumns(tableViewer));
+
+	    tc.addSelectionListener(new SelectionAdapter() {
+	      public void widgetSelected(SelectionEvent event) {
+	        
+	      }
+	    });
+	    
+	
+	 // Turn on the header and the lines
+	    table.setHeaderVisible(true);
+	    table.setLinesVisible(true);
+	    
+
+		
+		
+		
 		btnReadFormula.addListener(SWT.Selection, new Listener() {
 		      public void handleEvent(Event event) {
-			        new Read().widgetSelectedBtn(event);;
+			        new Read().widgetSelectedBtn(event);
 			      }
 			    });
 		
@@ -285,13 +333,60 @@ public class FileDialogApp {
 		}
 		d.dispose();
 	}
+	public class MyModel {
+		public int counter;
 
+		public MyModel(int counter) {
+			this.counter = counter;
+		}
+
+		@Override
+		public String toString() {
+			return "Item " + this.counter;
+		}
+	}
+	private MyModel[] createModel() {
+		MyModel[] elements = new MyModel[10];
+
+		for( int i = 0; i < 10; i++ ) {
+			elements[i] = new MyModel(i);
+		}
+
+		return elements;
+	}
+	
+	private class EditColumns extends EditingSupport {
+
+		public EditColumns(ColumnViewer viewer) {
+			super(viewer);
+		}
+
+		@Override
+		protected CellEditor getCellEditor(Object element) {
+			return new TextCellEditor((Composite) getViewer().getControl());
+		}
+
+		@Override
+		protected boolean canEdit(Object element) {
+			return true;
+		}
+
+		@Override
+		protected Object getValue(Object element) {
+			return ((MyModel) element).counter + "";
+		}
+
+		@Override
+		protected void setValue(Object element, Object value) {
+			((MyModel) element).counter = Integer.parseInt(value.toString());
+			getViewer().update(element, null);
+		}
+
+	}
 	public static void main(String[] argv) {
 		final String APP_NAME = "Wycc invoice";
 		Display.setAppName(APP_NAME);
 
 		new FileDialogApp();
 	}
-	
-	
 }
