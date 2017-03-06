@@ -9,11 +9,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 import org.eclipse.swt.widgets.DateTime;
+import com.opencsv.CSVReader;
+import com.opencsv.bean.CsvToBean;
 
 import com.dlas.dao.MvtCsv;
 import com.dlas.dao.h2db;
@@ -21,8 +27,8 @@ import com.dlas.dao.hsqltext;
 import com.dlas.tools.CSVMappedMvt;
 import com.dlas.tools.CsvTools;
 import com.dlas.tools.MappingStrategy;
-import com.opencsv.CSVReader;
-import com.opencsv.bean.CsvToBean;
+import com.dlas.dao.LimitAggCsv;
+
 import com.poi.dlas.FileDialogOld;
 import com.poi.dlas.WyccWorkbook;
 import com.poi.dlas.managecsv;
@@ -166,27 +172,42 @@ public class Actionuser {
 		}
 	}
 
-	public void readcsvheader(PreparedStatement stmt, String filenamecsv) throws IOException, SQLException {
+	public List readAggregate(List<MvtCsv> list){
+		 List<LimitAggCsv> listagg=new ArrayList<>();
+		 List<LimitAggCsv> listaggDistinct=null;
+		 // on construit la liste  des plan
+		 
+		String[] nextLine;
+		int i = 5;
+		MvtCsv recordmodule = null;
+		for (MvtCsv object : list) {
+			if (i == 5) {
+				recordmodule = object;
+			} else if (i >= 7) {
+				listagg.add(new LimitAggCsv(object.getCompany1(),object.getFormula1(),recordmodule.getCompany1(),object.getPolicynumber1(),0f));	
+				listagg.add(new LimitAggCsv(object.getCompany2(),object.getFormula2(),recordmodule.getCompany2(),object.getPolicynumber2(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany3(),object.getFormula3(),recordmodule.getCompany3(),object.getPolicynumber3(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany4(),object.getFormula4(),recordmodule.getCompany4(),object.getPolicynumber4(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany5(),object.getFormula5(),recordmodule.getCompany5(),object.getPolicynumber5(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany6(),object.getFormula(),recordmodule.getCompany6(),object.getPolicynumber6(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany7(),object.getFormula7(),recordmodule.getCompany7(),object.getPolicynumber7(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany8(),object.getFormula8(),recordmodule.getCompany8(),object.getPolicynumber8(),0f));
+			
+			}
+			i++;
+		}
+		Set<LimitAggCsv> setWithUniqueValues = new HashSet<>(listagg);
+		listaggDistinct= new ArrayList<>(setWithUniqueValues);
+		
+		return (List) listaggDistinct;
+	}
+	public void readcsvheader(List<MvtCsv> list) throws IOException, SQLException {
 		// Build reader instance
 		// Read data.csv
 		// Default seperator is comma
 		// Default quote character is double quote
 		// Start reading from line number 2 (line numbers start from zero)
-		CSVReader reader = null;
-		MappingStrategy mapping = new MappingStrategy();
-		try {
-			reader = new CSVReader(new FileReader(filenamecsv), ';', '"', 4);
-
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		// Read CSV line by line and use the string array as you want
-		CsvToBean<MvtCsv> csvToBean = new CsvToBean<MvtCsv>();
-		CSVMappedMvt objectCSV = new CSVMappedMvt();
-
-		List<MvtCsv> list = csvToBean.parse(mapping.setColumMapping(), reader);
+		
 
 		String[] nextLine;
 		int i = 5;
@@ -195,6 +216,7 @@ public class Actionuser {
 			if (i == 5) {
 				recordmodule = object;
 			} else if (i >= 7) {
+
 
 			}
 

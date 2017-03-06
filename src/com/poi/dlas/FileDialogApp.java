@@ -1,5 +1,6 @@
 package com.poi.dlas;
 
+import java.util.List;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -25,7 +26,9 @@ import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 
-import com.jcg.rca.main.Snippet007FullSelection.MyModel;
+import com.dlas.dao.LimitAggCsv;
+import com.dlas.dao.MvtCsv;
+import com.dlas.tools.CsvTools;
 import com.poi.actionuser.Actionuser;
 import com.poi.actionuser.ReadFileXlsx;
 
@@ -45,10 +48,14 @@ import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.TextCellEditor;
+import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.ColumnViewer;
 import org.eclipse.jface.viewers.EditingSupport;
+import org.eclipse.jface.viewers.IStructuredContentProvider;
+import org.eclipse.jface.viewers.ITableLabelProvider;
+import org.eclipse.jface.viewers.LabelProvider;
 
 
 
@@ -66,6 +73,8 @@ public class FileDialogApp {
 	
 	static Logger logger = Logger.getLogger("wycc");
 	private Table table;
+	private List<LimitAggCsv>  listviewer;
+	private TableViewer tableViewer;
 //	private final FormToolkit formToolkit = new FormToolkit(d.getDefault());
 //	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 
@@ -213,6 +222,54 @@ public class FileDialogApp {
 				}
 			}
 		}
+
+//Aggregate		
+		class Aggregate implements SelectionListener {
+			public void widgetSelected(SelectionEvent event) {
+				widgetRead();
+			}
+
+			public void widgetDefaultSelected(SelectionEvent event) {
+			}
+			
+			public void widgetSelectedBtn(Event event) {
+				widgetRead();
+			}
+			public void widgetRead(){
+				File directory = new File(".");
+				String fileCharSep = System.getProperty("file.separator");
+				try {
+				FileDialog fd = new FileDialog(s, SWT.OPEN);
+				fd.setText("Choose a file");
+				fd.setFilterPath(directory.getCanonicalPath());
+				String[] filterExt = { "*.csv"};
+				fd.setFilterExtensions(filterExt);
+				String selected = fd.open();
+				CsvTools a = new CsvTools();
+				Actionuser b = new Actionuser();
+				if (selected !=null) {
+						//ReadFileXlsx a = new ReadFileXlsx();
+						try {
+							
+						List<LimitAggCsv>	listviewer=  b.readAggregate(a.getcsvfile(selected));
+						
+							tableViewer.setInput(listviewer);
+							tableViewer.refresh();
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					}
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	
 		
 		openItem.addSelectionListener(new Open());
 		saveItem.addSelectionListener(new Save());
@@ -271,7 +328,7 @@ public class FileDialogApp {
 		lbl_logo.setText("logo");
 		
 		Button btnReadCsv = new Button(s, SWT.BORDER | SWT.FLAT);
-		btnReadCsv.setBounds(34, 162, 94, 28);
+		btnReadCsv.setBounds(161, 162, 94, 28);
 		btnReadCsv.setText("Read csv..");
 		btnReadCsv.addListener(SWT.Selection, new Listener() {
 		      public void handleEvent(Event event) {
@@ -280,7 +337,7 @@ public class FileDialogApp {
 			      }
 			    });
 		Button btnSaveXls = new Button(s, SWT.BORDER | SWT.FLAT);
-		btnSaveXls.setBounds(202, 162, 94, 28);
+		btnSaveXls.setBounds(294, 162, 94, 28);
 		btnSaveXls.setText("Save xls..");
 		btnSaveXls.addListener(SWT.Selection, new Listener() {
 		      public void handleEvent(Event event) {
@@ -288,43 +345,101 @@ public class FileDialogApp {
 			      }
 			    });
 		Button btnReadFormula = new Button(s, SWT.BORDER | SWT.FLAT);
-		btnReadFormula.setBounds(351, 162, 94, 28);
+		btnReadFormula.setBounds(443, 162, 94, 28);
 		btnReadFormula.setText("Read formula..");
+		btnReadFormula.addListener(SWT.Selection, new Listener() {
+		      public void handleEvent(Event event) {
+			        new Read().widgetSelectedBtn(event);
+			      }
+			    });   
 		
-		TableViewer tableViewer = new TableViewer(s, SWT.BORDER | SWT.FULL_SELECTION);
+		
+	    Button btnAggregate = new Button(s, SWT.BORDER | SWT.FLAT);
+	    btnAggregate.setBounds(30, 162, 94, 28);
+	    btnAggregate.setText("Aggregate");
+	    btnAggregate.addListener(SWT.Selection, new Listener() {
+		      public void handleEvent(Event event) {
+			        new Aggregate().widgetSelectedBtn(event);
+			      }
+			    });
+		
+	    tableViewer = new TableViewer(s, SWT.BORDER | SWT.FULL_SELECTION);
+		tableViewer.setContentProvider(new MyContentProvider());
+		tableViewer.setLabelProvider(new ModelLabelProvider());
 		table = tableViewer.getTable();
 		table.setBounds(22, 223, 538, 81);
-		
 	    table.setLayoutData(new GridData(GridData.FILL_BOTH));
-
-	    // Add the first name column
-	    TableColumn tc = new TableColumn(table, SWT.LEFT);
-	    tc.setText("Company");
-	    TableViewerColumn viewerColumn1 = new TableViewerColumn(tableViewer, tc);
+	   
+	    // Add the first column
+	    TableColumn tc1 = new TableColumn(table, SWT.LEFT);
+	    tc1.setWidth(186);
+	    tc1.setText("Company");
+	    TableViewerColumn viewerColumn1 = new TableViewerColumn(tableViewer, tc1);
 		viewerColumn1.setLabelProvider(new ColumnLabelProvider());
 		viewerColumn1.setEditingSupport(new EditColumns(tableViewer));
-
-	    tc.addSelectionListener(new SelectionAdapter() {
+		
+		
+	    tc1.addSelectionListener(new SelectionAdapter() {
 	      public void widgetSelected(SelectionEvent event) {
 	        
 	      }
 	    });
 	    
-	
-	 // Turn on the header and the lines
-	    table.setHeaderVisible(true);
-	    table.setLinesVisible(true);
-	    
+	    // Add the Snd column
+	    TableColumn tc2 = new TableColumn(table, SWT.LEFT);
+	    tc2.setWidth(147);
+	    tc2.setText("Plan");
+	    TableViewerColumn viewerColumn2 = new TableViewerColumn(tableViewer, tc2);
+		viewerColumn2.setLabelProvider(new ColumnLabelProvider());
+		viewerColumn2.setEditingSupport(new EditColumns(tableViewer));
 
-		
-		
-		
-		btnReadFormula.addListener(SWT.Selection, new Listener() {
-		      public void handleEvent(Event event) {
-			        new Read().widgetSelectedBtn(event);
-			      }
-			    });
-		
+	    tc2.addSelectionListener(new SelectionAdapter() {
+	      public void widgetSelected(SelectionEvent event) {
+	        
+	      }
+	    });
+	    
+	    // Add the thrd column
+	    TableColumn tc3 = new TableColumn(table, SWT.LEFT);
+	    tc3.setWidth(133);
+	    tc3.setText("Formula");
+	    TableViewerColumn viewerColumn3 = new TableViewerColumn(tableViewer, tc3);
+		viewerColumn3.setLabelProvider(new ColumnLabelProvider());
+		viewerColumn3.setEditingSupport(new EditColumns(tableViewer));
+
+	    tc3.addSelectionListener(new SelectionAdapter() {
+	      public void widgetSelected(SelectionEvent event) {
+	        
+	      }
+	    });
+	    
+	    // Add the 4th column
+	    TableColumn tc4 = new TableColumn(table, SWT.LEFT);
+	    tc4.setWidth(70);
+	    tc4.setText("Amount");
+	    TableViewerColumn viewerColumn4 = new TableViewerColumn(tableViewer, tc4);
+		viewerColumn4.setLabelProvider(new ColumnLabelProvider());
+		viewerColumn4.setEditingSupport(new EditColumns(tableViewer));
+
+	    tc4.addSelectionListener(new SelectionAdapter() {
+	      public void widgetSelected(SelectionEvent event) {
+	        
+	      }
+	    });
+	 // Turn on the header and the lines
+	    LimitAggCsv[] MylistModel =createModel();
+	    tableViewer.setInput(MylistModel);
+	    table.setHeaderVisible(true);
+	    table.setLinesVisible(true);		
+	    tableViewer.getTable().addListener(SWT.EraseItem, new Listener() {
+
+			@Override
+			public void handleEvent(Event event) {
+				event.detail &= ~SWT.SELECTED;
+			}
+		});
+
+
 		s.open();
 
 		while (!s.isDisposed()) {
@@ -333,25 +448,78 @@ public class FileDialogApp {
 		}
 		d.dispose();
 	}
-	public class MyModel {
-		public int counter;
-
-		public MyModel(int counter) {
-			this.counter = counter;
-		}
+	
+	private class MyContentProvider implements IStructuredContentProvider {
 
 		@Override
-		public String toString() {
-			return "Item " + this.counter;
+		public Object[] getElements(Object inputElement) {
+			return (LimitAggCsv[]) inputElement;
 		}
+
 	}
-	private MyModel[] createModel() {
-		MyModel[] elements = new MyModel[10];
+	class ModelContentProvider implements IStructuredContentProvider {
 
-		for( int i = 0; i < 10; i++ ) {
-			elements[i] = new MyModel(i);
+	    @SuppressWarnings("unchecked")
+	    @Override
+	    public Object[] getElements(Object inputElement) {
+	        // The inputElement comes from view.setInput()
+	        if (inputElement instanceof List) {
+	            List models = (List) inputElement;
+	            return models.toArray();
+	        }
+	        return new Object[0];
+	    }
+
+	}
+	
+	class ModelLabelProvider extends LabelProvider implements ITableLabelProvider {
+
+		@Override
+		public Image getColumnImage(Object element, int columnIndex) {
+		    // no image to show
+		    return null;
+		}
+		
+		@Override
+		public String getColumnText(Object element, int columnIndex) {
+		    // each element comes from the ContentProvider.getElements(Object)
+		    if (!(element instanceof LimitAggCsv)) {
+		        return "";
+		    }
+		    LimitAggCsv model = (LimitAggCsv) element;
+		    switch (columnIndex) {
+		    case 0:
+		        return model.getCompany();
+		    case 1:
+		        return model.getFormula();
+		    case 2:
+		        return model.getFormulename();
+		    case 3:
+		        return model.getPolicynumber();
+		    case 4:
+		        return "0";
+		    default:
+		        break;
+		    }
+		    return "";
+		}
+		}
+	
+	public class MyModel {
+		public String company;
+		public String formula;
+		public String plan;
+		public float  amount;
+		
+		public MyModel() {
+			
 		}
 
+	}
+	private LimitAggCsv[] createModel() {
+		LimitAggCsv[] elements = new LimitAggCsv[1];
+		LimitAggCsv El =new LimitAggCsv("Soho","Soho","Soho","Soho",0);
+		elements[0] = El;
 		return elements;
 	}
 	
@@ -373,12 +541,12 @@ public class FileDialogApp {
 
 		@Override
 		protected Object getValue(Object element) {
-			return ((MyModel) element).counter + "";
+			return ((MyModel) element).company + "";
 		}
 
 		@Override
 		protected void setValue(Object element, Object value) {
-			((MyModel) element).counter = Integer.parseInt(value.toString());
+			((MyModel) element).company = value.toString();//Integer.parseInt(value.toString());
 			getViewer().update(element, null);
 		}
 

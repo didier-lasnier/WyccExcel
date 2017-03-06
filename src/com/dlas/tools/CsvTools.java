@@ -26,7 +26,7 @@ public class CsvTools {
 		// Default seperator is comma
 		// Default quote character is double quote
 		// Start reading from line number 2 (line numbers start from zero)
-		CSVReader reader = null;
+		/*CSVReader reader = null;
 		MappingStrategy mapping = new MappingStrategy();
 		try {
 			reader = new CSVReader(new FileReader(filenamecsv), ';', '"', 4);
@@ -40,8 +40,8 @@ public class CsvTools {
 		CsvToBean<MvtCsv> csvToBean = new CsvToBean<MvtCsv>();
 		CSVMappedMvt objectCSV = new CSVMappedMvt();
 
-		List<MvtCsv> list = csvToBean.parse(mapping.setColumMapping(), reader);
-
+		List<MvtCsv> list = csvToBean.parse(mapping.setColumMapping(), reader);*/
+		List<MvtCsv> list=getcsvfile(filenamecsv);
 		String[] nextLine;
 		int i = 5;
 		MvtCsv recordmodule = null;
@@ -57,7 +57,29 @@ public class CsvTools {
 		}
 
 	}
+	public List<MvtCsv> getcsvfile( String filenamecsv) throws IOException, SQLException {
+		// Build reader instance
+		// Read data.csv
+		// Default seperator is comma
+		// Default quote character is double quote
+		// Start reading from line number 2 (line numbers start from zero)
+		CSVReader reader = null;
+		MappingStrategy mapping = new MappingStrategy();
+		try {
+			reader = new CSVReader(new FileReader(filenamecsv), ';', '"', 4);
 
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// Read CSV line by line and use the string array as you want
+		CsvToBean<MvtCsv> csvToBean = new CsvToBean<MvtCsv>();
+		CSVMappedMvt objectCSV = new CSVMappedMvt();
+
+		List<MvtCsv> list = csvToBean.parse(mapping.setColumMapping(), reader);
+		return list;
+	}
 	// lecture record
 	public void lireRecord(Mvt csvRecord) {
 
