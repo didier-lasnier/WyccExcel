@@ -255,6 +255,7 @@ public class FileDialogApp {
 						
 							tableViewer.setInput(listviewer);
 							tableViewer.refresh();
+							
 						} catch (Exception e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -427,8 +428,8 @@ public class FileDialogApp {
 	      }
 	    });
 	 // Turn on the header and the lines
-	    LimitAggCsv[] MylistModel =createModel();
-	    tableViewer.setInput(MylistModel);
+	    MyModel[] MylistModel =createModel();
+	    tableViewer.setInput((Object) MylistModel);
 	    table.setHeaderVisible(true);
 	    table.setLinesVisible(true);		
 	    tableViewer.getTable().addListener(SWT.EraseItem, new Listener() {
@@ -438,8 +439,6 @@ public class FileDialogApp {
 				event.detail &= ~SWT.SELECTED;
 			}
 		});
-
-
 		s.open();
 
 		while (!s.isDisposed()) {
@@ -453,7 +452,7 @@ public class FileDialogApp {
 
 		@Override
 		public Object[] getElements(Object inputElement) {
-			return (LimitAggCsv[]) inputElement;
+			return (MyModel[]) inputElement;
 		}
 
 	}
@@ -508,17 +507,22 @@ public class FileDialogApp {
 	public class MyModel {
 		public String company;
 		public String formula;
-		public String plan;
+		public String formulename;
+		public String policynumber;
 		public float  amount;
 		
-		public MyModel() {
-			
+		public MyModel( String company,String formula,String formulename, String policynumber, float  amount ) {
+			this.company =company;
+			this.formula = formula;
+			this.formulename=formulename;
+			this.policynumber=policynumber;
+			this.amount=amount;
 		}
 
 	}
-	private LimitAggCsv[] createModel() {
-		LimitAggCsv[] elements = new LimitAggCsv[1];
-		LimitAggCsv El =new LimitAggCsv("Soho","Soho","Soho","Soho",0);
+	private MyModel[] createModel() {
+		MyModel[] elements = new MyModel[1];
+		MyModel El =new MyModel("Soho","Soho","Soho","Soho",0);
 		elements[0] = El;
 		return elements;
 	}
