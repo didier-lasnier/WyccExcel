@@ -13,17 +13,17 @@ public class Company extends AbstractModelObject {
 	public Company() {
 	}
 
-	public Company(String name) {
-		m_company = name;
+	public Company(String company) {
+		m_company = company;
 	}
 
-	public String getName() {
+	public String getCompany() {
 		return m_company;
 	}
 
-	public void setName(String name) {
+	public void setName(String company) {
 		String oldValue = m_company;
-		m_company = name;
+		m_company = company;
 		firePropertyChange("name", oldValue, m_company);
 	}
 

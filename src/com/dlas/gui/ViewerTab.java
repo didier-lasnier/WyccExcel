@@ -118,7 +118,8 @@ public class ViewerTab  {
 	}
 
 	private void setDefaultValues() {
-
+		Company company = new Company();
+		//m_companies.addCompany(company);
 	}
 	protected void createContents() {
 		shell = new Shell();
@@ -145,16 +146,16 @@ public class ViewerTab  {
 		newCompanyButton.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
 				Company company = new Company();
-				GroupDialog dialog = new GroupDialog(shell, company, true);
-				if (dialog.open() == Window.OK) {
-					m_companies.addCompany(company);
+				//GroupDialog dialog = new GroupDialog(shell, company, true);
+				if (1==1) { //dialog.open() == Window.OK) 
+					m_companies.addCompany(shell,company);
 					m_companyViewer.setSelection(new StructuredSelection(company),
 							true);
 					m_bindingContext.updateModels();
 				}
 			}
 		});
-		newCompanyButton.setText("New...");
+		newCompanyButton.setText("Get aggregate");
 		
 
 		editCompanyButton = new Button(compnayToolBarComposite, SWT.NONE);
@@ -176,13 +177,13 @@ public class ViewerTab  {
 			public void widgetSelected(SelectionEvent e) {
 				IStructuredSelection selection = (IStructuredSelection) m_companyViewer
 						.getSelection();
-				Company group = (Company) selection.getFirstElement();
+				Company company = (Company) selection.getFirstElement();
 				boolean confirm = MessageDialog.openConfirm(shell,
 						"Confirm Delete",
 						"Are you sure you want to delete group '"
-								+ group.getName() + "'?");
+								+ company.getCompany() + "'?");
 				if (confirm) {
-					m_companies.removeGroup(group);
+					m_companies.removeCompany(company);
 					m_bindingContext.updateModels();
 				}
 			}
@@ -253,28 +254,23 @@ public class ViewerTab  {
 		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 		// on définie les clonnes et les headres
 		
-		final TableColumn newColumnTableColumn = new TableColumn(table,
-				SWT.NONE);
+		final TableColumn newColumnTableColumn = new TableColumn(table,SWT.NONE);
 		newColumnTableColumn.setWidth(123);
 		newColumnTableColumn.setText("Company");
 
-		final TableColumn newColumnTableColumn_1 = new TableColumn(table,
-				SWT.NONE);
+		final TableColumn newColumnTableColumn_1 = new TableColumn(table,SWT.NONE);
 		newColumnTableColumn_1.setWidth(168);
 		newColumnTableColumn_1.setText("Formula");
 
-		final TableColumn newColumnTableColumn_2 = new TableColumn(table,
-				SWT.NONE);
+		final TableColumn newColumnTableColumn_2 = new TableColumn(table,SWT.NONE);
 		newColumnTableColumn_2.setWidth(119);
 		newColumnTableColumn_2.setText("Formule name");
 
-		final TableColumn newColumnTableColumn_3 = new TableColumn(table,
-				SWT.NONE);
+		final TableColumn newColumnTableColumn_3 = new TableColumn(table,SWT.NONE);
 		newColumnTableColumn_3.setWidth(100);
 		newColumnTableColumn_3.setText("Policy Number");
 
-		final TableColumn newColumnTableColumn_4 = new TableColumn(table,
-				SWT.NONE);
+		final TableColumn newColumnTableColumn_4 = new TableColumn(table,SWT.NONE);
 		newColumnTableColumn_4.setWidth(100);
 		newColumnTableColumn_4.setText("Amount Aggregate");
 	  
@@ -291,44 +287,40 @@ public class ViewerTab  {
 		final Label label = new Label(detailComposite, SWT.NONE);
 		label.setText("Company:");
 		m_companyText = new Text(detailComposite, SWT.BORDER);
-		m_companyText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true,
-				false));
+		m_companyText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true,false));
 
 		final Label formula = new Label(detailComposite, SWT.NONE);
 		formula.setText("Formula:");
 
 		m_formulaText = new Text(detailComposite, SWT.BORDER);
-		m_formulaText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,
-				true, false));
+		m_formulaText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,true, false));
 
 		final Label formulename = new Label(detailComposite, SWT.NONE);
 		formulename.setText("Formule Name:");
 
 		m_formulenameText = new Text(detailComposite, SWT.BORDER);
-		m_formulenameText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,
-				true, false));
+		m_formulenameText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,true, false));
 
 		final Label policynumberLabel = new Label(detailComposite, SWT.NONE);
 		policynumberLabel.setText("Policy Number:");
 
 		m_policynumberText = new Text(detailComposite, SWT.BORDER);
-		m_policynumberText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,
-				true, false));
+		m_policynumberText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,true, false));
 
 		final Label amountLabel = new Label(detailComposite, SWT.NONE);
 		amountLabel.setText("Amount:");
 
 		m_amountText = new Text(detailComposite, SWT.BORDER);
-		m_amountText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,
-				true, false));
-		sashForm.setWeights(new int[] {161, 617});
+		m_amountText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,true, false));
 		benefitsSashForm.setWeights(new int[] { 1, 1 });
+		sashForm.setWeights(new int[] {172, 614});
 		
-		
+		m_bindingContext = initDataBindings();
 		//	
 	}
 	protected DataBindingContext initDataBindings() {
-		IObservableValue m_benefitsViewerSelectionObserveSelection_3 = ViewersObservables.observeSingleSelection(m_benefitsViewer);
+		
+		IObservableValue m_benefitsViewerSelectionObserveSelection_3 = ViewersObservables.observeSingleSelection(m_benefitsViewer);		
 		IObservableValue table_1SelectionIndexObserveWidget_1 = SWTObservables.observeSingleSelectionIndex(table_1);
 		IObservableValue m_benefitsViewerSelectionObserveSelection_2 = ViewersObservables.observeSingleSelection(m_benefitsViewer);
 		IObservableValue m_companyViewerSelectionObserveSelection = ViewersObservables.observeSingleSelection(m_companyViewer);
@@ -368,13 +360,13 @@ public class ViewerTab  {
 		IObservableMap[] m_companyViewerLabelProviderMaps = BeansObservables.observeMaps(m_companyViewerContentProviderList.getKnownElements(), Company.class, new String[]{"company"});
 		m_companyViewer.setLabelProvider(new ObservableMapLabelProvider(m_companyViewerLabelProviderMaps));
 		//
-		IObservableList m_groupsGroupsObserveList = BeansObservables.observeList(Realm.getDefault(), m_companies, "companies");
-		m_companyViewer.setInput(m_groupsGroupsObserveList);
+		IObservableList m_companiesObserveList = BeansObservables.observeList(Realm.getDefault(), m_companies, "companies");
+		m_companyViewer.setInput(m_companiesObserveList);
 		//
 		ObservableListContentProvider m_benefitsViewerContentProviderList = new ObservableListContentProvider();
 		m_benefitsViewer.setContentProvider(m_benefitsViewerContentProviderList);
 		//
-		IObservableMap[] m_benefitsViewerLabelProviderMaps = BeansObservables.observeMaps(m_benefitsViewerContentProviderList.getKnownElements(), Benefits.class, new String[]{"company", "formula", "policynumber", "mobilePhone1", "mobilePhone2"});
+		IObservableMap[] m_benefitsViewerLabelProviderMaps = BeansObservables.observeMaps(m_benefitsViewerContentProviderList.getKnownElements(), Benefits.class, new String[]{"company", "formula", "formulename", "policynumber", "amount"});
 		m_benefitsViewer.setLabelProvider(new ObservableMapLabelProvider(m_benefitsViewerLabelProviderMaps));
 		//
 		IObservableList m_companyViewerPersonsObserveDetailList = BeansObservables.observeDetailList(Realm.getDefault(), m_companyViewerSelectionObserveSelection, "benefits", com.dlas.gui.model.Benefits.class);

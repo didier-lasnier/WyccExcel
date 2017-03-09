@@ -13,7 +13,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
@@ -196,11 +200,14 @@ public class Actionuser {
 			}
 			i++;
 		}
-		Set<LimitAggCsv> setWithUniqueValues = new HashSet<>(listagg);
-		listaggDistinct= new ArrayList<>(setWithUniqueValues);
+		// Get distinct only
+        listaggDistinct = listagg.stream().filter(distinctByKey(p -> p.getCompany())).collect(Collectors.toList());
+//		Set<LimitAggCsv> setWithUniqueValues = new HashSet<LimitAggCsv>(listagg);
+//		listaggDistinct= new ArrayList<>(setWithUniqueValues);
 		
-		return (List) listaggDistinct;
+		return (List) listagg;
 	}
+	
 	public void readcsvheader(List<MvtCsv> list) throws IOException, SQLException {
 		// Build reader instance
 		// Read data.csv
@@ -225,4 +232,9 @@ public class Actionuser {
 
 	}
 
+	public static <T> Predicate<T> distinctByKey(Function<? super T, Object> keyExtractor) 
+    {
+        Map<Object, Boolean> map = new ConcurrentHashMap<>();
+        return t -> map.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == null;
+    }
 }

@@ -356,6 +356,11 @@ public class FileDialogApp {
 		
 		
 	    Button btnAggregate = new Button(s, SWT.BORDER | SWT.FLAT);
+	    btnAggregate.addSelectionListener(new SelectionAdapter() {
+	    	@Override
+	    	public void widgetSelected(SelectionEvent e) {
+	    	}
+	    });
 	    btnAggregate.setBounds(30, 162, 94, 28);
 	    btnAggregate.setText("Aggregate");
 	    btnAggregate.addListener(SWT.Selection, new Listener() {
