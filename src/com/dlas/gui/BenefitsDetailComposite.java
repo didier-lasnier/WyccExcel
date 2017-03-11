@@ -40,66 +40,38 @@ public class BenefitsDetailComposite extends Composite {
 		label.setText("Company:");
 
 		m_companyText = new Text(this, SWT.BORDER);
-		final GridData gd_m_companyText = new GridData(SWT.FILL, SWT.CENTER, true,
-				false);
-		m_companyText.setLayoutData(gd_m_companyText);
+		m_companyText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true,
+				false));
 
 		final Label amountLabel = new Label(this, SWT.NONE);
 		amountLabel.setText("Amount:");
 
 		m_amountText = new Text(this, SWT.BORDER);
-		final GridData gd_m_amountText = new GridData(SWT.FILL, SWT.CENTER,
-				true, false);
-		m_amountText.setLayoutData(gd_m_amountText);
+		m_amountText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,
+				true, false));
 
 		final Label policynumber = new Label(this, SWT.NONE);
 		policynumber.setText("Policy Number:");
 
 		m_policynumberText = new Text(this, SWT.BORDER);
-		final GridData gd_m_policynumber = new GridData(SWT.FILL, SWT.CENTER,
-				true, false);
-		m_policynumberText.setLayoutData(gd_m_policynumber);
+		m_policynumberText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,
+				true, false));
 
 		final Label formulenameLabel = new Label(this, SWT.NONE);
 		formulenameLabel.setText("Formule name :");
 
 		m_formulenameText = new Text(this, SWT.BORDER);
-		final GridData gd_m_formulename = new GridData(SWT.FILL, SWT.CENTER,
-				true, false);
-		m_formulenameText.setLayoutData(gd_m_formulename);
+		m_formulenameText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,
+				true, false));
 
 		final Label formulaLabel = new Label(this, SWT.NONE);
-		formulaLabel.setText("Mobile Phone 2:");
+		formulaLabel.setText("Formula:");
 
 		m_formulaText = new Text(this, SWT.BORDER);
-		final GridData gd_m_formulaText = new GridData(SWT.FILL, SWT.CENTER,
-				true, false);
-		m_formulaText.setLayoutData(gd_m_formulaText);
+		m_formulaText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER,
+				true, false));
 		
 		m_bindingContext = initDataBindings();
-	}
-	protected DataBindingContext initDataBindings() {
-		IObservableValue m_amountTextTextObserveWidget = SWTObservables.observeText(m_amountText, SWT.Modify);
-		IObservableValue benefitsCompnayObserveValue = BeansObservables.observeValue(m_benefits, "company");
-		IObservableValue m_policynumberTextTextObserveWidget = SWTObservables.observeText(m_policynumberText, SWT.Modify);
-		IObservableValue m_companyTextTextObserveWidget = SWTObservables.observeText(m_companyText, SWT.Modify);
-		IObservableValue benefitsFormulaObserveValue = BeansObservables.observeValue(m_benefits, "formula");
-		IObservableValue benefitsFormulenameObserveValue = BeansObservables.observeValue(m_benefits, "formulename");
-		IObservableValue m_formulaTextTextObserveWidget = SWTObservables.observeText(m_formulaText, SWT.Modify);
-		IObservableValue benefitsAmountObserveValue = BeansObservables.observeValue(m_benefits, "amount");
-		IObservableValue benefitsPolicynumberObserveValue = BeansObservables.observeValue(m_benefits, "policynumber");
-		IObservableValue m_formulenameTextTextObserveWidget = SWTObservables.observeText(m_formulenameText, SWT.Modify);
-		//
-		//
-		DataBindingContext bindingContext = new DataBindingContext();
-		//
-		bindingContext.bindValue(m_companyTextTextObserveWidget, benefitsCompnayObserveValue, null, null);
-		bindingContext.bindValue(m_amountTextTextObserveWidget, benefitsAmountObserveValue, null, null);
-		bindingContext.bindValue(m_policynumberTextTextObserveWidget, benefitsPolicynumberObserveValue, null, null);
-		bindingContext.bindValue(m_formulenameTextTextObserveWidget, benefitsFormulenameObserveValue, null, null);
-		bindingContext.bindValue(m_formulaTextTextObserveWidget, benefitsFormulaObserveValue, null, null);
-		//
-		return bindingContext;
 	}
 	public Benefits getBenefits() {
 		return m_benefits;
@@ -112,4 +84,29 @@ public class BenefitsDetailComposite extends Composite {
 		m_bindingContext = initDataBindings();
 	}
 
+	protected DataBindingContext initDataBindings() {
+		DataBindingContext bindingContext = new DataBindingContext();
+		//
+		IObservableValue m_companyTextTextObserveWidget = SWTObservables.observeText(m_companyText, SWT.Modify);
+		IObservableValue benefitsCompanyObserveValue = BeansObservables.observeValue(m_benefits, "company");
+		bindingContext.bindValue(m_companyTextTextObserveWidget, benefitsCompanyObserveValue, null, null);
+		//
+		IObservableValue m_amountTextTextObserveWidget = SWTObservables.observeText(m_amountText, SWT.Modify);
+		IObservableValue benefitsAmountObserveValue = BeansObservables.observeValue(m_benefits, "amount");
+		bindingContext.bindValue(m_amountTextTextObserveWidget, benefitsAmountObserveValue, null, null);
+		//
+		IObservableValue m_policynumberTextTextObserveWidget = SWTObservables.observeText(m_policynumberText, SWT.Modify);
+		IObservableValue benefitsPolicynumberObserveValue = BeansObservables.observeValue(m_benefits, "policynumber");
+		bindingContext.bindValue(m_policynumberTextTextObserveWidget, benefitsPolicynumberObserveValue, null, null);
+		//
+		IObservableValue m_formulenameTextTextObserveWidget = SWTObservables.observeText(m_formulenameText, SWT.Modify);
+		IObservableValue benefitsFormulenameObserveValue = BeansObservables.observeValue(m_benefits, "formulename");
+		bindingContext.bindValue(m_formulenameTextTextObserveWidget, benefitsFormulenameObserveValue, null, null);
+		//
+		IObservableValue m_formulaTextTextObserveWidget = SWTObservables.observeText(m_formulaText, SWT.Modify);
+		IObservableValue benefitsFormulaObserveValue = BeansObservables.observeValue(m_benefits, "formula");
+		bindingContext.bindValue(m_formulaTextTextObserveWidget, benefitsFormulaObserveValue, null, null);
+		//
+		return bindingContext;
+	}
 }

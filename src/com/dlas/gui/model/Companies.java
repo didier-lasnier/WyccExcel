@@ -45,7 +45,7 @@ public class Companies extends AbstractModelObject {
 						List<LimitAggCsv>	listdistinct =listviewer.stream().filter(distinctByKey(p -> p.getCompany())).collect(Collectors.toList());
 						for (LimitAggCsv agg :listdistinct){
 							Company comp =new 	Company();
-							comp.setName(agg.getCompany());
+							comp.setCompany(agg.getCompany());
 							for (LimitAggCsv distinct : listviewer) {
 								comp.addBenefits(new Benefits(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),distinct.getAmount()));
 							}

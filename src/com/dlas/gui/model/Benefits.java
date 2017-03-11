@@ -2,18 +2,18 @@ package com.dlas.gui.model;
 
 import java.awt.List;
 
-public class Benefits {
+public class Benefits  extends AbstractModelObject{
 	public String company;
 	public String formula;
 	public String formulename;
 	public String policynumber;
-	public float  amount;
+	public String  amount;
 	
 	public Benefits() {
 	}
 
 
-public Benefits(String company, String formula, String formulename, String policynumber, float amount) {
+public Benefits(String company, String formula, String formulename, String policynumber, String amount) {
 		super();
 		this.company = company;
 		this.formula = formula;
@@ -21,6 +21,17 @@ public Benefits(String company, String formula, String formulename, String polic
 		this.policynumber = policynumber;
 		this.amount = amount;
 	}
+
+
+public Benefits(String company2, String formula2, String formulename2, String policynumber2, float amount2) {
+	// TODO Auto-generated constructor stub
+	super();
+	this.company = company2;
+	this.formula = formula2;
+	this.formulename = formulename2;
+	this.policynumber = policynumber2;
+	this.amount = Float.toString(amount2);
+}
 
 
 private List createModel() {
@@ -69,12 +80,12 @@ public void setPolicynumber(String policynumber) {
 }
 
 
-public float getAmount() {
+public String getAmount() {
 	return amount;
 }
 
 
-public void setAmount(float amount) {
+public void setAmount(String amount) {
 	this.amount = amount;
 }
 

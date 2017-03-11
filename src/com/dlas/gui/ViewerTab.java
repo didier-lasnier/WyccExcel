@@ -55,6 +55,7 @@ import com.dlas.gui.model.Companies;
 import com.dlas.gui.model.Company;
 
 import com.dlas.gui.GroupDialog;
+import com.dlas.gui.accueil.MenuAccueil;
 
 
 
@@ -76,10 +77,14 @@ public class ViewerTab  {
 	private Text m_formulaText;
 	private Text m_companyText;
 	private Table table;
-	protected Shell shell;
+	protected static Shell shell;
 	private Button newBenefitsButton;
 	private Button deleteBenefitsButton;
 	private DataBindingContext m_bindingContext;
+	
+	private DateTime startdate;
+	private DateTime enddate;
+	
 	Display d;
 	Shell s;
 	/**
@@ -88,11 +93,17 @@ public class ViewerTab  {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		final String APP_NAME = "Wycc invoice";
+		
 		Display display = new Display();
-		Realm.runWithDefault(SWTObservables.getRealm(display), new Runnable() {
+		shell = new Shell();
+		display.setAppName(APP_NAME);
+
+     		Realm.runWithDefault(SWTObservables.getRealm(display), new Runnable() {
 			public void run() {
 
 				try {
+
 					ViewerTab window = new ViewerTab();
 					window.open();
 				} catch (Exception e) {
@@ -106,9 +117,10 @@ public class ViewerTab  {
 	 * Open the window
 	 */
 	public void open() {
-		final Display display = Display.getDefault();
+		final Display display = Display.getDefault();		
 		setDefaultValues();
 		createContents();
+		MenuAccueil menuaccueil=new MenuAccueil(shell,display,startdate,enddate);
 		shell.open();
 		shell.layout();
 		while (!shell.isDisposed()) {
@@ -122,11 +134,10 @@ public class ViewerTab  {
 		//m_companies.addCompany(company);
 	}
 	protected void createContents() {
-		shell = new Shell();
+
 		shell.setLayout(new FillLayout());
 		shell.setSize(789, 517);
 		shell.setText("Wycc Invoice");
-		
 		final SashForm sashForm = new SashForm(shell, SWT.NONE);
 
 		final Composite companyComposite = new Composite(sashForm, SWT.BORDER);
@@ -320,28 +331,39 @@ public class ViewerTab  {
 	}
 	protected DataBindingContext initDataBindings() {
 		
-		IObservableValue m_benefitsViewerSelectionObserveSelection_3 = ViewersObservables.observeSingleSelection(m_benefitsViewer);		
-		IObservableValue table_1SelectionIndexObserveWidget_1 = SWTObservables.observeSingleSelectionIndex(table_1);
+		IObservableValue m_benefitsViewerSelectionObserveSelection_1 = ViewersObservables.observeSingleSelection(m_benefitsViewer);
 		IObservableValue m_benefitsViewerSelectionObserveSelection_2 = ViewersObservables.observeSingleSelection(m_benefitsViewer);
-		IObservableValue m_companyViewerSelectionObserveSelection = ViewersObservables.observeSingleSelection(m_companyViewer);
-		IObservableValue m_formulaTextTextObserveWidget = SWTObservables.observeText(m_formulaText, SWT.Modify);
-		IObservableValue m_formulenameTextTextObserveWidget = SWTObservables.observeText(m_formulenameText, SWT.Modify);
+		IObservableValue m_benefitsViewerSelectionObserveSelection_3 = ViewersObservables.observeSingleSelection(m_benefitsViewer);	
 		IObservableValue m_benefitsViewerSelectionObserveSelection_4 = ViewersObservables.observeSingleSelection(m_benefitsViewer);
-		IObservableValue m_policynumberTextTextObserveWidget = SWTObservables.observeText(m_policynumberText, SWT.Modify);
-		IObservableValue m_companyTextTextObserveWidget = SWTObservables.observeText(m_companyText, SWT.Modify);
-		IObservableValue m_amountTextTextObserveWidget = SWTObservables.observeText(m_amountText, SWT.Modify);
-		IObservableValue deleteCompanyButtonEnabledObserveWidget = SWTObservables.observeEnabled(deleteCompanyButton);
 		IObservableValue m_benefitsViewerSelectionObserveSelection = ViewersObservables.observeSingleSelection(m_benefitsViewer);
+
+		IObservableValue m_benefitsViewerCompanyObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_4, "company", java.lang.String.class);
+		IObservableValue m_companyTextTextObserveWidget = SWTObservables.observeText(m_companyText, SWT.Modify);
+
+		IObservableValue m_benefitsViewerFormulaObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_1, "formula", java.lang.String.class);
+		IObservableValue m_formulaTextTextObserveWidget = SWTObservables.observeText(m_formulaText, SWT.Modify);
+
+		IObservableValue m_benefitsViewerPolicynumberObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_2, "policynumber", java.lang.String.class);
+		IObservableValue m_policynumberTextTextObserveWidget = SWTObservables.observeText(m_policynumberText, SWT.Modify);
+
+		IObservableValue m_benefitsViewerFormulenameObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection, "formulename", java.lang.String.class);
+		IObservableValue m_formulenameTextTextObserveWidget = SWTObservables.observeText(m_formulenameText, SWT.Modify);
+
+		IObservableValue m_benefitsViewerAmountObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_3, "amount", java.lang.String.class);
+		IObservableValue m_amountTextTextObserveWidget = SWTObservables.observeText(m_amountText, SWT.Modify);
+
+		
+		IObservableValue table_1SelectionIndexObserveWidget_1 = SWTObservables.observeSingleSelectionIndex(table_1);
+		
+		IObservableValue m_companyViewerSelectionObserveSelection = ViewersObservables.observeSingleSelection(m_companyViewer);
+		
+		IObservableValue deleteCompanyButtonEnabledObserveWidget = SWTObservables.observeEnabled(deleteCompanyButton);
 		IObservableValue newCompanyButtonEnabledObserveWidget = SWTObservables.observeEnabled(editCompanyButton);
 		IObservableValue deleteBenefitsButtonEnabledObserveWidget = SWTObservables.observeEnabled(deleteBenefitsButton);
-		IObservableValue m_benefitsViewerSelectionObserveSelection_1 = ViewersObservables.observeSingleSelection(m_benefitsViewer);
+			
 		IObservableValue tableSelectionIndexObserveWidget = SWTObservables.observeSingleSelectionIndex(table);
 		IObservableValue table_1SelectionIndexObserveWidget = SWTObservables.observeSingleSelectionIndex(table_1);
-		IObservableValue m_benefitsViewerCompanyObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_4, "company", java.lang.String.class);
-		IObservableValue m_benefitsViewerFormulaObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_1, "formula", java.lang.String.class);
-		IObservableValue m_benefitsViewerFormulenameObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection, "formulename", java.lang.String.class);
-		IObservableValue m_benefitsViewerPolicynumberObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_2, "policynumber", java.lang.String.class);
-		IObservableValue m_benefitsViewerAmountObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_3, "amount", java.lang.String.class);
+		
 		//
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
@@ -350,10 +372,13 @@ public class ViewerTab  {
 		bindingContext.bindValue(m_benefitsViewerPolicynumberObserveDetailValue, m_policynumberTextTextObserveWidget, null, null);
 		bindingContext.bindValue(m_benefitsViewerFormulenameObserveDetailValue, m_formulenameTextTextObserveWidget, null, null);
 		bindingContext.bindValue(m_benefitsViewerAmountObserveDetailValue, m_amountTextTextObserveWidget, null, null);
+		
 		bindingContext.bindValue(table_1SelectionIndexObserveWidget_1, newCompanyButtonEnabledObserveWidget, new com.dlas.gui.SelectionUpdateValueStrategy(), new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER));
 		bindingContext.bindValue(table_1SelectionIndexObserveWidget, deleteCompanyButtonEnabledObserveWidget, new com.dlas.gui.SelectionUpdateValueStrategy(), new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER));
 		bindingContext.bindValue(tableSelectionIndexObserveWidget, deleteBenefitsButtonEnabledObserveWidget, new com.dlas.gui.SelectionUpdateValueStrategy(), new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER));
-		//
+		/*
+		 *  on tarck les changements de data dans la collection company
+		 */
 		ObservableListContentProvider m_companyViewerContentProviderList = new ObservableListContentProvider();
 		m_companyViewer.setContentProvider(m_companyViewerContentProviderList);
 		//
@@ -362,7 +387,9 @@ public class ViewerTab  {
 		//
 		IObservableList m_companiesObserveList = BeansObservables.observeList(Realm.getDefault(), m_companies, "companies");
 		m_companyViewer.setInput(m_companiesObserveList);
-		//
+		/*
+		 * on track les changements des elements de la liste compny, ce sont les benefits
+		 */
 		ObservableListContentProvider m_benefitsViewerContentProviderList = new ObservableListContentProvider();
 		m_benefitsViewer.setContentProvider(m_benefitsViewerContentProviderList);
 		//

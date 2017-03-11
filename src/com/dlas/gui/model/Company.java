@@ -21,7 +21,7 @@ public class Company extends AbstractModelObject {
 		return m_company;
 	}
 
-	public void setName(String company) {
+	public void setCompany(String company) {
 		String oldValue = m_company;
 		m_company = company;
 		firePropertyChange("name", oldValue, m_company);
