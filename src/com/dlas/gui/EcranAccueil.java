@@ -1,6 +1,7 @@
 package com.dlas.gui;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.beans.BeansObservables;
 import org.eclipse.core.databinding.observable.Realm;
 import org.eclipse.core.databinding.observable.list.IObservableList;
@@ -35,6 +36,10 @@ import com.dlas.gui.model.Company;
 import com.dlas.gui.model.Benefits;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.core.databinding.beans.BeanProperties;
+import org.eclipse.jface.databinding.viewers.ViewerProperties;
+import org.eclipse.core.databinding.beans.PojoProperties;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.core.databinding.Binding;
 
 public class EcranAccueil {
 	private Button deleteCompanyButton;
@@ -220,52 +225,6 @@ public class EcranAccueil {
 
 		
 	}
-	
-/*	protected DataBindingContext initDataBindings() {
-		IObservableValue m_benefitsViewerSelectionObserveSelection_1 = ViewersObservables.observeSingleSelection(m_benefitsViewer);
-		IObservableValue m_benefitsViewerSelectionObserveSelection_2 = ViewersObservables.observeSingleSelection(m_benefitsViewer);
-		IObservableValue m_benefitsViewerSelectionObserveSelection_3 = ViewersObservables.observeSingleSelection(m_benefitsViewer);	
-		IObservableValue m_benefitsViewerSelectionObserveSelection_4 = ViewersObservables.observeSingleSelection(m_benefitsViewer);
-		IObservableValue m_benefitsViewerSelectionObserveSelection = ViewersObservables.observeSingleSelection(m_benefitsViewer);
-		
-		IObservableValue m_benefitsViewerCompanyObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_4, "company", java.lang.String.class);
-		IObservableValue m_companyTextTextObserveWidget = SWTObservables.observeText(m_companyText, SWT.Modify);
-
-		IObservableValue m_benefitsViewerFormulaObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_1, "formula", java.lang.String.class);
-		IObservableValue m_formulaTextTextObserveWidget = SWTObservables.observeText(m_formulaText, SWT.Modify);
-
-		IObservableValue m_benefitsViewerPolicynumberObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_2, "policynumber", java.lang.String.class);
-		IObservableValue m_policynumberTextTextObserveWidget = SWTObservables.observeText(m_policynumberText, SWT.Modify);
-
-		IObservableValue m_benefitsViewerFormulenameObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection, "formulename", java.lang.String.class);
-		IObservableValue m_formulenameTextTextObserveWidget = SWTObservables.observeText(m_formulenameText, SWT.Modify);
-
-		IObservableValue m_benefitsViewerAmountObserveDetailValue = BeansObservables.observeDetailValue(Realm.getDefault(), m_benefitsViewerSelectionObserveSelection_3, "amount", java.lang.String.class);
-		IObservableValue m_amountTextTextObserveWidget = SWTObservables.observeText(m_amountText, SWT.Modify);
-
-		
-		DataBindingContext bindingContext = new DataBindingContext();
-		bindingContext.bindValue(m_benefitsViewerCompanyObserveDetailValue, m_companyTextTextObserveWidget, null, null);
-		bindingContext.bindValue(m_benefitsViewerFormulaObserveDetailValue, m_formulaTextTextObserveWidget, null, null);
-		bindingContext.bindValue(m_benefitsViewerPolicynumberObserveDetailValue, m_policynumberTextTextObserveWidget, null, null);
-		bindingContext.bindValue(m_benefitsViewerFormulenameObserveDetailValue, m_formulenameTextTextObserveWidget, null, null);
-		bindingContext.bindValue(m_benefitsViewerAmountObserveDetailValue, m_amountTextTextObserveWidget, null, null);
-		
-		IObservableValue m_benfitsViewerSelectionObserveSelection = ViewersObservables.observeSingleSelection(m_benefitsViewer);
-
-		ObservableListContentProvider m_benefitsViewerContentProviderList = new ObservableListContentProvider();
-		m_benefitsViewer.setContentProvider(m_benefitsViewerContentProviderList);
-		IObservableList m_benefitsObserveList = BeansObservables.observeList(Realm.getDefault(), m_company, "benefits");
-		//
-		IObservableMap[] m_benefitsViewerLabelProviderMaps = BeansObservables.observeMaps(m_benefitsViewerContentProviderList.getKnownElements(), Benefits.class, new String[]{"company", "formula", "formulename", "policynumber", "amount"});
-		m_benefitsViewer.setLabelProvider(new ObservableMapLabelProvider(m_benefitsViewerLabelProviderMaps));
-		//
-		IObservableList m_benefitsViewerPersonsObserveDetailList = BeansObservables.observeDetailList(Realm.getDefault(), m_benfitsViewerSelectionObserveSelection, "benefits", com.dlas.gui.model.Benefits.class);
-		m_benefitsViewer.setInput(m_benefitsViewerPersonsObserveDetailList);
-		
-		
-		return bindingContext;
-	}*/
 	protected DataBindingContext initDataBindings() {
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
@@ -276,6 +235,31 @@ public class EcranAccueil {
 		//
 		IObservableList benefitsBenefitsObserveList = BeanProperties.list("benefits").observe(m_benefits);
 		m_benefitsViewer.setInput(benefitsBenefitsObserveList);
+		//
+		IObservableValue observeSingleSelectionBenefitsViewer = ViewerProperties.singleSelection().observe(m_benefitsViewer);
+		IObservableValue benefitsViewerCompanyObserveDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionBenefitsViewer, "company", String.class);
+		IObservableValue textCompanyTextObserveValue = SWTObservables.observeText(m_companyText, SWT.Modify);
+		bindingContext.bindValue(benefitsViewerCompanyObserveDetailValue, textCompanyTextObserveValue, null, null);
+		//
+		IObservableValue observeSingleSelectionBenefitsViewer_1 = ViewerProperties.singleSelection().observe(m_benefitsViewer);
+		IObservableValue benefitsViewerFormulaObserveDetailValue = BeanProperties.value(Benefit.class, "formula", String.class).observeDetail(observeSingleSelectionBenefitsViewer_1);
+		IObservableValue observeTextFormulaTextObserveWidget = WidgetProperties.text(SWT.Modify).observe(m_formulaText);
+		bindingContext.bindValue(benefitsViewerFormulaObserveDetailValue, observeTextFormulaTextObserveWidget, null, null);
+		//
+		IObservableValue observeSingleSelectionBenefitsViewer_2 = ViewerProperties.singleSelection().observe(m_benefitsViewer);
+		IObservableValue benefitsViewerFormulenameObserveDetailValue = BeanProperties.value(Benefit.class, "formulename", String.class).observeDetail(observeSingleSelectionBenefitsViewer_2);
+		IObservableValue observeTextFormulenameTextObserveWidget = WidgetProperties.text(SWT.Modify).observe(m_formulenameText);
+		bindingContext.bindValue(benefitsViewerFormulenameObserveDetailValue, observeTextFormulenameTextObserveWidget, null, null);
+		//
+		IObservableValue observeSingleSelectionBenefitsViewer_3 = ViewerProperties.singleSelection().observe(m_benefitsViewer);
+		IObservableValue benefitsViewerPolicynumberObserveDetailValue = BeanProperties.value(Benefit.class, "policynumber", String.class).observeDetail(observeSingleSelectionBenefitsViewer_3);
+		IObservableValue observeTextPolicynumberTextObserveWidget = WidgetProperties.text(SWT.Modify).observe(m_policynumberText);
+		bindingContext.bindValue(benefitsViewerPolicynumberObserveDetailValue, observeTextPolicynumberTextObserveWidget, null, null);
+		//
+		IObservableValue observeSingleSelectionBenefitsViewer_4 = ViewerProperties.singleSelection().observe(m_benefitsViewer);
+		IObservableValue benefitsViewerAmountObserveDetailValue = BeanProperties.value(Benefit.class, "amount", String.class).observeDetail(observeSingleSelectionBenefitsViewer_4);
+		IObservableValue observeTextAmountTextObserveWidget = WidgetProperties.text(SWT.Modify).observe(m_amountText);
+		bindingContext.bindValue(benefitsViewerAmountObserveDetailValue, observeTextAmountTextObserveWidget, null, null);
 		//
 		return bindingContext;
 	}
