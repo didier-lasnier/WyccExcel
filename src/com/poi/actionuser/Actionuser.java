@@ -14,6 +14,7 @@ import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
@@ -179,6 +180,7 @@ public class Actionuser {
 	public List readAggregate(List<MvtCsv> list){
 		 List<LimitAggCsv> listagg=new ArrayList<>();
 		 List<LimitAggCsv> listaggDistinct=null;
+		 List<LimitAggCsv> listnotnull=null;
 		 // on construit la liste  des plan
 		 
 		String[] nextLine;
@@ -201,11 +203,12 @@ public class Actionuser {
 			i++;
 		}
 		// Get distinct only
-        listaggDistinct = listagg.stream().filter(distinctByKey(p -> p.getCompany())).collect(Collectors.toList());
+        listaggDistinct = listagg.stream().distinct().collect(Collectors.toList());
+        listnotnull = listaggDistinct.stream().filter(c -> c.getCompany()!= null && !c.getCompany().equals("") ).collect(Collectors.toList());
 //		Set<LimitAggCsv> setWithUniqueValues = new HashSet<LimitAggCsv>(listagg);
 //		listaggDistinct= new ArrayList<>(setWithUniqueValues);
 		
-		return (List) listagg;
+		return (List) listnotnull;
 	}
 	
 	public void readcsvheader(List<MvtCsv> list) throws IOException, SQLException {

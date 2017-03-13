@@ -43,14 +43,23 @@ public class Companies extends AbstractModelObject {
 							
 						List<LimitAggCsv>	listviewer=  b.readAggregate(a.getcsvfile(selected));
 						List<LimitAggCsv>	listdistinct =listviewer.stream().filter(distinctByKey(p -> p.getCompany())).collect(Collectors.toList());
+						if (false) {
+						Company comp =new 	Company();
+						for (LimitAggCsv distinct : listviewer) {
+							comp.addBenefits(new Benefit(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),distinct.getAmount()));
+						}
+						m_companies.add(comp);
+						} else {
 						for (LimitAggCsv agg :listdistinct){
 							Company comp =new 	Company();
 							comp.setCompany(agg.getCompany());
 							for (LimitAggCsv distinct : listviewer) {
-								comp.addBenefits(new Benefits(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),distinct.getAmount()));
+								comp.addBenefits(new Benefit(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),distinct.getAmount()));
 							}
 							m_companies.add(comp);
 						}
+						}
+						
 						} catch (Exception e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();

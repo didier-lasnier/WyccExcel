@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.dlas.gui.model.AbstractModelObject;
-import com.dlas.gui.model.Benefits;
+import com.dlas.gui.model.Benefit;
 
 public class Company extends AbstractModelObject {
 	private final List/* <Benefits> */m_benefits = new ArrayList();
@@ -27,12 +27,12 @@ public class Company extends AbstractModelObject {
 		firePropertyChange("name", oldValue, m_company);
 	}
 
-	public void addBenefits(Benefits benefits) {
+	public void addBenefits(Benefit benefits) {
 		m_benefits.add(benefits);
 		firePropertyChange("benefits", null, m_benefits);
 	}
 
-	public void removeBenefits(Benefits benefits) {
+	public void removeBenefits(Benefit benefits) {
 		m_benefits.remove(benefits);
 		firePropertyChange("benefits", null, m_benefits);
 	}

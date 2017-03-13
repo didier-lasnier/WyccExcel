@@ -40,7 +40,7 @@
 			<attribute name="javadoc_location" value="jar:platform:/resource/WyccExcel/lib/miglayout-core-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.core.databinding_1.6.0.v20160412-0910.jar" sourcepath="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.core.databinding_1.6.0.v20160412-0910.jar"/>
+	<classpathentry kind="lib" path="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.core.databinding_1.6.0.v20160412-0910.jar" sourcepath="/Users/didierlasnier/.m2/repository/org/eclipse/platform/org.eclipse.core.databinding/1.6.0/org.eclipse.core.databinding-1.6.0-sources.jar"/>
 	<classpathentry kind="lib" path="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.core.databinding.beans_1.3.100.v20160509-1025.jar" sourcepath="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.core.databinding.beans_1.3.100.v20160509-1025.jar"/>
 	<classpathentry kind="lib" path="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.core.databinding.observable_1.6.0.v20160511-1747.jar" sourcepath="/Users/didierlasnier/.m2/repository/org/eclipse/platform/org.eclipse.core.databinding.observable/1.6.0/org.eclipse.core.databinding.observable-1.6.0-sources.jar"/>
 	<classpathentry kind="lib" path="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.core.databinding.property_1.6.0.v20160427-0852.jar" sourcepath="/Users/didierlasnier/.p2/pool/plugins/org.eclipse.core.databinding.property_1.6.0.v20160427-0852.jar"/>

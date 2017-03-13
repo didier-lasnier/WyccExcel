@@ -11,11 +11,11 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
-import com.dlas.gui.model.Benefits;
+import com.dlas.gui.model.Benefit;
 
 public class BenefitsDetailComposite extends Composite {
 
-	private Benefits m_benefits = new Benefits();
+	private Benefit m_benefits = new Benefit();
 	
 	private Text m_formulaText;
 	private Text m_formulenameText;
@@ -73,10 +73,10 @@ public class BenefitsDetailComposite extends Composite {
 		
 		m_bindingContext = initDataBindings();
 	}
-	public Benefits getBenefits() {
+	public Benefit getBenefits() {
 		return m_benefits;
 	}
-	public void setBenefits(Benefits benefits) {
+	public void setBenefits(Benefit benefits) {
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 		}

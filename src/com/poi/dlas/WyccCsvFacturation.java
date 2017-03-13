@@ -18,28 +18,12 @@ limitations under the License.
 
 package com.poi.dlas;
 
-//import org.apache.poi.xssf.usermodel.*;
-//import org.apache.poi.ss.usermodel.*;
-//import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-//
-//import java.util.Map;
-//import java.util.HashMap;
-//import java.util.Calendar;
-//import java.io.FileOutputStream;
+
 import java.io.File;
-//import java.text.SimpleDateFormat;
-//
-//import java.util.Arrays;
-//import java.util.ArrayList;
+
 
 import java.util.List;
 import org.apache.log4j.Logger;
-//import org.apache.log4j.PropertyConfigurator;
-
-//import java.sql.Connection;
-//import java.sql.DriverManager;
-//import java.sql.ResultSet;
-//import java.sql.SQLException;
 import java.sql.Statement;
 
 import com.poi.dlas.FileDialogOld;

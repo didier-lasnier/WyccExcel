@@ -50,7 +50,7 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.wb.swt.SWTResourceManager;
 
-import com.dlas.gui.model.Benefits;
+import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Companies;
 import com.dlas.gui.model.Company;
 
@@ -226,7 +226,7 @@ public class ViewerTab  {
 				.getSelection();
 				Company company = (Company) companySelection.getFirstElement();
 				if (company != null) {
-					Benefits benefits = new Benefits();
+					Benefit benefits = new Benefit();
 					company.addBenefits(benefits);
 					m_benefitsViewer.setSelection(new StructuredSelection(benefits), true);
 					m_bindingContext.updateModels();
@@ -243,7 +243,7 @@ public class ViewerTab  {
 				IStructuredSelection benefitsSelection = (IStructuredSelection) m_benefitsViewer
 						.getSelection();
 				Company company = (Company) benefitsSelection.getFirstElement();
-				Benefits benefits = (Benefits) benefitsSelection.getFirstElement();
+				Benefit benefits = (Benefit) benefitsSelection.getFirstElement();
 				boolean confirm = MessageDialog.openConfirm(shell,
 						"Confirm Delete",
 						"Are you sure you want to delete benefits '"
@@ -388,15 +388,15 @@ public class ViewerTab  {
 		IObservableList m_companiesObserveList = BeansObservables.observeList(Realm.getDefault(), m_companies, "companies");
 		m_companyViewer.setInput(m_companiesObserveList);
 		/*
-		 * on track les changements des elements de la liste compny, ce sont les benefits
+		 * on track les changements des elements de la liste company, ce sont les benefits
 		 */
 		ObservableListContentProvider m_benefitsViewerContentProviderList = new ObservableListContentProvider();
 		m_benefitsViewer.setContentProvider(m_benefitsViewerContentProviderList);
 		//
-		IObservableMap[] m_benefitsViewerLabelProviderMaps = BeansObservables.observeMaps(m_benefitsViewerContentProviderList.getKnownElements(), Benefits.class, new String[]{"company", "formula", "formulename", "policynumber", "amount"});
+		IObservableMap[] m_benefitsViewerLabelProviderMaps = BeansObservables.observeMaps(m_benefitsViewerContentProviderList.getKnownElements(), Benefit.class, new String[]{"company", "formula", "formulename", "policynumber", "amount"});
 		m_benefitsViewer.setLabelProvider(new ObservableMapLabelProvider(m_benefitsViewerLabelProviderMaps));
 		//
-		IObservableList m_companyViewerPersonsObserveDetailList = BeansObservables.observeDetailList(Realm.getDefault(), m_companyViewerSelectionObserveSelection, "benefits", com.dlas.gui.model.Benefits.class);
+		IObservableList m_companyViewerPersonsObserveDetailList = BeansObservables.observeDetailList(Realm.getDefault(), m_companyViewerSelectionObserveSelection, "benefits", com.dlas.gui.model.Benefit.class);
 		m_benefitsViewer.setInput(m_companyViewerPersonsObserveDetailList);
 		//
 		return bindingContext;

@@ -1,6 +1,7 @@
 package com.dlas.dao;
 
 import java.awt.List;
+import java.util.Objects;
 
 public class LimitAggCsv {
 
@@ -79,5 +80,23 @@ public class LimitAggCsv {
 		this.amount = amount;
 	}
 
+    @Override
+    public boolean equals(Object o) {
+
+        if (o == this) return true;
+        if (!(o instanceof LimitAggCsv)) {
+            return false;
+        }
+        LimitAggCsv limitaggcsv = (LimitAggCsv) o;
+        return  Objects.equals(company,limitaggcsv.company) &&
+                Objects.equals(formula, limitaggcsv.formula) &&
+                Objects.equals(formulename, limitaggcsv.formulename) &&
+        		Objects.equals(policynumber, limitaggcsv.policynumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(company, formula, formulename,policynumber);
+    }
 
 }
