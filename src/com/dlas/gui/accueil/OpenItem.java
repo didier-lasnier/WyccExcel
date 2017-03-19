@@ -36,6 +36,7 @@ public class OpenItem implements SelectionListener {
 	public void widgetSelectedBtn(SelectionEvent event) {
 		widgetOpen( s,StartD,  EndD);
 	}
+	
 	public void widgetOpen(Shell s,DateTime StartD, DateTime EndD){
 		File directory = new File(".");
 		String fileCharSep = System.getProperty("file.separator");
@@ -49,7 +50,6 @@ public class OpenItem implements SelectionListener {
 			String selected = fd.open();
 			if (selected !=null) {
 				Actionuser a = new Actionuser();
-
 				a.lanceLecture(selected, StartD, EndD);
 
 			}

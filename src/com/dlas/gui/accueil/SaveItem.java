@@ -18,7 +18,7 @@ public class SaveItem implements SelectionListener {
 	private Shell    s;
 
 
-	public void SaveItem(){
+	public SaveItem(){
 
 	}
 	
@@ -57,6 +57,7 @@ public class SaveItem implements SelectionListener {
 					e1.printStackTrace();
 				}
 			}
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

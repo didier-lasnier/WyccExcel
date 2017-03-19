@@ -1,5 +1,15 @@
 package com.dlas.gui;
 
+
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+import org.hibernate.Transaction;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.beans.BeansObservables;
@@ -7,12 +17,19 @@ import org.eclipse.core.databinding.observable.Realm;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.databinding.beans.BeanProperties;
+import org.eclipse.core.databinding.beans.PojoProperties;
+import org.eclipse.core.databinding.Binding;
+
 import org.eclipse.jface.databinding.swt.SWTObservables;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.databinding.viewers.ViewersObservables;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.viewers.ViewerProperties;
+
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -24,26 +41,33 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
+
+import com.dlas.dao.ObjectDao;
+import com.dlas.dao.BenefitDb;
 
 import com.dlas.gui.accueil.MenuAccueil;
+import com.dlas.gui.accueil.OpenItem;
+import com.dlas.gui.accueil.ReadItem;
+import com.dlas.gui.accueil.SaveItem;
 import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Companies;
 import com.dlas.gui.model.Company;
 import com.dlas.gui.model.Benefits;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.core.databinding.beans.BeanProperties;
-import org.eclipse.jface.databinding.viewers.ViewerProperties;
-import org.eclipse.core.databinding.beans.PojoProperties;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.core.databinding.Binding;
+
+
+
 
 public class EcranAccueil {
 	private Button deleteCompanyButton;
 	private Button AggregateButton;
+	private Button SaveButton;
 	private Table table_1;
 	private Button editCompanyButton;
 	private TableViewer m_benefitsViewer;
@@ -63,6 +87,8 @@ public class EcranAccueil {
 	
 	private DateTime startdate;
 	private DateTime enddate;
+	private String filepathtxt;
+	private String filepath;
 	
 	Display d;
 	Shell s;
@@ -117,14 +143,13 @@ public class EcranAccueil {
 		companyComposite.setLayout(gridLayout);
 		
 		final Composite companyToolBarComposite = new Composite(companyComposite, SWT.NONE);
-		final GridLayout gridLayout_3 = new GridLayout(3, false);
+		final GridLayout gridLayout_3 = new GridLayout(15, false);
 		companyToolBarComposite.setLayout(gridLayout_3);
 		companyToolBarComposite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
-		// bouton 
+		// bouton Aggregate
 		AggregateButton = new Button(companyToolBarComposite, SWT.NONE);
 		AggregateButton.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				Company company = new Company();
 				Benefit benefit = new Benefit();
 				//GroupDialog dialog = new GroupDialog(shell, company, true);
 				if (1==1) { //dialog.open() == Window.OK) 
@@ -138,9 +163,33 @@ public class EcranAccueil {
 		});
 		
 		AggregateButton.setText("Get aggregate");
-		new Label(companyToolBarComposite, SWT.NONE);
-		new Label(companyToolBarComposite, SWT.NONE);
-		
+		//new Label(companyToolBarComposite, SWT.NONE);
+		SaveButton = new Button(companyToolBarComposite, SWT.NONE);
+		SaveButton.setText("Save..");
+		SaveButton.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent e) {
+				// on enregistre les Aggegate
+				ObjectDao myobj = new ObjectDao();
+				Session lasession = myobj.getSessionDao();
+				List<Benefit> mbenefits =m_benefits.getBenefits();
+				
+				lasession.beginTransaction(); 
+				 for ( Benefit m_benefit : mbenefits ){
+					BenefitDb benedb =new BenefitDb();
+					benedb.setCompany(m_benefit.getCompany());
+					benedb.setFormula(m_benefit.getFormula());
+					benedb.setFormulename(m_benefit.getFormulename());
+					benedb.setPolicynumber(m_benefit.getPolicynumber());
+					benedb.setAmount(m_benefit.getAmount());
+					lasession.save(benedb);
+				 }					 
+				  lasession.getTransaction().commit(); 
+				  lasession.close();
+				 
+				
+				
+			}
+		});
 		// 
 		final SashForm benefitsSashForm = new SashForm(sashForm, SWT.VERTICAL);
 		final Composite benefitsComposite = new Composite(benefitsSashForm, SWT.BORDER);

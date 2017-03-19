@@ -47,7 +47,7 @@ public class Benefits extends AbstractModelObject {
 
 					} else {
 					for (LimitAggCsv agg :listdistinct){
-						Benefit comp =new 	Benefit();
+						
 						for (LimitAggCsv distinct : listviewer) {
 							m_benefits.add(new Benefit(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),distinct.getAmount()));
 						}

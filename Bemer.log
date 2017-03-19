@@ -2385,3 +2385,158 @@
 [2017-02-28 00:35:02,560]-[main] INFO  wycc  - delete from beneficiaire
 [2017-02-28 00:35:02,786]-[main] INFO  wycc  - Insert Beneficiaries
 [2017-02-28 00:35:03,309]-[main] INFO  wycc  - DONE !
+[2017-03-18 15:31:30,383]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-03-18 15:31:30,397]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-03-18 15:31:30,668]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-03-18 15:31:30,783]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-03-18 15:31:30,792]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql]
+[2017-03-18 15:31:30,793]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-03-18 15:31:30,793]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-03-18 15:31:30,796]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-03-18 15:31:31,226]-[main] INFO  hsqldb.db.HSQLDB5AE1D49A89.ENGINE  - Checkpoint start
+[2017-03-18 15:31:31,226]-[main] INFO  hsqldb.db.HSQLDB5AE1D49A89.ENGINE  - checkpointClose start
+[2017-03-18 15:31:31,226]-[main] INFO  hsqldb.db.HSQLDB5AE1D49A89.ENGINE  - checkpointClose synched
+[2017-03-18 15:31:31,229]-[main] INFO  hsqldb.db.HSQLDB5AE1D49A89.ENGINE  - checkpointClose script done
+[2017-03-18 15:31:31,236]-[main] INFO  hsqldb.db.HSQLDB5AE1D49A89.ENGINE  - checkpointClose end
+[2017-03-18 15:31:31,237]-[main] INFO  hsqldb.db.HSQLDB5AE1D49A89.ENGINE  - Checkpoint end - txts: 1
+[2017-03-18 15:31:31,282]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-03-18 15:31:31,806]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-03-19 10:56:00,677]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-03-19 10:56:00,687]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-03-19 10:56:01,073]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-03-19 10:56:01,232]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-03-19 10:56:01,237]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql]
+[2017-03-19 10:56:01,238]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-03-19 10:56:01,238]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-03-19 10:56:01,241]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-03-19 10:56:02,160]-[main] INFO  hsqldb.db..ENGINE  - open start - state modified
+[2017-03-19 10:56:02,190]-[main] INFO  hsqldb.db..ENGINE  - checkpointClose start
+[2017-03-19 10:56:02,190]-[main] INFO  hsqldb.db..ENGINE  - checkpointClose synched
+[2017-03-19 10:56:02,198]-[main] INFO  hsqldb.db..ENGINE  - checkpointClose script done
+[2017-03-19 10:56:02,219]-[main] INFO  hsqldb.db..ENGINE  - checkpointClose end
+[2017-03-19 10:56:02,284]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-03-19 10:56:02,997]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-03-19 11:00:52,700]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-03-19 11:00:52,704]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-03-19 11:00:52,894]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-03-19 11:00:52,968]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-03-19 11:00:52,971]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql]
+[2017-03-19 11:00:52,971]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-03-19 11:00:52,972]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-03-19 11:00:52,975]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-03-19 11:00:53,284]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-03-19 11:00:53,316]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-03-19 11:00:53,657]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-03-19 11:05:36,757]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-03-19 11:05:36,760]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-03-19 11:05:36,935]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-03-19 11:05:36,997]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-03-19 11:05:37,001]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql]
+[2017-03-19 11:05:37,001]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-03-19 11:05:37,002]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-03-19 11:05:37,005]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-03-19 11:05:47,536]-[main] FATAL hsqldb.db..ENGINE  - could not reopen database
+org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@31ff6438[file =/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2017-03-19 10:05:46 heartbeat - read: -3228 ms.
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.persist.LockFile.newLockFileLock(Unknown Source)
+	at org.hsqldb.persist.Logger.acquireLock(Unknown Source)
+	at org.hsqldb.persist.Logger.open(Unknown Source)
+	at org.hsqldb.Database.reopen(Unknown Source)
+	at org.hsqldb.Database.open(Unknown Source)
+	at org.hsqldb.DatabaseManager.getDatabase(Unknown Source)
+	at org.hsqldb.DatabaseManager.newSession(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.addConnections(PooledConnections.java:123)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:42)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:20)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections$Builder.build(PooledConnections.java:161)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:109)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:72)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:240)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:145)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:257)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:231)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:240)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:418)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:87)
+	at com.dlas.dao.hibernateutils.getSessionFactory(hibernateutils.java:23)
+	at com.dlas.dao.ObjectDao.getSessionDao(ObjectDao.java:23)
+	at com.dlas.gui.EcranAccueil$3.widgetSelected(EcranAccueil.java:174)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1501)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1509)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1313)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4080)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3706)
+	at com.dlas.gui.EcranAccueil.open(EcranAccueil.java:125)
+	at com.dlas.gui.EcranAccueil$1.run(EcranAccueil.java:109)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at com.dlas.gui.EcranAccueil.main(EcranAccueil.java:103)
+[2017-03-19 11:07:59,846]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-03-19 11:07:59,849]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-03-19 11:08:00,026]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-03-19 11:08:00,092]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-03-19 11:08:00,095]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql]
+[2017-03-19 11:08:00,097]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-03-19 11:08:00,097]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-03-19 11:08:00,100]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-03-19 11:08:00,397]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-03-19 11:08:00,427]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-03-19 11:08:00,721]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-03-19 11:12:58,688]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-03-19 11:12:58,691]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-03-19 11:12:58,868]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-03-19 11:12:58,934]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-03-19 11:12:58,937]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql]
+[2017-03-19 11:12:58,937]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-03-19 11:12:58,938]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-03-19 11:12:58,941]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-03-19 11:12:59,269]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-03-19 11:12:59,298]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-03-19 11:12:59,609]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-03-19 11:15:21,829]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-03-19 11:15:21,889]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-03-19 11:15:22,079]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-03-19 11:15:22,148]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-03-19 11:15:22,151]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql]
+[2017-03-19 11:15:22,151]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-03-19 11:15:22,152]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-03-19 11:15:22,154]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-03-19 11:15:22,595]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-03-19 11:15:22,643]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-03-19 11:15:23,030]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-03-19 11:15:23,307]-[main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: -5501, SQLState: 42501
+[2017-03-19 11:15:23,308]-[main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - user lacks privilege or object not found: HIBERNATE_SEQUENCE in statement [call next value for PUBLIC.hibernate_sequence]
+[2017-03-19 11:19:03,977]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-03-19 11:19:03,980]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-03-19 11:19:04,159]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-03-19 11:19:04,221]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-03-19 11:19:04,224]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql]
+[2017-03-19 11:19:04,225]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-03-19 11:19:04,225]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-03-19 11:19:04,228]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-03-19 11:19:04,525]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-03-19 11:19:04,554]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-03-19 11:19:04,893]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-03-19 11:19:05,144]-[main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: -5501, SQLState: 42501
+[2017-03-19 11:19:05,144]-[main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - user lacks privilege or object not found: AGGREGATE_TAB in statement [insert into PUBLIC.AGGREGATE_TAB (AGGREGATE_ID) values (default)]

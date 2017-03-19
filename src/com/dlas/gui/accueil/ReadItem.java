@@ -17,10 +17,10 @@ public class ReadItem implements SelectionListener {
 	private DateTime EndD;
 	private Shell    s;
 
-	public void ReadItem(){
+	public ReadItem(){
 
 	}
-	public  ReadItem(Shell s,DateTime StartD, DateTime EndD){
+	public ReadItem(Shell s,DateTime StartD, DateTime EndD){
 		this.s=s;
 		this.StartD=StartD;
 		this.EndD=EndD;

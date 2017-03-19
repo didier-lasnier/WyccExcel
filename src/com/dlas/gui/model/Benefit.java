@@ -2,12 +2,19 @@ package com.dlas.gui.model;
 
 import java.awt.List;
 
+import javax.persistence.Column;
+
 public class Benefit  extends AbstractModelObject{
+	@Column(name = "COMPANY")
 	public String company;
+	@Column(name = "FORMULA")
 	public String formula;
+	@Column(name = "FORMULE_NAME")
 	public String formulename;
+	@Column(name = "POLICY_NUMBER")
 	public String policynumber;
-	public String  amount;
+	@Column(name = "AMOUNT")
+	public String amount;
 	
 	public Benefit() {
 	}
