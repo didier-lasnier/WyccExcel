@@ -17,7 +17,6 @@ public class SaveItem implements SelectionListener {
 	private DateTime EndD;
 	private Shell    s;
 
-
 	public SaveItem(){
 
 	}
@@ -30,12 +29,12 @@ public class SaveItem implements SelectionListener {
 	
 	@Override
 	public void widgetSelected(SelectionEvent event) {
-		widgetSave(s,StartD,  EndD);
+		widgetSave(s,StartD,EndD);
 
 	}
 
 	public void widgetSelectedBtn(SelectionEvent event,Shell s,DateTime StartD, DateTime EndD) {
-		widgetSave(s,StartD,  EndD);
+		widgetSave(s,StartD,EndD);
 	}
 
 	public void widgetSave(Shell s,DateTime StartD, DateTime EndD){

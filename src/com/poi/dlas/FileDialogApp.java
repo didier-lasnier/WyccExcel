@@ -75,8 +75,7 @@ public class FileDialogApp {
 	private Table table;
 	private List<LimitAggCsv>  listviewer;
 	private TableViewer tableViewer;
-//	private final FormToolkit formToolkit = new FormToolkit(d.getDefault());
-//	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
+
 
 	FileDialogApp() {
 		d = new Display();
@@ -329,6 +328,11 @@ public class FileDialogApp {
 		lbl_logo.setText("logo");
 		
 		Button btnReadCsv = new Button(s, SWT.BORDER | SWT.FLAT);
+		btnReadCsv.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+			}
+		});
 		btnReadCsv.setBounds(161, 162, 94, 28);
 		btnReadCsv.setText("Read csv..");
 		btnReadCsv.addListener(SWT.Selection, new Listener() {

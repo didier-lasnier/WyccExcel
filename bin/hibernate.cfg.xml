@@ -10,7 +10,7 @@
 
         <!-- Database connection settings -->
         <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
-        <property name="connection.url">jdbc:hsqldb:file:/Volumes/LaCie/ProjetDev/JavaEclipse/WyccExcel/db/hsql</property>
+        <property name="connection.url">jdbc:hsqldb:file:./db/hsql</property>
         <property name="connection.username">wycc</property>
         <property name="connection.password">wycc</property>
         

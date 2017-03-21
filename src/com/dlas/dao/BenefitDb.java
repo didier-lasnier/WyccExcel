@@ -15,79 +15,71 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "AGGREGATE_TAB", schema = "PUBLIC")
-public class BenefitDb extends Benefit {
+public class BenefitDb {
 
 	@Id
 	@Column(name = "AGGREGATE_ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long aggregateid;
+	private Integer aggregateid;
 	
+	@Column(name = "COMPANY")
+	public String company;
 	
-	public long getAggregateid() {
+	@Column(name = "FORMULA")
+	public String formula;
+	@Column(name = "FORMULE_NAME")
+	public String formulename;
+	@Column(name = "POLICY_NUMBER")
+	public String policynumber;
+	@Column(name = "AMOUNT")
+	public String amount;
+
+	public Integer getAggregateid() {
 		return aggregateid;
 	}
 
-	public void setAggregateid(long aggregateid) {
+	public void setAggregateid(Integer aggregateid) {
 		this.aggregateid = aggregateid;
 	}
-	@Override
+
 	public String getCompany() {
-		// TODO Auto-generated method stub
-		return super.getCompany();
+		return company;
 	}
 
-	@Override
 	public void setCompany(String company) {
-		// TODO Auto-generated method stub
-		super.setCompany(company);
+		this.company = company;
 	}
 
-	@Override
 	public String getFormula() {
-		// TODO Auto-generated method stub
-		return super.getFormula();
+		return formula;
 	}
 
-	@Override
 	public void setFormula(String formula) {
-		// TODO Auto-generated method stub
-		super.setFormula(formula);
+		this.formula = formula;
 	}
 
-	@Override
 	public String getFormulename() {
-		// TODO Auto-generated method stub
-		return super.getFormulename();
+		return formulename;
 	}
 
-	@Override
 	public void setFormulename(String formulename) {
-		// TODO Auto-generated method stub
-		super.setFormulename(formulename);
+		this.formulename = formulename;
 	}
 
-	@Override
 	public String getPolicynumber() {
-		// TODO Auto-generated method stub
-		return super.getPolicynumber();
+		return policynumber;
 	}
 
-	@Override
 	public void setPolicynumber(String policynumber) {
-		// TODO Auto-generated method stub
-		super.setPolicynumber(policynumber);
+		this.policynumber = policynumber;
 	}
 
-	@Override
 	public String getAmount() {
-		// TODO Auto-generated method stub
-		return super.getAmount();
+		return amount;
 	}
 
-	@Override
 	public void setAmount(String amount) {
-		// TODO Auto-generated method stub
-		super.setAmount(amount);
+		this.amount = amount;
 	}
 
 	public BenefitDb() {
@@ -95,10 +87,18 @@ public class BenefitDb extends Benefit {
 		// TODO Auto-generated constructor stub
 	}
 
-	public BenefitDb(String company, String formula, String formulename, String policynumber, String amount) {
-		super(company, formula, formulename, policynumber, amount);
-		// TODO Auto-generated constructor stub
+	public BenefitDb(Integer aggregateid, String company, String formula, String formulename, String policynumber,
+			String amount) {
+		super();
+		this.aggregateid = aggregateid;
+		this.company = company;
+		this.formula = formula;
+		this.formulename = formulename;
+		this.policynumber = policynumber;
+		this.amount = amount;
 	}
+
+	
 	
 	
 	
