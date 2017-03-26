@@ -15,7 +15,7 @@ public class Tools {
 	public static Logger logger = Logger.getLogger("wycc");
 
 	public static String getNewNumColonne(String formule, String pattern, int colStart, int colOffset) {
-		logger.info("Formule entrante : " + formule);
+		//logger.info("Formule entrante : " + formule);
 		// List<String> allMatches = new ArrayList<String>();
 		Matcher m = Pattern.compile(pattern).matcher(formule);
 

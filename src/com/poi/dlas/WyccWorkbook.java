@@ -54,6 +54,11 @@ public class WyccWorkbook {
 	public XSSFWorkbook currentworkbook;
 	public XSSFSheet currentSheet;
 
+	private String xldformuleaggaregate = "";
+	private int OffsetColumn =57;
+	private int StartColumnformule=17;
+	private int EndColumnFormule =73;
+	
 	public WyccWorkbook() {
 
 	}
@@ -239,11 +244,11 @@ public class WyccWorkbook {
 		XSSFRow row = spreadsheet.createRow(introw);
 		int myIterator = 0;
 		int start = 0;
-		int end = 17;
-		int myOffset = 57;
+		int end = StartColumnformule;
+		int myOffset = OffsetColumn;
 		setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, 0);
-		start = 17;
-		end = 73;
+		start = StartColumnformule;
+		end = EndColumnFormule;
 		for (myIterator = 1; myIterator <= 8; myIterator++) {
 			setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, myOffset);
 		}
@@ -409,26 +414,53 @@ public class WyccWorkbook {
 		XSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
 		int introw = 3;
 		XSSFRow row = spreadsheet.createRow(introw);
-		int myIterator = 0;
+		/*
+		 * lectures des entêtes de colonnes
+		 * 
+		 */
+		//definit le nimbre de module à traiter.
+		int nbmodule=8;
+		int myIterator = 1;
+		// numero de colonne de cellule de départ des infos beneficiaires
 		int start = 0;
-		int end = 17;
-		int myOffset = 57;
+		// numero de colonne de cellule de fin des infos beneficiaires
+		int end = StartColumnformule;
+		// nombre de cellule comportant les formule de calcul à utiliser pou un bénficiaire
+		int myOffset = OffsetColumn;
+		// on lit les infos d'entête pour les infos beneficiares.
 		setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, 0);
-		start = 17;
-		end = 73;
-		for (myIterator = 1; myIterator <= 8; myIterator++) {
+		
+		/*
+		 * lectures des entêtes de colonne de calcul pour cahque ligne de beneficiares 
+		 * 
+		 */
+		// numéro de colonnes de début des calculs beneficiaires
+		start = StartColumnformule;
+		// numéro de colonnes de fin des calculs beneficiaires
+		end = EndColumnFormule;
+
+		for (myIterator = 1; myIterator <= nbmodule; myIterator++) {
 			setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, myOffset);
 		}
+		
+		/*
+		 * on recupére la liste des beneficiaires
+		 */
 		Statement stmt = db.connectiondb.createStatement();
 		ResultSet rs = stmt.executeQuery(sqlstmt1);
-
 		ObjectDao myobj = new ObjectDao();
 		Session lasession = myobj.getSessionDao();
-
+			/*
+			 * 
+			 * pour chaque beneficiaires on génére les formules de calculs
+			 */
+		
+		// on se positionne sur la ligne 5 de la feuille de calcul 
+		// ATTENTION LA NUMERAOTATION DES LIGBNES COMMENCE A ZERO
+		
 		introw = 4;
 		Modul modul = new Modul();
-		while (rs.next()) // for (beneficiairies event : (List<beneficiairies>)
-							// resultdistinct)
+		while (rs.next()) 
 		{
 			row = spreadsheet.createRow(introw);
 			XSSFCell cell = null;
@@ -484,17 +516,17 @@ public class WyccWorkbook {
 			cell = (XSSFCell) row.createCell(j);
 			cell.setCellValue(rs.getString("SALARY_CURRENCY"));
 
-			// Nbre de mois Colonne O
+			// Nbre de mois Colonne M
 			j++;
 			cell = (XSSFCell) row.createCell(j);
 			cell.setCellValue(rs.getFloat("MOIS"));
 
-			// Salaire Mensuel Colonne M
+			// Salaire Mensuel Colonne N
 			j++;
 			cell = (XSSFCell) row.createCell(j);
 			cell.setCellValue(rs.getFloat("MONTHLY_SALARY"));
 
-			// nbre de jour Colonne N
+			// nbre de jour Colonne O
 			j++;
 			cell = (XSSFCell) row.createCell(j);
 			cell.setCellValue(rs.getFloat("JOUR"));
@@ -504,12 +536,20 @@ public class WyccWorkbook {
 			cell = (XSSFCell) row.createCell(j);
 			cell.setCellValue(rs.getFloat("TO_INVOICE"));
 
-			for (int i = 1; i <= 8; i++) {
+			// On tarite les module. on repete les celleule de cformule pour le nombre de module possible.
+			for (int i = 1; i <= nbmodule; i++) {
+			// on regupére certaine information du module en fonction des infos 
+			//du nom de la company, du nom du module, du nom de la formule et de la couverure familliale
 				modul = getBenefits(lasession, rs.getString("COMPANY" + i), rs.getString("FORMULE" + i),
-						rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
+				rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
+				
 				if (modul != null) {
 					result = readformula(modul.getCalculmode(), 1);
+					xldformuleaggaregate="";
 					setFormula(introw, result, newworkbook, row, i, modul);
+					// on vient de positionné les forumles pour un beneficiaires.
+					// on ajoute les aggegate.
+					// on determine la colonne de la cellule 
 				}
 			}
 
@@ -604,6 +644,34 @@ public class WyccWorkbook {
 		// }
 	}
 
+	public String readaggregate( int rowtoread,String company,String formuma,String formulenumber,String policynumber ) {
+
+		List resultdistinct;
+		String ValueReturn ;
+		try {
+			ObjectDao myobj = new ObjectDao();
+			Session lasession = myobj.getSessionDao();
+			lasession.beginTransaction();
+			Query query = lasession.createQuery(
+					"select amount from BenefitDb where company = :company and formuma=:formula and formulenumber=:formulenumber and policynumber=:policynumber order by aggregateid asc");
+			query.setString("company", company);
+			query.setString("formuma", formuma);
+			query.setString("formulenumber", formulenumber);
+			query.setString("policynumber", policynumber);
+			resultdistinct = query.list();
+			lasession.getTransaction().commit();
+			lasession.close();
+			ValueReturn=(String) resultdistinct.get(0);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			ValueReturn="0";
+		}
+		
+		return ValueReturn;
+		// }
+	}
+	
+	
 	public int getRowCount(XSSFWorkbook workbook, String sheetName) {
 		int index = workbook.getSheetIndex(sheetName);
 		if (index == -1)
@@ -783,14 +851,21 @@ public class WyccWorkbook {
 	}
 
 	public void setFormula(int introw, List result, XSSFWorkbook newworkbook, XSSFRow row, int itera, Modul modul) {
-
-		int offsetCol = 57;
+		
+		// offset de décalage lorsque un moule a été traité
+		int offsetCol = OffsetColumn;
+		// numéro de colonne à traiter.
 		int nocol = 0;
+		
 		for (Wycccell event : (List<Wycccell>) result) {
-
-			if (event.getCellcolumn() >= 17) {
-				nocol = event.getCellcolumn() + (57 * (itera - 1));
+			  
+			if (event.getCellcolumn() >= StartColumnformule) {
+				nocol = event.getCellcolumn() + (OffsetColumn * (itera - 1));
 				XSSFCell cell = (XSSFCell) row.createCell(nocol);
+				if (nocol == 73+ (OffsetColumn * (itera - 1))){
+					xldformuleaggaregate=xldformuleaggaregate+cell.getAddress().toString()+"+";
+					logger.info(xldformuleaggaregate);
+				}
 				XSSFCellStyle style1 = newworkbook.createCellStyle();
 
 				style1.setBorderBottom((short) event.getBorderbottom());
@@ -818,7 +893,7 @@ public class WyccWorkbook {
 				if ((event.getFormulecell() != null)) {
 
 					String laformule = event.getFormulecell();
-					logger.info("Formule à parser : " + laformule);
+					//logger.info("Formule à parser : " + laformule);
 					laformule = laformule.replace("5", "%d");
 					laformule = laformule.replace("14", "%d");
 					int therow = introw + 1;
@@ -826,7 +901,7 @@ public class WyccWorkbook {
 					laformule = String.format(laformule, therow, therow, therow, therow, therow, therow, therow, therow,
 							therow);
 					Tools newformule = new Tools();
-					String lanewformule = newformule.getNewNumColonne(laformule, "[$,A-Z]*", 26, 57 * (itera - 1));
+					String lanewformule = newformule.getNewNumColonne(laformule, "[$,A-Z]*", 26, OffsetColumn * (itera - 1));
 					cell.setCellFormula(lanewformule);
 				}
 
@@ -834,13 +909,13 @@ public class WyccWorkbook {
 
 				if ((event.getValeurcell() != null)) {
 
-					if (nocol == (17 + (57 * (itera - 1)))) {
+					if (nocol == (StartColumnformule + (OffsetColumn * (itera - 1)))) {
 						lavaleur = modul.getModulcategory();
-					} else if (nocol == (18 + (57 * (itera - 1)))) {
+					} else if (nocol == (StartColumnformule+1 + (OffsetColumn * (itera - 1)))) {
 						lavaleur = modul.getModulfournisseur();
-					} else if (nocol == (19 + (57 * (itera - 1)))) {
+					} else if (nocol == (StartColumnformule+2 + (OffsetColumn * (itera - 1)))) {
 						lavaleur = modul.getModullabel();
-					} else if (nocol == (23 + (57 * (itera - 1)))) {
+					} else if (nocol == (StartColumnformule+6 + (OffsetColumn * (itera - 1)))) {
 						if (modul.getCalculmode().equals("MONTHLY")) {
 							lavaleur = event.getValeurcell();
 						} else if (modul.getCalculmode().equals("DAILY")) {
@@ -848,7 +923,7 @@ public class WyccWorkbook {
 							float myfloat = Float.parseFloat(lavaleur);
 							cell.setCellValue(myfloat);
 						}
-					} else if (nocol == (24 + (57 * (itera - 1)))) {
+					} else if (nocol == (StartColumnformule+7 + (OffsetColumn * (itera - 1)))) {
 						if (modul.getCalculmode().equals("MONTHLY")) {
 							lavaleur = event.getValeurcell();
 						} else if (modul.getCalculmode().equals("DAILY")) {
@@ -857,14 +932,14 @@ public class WyccWorkbook {
 							myfloat = Float.parseFloat(lavaleur);
 							cell.setCellValue(myfloat);
 						}
-					} else if (nocol == (25 + (57 * (itera - 1)))) {
+					} else if (nocol == (StartColumnformule+8 + (OffsetColumn * (itera - 1)))) {
 						if (modul.getCalculmode().equals("MONTHLY")) {
 							lavaleur = event.getValeurcell();
 
 						} else if (modul.getCalculmode().equals("DAILY")) {
 							lavaleur = event.getValeurcell();
 						}
-					} else if (nocol == (26 + (57 * (itera - 1)))) {
+					} else if (nocol == (StartColumnformule+9 + (OffsetColumn * (itera - 1)))) {
 						if (modul.getCalculmode().equals("MONTHLY")) {
 							lavaleur = modul.getModulprice();// valuecell;
 							float myfloat = Float.parseFloat(lavaleur);
@@ -900,8 +975,13 @@ public class WyccWorkbook {
 					}
 					cell.setCellStyle(style1);
 				}
-			}
+
+			} // fin du if
+			
+
 		}
+		
+	    
 	}
 
 	public void setFormulaHeader(int introw, List result, XSSFWorkbook newworkbook, XSSFRow row, int myiterator,

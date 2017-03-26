@@ -146,11 +146,11 @@ public class EcranAccueil {
 				String[] filterExt = { "*.csv","*.txt" };
 				fd.setFilterExtensions(filterExt);
 				String selected = fd.open();
+				
 			if (selected !=null) {
+				
 				Actionuser a = new Actionuser();
-				
 				a.lanceLecture(selected, StartD, EndD);
-				
 				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -185,6 +185,7 @@ public class EcranAccueil {
 				String[] filterExt = { "*.xlsx" };
 				fd.setFilterExtensions(filterExt);
 				String selected = fd.open();
+				
 				if (selected !=null){
 					ReadFileXlsx a = new ReadFileXlsx();
 					try {
@@ -297,7 +298,7 @@ public class EcranAccueil {
 		new Label(companyToolBarComposite, SWT.NONE);
 
 		SaveButton = new Button(companyToolBarComposite, SWT.NONE);
-		SaveButton.setText("Save..");
+		SaveButton.setText("Save aggregate..");
 		SaveButton.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
 				// on enregistre les Aggregate
