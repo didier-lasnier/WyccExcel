@@ -183,8 +183,8 @@ public class WyccWorkbook {
 					readData(this.currentworkbook, 0, i, lasession);
 				}
 
-				firstrow = 12;
-				for (int i = firstrow; i <= 13; i++) {
+				firstrow = 11;
+				for (int i = firstrow; i <= 12; i++) {
 					readData(this.currentworkbook, 0, i, lasession);
 				}
 				lasession.close();
@@ -535,7 +535,7 @@ public class WyccWorkbook {
 			j++;
 			cell = (XSSFCell) row.createCell(j);
 			cell.setCellValue(rs.getFloat("TO_INVOICE"));
-
+			xldformuleaggaregate="";
 			// On tarite les module. on repete les celleule de cformule pour le nombre de module possible.
 			for (int i = 1; i <= nbmodule; i++) {
 			// on regupére certaine information du module en fonction des infos 
@@ -545,7 +545,7 @@ public class WyccWorkbook {
 				
 				if (modul != null) {
 					result = readformula(modul.getCalculmode(), 1);
-					xldformuleaggaregate="";
+					
 					setFormula(introw, result, newworkbook, row, i, modul);
 					// on vient de positionné les forumles pour un beneficiaires.
 					// on ajoute les aggegate.
@@ -553,6 +553,13 @@ public class WyccWorkbook {
 				}
 			}
 
+			j=(StartColumnformule+(OffsetColumn*nbmodule));
+			cell = (XSSFCell) row.createCell(j);
+
+			xldformuleaggaregate=xldformuleaggaregate.substring(0, xldformuleaggaregate.length()-1);
+			logger.info(xldformuleaggaregate);
+			cell.setCellFormula(xldformuleaggaregate);
+			
 			introw++;
 		}
 		stmt.close();
@@ -699,13 +706,14 @@ public class WyccWorkbook {
 			throws SQLException, IOException {
 		// on recupére la ligne
 
-		XSSFRow currentRow = workbook.getSheetAt(sheetNumber).getRow(fromRow);
-		int lastCell = workbook.getSheetAt(sheetNumber).getRow(fromRow).getLastCellNum();
+		XSSFRow row = workbook.getSheetAt(sheetNumber).getRow(fromRow);
+		int lastCell = row.getLastCellNum();
 		// on détermine la derniére cellule
 		// pour chaque ligne on boucle sur les cellules jusque qu'a la derniére
 		// colonne
 		// on lit la cellule
-		Row row = workbook.getSheetAt(sheetNumber).getRow(fromRow);
+		//Row row = workbook.getSheetAt(sheetNumber).getRow(fromRow);
+
 		int firstcell = row.getFirstCellNum();
 
 		for (int j = firstcell; j < lastCell; j++) {
@@ -862,9 +870,8 @@ public class WyccWorkbook {
 			if (event.getCellcolumn() >= StartColumnformule) {
 				nocol = event.getCellcolumn() + (OffsetColumn * (itera - 1));
 				XSSFCell cell = (XSSFCell) row.createCell(nocol);
-				if (nocol == 73+ (OffsetColumn * (itera - 1))){
+				if (nocol == EndColumnFormule+ (OffsetColumn * (itera - 1))){
 					xldformuleaggaregate=xldformuleaggaregate+cell.getAddress().toString()+"+";
-					logger.info(xldformuleaggaregate);
 				}
 				XSSFCellStyle style1 = newworkbook.createCellStyle();
 
@@ -977,10 +984,9 @@ public class WyccWorkbook {
 				}
 
 			} // fin du if
-			
 
 		}
-		
+
 	    
 	}
 

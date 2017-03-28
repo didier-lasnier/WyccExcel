@@ -211,14 +211,14 @@ public class EcranAccueil {
 		public void widgetDefaultSelected(SelectionEvent event) {
 		}
 		
-		public void widgetSelectedBtn(Event event) {
+		public void widgetSelectedBtn(SelectionEvent e) {
 			widgetRead();
 		}
 		public void widgetRead(){
 			File directory = new File(".");
 			String fileCharSep = System.getProperty("file.separator");
 			try {
-			FileDialog fd = new FileDialog(s, SWT.OPEN);
+			FileDialog fd = new FileDialog(shell, SWT.OPEN);
 			fd.setText("Choose a file");
 			fd.setFilterPath(directory.getCanonicalPath());
 			String[] filterExt = { "*.xlsx"};
@@ -227,7 +227,7 @@ public class EcranAccueil {
 			if (selected !=null) {
 				ReadFileXlsx a = new ReadFileXlsx();
 				try {
-					a.readxls();
+					a.readxls(selected);
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -272,7 +272,7 @@ public class EcranAccueil {
 		companyComposite.setLayout(gridLayout);
 		
 		final Composite companyToolBarComposite = new Composite(companyComposite, SWT.NONE);
-		final GridLayout gridLayout_3 = new GridLayout(5, false);
+		final GridLayout gridLayout_3 = new GridLayout(10, false);
 		companyToolBarComposite.setLayout(gridLayout_3);
 		GridData gd_companyToolBarComposite = new GridData(SWT.FILL, SWT.CENTER, true, false);
 		gd_companyToolBarComposite.heightHint = 72;
@@ -295,36 +295,6 @@ public class EcranAccueil {
 		});
 		
 		AggregateButton.setText("Get aggregate");
-		new Label(companyToolBarComposite, SWT.NONE);
-
-		SaveButton = new Button(companyToolBarComposite, SWT.NONE);
-		SaveButton.setText("Save aggregate..");
-		SaveButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
-				// on enregistre les Aggregate
-				ObjectDao myobj = new ObjectDao();
-				Session lasession = myobj.getSessionDao();
-				List<Benefit> mbenefits =m_benefits.getBenefits();
-				lasession.beginTransaction();
-				Query q = lasession.createQuery("delete from BenefitDb");
-				q.executeUpdate();
-				 lasession.getTransaction().commit(); 
-				 
-				lasession.beginTransaction(); 
-				 for ( Benefit m_benefit : mbenefits ){
-					BenefitDb benedb =new BenefitDb();
-					benedb.setCompany(m_benefit.getCompany());
-					benedb.setFormula(m_benefit.getFormula());
-					benedb.setFormulename(m_benefit.getFormulename());
-					benedb.setPolicynumber(m_benefit.getPolicynumber());
-					benedb.setAmount(m_benefit.getAmount());
-					lasession.save(benedb);
-				 }		
-				  lasession.flush();
-				  lasession.getTransaction().commit(); 
-				  lasession.close();
-			}
-		});
 		
 		Button btnReadCsv = new Button(companyToolBarComposite, SWT.NONE);
 		btnReadCsv.addSelectionListener(new SelectionAdapter() {
@@ -334,26 +304,73 @@ public class EcranAccueil {
 		});
 		btnReadCsv.setText("Read Csv..");
 		
-		Button btnClientAmount = new Button(companyToolBarComposite, SWT.NONE);
-		btnClientAmount.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
-				new Save().widgetSave();
-			}
-		});
-		btnClientAmount.addListener(SWT.Selection, new Listener() {
-		      public void handleEvent(Event event) {
-			        new Save();
-			      }
-			    });
-        btnClientAmount.setText("Client amount...");
-        
+		Button btnReadFormula = new Button(companyToolBarComposite, SWT.NONE );
+		btnReadFormula.addSelectionListener(new SelectionAdapter() {
+	    public void widgetSelected(SelectionEvent e) {
+		        		 new Read().widgetRead();
+		        	}
+		        });
+		btnReadFormula.setText("Read xls file...");
+		new Label(companyToolBarComposite, SWT.NONE);
+		new Label(companyToolBarComposite, SWT.NONE);
+		new Label(companyToolBarComposite, SWT.NONE);
+        new Label(companyToolBarComposite, SWT.NONE);
+        new Label(companyToolBarComposite, SWT.NONE);
+
         Label lblStartDate = new Label(companyToolBarComposite, SWT.NONE);
         lblStartDate.setText("Start date");
+        Label lblEndDate = new Label(companyToolBarComposite, SWT.NONE);
+        lblEndDate.setText("End date");
+        
+        		SaveButton = new Button(companyToolBarComposite, SWT.NONE);
+        		SaveButton.setText("Save aggregate..");
+        		SaveButton.addSelectionListener(new SelectionAdapter() {
+        			public void widgetSelected(SelectionEvent e) {
+        				// on enregistre les Aggregate
+        				ObjectDao myobj = new ObjectDao();
+        				Session lasession = myobj.getSessionDao();
+        				List<Benefit> mbenefits =m_benefits.getBenefits();
+        				lasession.beginTransaction();
+        				Query q = lasession.createQuery("delete from BenefitDb");
+        				q.executeUpdate();
+        				 lasession.getTransaction().commit(); 
+        				 
+        				lasession.beginTransaction(); 
+        				 for ( Benefit m_benefit : mbenefits ){
+        					BenefitDb benedb =new BenefitDb();
+        					benedb.setCompany(m_benefit.getCompany());
+        					benedb.setFormula(m_benefit.getFormula());
+        					benedb.setFormulename(m_benefit.getFormulename());
+        					benedb.setPolicynumber(m_benefit.getPolicynumber());
+        					benedb.setAmount(m_benefit.getAmount());
+        					lasession.save(benedb);
+        				 }		
+        				  lasession.flush();
+        				  lasession.getTransaction().commit(); 
+        				  lasession.close();
+        			}
+        		});
+        
+        Button btnClientAmount = new Button(companyToolBarComposite, SWT.NONE);
+        btnClientAmount.addSelectionListener(new SelectionAdapter() {
+        	public void widgetSelected(SelectionEvent e) {
+        		new Save().widgetSave();
+        	}
+        });
+        btnClientAmount.addListener(SWT.Selection, new Listener() {
+              public void handleEvent(Event event) {
+        	        new Save();
+        	      }
+        	    });
+        btnClientAmount.setText("Client amount...");
+        new Label(companyToolBarComposite, SWT.NONE);
+        new Label(companyToolBarComposite, SWT.NONE);
+        new Label(companyToolBarComposite, SWT.NONE);
+        new Label(companyToolBarComposite, SWT.NONE);
+        new Label(companyToolBarComposite, SWT.NONE);
         new Label(companyToolBarComposite, SWT.NONE);
         DateTime StartDate = new DateTime(companyToolBarComposite, SWT.BORDER);
         startdate=StartDate;
-        Label lblEndDate = new Label(companyToolBarComposite, SWT.NONE);
-        lblEndDate.setText("End date");
         DateTime EndDate = new DateTime(companyToolBarComposite, SWT.BORDER);
         enddate=EndDate;
         

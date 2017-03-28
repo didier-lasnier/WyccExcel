@@ -43,20 +43,21 @@ public class ReadFileXlsx {
 	 * Tableau("/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/WYCC.xlsx","Test"
 	 * ); }
 	 */
-	public void readxls() throws InvalidFormatException {
-		File directory = new File(".");
-		String fileCharSep = System.getProperty("file.separator");
-
-		// Open csv file
-		new FileDialogOld();
-		// launch SAveDialog
-
-		FileDialogOld FileDialogOpen = new FileDialogOld();
+	public void readxls(String filepath) throws InvalidFormatException {
+//		File directory = new File(".");
+//		String fileCharSep = System.getProperty("file.separator");
+//
+//		// Open csv file
+//		new FileDialogOld();
+//		// launch SAveDialog
+//
+//		FileDialogOld FileDialogOpen = new FileDialogOld();
 		logger.info("Select file csv");
 		File theOpenfile = null;
 		try {
-			theOpenfile = FileDialogOpen.openFileDialog(directory);
-			FileInputStream out = new FileInputStream(new File(theOpenfile.getCanonicalPath()));
+			//theOpenfile = FileDialogOpen.openFileDialog(directory);
+			theOpenfile=new File(filepath);
+			FileInputStream out = new FileInputStream(theOpenfile);
 			// on a le dialogue des fichiers
 			// org.apache.poi.ss.usermodel.Workbook wrkbk =
 			// WorkbookFactory.create(theOpenfile);
@@ -65,14 +66,6 @@ public class ReadFileXlsx {
 			wyccwrkbk.setWorkBook(wrkbk);
 			wyccwrkbk.getWorkbook(theOpenfile);
 
-		} catch (InvocationTargetException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			logger.info("Select file csv");
-			logger.info(e);
-			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

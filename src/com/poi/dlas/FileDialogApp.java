@@ -206,7 +206,7 @@ public class FileDialogApp {
 				if (selected !=null) {
 					ReadFileXlsx a = new ReadFileXlsx();
 					try {
-						a.readxls();
+						a.readxls("");
 					} catch (Exception e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
