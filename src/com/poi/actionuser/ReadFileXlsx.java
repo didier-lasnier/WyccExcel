@@ -78,7 +78,7 @@ public class ReadFileXlsx {
 		String fileCharSep = System.getProperty("file.separator");
 
 		// Open csv file
-		new FileDialogOld();
+		//new FileDialogOld();
 
 		WyccWorkbook wyccwrkbk = new WyccWorkbook();
 

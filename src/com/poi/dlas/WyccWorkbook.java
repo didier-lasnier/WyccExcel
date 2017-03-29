@@ -456,7 +456,7 @@ public class WyccWorkbook {
 			 */
 		
 		// on se positionne sur la ligne 5 de la feuille de calcul 
-		// ATTENTION LA NUMERAOTATION DES LIGBNES COMMENCE A ZERO
+		// ATTENTION LA NUMEROTATION DES LIGNES COMMENCE A ZERO
 		
 		introw = 4;
 		Modul modul = new Modul();
@@ -543,9 +543,10 @@ public class WyccWorkbook {
 				modul = getBenefits(lasession, rs.getString("COMPANY" + i), rs.getString("FORMULE" + i),
 				rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
 				
+				Modul modulamount=new Modul();
+				
 				if (modul != null) {
 					result = readformula(modul.getCalculmode(), 1);
-					
 					setFormula(introw, result, newworkbook, row, i, modul);
 					// on vient de positionné les forumles pour un beneficiaires.
 					// on ajoute les aggegate.
@@ -867,11 +868,15 @@ public class WyccWorkbook {
 		
 		for (Wycccell event : (List<Wycccell>) result) {
 			  
-			if (event.getCellcolumn() >= StartColumnformule) {
+			if (event.getCellcolumn() >= StartColumnformule && event.getCellcolumn() <= EndColumnFormule) {
 				nocol = event.getCellcolumn() + (OffsetColumn * (itera - 1));
 				XSSFCell cell = (XSSFCell) row.createCell(nocol);
 				if (nocol == EndColumnFormule+ (OffsetColumn * (itera - 1))){
+					
+					//on recupére le pourcentage et la valeur de l'aggregate
+					
 					xldformuleaggaregate=xldformuleaggaregate+cell.getAddress().toString()+"+";
+					
 				}
 				XSSFCellStyle style1 = newworkbook.createCellStyle();
 

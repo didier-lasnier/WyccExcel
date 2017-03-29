@@ -96,18 +96,19 @@ public class EcranAccueil {
 	private DateTime enddate;
 	private String filepathtxt;
 	private String filepath;
-	
+	private static String APP_NAME = "Wycc invoice";
 	Display d;
 	Shell s;
 	
 	public static void main(String[] args) {
-		final String APP_NAME = "Wycc invoice";
+		//final String APP_NAME = "Wycc invoice";
+		Display.setAppName(APP_NAME);
 		Display display = new Display();
 		shell = new Shell();
 		shell.setSize(638, 382);
 		
-		display.setAppName(APP_NAME);
 		
+		Menu menusy=display.getSystemMenu();
      	Realm.runWithDefault(SWTObservables.getRealm(display), new Runnable() {
 			public void run() {
 
@@ -248,6 +249,7 @@ public class EcranAccueil {
 //		setDefaultValues();
 		createContents();
 		MenuAccueil menuaccueil=new MenuAccueil(shell,display,startdate,enddate);
+		display.setAppName(APP_NAME);
 		shell.open();
 		shell.layout();
 		while (!shell.isDisposed()) {

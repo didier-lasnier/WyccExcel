@@ -143,11 +143,13 @@ public class Modul {
 		this.modulscope = modulscope;
 	}
 
-	public Modul getOneModul(String hqlquery, Session session, String fournisseur, String modullabel) {
+	public Modul getOneModul(String hqlquery, Session session, String fournisseur, String modullabel, String modulscope,String modulecategory) {
 		Query query = session
-				.createQuery("from Modul where modulforunisseur = :fournisseur and modullabel = :modullabel");
-		query.setString(":fournisseur", fournisseur);
-		query.setString(":modullabel", modullabel);
+				.createQuery("from Modul where modulforunisseur = :fournisseur and modullabel = :modullabel and modulscope =:modulscope and modulecategory = :modulecategory");
+		query.setString("fournisseur", fournisseur);
+		query.setString("modullabel", modullabel);
+		query.setString("modulscope", modullabel);
+		query.setString("modulecategory", modullabel);
 		query.setMaxResults(1);
 		return (Modul) query.uniqueResult();
 	}
