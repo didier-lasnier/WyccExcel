@@ -34,7 +34,7 @@ import com.dlas.tools.CsvTools;
 import com.dlas.tools.MappingStrategy;
 import com.dlas.dao.LimitAggCsv;
 
-import com.poi.dlas.FileDialogOld;
+//import com.poi.dlas.FileDialogOld;
 import com.poi.dlas.WyccWorkbook;
 import com.poi.dlas.managecsv;
 
@@ -84,17 +84,9 @@ public class Actionuser {
 			stmt.executeUpdate();
 			stmt.close();
 
-			if (1 == 1) {
+			
 				logger.info("read csv file into from mvt");
 				lireCSV(theOpenfile, db);
-			} else {
-				// db.connectiondb.prepareStatement(sqlstmt.insertmvtnum());
-				stmt = db.connectiondb.prepareStatement("INSERT INTO MVT  SELECT * FROM CSVREAD('" + file + "')");
-				logger.info("read csv file into from mvt");
-				stmt.executeUpdate();// , null, 'charset=UTF-8
-										// fieldSeparator=;')");
-				stmt.close();
-			}
 
 			stmt = db.connectiondb.prepareStatement("DELETE FROM MVT_NUM"); // db.connectiondb.createStatement();
 			logger.info("delete from mvt_num");

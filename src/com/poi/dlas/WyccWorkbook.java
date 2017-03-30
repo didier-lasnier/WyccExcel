@@ -216,7 +216,7 @@ public class WyccWorkbook {
 
 		File directory = new File(".");
 		String fileCharSep = System.getProperty("file.separator");
-
+		
 		// List result=readformula();
 
 		h2db db = new h2db();
@@ -342,7 +342,7 @@ public class WyccWorkbook {
 						rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
 				if (modul != null) {
 					result = readformula(modul.getCalculmode(), 1);
-					setFormula(introw, result, newworkbook, row, i, modul);
+					setFormula(introw, result, newworkbook, row, i, modul,"");
 				}
 			}
 
@@ -388,7 +388,9 @@ public class WyccWorkbook {
 	public void setBeneficiairies(String filepath) throws SQLException, IOException {
         File directory = new File(".");
 		String fileCharSep = System.getProperty("file.separator");
-
+		XSSFCell lastcellule = null;
+		XSSFCell firstcellul = null;
+		
 		// List result=readformula();
 
 		h2db db = new h2db();
@@ -536,18 +538,31 @@ public class WyccWorkbook {
 			cell = (XSSFCell) row.createCell(j);
 			cell.setCellValue(rs.getFloat("TO_INVOICE"));
 			xldformuleaggaregate="";
-			// On tarite les module. on repete les celleule de cformule pour le nombre de module possible.
+			// On traite les modules. on repete les cellules de formule pour le nombre de module possible.
 			for (int i = 1; i <= nbmodule; i++) {
 			// on regupére certaine information du module en fonction des infos 
 			//du nom de la company, du nom du module, du nom de la formule et de la couverure familliale
 				modul = getBenefits(lasession, rs.getString("COMPANY" + i), rs.getString("FORMULE" + i),
 				rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
-				
-				Modul modulamount=new Modul();
+				Float Amount;
+				try {
+					if( modul!=null) {
+						Amount=Float.parseFloat(modul.getModulprice());
+					}
+					else { Amount= 0f;}
+					
+				} catch (NumberFormatException e) {
+					// TODO Auto-generated catch block
+					//e.printStackTrace();
+					 Amount= 0f;
+				}
+				// il faut recupérer les aggregate. 
+				//si la valeur est différente de zéro on prend la valeur saisie sion on prend la valeur calculée.
+				String aggregate =readaggregate(  rs.getString("COMPANY" + i), rs.getString("FORMULE" + i), rs.getString("formule_name" + i), rs.getString("police_number"+i) );
 				
 				if (modul != null) {
 					result = readformula(modul.getCalculmode(), 1);
-					setFormula(introw, result, newworkbook, row, i, modul);
+					setFormula(introw, result, newworkbook, row, i, modul,aggregate);
 					// on vient de positionné les forumles pour un beneficiaires.
 					// on ajoute les aggegate.
 					// on determine la colonne de la cellule 
@@ -560,9 +575,19 @@ public class WyccWorkbook {
 			xldformuleaggaregate=xldformuleaggaregate.substring(0, xldformuleaggaregate.length()-1);
 			logger.info(xldformuleaggaregate);
 			cell.setCellFormula(xldformuleaggaregate);
+			lastcellule=cell;
+			if (introw==4) {
+			 firstcellul=cell;	
+			}
 			
-			introw++;
+			introw++;			
 		}
+		// on positione la somme
+		 XSSFCell cell;
+		 row = spreadsheet.createRow(1);
+		 cell = (XSSFCell) row.createCell(1);	
+		 String lasomme = "SUM("+firstcellul.getAddress()+":"+lastcellule.getAddress()+")";
+		 cell.setCellFormula(lasomme);
 		stmt.close();
 
 		FileOutputStream out;
@@ -652,7 +677,7 @@ public class WyccWorkbook {
 		// }
 	}
 
-	public String readaggregate( int rowtoread,String company,String formuma,String formulenumber,String policynumber ) {
+	public String readaggregate( String company,String formuma,String formulenumber,String policynumber ) {
 
 		List resultdistinct;
 		String ValueReturn ;
@@ -661,10 +686,10 @@ public class WyccWorkbook {
 			Session lasession = myobj.getSessionDao();
 			lasession.beginTransaction();
 			Query query = lasession.createQuery(
-					"select amount from BenefitDb where company = :company and formuma=:formula and formulenumber=:formulenumber and policynumber=:policynumber order by aggregateid asc");
+					"select amount from BenefitDb where company = :company and formula=:formula and formulename=:formulename and policynumber=:policynumber order by aggregateid asc");
 			query.setString("company", company);
-			query.setString("formuma", formuma);
-			query.setString("formulenumber", formulenumber);
+			query.setString("formula", formuma);
+			query.setString("formulename", formulenumber);
 			query.setString("policynumber", policynumber);
 			resultdistinct = query.list();
 			lasession.getTransaction().commit();
@@ -859,7 +884,7 @@ public class WyccWorkbook {
 
 	}
 
-	public void setFormula(int introw, List result, XSSFWorkbook newworkbook, XSSFRow row, int itera, Modul modul) {
+	public void setFormula(int introw, List result, XSSFWorkbook newworkbook, XSSFRow row, int itera, Modul modul,String aggregate) {
 		
 		// offset de décalage lorsque un moule a été traité
 		int offsetCol = OffsetColumn;
@@ -869,13 +894,27 @@ public class WyccWorkbook {
 		for (Wycccell event : (List<Wycccell>) result) {
 			  
 			if (event.getCellcolumn() >= StartColumnformule && event.getCellcolumn() <= EndColumnFormule) {
+				
+				Float Amount;
+				try {
+					if( modul!=null) {
+						Amount=Float.parseFloat(modul.getModulprice());
+					}
+					else { Amount= 0f;}
+					
+				} catch (NumberFormatException e) {
+					// TODO Auto-generated catch block
+					//e.printStackTrace();
+					 Amount= 0f;
+				}
+
 				nocol = event.getCellcolumn() + (OffsetColumn * (itera - 1));
 				XSSFCell cell = (XSSFCell) row.createCell(nocol);
 				if (nocol == EndColumnFormule+ (OffsetColumn * (itera - 1))){
 					
 					//on recupére le pourcentage et la valeur de l'aggregate
-					
-					xldformuleaggaregate=xldformuleaggaregate+cell.getAddress().toString()+"+";
+					String formuleagg="(if("+cell.getAddress().toString()+">("+aggregate+"/12),"+aggregate+"/12,"+cell.getAddress().toString()+")*"+Amount.toString()+")";
+					xldformuleaggaregate=xldformuleaggaregate+formuleagg+"+";
 					
 				}
 				XSSFCellStyle style1 = newworkbook.createCellStyle();
@@ -1070,5 +1109,8 @@ public class WyccWorkbook {
 		logger.info("modulscope : " + modulscope);
 		return modul;
 	}
+	
+	
+	
 
 }

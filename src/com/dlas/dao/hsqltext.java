@@ -317,7 +317,9 @@ public class hsqltext {
 		sqlstmt = sqlstmt
 				+ " company4,formule4,formule_name4, total_amount_insured4,company5,formule5, formule_name5, total_amount_insured5,company6,formule6, formule_name6, total_amount_insured6,";
 		sqlstmt = sqlstmt
-				+ " company7,formule7,formule_name7,total_amount_insured7,company8,formule8,formule_name8,total_amount_insured8)";
+				+ " company7,formule7,formule_name7,total_amount_insured7,company8,formule8,formule_name8,total_amount_insured8,";
+		sqlstmt = sqlstmt
+				+ " police_number1, police_number2, police_number3, police_number4, police_number5, police_number6, police_number7, police_number8)";
 		sqlstmt = sqlstmt + "  SELECT WYCC_ID, NAME, FIRST_NAME, LINE, STRUCTURE_NAME,";
 		sqlstmt = sqlstmt + "    FAMILY_COVERED, CHILDREN, NATIONALITY, COUNTRY, POSITIONCREW,";
 		sqlstmt = sqlstmt + "    PERIOD_INSURANCE,START_MOVEMENT, PREVMVT,";
@@ -335,7 +337,9 @@ public class hsqltext {
 		sqlstmt = sqlstmt
 				+ " company4,formule4,formule_name4, total_amount_insured4,company5,formule5, formule_name5, total_amount_insured5,company6,formule6, formule_name6, total_amount_insured6,";
 		sqlstmt = sqlstmt
-				+ " company7,formule7,formule_name7,total_amount_insured7,company8,formule8,formule_name8,total_amount_insured8";
+				+ " company7,formule7,formule_name7,total_amount_insured7,company8,formule8,formule_name8,total_amount_insured8,";
+		sqlstmt = sqlstmt
+				+ " police_number1, police_number2, police_number3, police_number4, police_number5, police_number6, police_number7, police_number8";
 		sqlstmt = sqlstmt + " FROM PUBLIC.LISTGROUP ";
 
 		return sqlstmt;
