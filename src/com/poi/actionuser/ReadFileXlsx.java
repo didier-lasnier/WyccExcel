@@ -22,7 +22,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.dlas.dao.h2db;
 import com.dlas.dao.hsqltext;
-import com.poi.dlas.FileDialogOld;
+
 import com.poi.dlas.WyccWorkbook;
 import com.poi.dlas.managecsv;
 
@@ -73,7 +73,7 @@ public class ReadFileXlsx {
 
 	}
 
-	public void generexls() throws InvalidFormatException, SQLException, IOException {
+/*	public void generexls() throws InvalidFormatException, SQLException, IOException {
 		File directory = new File(".");
 		String fileCharSep = System.getProperty("file.separator");
 
@@ -83,29 +83,12 @@ public class ReadFileXlsx {
 		WyccWorkbook wyccwrkbk = new WyccWorkbook();
 
 		wyccwrkbk.setBeneficiairies();
-	}
+	}*/
 	
 	public void generexls(String filepath) throws InvalidFormatException, SQLException, IOException {
 		WyccWorkbook wyccwrkbk = new WyccWorkbook();
 		wyccwrkbk.setBeneficiairies(filepath);
 	}
 
-	public void generexlstest() throws InvalidFormatException, SQLException, IOException {
-		File directory = new File(".");
-		String fileCharSep = System.getProperty("file.separator");
 
-		// Open csv file
-		new FileDialogOld();
-		// theOpenfile=FileDialogOpen.openFileDialog(directory);
-		// FileInputStream out = new FileInputStream( new
-		// File(theOpenfile.getCanonicalPath()));
-		// on a le dialogue des fichiers
-		// org.apache.poi.ss.usermodel.Workbook wrkbk =
-		// WorkbookFactory.create(theOpenfile);
-		// XSSFWorkbook wrkbk=new XSSFWorkbook(out);
-		WyccWorkbook wyccwrkbk = new WyccWorkbook();
-		// wyccwrkbk.setWorkBook(wrkbk);
-		wyccwrkbk.readformula();
-		// wyccwrkbk.setBeneficiairies();
-	}
 }

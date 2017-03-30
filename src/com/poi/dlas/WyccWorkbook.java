@@ -15,12 +15,15 @@ import java.util.Calendar;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.apache.poi.hssf.usermodel.HSSFDataFormat;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 //import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.IndexedColors;
 //import org.apache.poi.ss.usermodel.PrintSetup;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -29,6 +32,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFCreationHelper;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 
 import com.dlas.dao.h2db;
@@ -205,186 +209,6 @@ public class WyccWorkbook {
 
 	}
 
-	public void setBeneficiairies() throws SQLException, IOException {
-
-		/*
-		 * ObjectDao myobj= new ObjectDao(); Session lasession =
-		 * myobj.getSessionDao(); lasession.beginTransaction(); List
-		 * resultdistinct = lasession.createQuery("from beneficiaries").list();
-		 * lasession.getTransaction().commit();
-		 */
-
-		File directory = new File(".");
-		String fileCharSep = System.getProperty("file.separator");
-		
-		// List result=readformula();
-
-		h2db db = new h2db();
-		db.getDatabase(directory);
-		String sqlstmt1 = "SELECT WYCC_ID, NAME, FIRST_NAME, LINE, STRUCTURE_NAME, FAMILY_COVERED, CHILDREN, NATIONALITY, COUNTRY,";
-		sqlstmt1 = sqlstmt1
-				+ " PERIOD_INSURANCE, POSITIONCREW, START_MOVEMENT, PREVMVT, ENDCOMP, END_MOVEMENT, NEXTMVT, NEXTCOMP,";
-		sqlstmt1 = sqlstmt1 + " MONTHLY_SALARY, SALARY_CURRENCY, DRESTEJ, ERESTEJ, TO_INVOICE, JOUR,MOIS,";
-		sqlstmt1 = sqlstmt1
-				+ " company1,formule1, formule_name1,police_number1, total_amount_insured1, company2,formule2, formule_name2,police_number2, total_amount_insured2,";
-		sqlstmt1 = sqlstmt1
-				+ " company3,formule3, formule_name3,police_number3, total_amount_insured3, company4,formule4, formule_name4,police_number4, total_amount_insured4,";
-		sqlstmt1 = sqlstmt1
-				+ " company5,formule5, formule_name5,police_number5, total_amount_insured5, company6,formule6, formule_name6,police_number6, total_amount_insured6,";
-		sqlstmt1 = sqlstmt1
-				+ " company7,formule7, formule_name7,police_number7, total_amount_insured7, company8,formule8, formule_name8,police_number8, total_amount_insured8";
-		sqlstmt1 = sqlstmt1 + " FROM PUBLIC.BENEFICIARIES_TAB";
-
-		// Lire le header
-		List result = readformula("MONTHLY", 0);
-
-		XSSFWorkbook newworkbook = new XSSFWorkbook();
-		XSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
-		int introw = 3;
-		XSSFRow row = spreadsheet.createRow(introw);
-		int myIterator = 0;
-		int start = 0;
-		int end = StartColumnformule;
-		int myOffset = OffsetColumn;
-		setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, 0);
-		start = StartColumnformule;
-		end = EndColumnFormule;
-		for (myIterator = 1; myIterator <= 8; myIterator++) {
-			setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, myOffset);
-		}
-		Statement stmt = db.connectiondb.createStatement();
-		ResultSet rs = stmt.executeQuery(sqlstmt1);
-
-		ObjectDao myobj = new ObjectDao();
-		Session lasession = myobj.getSessionDao();
-
-		introw = 4;
-		Modul modul = new Modul();
-		while (rs.next()) // for (beneficiairies event : (List<beneficiairies>)
-							// resultdistinct)
-		{
-			row = spreadsheet.createRow(introw);
-			XSSFCell cell = null;
-			int j = 0;
-			// position Colonne A
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getString("POSITIONCREW"));
-
-			// Name Colonne B
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getString("NAME"));
-			// first name Colonne C
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getString("FIRST_NAME"));
-			// structure name vessel Colonne D
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getString("STRUCTURE_NAME"));
-			// crew manning agency Colonne
-			j++;
-			// periode de couverture Colonne E
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getString("PERIOD_INSURANCE"));
-			// Single Ou Family Colonne F
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getString("FAMILY_COVERED"));
-			// Nationalité Colonne G
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getString("NATIONALITY"));
-			// Pays Colonne H
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getString("COUNTRY"));
-			// Nbre d'enfant Colonne I
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getDouble("CHILDREN"));
-			// Debut de mouvement Colonne J
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getDate("START_MOVEMENT"));
-			// Fin de mouvement Colonne K
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getDate("END_MOVEMENT"));
-			// Salaire_Currency Colonne L
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getString("SALARY_CURRENCY"));
-
-			// Nbre de mois Colonne O
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getFloat("MOIS"));
-
-			// Salaire Mensuel Colonne M
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getFloat("MONTHLY_SALARY"));
-
-			// nbre de jour Colonne N
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getFloat("JOUR"));
-
-			// TO_INVOICE Colonne P
-			j++;
-			cell = (XSSFCell) row.createCell(j);
-			cell.setCellValue(rs.getFloat("TO_INVOICE"));
-
-			for (int i = 1; i <= 8; i++) {
-				modul = getBenefits(lasession, rs.getString("COMPANY" + i), rs.getString("FORMULE" + i),
-						rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
-				if (modul != null) {
-					result = readformula(modul.getCalculmode(), 1);
-					setFormula(introw, result, newworkbook, row, i, modul,"");
-				}
-			}
-
-			introw++;
-		}
-		stmt.close();
-
-		String filepath = null;
-		File theXlsfile = null;
-		FileDialogOld FileDialogOpen = new FileDialogOld();
-		try {
-			theXlsfile = FileDialogOpen.saveFileDialog(directory);
-		} catch (InvocationTargetException | InterruptedException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		try {
-			filepath = theXlsfile.getCanonicalPath();
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		FileOutputStream out;
-
-		try {
-			out = new FileOutputStream(new File(filepath));
-			newworkbook.write(out);
-			out.close();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		logger.info("DONE ! setBeneficiaire");
-
-		// lasession.close();
-
-	}
-
 	public void setBeneficiairies(String filepath) throws SQLException, IOException {
         File directory = new File(".");
 		String fileCharSep = System.getProperty("file.separator");
@@ -414,6 +238,10 @@ public class WyccWorkbook {
 
 		XSSFWorkbook newworkbook = new XSSFWorkbook();
 		XSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
+		
+		XSSFCreationHelper createHelper = newworkbook.getCreationHelper();
+		
+		
 		int introw = 3;
 		XSSFRow row = spreadsheet.createRow(introw);
 		/*
@@ -509,10 +337,16 @@ public class WyccWorkbook {
 			j++;
 			cell = (XSSFCell) row.createCell(j);
 			cell.setCellValue(rs.getDate("START_MOVEMENT"));
+			XSSFCellStyle cellStyle  = newworkbook.createCellStyle();
+			cellStyle.setDataFormat(HSSFDataFormat.getBuiltinFormat("m/d/yy"));
+			cell.setCellStyle(cellStyle);
+			
+			
 			// Fin de mouvement Colonne K
 			j++;
 			cell = (XSSFCell) row.createCell(j);
 			cell.setCellValue(rs.getDate("END_MOVEMENT"));
+			cell.setCellStyle(cellStyle);
 			// Salaire_Currency Colonne L
 			j++;
 			cell = (XSSFCell) row.createCell(j);
@@ -1036,12 +870,26 @@ public class WyccWorkbook {
 
 	public void setFormulaHeader(int introw, List result, XSSFWorkbook newworkbook, XSSFRow row, int myiterator,
 			int start, int end, int myoffset) {
-
+				row.setHeight((short) 700);
+				
 		for (Wycccell event : (List<Wycccell>) result.subList(start, end)) {
 
 			XSSFCell cell = (XSSFCell) row.createCell(event.getCellcolumn() + (myoffset * (myiterator - 1)));
 			XSSFCellStyle style1 = newworkbook.createCellStyle();
-
+			if (end<=17) {
+			style1.setFillForegroundColor(IndexedColors.AQUA.getIndex());
+			style1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+			} else if (event.getCellcolumn()>=26 && event.getCellcolumn()<=49) 
+			{
+				style1.setFillForegroundColor(IndexedColors.YELLOW.getIndex());
+				style1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+			}else if (event.getCellcolumn()>=50 && event.getCellcolumn()<=73) 
+			{
+				style1.setFillForegroundColor(IndexedColors.GREY_40_PERCENT.getIndex());
+				style1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+			}
+			/*
+			
 			style1.setBorderBottom((short) event.getBorderbottom());
 			style1.setBorderTop((short) event.getBordertop());
 			style1.setBorderLeft((short) event.getBorterleft());
@@ -1063,7 +911,7 @@ public class WyccWorkbook {
 			style1.setFillPattern(XSSFCellStyle.NO_FILL);// (short)
 															// event.getPattern());
 			// style1.setIndention((short) event.getIndention());
-
+*/
 			String lavaleur = null;
 			if ((event.getValeurcell() != null)) {
 

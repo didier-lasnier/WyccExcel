@@ -66,7 +66,7 @@ public class MenuWycc {
 			public void actionPerformed(ActionEvent e) {
 				ReadFileXlsx a = new ReadFileXlsx();
 				try {
-					a.generexls();
+					//a.generexls();
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -84,7 +84,7 @@ public class MenuWycc {
 			public void actionPerformed(ActionEvent e) {
 				ReadFileXlsx a = new ReadFileXlsx();
 				try {
-					a.generexlstest();
+					//a.generexlstest();
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
