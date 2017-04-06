@@ -10,6 +10,7 @@ public class SelectionUpdateValueStrategy extends UpdateValueStrategy {
 	public SelectionUpdateValueStrategy() {
 	}
 
+	@Override
 	protected IStatus doSet(IObservableValue observableValue, Object value) {		
 		Integer selection = (Integer) value;
 		return super.doSet(observableValue,

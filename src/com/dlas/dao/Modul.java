@@ -8,7 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.Session;
-import org.hibernate.engine.query.*;
 import org.hibernate.query.Query;
 
 @Entity

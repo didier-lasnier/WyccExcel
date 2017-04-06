@@ -4,12 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
-
-import com.dlas.dao.Mvt;
 import com.opencsv.CSVReader;
 
-import com.opencsv.bean.ColumnPositionMappingStrategy;
 import com.opencsv.bean.CsvToBean;
 
 public class CSVMappedMvt {

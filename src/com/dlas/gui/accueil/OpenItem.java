@@ -30,6 +30,7 @@ public class OpenItem implements SelectionListener {
 		widgetOpen(s,StartD,EndD);
 	}
 
+	@Override
 	public void widgetDefaultSelected(SelectionEvent event) {
 	}
 
@@ -50,7 +51,7 @@ public class OpenItem implements SelectionListener {
 			String selected = fd.open();
 			if (selected !=null) {
 				Actionuser a = new Actionuser();
-				a.lanceLecture(selected, StartD, EndD);
+				Actionuser.lanceLecture(selected, StartD, EndD);
 
 			}
 		} catch (IOException e) {

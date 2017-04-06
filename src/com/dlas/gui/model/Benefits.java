@@ -13,10 +13,11 @@ import java.util.stream.Collectors;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
-
 import com.dlas.dao.LimitAggCsv;
+import com.dlas.gui.EcranAccueil;
 import com.dlas.tools.CsvTools;
 import com.poi.actionuser.Actionuser;
+import com.poi.dlas.WyccWorkbook;
 
 
 
@@ -24,7 +25,8 @@ public class Benefits extends AbstractModelObject {
 	private final List/* <PhoneGroup> */m_benefits = new ArrayList();
 	
 	
-	public void addBenefit(Shell s, Benefit benefit) {
+	public void addBenefit(Shell s, Benefit benefit, EcranAccueil window) {
+		WyccWorkbook wyccwb = new WyccWorkbook();
   		//public void widgetRead(){
 			File directory = new File(".");
 			String fileCharSep = System.getProperty("file.separator");
@@ -34,14 +36,16 @@ public class Benefits extends AbstractModelObject {
 			fd.setFilterPath(directory.getCanonicalPath());
 			String[] filterExt = { "*.csv"};
 			fd.setFilterExtensions(filterExt);
-			String selected = fd.open();
-			CsvTools a = new CsvTools();
-			Actionuser b = new Actionuser();
+			String selected=fd.open();
+			
+
 			if (selected !=null) {
-					//ReadFileXlsx a = new ReadFileXlsx();
+				 window.setFilepath(selected );
 					try {
-						
-					List<LimitAggCsv>	listviewer=  b.readAggregate(a.getcsvfile(selected));
+					CsvTools a = new CsvTools();
+					Actionuser b = new Actionuser();
+					window.setListCsv(a.getcsvfile(selected));
+					List<LimitAggCsv>	listviewer=  b.readAggregate(window.getListCsv());
 					List<LimitAggCsv>	listdistinct =listviewer.stream().filter(distinctByKey(p -> p.getCompany())).collect(Collectors.toList());
 					if (false) {
 
@@ -49,7 +53,10 @@ public class Benefits extends AbstractModelObject {
 					for (LimitAggCsv agg :listdistinct){
 						
 						for (LimitAggCsv distinct : listviewer) {
-							m_benefits.add(new Benefit(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),distinct.getAmount()));
+							// on recupére les données précédement enregistrée
+							String amount = wyccwb.readaggregate(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber() );
+							
+							m_benefits.add(new Benefit(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),amount));
 						}
 					}
 					}

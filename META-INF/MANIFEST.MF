@@ -1,0 +1,4 @@
+Manifest-Version: 1.0.1
+Class-Path: lib/swt.jar lib/org.eclipse.jface_3.12.2.v20170113-2113.jar lib/org.eclipse.core.databinding_1.6.0.v20160412-0910.jar lib/org.eclipse.core.databinding.observable_1.6.0.v20160511-1747.jar lib/org.eclipse.jface.databinding_1.8.1.v20161026-1531.jar lib/org.eclipse.core.runtime_3.12.0.v20160606-1342.jar
+Bundle-ClassPath: swt.jar
+Main-Class: com.dlas.gui.EcranAccueil

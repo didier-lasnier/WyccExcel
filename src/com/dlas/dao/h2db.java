@@ -1,13 +1,9 @@
 package com.dlas.dao;
 
 import org.apache.log4j.Logger;
-//import org.h2.jdbcx.JdbcDataSource;
-import org.hsqldb.jdbc.*;
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hsqldb.jdbc.JDBCDriver;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
@@ -15,8 +11,6 @@ import java.sql.DriverManager;
 //import java.sql.DriverManager;
 //import java.sql.ResultSet;
 import java.sql.SQLException;
-//import java.sql.Statement;
-import java.util.List;
 
 public class h2db {
 

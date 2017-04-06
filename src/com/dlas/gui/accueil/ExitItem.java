@@ -1,18 +1,11 @@
 package com.dlas.gui.accueil;
 
-import java.io.File;
-import java.io.IOException;
-
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
-import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
-
-import com.poi.actionuser.ReadFileXlsx;
 
 public class ExitItem implements SelectionListener {
 	private Display d;

@@ -1,13 +1,10 @@
 package com.poi.dlas;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 //import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -16,18 +13,14 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
-import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 //import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
-//import org.apache.poi.ss.usermodel.PrintSetup;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -37,21 +30,15 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 
 import com.dlas.dao.h2db;
 
-import com.dlas.dao.hsqltext;
 import com.dlas.tools.Tools;
 import com.dlas.dao.Wycccell;
 import com.dlas.dao.Modul;
-import com.poi.actionuser.Explorateur;
+
 
 //import au.com.ozblog.hibernate.h2.example.User;
 
 import com.dlas.dao.ObjectDao;
-import com.dlas.dao.beneficiaries;
-
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
 public class WyccWorkbook {
@@ -296,46 +283,46 @@ public class WyccWorkbook {
 			XSSFCell cell = null;
 			int j = 0;
 			// position Colonne A
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getString("POSITIONCREW"));
 
 			// Name Colonne B
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getString("NAME"));
 			// first name Colonne C
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getString("FIRST_NAME"));
 			// structure name vessel Colonne D
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getString("STRUCTURE_NAME"));
 			// crew manning agency Colonne
 			j++;
 			// periode de couverture Colonne E
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getString("PERIOD_INSURANCE"));
 			// Single Ou Family Colonne F
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getString("FAMILY_COVERED"));
 			// Nationalité Colonne G
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getString("NATIONALITY"));
 			// Pays Colonne H
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getString("COUNTRY"));
 			// Nbre d'enfant Colonne I
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getDouble("CHILDREN"));
 			// Debut de mouvement Colonne J
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getDate("START_MOVEMENT"));
 			XSSFCellStyle cellStyle  = newworkbook.createCellStyle();
 			cellStyle.setDataFormat(HSSFDataFormat.getBuiltinFormat("m/d/yy"));
@@ -344,32 +331,32 @@ public class WyccWorkbook {
 			
 			// Fin de mouvement Colonne K
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getDate("END_MOVEMENT"));
 			cell.setCellStyle(cellStyle);
 			// Salaire_Currency Colonne L
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getString("SALARY_CURRENCY"));
 
 			// Nbre de mois Colonne M
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getFloat("MOIS"));
 
 			// Salaire Mensuel Colonne N
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getFloat("MONTHLY_SALARY"));
 
 			// nbre de jour Colonne O
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getFloat("JOUR"));
 
 			// TO_INVOICE Colonne P
 			j++;
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 			cell.setCellValue(rs.getFloat("TO_INVOICE"));
 			xldformuleaggaregate="";
 			// On traite les modules. on repete les cellules de formule pour le nombre de module possible.
@@ -404,7 +391,7 @@ public class WyccWorkbook {
 			}
 
 			j=(StartColumnformule+(OffsetColumn*nbmodule));
-			cell = (XSSFCell) row.createCell(j);
+			cell = row.createCell(j);
 
 			xldformuleaggaregate=xldformuleaggaregate.substring(0, xldformuleaggaregate.length()-1);
 			logger.info(xldformuleaggaregate);
@@ -419,7 +406,7 @@ public class WyccWorkbook {
 		// on positione la somme
 		 XSSFCell cell;
 		 row = spreadsheet.createRow(1);
-		 cell = (XSSFCell) row.createCell(1);	
+		 cell = row.createCell(1);	
 		 String lasomme = "SUM("+firstcellul.getAddress()+":"+lastcellule.getAddress()+")";
 		 cell.setCellFormula(lasomme);
 		stmt.close();
@@ -594,12 +581,12 @@ public class WyccWorkbook {
 				else if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC || cell.getCellType() == Cell.CELL_TYPE_FORMULA) {
 
 					cellText = String.valueOf(cell.getNumericCellValue());
-					if (HSSFDateUtil.isCellDateFormatted(cell)) {
+					if (DateUtil.isCellDateFormatted(cell)) {
 						// format in form of M/D/YY
 						double d = cell.getNumericCellValue();
 
 						Calendar cal = Calendar.getInstance();
-						cal.setTime(HSSFDateUtil.getJavaDate(d));
+						cal.setTime(DateUtil.getJavaDate(d));
 						cellText = (String.valueOf(cal.get(Calendar.YEAR))).substring(2);
 						cellText = cal.get(Calendar.MONTH) + 1 + "/" + cal.get(Calendar.DAY_OF_MONTH) + "/" + cellText;
 
@@ -743,7 +730,7 @@ public class WyccWorkbook {
 				}
 
 				nocol = event.getCellcolumn() + (OffsetColumn * (itera - 1));
-				XSSFCell cell = (XSSFCell) row.createCell(nocol);
+				XSSFCell cell = row.createCell(nocol);
 				if (nocol == EndColumnFormule+ (OffsetColumn * (itera - 1))){
 					
 					//on recupére le pourcentage et la valeur de l'aggregate
@@ -771,7 +758,7 @@ public class WyccWorkbook {
 																		// event.getBaxkgroundcolor());
 				// style1.setFillForegroundColor ((short)
 				// event.getFrontgroundcolor());
-				style1.setFillPattern(XSSFCellStyle.NO_FILL);// (short)
+				style1.setFillPattern(CellStyle.NO_FILL);// (short)
 																// event.getPattern());
 				// style1.setIndention((short) event.getIndention());
 
@@ -786,7 +773,7 @@ public class WyccWorkbook {
 					laformule = String.format(laformule, therow, therow, therow, therow, therow, therow, therow, therow,
 							therow);
 					Tools newformule = new Tools();
-					String lanewformule = newformule.getNewNumColonne(laformule, "[$,A-Z]*", 26, OffsetColumn * (itera - 1));
+					String lanewformule = Tools.getNewNumColonne(laformule, "[$,A-Z]*", 26, OffsetColumn * (itera - 1));
 					cell.setCellFormula(lanewformule);
 				}
 
@@ -874,7 +861,7 @@ public class WyccWorkbook {
 				
 		for (Wycccell event : (List<Wycccell>) result.subList(start, end)) {
 
-			XSSFCell cell = (XSSFCell) row.createCell(event.getCellcolumn() + (myoffset * (myiterator - 1)));
+			XSSFCell cell = row.createCell(event.getCellcolumn() + (myoffset * (myiterator - 1)));
 			XSSFCellStyle style1 = newworkbook.createCellStyle();
 			if (end<=17) {
 			style1.setFillForegroundColor(IndexedColors.AQUA.getIndex());

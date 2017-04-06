@@ -1,7 +1,5 @@
 package com.dlas.tools;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -29,10 +27,10 @@ public class Tools {
 					while (compteur <= m.group().length()) {
 
 						if (compteur < m.group().length()) {
-							ascii = (int) m.group().substring(compteur - 1, compteur).charAt(0) - 64;
+							ascii = m.group().substring(compteur - 1, compteur).charAt(0) - 64;
 							colInt = colInt + (colStart * ascii);
 						} else {
-							ascii = (int) m.group().substring(compteur - 1, compteur).charAt(0);
+							ascii = m.group().substring(compteur - 1, compteur).charAt(0);
 							colInt = colInt + (ascii - 64);
 						}
 						compteur++;

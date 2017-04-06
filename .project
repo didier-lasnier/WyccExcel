@@ -3,6 +3,11 @@
 	<name>WyccExcel</name>
 	<comment></comment>
 	<projects>
+		<project>org.eclipse.core.runtime</project>
+		<project>org.eclipse.equinox.common</project>
+		<project>org.eclipse.equinox.registry</project>
+		<project>org.eclipse.swt</project>
+		<project>org.eclipse.swt.cocoa.macosx.x86_64_3.105.3.v20170228-0512</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -15,11 +20,28 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>org.jboss.tools.jst.web.kb.kbbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.jboss.tools.cdi.core.cdibuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.wst.validation.validationbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.jkiss.dbeaver.DBeaverNature</nature>
 		<nature>org.hibernate.eclipse.console.hibernateNature</nature>
+		<nature>org.jboss.tools.jst.web.kb.kbnature</nature>
+		<nature>org.jboss.tools.cdi.core.cdinature</nature>
 	</natures>
 	<variableList>
 		<variable>

@@ -5,14 +5,9 @@ import com.dlas.dao.hibernateutils;
 import java.util.List;
 
 import org.hibernate.Query;
-import org.hibernate.SQLQuery;
-//import javax.management.Query;
-
 //import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-
-import org.hibernate.Transaction;
 
 public class ObjectDao {
 	public ObjectDao() {
@@ -35,7 +30,7 @@ public class ObjectDao {
 		try {
 			Query query = session.createQuery("from SETTINGSCELL p");
 			List querylist = query.list();
-			return (List<Object>) querylist;
+			return querylist;
 		} catch (Exception e) {
 			return null;
 		}
@@ -53,7 +48,7 @@ public class ObjectDao {
 			if (queryList != null && queryList.isEmpty()) {
 				return null;
 			} else {
-				return (Object) queryList.get(0);
+				return queryList.get(0);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

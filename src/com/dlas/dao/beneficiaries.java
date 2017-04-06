@@ -2,8 +2,6 @@ package com.dlas.dao;
 
 import java.util.Date;
 
-import org.hibernate.annotations.Columns;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

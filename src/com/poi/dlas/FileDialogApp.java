@@ -3,14 +3,6 @@ package com.poi.dlas;
 import java.util.List;
 import java.io.File;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-
 import org.apache.log4j.Logger;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -27,7 +19,6 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 
 import com.dlas.dao.LimitAggCsv;
-import com.dlas.dao.MvtCsv;
 import com.dlas.tools.CsvTools;
 import com.poi.actionuser.Actionuser;
 import com.poi.actionuser.ReadFileXlsx;
@@ -37,20 +28,15 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.DateTime;
 
-import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Canvas;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.ProgressBar;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.TextCellEditor;
-import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.CellEditor;
-import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.ColumnViewer;
 import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.jface.viewers.IStructuredContentProvider;
@@ -106,10 +92,12 @@ public class FileDialogApp {
 		
 		class Open implements SelectionListener {
 				
+			@Override
 			public void widgetSelected(SelectionEvent event) {
 				widgetOpen(StartDate,EndDate);
 			}
 
+			@Override
 			public void widgetDefaultSelected(SelectionEvent event) {
 			}
 			
@@ -130,7 +118,7 @@ public class FileDialogApp {
 				if (selected !=null) {
 					Actionuser a = new Actionuser();
 					
-					a.lanceLecture(selected, StartD, EndD);
+					Actionuser.lanceLecture(selected, StartD, EndD);
 					
 					}
 				} catch (IOException e) {
@@ -144,11 +132,13 @@ public class FileDialogApp {
 		}
 
 		class Save implements SelectionListener {
+			@Override
 			public void widgetSelected(SelectionEvent event) {
 				widgetSave();
 
 			}
 
+			@Override
 			public void widgetDefaultSelected(SelectionEvent event) {
 			}
 			public void widgetSelectedBtn(SelectionEvent event) {
@@ -183,10 +173,12 @@ public class FileDialogApp {
 
 		
 		class Read implements SelectionListener {
+			@Override
 			public void widgetSelected(SelectionEvent event) {
 				widgetRead();
 			}
 
+			@Override
 			public void widgetDefaultSelected(SelectionEvent event) {
 			}
 			
@@ -224,10 +216,12 @@ public class FileDialogApp {
 
 //Aggregate		
 		class Aggregate implements SelectionListener {
+			@Override
 			public void widgetSelected(SelectionEvent event) {
 				widgetRead();
 			}
 
+			@Override
 			public void widgetDefaultSelected(SelectionEvent event) {
 			}
 			
@@ -276,6 +270,7 @@ public class FileDialogApp {
 		readItem.addSelectionListener(new Read());
 		
 		exitItem.addSelectionListener(new SelectionAdapter() {
+			@Override
 			public void widgetSelected(SelectionEvent e) {
 				MessageBox messageBox = new MessageBox(s, SWT.ICON_QUESTION | SWT.YES | SWT.NO);					
 				messageBox.setMessage("Do you really want to exit? ");
@@ -314,7 +309,8 @@ public class FileDialogApp {
 		btnOk.setText("Quit");
 		btnOk.addListener(SWT.Selection, new Listener() {
 			
-		      public void handleEvent(Event event) {
+		      @Override
+			public void handleEvent(Event event) {
 		    	s.close();
 		        d.dispose();
 		        
@@ -336,7 +332,8 @@ public class FileDialogApp {
 		btnReadCsv.setBounds(161, 162, 94, 28);
 		btnReadCsv.setText("Read csv..");
 		btnReadCsv.addListener(SWT.Selection, new Listener() {
-		      public void handleEvent(Event event) {
+		      @Override
+			public void handleEvent(Event event) {
 		    	   String str =StartDate.toString();
 			        new Open().widgetOpen(StartDate,EndDate);
 			      }
@@ -345,7 +342,8 @@ public class FileDialogApp {
 		btnSaveXls.setBounds(294, 162, 94, 28);
 		btnSaveXls.setText("Save xls..");
 		btnSaveXls.addListener(SWT.Selection, new Listener() {
-		      public void handleEvent(Event event) {
+		      @Override
+			public void handleEvent(Event event) {
 			        new Save();
 			      }
 			    });
@@ -353,7 +351,8 @@ public class FileDialogApp {
 		btnReadFormula.setBounds(443, 162, 94, 28);
 		btnReadFormula.setText("Read formula..");
 		btnReadFormula.addListener(SWT.Selection, new Listener() {
-		      public void handleEvent(Event event) {
+		      @Override
+			public void handleEvent(Event event) {
 			        new Read().widgetSelectedBtn(event);
 			      }
 			    });   
@@ -368,7 +367,8 @@ public class FileDialogApp {
 	    btnAggregate.setBounds(30, 162, 94, 28);
 	    btnAggregate.setText("Aggregate");
 	    btnAggregate.addListener(SWT.Selection, new Listener() {
-		      public void handleEvent(Event event) {
+		      @Override
+			public void handleEvent(Event event) {
 			        new Aggregate().widgetSelectedBtn(event);
 			      }
 			    });
@@ -390,7 +390,8 @@ public class FileDialogApp {
 		
 		
 	    tc1.addSelectionListener(new SelectionAdapter() {
-	      public void widgetSelected(SelectionEvent event) {
+	      @Override
+		public void widgetSelected(SelectionEvent event) {
 	        
 	      }
 	    });
@@ -404,7 +405,8 @@ public class FileDialogApp {
 		viewerColumn2.setEditingSupport(new EditColumns(tableViewer));
 
 	    tc2.addSelectionListener(new SelectionAdapter() {
-	      public void widgetSelected(SelectionEvent event) {
+	      @Override
+		public void widgetSelected(SelectionEvent event) {
 	        
 	      }
 	    });
@@ -418,7 +420,8 @@ public class FileDialogApp {
 		viewerColumn3.setEditingSupport(new EditColumns(tableViewer));
 
 	    tc3.addSelectionListener(new SelectionAdapter() {
-	      public void widgetSelected(SelectionEvent event) {
+	      @Override
+		public void widgetSelected(SelectionEvent event) {
 	        
 	      }
 	    });
@@ -432,13 +435,14 @@ public class FileDialogApp {
 		viewerColumn4.setEditingSupport(new EditColumns(tableViewer));
 
 	    tc4.addSelectionListener(new SelectionAdapter() {
-	      public void widgetSelected(SelectionEvent event) {
+	      @Override
+		public void widgetSelected(SelectionEvent event) {
 	        
 	      }
 	    });
 	 // Turn on the header and the lines
 	    MyModel[] MylistModel =createModel();
-	    tableViewer.setInput((Object) MylistModel);
+	    tableViewer.setInput(MylistModel);
 	    table.setHeaderVisible(true);
 	    table.setLinesVisible(true);		
 	    tableViewer.getTable().addListener(SWT.EraseItem, new Listener() {
@@ -564,10 +568,10 @@ public class FileDialogApp {
 		}
 
 	}
-	public static void main(String[] argv) {
+	/*public static void main(String[] argv) {
 		final String APP_NAME = "Wycc invoice";
 		Display.setAppName(APP_NAME);
 
 		new FileDialogApp();
-	}
+	}*/
 }

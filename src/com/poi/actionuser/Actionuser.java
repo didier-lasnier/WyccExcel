@@ -1,21 +1,15 @@
 package com.poi.actionuser;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -23,19 +17,12 @@ import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 import org.eclipse.swt.widgets.DateTime;
-import com.opencsv.CSVReader;
-import com.opencsv.bean.CsvToBean;
-
 import com.dlas.dao.MvtCsv;
 import com.dlas.dao.h2db;
 import com.dlas.dao.hsqltext;
-import com.dlas.tools.CSVMappedMvt;
 import com.dlas.tools.CsvTools;
-import com.dlas.tools.MappingStrategy;
 import com.dlas.dao.LimitAggCsv;
 
-//import com.poi.dlas.FileDialogOld;
-import com.poi.dlas.WyccWorkbook;
 import com.poi.dlas.managecsv;
 
 public class Actionuser {
@@ -200,7 +187,7 @@ public class Actionuser {
 //		Set<LimitAggCsv> setWithUniqueValues = new HashSet<LimitAggCsv>(listagg);
 //		listaggDistinct= new ArrayList<>(setWithUniqueValues);
 		
-		return (List) listnotnull;
+		return listnotnull;
 	}
 	
 	public void readcsvheader(List<MvtCsv> list) throws IOException, SQLException {

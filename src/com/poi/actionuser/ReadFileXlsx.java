@@ -1,30 +1,14 @@
 package com.poi.actionuser;
 
-import java.lang.reflect.*;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.dlas.dao.h2db;
-import com.dlas.dao.hsqltext;
-
 import com.poi.dlas.WyccWorkbook;
-import com.poi.dlas.managecsv;
 
 public class ReadFileXlsx {
 	private String header[];

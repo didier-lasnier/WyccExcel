@@ -41,6 +41,7 @@ public class GroupDialog extends Dialog {
 	 * 
 	 * @param parent
 	 */
+	@Override
 	protected Control createDialogArea(Composite parent) {
 		Composite container = (Composite) super.createDialogArea(parent);
 		final GridLayout gridLayout = new GridLayout();
@@ -61,6 +62,7 @@ public class GroupDialog extends Dialog {
 	 * 
 	 * @param parent
 	 */
+	@Override
 	protected void createButtonsForButtonBar(Composite parent) {
 		createButton(parent, IDialogConstants.OK_ID, IDialogConstants.OK_LABEL,
 				true);
@@ -74,10 +76,12 @@ public class GroupDialog extends Dialog {
 	/**
 	 * Return the initial size of the dialog
 	 */
+	@Override
 	protected Point getInitialSize() {
 		return new Point(343, 110);
 	}
 
+	@Override
 	protected void configureShell(Shell newShell) {
 		super.configureShell(newShell);
 		newShell.setText("Phone company");
