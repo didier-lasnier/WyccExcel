@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 7 f??vr. 2017 00:34:40 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.dlas.dao.SETTINGSCELL" table="SETTINGSCELL">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="cellrow" type="int">
+            <column name="CELLROW" />
+        </property>
+        <property name="cellcolumn" type="int">
+            <column name="CELLCOLUMN" />
+        </property>
+        <property name="sheetnum" type="int">
+            <column name="SHEETNUM" />
+        </property>
+        <property name="halignement" type="int">
+            <column name="HALIGNEMENT" />
+        </property>
+        <property name="valignement" type="int">
+            <column name="VALIGNEMENT" />
+        </property>
+        <property name="borderbottom" type="int">
+            <column name="BORDERBOTTOM" />
+        </property>
+        <property name="bordertop" type="int">
+            <column name="BORDERTOP" />
+        </property>
+        <property name="borterleft" type="int">
+            <column name="BORTERLEFT" />
+        </property>
+        <property name="borderright" type="int">
+            <column name="BORDERRIGHT" />
+        </property>
+        <property name="dataformat" type="int">
+            <column name="DATAFORMAT" />
+        </property>
+        <property name="dataformatstring" type="java.lang.String">
+            <column name="DATAFORMATSTRING" />
+        </property>
+        <property name="baxkgroundcolor" type="int">
+            <column name="BAXKGROUNDCOLOR" />
+        </property>
+        <property name="frontgroundcolor" type="int">
+            <column name="FRONTGROUNDCOLOR" />
+        </property>
+        <property name="pattern" type="int">
+            <column name="PATTERN" />
+        </property>
+        <property name="fontindex" type="int">
+            <column name="FONTINDEX" />
+        </property>
+        <property name="indention" type="float">
+            <column name="INDENTION" />
+        </property>
+        <property name="bordercolorbottom" type="int">
+            <column name="BORDERCOLORBOTTOM" />
+        </property>
+        <property name="bordercolortop" type="int">
+            <column name="BORDERCOLORTOP" />
+        </property>
+        <property name="bordercolorright" type="int">
+            <column name="BORDERCOLORRIGHT" />
+        </property>
+        <property name="bordercolorleft" type="int">
+            <column name="BORDERCOLORLEFT" />
+        </property>
+        <property name="valeurcell" type="java.lang.String">
+            <column name="VALEURCELL" />
+        </property>
+        <property name="formulecell" type="java.lang.String">
+            <column name="FORMULECELL" />
+        </property>
+        <property name="typecell" type="int">
+            <column name="TYPECELL" />
+        </property>
+    </class>
+</hibernate-mapping>
