@@ -16,14 +16,15 @@ public class OpenItem implements SelectionListener {
 	private DateTime StartD;
 	private DateTime EndD;
 	private Shell    s;
-
+	private String Dirpath;
 	public OpenItem(){}
 
 
-	public OpenItem(Shell s,DateTime StartD, DateTime EndD){
+	public OpenItem(Shell s,DateTime StartD, DateTime EndD,String Dirpath){
 		this.s=s;
 		this.StartD=StartD;
 		this.EndD=EndD;
+		this.Dirpath=Dirpath;
 	}
 	@Override
 	public void widgetSelected(SelectionEvent event) {
@@ -51,7 +52,7 @@ public class OpenItem implements SelectionListener {
 			String selected = fd.open();
 			if (selected !=null) {
 				Actionuser a = new Actionuser();
-				Actionuser.lanceLecture(selected, StartD, EndD);
+				Actionuser.lanceLecture(Dirpath,selected, StartD, EndD);
 
 			}
 		} catch (IOException e) {

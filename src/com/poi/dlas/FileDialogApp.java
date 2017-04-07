@@ -118,7 +118,7 @@ public class FileDialogApp {
 				if (selected !=null) {
 					Actionuser a = new Actionuser();
 					
-					Actionuser.lanceLecture(selected, StartD, EndD);
+					Actionuser.lanceLecture("",selected, StartD, EndD);
 					
 					}
 				} catch (IOException e) {

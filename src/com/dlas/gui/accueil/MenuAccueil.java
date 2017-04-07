@@ -14,7 +14,7 @@ public class MenuAccueil {
 
 	public MenuAccueil(){};
 	
-	public MenuAccueil(Shell s,Display d,DateTime StartD, DateTime EndD){
+	public MenuAccueil(Shell s,Display d,DateTime StartD, DateTime EndD,String dirpath){
 		
 	Menu m = new Menu(s, SWT.BAR);
 	// create a file menu and add an exit item
@@ -36,7 +36,7 @@ public class MenuAccueil {
 	exitItem.setText("&Quit\tCRTL+Q");
 	exitItem.setAccelerator(SWT.CTRL + 'Q');
 	
-	openItem.addSelectionListener(new OpenItem(s,StartD,EndD));
+	openItem.addSelectionListener(new OpenItem(s,StartD,EndD,dirpath));
 	
 	saveItem.addSelectionListener(new SaveItem(s,StartD,EndD));
 	

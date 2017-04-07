@@ -2,6 +2,9 @@ package com.poi.actionuser;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Modifier;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -32,13 +35,15 @@ public class Actionuser {
 
 	}
 
-	public static void lanceLecture(String Filepath,DateTime StartD,DateTime EndD ) throws Exception {
+	public static void lanceLecture(String dir,String Filepath,DateTime StartD,DateTime EndD ) throws Exception {
 
             File theOpenfile=new File(Filepath);
+            File directory  =new File(dir);
             Calendar instance = Calendar.getInstance();
 			instance.set(Calendar.DAY_OF_MONTH, StartD.getDay());
 			instance.set(Calendar.MONTH, StartD.getMonth());
 			instance.set(Calendar.YEAR, StartD.getYear());
+			
 			String StartDateStr  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(instance.getTime());
 			instance = Calendar.getInstance();
 			instance.set(Calendar.DAY_OF_MONTH, EndD.getDay());
@@ -51,12 +56,15 @@ public class Actionuser {
 			managecsv csvdata = new managecsv();
 			logger.info("read file csv");
 			List<String[]> csvrows = csvdata.getRowsFromFile(theOpenfile);
-
-			File directory = new File(".");
+			
 			String fileCharSep = System.getProperty("file.separator");
-
+			
+			System.out.print(dir + "tmp"); 
+			
+			
 			File theSavefile = File.createTempFile("tmp", null,
-					new File(directory.getCanonicalPath() + fileCharSep + "tmp"));
+					new File(dir +  "tmp"));
+			
 			String file = theSavefile.getAbsolutePath();
 			logger.info("theSavefile Done : " + file);
 			csvdata.setRowToFile(csvrows, theSavefile);
@@ -69,12 +77,10 @@ public class Actionuser {
 			PreparedStatement stmt = db.connectiondb.prepareStatement("DELETE FROM MVT");
 			logger.info("delete from mvt");
 			stmt.executeUpdate();
-			stmt.close();
-
+			stmt.close();		
 			
-				logger.info("read csv file into from mvt");
-				lireCSV(theOpenfile, db);
-
+			logger.info("read csv file into from mvt");
+			lireCSV(theOpenfile, db);
 			stmt = db.connectiondb.prepareStatement("DELETE FROM MVT_NUM"); // db.connectiondb.createStatement();
 			logger.info("delete from mvt_num");
 			stmt.executeUpdate();

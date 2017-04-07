@@ -4,6 +4,9 @@ package com.dlas.gui;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.net.URLDecoder;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -86,6 +89,7 @@ public class EcranAccueil {
 	private DateTime enddate;
 	private String filepathtxt;
 	private String filepath;
+	private static String appDir;
 	private List listCsv;
 	private static String APP_NAME = "Wycc invoice";
 	Display d;
@@ -117,21 +121,35 @@ public class EcranAccueil {
 
 	public static void main(String[] args) {
 		//final String APP_NAME = "Wycc invoice";
+
+		
 		
 		Display.setAppName(APP_NAME);
 		Display display = new Display();
 		shell = new Shell();
 		shell.setBackground(SWTResourceManager.getColor(255, 255, 255));
 		shell.setSize(638, 382);
-		
+		/*
+		 *  On détermine le dossier d'execution du jar
+		 * 
+		 */
+		URL url = EcranAccueil.class.getProtectionDomain().getCodeSource().getLocation(); //Gets the path
+	  	String jarPath = null;
+			try {
+				jarPath = URLDecoder.decode(url.getFile(), "UTF-8"); //Should fix it to be read correctly by the system
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			}
+			
+			appDir = new File(jarPath).getParentFile().getPath(); //Path of the jar
+			appDir = appDir + File.separator;
+	    
 		Menu menusy=display.getSystemMenu();
      	Realm.runWithDefault(SWTObservables.getRealm(display), new Runnable() {
 			@Override
 			public void run() {
 
 				try {
-
-					
 					window.open();
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -173,7 +191,7 @@ public class EcranAccueil {
 			if (selected !=null) {
 				
 				Actionuser a = new Actionuser();
-				Actionuser.lanceLecture(selected, StartD, EndD);
+				a.lanceLecture(appDir,selected, StartD, EndD);
 				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -274,7 +292,7 @@ public class EcranAccueil {
 		final Display display = Display.getDefault();		
 //		setDefaultValues();
 		createContents();
-		MenuAccueil menuaccueil=new MenuAccueil(shell,display,startdate,enddate);
+		MenuAccueil menuaccueil=new MenuAccueil(shell,display,startdate,enddate,appDir);
 		Display.setAppName(APP_NAME);
 		shell.open();
 		shell.layout();
@@ -326,7 +344,7 @@ public class EcranAccueil {
 					m_benefits.addBenefit(shell,benefit,window);
 					
 					try {
-						Actionuser.lanceLecture(window.getFilepath(), startdate,enddate);
+						a.lanceLecture(appDir,window.getFilepath(), startdate,enddate);
 					} catch (Exception e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -497,7 +515,7 @@ public class EcranAccueil {
 				if (selected !=null) {
 					Actionuser a = new Actionuser();
 					
-					Actionuser.lanceLecture(selected, StartD, EndD);
+					Actionuser.lanceLecture(appDir,selected, StartD, EndD);
 					
 					}
 				} catch (IOException e) {
