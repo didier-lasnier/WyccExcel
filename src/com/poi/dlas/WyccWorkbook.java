@@ -770,8 +770,9 @@ public class WyccWorkbook {
 				if ((event.getFormulecell() != null)) {
 
 					String laformule = event.getFormulecell();
-					//logger.info("Formule à parser : " + laformule);
+					logger.info("Formule à parser : " + laformule);
 					laformule=getFormuleRegex(laformule,"([$A-Z]+)([$0-9]+)","([$0-9]+)");
+					logger.info("Formule parsée : " + laformule);
 //					laformule = laformule.replace("5", "%d");
 //					laformule = laformule.replace("14", "%d");
 					int therow = introw + 1;
@@ -969,7 +970,7 @@ public class WyccWorkbook {
 		       m.appendReplacement(sb,sb1.toString()) ; 
 		   }
 		    m.appendTail(sb) ;
-		    System.out.println("groupe = " + m.group()) ; 
+ 
 		return sb.toString();		
 	}
 	

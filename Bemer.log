@@ -3679,3 +3679,451 @@
 [2017-04-09 00:44:37,350]-[pool-5-thread-1] DEBUG org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - Connection pool now considered primed; min-size will be maintained
 [2017-04-09 00:44:37,758]-[pool-6-thread-1] DEBUG org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - Connection pool now considered primed; min-size will be maintained
 [2017-04-09 00:45:15,032]-[main] INFO  wycc  - Formule sortante : 5*5
+[2017-04-09 11:19:46,489]-[main] INFO  wycc  - /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel
+[2017-04-09 11:19:46,506]-[main] INFO  wycc  - /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel******
+[2017-04-09 11:19:46,506]-[main] INFO  wycc  - jdbc:hsqldb:/Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel/db/hsql******
+[2017-04-09 11:19:47,001]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-04-09 11:20:30,685]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-04-09 11:20:30,687]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-04-09 11:20:31,040]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-04-09 11:20:31,151]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:20:31,153]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:20:31,153]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:20:31,153]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:20:31,155]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:20:31,185]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:20:31,826]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:20:32,111]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:20:32,265]-[main] INFO  wycc  - Lecture des données de la lignes : 4
+[2017-04-09 11:20:32,267]-[main] INFO  wycc  - Lecture des données de la lignes : 5
+[2017-04-09 11:20:32,307]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:20:32,308]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:20:32,308]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:20:32,308]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:20:32,309]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:20:32,310]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:20:32,337]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:20:32,364]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:20:33,508]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:20:33,508]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:20:33,508]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:20:33,509]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:20:33,509]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:20:33,510]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:20:33,533]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:20:33,580]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:20:33,586]-[main] INFO  wycc  - modulfournisseur : AIG Luxembourg
+[2017-04-09 11:20:33,586]-[main] INFO  wycc  - modullabel : PRESTIGES
+[2017-04-09 11:20:33,586]-[main] INFO  wycc  - modulcategory : Healthcare Plan
+[2017-04-09 11:20:33,586]-[main] INFO  wycc  - modulscope : Single
+[2017-04-09 11:20:33,623]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:20:33,624]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:20:33,625]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:20:33,625]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:20:33,625]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:20:33,628]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:20:33,651]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:20:33,675]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:20:33,706]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:20:33,707]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:20:33,707]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:20:33,707]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:20:33,708]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:20:33,709]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:20:33,732]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:20:33,751]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:20:33,754]-[main] INFO  wycc  - Lecture des données de la lignes : 4
+[2017-04-09 11:20:33,754]-[main] INFO  wycc  - Lecture des données de la lignes : 5
+[2017-04-09 11:20:33,782]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:20:33,783]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:20:33,783]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:20:33,783]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:20:33,784]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:20:33,785]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:20:33,808]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:20:33,827]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:22:34,801]-[main] INFO  wycc  - /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel
+[2017-04-09 11:22:34,801]-[main] INFO  wycc  - /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel******
+[2017-04-09 11:22:34,801]-[main] INFO  wycc  - jdbc:hsqldb:/Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel/db/hsql******
+[2017-04-09 11:22:34,830]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:22:34,830]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:22:34,830]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:22:34,830]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:22:34,830]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:22:34,831]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:22:34,850]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:22:34,867]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:22:34,871]-[main] INFO  wycc  - Lecture des données de la lignes : 4
+[2017-04-09 11:22:34,871]-[main] INFO  wycc  - Lecture des données de la lignes : 5
+[2017-04-09 11:22:34,899]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:22:34,900]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:22:34,900]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:22:34,900]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:22:34,900]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:22:34,901]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:22:34,920]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:22:34,938]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:22:35,136]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:22:35,137]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:22:35,137]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:22:35,137]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:22:35,137]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:22:35,138]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:22:35,151]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:22:35,174]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:22:35,178]-[main] INFO  wycc  - modulfournisseur : AIG Luxembourg
+[2017-04-09 11:22:35,178]-[main] INFO  wycc  - modullabel : PRESTIGES
+[2017-04-09 11:22:35,178]-[main] INFO  wycc  - modulcategory : Healthcare Plan
+[2017-04-09 11:22:35,178]-[main] INFO  wycc  - modulscope : Single
+[2017-04-09 11:22:35,202]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:22:35,202]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:22:35,202]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:22:35,203]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:22:35,203]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:22:35,203]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:22:35,213]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:22:35,234]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:22:35,265]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:22:35,265]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:22:35,265]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:22:35,266]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:22:35,266]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:22:35,267]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:22:35,277]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:22:35,290]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:22:35,293]-[main] INFO  wycc  - Lecture des données de la lignes : 4
+[2017-04-09 11:22:35,293]-[main] INFO  wycc  - Lecture des données de la lignes : 5
+[2017-04-09 11:22:35,319]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:22:35,320]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:22:35,320]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:22:35,320]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:22:35,321]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:22:35,322]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:22:35,336]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:22:35,352]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:25:51,051]-[main] INFO  wycc  - /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel
+[2017-04-09 11:25:51,056]-[main] INFO  wycc  - /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel******
+[2017-04-09 11:25:51,056]-[main] INFO  wycc  - jdbc:hsqldb:/Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel/db/hsql******
+[2017-04-09 11:25:51,411]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-04-09 11:26:37,556]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-04-09 11:26:37,557]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-04-09 11:26:37,808]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-04-09 11:26:37,888]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:26:37,889]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:26:37,889]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:26:37,889]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:26:37,892]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:26:37,916]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:26:38,345]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:26:38,589]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:26:38,702]-[main] INFO  wycc  - Lecture des données de la lignes : 4
+[2017-04-09 11:26:38,704]-[main] INFO  wycc  - Lecture des données de la lignes : 5
+[2017-04-09 11:26:38,750]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:26:38,750]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:26:38,750]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:26:38,751]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:26:38,751]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:26:38,752]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:26:38,781]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:26:38,812]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:27:12,934]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:27:12,935]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:27:12,935]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:27:12,935]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:27:12,935]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:27:12,936]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:27:12,968]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:27:13,028]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:27:13,033]-[main] INFO  wycc  - modulfournisseur : AIG Luxembourg
+[2017-04-09 11:27:13,033]-[main] INFO  wycc  - modullabel : PRESTIGES
+[2017-04-09 11:27:13,034]-[main] INFO  wycc  - modulcategory : Healthcare Plan
+[2017-04-09 11:27:13,034]-[main] INFO  wycc  - modulscope : Single
+[2017-04-09 11:27:13,068]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:27:13,068]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:27:13,069]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:27:13,069]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:27:13,070]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:27:13,072]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:27:13,096]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:27:13,122]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:27:13,169]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:27:13,169]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:27:13,170]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:27:13,170]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:27:13,171]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:27:13,172]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:27:13,200]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:27:13,233]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:27:13,240]-[main] INFO  wycc  - Lecture des données de la lignes : 4
+[2017-04-09 11:27:13,240]-[main] INFO  wycc  - Lecture des données de la lignes : 5
+[2017-04-09 11:27:13,284]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:27:13,284]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:27:13,285]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:27:13,285]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:27:13,285]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:27:13,286]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:27:13,313]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:27:13,340]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:27:56,512]-[main] INFO  wycc  - Formule sortante : AQ5*AR5
+[2017-04-09 11:28:11,217]-[main] INFO  wycc  - Formule sortante : AP5/(1-AQ5)
+[2017-04-09 11:28:31,601]-[main] INFO  wycc  - Formule sortante : AM5+AO5
+[2017-04-09 11:28:32,412]-[main] INFO  wycc  - Formule sortante : AN5*AM5
+[2017-04-09 11:28:33,345]-[main] INFO  wycc  - Formule sortante : AE5*(1+AK5)
+[2017-04-09 11:28:34,020]-[main] INFO  wycc  - Formule sortante : AK5*AE5
+[2017-04-09 11:28:34,718]-[main] INFO  wycc  - Formule sortante : AF5-AH5
+[2017-04-09 11:28:35,314]-[main] INFO  wycc  - Formule sortante : AD5-AG5
+[2017-04-09 11:28:35,876]-[main] INFO  wycc  - Formule sortante : AG5*AE5
+[2017-04-09 11:28:36,450]-[main] INFO  wycc  - Formule sortante : AT5*AR5
+[2017-04-09 11:28:37,047]-[main] INFO  wycc  - Formule sortante : AC5/(1-AD5)
+[2017-04-09 11:28:37,587]-[main] INFO  wycc  - Formule sortante : AA5*(1+AB5)
+[2017-04-09 11:28:38,138]-[main] INFO  wycc  - Formule sortante : X5*Z5
+[2017-04-09 11:28:38,690]-[main] INFO  wycc  - Formule sortante : Y5*O5*12
+[2017-04-09 11:28:40,219]-[main] INFO  wycc  - Formule sortante : AD5*AE5
+[2017-04-09 11:28:40,849]-[main] INFO  wycc  - Formule sortante : AQ5-AT5
+[2017-04-09 11:28:41,480]-[main] INFO  wycc  - Formule sortante : AS5-AU5
+[2017-04-09 11:28:42,177]-[main] INFO  wycc  - Formule sortante : X5*Z5/365*P5
+[2017-04-09 11:28:42,803]-[main] INFO  wycc  - Formule sortante : BP5
+[2017-04-09 11:28:43,448]-[main] INFO  wycc  - Formule sortante : BQ5-BS5
+[2017-04-09 11:28:44,068]-[main] INFO  wycc  - Formule sortante : BO5-BR5
+[2017-04-09 11:28:44,708]-[main] INFO  wycc  - Formule sortante : BR5*BP5
+[2017-04-09 11:28:45,282]-[main] INFO  wycc  - Formule sortante : BO5*BP5
+[2017-04-09 11:28:45,867]-[main] INFO  wycc  - Formule sortante : BN5/(1-BO5)
+[2017-04-09 11:28:46,475]-[main] INFO  wycc  - Formule sortante : AR5
+[2017-04-09 11:28:47,150]-[main] INFO  wycc  - Formule sortante : BK5+BM5
+[2017-04-09 11:28:47,779]-[main] INFO  wycc  - Formule sortante : BC5*(1+BI5)
+[2017-04-09 11:28:48,431]-[main] INFO  wycc  - Formule sortante : BI5*BC5
+[2017-04-09 11:28:49,095]-[main] INFO  wycc  - Formule sortante : BD5-BF5
+[2017-04-09 11:28:49,771]-[main] INFO  wycc  - Formule sortante : BB5-BE5
+[2017-04-09 11:28:50,390]-[main] INFO  wycc  - Formule sortante : BE5*BC5
+[2017-04-09 11:28:51,008]-[main] INFO  wycc  - Formule sortante : BB5*BC5
+[2017-04-09 11:28:51,908]-[main] INFO  wycc  - Formule sortante : BA5/(1-BB5)
+[2017-04-09 11:28:52,617]-[main] INFO  wycc  - Formule sortante : AY5*(1+AZ5)
+[2017-04-09 11:28:53,787]-[main] INFO  wycc  - Formule sortante : BL5*BK5
+[2017-04-09 11:28:54,428]-[main] INFO  wycc  - Formule sortante : AP5/(1-AQ5)
+[2017-04-09 11:28:55,047]-[main] INFO  wycc  - Formule sortante : AM5+AO5
+[2017-04-09 11:28:55,531]-[main] INFO  wycc  - Formule sortante : AN5*AM5
+[2017-04-09 11:28:56,127]-[main] INFO  wycc  - Formule sortante : AE5*(1+AK5)
+[2017-04-09 11:28:56,768]-[main] INFO  wycc  - Formule sortante : AK5*AE5
+[2017-04-09 11:28:57,365]-[main] INFO  wycc  - Formule sortante : AF5-AH5
+[2017-04-09 11:28:57,894]-[main] INFO  wycc  - Formule sortante : AD5-AG5
+[2017-04-09 11:28:58,455]-[main] INFO  wycc  - Formule sortante : AG5*AE5
+[2017-04-09 11:28:59,007]-[main] INFO  wycc  - Formule sortante : AD5*AE5
+[2017-04-09 11:28:59,615]-[main] INFO  wycc  - Formule sortante : AQ5*AR5
+[2017-04-09 11:29:00,177]-[main] INFO  wycc  - Formule sortante : AC5/(1-AD5)
+[2017-04-09 11:29:00,740]-[main] INFO  wycc  - Formule sortante : AA5*(1+AB5)
+[2017-04-09 11:29:01,381]-[main] INFO  wycc  - Formule sortante : AT5*AR5
+[2017-04-09 11:29:01,966]-[main] INFO  wycc  - Formule sortante : AS5-AU5
+[2017-04-09 11:29:02,472]-[main] INFO  wycc  - Formule sortante : AX5/12*5Q5
+[2017-04-09 11:32:44,751]-[main] INFO  wycc  - /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel
+[2017-04-09 11:32:44,756]-[main] INFO  wycc  - /Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel******
+[2017-04-09 11:32:44,756]-[main] INFO  wycc  - jdbc:hsqldb:/Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel/db/hsql******
+[2017-04-09 11:32:45,134]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-04-09 11:33:33,465]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-04-09 11:33:33,466]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-04-09 11:33:33,757]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-04-09 11:33:33,842]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:33:33,843]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:33:33,843]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:33:33,843]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:33:33,846]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:33:33,870]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:33:34,326]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:33:34,587]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:33:34,715]-[main] INFO  wycc  - Lecture des données de la lignes : 4
+[2017-04-09 11:33:34,716]-[main] INFO  wycc  - Lecture des données de la lignes : 5
+[2017-04-09 11:33:34,761]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:33:34,761]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:33:34,762]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:33:34,762]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:33:34,762]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:33:34,763]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:33:34,796]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:33:34,837]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:34:14,950]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:34:14,951]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:34:14,951]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:34:14,951]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:34:14,951]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:34:14,953]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:34:14,984]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:34:15,040]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:34:15,046]-[main] INFO  wycc  - modulfournisseur : AIG Luxembourg
+[2017-04-09 11:34:15,046]-[main] INFO  wycc  - modullabel : PRESTIGES
+[2017-04-09 11:34:15,046]-[main] INFO  wycc  - modulcategory : Healthcare Plan
+[2017-04-09 11:34:15,046]-[main] INFO  wycc  - modulscope : Single
+[2017-04-09 11:34:15,091]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:34:15,092]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:34:15,093]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:34:15,093]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:34:15,094]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:34:15,095]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:34:15,126]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:34:15,163]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:34:15,217]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:34:15,218]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:34:15,218]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:34:15,219]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:34:15,219]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:34:15,220]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:34:15,255]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:34:15,291]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:34:15,296]-[main] INFO  wycc  - Lecture des données de la lignes : 4
+[2017-04-09 11:34:15,296]-[main] INFO  wycc  - Lecture des données de la lignes : 5
+[2017-04-09 11:34:15,351]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-04-09 11:34:15,352]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-04-09 11:34:15,352]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-04-09 11:34:15,352]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-04-09 11:34:15,353]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-04-09 11:34:15,356]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-04-09 11:34:15,384]-[main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: com.dlas.dao.beneficiaries (class must be instantiated by Interceptor)
+[2017-04-09 11:34:15,413]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-04-09 11:34:15,571]-[main] INFO  wycc  - Formule à parser : AQ12*AR12
+[2017-04-09 11:34:15,572]-[main] INFO  wycc  - Formule parsée : AQ%d*AR%d
+[2017-04-09 11:34:18,672]-[main] INFO  wycc  - Formule sortante : AQ5*AR5
+[2017-04-09 11:34:18,741]-[main] INFO  wycc  - Formule à parser : AP12/(1-AQ12)
+[2017-04-09 11:34:18,741]-[main] INFO  wycc  - Formule parsée : AP%d/(1-AQ%d)
+[2017-04-09 11:34:20,538]-[main] INFO  wycc  - Formule sortante : AP5/(1-AQ5)
+[2017-04-09 11:34:20,548]-[main] INFO  wycc  - Formule à parser : AM12+AO12
+[2017-04-09 11:34:20,548]-[main] INFO  wycc  - Formule parsée : AM%d+AO%d
+[2017-04-09 11:34:22,135]-[main] INFO  wycc  - Formule sortante : AM5+AO5
+[2017-04-09 11:34:22,140]-[main] INFO  wycc  - Formule à parser : AN12*AM12
+[2017-04-09 11:34:22,141]-[main] INFO  wycc  - Formule parsée : AN%d*AM%d
+[2017-04-09 11:34:27,930]-[main] INFO  wycc  - Formule sortante : AN5*AM5
+[2017-04-09 11:34:27,938]-[main] INFO  wycc  - Formule à parser : AE12*(1+AK12)
+[2017-04-09 11:34:27,938]-[main] INFO  wycc  - Formule parsée : AE%d*(1+AK%d)
+[2017-04-09 11:34:30,248]-[main] INFO  wycc  - Formule sortante : AE5*(1+AK5)
+[2017-04-09 11:34:30,252]-[main] INFO  wycc  - Formule à parser : AK12*AE12
+[2017-04-09 11:34:30,252]-[main] INFO  wycc  - Formule parsée : AK%d*AE%d
+[2017-04-09 11:34:34,624]-[main] INFO  wycc  - Formule sortante : AK5*AE5
+[2017-04-09 11:34:34,630]-[main] INFO  wycc  - Formule à parser : AF12-AH12
+[2017-04-09 11:34:34,630]-[main] INFO  wycc  - Formule parsée : AF%d-AH%d
+[2017-04-09 11:34:40,642]-[main] INFO  wycc  - Formule sortante : AF5-AH5
+[2017-04-09 11:34:40,645]-[main] INFO  wycc  - Formule à parser : AD12-AG12
+[2017-04-09 11:34:40,645]-[main] INFO  wycc  - Formule parsée : AD%d-AG%d
+[2017-04-09 11:34:42,746]-[main] INFO  wycc  - Formule sortante : AD5-AG5
+[2017-04-09 11:34:42,750]-[main] INFO  wycc  - Formule à parser : AG12*AE12
+[2017-04-09 11:34:42,750]-[main] INFO  wycc  - Formule parsée : AG%d*AE%d
+[2017-04-09 11:34:44,445]-[main] INFO  wycc  - Formule sortante : AG5*AE5
+[2017-04-09 11:34:44,448]-[main] INFO  wycc  - Formule à parser : AT12*AR12
+[2017-04-09 11:34:44,448]-[main] INFO  wycc  - Formule parsée : AT%d*AR%d
+[2017-04-09 11:34:45,514]-[main] INFO  wycc  - Formule sortante : AT5*AR5
+[2017-04-09 11:34:45,519]-[main] INFO  wycc  - Formule à parser : AC12/(1-AD12)
+[2017-04-09 11:34:45,520]-[main] INFO  wycc  - Formule parsée : AC%d/(1-AD%d)
+[2017-04-09 11:34:48,563]-[main] INFO  wycc  - Formule sortante : AC5/(1-AD5)
+[2017-04-09 11:34:48,568]-[main] INFO  wycc  - Formule à parser : AA12*(1+AB12)
+[2017-04-09 11:34:48,569]-[main] INFO  wycc  - Formule parsée : AA%d*(1+AB%d)
+[2017-04-09 11:34:50,711]-[main] INFO  wycc  - Formule sortante : AA5*(1+AB5)
+[2017-04-09 11:34:50,716]-[main] INFO  wycc  - Formule à parser : X12*Z12
+[2017-04-09 11:34:50,716]-[main] INFO  wycc  - Formule parsée : X%d*Z%d
+[2017-04-09 11:34:52,614]-[main] INFO  wycc  - Formule sortante : X5*Z5
+[2017-04-09 11:34:52,616]-[main] INFO  wycc  - Formule à parser : Y12*O12*12
+[2017-04-09 11:34:52,617]-[main] INFO  wycc  - Formule parsée : Y%d*O%d*12
+[2017-04-09 11:34:55,032]-[main] INFO  wycc  - Formule sortante : Y5*O5*12
+[2017-04-09 11:34:55,048]-[main] INFO  wycc  - Formule à parser : AD12*AE12
+[2017-04-09 11:34:55,048]-[main] INFO  wycc  - Formule parsée : AD%d*AE%d
+[2017-04-09 11:34:56,608]-[main] INFO  wycc  - Formule sortante : AD5*AE5
+[2017-04-09 11:34:56,610]-[main] INFO  wycc  - Formule à parser : AQ12-AT12
+[2017-04-09 11:34:56,611]-[main] INFO  wycc  - Formule parsée : AQ%d-AT%d
+[2017-04-09 11:34:57,822]-[main] INFO  wycc  - Formule sortante : AQ5-AT5
+[2017-04-09 11:34:57,826]-[main] INFO  wycc  - Formule à parser : AS12-AU12
+[2017-04-09 11:34:57,827]-[main] INFO  wycc  - Formule parsée : AS%d-AU%d
+[2017-04-09 11:34:59,003]-[main] INFO  wycc  - Formule sortante : AS5-AU5
+[2017-04-09 11:34:59,006]-[main] INFO  wycc  - Formule à parser : X12*Z12/365*P12
+[2017-04-09 11:34:59,007]-[main] INFO  wycc  - Formule parsée : X%d*Z%d/365*P%d
+[2017-04-09 11:35:00,679]-[main] INFO  wycc  - Formule sortante : X5*Z5/365*P5
+[2017-04-09 11:35:00,682]-[main] INFO  wycc  - Formule à parser : BP12
+[2017-04-09 11:35:00,683]-[main] INFO  wycc  - Formule parsée : BP%d
+[2017-04-09 11:35:03,008]-[main] INFO  wycc  - Formule sortante : BP5
+[2017-04-09 11:35:03,011]-[main] INFO  wycc  - Formule à parser : BQ12-BS12
+[2017-04-09 11:35:03,011]-[main] INFO  wycc  - Formule parsée : BQ%d-BS%d
+[2017-04-09 11:35:05,832]-[main] INFO  wycc  - Formule sortante : BQ5-BS5
+[2017-04-09 11:35:05,834]-[main] INFO  wycc  - Formule à parser : BO12-BR12
+[2017-04-09 11:35:05,835]-[main] INFO  wycc  - Formule parsée : BO%d-BR%d
+[2017-04-09 11:35:11,277]-[main] INFO  wycc  - Formule sortante : BO5-BR5
+[2017-04-09 11:35:11,279]-[main] INFO  wycc  - Formule à parser : BR12*BP12
+[2017-04-09 11:35:11,279]-[main] INFO  wycc  - Formule parsée : BR%d*BP%d
+[2017-04-09 11:35:17,555]-[main] INFO  wycc  - Formule sortante : BR5*BP5
+[2017-04-09 11:35:17,559]-[main] INFO  wycc  - Formule à parser : BO12*BP12
+[2017-04-09 11:35:17,559]-[main] INFO  wycc  - Formule parsée : BO%d*BP%d
+[2017-04-09 11:35:18,680]-[main] INFO  wycc  - Formule sortante : BO5*BP5
+[2017-04-09 11:35:18,681]-[main] INFO  wycc  - Formule à parser : BN12/(1-BO12)
+[2017-04-09 11:35:18,682]-[main] INFO  wycc  - Formule parsée : BN%d/(1-BO%d)
+[2017-04-09 11:35:20,064]-[main] INFO  wycc  - Formule sortante : BN5/(1-BO5)
+[2017-04-09 11:35:20,068]-[main] INFO  wycc  - Formule à parser : AR12
+[2017-04-09 11:35:20,068]-[main] INFO  wycc  - Formule parsée : AR%d
+[2017-04-09 11:35:21,245]-[main] INFO  wycc  - Formule sortante : AR5
+[2017-04-09 11:35:21,247]-[main] INFO  wycc  - Formule à parser : BK12+BM12
+[2017-04-09 11:35:21,248]-[main] INFO  wycc  - Formule parsée : BK%d+BM%d
+[2017-04-09 11:35:22,551]-[main] INFO  wycc  - Formule sortante : BK5+BM5
+[2017-04-09 11:35:22,554]-[main] INFO  wycc  - Formule à parser : BC12*(1+BI12)
+[2017-04-09 11:35:22,555]-[main] INFO  wycc  - Formule parsée : BC%d*(1+BI%d)
+[2017-04-09 11:35:24,495]-[main] INFO  wycc  - Formule sortante : BC5*(1+BI5)
+[2017-04-09 11:35:24,498]-[main] INFO  wycc  - Formule à parser : BI12*BC12
+[2017-04-09 11:35:24,498]-[main] INFO  wycc  - Formule parsée : BI%d*BC%d
+[2017-04-09 11:35:25,441]-[main] INFO  wycc  - Formule sortante : BI5*BC5
+[2017-04-09 11:35:25,445]-[main] INFO  wycc  - Formule à parser : BD12-BF12
+[2017-04-09 11:35:25,445]-[main] INFO  wycc  - Formule parsée : BD%d-BF%d
+[2017-04-09 11:35:27,826]-[main] INFO  wycc  - Formule sortante : BD5-BF5
+[2017-04-09 11:35:27,829]-[main] INFO  wycc  - Formule à parser : BB12-BE12
+[2017-04-09 11:35:27,829]-[main] INFO  wycc  - Formule parsée : BB%d-BE%d
+[2017-04-09 11:35:29,626]-[main] INFO  wycc  - Formule sortante : BB5-BE5
+[2017-04-09 11:35:29,629]-[main] INFO  wycc  - Formule à parser : BE12*BC12
+[2017-04-09 11:35:29,629]-[main] INFO  wycc  - Formule parsée : BE%d*BC%d
+[2017-04-09 11:35:30,605]-[main] INFO  wycc  - Formule sortante : BE5*BC5
+[2017-04-09 11:35:30,619]-[main] INFO  wycc  - Formule à parser : BB12*BC12
+[2017-04-09 11:35:30,619]-[main] INFO  wycc  - Formule parsée : BB%d*BC%d
+[2017-04-09 11:35:31,809]-[main] INFO  wycc  - Formule sortante : BB5*BC5
+[2017-04-09 11:35:31,812]-[main] INFO  wycc  - Formule à parser : BA12/(1-BB12)
+[2017-04-09 11:35:31,812]-[main] INFO  wycc  - Formule parsée : BA%d/(1-BB%d)
+[2017-04-09 11:35:33,260]-[main] INFO  wycc  - Formule sortante : BA5/(1-BB5)
+[2017-04-09 11:35:33,264]-[main] INFO  wycc  - Formule à parser : AY12*(1+AZ12)
+[2017-04-09 11:35:33,264]-[main] INFO  wycc  - Formule parsée : AY%d*(1+AZ%d)
+[2017-04-09 11:35:34,824]-[main] INFO  wycc  - Formule sortante : AY5*(1+AZ5)
+[2017-04-09 11:35:34,828]-[main] INFO  wycc  - Formule à parser : BL12*BK12
+[2017-04-09 11:35:34,828]-[main] INFO  wycc  - Formule parsée : BL%d*BK%d
+[2017-04-09 11:35:38,514]-[main] INFO  wycc  - Formule sortante : BL5*BK5
+[2017-04-09 11:35:38,517]-[main] INFO  wycc  - Formule à parser : AP5/(1-AQ5)
+[2017-04-09 11:35:38,517]-[main] INFO  wycc  - Formule parsée : AP%d/(1-AQ%d)
+[2017-04-09 11:35:39,616]-[main] INFO  wycc  - Formule sortante : AP5/(1-AQ5)
+[2017-04-09 11:35:39,619]-[main] INFO  wycc  - Formule à parser : AM5+AO5
+[2017-04-09 11:35:39,620]-[main] INFO  wycc  - Formule parsée : AM%d+AO%d
+[2017-04-09 11:35:42,666]-[main] INFO  wycc  - Formule sortante : AM5+AO5
+[2017-04-09 11:35:42,668]-[main] INFO  wycc  - Formule à parser : AN5*AM5
+[2017-04-09 11:35:42,668]-[main] INFO  wycc  - Formule parsée : AN%d*AM%d
+[2017-04-09 11:35:43,813]-[main] INFO  wycc  - Formule sortante : AN5*AM5
+[2017-04-09 11:35:43,816]-[main] INFO  wycc  - Formule à parser : AE5*(1+AK5)
+[2017-04-09 11:35:43,816]-[main] INFO  wycc  - Formule parsée : AE%d*(1+AK%d)
+[2017-04-09 11:35:46,288]-[main] INFO  wycc  - Formule sortante : AE5*(1+AK5)
+[2017-04-09 11:35:46,290]-[main] INFO  wycc  - Formule à parser : AK5*AE5
+[2017-04-09 11:35:46,291]-[main] INFO  wycc  - Formule parsée : AK%d*AE%d
+[2017-04-09 11:35:52,273]-[main] INFO  wycc  - Formule sortante : AK5*AE5
+[2017-04-09 11:35:52,277]-[main] INFO  wycc  - Formule à parser : AF5-AH5
+[2017-04-09 11:35:52,277]-[main] INFO  wycc  - Formule parsée : AF%d-AH%d
+[2017-04-09 11:35:53,567]-[main] INFO  wycc  - Formule sortante : AF5-AH5
+[2017-04-09 11:35:53,570]-[main] INFO  wycc  - Formule à parser : AD5-AG5
+[2017-04-09 11:35:53,570]-[main] INFO  wycc  - Formule parsée : AD%d-AG%d
+[2017-04-09 11:36:01,588]-[main] INFO  wycc  - Formule sortante : AD5-AG5
+[2017-04-09 11:36:01,591]-[main] INFO  wycc  - Formule à parser : AG5*AE5
+[2017-04-09 11:36:01,591]-[main] INFO  wycc  - Formule parsée : AG%d*AE%d
+[2017-04-09 11:36:20,522]-[main] INFO  wycc  - Formule sortante : AG5*AE5
+[2017-04-09 11:36:20,527]-[main] INFO  wycc  - Formule à parser : AD5*AE5
+[2017-04-09 11:36:20,527]-[main] INFO  wycc  - Formule parsée : AD%d*AE%d
+[2017-04-09 11:36:43,856]-[main] INFO  wycc  - Formule sortante : AD5*AE5
+[2017-04-09 11:36:43,858]-[main] INFO  wycc  - Formule à parser : AQ5*AR5
+[2017-04-09 11:36:43,858]-[main] INFO  wycc  - Formule parsée : AQ%d*AR%d
+[2017-04-09 11:36:48,614]-[main] INFO  wycc  - Formule sortante : AQ5*AR5
+[2017-04-09 11:36:48,617]-[main] INFO  wycc  - Formule à parser : AC5/(1-AD5)
+[2017-04-09 11:36:48,618]-[main] INFO  wycc  - Formule parsée : AC%d/(1-AD%d)
+[2017-04-09 11:36:50,797]-[main] INFO  wycc  - Formule sortante : AC5/(1-AD5)
+[2017-04-09 11:36:50,800]-[main] INFO  wycc  - Formule à parser : AA5*(1+AB5)
+[2017-04-09 11:36:50,801]-[main] INFO  wycc  - Formule parsée : AA%d*(1+AB%d)
+[2017-04-09 11:36:54,338]-[main] INFO  wycc  - Formule sortante : AA5*(1+AB5)
+[2017-04-09 11:36:54,356]-[main] INFO  wycc  - Formule à parser : AT5*AR5
+[2017-04-09 11:36:54,357]-[main] INFO  wycc  - Formule parsée : AT%d*AR%d
+[2017-04-09 11:36:55,567]-[main] INFO  wycc  - Formule sortante : AT5*AR5
+[2017-04-09 11:36:55,569]-[main] INFO  wycc  - Formule à parser : AS5-AU5
+[2017-04-09 11:36:55,570]-[main] INFO  wycc  - Formule parsée : AS%d-AU%d
+[2017-04-09 11:36:58,323]-[main] INFO  wycc  - Formule sortante : AS5-AU5
+[2017-04-09 11:36:58,326]-[main] INFO  wycc  - Formule à parser : AX5/12*$Q$5
+[2017-04-09 11:36:58,326]-[main] INFO  wycc  - Formule parsée : AX%d/12*%dQ%d
+[2017-04-09 11:37:24,401]-[main] INFO  wycc  - Formule sortante : AX5/12*5Q5
