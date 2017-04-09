@@ -10,6 +10,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Calendar;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
@@ -138,12 +140,12 @@ public class WyccWorkbook {
 		this.getWorkBook().close();
 	}
 
-	public void getWorkbook(File xlsfileWycc) throws IOException {
+	public void getWorkbook(File xlsfileWycc,String rootdir) throws IOException {
 		try {
 			// file is not open
 			// FileOutputStream out = new
 			// FileOutputStream(xlsfileWycc.getAbsolutePath() );
-			File directory = new File(".");
+			File directory = new File(rootdir);
 			String fileCharSep = System.getProperty("file.separator");
 
 			ObjectDao myobj = new ObjectDao();
@@ -196,8 +198,8 @@ public class WyccWorkbook {
 
 	}
 
-	public void setBeneficiairies(String filepath) throws SQLException, IOException {
-        File directory = new File(".");
+	public void setBeneficiairies(String filepath,String rootdirDb) throws SQLException, IOException {
+        File directory = new File(rootdirDb);
 		String fileCharSep = System.getProperty("file.separator");
 		XSSFCell lastcellule = null;
 		XSSFCell firstcellul = null;
@@ -384,7 +386,7 @@ public class WyccWorkbook {
 				if (modul != null) {
 					result = readformula(modul.getCalculmode(), 1);
 					setFormula(introw, result, newworkbook, row, i, modul,aggregate);
-					// on vient de positionné les forumles pour un beneficiaires.
+					// on vient de positionnéere les forumles pour un beneficiaires.
 					// on ajoute les aggegate.
 					// on determine la colonne de la cellule 
 				}
@@ -404,8 +406,11 @@ public class WyccWorkbook {
 			introw++;			
 		}
 		// on positione la somme
+		 XSSFCell cell1;
 		 XSSFCell cell;
 		 row = spreadsheet.createRow(1);
+		 cell1 = row.createCell(0);	
+		 cell1.setCellValue("TOTAL :");
 		 cell = row.createCell(1);	
 		 String lasomme = "SUM("+firstcellul.getAddress()+":"+lastcellule.getAddress()+")";
 		 cell.setCellFormula(lasomme);
@@ -486,7 +491,7 @@ public class WyccWorkbook {
 		int introw = (int) resultdistinct.get(rowtoread);
 		// for (int introw : (List<Integer>) resultdistinct){
 		lasession.beginTransaction();
-		query = lasession.createQuery("from Wycccell where cellrow = :introw");
+		query = lasession.createQuery("from Wycccell where cellrow = :introw order by cellrow asc");
 		query.setParameter("introw", introw);
 
 		List result = query.list();
@@ -766,14 +771,15 @@ public class WyccWorkbook {
 
 					String laformule = event.getFormulecell();
 					//logger.info("Formule à parser : " + laformule);
-					laformule = laformule.replace("5", "%d");
-					laformule = laformule.replace("14", "%d");
+					laformule=getFormuleRegex(laformule,"([$A-Z]+)([$0-9]+)");
+//					laformule = laformule.replace("5", "%d");
+//					laformule = laformule.replace("14", "%d");
 					int therow = introw + 1;
 
 					laformule = String.format(laformule, therow, therow, therow, therow, therow, therow, therow, therow,
 							therow);
 					Tools newformule = new Tools();
-					String lanewformule = Tools.getNewNumColonne(laformule, "[$,A-Z]*", 26, OffsetColumn * (itera - 1));
+					String lanewformule = Tools.getNewNumColonne(laformule, "[$A-Z]*", 26, OffsetColumn * (itera - 1));
 					cell.setCellFormula(lanewformule);
 				}
 
@@ -945,7 +951,26 @@ public class WyccWorkbook {
 		return modul;
 	}
 	
-	
+	public String getFormuleRegex(String inFormule, String paternregex ) {
+
+		  Pattern p = Pattern.compile(paternregex) ; //("([$A-Z]+)([$0-9]+)") ;  		   
+		   String s = inFormule;// "=(SI(BV26>(2011/12);2011/12;BV26)*0)+(SI(BV26>(2011/12);2011/12;BV26)*0)+(SI(EA26>(2012/12);2012/12;EA26)*0)+(SI(EA26>(2012/12);2012/12;EA26)*0)+(SI(GF26>(2003/12);2003/12;GF26)*0,501)+(SI(IK26>(2004/12);2004/12;IK26)*0,1253)+(SI(KP26>(2005/12);2005/12;KP26)*0,0619)+(SI(MU26>(2006/12);2006/12;MU26)*0,2108)+(SI(OZ26>(2007/12);2007/12;OZ26)*0,4525)+(SI(RE26>(2008/12);2008/12;RE26)*0,9044)" ;  
+		   Matcher m = p.matcher(s) ;
+		   StringBuffer sb =  new StringBuffer() ; 
+		    while (m.find()) {
+		       System.out.println("groupe = " + m.group()) ;
+		       m.appendReplacement(sb,"%d") ; 
+//		       Pattern p1 = Pattern.compile("([0-9]+)") ;  
+//		       Matcher m1 = p1.matcher(m.group()) ;
+//		       while (m1.find()) {
+//		    	   System.out.println("         2e groupe = " + m1.group()) ;
+//		       }
+
+		   }
+		    m.appendTail(sb) ;
+		    
+		return sb.toString();		
+	}
 	
 
 }

@@ -232,7 +232,7 @@ public class EcranAccueil {
 				if (selected !=null){
 					ReadFileXlsx a = new ReadFileXlsx();
 					try {
-						a.generexls(selected);
+						a.generexls(selected, appDir);
 					} catch (Exception e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -272,7 +272,7 @@ public class EcranAccueil {
 			if (selected !=null) {
 				ReadFileXlsx a = new ReadFileXlsx();
 				try {
-					a.readxls(selected);
+					a.readxls(selected,appDir);
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -384,15 +384,15 @@ public class EcranAccueil {
 		new Label(companyToolBarComposite, SWT.NONE);
         new Label(companyToolBarComposite, SWT.NONE);
         new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
+		new Label(companyToolBarComposite, SWT.NONE);
+		new Label(companyToolBarComposite, SWT.NONE);
+		new Label(companyToolBarComposite, SWT.NONE);
+		new Label(companyToolBarComposite, SWT.NONE);
+		new Label(companyToolBarComposite, SWT.NONE);
+		new Label(companyToolBarComposite, SWT.NONE);
+		new Label(companyToolBarComposite, SWT.NONE);
+		new Label(companyToolBarComposite, SWT.NONE);
+		new Label(companyToolBarComposite, SWT.NONE);
         		
 		        Label lblStartDate = new Label(companyToolBarComposite, SWT.NONE);
 		        GridData gd_lblStartDate = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);

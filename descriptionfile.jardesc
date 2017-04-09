@@ -1,54 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <jardesc>
     <jar path="/Volumes/LaCie/ProjetDev/App/WyccApp.jar"/>
-    <options buildIfNeeded="true" compress="true" descriptionLocation="/WyccExcel/descriptionfile.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/WyccExcel/descriptionfile.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
-    <manifest generateManifest="false" mainClassHandleIdentifier="=WyccExcel/src&lt;com.dlas.gui{EcranAccueil.java[EcranAccueil" manifestLocation="/WyccExcel/MANIFEST" manifestVersion="1.0" reuseManifest="true" saveManifest="true" usesManifest="true">
+    <manifest generateManifest="false" manifestLocation="/WyccExcel/META-INF/MANIFEST.MF" manifestVersion="1.0" reuseManifest="true" saveManifest="true" usesManifest="true">
         <sealing sealJar="false">
             <packagesToSeal/>
             <packagesToUnSeal/>
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
-        <folder path="/WyccExcel/lib"/>
-        <folder path="/WyccExcel/ScriptSql"/>
-        <folder path="/WyccExcel/Scripts"/>
-        <file path="/WyccExcel/test2.xlsx"/>
-        <file path="/WyccExcel/hibernate.reveng.xml"/>
-        <file path="/WyccExcel/Bemer.log.1"/>
-        <folder path="/WyccExcel/Doc"/>
-        <folder path="/WyccExcel/db.old"/>
-        <file path="/WyccExcel/méthode calcul prime.xlsx"/>
-        <folder path="/WyccExcel/documentstest"/>
-        <file path="/WyccExcel/méthode calcul prime 3.xlsx"/>
-        <file path="/WyccExcel/README.md"/>
-        <file path="/WyccExcel/références prix Yachting 2017.xlsx"/>
-        <file path="/WyccExcel/.dbeaver-data-sources.xml"/>
-        <file path="/WyccExcel/WyccInvoice.xlsx"/>
+        <folder path="/WyccExcel/META-INF"/>
+        <folder path="/WyccExcel/wbp-meta"/>
         <javaElement handleIdentifier="=WyccExcel/src"/>
         <folder path="/WyccExcel/res"/>
-        <file path="/WyccExcel/db.script"/>
-        <file path="/WyccExcel/regexcol.txt"/>
-        <file path="/WyccExcel/.classpath"/>
-        <file path="/WyccExcel/WYCC.xlsx"/>
-        <file path="/WyccExcel/MANIFEST"/>
-        <folder path="/WyccExcel/App"/>
-        <folder path="/WyccExcel/db"/>
-        <file path="/WyccExcel/Bemer.log"/>
-        <folder path="/WyccExcel/Phone"/>
-        <file path="/WyccExcel/businessplan.xlsx"/>
-        <javaElement handleIdentifier="=WyccExcel/img"/>
-        <file path="/WyccExcel/db.properties"/>
-        <folder path="/WyccExcel/tmp"/>
-        <file path="/WyccExcel/test1.xlsx"/>
-        <file path="/WyccExcel/WyccApp.jar"/>
-        <file path="/WyccExcel/test.xlsx"/>
-        <file path="/WyccExcel/.project"/>
-        <folder path="/WyccExcel/WyccApplication"/>
-        <folder path="/WyccExcel/wbp-meta"/>
-        <file path="/WyccExcel/Beneficiaires.xlsx"/>
-        <file path="/WyccExcel/descriptionfile.jardesc"/>
-        <file path="/WyccExcel/.DS_Store"/>
     </selectedElements>
 </jardesc>

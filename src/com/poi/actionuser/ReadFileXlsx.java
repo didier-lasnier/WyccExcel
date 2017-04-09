@@ -27,7 +27,7 @@ public class ReadFileXlsx {
 	 * Tableau("/Volumes/LaCie/ProjetDev/JavaEclipse/ExcelJava/WYCC.xlsx","Test"
 	 * ); }
 	 */
-	public void readxls(String filepath) throws InvalidFormatException {
+	public void readxls(String filepath,String rootdir) throws InvalidFormatException {
 //		File directory = new File(".");
 //		String fileCharSep = System.getProperty("file.separator");
 //
@@ -48,7 +48,7 @@ public class ReadFileXlsx {
 			XSSFWorkbook wrkbk = new XSSFWorkbook(out);
 			WyccWorkbook wyccwrkbk = new WyccWorkbook();
 			wyccwrkbk.setWorkBook(wrkbk);
-			wyccwrkbk.getWorkbook(theOpenfile);
+			wyccwrkbk.getWorkbook(theOpenfile,rootdir);
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -69,9 +69,9 @@ public class ReadFileXlsx {
 		wyccwrkbk.setBeneficiairies();
 	}*/
 	
-	public void generexls(String filepath) throws InvalidFormatException, SQLException, IOException {
+	public void generexls(String filepath,String rootdirDb) throws InvalidFormatException, SQLException, IOException {
 		WyccWorkbook wyccwrkbk = new WyccWorkbook();
-		wyccwrkbk.setBeneficiairies(filepath);
+		wyccwrkbk.setBeneficiairies(filepath,rootdirDb);
 	}
 
 

@@ -39,12 +39,16 @@ public class Actionuser {
 
             File theOpenfile=new File(Filepath);
             File directory  =new File(dir);
+          	String fileCharSep = System.getProperty("file.separator");
+            managecsv csvdata = new managecsv();
+            
+            
             Calendar instance = Calendar.getInstance();
 			instance.set(Calendar.DAY_OF_MONTH, StartD.getDay());
 			instance.set(Calendar.MONTH, StartD.getMonth());
 			instance.set(Calendar.YEAR, StartD.getYear());
-			
 			String StartDateStr  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(instance.getTime());
+			
 			instance = Calendar.getInstance();
 			instance.set(Calendar.DAY_OF_MONTH, EndD.getDay());
 			instance.set(Calendar.MONTH, EndD.getMonth());
@@ -53,12 +57,9 @@ public class Actionuser {
 			
 			// read file csv
             theOpenfile.getParent();
-			managecsv csvdata = new managecsv();
+
 			logger.info("read file csv");
 			List<String[]> csvrows = csvdata.getRowsFromFile(theOpenfile);
-			
-			String fileCharSep = System.getProperty("file.separator");
-			
 			System.out.print(dir + "tmp"); 
 			
 			

@@ -50,7 +50,7 @@ public class SaveItem implements SelectionListener {
 			if (selected !=null){
 				ReadFileXlsx a = new ReadFileXlsx();
 				try {
-					a.generexls(selected);
+					a.generexls(selected,"");
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

@@ -16,9 +16,7 @@ public class hibernateutils {
 		try {
 			StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
 					.configure("hibernate.cfg.xml").build();
-
 			Metadata metadata = new MetadataSources(standardRegistry).getMetadataBuilder().build();
-
 			return metadata.getSessionFactoryBuilder().build();
 		} finally {
 
@@ -31,6 +29,7 @@ public class hibernateutils {
 		try {
 			SessionFactory factory = hibernateutils.getSessionFactory();
 			lasession = factory.openSession();
+
 			return lasession;
 		} catch (Exception e) {
 			logger.error(e);

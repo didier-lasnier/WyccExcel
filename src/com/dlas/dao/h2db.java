@@ -42,6 +42,7 @@ public class h2db {
 		String connectionString = "jdbc:hsqldb:" + directory.getCanonicalPath() + fileCharSep + "db" + fileCharSep
 				+ "hsql";
 		logger.info(connectionString + "******");
+		System.out.print("Connection String : " +connectionString);
 		// jdbcDataSource ds = new jdbcDataSource();
 		try {
 			Class.forName("org.hsqldb.jdbcDriver");
