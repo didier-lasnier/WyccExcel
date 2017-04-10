@@ -5,7 +5,6 @@
 			<attribute name="ignore_optional_problems" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry exported="true" kind="lib" path="lib/log4j-1.2.17.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/opencsv-3.8.jar" sourcepath="/Users/didierlasnier/.m2/repository/com/opencsv/opencsv/3.8/opencsv-3.8-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/poi-3.15.jar"/>
@@ -56,5 +55,6 @@
 	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.text_3.6.0.v20160503-1849.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.ui.forms_3.7.1.v20161220-1635.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/swt.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
