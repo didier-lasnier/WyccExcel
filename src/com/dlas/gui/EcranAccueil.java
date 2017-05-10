@@ -307,6 +307,9 @@ public class EcranAccueil {
 		shell.setLayout(new FillLayout());
 		shell.setSize(789, 517);
 		shell.setText("Wycc Invoice");
+		
+		// on initilaise les dates
+		//startdate.
 		final SashForm sashForm = new SashForm(shell, SWT.VERTICAL);
 		sashForm.setBackground(SWTResourceManager.getColor(255, 255, 255));
 
@@ -338,13 +341,12 @@ public class EcranAccueil {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				Benefit benefit = new Benefit();
-				//GroupDialog dialog = new GroupDialog(shell, company, true);
-				if (1==1) { //dialog.open() == Window.OK) 
-					Actionuser a = new Actionuser();
-					m_benefits.addBenefit(shell,benefit,window);
-					
+				Actionuser a = new Actionuser();
+					m_benefits.addBenefit(shell,benefit,window);	
 					try {
+						
 						a.lanceLecture(appDir,window.getFilepath(), startdate,enddate);
+						
 					} catch (Exception e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -353,7 +355,7 @@ public class EcranAccueil {
 							true);
 					m_bindingContext.updateModels();
 					
-				}
+				
 			}
 		});
 		
