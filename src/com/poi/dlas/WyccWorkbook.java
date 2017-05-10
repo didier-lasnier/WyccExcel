@@ -265,15 +265,10 @@ public class WyccWorkbook {
 		/*
 		 * on recupére la liste des beneficiaires
 		 */
-		
+		Statement stmt = db.connectiondb.createStatement();
+		ResultSet rs = stmt.executeQuery(sqlstmt1);
 		ObjectDao myobj = new ObjectDao();
 		Session lasession = myobj.getSessionDao();
-		lasession.beginTransaction();
-		Query query = lasession.createQuery(sqlstmt1);
-		List<Modul> resultdistinct = query.list();
-		lasession.getTransaction().commit();
-		lasession.close();
-		
 			/*
 			 * 
 			 * pour chaque beneficiaires on génére les formules de calculs
@@ -283,15 +278,15 @@ public class WyccWorkbook {
 		// ATTENTION LA NUMEROTATION DES LIGNES COMMENCE A ZERO
 		
 		introw = 4;
-		for (Modul rs : resultdistinct) 
+		Modul modul = new Modul();
+		while (rs.next()) 
 		{
 			row = spreadsheet.createRow(introw);
 			XSSFCell cell = null;
 			int j = 0;
 			// position Colonne A
 			cell = row.createCell(j);
-			rs.
-			cell.setCellValue( rs.getString("POSITIONCREW") );
+			cell.setCellValue(rs.getString("POSITIONCREW"));
 
 			// Name Colonne B
 			j++;
@@ -355,7 +350,6 @@ public class WyccWorkbook {
 			j++;
 			cell = row.createCell(j);
 			cell.setCellValue(rs.getFloat("MONTHLY_SALARY"));
-			String CellAddressSalary=cell.getAddress().toString();
 
 			// nbre de jour Colonne O
 			j++;
@@ -370,7 +364,7 @@ public class WyccWorkbook {
 			// On traite les modules. on repete les cellules de formule pour le nombre de module possible.
 			for (int i = 1; i <= nbmodule; i++) {
 			// on regupére certaine information du module en fonction des infos 
-			// du nom de la company, du nom du module, du nom de la formule et de la couverure familliale
+			//du nom de la company, du nom du module, du nom de la formule et de la couverure familliale
 				modul = getBenefits(lasession, rs.getString("COMPANY" + i), rs.getString("FORMULE" + i),
 				rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
 				Float Amount;
@@ -386,14 +380,15 @@ public class WyccWorkbook {
 					 Amount= 0f;
 				}
 				// il faut recupérer les aggregate. 
-				// si la valeur est différente de zéro on prend la valeur saisie sinon on prend la valeur calculée.
+				//si la valeur est différente de zéro on prend la valeur saisie sion on prend la valeur calculée.
 				String aggregate =readaggregate(  rs.getString("COMPANY" + i), rs.getString("FORMULE" + i), rs.getString("formule_name" + i), rs.getString("police_number"+i) );
 				
 				if (modul != null) {
 					result = readformula(modul.getCalculmode(), 1);
-					aggregate = "("+aggregate+"*"+CellAddressSalary+")";
 					setFormula(introw, result, newworkbook, row, i, modul,aggregate);
-
+					// on vient de positionnéere les forumles pour un beneficiaires.
+					// on ajoute les aggegate.
+					// on determine la colonne de la cellule 
 				}
 			}
 
@@ -776,7 +771,7 @@ public class WyccWorkbook {
 
 					String laformule = event.getFormulecell();
 					logger.info("Formule à parser : " + laformule);
-					laformule=getFormuleRegex(laformule,"(\\$*[A-Z]+)(\\$*[0-9]+)","(\\$*[0-9]+)");
+					laformule=getFormuleRegex(laformule,"([$A-Z]+)([$0-9]+)","([$0-9]+)");
 					logger.info("Formule parsée : " + laformule);
 //					laformule = laformule.replace("5", "%d");
 //					laformule = laformule.replace("14", "%d");
@@ -972,7 +967,7 @@ public class WyccWorkbook {
 		    	   m1.appendReplacement(sb1,"%d") ; 
 		       }
 		       m1.appendTail(sb1) ;
-		       m.appendReplacement(sb,Matcher.quoteReplacement(sb1.toString())) ; 
+		       m.appendReplacement(sb,sb1.toString()) ; 
 		   }
 		    m.appendTail(sb) ;
  
