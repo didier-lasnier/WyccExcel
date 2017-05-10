@@ -265,10 +265,15 @@ public class WyccWorkbook {
 		/*
 		 * on recupére la liste des beneficiaires
 		 */
-		Statement stmt = db.connectiondb.createStatement();
-		ResultSet rs = stmt.executeQuery(sqlstmt1);
+		
 		ObjectDao myobj = new ObjectDao();
 		Session lasession = myobj.getSessionDao();
+		lasession.beginTransaction();
+		Query query = lasession.createQuery(sqlstmt1);
+		List<Modul> resultdistinct = query.list();
+		lasession.getTransaction().commit();
+		lasession.close();
+		
 			/*
 			 * 
 			 * pour chaque beneficiaires on génére les formules de calculs
@@ -278,15 +283,15 @@ public class WyccWorkbook {
 		// ATTENTION LA NUMEROTATION DES LIGNES COMMENCE A ZERO
 		
 		introw = 4;
-		Modul modul = new Modul();
-		while (rs.next()) 
+		for (Modul rs : resultdistinct) 
 		{
 			row = spreadsheet.createRow(introw);
 			XSSFCell cell = null;
 			int j = 0;
 			// position Colonne A
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getString("POSITIONCREW"));
+			rs.
+			cell.setCellValue( rs.getString("POSITIONCREW") );
 
 			// Name Colonne B
 			j++;
