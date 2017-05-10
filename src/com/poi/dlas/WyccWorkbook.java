@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 //import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -31,7 +32,7 @@ import org.apache.poi.xssf.usermodel.XSSFCreationHelper;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 
 import com.dlas.dao.h2db;
-
+import com.dlas.dao.beneficiaries;
 import com.dlas.tools.Tools;
 import com.dlas.dao.Wycccell;
 import com.dlas.dao.Modul;
@@ -213,13 +214,13 @@ public class WyccWorkbook {
 				+ " PERIOD_INSURANCE, POSITIONCREW, START_MOVEMENT, PREVMVT, ENDCOMP, END_MOVEMENT, NEXTMVT, NEXTCOMP,";
 		sqlstmt1 = sqlstmt1 + " MONTHLY_SALARY, SALARY_CURRENCY, DRESTEJ, ERESTEJ, TO_INVOICE, JOUR,MOIS,";
 		sqlstmt1 = sqlstmt1
-				+ " company1,formule1, formule_name1,police_number1, total_amount_insured1, company2,formule2, formule_name2,police_number2, total_amount_insured2,";
+				+ " company1, formule1, formule_name1,police_number1, total_amount_insured1, company2,formule2, formule_name2,police_number2, total_amount_insured2,";
 		sqlstmt1 = sqlstmt1
-				+ " company3,formule3, formule_name3,police_number3, total_amount_insured3, company4,formule4, formule_name4,police_number4, total_amount_insured4,";
+				+ " company3, formule3, formule_name3,police_number3, total_amount_insured3, company4,formule4, formule_name4,police_number4, total_amount_insured4,";
 		sqlstmt1 = sqlstmt1
-				+ " company5,formule5, formule_name5,police_number5, total_amount_insured5, company6,formule6, formule_name6,police_number6, total_amount_insured6,";
+				+ " company5, formule5, formule_name5,police_number5, total_amount_insured5, company6,formule6, formule_name6,police_number6, total_amount_insured6,";
 		sqlstmt1 = sqlstmt1
-				+ " company7,formule7, formule_name7,police_number7, total_amount_insured7, company8,formule8, formule_name8,police_number8, total_amount_insured8";
+				+ " company7, formule7, formule_name7,police_number7, total_amount_insured7, company8,formule8, formule_name8,police_number8, total_amount_insured8";
 		sqlstmt1 = sqlstmt1 + " FROM PUBLIC.BENEFICIARIES_TAB";
 
 		// Lire le header
@@ -265,10 +266,16 @@ public class WyccWorkbook {
 		/*
 		 * on recupére la liste des beneficiaires
 		 */
-		Statement stmt = db.connectiondb.createStatement();
-		ResultSet rs = stmt.executeQuery(sqlstmt1);
 		ObjectDao myobj = new ObjectDao();
 		Session lasession = myobj.getSessionDao();
+		lasession.beginTransaction();
+		
+		Query query = lasession.createQuery("from beneficiaires");
+		
+		List<beneficiaries> resultdistinct = query.list();
+		lasession.getTransaction().commit();
+		lasession.close();
+		
 			/*
 			 * 
 			 * pour chaque beneficiaires on génére les formules de calculs
@@ -279,53 +286,55 @@ public class WyccWorkbook {
 		
 		introw = 4;
 		Modul modul = new Modul();
-		while (rs.next()) 
+		for (beneficiaries rs : resultdistinct)
+	//	while (rs.next()) 
 		{
 			row = spreadsheet.createRow(introw);
 			XSSFCell cell = null;
 			int j = 0;
 			// position Colonne A
+			
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getString("POSITIONCREW"));
+			cell.setCellValue(rs.getPositioncrew());
 
 			// Name Colonne B
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getString("NAME"));
+			cell.setCellValue(rs.getName());
 			// first name Colonne C
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getString("FIRST_NAME"));
+			cell.setCellValue(rs.getFirstname());
 			// structure name vessel Colonne D
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getString("STRUCTURE_NAME"));
+			cell.setCellValue(rs.getStructurename());
 			// crew manning agency Colonne
 			j++;
 			// periode de couverture Colonne E
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getString("PERIOD_INSURANCE"));
+			cell.setCellValue(rs.getPeriodeinsurance());
 			// Single Ou Family Colonne F
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getString("FAMILY_COVERED"));
+			cell.setCellValue(rs.getFamilycovered());
 			// Nationalité Colonne G
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getString("NATIONALITY"));
+			cell.setCellValue(rs.getNationality());
 			// Pays Colonne H
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getString("COUNTRY"));
+			cell.setCellValue(rs.getCountry());
 			// Nbre d'enfant Colonne I
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getDouble("CHILDREN"));
+			cell.setCellValue(rs.getChildren());
 			// Debut de mouvement Colonne J
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getDate("START_MOVEMENT"));
+			cell.setCellValue(rs.getStartmovement());
 			XSSFCellStyle cellStyle  = newworkbook.createCellStyle();
 			cellStyle.setDataFormat(HSSFDataFormat.getBuiltinFormat("m/d/yy"));
 			cell.setCellStyle(cellStyle);
@@ -334,39 +343,77 @@ public class WyccWorkbook {
 			// Fin de mouvement Colonne K
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getDate("END_MOVEMENT"));
+			cell.setCellValue(rs.getEndmovement());
 			cell.setCellStyle(cellStyle);
 			// Salaire_Currency Colonne L
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getString("SALARY_CURRENCY"));
+			cell.setCellValue(rs.getSalarycurrency());
 
 			// Nbre de mois Colonne M
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getFloat("MOIS"));
+			cell.setCellValue(rs.getMois());
 
 			// Salaire Mensuel Colonne N
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getFloat("MONTHLY_SALARY"));
+			cell.setCellValue(rs.getMonthlysalary());
 
 			// nbre de jour Colonne O
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getFloat("JOUR"));
+			cell.setCellValue(rs.getJour());
 
 			// TO_INVOICE Colonne P
 			j++;
 			cell = row.createCell(j);
-			cell.setCellValue(rs.getFloat("TO_INVOICE"));
+			cell.setCellValue(rs.getToinvoice());
 			xldformuleaggaregate="";
 			// On traite les modules. on repete les cellules de formule pour le nombre de module possible.
 			for (int i = 1; i <= nbmodule; i++) {
 			// on regupére certaine information du module en fonction des infos 
 			//du nom de la company, du nom du module, du nom de la formule et de la couverure familliale
+			   
+				
 				modul = getBenefits(lasession, rs.getString("COMPANY" + i), rs.getString("FORMULE" + i),
 				rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
+				
+				if (i == 1){
+					modul = getBenefits(lasession, rs.getCompany1(), rs.getFormule1(),
+							rs.getFormulename1(), rs.getFamilycovered());
+				}
+				
+				if (i == 2){
+					modul = getBenefits(lasession, rs.getCompany2(), rs.getFormule2(),
+							rs.getFormulename2(), rs.getFamilycovered());
+				}
+				
+				if (i == 3){
+					modul = getBenefits(lasession, rs.getCompany3(), rs.getFormule3(),
+							rs.getFormulename3(), rs.getFamilycovered());
+				}
+				if (i == 4){
+					modul = getBenefits(lasession, rs.getCompany4(), rs.getFormule4(),
+							rs.getFormulename4(), rs.getFamilycovered());
+				}
+				if (i == 5){
+					modul = getBenefits(lasession, rs.getCompany5(), rs.getFormule5(),
+							rs.getFormulename5(), rs.getFamilycovered());
+				}
+				if (i == 6){
+					modul = getBenefits(lasession, rs.getCompany6(), rs.getFormule6(),
+							rs.getFormulename6(), rs.getFamilycovered());
+				}
+				if (i == 7){
+					modul = getBenefits(lasession, rs.getCompany7(), rs.getFormule7(),
+							rs.getFormulename7(), rs.getFamilycovered());
+				}
+				if (i == 8){
+					modul = getBenefits(lasession, rs.getCompany8(), rs.getFormule8(),
+							rs.getFormulename8(), rs.getFamilycovered());
+				}
+																								
 				Float Amount;
 				try {
 					if( modul!=null) {
@@ -381,6 +428,9 @@ public class WyccWorkbook {
 				}
 				// il faut recupérer les aggregate. 
 				//si la valeur est différente de zéro on prend la valeur saisie sion on prend la valeur calculée.
+				Method fieldGetter = rs.getClass().getMethod("COMPANY" + i);
+				String f = fieldGetter.invoke(rs).toString();
+				
 				String aggregate =readaggregate(  rs.getString("COMPANY" + i), rs.getString("FORMULE" + i), rs.getString("formule_name" + i), rs.getString("police_number"+i) );
 				
 				if (modul != null) {
