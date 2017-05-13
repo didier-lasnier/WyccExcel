@@ -388,9 +388,6 @@ public class WyccWorkbook {
 //				rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
 				modul = getBenefits(lasession, fCompany, fFormule,
 						fFormulename, fFamilycovered);
-				
-				
-																								
 				Float Amount;
 				try {
 					if( modul!=null) {
@@ -984,22 +981,53 @@ public class WyccWorkbook {
 
 		  Pattern p = Pattern.compile(paternregex) ; //("([$A-Z]+)([$0-9]+)") ;  		   
 		   String s = inFormule;// "=(SI(BV26>(2011/12);2011/12;BV26)*0)+(SI(BV26>(2011/12);2011/12;BV26)*0)+(SI(EA26>(2012/12);2012/12;EA26)*0)+(SI(EA26>(2012/12);2012/12;EA26)*0)+(SI(GF26>(2003/12);2003/12;GF26)*0,501)+(SI(IK26>(2004/12);2004/12;IK26)*0,1253)+(SI(KP26>(2005/12);2005/12;KP26)*0,0619)+(SI(MU26>(2006/12);2006/12;MU26)*0,2108)+(SI(OZ26>(2007/12);2007/12;OZ26)*0,4525)+(SI(RE26>(2008/12);2008/12;RE26)*0,9044)" ;  
-		   Matcher m = p.matcher(s) ;
-		   StringBuffer sb =  new StringBuffer() ; 
-		    while (m.find()) {
-		       
-		       Pattern p1 = Pattern.compile(subpaternregex) ;  
-		       Matcher m1 = p1.matcher(m.group()) ;
-		       StringBuffer sb1 =  new StringBuffer() ; 
-		       while (m1.find()) {
-		    	   m1.appendReplacement(sb1,"%d") ; 
-		       }
-		       m1.appendTail(sb1) ;
-		       m.appendReplacement(sb,sb1.toString()) ; 
-		   }
-		    m.appendTail(sb) ;
- 
-		return sb.toString();		
+//		   Matcher m = p.matcher(s) ;
+//		   StringBuffer sb =  new StringBuffer() ; 
+//		    while (m.find()) {
+//		       
+//		       Pattern p1 = Pattern.compile(subpaternregex) ;  
+//		       Matcher m1 = p1.matcher(m.group()) ;
+//		       StringBuffer sb1 =  new StringBuffer() ; 
+//		       while (m1.find()) {
+//		    	   m1.appendReplacement(sb1,"%d") ; 
+//		       }
+//		       m1.appendTail(sb1) ;
+//		       m.appendReplacement(sb,sb1.toString()) ; 
+//		   }
+//		    m.appendTail(sb) ;
+		    
+			   
+//			   String s =  "(SI(BV26>(2011/12);2011/12;BV26)*0)+(SI(BV26>(2011/12);2011/12;BV26)*0)+(SI(EA26>(2012/12);2012/12;EA26)*0)+(SI(EA26>(2012/12);2012/12;EA26)*0)+(SI(GF26>(2003/12);2003/12;GF26)*0,501)+(SI(IK26>(2004/12);2004/12;IK26)*0,1253)+(SI(KP26>(2005/12);2005/12;KP26)*0,0619)+(SI(MU26>(2006/12);2006/12;MU26)*0,2108)+(SI(OZ26>(2007/12);2007/12;OZ26)*0,4525)+(SI(RE26>(2008/12);2008/12;RE26)*0,9044)" ;  
+//		       String s = "AX5/12*$Q$5";
+		       s=s.replace("$", "§");
+			   Matcher m = p.matcher(s) ; 
+			   StringBuffer sb =  new StringBuffer() ; 
+			   String str=null;
+			   String str1=null;
+			    while (m.find()) {
+			       String groupes=m.group();
+			       System.out.println("groupe = " + groupes) ;	       
+			       Pattern p1 = Pattern.compile("([0-9]+)") ;  
+			       
+			       Matcher m1 = p1.matcher(groupes) ;
+			       StringBuffer sb1 =  new StringBuffer() ; 
+			       while (m1.find()) {
+			    	   m1.appendReplacement(sb1,"%d") ; 
+			       }
+			      
+			       m1.appendTail(sb1) ;
+			       str1=sb1.toString();
+			       if (m != null) {
+			    	   m.appendReplacement(sb,str1) ;
+			       }
+			       str=sb.toString();
+			   }
+			   m.appendTail(sb) ;
+			   String lafor= sb.toString();
+			   lafor=s.replace("§","$");
+			   System.out.println("Formule = " + lafor) ; 
+			   
+		return lafor;		
 	}
 	
 
