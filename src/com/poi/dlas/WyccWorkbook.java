@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 //import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -199,7 +200,7 @@ public class WyccWorkbook {
 
 	}
 
-	public void setBeneficiairies(String filepath,String rootdirDb) throws SQLException, IOException {
+	public void setBeneficiairies(String filepath,String rootdirDb) throws SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         File directory = new File(rootdirDb);
 		String fileCharSep = System.getProperty("file.separator");
 		XSSFCell lastcellule = null;
@@ -269,12 +270,10 @@ public class WyccWorkbook {
 		ObjectDao myobj = new ObjectDao();
 		Session lasession = myobj.getSessionDao();
 		lasession.beginTransaction();
-		
-		Query query = lasession.createQuery("from beneficiaires");
+		Query query = lasession.createQuery("from beneficiaries");
 		
 		List<beneficiaries> resultdistinct = query.list();
 		lasession.getTransaction().commit();
-		lasession.close();
 		
 			/*
 			 * 
@@ -374,45 +373,23 @@ public class WyccWorkbook {
 			for (int i = 1; i <= nbmodule; i++) {
 			// on regupére certaine information du module en fonction des infos 
 			//du nom de la company, du nom du module, du nom de la formule et de la couverure familliale
-			   
+				Method fieldGetter = rs.getClass().getMethod("getCompany"+i);
+				String fCompany = fieldGetter.invoke(rs).toString();
 				
-				modul = getBenefits(lasession, rs.getString("COMPANY" + i), rs.getString("FORMULE" + i),
-				rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
+				fieldGetter = rs.getClass().getMethod("getFormule"+i);
+				String fFormule = fieldGetter.invoke(rs).toString();
 				
-				if (i == 1){
-					modul = getBenefits(lasession, rs.getCompany1(), rs.getFormule1(),
-							rs.getFormulename1(), rs.getFamilycovered());
-				}
+				fieldGetter = rs.getClass().getMethod("getFormulename"+i);
+				String fFormulename = fieldGetter.invoke(rs).toString();
+
+				String fFamilycovered = rs.getFamilycovered();
 				
-				if (i == 2){
-					modul = getBenefits(lasession, rs.getCompany2(), rs.getFormule2(),
-							rs.getFormulename2(), rs.getFamilycovered());
-				}
+//				modul = getBenefits(lasession, rs.getString("COMPANY" + i), rs.getString("FORMULE" + i),
+//				rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
+				modul = getBenefits(lasession, fCompany, fFormule,
+						fFormulename, fFamilycovered);
 				
-				if (i == 3){
-					modul = getBenefits(lasession, rs.getCompany3(), rs.getFormule3(),
-							rs.getFormulename3(), rs.getFamilycovered());
-				}
-				if (i == 4){
-					modul = getBenefits(lasession, rs.getCompany4(), rs.getFormule4(),
-							rs.getFormulename4(), rs.getFamilycovered());
-				}
-				if (i == 5){
-					modul = getBenefits(lasession, rs.getCompany5(), rs.getFormule5(),
-							rs.getFormulename5(), rs.getFamilycovered());
-				}
-				if (i == 6){
-					modul = getBenefits(lasession, rs.getCompany6(), rs.getFormule6(),
-							rs.getFormulename6(), rs.getFamilycovered());
-				}
-				if (i == 7){
-					modul = getBenefits(lasession, rs.getCompany7(), rs.getFormule7(),
-							rs.getFormulename7(), rs.getFamilycovered());
-				}
-				if (i == 8){
-					modul = getBenefits(lasession, rs.getCompany8(), rs.getFormule8(),
-							rs.getFormulename8(), rs.getFamilycovered());
-				}
+				
 																								
 				Float Amount;
 				try {
@@ -428,10 +405,10 @@ public class WyccWorkbook {
 				}
 				// il faut recupérer les aggregate. 
 				//si la valeur est différente de zéro on prend la valeur saisie sion on prend la valeur calculée.
-				Method fieldGetter = rs.getClass().getMethod("COMPANY" + i);
-				String f = fieldGetter.invoke(rs).toString();
+
+//				String aggregate =readaggregate(  rs.getString("COMPANY" + i), rs.getString("FORMULE" + i), rs.getString("formule_name" + i), rs.getString("police_number"+i) );
 				
-				String aggregate =readaggregate(  rs.getString("COMPANY" + i), rs.getString("FORMULE" + i), rs.getString("formule_name" + i), rs.getString("police_number"+i) );
+				String aggregate =readaggregate(  rs.getCompany1(), rs.getFormule1(), rs.getFormulename1(), rs.getPolicenumber1() );
 				
 				if (modul != null) {
 					result = readformula(modul.getCalculmode(), 1);
@@ -464,7 +441,8 @@ public class WyccWorkbook {
 		 cell = row.createCell(1);	
 		 String lasomme = "SUM("+firstcellul.getAddress()+":"+lastcellule.getAddress()+")";
 		 cell.setCellFormula(lasomme);
-		stmt.close();
+		 lasession.close();
+		 //stmt.close();
 
 		FileOutputStream out;
 

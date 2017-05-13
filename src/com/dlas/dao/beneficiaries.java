@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "BENEFICIARIES")
+@Table(name = "BENEFICIARIES_TAB")
 public class beneficiaries {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -155,6 +155,10 @@ public class beneficiaries {
 	
 	
 	
+	public beneficiaries() {
+	}
+
+
 	public beneficiaries(double beneficiairiesid, String wyccid, String name, String firstname, String structurename,
 			String familycovered, String children, String nationality, String country, String positioncrew,
 			String periodeinsurance, Integer line, Date startmovement, Date prevmvt, Integer endcomp, Date endmovement,

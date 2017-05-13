@@ -3,6 +3,7 @@ package com.poi.actionuser;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 import org.apache.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -69,7 +70,7 @@ public class ReadFileXlsx {
 		wyccwrkbk.setBeneficiairies();
 	}*/
 	
-	public void generexls(String filepath,String rootdirDb) throws InvalidFormatException, SQLException, IOException {
+	public void generexls(String filepath,String rootdirDb) throws InvalidFormatException, SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		WyccWorkbook wyccwrkbk = new WyccWorkbook();
 		wyccwrkbk.setBeneficiairies(filepath,rootdirDb);
 	}
