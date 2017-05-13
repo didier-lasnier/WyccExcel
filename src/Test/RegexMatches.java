@@ -36,9 +36,12 @@ public class RegexMatches {
 	       while (m1.find()) {
 	    	   m1.appendReplacement(sb1,"%d") ; 
 	       }
+	      
 	       m1.appendTail(sb1) ;
 	       str1=sb1.toString();
-	       m.appendReplacement(sb,str1) ;
+	       if (m != null) {
+	    	   m.appendReplacement(sb,str1) ;
+	       }
 	       str=sb.toString();
 	   }
 	   m.appendTail(sb) ;
