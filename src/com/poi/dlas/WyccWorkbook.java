@@ -223,9 +223,10 @@ public class WyccWorkbook {
 		sqlstmt1 = sqlstmt1
 				+ " company7, formule7, formule_name7,police_number7, total_amount_insured7, company8,formule8, formule_name8,police_number8, total_amount_insured8";
 		sqlstmt1 = sqlstmt1 + " FROM PUBLIC.BENEFICIARIES_TAB";
-
+		ObjectDao myobj = new ObjectDao();
+		Session lasession = myobj.getSessionDao();
 		// Lire le header
-		List result = readformula("MONTHLY", 0);
+		List result = readformula(lasession,"MONTHLY", 0);
 
 		XSSFWorkbook newworkbook = new XSSFWorkbook();
 		XSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
@@ -267,8 +268,7 @@ public class WyccWorkbook {
 		/*
 		 * on recupére la liste des beneficiaires
 		 */
-		ObjectDao myobj = new ObjectDao();
-		Session lasession = myobj.getSessionDao();
+
 		lasession.beginTransaction();
 		Query query = lasession.createQuery("from beneficiaries");
 		
@@ -405,12 +405,12 @@ public class WyccWorkbook {
 
 //				String aggregate =readaggregate(  rs.getString("COMPANY" + i), rs.getString("FORMULE" + i), rs.getString("formule_name" + i), rs.getString("police_number"+i) );
 				
-				String aggregate =readaggregate(  rs.getCompany1(), rs.getFormule1(), rs.getFormulename1(), rs.getPolicenumber1() );
+				String aggregate =readaggregate(lasession,  rs.getCompany1(), rs.getFormule1(), rs.getFormulename1(), rs.getPolicenumber1() );
 				
 				if (modul != null) {
-					result = readformula(modul.getCalculmode(), 1);
+					result = readformula(lasession,modul.getCalculmode(), 1);
 					setFormula(introw, result, newworkbook, row, i, modul,aggregate);
-					// on vient de positionnéere les forumles pour un beneficiaires.
+					// on vient de positionner les forumles pour un beneficiaires.
 					// on ajoute les aggegate.
 					// on determine la colonne de la cellule 
 				}
@@ -493,10 +493,10 @@ public class WyccWorkbook {
 		// }
 	}
 
-	public List readformula(String param, int rowtoread) {
+	public List readformula(Session lasession ,String param, int rowtoread) {
 
-		ObjectDao myobj = new ObjectDao();
-		Session lasession = myobj.getSessionDao();
+//		ObjectDao myobj = new ObjectDao();
+//		Session lasession = myobj.getSessionDao();
 		// now lets pull events from the database and list them
 		// PROPER(FORMULECELL,col)
 		lasession.beginTransaction();
@@ -510,9 +510,8 @@ public class WyccWorkbook {
 			logger.info("Lecture des données de la lignes : " + (introw + 1));
 
 		}
-		lasession.close();
-
-		lasession = myobj.getSessionDao();
+	
+//		lasession = myobj.getSessionDao();
 		int introw = (int) resultdistinct.get(rowtoread);
 		// for (int introw : (List<Integer>) resultdistinct){
 		lasession.beginTransaction();
@@ -522,19 +521,19 @@ public class WyccWorkbook {
 		List result = query.list();
 		lasession.getTransaction().commit();
 
-		lasession.close();
+	//	lasession.close();
 
 		return result;
 		// }
 	}
 
-	public String readaggregate( String company,String formuma,String formulenumber,String policynumber ) {
+	public String readaggregate(Session lasession, String company,String formuma,String formulenumber,String policynumber ) {
 
 		List resultdistinct;
 		String ValueReturn ;
 		try {
-			ObjectDao myobj = new ObjectDao();
-			Session lasession = myobj.getSessionDao();
+			//ObjectDao myobj = new ObjectDao();
+			//lasession = myobj.getSessionDao();
 			lasession.beginTransaction();
 			Query query = lasession.createQuery(
 					"select amount from BenefitDb where company = :company and formula=:formula and formulename=:formulename and policynumber=:policynumber order by aggregateid asc");
@@ -544,7 +543,7 @@ public class WyccWorkbook {
 			query.setString("policynumber", policynumber);
 			resultdistinct = query.list();
 			lasession.getTransaction().commit();
-			lasession.close();
+//			lasession.close();
 			ValueReturn=(String) resultdistinct.get(0);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
