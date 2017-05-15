@@ -554,7 +554,32 @@ public class WyccWorkbook {
 		// }
 	}
 	
-	
+	public String readaggregate( String company,String formuma,String formulenumber,String policynumber ) {
+
+		List resultdistinct;
+		String ValueReturn ;
+		try {
+			ObjectDao myobj = new ObjectDao();
+			Session lasession = myobj.getSessionDao();
+			lasession.beginTransaction();
+			Query query = lasession.createQuery(
+					"select amount from BenefitDb where company = :company and formula=:formula and formulename=:formulename and policynumber=:policynumber order by aggregateid asc");
+			query.setString("company", company);
+			query.setString("formula", formuma);
+			query.setString("formulename", formulenumber);
+			query.setString("policynumber", policynumber);
+			resultdistinct = query.list();
+			lasession.getTransaction().commit();
+			lasession.close();
+			ValueReturn=(String) resultdistinct.get(0);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			ValueReturn="0";
+		}
+		
+		return ValueReturn;
+		// }
+	}
 	public int getRowCount(XSSFWorkbook workbook, String sheetName) {
 		int index = workbook.getSheetIndex(sheetName);
 		if (index == -1)
@@ -763,7 +788,9 @@ public class WyccWorkbook {
 				if (nocol == EndColumnFormule+ (OffsetColumn * (itera - 1))){
 					
 					//on recupére le pourcentage et la valeur de l'aggregate
-					String formuleagg="(if("+cell.getAddress().toString()+">("+aggregate+"/12),"+aggregate+"/12,"+cell.getAddress().toString()+")*"+Amount.toString()+")";
+					String formuleagg="(if("+cell.getAddress().toString()
+							+">("+aggregate+"/12),"+aggregate+"/12,"
+							+cell.getAddress().toString()+")*"+Amount.toString()+")";
 					xldformuleaggaregate=xldformuleaggaregate+formuleagg+"+";
 					
 				}
