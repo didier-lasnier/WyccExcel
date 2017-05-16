@@ -391,6 +391,7 @@ public class WyccWorkbook {
 				Float Amount;
 				try {
 					if( modul!=null) {
+						// en fonction du mode de calcul on recupére la valeur de 
 						Amount=Float.parseFloat(modul.getModulprice());
 					}
 					else { Amount= 0f;}
