@@ -325,7 +325,7 @@ public class EcranAccueil {
 		
 		final Composite companyToolBarComposite = new Composite(companyComposite, SWT.NONE);
 		companyToolBarComposite.setBackground(SWTResourceManager.getColor(255, 255, 255));
-		final GridLayout gridLayout_3 = new GridLayout(25, false);
+		final GridLayout gridLayout_3 = new GridLayout(15, false);
 		companyToolBarComposite.setLayout(gridLayout_3);
 		GridData gd_companyToolBarComposite = new GridData(SWT.FILL, SWT.CENTER, true, false);
 		gd_companyToolBarComposite.widthHint = 779;
@@ -338,27 +338,27 @@ public class EcranAccueil {
 		gd_AggregateButton.widthHint = 117;
 		AggregateButton.setLayoutData(gd_AggregateButton);
 		AggregateButton.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				Benefit benefit = new Benefit();
-				Actionuser a = new Actionuser();
-					m_benefits.addBenefit(shell,benefit,window);	
-					try {
+				@Override
+				public void widgetSelected(SelectionEvent e) {
+					Benefit benefit = new Benefit();
+					Actionuser a = new Actionuser();
+						m_benefits.addBenefit(shell,benefit,window);	
+						try {
+							
+							a.lanceLecture(appDir,window.getFilepath(), startdate,enddate);
+							
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						m_benefitsViewer.setSelection(new StructuredSelection(benefit),
+								true);
+						m_bindingContext.updateModels();
 						
-						a.lanceLecture(appDir,window.getFilepath(), startdate,enddate);
-						
-					} catch (Exception e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-					m_benefitsViewer.setSelection(new StructuredSelection(benefit),
-							true);
-					m_bindingContext.updateModels();
 					
-				
-			}
-		});
-		
+				}
+			});
+
 		AggregateButton.setText("Get aggregate");
 		
 		Button btnReadCsv = new Button(companyToolBarComposite, SWT.NONE);
@@ -388,32 +388,22 @@ public class EcranAccueil {
         new Label(companyToolBarComposite, SWT.NONE);
 		new Label(companyToolBarComposite, SWT.NONE);
 		new Label(companyToolBarComposite, SWT.NONE);
+		
+		Label lblStartDate = new Label(companyToolBarComposite, SWT.NONE);
+		GridData gd_lblStartDate = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+		gd_lblStartDate.widthHint = 71;
+		lblStartDate.setLayoutData(gd_lblStartDate);
+		lblStartDate.setAlignment(SWT.CENTER);
+		lblStartDate.setText("Start date");
 		new Label(companyToolBarComposite, SWT.NONE);
 		new Label(companyToolBarComposite, SWT.NONE);
 		new Label(companyToolBarComposite, SWT.NONE);
-		new Label(companyToolBarComposite, SWT.NONE);
-		new Label(companyToolBarComposite, SWT.NONE);
-		new Label(companyToolBarComposite, SWT.NONE);
-		new Label(companyToolBarComposite, SWT.NONE);
-        		
-		        Label lblStartDate = new Label(companyToolBarComposite, SWT.NONE);
-		        GridData gd_lblStartDate = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		        gd_lblStartDate.widthHint = 71;
-		        lblStartDate.setLayoutData(gd_lblStartDate);
-		        lblStartDate.setAlignment(SWT.CENTER);
-		        lblStartDate.setText("Start date");
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		new Label(companyToolBarComposite, SWT.NONE);
-        		Label lblEndDate = new Label(companyToolBarComposite, SWT.NONE);
-        		GridData gd_lblEndDate = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-        		gd_lblEndDate.widthHint = 71;
-        		lblEndDate.setLayoutData(gd_lblEndDate);
-        		lblEndDate.setAlignment(SWT.CENTER);
-        		lblEndDate.setText("End date");
+		Label lblEndDate = new Label(companyToolBarComposite, SWT.NONE);
+		GridData gd_lblEndDate = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+		gd_lblEndDate.widthHint = 71;
+		lblEndDate.setLayoutData(gd_lblEndDate);
+		lblEndDate.setAlignment(SWT.CENTER);
+		lblEndDate.setText("End date");
         
         		SaveButton = new Button(companyToolBarComposite, SWT.NONE);
         		SaveButton.setText("Save aggregate..");
@@ -467,25 +457,29 @@ public class EcranAccueil {
         new Label(companyToolBarComposite, SWT.NONE);
         new Label(companyToolBarComposite, SWT.NONE);
         new Label(companyToolBarComposite, SWT.NONE);
-        new Label(companyToolBarComposite, SWT.NONE);
-        new Label(companyToolBarComposite, SWT.NONE);
-        new Label(companyToolBarComposite, SWT.NONE);
-        new Label(companyToolBarComposite, SWT.NONE);
-        new Label(companyToolBarComposite, SWT.NONE);
-        new Label(companyToolBarComposite, SWT.NONE);
-        new Label(companyToolBarComposite, SWT.NONE);
         
         DateTime StartDate = new DateTime(companyToolBarComposite, SWT.BORDER);
+        GridData gd_StartDate = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_StartDate.widthHint = 112;
+        
+
+        StartDate.setLayoutData(gd_StartDate);
         StartDate.setBackground(SWTResourceManager.getColor(255, 255, 255));
+        StartDate.setDay(1);
+        StartDate.setMonth(0);
+        //StartDate.setYear(2017);
         startdate=StartDate;
         new Label(companyToolBarComposite, SWT.NONE);
         new Label(companyToolBarComposite, SWT.NONE);
         new Label(companyToolBarComposite, SWT.NONE);
-        new Label(companyToolBarComposite, SWT.NONE);
-        new Label(companyToolBarComposite, SWT.NONE);
-        new Label(companyToolBarComposite, SWT.NONE);
         DateTime EndDate = new DateTime(companyToolBarComposite, SWT.BORDER);
+        GridData gd_EndDate = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_EndDate.widthHint = 118;
+        EndDate.setLayoutData(gd_EndDate);
         EndDate.setBackground(SWTResourceManager.getColor(255, 255, 255));
+        EndDate.setDay(31);
+        EndDate.setMonth(11);
+        //EndDate.setYear(2017);
         enddate=EndDate;
         
 		class Open implements SelectionListener {

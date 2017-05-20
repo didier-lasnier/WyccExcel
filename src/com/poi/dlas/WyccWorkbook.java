@@ -1,6 +1,7 @@
 package com.poi.dlas;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 //import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -31,6 +32,10 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFCreationHelper;
 import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.streaming.SXSSFCell;
+import org.apache.poi.xssf.streaming.SXSSFRow;
+import org.apache.poi.xssf.streaming.SXSSFSheet;
+import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 
 import com.dlas.dao.h2db;
 import com.dlas.dao.beneficiaries;
@@ -88,7 +93,7 @@ public class WyccWorkbook {
 
 	}
 
-	public static Logger logger = Logger.getLogger("wycc");
+	public static Logger logger = Logger.getLogger("Wycc");
 
 	public void createWorkbook(File xlsfileWycc) throws IOException, InvalidFormatException {
 
@@ -203,8 +208,8 @@ public class WyccWorkbook {
 	public void setBeneficiairies(String filepath,String rootdirDb) throws SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         File directory = new File(rootdirDb);
 		String fileCharSep = System.getProperty("file.separator");
-		XSSFCell lastcellule = null;
-		XSSFCell firstcellul = null;
+		SXSSFCell lastcellule = null;
+		SXSSFCell firstcellul = null;
 		
 		// List result=readformula();
 
@@ -228,14 +233,16 @@ public class WyccWorkbook {
 		// Lire le header
 		List result = readformula(lasession,"MONTHLY", 0);
 
-		XSSFWorkbook newworkbook = new XSSFWorkbook();
-		XSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
+		SXSSFWorkbook newworkbook = new SXSSFWorkbook(2);
 		
-		XSSFCreationHelper createHelper = newworkbook.getCreationHelper();
+		SXSSFSheet spreadsheet = newworkbook.createSheet();
+		newworkbook.createSheet("Total WYCC");
+		
+		//XSSFCreationHelper createHelper = newworkbook.getCreationHelper();
 		
 		
 		int introw = 3;
-		XSSFRow row = spreadsheet.createRow(introw);
+		SXSSFRow row = spreadsheet.createRow(introw);
 		/*
 		 * lectures des entêtes de colonnes
 		 * 
@@ -261,7 +268,7 @@ public class WyccWorkbook {
 		// numéro de colonnes de fin des calculs beneficiaires
 		end = EndColumnFormule;
 
-		for (myIterator = 1; myIterator <= nbmodule; myIterator++) {
+		for ( myIterator = 1; myIterator <= nbmodule; myIterator++) {
 			setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, myOffset);
 		}
 		
@@ -275,10 +282,10 @@ public class WyccWorkbook {
 		List<beneficiaries> resultdistinct = query.list();
 		lasession.getTransaction().commit();
 		
-			/*
-			 * 
-			 * pour chaque beneficiaires on génére les formules de calculs
-			 */
+	/*
+	 * 
+	 * pour chaque beneficiaires on génére les formules de calculs
+	 */
 		
 		// on se positionne sur la ligne 5 de la feuille de calcul 
 		// ATTENTION LA NUMEROTATION DES LIGNES COMMENCE A ZERO
@@ -289,7 +296,7 @@ public class WyccWorkbook {
 	//	while (rs.next()) 
 		{
 			row = spreadsheet.createRow(introw);
-			XSSFCell cell = null;
+			SXSSFCell cell = null;
 			int j = 0;
 			// position Colonne A
 			
@@ -334,7 +341,7 @@ public class WyccWorkbook {
 			j++;
 			cell = row.createCell(j);
 			cell.setCellValue(rs.getStartmovement());
-			XSSFCellStyle cellStyle  = newworkbook.createCellStyle();
+			CellStyle cellStyle  = newworkbook.createCellStyle();
 			cellStyle.setDataFormat(HSSFDataFormat.getBuiltinFormat("m/d/yy"));
 			cell.setCellStyle(cellStyle);
 			
@@ -383,11 +390,8 @@ public class WyccWorkbook {
 				String fFormulename = fieldGetter.invoke(rs).toString();
 
 				String fFamilycovered = rs.getFamilycovered();
-				
-//				modul = getBenefits(lasession, rs.getString("COMPANY" + i), rs.getString("FORMULE" + i),
-//				rs.getString("formule_name" + i), rs.getString("FAMILY_COVERED"));
-				modul = getBenefits(lasession, fCompany, fFormule,
-						fFormulename, fFamilycovered);
+
+				modul = getBenefits(lasession, fCompany, fFormule,fFormulename, fFamilycovered);
 				Float Amount;
 				try {
 					if( modul!=null) {
@@ -430,31 +434,43 @@ public class WyccWorkbook {
 			
 			introw++;			
 		}
-		// on positione la somme
-		 XSSFCell cell1;
-		 XSSFCell cell;
-		 row = spreadsheet.createRow(1);
-		 cell1 = row.createCell(0);	
-		 cell1.setCellValue("TOTAL :");
-		 cell = row.createCell(1);	
-		 String lasomme = "SUM("+firstcellul.getAddress()+":"+lastcellule.getAddress()+")";
-		 cell.setCellFormula(lasomme);
-		 lasession.close();
-		 //stmt.close();
-
+		// Flushed last line 
+		((SXSSFSheet)spreadsheet).flushRows(0);
+		//Cmlose the db session
+		lasession.close();
+		// Write the finale file
 		FileOutputStream out;
 
 		try {
 			out = new FileOutputStream(new File(filepath));
 			newworkbook.write(out);
 			out.close();
+			newworkbook.dispose();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			newworkbook.dispose();
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			newworkbook.dispose();
 			e.printStackTrace();
 		}
+/*		// reread the xlsx file
+		 FileInputStream Fis = new FileInputStream(new File(filepath));
+		 XSSFWorkbook wb = new XSSFWorkbook(Fis);
+		 XSSFSheet sh = wb.getSheetAt(0);
+		 XSSFRow rowsh =sh.getRow(1);
+
+		 XSSFCell cell1=rowsh.getCell(0) ;
+		 XSSFCell cell2=rowsh.getCell(1) ;
+		 cell1.setCellValue("TOTAL :");
+		 String lasomme = "SUM("+firstcellul.getAddress()+":"+lastcellule.getAddress()+")";
+		 cell2.setCellFormula(lasomme);
+		 
+			out = new FileOutputStream(new File(filepath));
+			wb.write(out);
+			out.close();
+			wb.close();
+			Fis.close();*/
+
 
 		logger.info("DONE ! setBeneficiaire");
 
@@ -507,18 +523,18 @@ public class WyccWorkbook {
 		List resultdistinct = query.list();
 		lasession.getTransaction().commit();
 		// lasession.close();
-		for (int introw : (List<Integer>) resultdistinct) {
-			logger.info("Lecture des données de la lignes : " + (introw + 1));
-
-		}
+//		for (int introw : (List<Integer>) resultdistinct) {
+//			logger.info("Lecture des données de la lignes : " + (introw + 1));
+//
+//		}
 	
 //		lasession = myobj.getSessionDao();
 		int introw = (int) resultdistinct.get(rowtoread);
 		// for (int introw : (List<Integer>) resultdistinct){
 		lasession.beginTransaction();
-		query = lasession.createQuery("from Wycccell where cellrow = :introw order by cellrow asc");
+		query = lasession.createQuery("from Wycccell where cellrow = :introw and calculmode = :calculmode order by cellrow asc");
 		query.setParameter("introw", introw);
-
+		query.setString("calculmode", param);
 		List result = query.list();
 		lasession.getTransaction().commit();
 
@@ -760,7 +776,7 @@ public class WyccWorkbook {
 
 	}
 
-	public void setFormula(int introw, List result, XSSFWorkbook newworkbook, XSSFRow row, int itera, Modul modul,String aggregate) {
+	public void setFormula(int introw, List result, SXSSFWorkbook newworkbook, SXSSFRow row, int itera, Modul modul,String aggregate) {
 		
 		// offset de décalage lorsque un moule a été traité
 		int offsetCol = OffsetColumn;
@@ -785,17 +801,29 @@ public class WyccWorkbook {
 				}
 
 				nocol = event.getCellcolumn() + (OffsetColumn * (itera - 1));
-				XSSFCell cell = row.createCell(nocol);
+				SXSSFCell cell = row.createCell(nocol);
 				if (nocol == EndColumnFormule+ (OffsetColumn * (itera - 1))){
 					
+					String formuleagg ="";
+					//modul.getForfaitpercentage();
 					//on recupére le pourcentage et la valeur de l'aggregate
-					String formuleagg="(if("+cell.getAddress().toString()
+					if (modul.getForfaitpercentage()==1)
+					{
+						formuleagg=cell.getAddress().toString();
+					}
+					else
+					{
+						
+					formuleagg="(if("+cell.getAddress().toString()
 							+">("+aggregate+"/12),"+aggregate+"/12,"
 							+cell.getAddress().toString()+")*"+Amount.toString()+")";
+					}
+					
+					logger.info("Iteration : "+itera+" - Num col : "+nocol+" - Total : "+xldformuleaggaregate +" - ajout : "+formuleagg);
 					xldformuleaggaregate=xldformuleaggaregate+formuleagg+"+";
 					
 				}
-				XSSFCellStyle style1 = newworkbook.createCellStyle();
+				CellStyle style1 = newworkbook.createCellStyle();
 
 				style1.setBorderBottom((short) event.getBorderbottom());
 				style1.setBorderTop((short) event.getBordertop());
@@ -822,9 +850,9 @@ public class WyccWorkbook {
 				if ((event.getFormulecell() != null)) {
 
 					String laformule = event.getFormulecell();
-					logger.info("Formule à parser : " + laformule);
+//					logger.info("Formule à parser : " + laformule);
 					laformule=getFormuleRegex(laformule,"([$A-Z]+)([$0-9]+)","([$0-9]+)");
-					logger.info("Formule parsée : " + laformule);
+//					logger.info("Formule parsée : " + laformule);
 //					laformule = laformule.replace("5", "%d");
 //					laformule = laformule.replace("14", "%d");
 					int therow = introw + 1;
@@ -914,14 +942,14 @@ public class WyccWorkbook {
 	    
 	}
 
-	public void setFormulaHeader(int introw, List result, XSSFWorkbook newworkbook, XSSFRow row, int myiterator,
+	public void setFormulaHeader(int introw, List result, SXSSFWorkbook newworkbook, SXSSFRow row, int myiterator,
 			int start, int end, int myoffset) {
 				row.setHeight((short) 700);
 				
 		for (Wycccell event : (List<Wycccell>) result.subList(start, end)) {
 
-			XSSFCell cell = row.createCell(event.getCellcolumn() + (myoffset * (myiterator - 1)));
-			XSSFCellStyle style1 = newworkbook.createCellStyle();
+			SXSSFCell cell = row.createCell(event.getCellcolumn() + (myoffset * (myiterator - 1)));
+			CellStyle style1 = newworkbook.createCellStyle();
 			if (end<=17) {
 			style1.setFillForegroundColor(IndexedColors.AQUA.getIndex());
 			style1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
@@ -997,10 +1025,10 @@ public class WyccWorkbook {
 		query.setMaxResults(1);
 		Modul modul = (Modul) query.uniqueResult();
 		lasession.getTransaction().commit();
-		logger.info("modulfournisseur : " + modulFournisseur);
-		logger.info("modullabel : " + modulLabel);
-		logger.info("modulcategory : " + modulCategory);
-		logger.info("modulscope : " + modulscope);
+//		logger.info("modulfournisseur : " + modulFournisseur);
+//		logger.info("modullabel : " + modulLabel);
+//		logger.info("modulcategory : " + modulCategory);
+//		logger.info("modulscope : " + modulscope);
 		return modul;
 	}
 	
@@ -1033,7 +1061,7 @@ public class WyccWorkbook {
 			   String str1=null;
 			    while (m.find()) {
 			       String groupes=m.group();
-			       System.out.println("groupe = " + groupes) ;	       
+			      	       
 			       Pattern p1 = Pattern.compile("([0-9]+)") ;  
 			       
 			       Matcher m1 = p1.matcher(groupes) ;
@@ -1052,7 +1080,7 @@ public class WyccWorkbook {
 			   m.appendTail(sb) ;
 			   String lafor= sb.toString();
 			   lafor=s.replace("§","$");
-			   System.out.println("Formule = " + lafor) ; 
+			 
 			   
 		return lafor;		
 	}
