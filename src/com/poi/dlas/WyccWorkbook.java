@@ -20,6 +20,8 @@ import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.openxml4j.exceptions.OpenXML4JException;
+import org.apache.poi.openxml4j.opc.OPCPackage;
 //import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -27,11 +29,13 @@ import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.xmlbeans.XmlException;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFCreationHelper;
 import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.extractor.XSSFExcelExtractor;
 import org.apache.poi.xssf.streaming.SXSSFCell;
 import org.apache.poi.xssf.streaming.SXSSFRow;
 import org.apache.poi.xssf.streaming.SXSSFSheet;
@@ -205,11 +209,13 @@ public class WyccWorkbook {
 
 	}
 
-	public void setBeneficiairies(String filepath,String rootdirDb) throws SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	public void setBeneficiairies(String filepath,String rootdirDb) throws SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InvalidFormatException {
         File directory = new File(rootdirDb);
 		String fileCharSep = System.getProperty("file.separator");
 		SXSSFCell lastcellule = null;
 		SXSSFCell firstcellul = null;
+		String    addressfirstcell = null;
+		String    addresslastcell = null;
 		
 		// List result=readformula();
 
@@ -238,9 +244,13 @@ public class WyccWorkbook {
 		SXSSFSheet spreadsheet = newworkbook.createSheet();
 		newworkbook.createSheet("Total WYCC");
 		
-		//XSSFCreationHelper createHelper = newworkbook.getCreationHelper();
-		
-		
+		/*		
+		// 1. create named range for a single cell using areareference
+		Name namedCell = wb.createName();
+		namedCell.setNameName(cname);
+		String reference = sname+"!A1:A1"; // area reference
+		namedCell.setRefersToFormula(reference);
+		*/
 		int introw = 3;
 		SXSSFRow row = spreadsheet.createRow(introw);
 		/*
@@ -430,10 +440,24 @@ public class WyccWorkbook {
 			lastcellule=cell;
 			if (introw==4) {
 			 firstcellul=cell;	
+			 addressfirstcell=""+firstcellul.getAddress();
+			 
 			}
 			
-			introw++;			
+			introw++;		
 		}
+		introw++;	
+		row = spreadsheet.createRow(introw);
+		int j=0;
+		SXSSFCell cell = null;
+		cell = row.createCell(j);
+		cell.setCellValue("TOTAL :");
+		
+		j++;
+		cell = row.createCell(j);
+		String lasomme = "SUM("+addressfirstcell+":"+lastcellule.getAddress()+")";
+		cell.setCellFormula(lasomme);
+		
 		// Flushed last line 
 		((SXSSFSheet)spreadsheet).flushRows(0);
 		//Cmlose the db session
@@ -453,24 +477,6 @@ public class WyccWorkbook {
 			newworkbook.dispose();
 			e.printStackTrace();
 		}
-/*		// reread the xlsx file
-		 FileInputStream Fis = new FileInputStream(new File(filepath));
-		 XSSFWorkbook wb = new XSSFWorkbook(Fis);
-		 XSSFSheet sh = wb.getSheetAt(0);
-		 XSSFRow rowsh =sh.getRow(1);
-
-		 XSSFCell cell1=rowsh.getCell(0) ;
-		 XSSFCell cell2=rowsh.getCell(1) ;
-		 cell1.setCellValue("TOTAL :");
-		 String lasomme = "SUM("+firstcellul.getAddress()+":"+lastcellule.getAddress()+")";
-		 cell2.setCellFormula(lasomme);
-		 
-			out = new FileOutputStream(new File(filepath));
-			wb.write(out);
-			out.close();
-			wb.close();
-			Fis.close();*/
-
 
 		logger.info("DONE ! setBeneficiaire");
 
