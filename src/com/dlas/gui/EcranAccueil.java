@@ -1,9 +1,14 @@
 package com.dlas.gui;
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+
+import javax.swing.JProgressBar;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLDecoder;
@@ -56,6 +61,9 @@ import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Companies;
 import com.poi.actionuser.Actionuser;
 import com.poi.actionuser.ReadFileXlsx;
+
+
+
 import com.dlas.gui.model.Benefits;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -92,6 +100,9 @@ public class EcranAccueil {
 	private static String appDir;
 	private List listCsv;
 	private static String APP_NAME = "Wycc invoice";
+	
+	static JProgressBar barDo;
+	
 	Display d;
 	Shell s;
 	
@@ -203,7 +214,7 @@ public class EcranAccueil {
 		}
 	}
 
-
+	
 	class Save implements SelectionListener {
 		@Override
 		public void widgetSelected(SelectionEvent event) {
@@ -405,9 +416,9 @@ public class EcranAccueil {
 		lblEndDate.setAlignment(SWT.CENTER);
 		lblEndDate.setText("End date");
         
-        		SaveButton = new Button(companyToolBarComposite, SWT.NONE);
-        		SaveButton.setText("Save aggregate..");
-        		SaveButton.addSelectionListener(new SelectionAdapter() {
+		SaveButton = new Button(companyToolBarComposite, SWT.NONE);
+		SaveButton.setText("Save aggregate..");
+		SaveButton.addSelectionListener(new SelectionAdapter() {
         			@Override
 					public void widgetSelected(SelectionEvent e) {
         				// on enregistre les Aggregate
@@ -448,7 +459,11 @@ public class EcranAccueil {
         	        new Save();
         	      }
         	    });
+
+        
         btnClientAmount.setText("Client amount...");
+        
+        
         new Label(companyToolBarComposite, SWT.NONE);
         new Label(companyToolBarComposite, SWT.NONE);
         new Label(companyToolBarComposite, SWT.NONE);

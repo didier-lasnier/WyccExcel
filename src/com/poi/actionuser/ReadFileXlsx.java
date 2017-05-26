@@ -5,10 +5,16 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.eclipse.jface.dialogs.ProgressMonitorDialog;
+import org.eclipse.jface.operation.IRunnableWithProgress;
+import org.eclipse.swt.widgets.Shell;
 
+import com.dlas.dao.beneficiaries;
 import com.poi.dlas.WyccWorkbook;
 
 public class ReadFileXlsx {
@@ -16,6 +22,7 @@ public class ReadFileXlsx {
 	private Object body[][];
 	private String lastFileName = null;
 	private String lastSheetName = null;
+	private List<beneficiaries> result;
 
 	static Logger logger = Logger.getLogger("wycc");
 
@@ -70,9 +77,19 @@ public class ReadFileXlsx {
 		wyccwrkbk.setBeneficiairies();
 	}*/
 	
-	public void generexls(String filepath,String rootdirDb) throws InvalidFormatException, SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-		WyccWorkbook wyccwrkbk = new WyccWorkbook();
-		wyccwrkbk.setBeneficiairies(filepath,rootdirDb);
+	public void generexls(String filepath,String rootdirDb) throws InvalidFormatException, SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InterruptedException {
+		WyccWorkbook wyccwrkbk = new WyccWorkbook();	
+		
+		IRunnableWithProgress op1 = new WyccWorkbook.ProgressBarDb("Database initialisation", wyccwrkbk);
+		new ProgressMonitorDialog(new Shell()).run(true, true, op1);
+		
+		result =wyccwrkbk.getResultdistinct();
+		
+		IRunnableWithProgress op = new WyccWorkbook.ProgressBarBeneficiaries(result.size(),"Precessing Beneficiaries ",wyccwrkbk,filepath,rootdirDb,result);
+		
+		new ProgressMonitorDialog(new Shell()).run(true, true, op);
+
+		
 	}
 
 
