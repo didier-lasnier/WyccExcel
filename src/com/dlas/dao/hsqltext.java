@@ -248,7 +248,7 @@ public class hsqltext {
 		sqlstmt = sqlstmt
 				+ " SALARY_CURRENCY,PERIOD_INSURANCE ,cast(DAYS as Integer),cast(MONTHS as Integer),FAMILY_COVERED,RETIREMENT_PLAN,";
 		sqlstmt = sqlstmt + " TO_TIMESTAMP(START_MOVEMENT,'dd/MM/yyyy') START_MOVEMENT,";
-		sqlstmt = sqlstmt + " TO_TIMESTAMP(END_MOVEMENT,'dd/MM/yyyy') END_MOVEMENT,";
+		sqlstmt = sqlstmt + " case when yt1.END_MOVEMENT ='' then null else  TO_TIMESTAMP(yt1.END_MOVEMENT,'dd/MM/yyyy') end END_MOVEMENT,";
 		sqlstmt = sqlstmt
 				+ " EMPLOYER,CHILDREN,COUNTRY,NATIONALITY,COMPANY1,FORMULE_NAME1,FORMULA1,POLICY_NUMBER1,CURRENCY1,EXCESS1,DURATION1,";
 		sqlstmt = sqlstmt
@@ -292,13 +292,13 @@ public class hsqltext {
 				+ " CAST( CASE WHEN REPLACE(REPLACE(CIE_HT_BASIS8,'%',''),',','.') !='' then REPLACE(REPLACE(CIE_HT_BASIS8,'%',''),',','.') else  '0' end  as Float),";
 		sqlstmt = sqlstmt + " ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id ), ";
 		sqlstmt = sqlstmt
-				+ " ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND TO_TIMESTAMP(yt2.start_movement,'dd/MM/yyyy') < DATEADD( 'DAY', 1,  TO_TIMESTAMP(yt1.end_movement,'dd/MM/yyyy') ) ),";
+				+ " (CASE WHEN yt1.END_MOVEMENT ='' THEN 0 else ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND TO_TIMESTAMP(yt2.start_movement,'dd/MM/yyyy') < DATEADD( 'DAY', 1,  TO_TIMESTAMP(yt1.end_movement,'dd/MM/yyyy') )) end ),";
 		sqlstmt = sqlstmt
-				+ " ( SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND TO_TIMESTAMP(yt2.end_movement,'dd/MM/yyyy') = DATEADD( 'DAY', -1, TO_TIMESTAMP(yt1.start_movement,'dd/MM/yyyy') ) ), ";
+				+ " (CASE WHEN yt1.END_MOVEMENT ='' THEN 0  else (SELECT COUNT(*) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND TO_TIMESTAMP(yt2.end_movement,'dd/MM/yyyy') = DATEADD( 'DAY', -1, TO_TIMESTAMP(yt1.start_movement,'dd/MM/yyyy') )) end ), ";
 		sqlstmt = sqlstmt
-				+ " ( SELECT MIN( TO_TIMESTAMP( yt2.start_movement, 'dd/MM/yyyy' ) ) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND TO_TIMESTAMP(yt2.start_movement,'dd/MM/yyyy') > TO_TIMESTAMP(yt1.end_movement,'dd/MM/yyyy') ),";
+				+ " ( CASE WHEN yt1.END_MOVEMENT ='' THEN TO_TIMESTAMP( yt1.start_movement, 'dd/MM/yyyy' ) else ( SELECT MIN( TO_TIMESTAMP( yt2.start_movement, 'dd/MM/yyyy' ) ) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND TO_TIMESTAMP(yt2.start_movement,'dd/MM/yyyy') > TO_TIMESTAMP(yt1.end_movement,'dd/MM/yyyy')) end ),";
 		sqlstmt = sqlstmt
-				+ " ( SELECT Max( TO_TIMESTAMP( yt2.end_movement, 'dd/MM/yyyy' )) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND TO_TIMESTAMP( yt2.end_movement, 'dd/MM/yyyy' ) < TO_TIMESTAMP( yt1.start_movement, 'dd/MM/yyyy' ) ) dateprev";
+				+ " (CASE WHEN yt1.END_MOVEMENT ='' THEN TO_TIMESTAMP( yt1.start_movement, 'dd/MM/yyyy' ) ELSE ( SELECT Max( TO_TIMESTAMP( yt2.end_movement, 'dd/MM/yyyy' )) FROM mvt yt2 WHERE yt2.wycc_id = yt1.wycc_id AND TO_TIMESTAMP( yt2.end_movement, 'dd/MM/yyyy' ) < TO_TIMESTAMP( yt1.start_movement, 'dd/MM/yyyy' )) end ) dateprev";
 		sqlstmt = sqlstmt + " FROM PUBLIC.MVT YT1";
 		return sqlstmt;
 	}

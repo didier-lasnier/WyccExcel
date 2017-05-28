@@ -103,7 +103,7 @@ public class EcranAccueil {
 	
 	static JProgressBar barDo;
 	
-	Display d;
+	static Display d;
 	Shell s;
 	
 	
@@ -137,6 +137,7 @@ public class EcranAccueil {
 		
 		Display.setAppName(APP_NAME);
 		Display display = new Display();
+		d=display;
 		shell = new Shell();
 		shell.setBackground(SWTResourceManager.getColor(255, 255, 255));
 		shell.setSize(638, 382);
@@ -526,7 +527,7 @@ public class EcranAccueil {
 				if (selected !=null) {
 					Actionuser a = new Actionuser();
 					
-					Actionuser.lanceLecture(appDir,selected, StartD, EndD);
+					a.lanceLecture(appDir,selected, StartD, EndD);
 					
 					}
 				} catch (IOException e) {

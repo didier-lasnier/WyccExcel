@@ -1,5 +1,7 @@
 package com.poi.dlas;
 
+import java.awt.BorderLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -17,6 +19,12 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
@@ -61,7 +69,7 @@ import com.dlas.dao.ObjectDao;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
-public class WyccWorkbook  {
+public class WyccWorkbook  extends JPanel {
 	public XSSFWorkbook currentworkbook;
 	public XSSFSheet currentSheet;
 
@@ -1141,6 +1149,7 @@ public class WyccWorkbook  {
 		return lafor;		
 	}
 
+
 	public static class ProgressBarDb implements IRunnableWithProgress {
 		 private String       message;
 		 private WyccWorkbook wb;
@@ -1253,7 +1262,7 @@ public class WyccWorkbook  {
 				
 				
 				wb.setCountbeneficiaire(resultdistinct.size());
-				monitor.setTaskName("Inilialisation ended");
+				monitor.setTaskName("Processing beneficiaries.");
 
 				monitor.subTask("Processing beneficiaries " + wb.getCurrentbeneficiaire() + " of "+  wb.getCountbeneficiaire() + "...");
 				monitor.worked(1);
