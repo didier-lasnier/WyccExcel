@@ -54,6 +54,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 
 import com.dlas.dao.ObjectDao;
+import com.dlas.dao.beneficiaries;
 import com.dlas.dao.BenefitDb;
 
 import com.dlas.gui.accueil.MenuAccueil;
@@ -423,23 +424,32 @@ public class EcranAccueil {
         			@Override
 					public void widgetSelected(SelectionEvent e) {
         				// on enregistre les Aggregate
+        				
+        				List<Benefit> mbenefits =m_benefits.getBenefits();
+        				
         				ObjectDao myobj = new ObjectDao();
         				Session lasession = myobj.getSessionDao();
-        				List<Benefit> mbenefits =m_benefits.getBenefits();
-        				lasession.beginTransaction();
-        				Query q = lasession.createQuery("delete from BenefitDb");
-        				q.executeUpdate();
-        				 lasession.getTransaction().commit(); 
+
         				 
         				lasession.beginTransaction(); 
+        				Query q = lasession.createQuery("from BenefitDb where company=:company and formula=:formula and formulename=:formulename and policynumber=:policynumber");
         				 for ( Benefit m_benefit : mbenefits ){
-        					BenefitDb benedb =new BenefitDb();
-        					benedb.setCompany(m_benefit.getCompany());
-        					benedb.setFormula(m_benefit.getFormula());
-        					benedb.setFormulename(m_benefit.getFormulename());
-        					benedb.setPolicynumber(m_benefit.getPolicynumber());
+        					 
+        					    q.setString("company", m_benefit.getCompany());
+        						q.setString("formula", m_benefit.getFormula());
+        						q.setString("formulename", m_benefit.getFormulename());
+        						q.setString("policynumber", m_benefit.getPolicynumber());
+        						q.setMaxResults(1);
+        						BenefitDb benedb = (BenefitDb) q.uniqueResult();
+        						if (benedb==null) {
+        					       benedb =new BenefitDb();
+        					       benedb.setCompany(m_benefit.getCompany());
+	               				   benedb.setFormula(m_benefit.getFormula());
+	               				   benedb.setFormulename(m_benefit.getFormulename());
+	               				   benedb.setPolicynumber(m_benefit.getPolicynumber());
+        						 }				
         					benedb.setAmount(m_benefit.getAmount());
-        					lasession.save(benedb);
+        					lasession.saveOrUpdate(benedb);
         				 }		
         				  lasession.flush();
         				  lasession.getTransaction().commit(); 

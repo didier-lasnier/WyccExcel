@@ -536,7 +536,6 @@ public class WyccWorkbook  extends JPanel {
 		Session lasession = myobj.getSessionDao();
 		lasession.beginTransaction();
 		Query query = lasession.createQuery("from beneficiaries");
-		
 		List<beneficiaries> resultdistinct = query.list();
 		lasession.getTransaction().commit();
 		return resultdistinct;
@@ -1009,7 +1008,7 @@ public class WyccWorkbook  extends JPanel {
 	public void setFormulaHeader(int introw, List result, SXSSFWorkbook newworkbook, SXSSFRow row, int myiterator,
 			int start, int end, int myoffset) {
 				row.setHeight((short) 700);
-				
+		Boolean goon=false;		
 		for (Wycccell event : (List<Wycccell>) result.subList(start, end)) {
 
 			SXSSFCell cell = row.createCell(event.getCellcolumn() + (myoffset * (myiterator - 1)));
@@ -1049,21 +1048,31 @@ public class WyccWorkbook  extends JPanel {
 			style1.setFillPattern(XSSFCellStyle.NO_FILL);// (short)
 															// event.getPattern());
 			// style1.setIndention((short) event.getIndention());
-*/
-			String lavaleur = null;
-			if ((event.getValeurcell() != null)) {
-
-				lavaleur = event.getValeurcell();
-
-				if (event.getTypecell() == Cell.CELL_TYPE_NUMERIC) {
-					float myfloat = Float.parseFloat(lavaleur);
-					cell.setCellValue(myfloat);
-				} else if (event.getTypecell() == Cell.CELL_TYPE_STRING) {
-					cell.setCellValue(lavaleur);
-				}
+*/    
+			if (myoffset==0 && event.getCellcolumn()<=17) {
+				goon=true;
+			} else if (myoffset>0 && event.getCellcolumn()<=17){
+				goon=false;
+			} else if (myoffset>0 && event.getCellcolumn()>17){
+				goon=true;
 			}
+			
+			String lavaleur = null;
+			if (goon) {
+				if ((event.getValeurcell() != null)) {
+	
+					lavaleur = event.getValeurcell();
+	
+					if (event.getTypecell() == Cell.CELL_TYPE_NUMERIC) {
+						float myfloat = Float.parseFloat(lavaleur);
+						cell.setCellValue(myfloat);
+					} else if (event.getTypecell() == Cell.CELL_TYPE_STRING) {
+						cell.setCellValue(lavaleur);
+					}
+				}
+			
 			cell.setCellStyle(style1);
-
+			}
 		}
 
 	}
@@ -1225,7 +1234,7 @@ public class WyccWorkbook  extends JPanel {
 				 * lectures des entêtes de colonnes
 				 * 
 				 */
-				//definit le nimbre de module à traiter.
+				//definit le nombre de module à traiter.
 				int nbmodule=8;
 				int myIterator = 1;
 				// numero de colonne de cellule de départ des infos beneficiaires
@@ -1253,12 +1262,6 @@ public class WyccWorkbook  extends JPanel {
 				/*
 				 * on recupére la liste des beneficiaires
 				 */
-
-/*				lasession.beginTransaction();
-				Query query = lasession.createQuery("from beneficiaries");
-				
-				List<beneficiaries> resultdistinct = query.list();
-				lasession.getTransaction().commit();*/
 				
 				
 				wb.setCountbeneficiaire(resultdistinct.size());
@@ -1373,23 +1376,31 @@ public class WyccWorkbook  extends JPanel {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
-						String fCompany = null;
+						String fCompany = "";
 						try {
-							fCompany = fieldGetter.invoke(rs).toString();
+							if ( fieldGetter.invoke(rs) !=null ){
+								fCompany = fieldGetter.invoke(rs).toString();
+							}
 						} catch (IllegalAccessException | IllegalArgumentException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
 						
 						try {
+							
 							fieldGetter = rs.getClass().getMethod("getFormule"+i);
 						} catch (NoSuchMethodException | SecurityException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
-						String fFormule = null;
+						String fFormule = "";
 						try {
-							fFormule = fieldGetter.invoke(rs).toString();
+							
+							if (fieldGetter.invoke(rs)!= null) {
+								fFormule = fieldGetter.invoke(rs).toString();
+							}
+							
+							
 						} catch (IllegalAccessException | IllegalArgumentException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -1401,9 +1412,11 @@ public class WyccWorkbook  extends JPanel {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
-						String fFormulename = null;
+						String fFormulename = "";
 						try {
-							fFormulename = fieldGetter.invoke(rs).toString();
+							if (fieldGetter.invoke(rs)!=null) {
+								fFormulename = fieldGetter.invoke(rs).toString();
+							}
 						} catch (IllegalAccessException | IllegalArgumentException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();

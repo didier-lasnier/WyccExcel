@@ -83,17 +83,17 @@ public class ReadFileXlsx {
 		Shell shell = new Shell();
 		shell.setSize(100, 400);
 		IRunnableWithProgress op1 = new WyccWorkbook.ProgressBarDb("Database initialisation", wyccwrkbk);
-		new ProgressMonitorDialog(shell).run(true, true, op1);
-		shell.close();
-		
-		 shell = new Shell();
+		ProgressMonitorDialog porgressbar=new ProgressMonitorDialog(shell);	
+		porgressbar.run(true, true, op1);
+//		shell.close();
+//		
+//		 shell = new Shell();
 		 shell.setSize(100, 400);
-			
 		result =wyccwrkbk.getResultdistinct();
 		
 		IRunnableWithProgress op = new WyccWorkbook.ProgressBarBeneficiaries(result.size(),"Processing Beneficiaries ",wyccwrkbk,filepath,rootdirDb,result);
 		
-		new ProgressMonitorDialog(shell).run(true, true, op);
+		porgressbar.run(true, true, op);
 		shell.close();
 		
 	}

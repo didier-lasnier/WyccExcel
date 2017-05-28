@@ -23,11 +23,11 @@ public class ModulModel extends AbstractModelObject {
 	
 	public void addModuls(Shell s, List<Modul> listmodul, ModulDialog window){
 		m_moduls=listmodul;
-		firePropertyChange("moduls", null, m_moduls);
+		firePropertyChange("modulmodel", null, m_moduls);
 	}
 	public void removeBenefit(Modul modul) {
 		m_moduls.remove(modul);
-		firePropertyChange("moduls", null, m_moduls);
+		firePropertyChange("modulmodel", null, m_moduls);
 	}
 	
 	

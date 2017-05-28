@@ -39,6 +39,7 @@ import org.hibernate.query.Query;
 import com.dlas.dao.Modul;
 import com.dlas.dao.ObjectDao;
 import com.dlas.dao.beneficiaries;
+import com.dlas.gui.EcranAccueil.ViewerUpdateValueStrategy;
 import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Benefits;
 import com.dlas.gui.model.ModulModel;
@@ -92,7 +93,7 @@ public class ModulDialog extends Dialog {
 	public ModulDialog(Display display) {
 		super(shellModul);
 		m_moduls.addModuls(shellModul, getListmodul(), window);
-		Moduldisplay( display);
+		Moduldisplay(display);
 		
 	}
 	public ModulDialog() {
@@ -347,7 +348,6 @@ public class ModulDialog extends Dialog {
 			return super.doSet(observableValue, value);
 		}
 	}
-	
 	protected DataBindingContext initDataBindings() {
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
@@ -356,17 +356,14 @@ public class ModulDialog extends Dialog {
 		Modulviewer_1.setLabelProvider(new ObservableMapLabelProvider(observeMaps));
 		Modulviewer_1.setContentProvider(listContentProvider);
 		//
-		IObservableList benefitsBenefitsObserveList = BeanProperties.list("moduls").observe(m_moduls);
-		Modulviewer_1.setInput(benefitsBenefitsObserveList);
+		IObservableList ModulObserveList = BeanProperties.list("ModulModel").observe(m_moduls);
+		Modulviewer_1.setInput(ModulObserveList);
 		//
 		IObservableValue observeSingleSelectionModulviewer_1 = ViewerProperties.singleSelection().observe(Modulviewer_1);
 		IObservableValue benefitsViewermodulfournisseurObserveDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewer_1, "modulfournisseur", String.class);
 		IObservableValue modulfournisseurTextObserveValue = SWTObservables.observeText(txtfournisseur, SWT.Modify);
 		bindingContext.bindValue(benefitsViewermodulfournisseurObserveDetailValue, modulfournisseurTextObserveValue, null, null);
 		//
-		
-		
-		
 		return bindingContext;
 	}
 }
