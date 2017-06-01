@@ -3,55 +3,41 @@ package com.dlas.tools;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.jface.dialogs.ProgressMonitorDialog;
+import org.eclipse.jface.operation.IRunnableWithProgress;
+import org.eclipse.swt.widgets.Shell;
+
 import com.dlas.dao.Mvt;
 import com.dlas.dao.MvtCsv;
+import com.dlas.dao.beneficiaries;
 import com.opencsv.CSVReader;
 import com.opencsv.bean.CsvToBean;
+import com.poi.dlas.WyccWorkbook;
 
 public class CsvTools {
 
 	public void CsvTools() {
 	}
 
-	public void readcsvfile(PreparedStatement stmt, String filenamecsv) throws IOException, SQLException {
+	public void readcsvfile(PreparedStatement stmt, String filenamecsv) throws IOException, SQLException, InvocationTargetException, InterruptedException {
 		// Build reader instance
 		// Read data.csv
 		// Default seperator is comma
 		// Default quote character is double quote
 		// Start reading from line number 2 (line numbers start from zero)
-		/*CSVReader reader = null;
-		MappingStrategy mapping = new MappingStrategy();
-		try {
-			reader = new CSVReader(new FileReader(filenamecsv), ';', '"', 4);
 
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		// Read CSV line by line and use the string array as you want
-		CsvToBean<MvtCsv> csvToBean = new CsvToBean<MvtCsv>();
-		CSVMappedMvt objectCSV = new CSVMappedMvt();
-
-		List<MvtCsv> list = csvToBean.parse(mapping.setColumMapping(), reader);*/
+		
 		List<MvtCsv> list=getcsvfile(filenamecsv);
-		String[] nextLine;
-		int i = 5;
-		MvtCsv recordmodule = null;
-		for (MvtCsv object : list) {
-			if (i == 5) {
-				recordmodule = object;
-			} else if (i >= 7) {
-				System.out.println(object.getWyccid());
-				saveRecord(stmt, object, recordmodule);
-			}
-
-			i++;
-		}
+		Shell shell = new Shell();
+		IRunnableWithProgress op = new ProgressBarDb("",stmt,filenamecsv,list.size(),this,list);
+		new ProgressMonitorDialog(shell).run(true, true, op);
+		shell.close();
 
 	}
 	public List<MvtCsv> getcsvfile( String filenamecsv) throws IOException, SQLException {
@@ -190,6 +176,59 @@ public class CsvTools {
 
 		statement.executeUpdate();
 
+	}
+	
+	public static class ProgressBarDb implements IRunnableWithProgress {
+		 private String              message;
+		 private PreparedStatement   stmt;
+		 private String              filenamecsv;
+		 private int                 workload     ;
+		 private CsvTools            csvtools;
+		 private List<MvtCsv>        list;
+		 
+		 
+		public ProgressBarDb(String message,PreparedStatement stmt, String filenamecsv,int workload,CsvTools csvtools,List<MvtCsv> list){
+			
+          this.message     = message;
+          this.stmt        = stmt;
+          this.filenamecsv = filenamecsv;
+          this.workload    = workload;
+          this.csvtools    = csvtools;
+          this.list        = list;
+		}
+		@Override
+		public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+			 monitor.beginTask(message, workload);
+			
+			try {
+				list = csvtools.getcsvfile(filenamecsv);
+			} catch (IOException | SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			    int i = 5;
+			    int countor=1;
+				MvtCsv recordmodule = null;
+				for (MvtCsv object : list) {
+					monitor.subTask("Processing csv line : "+ countor + " of "+  workload + "...");
+					if (i == 5) {
+						recordmodule = object;
+					} else if (i >= 7) {
+						System.out.println(object.getWyccid());
+						try {
+							csvtools.saveRecord(stmt, object, recordmodule);
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					monitor.worked(1);
+					countor++;
+					i++;
+				}
+			 monitor.done();
+		}
+		
 	}
 
 }

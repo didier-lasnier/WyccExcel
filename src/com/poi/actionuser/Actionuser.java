@@ -2,6 +2,7 @@ package com.poi.actionuser;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -19,23 +20,40 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.jface.dialogs.ProgressMonitorDialog;
+import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.widgets.DateTime;
+import org.eclipse.swt.widgets.Shell;
+
 import com.dlas.dao.MvtCsv;
+import com.dlas.dao.beneficiaries;
 import com.dlas.dao.h2db;
 import com.dlas.dao.hsqltext;
 import com.dlas.tools.CsvTools;
+import com.dlas.tools.CsvTools.ProgressBarDb;
 import com.dlas.dao.LimitAggCsv;
-
+import com.poi.dlas.WyccWorkbook;
 import com.poi.dlas.managecsv;
 
 public class Actionuser {
 	static Logger logger = Logger.getLogger("wycc");
+	
+	private PreparedStatement prepStmt;
+	
+	public PreparedStatement getPrepStmt() {
+		return prepStmt;
+	}
+
+	public void setPrepStmt(PreparedStatement prepStmt) {
+		this.prepStmt = prepStmt;
+	}
 
 	public void actionuser() {
 
 	}
 
-	public static void lanceLecture(String dir,String Filepath,DateTime StartD,DateTime EndD ) throws Exception {
+	public  void lanceLecture(String dir,String Filepath,DateTime StartD,DateTime EndD ) throws Exception {
 
             File theOpenfile=new File(Filepath);
             File directory  =new File(dir);
@@ -82,6 +100,8 @@ public class Actionuser {
 			
 			logger.info("read csv file into from mvt");
 			lireCSV(theOpenfile, db);
+			
+			
 			stmt = db.connectiondb.prepareStatement("DELETE FROM MVT_NUM"); // db.connectiondb.createStatement();
 			logger.info("delete from mvt_num");
 			stmt.executeUpdate();
@@ -90,7 +110,13 @@ public class Actionuser {
 			// stmt = db.connectiondb.createStatement();
 			stmt = db.connectiondb.prepareStatement(sqlstmt.insertmvtnum());
 			logger.info("read csv file into from mvt");
-			stmt.executeUpdate();// , null, 'charset=UTF-8 fieldSeparator=;')");
+		
+			try {
+				stmt.executeUpdate();// , null, 'charset=UTF-8 fieldSeparator=;')");
+			} catch (Exception e) {
+				logger.info(sqlstmt.insertmvtnum());
+				e.printStackTrace();
+			}
 			stmt.close();
 
 			// stmt = db.connectiondb.createStatement();
@@ -148,18 +174,22 @@ public class Actionuser {
 
 	
 	
-	public static void lireCSV(File theCSVfile, h2db dbconn) throws Exception {
+	public void lireCSV(File theCSVfile, h2db dbconn) throws Exception {
 
 		// Workbook wb;
 
 		if (theCSVfile != null) {
 
-			hsqltext sqlstmt = new hsqltext();
-			PreparedStatement prepStmt = dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt());
+//			hsqltext sqlstmt = new hsqltext();
+//			PreparedStatement prepStmt = dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt());
+			Shell shell = new Shell();
+			IRunnableWithProgress op = new ProgressBarDb("Database initialisation",dbconn, this);
+			new ProgressMonitorDialog(shell).run(true, true, op);
+			shell.close();
 			logger.info("Select file csv : " + theCSVfile.getAbsolutePath());
 			CsvTools csfile = new CsvTools();
-			csfile.readcsvfile(prepStmt, theCSVfile.getAbsolutePath());
-			prepStmt.close();
+			csfile.readcsvfile(this.getPrepStmt(), theCSVfile.getAbsolutePath());
+			this.getPrepStmt().close();
 		}
 	}
 
@@ -191,8 +221,7 @@ public class Actionuser {
 		// Get distinct only
         listaggDistinct = listagg.stream().distinct().collect(Collectors.toList());
         listnotnull = listaggDistinct.stream().filter(c -> c.getCompany()!= null && !c.getCompany().equals("") ).collect(Collectors.toList());
-//		Set<LimitAggCsv> setWithUniqueValues = new HashSet<LimitAggCsv>(listagg);
-//		listaggDistinct= new ArrayList<>(setWithUniqueValues);
+
 		
 		return listnotnull;
 	}
@@ -226,4 +255,37 @@ public class Actionuser {
         Map<Object, Boolean> map = new ConcurrentHashMap<>();
         return t -> map.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == null;
     }
+	
+	
+	public  class ProgressBarDb implements IRunnableWithProgress {
+		 private String       message;
+		 private h2db         dbconn;
+		 private Actionuser   actionuser;
+		 
+		 
+		public ProgressBarDb(String message,h2db dbconn, Actionuser actionuser){
+			
+           this.message      = message;
+           this.dbconn       = dbconn;
+           this.actionuser   = actionuser;
+           
+		}
+		@Override
+		public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+			    monitor.beginTask(message, IProgressMonitor.UNKNOWN);
+			    monitor.worked(1);
+				hsqltext sqlstmt = new hsqltext();
+				
+			  try {
+				  actionuser.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
+				  monitor.worked(1);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			 monitor.done();
+		}
+		
+	}
 }

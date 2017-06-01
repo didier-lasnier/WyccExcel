@@ -3,6 +3,7 @@ package com.dlas.gui.model;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -26,7 +27,7 @@ public class Benefits extends AbstractModelObject {
 	
 	
 	public void addBenefit(Shell s, Benefit benefit, EcranAccueil window) {
-		WyccWorkbook wyccwb = new WyccWorkbook();
+		  WyccWorkbook wyccwb = new WyccWorkbook();
   		//public void widgetRead(){
 			File directory = new File(".");
 			String fileCharSep = System.getProperty("file.separator");
@@ -44,22 +45,25 @@ public class Benefits extends AbstractModelObject {
 					try {
 					CsvTools a = new CsvTools();
 					Actionuser b = new Actionuser();
+					// le fichier csv est lu et est en mémoire
 					window.setListCsv(a.getcsvfile(selected));
+					//on construit une collections avec les données des companies 
 					List<LimitAggCsv>	listviewer=  b.readAggregate(window.getListCsv());
-					List<LimitAggCsv>	listdistinct =listviewer.stream().filter(distinctByKey(p -> p.getCompany())).collect(Collectors.toList());
+					List<LimitAggCsv>	listdistinct	= distinctList(listviewer,LimitAggCsv::getPolicynumber,LimitAggCsv::getFormula,LimitAggCsv::getFormulename,LimitAggCsv::getCompany);
 					if (false) {
 
 					} else {
 						
-					for (LimitAggCsv agg :listdistinct){
+					//for (LimitAggCsv agg :listdistinct){
 						
-						for (LimitAggCsv distinct : listviewer) {
-							// on recupére les données précédement enregistrée
+						//for (LimitAggCsv distinct : listviewer) 
+							for (LimitAggCsv distinct :listdistinct){
+							// on recupére les données précédement enregistrées
 							String amount = wyccwb.readaggregate(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber() );
 							
 							m_benefits.add(new Benefit(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),amount));
 						}
-					}
+					//}
 					}
 					
 					} catch (Exception e1) {
@@ -85,10 +89,37 @@ public class Benefits extends AbstractModelObject {
 	public List getBenefits(){
 		return m_benefits;
 	}
+	
 	public static <T> Predicate<T> distinctByKey(Function<? super T, Object> keyExtractor) 
     {
         Map<Object, Boolean> map = new ConcurrentHashMap<>();
         return t -> map.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == null;
     }
+	
+	public static <T> List<T> distinctList(List<T> list, Function<? super T, ?>... keyExtractors) {
+
+	    return list
+	        .stream()
+	        .filter(distinctByKeys(keyExtractors))
+	        .collect(Collectors.toList());
+	}
+
+	private static <T> Predicate<T> distinctByKeys(Function<? super T, ?>... keyExtractors) {
+
+	    final Map<List<?>, Boolean> seen = new ConcurrentHashMap<>();
+
+	    return t -> {
+
+	        final List<?> keys = Arrays.stream(keyExtractors)
+	            .map(ke -> ke.apply(t))
+	            .collect(Collectors.toList());
+
+	        return seen.putIfAbsent(keys, Boolean.TRUE) == null;
+
+	    };
+
+	}
+	
+	
 }
 

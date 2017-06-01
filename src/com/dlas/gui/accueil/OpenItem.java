@@ -7,24 +7,29 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.widgets.DateTime;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 
 import com.poi.actionuser.Actionuser;
+import com.dlas.gui.ModulDialog;
 
 public class OpenItem implements SelectionListener {
 	private DateTime StartD;
 	private DateTime EndD;
 	private Shell    s;
 	private String Dirpath;
+	private Display d;
 	public OpenItem(){}
 
 
-	public OpenItem(Shell s,DateTime StartD, DateTime EndD,String Dirpath){
+	//public OpenItem(Shell s,DateTime StartD, DateTime EndD,String Dirpath){
+	public OpenItem(Display  d,Shell s){
 		this.s=s;
-		this.StartD=StartD;
-		this.EndD=EndD;
-		this.Dirpath=Dirpath;
+		this.d=d;
+//		this.StartD=StartD;
+//		this.EndD=EndD;
+//		this.Dirpath=Dirpath;
 	}
 	@Override
 	public void widgetSelected(SelectionEvent event) {
@@ -40,28 +45,8 @@ public class OpenItem implements SelectionListener {
 	}
 	
 	public void widgetOpen(Shell s,DateTime StartD, DateTime EndD){
-		File directory = new File(".");
-		String fileCharSep = System.getProperty("file.separator");
+		ModulDialog moduldia = new ModulDialog (d) ;	
 
-		try {
-			FileDialog fd = new FileDialog(s, SWT.OPEN);
-			fd.setText("Open");
-			fd.setFilterPath(directory.getCanonicalPath());
-			String[] filterExt = { "*.csv","*.txt" };
-			fd.setFilterExtensions(filterExt);
-			String selected = fd.open();
-			if (selected !=null) {
-				Actionuser a = new Actionuser();
-				Actionuser.lanceLecture(Dirpath,selected, StartD, EndD);
-
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 

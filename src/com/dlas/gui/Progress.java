@@ -41,7 +41,7 @@ public class Progress {
         public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException
         {
             // Tell the user what you are doing
-            monitor.beginTask("Copying files", workload);
+            monitor.beginTask("Copying files", IProgressMonitor.UNKNOWN);
 
             // Do your work
             for(int i = 0; i < workload; i++)
@@ -65,6 +65,11 @@ public class Progress {
             // You are done
             monitor.done();
         }
+        
+        
 
     }
+    
+    
+    
 }

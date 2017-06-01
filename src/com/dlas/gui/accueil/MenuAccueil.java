@@ -36,7 +36,7 @@ public class MenuAccueil {
 	exitItem.setText("&Quit\tCRTL+Q");
 	exitItem.setAccelerator(SWT.CTRL + 'Q');
 	
-	openItem.addSelectionListener(new OpenItem(s,StartD,EndD,dirpath));
+	openItem.addSelectionListener(new OpenItem(d,s));
 	
 	saveItem.addSelectionListener(new SaveItem(s,StartD,EndD));
 	

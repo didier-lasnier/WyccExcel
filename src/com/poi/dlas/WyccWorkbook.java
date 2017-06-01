@@ -1,5 +1,9 @@
 package com.poi.dlas;
 
+import java.awt.BorderLayout;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,6 +19,14 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
@@ -30,6 +42,10 @@ import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.xmlbeans.XmlException;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.jface.dialogs.ProgressMonitorDialog;
+import org.eclipse.jface.operation.IRunnableWithProgress;
+import org.eclipse.swt.widgets.Shell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
@@ -42,9 +58,11 @@ import org.apache.poi.xssf.streaming.SXSSFSheet;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 
 import com.dlas.dao.h2db;
+
 import com.dlas.dao.beneficiaries;
 import com.dlas.tools.Tools;
 import com.dlas.dao.Wycccell;
+import com.dlas.dao.LimitAggCsv;
 import com.dlas.dao.Modul;
 
 
@@ -54,7 +72,7 @@ import com.dlas.dao.ObjectDao;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
-public class WyccWorkbook {
+public class WyccWorkbook  extends JPanel {
 	public XSSFWorkbook currentworkbook;
 	public XSSFSheet currentSheet;
 
@@ -62,9 +80,84 @@ public class WyccWorkbook {
 	private int OffsetColumn =57;
 	private int StartColumnformule=17;
 	private int EndColumnFormule =73;
-	
+	private int countbeneficiaire ;
+	private int currentbeneficiaire;
+	private List<beneficiaries> resultdistinct;
+	 
+	public List<beneficiaries> getResultdistinct() {
+		return resultdistinct;
+	}
+
+	public void setResultdistinct(List<beneficiaries> resultdistinct) {
+		this.resultdistinct = resultdistinct;
+	}
+
 	public WyccWorkbook() {
 
+	}
+
+	public XSSFWorkbook getCurrentworkbook() {
+		return currentworkbook;
+	}
+
+	public void setCurrentworkbook(XSSFWorkbook currentworkbook) {
+		this.currentworkbook = currentworkbook;
+	}
+
+	public XSSFSheet getCurrentSheet() {
+		return currentSheet;
+	}
+
+	public void setCurrentSheet(XSSFSheet currentSheet) {
+		this.currentSheet = currentSheet;
+	}
+
+	public String getXldformuleaggaregate() {
+		return xldformuleaggaregate;
+	}
+
+	public void setXldformuleaggaregate(String xldformuleaggaregate) {
+		this.xldformuleaggaregate = xldformuleaggaregate;
+	}
+
+	public int getOffsetColumn() {
+		return OffsetColumn;
+	}
+
+	public void setOffsetColumn(int offsetColumn) {
+		OffsetColumn = offsetColumn;
+	}
+
+	public int getStartColumnformule() {
+		return StartColumnformule;
+	}
+
+	public void setStartColumnformule(int startColumnformule) {
+		StartColumnformule = startColumnformule;
+	}
+
+	public int getEndColumnFormule() {
+		return EndColumnFormule;
+	}
+
+	public void setEndColumnFormule(int endColumnFormule) {
+		EndColumnFormule = endColumnFormule;
+	}
+
+	public int getCountbeneficiaire() {
+		return countbeneficiaire;
+	}
+
+	public void setCountbeneficiaire(int countbeneficiaire) {
+		this.countbeneficiaire = countbeneficiaire;
+	}
+
+	public int getCurrentbeneficiaire() {
+		return currentbeneficiaire;
+	}
+
+	public void setCurrentbeneficiaire(int currentbeneficiaire) {
+		this.currentbeneficiaire = currentbeneficiaire;
 	}
 
 	public WyccWorkbook(File xlsfileWycc) {
@@ -103,47 +196,15 @@ public class WyccWorkbook {
 
 		// Workbook wb=SetworkBook( new XSSFWorkbook());
 		setSheet(setWorkBook(new XSSFWorkbook(xlsfileWycc)).createSheet("Total WYCC"));
-		/*
-		 * Row row; Cell cell; int rownum = 1; int colnum =1; String data =
-		 * "Test";
-		 * 
-		 * 
-		 * PrintSetup printSetup = sheet.getPrintSetup();
-		 * printSetup.setLandscape(true);
-		 * 
-		 * //the following three statements are required only for HSSF
-		 * sheet.setAutobreaks(true); printSetup.setFitHeight((short)1);
-		 * printSetup.setFitWidth((short)1);
-		 * 
-		 * Row headerRow = sheet.createRow(0);
-		 * headerRow.setHeightInPoints(12.75f);
-		 * 
-		 * cell = headerRow.createCell(0); cell.setCellValue(data);
-		 */
+
 
 		// Write the output to a file
 		String filepath = xlsfileWycc.getCanonicalPath();
 		// if(wb instanceof XSSFWorkbook) file += "x";
 		logger.info(filepath);
 
-		Object[][] bookData = { { "Head First Java", "Kathy Serria", 79 }, { "Effective Java", "Joshua Bloch", 36 },
-				{ "Clean Code", "Robert martin", 42 }, { "Thinking in Java", "Bruce Eckel", 35 }, };
-
 		int rowCount = 0;
 
-		/*
-		 * for (Object[] aBook : bookData) { Row row =
-		 * sheet.createRow(++rowCount);
-		 * 
-		 * int columnCount = 0;
-		 * 
-		 * for (Object field : aBook) { Cell cell =
-		 * row.createCell(++columnCount); if (field instanceof String) {
-		 * cell.setCellValue((String) field); } else if (field instanceof
-		 * Integer) { cell.setCellValue((Integer) field); } }
-		 * 
-		 * }
-		 */
 
 		FileOutputStream out = new FileOutputStream(filepath);
 		this.getWorkBook().write(out);
@@ -209,7 +270,8 @@ public class WyccWorkbook {
 
 	}
 
-	public void setBeneficiairies(String filepath,String rootdirDb) throws SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InvalidFormatException {
+			
+	public void setBeneficiairies(String filepath,String rootdirDb)  throws SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InvalidFormatException {
         File directory = new File(rootdirDb);
 		String fileCharSep = System.getProperty("file.separator");
 		SXSSFCell lastcellule = null;
@@ -219,21 +281,6 @@ public class WyccWorkbook {
 		
 		// List result=readformula();
 
-		h2db db = new h2db();
-		db.getDatabase(directory);
-		String sqlstmt1 = "SELECT WYCC_ID, NAME, FIRST_NAME, LINE, STRUCTURE_NAME, FAMILY_COVERED, CHILDREN, NATIONALITY, COUNTRY,";
-		sqlstmt1 = sqlstmt1
-				+ " PERIOD_INSURANCE, POSITIONCREW, START_MOVEMENT, PREVMVT, ENDCOMP, END_MOVEMENT, NEXTMVT, NEXTCOMP,";
-		sqlstmt1 = sqlstmt1 + " MONTHLY_SALARY, SALARY_CURRENCY, DRESTEJ, ERESTEJ, TO_INVOICE, JOUR,MOIS,";
-		sqlstmt1 = sqlstmt1
-				+ " company1, formule1, formule_name1,police_number1, total_amount_insured1, company2,formule2, formule_name2,police_number2, total_amount_insured2,";
-		sqlstmt1 = sqlstmt1
-				+ " company3, formule3, formule_name3,police_number3, total_amount_insured3, company4,formule4, formule_name4,police_number4, total_amount_insured4,";
-		sqlstmt1 = sqlstmt1
-				+ " company5, formule5, formule_name5,police_number5, total_amount_insured5, company6,formule6, formule_name6,police_number6, total_amount_insured6,";
-		sqlstmt1 = sqlstmt1
-				+ " company7, formule7, formule_name7,police_number7, total_amount_insured7, company8,formule8, formule_name8,police_number8, total_amount_insured8";
-		sqlstmt1 = sqlstmt1 + " FROM PUBLIC.BENEFICIARIES_TAB";
 		ObjectDao myobj = new ObjectDao();
 		Session lasession = myobj.getSessionDao();
 		// Lire le header
@@ -292,8 +339,9 @@ public class WyccWorkbook {
 		List<beneficiaries> resultdistinct = query.list();
 		lasession.getTransaction().commit();
 		
+		countbeneficiaire=resultdistinct.lastIndexOf(beneficiaries.class)+1;
+		
 	/*
-	 * 
 	 * pour chaque beneficiaires on génére les formules de calculs
 	 */
 		
@@ -301,10 +349,12 @@ public class WyccWorkbook {
 		// ATTENTION LA NUMEROTATION DES LIGNES COMMENCE A ZERO
 		
 		introw = 4;
+		currentbeneficiaire=0;
 		Modul modul = new Modul();
 		for (beneficiaries rs : resultdistinct)
 	//	while (rs.next()) 
 		{
+			currentbeneficiaire++;
 			row = spreadsheet.createRow(introw);
 			SXSSFCell cell = null;
 			int j = 0;
@@ -483,7 +533,16 @@ public class WyccWorkbook {
 		// lasession.close();
 
 	}
-
+	
+	public List<beneficiaries> getBeneficiaries( ){
+		ObjectDao myobj = new ObjectDao();
+		Session lasession = myobj.getSessionDao();
+		lasession.beginTransaction();
+		Query query = lasession.createQuery("from beneficiaries");
+		List<beneficiaries> resultdistinct = query.list();
+		lasession.getTransaction().commit();
+		return resultdistinct;
+	}
 	
 	public List readformula() {
 
@@ -516,7 +575,7 @@ public class WyccWorkbook {
 		// }
 	}
 
-	public List readformula(Session lasession ,String param, int rowtoread) {
+	public static List readformula(Session lasession ,String param, int rowtoread) {
 
 //		ObjectDao myobj = new ObjectDao();
 //		Session lasession = myobj.getSessionDao();
@@ -538,7 +597,7 @@ public class WyccWorkbook {
 		int introw = (int) resultdistinct.get(rowtoread);
 		// for (int introw : (List<Integer>) resultdistinct){
 		lasession.beginTransaction();
-		query = lasession.createQuery("from Wycccell where cellrow = :introw and calculmode = :calculmode order by cellrow asc");
+		query = lasession.createQuery("from Wycccell where cellrow = :introw and calculmode = :calculmode order by cellcolumn asc");
 		query.setParameter("introw", introw);
 		query.setString("calculmode", param);
 		List result = query.list();
@@ -603,7 +662,8 @@ public class WyccWorkbook {
 		return ValueReturn;
 		// }
 	}
-	public int getRowCount(XSSFWorkbook workbook, String sheetName) {
+	
+    public int getRowCount(XSSFWorkbook workbook, String sheetName) {
 		int index = workbook.getSheetIndex(sheetName);
 		if (index == -1)
 			return 0;
@@ -951,7 +1011,7 @@ public class WyccWorkbook {
 	public void setFormulaHeader(int introw, List result, SXSSFWorkbook newworkbook, SXSSFRow row, int myiterator,
 			int start, int end, int myoffset) {
 				row.setHeight((short) 700);
-				
+		Boolean goon=false;		
 		for (Wycccell event : (List<Wycccell>) result.subList(start, end)) {
 
 			SXSSFCell cell = row.createCell(event.getCellcolumn() + (myoffset * (myiterator - 1)));
@@ -959,7 +1019,13 @@ public class WyccWorkbook {
 			if (end<=17) {
 			style1.setFillForegroundColor(IndexedColors.AQUA.getIndex());
 			style1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-			} else if (event.getCellcolumn()>=26 && event.getCellcolumn()<=49) 
+			} else if (event.getCellcolumn()>=18 && event.getCellcolumn()<=25) 
+			{
+				style1.setFillForegroundColor(IndexedColors.GREEN.getIndex());
+				style1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+			}
+			
+			else if (event.getCellcolumn()>=26 && event.getCellcolumn()<=49) 
 			{
 				style1.setFillForegroundColor(IndexedColors.YELLOW.getIndex());
 				style1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
@@ -991,21 +1057,26 @@ public class WyccWorkbook {
 			style1.setFillPattern(XSSFCellStyle.NO_FILL);// (short)
 															// event.getPattern());
 			// style1.setIndention((short) event.getIndention());
-*/
+*/    
+
+			
 			String lavaleur = null;
-			if ((event.getValeurcell() != null)) {
-
-				lavaleur = event.getValeurcell();
-
-				if (event.getTypecell() == Cell.CELL_TYPE_NUMERIC) {
-					float myfloat = Float.parseFloat(lavaleur);
-					cell.setCellValue(myfloat);
-				} else if (event.getTypecell() == Cell.CELL_TYPE_STRING) {
-					cell.setCellValue(lavaleur);
+			logger.info("Header Intervale ["+start+" - "+end+"] Colonne :"+event.getCellcolumn());
+			if (event.getCellcolumn()>=start && event.getCellcolumn()<=end) {
+				if ((event.getValeurcell() != null)) {
+	
+					lavaleur = event.getValeurcell();
+	
+					if (event.getTypecell() == Cell.CELL_TYPE_NUMERIC) {
+						float myfloat = Float.parseFloat(lavaleur);
+						cell.setCellValue(myfloat);
+					} else if (event.getTypecell() == Cell.CELL_TYPE_STRING) {
+						cell.setCellValue(lavaleur);
+					}
 				}
-			}
+			
 			cell.setCellStyle(style1);
-
+			}
 		}
 
 	}
@@ -1031,10 +1102,7 @@ public class WyccWorkbook {
 		query.setMaxResults(1);
 		Modul modul = (Modul) query.uniqueResult();
 		lasession.getTransaction().commit();
-//		logger.info("modulfournisseur : " + modulFournisseur);
-//		logger.info("modullabel : " + modulLabel);
-//		logger.info("modulcategory : " + modulCategory);
-//		logger.info("modulscope : " + modulscope);
+
 		return modul;
 	}
 	
@@ -1090,6 +1158,394 @@ public class WyccWorkbook {
 			   
 		return lafor;		
 	}
+
+
+	public static class ProgressBarDb implements IRunnableWithProgress {
+		 private String       message;
+		 private WyccWorkbook wb;
+		 private  List<beneficiaries> resultdistinct;
+		 
+		public ProgressBarDb(String message,WyccWorkbook wb){
+			
+            this.message   = message;
+            this.wb        = wb;
+            
+            
+		}
+		@Override
+		public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+			 monitor.beginTask(message, IProgressMonitor.UNKNOWN);
+			wb.setResultdistinct(wb.getBeneficiaries());
+			 monitor.done();
+		}
+		
+	}
+	public static class ProgressBarBeneficiaries implements IRunnableWithProgress {
+		 private int          workload;
+		 private String       message;
+		 private WyccWorkbook wb;
+		 private String       filepath;
+		 private String       rootdirDb;
+		 private  List<beneficiaries> resultdistinct;
+		 
+		 public ProgressBarBeneficiaries (int workload,String message,WyccWorkbook wb,String filepath,String rootdirDb, List<beneficiaries> resultdistinct){
+		            this.workload  = workload;	
+		            this.message   = message;
+		            this.wb        = wb;
+		            this.filepath  =filepath;
+		            this.rootdirDb =rootdirDb;
+		            this.resultdistinct    = resultdistinct;
+		            
+		 }
+		 
+		@Override
+		public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+			    Tools mytools = new Tools();
+			    monitor.beginTask(message, workload);
+			 
+			    File directory = new File(rootdirDb);
+				String fileCharSep = System.getProperty("file.separator");
+				SXSSFCell lastcellule = null;
+				SXSSFCell firstcellul = null;
+				String    addressfirstcell = null;
+				String    addresslastcell = null;
+				
+				// List result=readformula();
+
+				ObjectDao myobj = new ObjectDao();
+				Session lasession = myobj.getSessionDao();
+				// Lire le header
+				List result = readformula(lasession,"MONTHLY", 0);
+
 	
+				
+				//List<beneficiaries>	listdistinct = mytools.distinctList(resultdistinct,beneficiaries::getCompany1);
+				
+//				List<String> companys= resultdistinct.stream().map(beneficiaries::getCompany1).collect(Collectors.toList());
+				
+				List<String> newList = Stream.of(resultdistinct.stream().map(beneficiaries::getCompany1).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany1).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany2).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany3).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany4).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany5).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany6).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany7).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany8).collect(Collectors.toList())
+						).flatMap(x -> x.stream()).collect(Collectors.toList());
+				List<String> companys= newList.stream().distinct().collect(Collectors.toList());
+				companys=companys.stream().filter(line->!"".equals(line))
+											.filter(line->line!=null)
+						                  .collect(Collectors.toList());
+			
+				SXSSFWorkbook newworkbook = new SXSSFWorkbook(2);
+				
+				List<SXSSFSheet> arspreadsheet = null;
+				SXSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
+
+/*				arspreadsheet.add(spreadsheet);
+				SXSSFSheet spreadsheet1=null;
+				for (String spreadsheetstr :companys ){
+					spreadsheet1 = newworkbook.createSheet(spreadsheetstr);
+					arspreadsheet.add(spreadsheet1);	
+				}*/
+				
+				int introw = 3;
+				SXSSFRow row = spreadsheet.createRow(introw);
+				
+				/*
+				 * lectures des entêtes de colonnes
+				 * 
+				 */
+				//definit le nombre de module à traiter.
+				int nbmodule=8;
+				int myIterator = 1;
+				// numero de colonne de cellule de départ des infos beneficiaires
+				int start = 0;
+				// numero de colonne de cellule de fin des infos beneficiaires
+				int end = wb.getStartColumnformule();//StartColumnformule;
+				// nombre de cellule comportant les formule de calcul à utiliser pou un bénficiaire
+				int myOffset = wb.getOffsetColumn();
+				// on lit les infos d'entête pour les infos beneficiares.
+				wb.setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, 0);
+				
+				/*
+				 * lectures des entêtes de colonne de calcul pour cahque ligne de beneficiares 
+				 * 
+				 */
+				// numéro de colonnes de début des calculs beneficiaires
+				start = wb.getStartColumnformule()+1;
+				// numéro de colonnes de fin des calculs beneficiaires
+				end = wb.getEndColumnFormule();
+
+				for ( myIterator = 1; myIterator <= nbmodule; myIterator++) {
+					wb.setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, myOffset);
+				}
+				
+				/*
+				 * on recupére la liste des beneficiaires
+				 */
+				
+				
+				wb.setCountbeneficiaire(resultdistinct.size());
+				monitor.setTaskName("Processing beneficiaries.");
+
+				monitor.subTask("Processing beneficiaries " + wb.getCurrentbeneficiaire() + " of "+  wb.getCountbeneficiaire() + "...");
+				monitor.worked(1);
+				
+			/*
+			 * pour chaque beneficiaires on génére les formules de calculs
+			 */
+				
+				// on se positionne sur la ligne 5 de la feuille de calcul 
+				// ATTENTION LA NUMEROTATION DES LIGNES COMMENCE A ZERO
+				
+				introw = 4;
+				wb.setCurrentbeneficiaire(0);
+				Modul modul = new Modul();
+				for (beneficiaries rs : resultdistinct)
+				{
+					wb.setCurrentbeneficiaire(wb.getCurrentbeneficiaire()+1);
+					monitor.subTask("Processing beneficiaries "+rs.getFirstname()+" " +rs.getName()+ " : "+ wb.getCurrentbeneficiaire() + " of "+  wb.getCountbeneficiaire() + "...");
+					row = spreadsheet.createRow(introw);
+					SXSSFCell cell = null;
+					int j = 0;
+					// position Colonne A
+					
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getPositioncrew());
+
+					// Name Colonne B
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getName());
+					// first name Colonne C
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getFirstname());
+					// structure name vessel Colonne D
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getStructurename());
+					// crew manning agency Colonne
+					j++;
+					// periode de couverture Colonne E
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getPeriodeinsurance());
+					// Single Ou Family Colonne F
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getFamilycovered());
+					// Nationalité Colonne G
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getNationality());
+					// Pays Colonne H
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getCountry());
+					// Nbre d'enfant Colonne I
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getChildren());
+					// Debut de mouvement Colonne J
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getStartmovement());
+					CellStyle cellStyle  = newworkbook.createCellStyle();
+					cellStyle.setDataFormat(HSSFDataFormat.getBuiltinFormat("m/d/yy"));
+					cell.setCellStyle(cellStyle);
+					
+					
+					// Fin de mouvement Colonne K
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getEndmovement());
+					cell.setCellStyle(cellStyle);
+					// Salaire_Currency Colonne L
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getSalarycurrency());
+
+					// Nbre de mois Colonne M
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getMois());
+
+					// Salaire Mensuel Colonne N
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getMonthlysalary());
+
+					// nbre de jour Colonne O
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getJour());
+
+					// TO_INVOICE Colonne P
+					j++;
+					cell = row.createCell(j);
+					cell.setCellValue(rs.getToinvoice());
+					wb.setXldformuleaggaregate("");
+					// On traite les modules. on repete les cellules de formule pour le nombre de module possible.
+					for (int i = 1; i <= nbmodule; i++) {
+					// on regupére certaine information du module en fonction des infos 
+					//du nom de la company, du nom du module, du nom de la formule et de la couverure familliale
+						Method fieldGetter = null;
+						try {
+							fieldGetter = rs.getClass().getMethod("getCompany"+i);
+						} catch (NoSuchMethodException | SecurityException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						String fCompany = "";
+						try {
+							if ( fieldGetter.invoke(rs) !=null ){
+								fCompany = fieldGetter.invoke(rs).toString();
+							}
+						} catch (IllegalAccessException | IllegalArgumentException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						
+						try {
+							
+							fieldGetter = rs.getClass().getMethod("getFormule"+i);
+						} catch (NoSuchMethodException | SecurityException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						String fFormule = "";
+						try {
+							
+							if (fieldGetter.invoke(rs)!= null) {
+								fFormule = fieldGetter.invoke(rs).toString();
+							}
+							
+							
+						} catch (IllegalAccessException | IllegalArgumentException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						
+						try {
+							fieldGetter = rs.getClass().getMethod("getFormulename"+i);
+						} catch (NoSuchMethodException | SecurityException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						String fFormulename = "";
+						try {
+							if (fieldGetter.invoke(rs)!=null) {
+								fFormulename = fieldGetter.invoke(rs).toString();
+							}
+						} catch (IllegalAccessException | IllegalArgumentException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+
+						String fFamilycovered = rs.getFamilycovered();
+
+						modul = wb.getBenefits(lasession, fCompany, fFormule,fFormulename, fFamilycovered);
+						Float Amount;
+						try {
+							if( modul!=null) {
+								// en fonction du mode de calcul on recupére la valeur de 
+								Amount=Float.parseFloat(modul.getModulprice());
+							}
+							else { Amount= 0f;}
+							
+						} catch (NumberFormatException e) {
+							// TODO Auto-generated catch block
+							//e.printStackTrace();
+							 Amount= 0f;
+						}
+						// il faut recupérer les aggregate. 
+						//si la valeur est différente de zéro on prend la valeur saisie sion on prend la valeur calculée.
+
+//						String aggregate =readaggregate(  rs.getString("COMPANY" + i), rs.getString("FORMULE" + i), rs.getString("formule_name" + i), rs.getString("police_number"+i) );
+						
+						String aggregate = wb.readaggregate(lasession,  rs.getCompany1(), rs.getFormule1(), rs.getFormulename1(), rs.getPolicenumber1() );
+						
+						if (modul != null) {
+							result = wb.readformula(lasession,modul.getCalculmode(), 1);
+							wb.setFormula(introw, result, newworkbook, row, i, modul,aggregate);
+							// on vient de positionner les forumles pour un beneficiaires.
+							// on ajoute les aggegate.
+							// on determine la colonne de la cellule 
+						}
+					}
+					monitor.worked(1);
+					j=(wb.getStartColumnformule()+(wb.getOffsetColumn()*nbmodule));
+					cell = row.createCell(j);
+					
+					wb.setXldformuleaggaregate( wb.getXldformuleaggaregate().substring(0,wb.getXldformuleaggaregate().length()-1));
+					//xldformuleaggaregate=xldformuleaggaregate.substring(0, xldformuleaggaregate.length()-1);
+					logger.info(wb.getXldformuleaggaregate());
+					cell.setCellFormula(wb.getXldformuleaggaregate());
+					lastcellule=cell;
+					if (introw==4) {
+					 firstcellul=cell;	
+					 addressfirstcell=""+firstcellul.getAddress();
+					 
+					}
+					
+
+	                // Check if the user pressed "cancel"
+	                if(monitor.isCanceled())
+	                {
+	                    monitor.done();
+	                    return;
+	                }
+	                
+					introw++;		
+				}
+				introw++;	
+				row = spreadsheet.createRow(introw);
+				int j=0;
+				SXSSFCell cell = null;
+				cell = row.createCell(j);
+				cell.setCellValue("TOTAL :");
+				
+				j++;
+				cell = row.createCell(j);
+				String lasomme = "SUM("+addressfirstcell+":"+lastcellule.getAddress()+")";
+				cell.setCellFormula(lasomme);
+ 
+				// Flushed last line 
+				try {
+					((SXSSFSheet)spreadsheet).flushRows(0);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				//Cmlose the db session
+				lasession.close();
+				// Write the finale file
+				FileOutputStream out;
+
+				try {
+					out = new FileOutputStream(new File(filepath));
+					newworkbook.write(out);
+					out.close();
+					newworkbook.dispose();
+				} catch (FileNotFoundException e) {
+					newworkbook.dispose();
+					e.printStackTrace();
+				} catch (IOException e) {
+					newworkbook.dispose();
+					e.printStackTrace();
+				}
+
+				logger.info("DONE ! setBeneficiaire");
+
+			 
+			 
+			 
+			 monitor.done();
+		}
+		
+	}
 
 }
