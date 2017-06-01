@@ -221,8 +221,7 @@ public class Actionuser {
 		// Get distinct only
         listaggDistinct = listagg.stream().distinct().collect(Collectors.toList());
         listnotnull = listaggDistinct.stream().filter(c -> c.getCompany()!= null && !c.getCompany().equals("") ).collect(Collectors.toList());
-//		Set<LimitAggCsv> setWithUniqueValues = new HashSet<LimitAggCsv>(listagg);
-//		listaggDistinct= new ArrayList<>(setWithUniqueValues);
+
 		
 		return listnotnull;
 	}

@@ -67,7 +67,7 @@ public class Tools {
 				}
 			}
 		}
-//		logger.info("Formule sortante : " + formule);
+
 		return formule;
 
 	}

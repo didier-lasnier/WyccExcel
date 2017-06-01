@@ -631,6 +631,6 @@ public class beneficiaries {
 	public void setTotalamountinsured8(String totalamountinsured8) {
 		this.totalamountinsured8 = totalamountinsured8;
 	}
-
+//
 	
 }

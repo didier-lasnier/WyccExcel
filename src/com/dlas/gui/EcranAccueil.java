@@ -70,7 +70,7 @@ import org.eclipse.swt.widgets.Menu;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 
-
+//
 
 public class EcranAccueil {
 	static  EcranAccueil window = new EcranAccueil();

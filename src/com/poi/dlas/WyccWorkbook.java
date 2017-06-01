@@ -1102,10 +1102,7 @@ public class WyccWorkbook  extends JPanel {
 		query.setMaxResults(1);
 		Modul modul = (Modul) query.uniqueResult();
 		lasession.getTransaction().commit();
-//		logger.info("modulfournisseur : " + modulFournisseur);
-//		logger.info("modullabel : " + modulLabel);
-//		logger.info("modulcategory : " + modulCategory);
-//		logger.info("modulscope : " + modulscope);
+
 		return modul;
 	}
 	
