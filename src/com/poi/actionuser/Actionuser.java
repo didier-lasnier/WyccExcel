@@ -100,6 +100,8 @@ public class Actionuser {
 			
 			logger.info("read csv file into from mvt");
 			lireCSV(theOpenfile, db);
+			
+			
 			stmt = db.connectiondb.prepareStatement("DELETE FROM MVT_NUM"); // db.connectiondb.createStatement();
 			logger.info("delete from mvt_num");
 			stmt.executeUpdate();

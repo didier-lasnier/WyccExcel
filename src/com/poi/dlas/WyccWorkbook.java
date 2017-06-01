@@ -19,6 +19,8 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -60,6 +62,7 @@ import com.dlas.dao.h2db;
 import com.dlas.dao.beneficiaries;
 import com.dlas.tools.Tools;
 import com.dlas.dao.Wycccell;
+import com.dlas.dao.LimitAggCsv;
 import com.dlas.dao.Modul;
 
 
@@ -594,7 +597,7 @@ public class WyccWorkbook  extends JPanel {
 		int introw = (int) resultdistinct.get(rowtoread);
 		// for (int introw : (List<Integer>) resultdistinct){
 		lasession.beginTransaction();
-		query = lasession.createQuery("from Wycccell where cellrow = :introw and calculmode = :calculmode order by cellrow asc");
+		query = lasession.createQuery("from Wycccell where cellrow = :introw and calculmode = :calculmode order by cellcolumn asc");
 		query.setParameter("introw", introw);
 		query.setString("calculmode", param);
 		List result = query.list();
@@ -1016,7 +1019,13 @@ public class WyccWorkbook  extends JPanel {
 			if (end<=17) {
 			style1.setFillForegroundColor(IndexedColors.AQUA.getIndex());
 			style1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-			} else if (event.getCellcolumn()>=26 && event.getCellcolumn()<=49) 
+			} else if (event.getCellcolumn()>=18 && event.getCellcolumn()<=25) 
+			{
+				style1.setFillForegroundColor(IndexedColors.GREEN.getIndex());
+				style1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+			}
+			
+			else if (event.getCellcolumn()>=26 && event.getCellcolumn()<=49) 
 			{
 				style1.setFillForegroundColor(IndexedColors.YELLOW.getIndex());
 				style1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
@@ -1049,16 +1058,11 @@ public class WyccWorkbook  extends JPanel {
 															// event.getPattern());
 			// style1.setIndention((short) event.getIndention());
 */    
-			if (myoffset==0 && event.getCellcolumn()<=17) {
-				goon=true;
-			} else if (myoffset>0 && event.getCellcolumn()<=17){
-				goon=false;
-			} else if (myoffset>0 && event.getCellcolumn()>17){
-				goon=true;
-			}
+
 			
 			String lavaleur = null;
-			if (goon) {
+			logger.info("Header Intervale ["+start+" - "+end+"] Colonne :"+event.getCellcolumn());
+			if (event.getCellcolumn()>=start && event.getCellcolumn()<=end) {
 				if ((event.getValeurcell() != null)) {
 	
 					lavaleur = event.getValeurcell();
@@ -1199,10 +1203,10 @@ public class WyccWorkbook  extends JPanel {
 		 
 		@Override
 		public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
-
-			 monitor.beginTask(message, workload);
+			    Tools mytools = new Tools();
+			    monitor.beginTask(message, workload);
 			 
-			 File directory = new File(rootdirDb);
+			    File directory = new File(rootdirDb);
 				String fileCharSep = System.getProperty("file.separator");
 				SXSSFCell lastcellule = null;
 				SXSSFCell firstcellul = null;
@@ -1216,20 +1220,42 @@ public class WyccWorkbook  extends JPanel {
 				// Lire le header
 				List result = readformula(lasession,"MONTHLY", 0);
 
+	
+				
+				//List<beneficiaries>	listdistinct = mytools.distinctList(resultdistinct,beneficiaries::getCompany1);
+				
+//				List<String> companys= resultdistinct.stream().map(beneficiaries::getCompany1).collect(Collectors.toList());
+				
+				List<String> newList = Stream.of(resultdistinct.stream().map(beneficiaries::getCompany1).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany1).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany2).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany3).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany4).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany5).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany6).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany7).collect(Collectors.toList()),
+						resultdistinct.stream().map(beneficiaries::getCompany8).collect(Collectors.toList())
+						).flatMap(x -> x.stream()).collect(Collectors.toList());
+				List<String> companys= newList.stream().distinct().collect(Collectors.toList());
+				companys=companys.stream().filter(line->!"".equals(line))
+											.filter(line->line!=null)
+						                  .collect(Collectors.toList());
+			
 				SXSSFWorkbook newworkbook = new SXSSFWorkbook(2);
 				
-				SXSSFSheet spreadsheet = newworkbook.createSheet();
-				newworkbook.createSheet("Total WYCC");
+				List<SXSSFSheet> arspreadsheet = null;
+				SXSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
+
+/*				arspreadsheet.add(spreadsheet);
+				SXSSFSheet spreadsheet1=null;
+				for (String spreadsheetstr :companys ){
+					spreadsheet1 = newworkbook.createSheet(spreadsheetstr);
+					arspreadsheet.add(spreadsheet1);	
+				}*/
 				
-				/*		
-				// 1. create named range for a single cell using areareference
-				Name namedCell = wb.createName();
-				namedCell.setNameName(cname);
-				String reference = sname+"!A1:A1"; // area reference
-				namedCell.setRefersToFormula(reference);
-				*/
 				int introw = 3;
 				SXSSFRow row = spreadsheet.createRow(introw);
+				
 				/*
 				 * lectures des entêtes de colonnes
 				 * 
@@ -1251,7 +1277,7 @@ public class WyccWorkbook  extends JPanel {
 				 * 
 				 */
 				// numéro de colonnes de début des calculs beneficiaires
-				start = wb.getStartColumnformule();;
+				start = wb.getStartColumnformule()+1;
 				// numéro de colonnes de fin des calculs beneficiaires
 				end = wb.getEndColumnFormule();
 

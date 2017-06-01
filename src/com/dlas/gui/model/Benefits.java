@@ -49,12 +49,6 @@ public class Benefits extends AbstractModelObject {
 					window.setListCsv(a.getcsvfile(selected));
 					//on construit une collections avec les données des companies 
 					List<LimitAggCsv>	listviewer=  b.readAggregate(window.getListCsv());
-/*					List<LimitAggCsv>	listdistinct =listviewer.stream()
-													.filter( distinctByKey(p -> p.getPolicynumber()))
-													.filter( distinctByKey(p -> p.getFormula()))
-													.filter( distinctByKey(p -> p.getFormulename()))
-														.filter( distinctByKey(p -> p.getCompany()) )
-														.collect(Collectors.toList());*/
 					List<LimitAggCsv>	listdistinct	= distinctList(listviewer,LimitAggCsv::getPolicynumber,LimitAggCsv::getFormula,LimitAggCsv::getFormulename,LimitAggCsv::getCompany);
 					if (false) {
 
@@ -95,6 +89,7 @@ public class Benefits extends AbstractModelObject {
 	public List getBenefits(){
 		return m_benefits;
 	}
+	
 	public static <T> Predicate<T> distinctByKey(Function<? super T, Object> keyExtractor) 
     {
         Map<Object, Boolean> map = new ConcurrentHashMap<>();
