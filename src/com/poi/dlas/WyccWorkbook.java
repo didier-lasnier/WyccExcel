@@ -40,6 +40,7 @@ import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Name;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.xmlbeans.XmlException;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -1110,21 +1111,6 @@ public class WyccWorkbook  extends JPanel {
 
 		  Pattern p = Pattern.compile(paternregex) ; //("([$A-Z]+)([$0-9]+)") ;  		   
 		   String s = inFormule;// "=(SI(BV26>(2011/12);2011/12;BV26)*0)+(SI(BV26>(2011/12);2011/12;BV26)*0)+(SI(EA26>(2012/12);2012/12;EA26)*0)+(SI(EA26>(2012/12);2012/12;EA26)*0)+(SI(GF26>(2003/12);2003/12;GF26)*0,501)+(SI(IK26>(2004/12);2004/12;IK26)*0,1253)+(SI(KP26>(2005/12);2005/12;KP26)*0,0619)+(SI(MU26>(2006/12);2006/12;MU26)*0,2108)+(SI(OZ26>(2007/12);2007/12;OZ26)*0,4525)+(SI(RE26>(2008/12);2008/12;RE26)*0,9044)" ;  
-//		   Matcher m = p.matcher(s) ;
-//		   StringBuffer sb =  new StringBuffer() ; 
-//		    while (m.find()) {
-//		       
-//		       Pattern p1 = Pattern.compile(subpaternregex) ;  
-//		       Matcher m1 = p1.matcher(m.group()) ;
-//		       StringBuffer sb1 =  new StringBuffer() ; 
-//		       while (m1.find()) {
-//		    	   m1.appendReplacement(sb1,"%d") ; 
-//		       }
-//		       m1.appendTail(sb1) ;
-//		       m.appendReplacement(sb,sb1.toString()) ; 
-//		   }
-//		    m.appendTail(sb) ;
-		    
 			   
 //			   String s =  "(SI(BV26>(2011/12);2011/12;BV26)*0)+(SI(BV26>(2011/12);2011/12;BV26)*0)+(SI(EA26>(2012/12);2012/12;EA26)*0)+(SI(EA26>(2012/12);2012/12;EA26)*0)+(SI(GF26>(2003/12);2003/12;GF26)*0,501)+(SI(IK26>(2004/12);2004/12;IK26)*0,1253)+(SI(KP26>(2005/12);2005/12;KP26)*0,0619)+(SI(MU26>(2006/12);2006/12;MU26)*0,2108)+(SI(OZ26>(2007/12);2007/12;OZ26)*0,4525)+(SI(RE26>(2008/12);2008/12;RE26)*0,9044)" ;  
 //		       String s = "AX5/12*$Q$5";
@@ -1240,10 +1226,11 @@ public class WyccWorkbook  extends JPanel {
 			
 				SXSSFWorkbook newworkbook = new SXSSFWorkbook(2);
 				
-				List<SXSSFSheet> arspreadsheet = null;
+				List<SXSSFSheet> arspreadsheet = null ;
 				SXSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
 
-/*				arspreadsheet.add(spreadsheet);
+				/*arspreadsheet.add(spreadsheet);
+				
 				SXSSFSheet spreadsheet1=null;
 				for (String spreadsheetstr :companys ){
 					spreadsheet1 = newworkbook.createSheet(spreadsheetstr);
@@ -1512,7 +1499,11 @@ public class WyccWorkbook  extends JPanel {
 				cell = row.createCell(j);
 				String lasomme = "SUM("+addressfirstcell+":"+lastcellule.getAddress()+")";
 				cell.setCellFormula(lasomme);
- 
+				
+				Name namedCell = newworkbook.createName();
+				namedCell.setNameName("Total");
+				String reference = "'Total WYCC'"+"!"+cell.getAddress(); // area reference
+				namedCell.setRefersToFormula(reference);
 				// Flushed last line 
 				try {
 					((SXSSFSheet)spreadsheet).flushRows(0);
@@ -1520,6 +1511,8 @@ public class WyccWorkbook  extends JPanel {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+				// 1. create named range for a single cell using areareference
+				
 				//Cmlose the db session
 				lasession.close();
 				// Write the finale file
