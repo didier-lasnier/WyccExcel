@@ -18430,3 +18430,1061 @@ org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqld
 [2017-06-01 22:26:39,021]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV39+ - ajout : EA39
 [2017-06-01 22:26:39,036]-[ModalContext] INFO  Wycc  - BV39+EA39
 [2017-06-01 22:26:39,429]-[ModalContext] INFO  Wycc  - DONE ! setBeneficiaire
+[2017-06-07 19:12:24,527]-[ModalContext] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-07 19:12:24,559]-[ModalContext] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-07 19:12:24,990]-[ModalContext] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-07 19:12:25,144]-[ModalContext] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-07 19:12:25,154]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-07 19:12:25,154]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-07 19:12:25,155]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-07 19:12:25,160]-[ModalContext] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-07 19:12:25,610]-[ModalContext] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-07 19:12:39,065]-[ModalContext] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-07 19:12:40,248]-[ModalContext] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-07 19:12:40,748]-[ModalContext] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-07 19:12:40,750]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-07 19:12:40,751]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-07 19:12:40,751]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-07 19:12:40,752]-[ModalContext] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-07 19:12:40,754]-[ModalContext] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-07 19:12:40,828]-[ModalContext] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-07 19:12:43,462]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :0
+[2017-06-07 19:12:43,468]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :1
+[2017-06-07 19:12:43,471]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :2
+[2017-06-07 19:12:43,473]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :3
+[2017-06-07 19:12:43,476]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :4
+[2017-06-07 19:12:43,478]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :5
+[2017-06-07 19:12:43,482]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :6
+[2017-06-07 19:12:43,485]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :7
+[2017-06-07 19:12:43,487]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :8
+[2017-06-07 19:12:43,489]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :9
+[2017-06-07 19:12:43,491]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :10
+[2017-06-07 19:12:43,493]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :11
+[2017-06-07 19:12:43,495]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :12
+[2017-06-07 19:12:43,501]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :13
+[2017-06-07 19:12:43,503]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :14
+[2017-06-07 19:12:43,505]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :15
+[2017-06-07 19:12:43,507]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :16
+[2017-06-07 19:12:43,508]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:12:43,511]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:12:43,514]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:12:43,516]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:12:43,519]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:12:43,524]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:12:43,532]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:12:43,535]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:12:43,538]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:12:43,540]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:12:43,543]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:12:43,545]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:12:43,548]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:12:43,550]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:12:43,552]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:12:43,554]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:12:43,557]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:12:43,558]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:12:43,560]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:12:43,562]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:12:43,565]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:12:43,567]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:12:43,569]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:12:43,571]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:12:43,573]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:12:43,575]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:12:43,577]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:12:43,579]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:12:43,581]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:12:43,583]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:12:43,585]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:12:43,587]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:12:43,589]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:12:43,591]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:12:43,593]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:12:43,596]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:12:43,598]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:12:43,601]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:12:43,603]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:12:43,605]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:12:43,608]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:12:43,610]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:12:43,612]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:12:43,614]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:12:43,623]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:12:43,626]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:12:43,628]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:12:43,630]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:12:43,632]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:12:43,641]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:12:43,643]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:12:43,647]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:12:43,650]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:12:43,653]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:12:43,655]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:12:43,660]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:12:43,662]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:12:43,663]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:12:43,664]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:12:43,665]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:12:43,666]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:12:43,667]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:12:43,669]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:12:43,671]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:12:43,673]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:12:43,677]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:12:43,678]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:12:43,680]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:12:43,682]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:12:43,683]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:12:43,687]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:12:43,694]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:12:43,696]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:12:43,697]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:12:43,698]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:12:43,700]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:12:43,703]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:12:43,704]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:12:43,706]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:12:43,708]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:12:43,710]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:12:43,711]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:12:43,713]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:12:43,714]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:12:43,714]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:12:43,715]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:12:43,719]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:12:43,722]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:12:43,724]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:12:43,726]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:12:43,728]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:12:43,730]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:12:43,732]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:12:43,734]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:12:43,735]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:12:43,737]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:12:43,739]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:12:43,740]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:12:43,742]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:12:43,743]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:12:43,745]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:12:43,746]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:12:43,748]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:12:43,752]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:12:43,776]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:12:43,781]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:12:43,784]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:12:43,791]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:12:43,795]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:12:43,796]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:12:43,798]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:12:43,800]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:12:43,801]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:12:43,804]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:12:43,805]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:12:43,806]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:12:43,807]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:12:43,808]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:12:43,810]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:12:43,812]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:12:43,813]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:12:43,814]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:12:43,815]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:12:43,816]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:12:43,818]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:12:43,819]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:12:43,820]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:12:43,821]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:12:43,823]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:12:43,824]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:12:43,825]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:12:43,827]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:12:43,828]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:12:43,829]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:12:43,843]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:12:43,845]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:12:43,846]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:12:43,848]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:12:43,849]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:12:43,854]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:12:43,856]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:12:43,857]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:12:43,859]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:12:43,860]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:12:43,862]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:12:43,863]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:12:43,865]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:12:43,866]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:12:43,868]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:12:43,869]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:12:43,870]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:12:43,872]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:12:43,874]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:12:43,878]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:12:43,880]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:12:43,885]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:12:43,887]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:12:43,888]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:12:43,890]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:12:43,891]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:12:43,893]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:12:43,895]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:12:43,897]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:12:43,899]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:12:43,900]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:12:43,901]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:12:43,902]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:12:43,903]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:12:43,904]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:12:43,905]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:12:43,906]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:12:43,907]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:12:43,908]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:12:43,909]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:12:43,910]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:12:43,911]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:12:43,912]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:12:43,914]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:12:43,915]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:12:43,916]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:12:43,918]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:12:43,920]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:12:43,921]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:12:43,922]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:12:43,923]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:12:43,925]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:12:43,927]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:12:43,928]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:12:43,929]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:12:43,931]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:12:43,932]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:12:43,934]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:12:43,935]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:12:43,936]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:12:43,937]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:12:43,939]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:12:43,940]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:12:43,941]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:12:43,960]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:12:43,969]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:12:43,971]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:12:43,973]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:12:43,974]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:12:43,975]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:12:43,976]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:12:43,978]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:12:43,980]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:12:43,981]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:12:43,985]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:12:43,987]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:12:43,989]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:12:43,990]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:12:43,993]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:12:43,994]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:12:43,996]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:12:43,997]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:12:43,998]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:12:44,000]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:12:44,001]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:12:44,002]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:12:44,003]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:12:44,004]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:12:44,006]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:12:44,007]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:12:44,008]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:12:44,009]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:12:44,010]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:12:44,011]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:12:44,012]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:12:44,014]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:12:44,015]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:12:44,016]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:12:44,018]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:12:44,019]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:12:44,021]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:12:44,023]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:12:44,025]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:12:44,027]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:12:44,029]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:12:44,031]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:12:44,033]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:12:44,034]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:12:44,035]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:12:44,037]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:12:44,043]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:12:44,044]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:12:44,046]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:12:44,047]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:12:44,048]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:12:44,051]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:12:44,053]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:12:44,054]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:12:44,055]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:12:44,057]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:12:44,058]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:12:44,060]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:12:44,061]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:12:44,062]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:12:44,063]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:12:44,065]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:12:44,066]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:12:44,067]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:12:44,069]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:12:44,070]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:12:44,071]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:12:44,072]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:12:44,073]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:12:44,075]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:12:44,076]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:12:44,078]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:12:44,079]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:12:44,082]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:12:44,084]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:12:44,085]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:12:44,087]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:12:44,088]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:12:44,089]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:12:44,090]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:12:44,091]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:12:44,092]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:12:44,093]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:12:44,095]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:12:44,096]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:12:44,097]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:12:44,099]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:12:44,100]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:12:44,101]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:12:44,102]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:12:44,104]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:12:44,105]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:12:44,106]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:12:44,107]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:12:44,108]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:12:44,109]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:12:44,111]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:12:44,112]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:12:44,113]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:12:44,114]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:12:44,115]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:12:44,116]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:12:44,117]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:12:44,118]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:12:44,119]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:12:44,120]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:12:44,121]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:12:44,122]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:12:44,123]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:12:44,124]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:12:44,126]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:12:44,128]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:12:44,129]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:12:44,130]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:12:44,131]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:12:44,132]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:12:44,133]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:12:44,134]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:12:44,136]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:12:44,136]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:12:44,137]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:12:44,139]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:12:44,141]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:12:44,141]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:12:44,142]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:12:44,142]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:12:44,143]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:12:44,144]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:12:44,144]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:12:44,145]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:12:44,147]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:12:44,148]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:12:44,149]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:12:44,151]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:12:44,152]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:12:44,153]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:12:44,154]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:12:44,154]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:12:44,155]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:12:44,156]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:12:44,157]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:12:44,158]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:12:44,162]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:12:44,163]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:12:44,164]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:12:44,165]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:12:44,166]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:12:44,168]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:12:44,169]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:12:44,170]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:12:44,171]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:12:44,172]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:12:44,173]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:12:44,175]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:12:44,176]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:12:44,177]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:12:44,178]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:12:44,180]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:12:44,181]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:12:44,182]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:12:44,186]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:12:44,187]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:12:44,188]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:12:44,189]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:12:44,190]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:12:44,195]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:12:44,201]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:12:44,202]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:12:44,203]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:12:44,204]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:12:44,206]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:12:44,207]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:12:44,208]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:12:44,210]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:12:44,212]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:12:44,214]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:12:44,215]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:12:44,216]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:12:44,218]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:12:44,221]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:12:44,222]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:12:44,223]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:12:44,224]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:12:44,225]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:12:44,226]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:12:44,227]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:12:44,228]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:12:44,229]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:12:44,229]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:12:44,229]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:12:44,230]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:12:44,230]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:12:44,231]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:12:44,232]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:12:44,233]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:12:44,233]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:12:44,234]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:12:44,234]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:12:44,235]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:12:44,235]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:12:44,236]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:12:44,236]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:12:44,238]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:12:44,239]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:12:44,240]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:12:44,240]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:12:44,241]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:12:44,242]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:12:44,244]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:12:44,245]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:12:44,246]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:12:44,247]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:12:44,248]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:12:44,249]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:12:44,251]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:12:44,252]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:12:44,253]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:12:44,254]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:12:44,255]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:12:44,256]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:12:44,257]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:12:44,259]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:12:44,260]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:12:44,261]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:12:44,262]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:12:44,263]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:12:44,265]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:12:44,267]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:12:44,269]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:12:44,270]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:12:44,271]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:12:44,272]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:12:44,273]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:12:44,274]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:12:44,275]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:12:44,277]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:12:44,278]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:12:44,279]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:12:44,280]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:12:44,281]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:12:44,282]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:12:44,283]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:17:27,214]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV5
+[2017-06-07 19:18:18,431]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV5+ - ajout : EA5
+[2017-06-07 19:18:19,334]-[ModalContext] INFO  Wycc  - BV5+EA5
+[2017-06-07 19:27:02,325]-[ModalContext] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-07 19:27:02,329]-[ModalContext] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-07 19:27:02,576]-[ModalContext] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-07 19:27:02,657]-[ModalContext] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-07 19:27:02,662]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-07 19:27:02,662]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-07 19:27:02,663]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-07 19:27:02,665]-[ModalContext] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-07 19:27:02,939]-[ModalContext] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-07 19:27:15,560]-[ModalContext] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-07 19:27:16,164]-[ModalContext] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-07 19:27:16,577]-[ModalContext] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-07 19:27:16,578]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-07 19:27:16,578]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-07 19:27:16,579]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-07 19:27:16,579]-[ModalContext] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-07 19:27:16,583]-[ModalContext] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-07 19:27:16,642]-[ModalContext] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-07 19:27:18,112]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :0
+[2017-06-07 19:27:18,116]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :1
+[2017-06-07 19:27:18,120]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :2
+[2017-06-07 19:27:18,123]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :3
+[2017-06-07 19:27:18,125]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :4
+[2017-06-07 19:27:18,128]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :5
+[2017-06-07 19:27:18,133]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :6
+[2017-06-07 19:27:18,136]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :7
+[2017-06-07 19:27:18,138]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :8
+[2017-06-07 19:27:18,140]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :9
+[2017-06-07 19:27:18,142]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :10
+[2017-06-07 19:27:18,144]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :11
+[2017-06-07 19:27:18,145]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :12
+[2017-06-07 19:27:18,149]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :13
+[2017-06-07 19:27:18,153]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :14
+[2017-06-07 19:27:18,155]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :15
+[2017-06-07 19:27:18,156]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :16
+[2017-06-07 19:27:18,159]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:27:18,164]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:27:18,167]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:27:18,169]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:27:18,172]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:27:18,177]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:27:18,179]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:27:18,183]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:27:18,186]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:27:18,188]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:27:18,191]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:27:18,194]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:27:18,196]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:27:18,199]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:27:18,201]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:27:18,203]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:27:18,205]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:27:18,207]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:27:18,209]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:27:18,211]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:27:18,213]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:27:18,215]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:27:18,218]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:27:18,220]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:27:18,222]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:27:18,223]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:27:18,225]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:27:18,228]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:27:18,229]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:27:18,232]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:27:18,234]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:27:18,239]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:27:18,252]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:27:18,258]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:27:18,260]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:27:18,262]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:27:18,265]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:27:18,268]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:27:18,270]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:27:18,276]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:27:18,281]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:27:18,284]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:27:18,286]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:27:18,288]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:27:18,290]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:27:18,293]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:27:18,309]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:27:18,311]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:27:18,316]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:27:18,317]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:27:18,319]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:27:18,321]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:27:18,322]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:27:18,324]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:27:18,328]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:27:18,331]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:27:18,333]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:27:18,335]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:27:18,336]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:27:18,338]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:27:18,339]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:27:18,340]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:27:18,341]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:27:18,343]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:27:18,344]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:27:18,346]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:27:18,349]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:27:18,351]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:27:18,352]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:27:18,354]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:27:18,356]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:27:18,358]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:27:18,359]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:27:18,361]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:27:18,362]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:27:18,364]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:27:18,365]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:27:18,366]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:27:18,368]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:27:18,369]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:27:18,370]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:27:18,371]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:27:18,372]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:27:18,373]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:27:18,374]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:27:18,376]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:27:18,377]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:27:18,382]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:27:18,384]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:27:18,386]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:27:18,388]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:27:18,391]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:27:18,393]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:27:18,395]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:27:18,397]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:27:18,400]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:27:18,402]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:27:18,404]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:27:18,406]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:27:18,407]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:27:18,409]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:27:18,411]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:27:18,413]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:27:18,414]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:27:18,416]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:27:18,418]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:27:18,418]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:27:18,420]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:27:18,429]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:27:18,434]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:27:18,437]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:27:18,439]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:27:18,442]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:27:18,443]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:27:18,444]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:27:18,445]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:27:18,447]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:27:18,448]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:27:18,450]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:27:18,451]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:27:18,452]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:27:18,454]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:27:18,455]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:27:18,456]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:27:18,457]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:27:18,459]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:27:18,460]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:27:18,461]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:27:18,463]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:27:18,465]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:27:18,466]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:27:18,467]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:27:18,468]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:27:18,469]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:27:18,470]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:27:18,474]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:27:18,476]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:27:18,477]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:27:18,478]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:27:18,479]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:27:18,481]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:27:18,482]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:27:18,484]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:27:18,485]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:27:18,487]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:27:18,488]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:27:18,489]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:27:18,491]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:27:18,492]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:27:18,495]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:27:18,498]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:27:18,500]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:27:18,502]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:27:18,503]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:27:18,504]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:27:18,506]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:27:18,512]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:27:18,517]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:27:18,519]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:27:18,520]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:27:18,522]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:27:18,523]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:27:18,523]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:27:18,524]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:27:18,525]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:27:18,526]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:27:18,526]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:27:18,527]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:27:18,527]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:27:18,529]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:27:18,530]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:27:18,531]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:27:18,532]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:27:18,532]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:27:18,534]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:27:18,535]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:27:18,536]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:27:18,537]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:27:18,538]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:27:18,539]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:27:18,540]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:27:18,541]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:27:18,542]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:27:18,543]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:27:18,544]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:27:18,545]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:27:18,546]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:27:18,547]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:27:18,549]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:27:18,550]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:27:18,551]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:27:18,552]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:27:18,553]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:27:18,555]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:27:18,556]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:27:18,557]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:27:18,558]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:27:18,559]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:27:18,561]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:27:18,562]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:27:18,563]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:27:18,565]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:27:18,566]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:27:18,567]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:27:18,569]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:27:18,570]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:27:18,572]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:27:18,573]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:27:18,574]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:27:18,575]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:27:18,577]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:27:18,579]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:27:18,579]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:27:18,581]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:27:18,584]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:27:18,585]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:27:18,586]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:27:18,588]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:27:18,589]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:27:18,590]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:27:18,591]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:27:18,595]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:27:18,596]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:27:18,597]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:27:18,598]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:27:18,600]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:27:18,601]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:27:18,602]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:27:18,603]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:27:18,604]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:27:18,605]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:27:18,606]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:27:18,607]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:27:18,608]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:27:18,609]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:27:18,611]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:27:18,612]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:27:18,613]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:27:18,615]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:27:18,616]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:27:18,617]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:27:18,618]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:27:18,620]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:27:18,621]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:27:18,622]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:27:18,623]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:27:18,624]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:27:18,625]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:27:18,626]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:27:18,627]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:27:18,628]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:27:18,629]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:27:18,632]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:27:18,634]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:27:18,635]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:27:18,637]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:27:18,638]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:27:18,640]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:27:18,646]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:27:18,649]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:27:18,651]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:27:18,652]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:27:18,653]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:27:18,654]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:27:18,655]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:27:18,656]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:27:18,657]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:27:18,658]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:27:18,661]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:27:18,662]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:27:18,663]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:27:18,664]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:27:18,665]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:27:18,666]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:27:18,668]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:27:18,669]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:27:18,670]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:27:18,671]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:27:18,671]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:27:18,672]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:27:18,673]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:27:18,673]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:27:18,674]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:27:18,675]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:27:18,676]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:27:18,677]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:27:18,678]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:27:18,678]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:27:18,679]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:27:18,680]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:27:18,681]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:27:18,682]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:27:18,682]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:27:18,683]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:27:18,684]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:27:18,685]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:27:18,685]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:27:18,686]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:27:18,687]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:27:18,688]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:27:18,689]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:27:18,690]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:27:18,691]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:27:18,692]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:27:18,693]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:27:18,694]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:27:18,695]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:27:18,696]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:27:18,697]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:27:18,698]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:27:18,699]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:27:18,701]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:27:18,702]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:27:18,703]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:27:18,713]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:27:18,715]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:27:18,716]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:27:18,718]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:27:18,719]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:27:18,721]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:27:18,722]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:27:18,723]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:27:18,724]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:27:18,725]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:27:18,726]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:27:18,728]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:27:18,728]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:27:18,729]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:27:18,730]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:27:18,732]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:27:18,733]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:27:18,734]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:27:18,735]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:27:18,735]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:27:18,736]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:27:18,736]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:27:18,737]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:27:18,738]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:27:18,741]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:27:18,742]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:27:18,743]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:27:18,745]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:27:18,745]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:27:18,746]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:27:18,748]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:27:18,750]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:27:18,750]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:27:18,751]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:27:18,752]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:27:18,753]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:27:18,754]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:27:18,755]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:27:18,756]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:27:18,756]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:27:18,757]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:27:18,757]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:27:18,758]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:27:18,759]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:27:18,760]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:27:18,761]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:27:18,761]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:27:18,761]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:27:18,762]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:27:18,763]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:27:18,764]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:27:18,768]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:27:18,769]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:27:18,770]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:27:18,771]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:27:18,773]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:27:18,774]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:27:18,775]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:27:18,776]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:27:18,778]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:27:18,779]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:27:18,780]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:27:18,782]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:27:18,783]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:27:18,784]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:27:18,785]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:27:18,787]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:27:18,790]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:27:18,791]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:27:18,792]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:27:18,794]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:27:18,795]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-07 19:27:18,797]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-07 19:27:18,801]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-07 19:27:18,802]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-07 19:27:18,802]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-07 19:27:18,803]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-07 19:27:18,804]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-07 19:27:18,805]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-07 19:27:18,806]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-07 19:27:18,806]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-07 19:27:18,807]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-07 19:27:18,808]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-07 19:27:18,810]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-07 19:27:18,810]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-07 19:27:18,811]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-07 19:27:18,812]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-07 19:27:18,813]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-07 19:27:18,814]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-07 19:27:18,815]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-07 19:27:18,816]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-07 19:27:18,817]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-07 19:27:18,818]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-07 19:27:18,819]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-07 19:27:18,820]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-07 19:27:18,820]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-07 19:27:18,821]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-07 19:27:18,822]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-07 19:27:18,823]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-07 19:27:18,823]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-07 19:27:18,824]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-07 19:27:18,825]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-07 19:27:18,826]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-07 19:27:18,826]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-07 19:27:18,827]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-07 19:27:18,827]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-07 19:27:18,828]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-07 19:27:18,828]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-07 19:27:18,829]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-07 19:27:18,830]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-07 19:27:18,830]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-07 19:27:18,831]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-07 19:27:18,833]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-07 19:27:18,833]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-07 19:27:18,834]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-07 19:27:18,835]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-07 19:27:18,836]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-07 19:27:18,836]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-07 19:27:18,837]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-07 19:27:18,838]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-07 19:27:18,838]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-07 19:27:18,839]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-07 19:27:18,840]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-07 19:27:18,840]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-07 19:27:18,840]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-07 19:27:18,841]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-07 19:27:19,230]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV5
+[2017-06-07 19:27:19,418]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV5+ - ajout : EA5
+[2017-06-07 19:27:19,467]-[ModalContext] INFO  Wycc  - BV5+EA5
+[2017-06-07 19:27:19,611]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV6
+[2017-06-07 19:27:19,704]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV6+ - ajout : EA6
+[2017-06-07 19:27:19,740]-[ModalContext] INFO  Wycc  - BV6+EA6
+[2017-06-07 19:27:19,863]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV7
+[2017-06-07 19:27:19,954]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV7+ - ajout : EA7
+[2017-06-07 19:27:19,981]-[ModalContext] INFO  Wycc  - BV7+EA7
+[2017-06-07 19:27:20,105]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV8
+[2017-06-07 19:27:20,170]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV8+ - ajout : EA8
+[2017-06-07 19:27:20,193]-[ModalContext] INFO  Wycc  - BV8+EA8
+[2017-06-07 19:27:20,278]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV9
+[2017-06-07 19:27:20,368]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV9+ - ajout : EA9
+[2017-06-07 19:27:20,388]-[ModalContext] INFO  Wycc  - BV9+EA9
+[2017-06-07 19:27:20,487]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV10
+[2017-06-07 19:27:20,578]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV10+ - ajout : EA10
+[2017-06-07 19:27:20,617]-[ModalContext] INFO  Wycc  - BV10+EA10
+[2017-06-07 19:27:20,705]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV11
+[2017-06-07 19:27:20,782]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV11+ - ajout : EA11
+[2017-06-07 19:27:20,805]-[ModalContext] INFO  Wycc  - BV11+EA11
+[2017-06-07 19:27:20,875]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV12
+[2017-06-07 19:27:20,953]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV12+ - ajout : EA12
+[2017-06-07 19:27:20,989]-[ModalContext] INFO  Wycc  - BV12+EA12
+[2017-06-07 19:27:21,053]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV13
+[2017-06-07 19:27:21,127]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV13+ - ajout : EA13
+[2017-06-07 19:27:21,148]-[ModalContext] INFO  Wycc  - BV13+EA13
+[2017-06-07 19:27:21,222]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV14
+[2017-06-07 19:27:21,303]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV14+ - ajout : EA14
+[2017-06-07 19:27:21,314]-[ModalContext] INFO  Wycc  - BV14+EA14
+[2017-06-07 19:27:21,390]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV15
+[2017-06-07 19:27:21,455]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV15+ - ajout : EA15
+[2017-06-07 19:27:21,477]-[ModalContext] INFO  Wycc  - BV15+EA15
+[2017-06-07 19:27:21,581]-[ModalContext] INFO  Wycc  - Iteration : 3 - Num col : 187 - Total :  - ajout : (if(GF16>(7/12),7/12,GF16)*0.97049)
+[2017-06-07 19:27:21,596]-[ModalContext] INFO  Wycc  - (if(GF16>(7/12),7/12,GF16)*0.97049)
+[2017-06-07 19:27:21,663]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV17
+[2017-06-07 19:27:21,714]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV17+ - ajout : EA17
+[2017-06-07 19:27:21,743]-[ModalContext] INFO  Wycc  - BV17+EA17
+[2017-06-07 19:27:21,787]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV18
+[2017-06-07 19:27:21,843]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV18+ - ajout : EA18
+[2017-06-07 19:27:21,861]-[ModalContext] INFO  Wycc  - BV18+EA18
+[2017-06-07 19:27:21,920]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV19
+[2017-06-07 19:27:22,042]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV19+ - ajout : EA19
+[2017-06-07 19:27:22,072]-[ModalContext] INFO  Wycc  - BV19+EA19
+[2017-06-07 19:27:22,196]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV20
+[2017-06-07 19:27:22,290]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV20+ - ajout : EA20
+[2017-06-07 19:27:22,326]-[ModalContext] INFO  Wycc  - BV20+EA20
+[2017-06-07 19:27:22,400]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV21
+[2017-06-07 19:27:22,477]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV21+ - ajout : EA21
+[2017-06-07 19:27:22,497]-[ModalContext] INFO  Wycc  - BV21+EA21
+[2017-06-07 19:27:22,576]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV22
+[2017-06-07 19:27:22,657]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV22+ - ajout : EA22
+[2017-06-07 19:27:22,670]-[ModalContext] INFO  Wycc  - BV22+EA22
+[2017-06-07 19:27:22,738]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV23
+[2017-06-07 19:27:22,806]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV23+ - ajout : EA23
+[2017-06-07 19:27:22,820]-[ModalContext] INFO  Wycc  - BV23+EA23
+[2017-06-07 19:27:22,867]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV24
+[2017-06-07 19:27:22,907]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV24+ - ajout : EA24
+[2017-06-07 19:27:22,926]-[ModalContext] INFO  Wycc  - BV24+EA24
+[2017-06-07 19:27:22,987]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV25
+[2017-06-07 19:27:23,052]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV25+ - ajout : EA25
+[2017-06-07 19:27:23,063]-[ModalContext] INFO  Wycc  - BV25+EA25
+[2017-06-07 19:27:23,135]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV26
+[2017-06-07 19:27:23,176]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV26+ - ajout : EA26
+[2017-06-07 19:27:23,185]-[ModalContext] INFO  Wycc  - BV26+EA26
+[2017-06-07 19:27:23,226]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV27
+[2017-06-07 19:27:23,272]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV27+ - ajout : EA27
+[2017-06-07 19:27:23,282]-[ModalContext] INFO  Wycc  - BV27+EA27
+[2017-06-07 19:27:23,338]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV28
+[2017-06-07 19:27:23,381]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV28+ - ajout : EA28
+[2017-06-07 19:27:23,399]-[ModalContext] INFO  Wycc  - BV28+EA28
+[2017-06-07 19:27:23,445]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV29
+[2017-06-07 19:27:23,497]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV29+ - ajout : EA29
+[2017-06-07 19:27:23,512]-[ModalContext] INFO  Wycc  - BV29+EA29
+[2017-06-07 19:27:23,574]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV30
+[2017-06-07 19:27:23,617]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV30+ - ajout : EA30
+[2017-06-07 19:27:23,639]-[ModalContext] INFO  Wycc  - BV30+EA30
+[2017-06-07 19:27:23,685]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV31
+[2017-06-07 19:27:23,740]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV31+ - ajout : EA31
+[2017-06-07 19:27:23,750]-[ModalContext] INFO  Wycc  - BV31+EA31
+[2017-06-07 19:27:23,806]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV32
+[2017-06-07 19:27:23,850]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV32+ - ajout : EA32
+[2017-06-07 19:27:23,870]-[ModalContext] INFO  Wycc  - BV32+EA32
+[2017-06-07 19:27:23,960]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV33
+[2017-06-07 19:27:24,012]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV33+ - ajout : EA33
+[2017-06-07 19:27:24,026]-[ModalContext] INFO  Wycc  - BV33+EA33
+[2017-06-07 19:27:24,065]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV34
+[2017-06-07 19:27:24,110]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV34+ - ajout : EA34
+[2017-06-07 19:27:24,122]-[ModalContext] INFO  Wycc  - BV34+EA34
+[2017-06-07 19:27:24,177]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV35
+[2017-06-07 19:27:24,264]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV35+ - ajout : EA35
+[2017-06-07 19:27:24,277]-[ModalContext] INFO  Wycc  - BV35+EA35
+[2017-06-07 19:27:24,324]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV36
+[2017-06-07 19:27:24,381]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV36+ - ajout : EA36
+[2017-06-07 19:27:24,399]-[ModalContext] INFO  Wycc  - BV36+EA36
+[2017-06-07 19:27:24,452]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV37
+[2017-06-07 19:27:24,504]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV37+ - ajout : EA37
+[2017-06-07 19:27:24,516]-[ModalContext] INFO  Wycc  - BV37+EA37
+[2017-06-07 19:27:24,556]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV38
+[2017-06-07 19:27:24,595]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV38+ - ajout : EA38
+[2017-06-07 19:27:24,604]-[ModalContext] INFO  Wycc  - BV38+EA38
+[2017-06-07 19:27:24,644]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV39
+[2017-06-07 19:27:24,683]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV39+ - ajout : EA39
+[2017-06-07 19:27:24,693]-[ModalContext] INFO  Wycc  - BV39+EA39
+[2017-06-07 19:27:25,063]-[ModalContext] INFO  Wycc  - DONE ! setBeneficiaire

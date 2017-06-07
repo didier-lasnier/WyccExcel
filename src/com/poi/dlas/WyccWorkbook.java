@@ -1153,7 +1153,7 @@ public class WyccWorkbook  extends JPanel {
 			   }
 			   m.appendTail(sb) ;
 			   String lafor= sb.toString();
-			   lafor=s.replace("§","$");
+			   lafor=lafor.replace("§","$");
 			 
 			   
 		return lafor;		
