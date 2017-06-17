@@ -15,6 +15,7 @@ import java.lang.reflect.Method;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -1226,16 +1227,16 @@ public class WyccWorkbook  extends JPanel {
 			
 				SXSSFWorkbook newworkbook = new SXSSFWorkbook(2);
 				
-				List<SXSSFSheet> arspreadsheet = null ;
+				List<SXSSFSheet> arspreadsheet =  new ArrayList<SXSSFSheet>() ;
 				SXSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
 
-				/*arspreadsheet.add(spreadsheet);
+				arspreadsheet.add(spreadsheet);
 				
-				SXSSFSheet spreadsheet1=null;
+				//SXSSFSheet spreadsheet1=null;
 				for (String spreadsheetstr :companys ){
-					spreadsheet1 = newworkbook.createSheet(spreadsheetstr);
-					arspreadsheet.add(spreadsheet1);	
-				}*/
+					//spreadsheet1 = newworkbook.createSheet(spreadsheetstr);
+					arspreadsheet.add(newworkbook.createSheet(spreadsheetstr));	
+				}
 				
 				int introw = 3;
 				SXSSFRow row = spreadsheet.createRow(introw);

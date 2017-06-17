@@ -60,6 +60,7 @@ import com.dlas.dao.BenefitDb;
 import com.dlas.gui.accueil.MenuAccueil;
 import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Companies;
+import com.dlas.windowmanager.WindowsManager;
 import com.poi.actionuser.Actionuser;
 import com.poi.actionuser.ReadFileXlsx;
 
@@ -67,12 +68,14 @@ import com.poi.actionuser.ReadFileXlsx;
 
 import com.dlas.gui.model.Benefits;
 import org.eclipse.swt.widgets.Menu;
+import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 
 //
 
 public class EcranAccueil {
+	
 	static  EcranAccueil window = new EcranAccueil();
 	private Button deleteCompanyButton;
 	private Button AggregateButton;
@@ -132,16 +135,50 @@ public class EcranAccueil {
 	}
 
 	public static void main(String[] args) {
-		//final String APP_NAME = "Wycc invoice";
-
-		
-		
+	     // ======================================================
+	     // Create the main Display object that represents the UI
+	     // subsystem and contains the single UI handling thread
+	     // ======================================================
+	    
 		Display.setAppName(APP_NAME);
-		Display display = new Display();
+		final Display display = Display.getDefault();
 		d=display;
-		shell = new Shell();
-		shell.setBackground(SWTResourceManager.getColor(255, 255, 255));
-		shell.setSize(638, 382);
+		 // ====================================================
+	     // create a shell for the main window from the Display
+	     // ====================================================
+	    shell = new Shell(display, SWT.CLOSE);
+	     // =====================
+	     // Set the Window Title
+	     // =====================
+	     shell.setText("Main Shell");
+	     
+	     // =============================================================
+	     // Register a listener for the Close event on the main Shell.
+	     // This disposes the Display which will cause the entire child
+	     // tree to dispose
+	     // =============================================================
+	     shell.addListener(SWT.Close, new Listener()
+	     {
+	        @Override
+	        public void handleEvent(Event event)
+	        {
+	        	MessageBox messageBox = new MessageBox(shell, SWT.ICON_QUESTION | SWT.YES | SWT.NO);					
+	    		messageBox.setMessage("Do you really want to exit? ");
+	    		messageBox.setText("Exiting Application");
+	    		int response = messageBox.open();
+	    		
+	    		if (response == SWT.YES){
+	    			shell.dispose();
+	    			d.dispose();
+	    			System.exit(0);
+	    		}
+
+	        }
+	     });
+	     
+	     
+		 shell.setBackground(SWTResourceManager.getColor(255, 255, 255));
+		 shell.setSize(638, 382);
 		/*
 		 *  On détermine le dossier d'execution du jar
 		 * 
@@ -656,6 +693,7 @@ public class EcranAccueil {
 			return super.doSet(observableValue, value);
 		}
 	}
+	
 	protected DataBindingContext initDataBindings() {
 		DataBindingContext bindingContext = new DataBindingContext();
 		//

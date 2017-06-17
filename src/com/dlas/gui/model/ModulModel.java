@@ -14,6 +14,9 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import com.dlas.gui.ModulDialog;
+import com.dlas.gui.ModuleListe;
+
+
 import com.dlas.dao.Modul;
 import com.dlas.dao.ObjectDao;
 
@@ -21,31 +24,20 @@ import com.dlas.dao.ObjectDao;
 public class ModulModel extends AbstractModelObject {
 	private List<Modul> m_moduls = new ArrayList();
 	
+	
+	public void addModuls(Shell s, List<Modul> listmodul, ModuleListe window){
+		m_moduls.addAll(listmodul);
+		firePropertyChange("modulmodel", null, m_moduls);
+	}
+	
+	
 	public void addModuls(Shell s, List<Modul> listmodul, ModulDialog window){
-		m_moduls=listmodul;
+		m_moduls.addAll(listmodul);
 		firePropertyChange("modulmodel", null, m_moduls);
 	}
 	public void removeBenefit(Modul modul) {
 		m_moduls.remove(modul);
 		firePropertyChange("modulmodel", null, m_moduls);
-	}
-	
-	
-	public List<Modul> getListmodul() {
-		// on recupére a liste des module de la base de données.
-		
-		// on se connect à la base
-		// on exexute un from sans critére
-		// on affiche la liste obtenue
-		
-		ObjectDao myobj = new ObjectDao();
-		Session lasession = myobj.getSessionDao();
-		lasession.beginTransaction();
-		Query query = lasession.createQuery("from Modul");
-		
-		List<Modul> resultdistinct = query.list();
-		lasession.getTransaction().commit();
-		return resultdistinct;
 	}
 	
 	public List getModuls(){

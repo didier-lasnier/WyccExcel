@@ -22087,3 +22087,1548 @@ org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqld
 [2017-06-07 22:58:17,070]-[ModalContext] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
 [2017-06-07 22:58:17,073]-[ModalContext] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
 [2017-06-07 22:58:17,135]-[ModalContext] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-09 19:31:31,854]-[ModalContext] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-09 19:31:31,884]-[ModalContext] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-09 19:31:32,319]-[ModalContext] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-09 19:31:32,439]-[ModalContext] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-09 19:31:32,445]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-09 19:31:32,445]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-09 19:31:32,445]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-09 19:31:32,448]-[ModalContext] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-09 19:31:32,806]-[ModalContext] INFO  hsqldb.db..ENGINE  - open start - state modified
+[2017-06-09 19:31:45,439]-[ModalContext] INFO  hsqldb.db..ENGINE  - checkpointClose start
+[2017-06-09 19:31:45,440]-[ModalContext] INFO  hsqldb.db..ENGINE  - checkpointClose synched
+[2017-06-09 19:31:48,361]-[ModalContext] INFO  hsqldb.db..ENGINE  - checkpointClose script done
+[2017-06-09 19:31:48,371]-[ModalContext] INFO  hsqldb.db..ENGINE  - checkpointClose end
+[2017-06-09 19:31:48,455]-[ModalContext] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-09 19:31:49,458]-[ModalContext] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-09 19:31:49,867]-[ModalContext] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-09 19:31:49,869]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-09 19:31:49,870]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-09 19:31:49,871]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-09 19:31:49,871]-[ModalContext] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-09 19:31:49,872]-[ModalContext] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-09 19:31:49,945]-[ModalContext] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-09 19:45:45,042]-[ModalContext] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-09 19:45:45,089]-[ModalContext] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-09 19:45:45,423]-[ModalContext] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-09 19:45:45,606]-[ModalContext] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-09 19:45:45,611]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-09 19:45:45,611]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-09 19:45:45,612]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-09 19:45:45,614]-[ModalContext] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-09 19:45:46,014]-[ModalContext] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-09 19:45:58,882]-[ModalContext] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-09 19:45:59,901]-[ModalContext] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-09 19:46:00,370]-[ModalContext] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-09 19:46:00,371]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-09 19:46:00,372]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-09 19:46:00,372]-[ModalContext] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-09 19:46:00,372]-[ModalContext] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-09 19:46:00,376]-[ModalContext] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-09 19:46:00,444]-[ModalContext] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-09 19:46:02,478]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :0
+[2017-06-09 19:46:02,483]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :1
+[2017-06-09 19:46:02,486]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :2
+[2017-06-09 19:46:02,489]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :3
+[2017-06-09 19:46:02,491]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :4
+[2017-06-09 19:46:02,494]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :5
+[2017-06-09 19:46:02,498]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :6
+[2017-06-09 19:46:02,500]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :7
+[2017-06-09 19:46:02,502]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :8
+[2017-06-09 19:46:02,504]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :9
+[2017-06-09 19:46:02,506]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :10
+[2017-06-09 19:46:02,508]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :11
+[2017-06-09 19:46:02,510]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :12
+[2017-06-09 19:46:02,515]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :13
+[2017-06-09 19:46:02,518]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :14
+[2017-06-09 19:46:02,519]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :15
+[2017-06-09 19:46:02,521]-[ModalContext] INFO  Wycc  - Header Intervale [0 - 17] Colonne :16
+[2017-06-09 19:46:02,522]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-09 19:46:02,525]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-09 19:46:02,527]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-09 19:46:02,529]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-09 19:46:02,533]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-09 19:46:02,544]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-09 19:46:02,547]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-09 19:46:02,551]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-09 19:46:02,554]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-09 19:46:02,556]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-09 19:46:02,558]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-09 19:46:02,561]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-09 19:46:02,563]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-09 19:46:02,566]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-09 19:46:02,568]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-09 19:46:02,570]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-09 19:46:02,572]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-09 19:46:02,576]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-09 19:46:02,579]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-09 19:46:02,582]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-09 19:46:02,585]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-09 19:46:02,590]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-09 19:46:02,593]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-09 19:46:02,597]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-09 19:46:02,600]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-09 19:46:02,603]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-09 19:46:02,609]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-09 19:46:02,611]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-09 19:46:02,613]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-09 19:46:02,617]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-09 19:46:02,620]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-09 19:46:02,621]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-09 19:46:02,623]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-09 19:46:02,625]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-09 19:46:02,627]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-09 19:46:02,629]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-09 19:46:02,631]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-09 19:46:02,633]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-09 19:46:02,634]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-09 19:46:02,636]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-09 19:46:02,638]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-09 19:46:02,645]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-09 19:46:02,651]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-09 19:46:02,658]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-09 19:46:02,660]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-09 19:46:02,663]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-09 19:46:02,664]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-09 19:46:02,667]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-09 19:46:02,669]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-09 19:46:02,672]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-09 19:46:02,674]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-09 19:46:02,677]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-09 19:46:02,678]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-09 19:46:02,679]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-09 19:46:02,681]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-09 19:46:02,684]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-09 19:46:02,685]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-09 19:46:02,686]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-09 19:46:02,687]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-09 19:46:02,689]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-09 19:46:02,693]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-09 19:46:02,695]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-09 19:46:02,697]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-09 19:46:02,699]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-09 19:46:02,701]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-09 19:46:02,706]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-09 19:46:02,714]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-09 19:46:02,721]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-09 19:46:02,722]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-09 19:46:02,724]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-09 19:46:02,730]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-09 19:46:02,731]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-09 19:46:02,733]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-09 19:46:02,737]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-09 19:46:02,739]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-09 19:46:02,740]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-09 19:46:02,741]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-09 19:46:02,743]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-09 19:46:02,746]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-09 19:46:02,751]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-09 19:46:02,752]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-09 19:46:02,753]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-09 19:46:02,754]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-09 19:46:02,755]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-09 19:46:02,755]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-09 19:46:02,756]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-09 19:46:02,757]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-09 19:46:02,758]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-09 19:46:02,760]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-09 19:46:02,761]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-09 19:46:02,763]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-09 19:46:02,765]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-09 19:46:02,767]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-09 19:46:02,769]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-09 19:46:02,771]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-09 19:46:02,774]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-09 19:46:02,780]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-09 19:46:02,782]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-09 19:46:02,785]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-09 19:46:02,787]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-09 19:46:02,791]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-09 19:46:02,793]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-09 19:46:02,796]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-09 19:46:02,802]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-09 19:46:02,804]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-09 19:46:02,806]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-09 19:46:02,808]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-09 19:46:02,822]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-09 19:46:02,823]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-09 19:46:02,825]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-09 19:46:02,826]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-09 19:46:02,827]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-09 19:46:02,828]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-09 19:46:02,829]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-09 19:46:02,830]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-09 19:46:02,831]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-09 19:46:02,832]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-09 19:46:02,833]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-09 19:46:02,834]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-09 19:46:02,837]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-09 19:46:02,838]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-09 19:46:02,839]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-09 19:46:02,840]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-09 19:46:02,841]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-09 19:46:02,842]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-09 19:46:02,843]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-09 19:46:02,844]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-09 19:46:02,845]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-09 19:46:02,846]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-09 19:46:02,847]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-09 19:46:02,848]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-09 19:46:02,849]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-09 19:46:02,850]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-09 19:46:02,851]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-09 19:46:02,851]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-09 19:46:02,852]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-09 19:46:02,854]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-09 19:46:02,855]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-09 19:46:02,856]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-09 19:46:02,857]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-09 19:46:02,858]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-09 19:46:02,860]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-09 19:46:02,861]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-09 19:46:02,863]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-09 19:46:02,864]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-09 19:46:02,868]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-09 19:46:02,871]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-09 19:46:02,872]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-09 19:46:02,873]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-09 19:46:02,875]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-09 19:46:02,879]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-09 19:46:02,880]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-09 19:46:02,881]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-09 19:46:02,883]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-09 19:46:02,885]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-09 19:46:02,887]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-09 19:46:02,888]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-09 19:46:02,890]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-09 19:46:02,895]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-09 19:46:02,897]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-09 19:46:02,902]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-09 19:46:02,903]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-09 19:46:02,905]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-09 19:46:02,906]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-09 19:46:02,907]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-09 19:46:02,908]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-09 19:46:02,909]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-09 19:46:02,910]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-09 19:46:02,911]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-09 19:46:02,912]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-09 19:46:02,912]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-09 19:46:02,913]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-09 19:46:02,914]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-09 19:46:02,915]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-09 19:46:02,916]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-09 19:46:02,918]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-09 19:46:02,919]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-09 19:46:02,920]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-09 19:46:02,921]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-09 19:46:02,922]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-09 19:46:02,923]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-09 19:46:02,924]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-09 19:46:02,925]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-09 19:46:02,926]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-09 19:46:02,927]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-09 19:46:02,928]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-09 19:46:02,932]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-09 19:46:02,934]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-09 19:46:02,936]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-09 19:46:02,941]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-09 19:46:02,942]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-09 19:46:02,944]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-09 19:46:02,945]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-09 19:46:02,947]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-09 19:46:02,950]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-09 19:46:02,951]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-09 19:46:02,952]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-09 19:46:02,953]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-09 19:46:02,954]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-09 19:46:02,955]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-09 19:46:02,957]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-09 19:46:02,958]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-09 19:46:02,961]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-09 19:46:02,964]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-09 19:46:02,966]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-09 19:46:02,968]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-09 19:46:02,970]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-09 19:46:02,971]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-09 19:46:02,972]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-09 19:46:02,974]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-09 19:46:02,975]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-09 19:46:02,976]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-09 19:46:02,977]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-09 19:46:02,978]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-09 19:46:02,979]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-09 19:46:02,980]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-09 19:46:02,981]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-09 19:46:02,983]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-09 19:46:02,985]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-09 19:46:02,987]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-09 19:46:02,988]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-09 19:46:02,989]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-09 19:46:02,990]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-09 19:46:02,991]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-09 19:46:02,991]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-09 19:46:02,992]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-09 19:46:02,993]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-09 19:46:02,994]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-09 19:46:02,996]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-09 19:46:02,997]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-09 19:46:03,000]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-09 19:46:03,001]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-09 19:46:03,001]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-09 19:46:03,002]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-09 19:46:03,004]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-09 19:46:03,005]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-09 19:46:03,012]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-09 19:46:03,017]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-09 19:46:03,022]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-09 19:46:03,029]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-09 19:46:03,031]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-09 19:46:03,032]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-09 19:46:03,033]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-09 19:46:03,035]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-09 19:46:03,036]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-09 19:46:03,038]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-09 19:46:03,039]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-09 19:46:03,040]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-09 19:46:03,041]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-09 19:46:03,049]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-09 19:46:03,050]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-09 19:46:03,051]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-09 19:46:03,053]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-09 19:46:03,054]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-09 19:46:03,055]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-09 19:46:03,056]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-09 19:46:03,058]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-09 19:46:03,061]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-09 19:46:03,062]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-09 19:46:03,064]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-09 19:46:03,065]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-09 19:46:03,067]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-09 19:46:03,068]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-09 19:46:03,070]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-09 19:46:03,071]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-09 19:46:03,072]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-09 19:46:03,073]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-09 19:46:03,074]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-09 19:46:03,075]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-09 19:46:03,076]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-09 19:46:03,078]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-09 19:46:03,081]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-09 19:46:03,082]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-09 19:46:03,085]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-09 19:46:03,086]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-09 19:46:03,087]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-09 19:46:03,087]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-09 19:46:03,088]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-09 19:46:03,089]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-09 19:46:03,090]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-09 19:46:03,093]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-09 19:46:03,094]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-09 19:46:03,095]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-09 19:46:03,096]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-09 19:46:03,097]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-09 19:46:03,101]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-09 19:46:03,102]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-09 19:46:03,103]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-09 19:46:03,104]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-09 19:46:03,105]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-09 19:46:03,105]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-09 19:46:03,106]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-09 19:46:03,106]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-09 19:46:03,107]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-09 19:46:03,108]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-09 19:46:03,108]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-09 19:46:03,108]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-09 19:46:03,109]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-09 19:46:03,110]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-09 19:46:03,110]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-09 19:46:03,112]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-09 19:46:03,113]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-09 19:46:03,114]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-09 19:46:03,118]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-09 19:46:03,119]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-09 19:46:03,120]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-09 19:46:03,122]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-09 19:46:03,126]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-09 19:46:03,127]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-09 19:46:03,129]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-09 19:46:03,130]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-09 19:46:03,131]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-09 19:46:03,133]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-09 19:46:03,135]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-09 19:46:03,136]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-09 19:46:03,136]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-09 19:46:03,137]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-09 19:46:03,138]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-09 19:46:03,139]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-09 19:46:03,140]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-09 19:46:03,141]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-09 19:46:03,142]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-09 19:46:03,144]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-09 19:46:03,146]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-09 19:46:03,147]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-09 19:46:03,148]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-09 19:46:03,149]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-09 19:46:03,150]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-09 19:46:03,150]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-09 19:46:03,151]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-09 19:46:03,152]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-09 19:46:03,152]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-09 19:46:03,153]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-09 19:46:03,153]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-09 19:46:03,154]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-09 19:46:03,155]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-09 19:46:03,156]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-09 19:46:03,157]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-09 19:46:03,158]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-09 19:46:03,159]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-09 19:46:03,159]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-09 19:46:03,160]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-09 19:46:03,161]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-09 19:46:03,162]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-09 19:46:03,163]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-09 19:46:03,173]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-09 19:46:03,176]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-09 19:46:03,178]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-09 19:46:03,179]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-09 19:46:03,182]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-09 19:46:03,185]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-09 19:46:03,186]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-09 19:46:03,189]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-09 19:46:03,193]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-09 19:46:03,198]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-09 19:46:03,199]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-09 19:46:03,200]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-09 19:46:03,201]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-09 19:46:03,202]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-09 19:46:03,203]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-09 19:46:03,204]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-09 19:46:03,205]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-09 19:46:03,205]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-09 19:46:03,206]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-09 19:46:03,208]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-09 19:46:03,209]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-09 19:46:03,210]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-09 19:46:03,211]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-09 19:46:03,212]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-09 19:46:03,213]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-09 19:46:03,214]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-09 19:46:03,215]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-09 19:46:03,216]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-09 19:46:03,217]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-09 19:46:03,218]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-09 19:46:03,219]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-09 19:46:03,220]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-09 19:46:03,221]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-09 19:46:03,222]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-09 19:46:03,223]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-09 19:46:03,224]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-09 19:46:03,225]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-09 19:46:03,226]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-09 19:46:03,227]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-09 19:46:03,228]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-09 19:46:03,228]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :18
+[2017-06-09 19:46:03,229]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :19
+[2017-06-09 19:46:03,230]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :20
+[2017-06-09 19:46:03,231]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :21
+[2017-06-09 19:46:03,231]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :22
+[2017-06-09 19:46:03,232]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :23
+[2017-06-09 19:46:03,233]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :24
+[2017-06-09 19:46:03,234]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :25
+[2017-06-09 19:46:03,234]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :26
+[2017-06-09 19:46:03,235]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :27
+[2017-06-09 19:46:03,236]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :28
+[2017-06-09 19:46:03,237]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :29
+[2017-06-09 19:46:03,238]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :30
+[2017-06-09 19:46:03,238]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :31
+[2017-06-09 19:46:03,239]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :32
+[2017-06-09 19:46:03,240]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :33
+[2017-06-09 19:46:03,241]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :34
+[2017-06-09 19:46:03,241]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :35
+[2017-06-09 19:46:03,242]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :36
+[2017-06-09 19:46:03,243]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :37
+[2017-06-09 19:46:03,243]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :38
+[2017-06-09 19:46:03,244]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :39
+[2017-06-09 19:46:03,245]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :40
+[2017-06-09 19:46:03,246]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :41
+[2017-06-09 19:46:03,256]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :42
+[2017-06-09 19:46:03,257]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :43
+[2017-06-09 19:46:03,258]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :44
+[2017-06-09 19:46:03,259]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :45
+[2017-06-09 19:46:03,260]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :46
+[2017-06-09 19:46:03,260]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :47
+[2017-06-09 19:46:03,261]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :48
+[2017-06-09 19:46:03,262]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :49
+[2017-06-09 19:46:03,263]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :50
+[2017-06-09 19:46:03,264]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :51
+[2017-06-09 19:46:03,265]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :52
+[2017-06-09 19:46:03,266]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :53
+[2017-06-09 19:46:03,267]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :54
+[2017-06-09 19:46:03,268]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :55
+[2017-06-09 19:46:03,269]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :56
+[2017-06-09 19:46:03,270]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :57
+[2017-06-09 19:46:03,270]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :58
+[2017-06-09 19:46:03,271]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :59
+[2017-06-09 19:46:03,272]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :60
+[2017-06-09 19:46:03,273]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :61
+[2017-06-09 19:46:03,274]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :62
+[2017-06-09 19:46:03,275]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :63
+[2017-06-09 19:46:03,276]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :64
+[2017-06-09 19:46:03,276]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :65
+[2017-06-09 19:46:03,277]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :66
+[2017-06-09 19:46:03,278]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :67
+[2017-06-09 19:46:03,279]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :68
+[2017-06-09 19:46:03,279]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :69
+[2017-06-09 19:46:03,280]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :70
+[2017-06-09 19:46:03,281]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :71
+[2017-06-09 19:46:03,282]-[ModalContext] INFO  Wycc  - Header Intervale [18 - 73] Colonne :72
+[2017-06-09 19:46:03,654]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV5
+[2017-06-09 19:46:03,826]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV5+ - ajout : EA5
+[2017-06-09 19:46:03,882]-[ModalContext] INFO  Wycc  - BV5+EA5
+[2017-06-09 19:46:04,025]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV6
+[2017-06-09 19:46:04,160]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV6+ - ajout : EA6
+[2017-06-09 19:46:04,190]-[ModalContext] INFO  Wycc  - BV6+EA6
+[2017-06-09 19:46:04,293]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV7
+[2017-06-09 19:46:04,372]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV7+ - ajout : EA7
+[2017-06-09 19:46:04,398]-[ModalContext] INFO  Wycc  - BV7+EA7
+[2017-06-09 19:46:04,498]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV8
+[2017-06-09 19:46:04,624]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV8+ - ajout : EA8
+[2017-06-09 19:46:04,651]-[ModalContext] INFO  Wycc  - BV8+EA8
+[2017-06-09 19:46:04,744]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV9
+[2017-06-09 19:46:04,831]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV9+ - ajout : EA9
+[2017-06-09 19:46:04,853]-[ModalContext] INFO  Wycc  - BV9+EA9
+[2017-06-09 19:46:04,938]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV10
+[2017-06-09 19:46:05,038]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV10+ - ajout : EA10
+[2017-06-09 19:46:05,064]-[ModalContext] INFO  Wycc  - BV10+EA10
+[2017-06-09 19:46:05,172]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV11
+[2017-06-09 19:46:05,286]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV11+ - ajout : EA11
+[2017-06-09 19:46:05,335]-[ModalContext] INFO  Wycc  - BV11+EA11
+[2017-06-09 19:46:05,460]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV12
+[2017-06-09 19:46:05,583]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV12+ - ajout : EA12
+[2017-06-09 19:46:05,632]-[ModalContext] INFO  Wycc  - BV12+EA12
+[2017-06-09 19:46:05,776]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV13
+[2017-06-09 19:46:05,886]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV13+ - ajout : EA13
+[2017-06-09 19:46:05,919]-[ModalContext] INFO  Wycc  - BV13+EA13
+[2017-06-09 19:46:05,997]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV14
+[2017-06-09 19:46:06,072]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV14+ - ajout : EA14
+[2017-06-09 19:46:06,094]-[ModalContext] INFO  Wycc  - BV14+EA14
+[2017-06-09 19:46:06,152]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV15
+[2017-06-09 19:46:06,210]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV15+ - ajout : EA15
+[2017-06-09 19:46:06,228]-[ModalContext] INFO  Wycc  - BV15+EA15
+[2017-06-09 19:46:06,308]-[ModalContext] INFO  Wycc  - Iteration : 3 - Num col : 187 - Total :  - ajout : (if(GF16>(7/12),7/12,GF16)*0.97049)
+[2017-06-09 19:46:06,327]-[ModalContext] INFO  Wycc  - (if(GF16>(7/12),7/12,GF16)*0.97049)
+[2017-06-09 19:46:06,389]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV17
+[2017-06-09 19:46:06,448]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV17+ - ajout : EA17
+[2017-06-09 19:46:06,476]-[ModalContext] INFO  Wycc  - BV17+EA17
+[2017-06-09 19:46:06,572]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV18
+[2017-06-09 19:46:06,624]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV18+ - ajout : EA18
+[2017-06-09 19:46:06,653]-[ModalContext] INFO  Wycc  - BV18+EA18
+[2017-06-09 19:46:06,727]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV19
+[2017-06-09 19:46:06,789]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV19+ - ajout : EA19
+[2017-06-09 19:46:06,806]-[ModalContext] INFO  Wycc  - BV19+EA19
+[2017-06-09 19:46:06,874]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV20
+[2017-06-09 19:46:06,935]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV20+ - ajout : EA20
+[2017-06-09 19:46:06,958]-[ModalContext] INFO  Wycc  - BV20+EA20
+[2017-06-09 19:46:07,044]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV21
+[2017-06-09 19:46:07,126]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV21+ - ajout : EA21
+[2017-06-09 19:46:07,146]-[ModalContext] INFO  Wycc  - BV21+EA21
+[2017-06-09 19:46:07,229]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV22
+[2017-06-09 19:46:07,343]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV22+ - ajout : EA22
+[2017-06-09 19:46:07,374]-[ModalContext] INFO  Wycc  - BV22+EA22
+[2017-06-09 19:46:07,447]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV23
+[2017-06-09 19:46:07,525]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV23+ - ajout : EA23
+[2017-06-09 19:46:07,547]-[ModalContext] INFO  Wycc  - BV23+EA23
+[2017-06-09 19:46:07,611]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV24
+[2017-06-09 19:46:07,692]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV24+ - ajout : EA24
+[2017-06-09 19:46:07,710]-[ModalContext] INFO  Wycc  - BV24+EA24
+[2017-06-09 19:46:07,790]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV25
+[2017-06-09 19:46:07,855]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV25+ - ajout : EA25
+[2017-06-09 19:46:07,870]-[ModalContext] INFO  Wycc  - BV25+EA25
+[2017-06-09 19:46:07,960]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV26
+[2017-06-09 19:46:08,014]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV26+ - ajout : EA26
+[2017-06-09 19:46:08,029]-[ModalContext] INFO  Wycc  - BV26+EA26
+[2017-06-09 19:46:08,079]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV27
+[2017-06-09 19:46:08,131]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV27+ - ajout : EA27
+[2017-06-09 19:46:08,149]-[ModalContext] INFO  Wycc  - BV27+EA27
+[2017-06-09 19:46:08,208]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV28
+[2017-06-09 19:46:08,290]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV28+ - ajout : EA28
+[2017-06-09 19:46:08,303]-[ModalContext] INFO  Wycc  - BV28+EA28
+[2017-06-09 19:46:08,356]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV29
+[2017-06-09 19:46:08,400]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV29+ - ajout : EA29
+[2017-06-09 19:46:08,413]-[ModalContext] INFO  Wycc  - BV29+EA29
+[2017-06-09 19:46:08,467]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV30
+[2017-06-09 19:46:08,536]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV30+ - ajout : EA30
+[2017-06-09 19:46:08,560]-[ModalContext] INFO  Wycc  - BV30+EA30
+[2017-06-09 19:46:08,618]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV31
+[2017-06-09 19:46:08,694]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV31+ - ajout : EA31
+[2017-06-09 19:46:08,713]-[ModalContext] INFO  Wycc  - BV31+EA31
+[2017-06-09 19:46:08,786]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV32
+[2017-06-09 19:46:08,831]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV32+ - ajout : EA32
+[2017-06-09 19:46:08,851]-[ModalContext] INFO  Wycc  - BV32+EA32
+[2017-06-09 19:46:08,893]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV33
+[2017-06-09 19:46:08,929]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV33+ - ajout : EA33
+[2017-06-09 19:46:08,939]-[ModalContext] INFO  Wycc  - BV33+EA33
+[2017-06-09 19:46:08,984]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV34
+[2017-06-09 19:46:09,022]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV34+ - ajout : EA34
+[2017-06-09 19:46:09,033]-[ModalContext] INFO  Wycc  - BV34+EA34
+[2017-06-09 19:46:09,107]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV35
+[2017-06-09 19:46:09,166]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV35+ - ajout : EA35
+[2017-06-09 19:46:09,176]-[ModalContext] INFO  Wycc  - BV35+EA35
+[2017-06-09 19:46:09,216]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV36
+[2017-06-09 19:46:09,261]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV36+ - ajout : EA36
+[2017-06-09 19:46:09,274]-[ModalContext] INFO  Wycc  - BV36+EA36
+[2017-06-09 19:46:09,317]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV37
+[2017-06-09 19:46:09,364]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV37+ - ajout : EA37
+[2017-06-09 19:46:09,372]-[ModalContext] INFO  Wycc  - BV37+EA37
+[2017-06-09 19:46:09,417]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV38
+[2017-06-09 19:46:09,457]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV38+ - ajout : EA38
+[2017-06-09 19:46:09,468]-[ModalContext] INFO  Wycc  - BV38+EA38
+[2017-06-09 19:46:09,524]-[ModalContext] INFO  Wycc  - Iteration : 1 - Num col : 73 - Total :  - ajout : BV39
+[2017-06-09 19:46:09,586]-[ModalContext] INFO  Wycc  - Iteration : 2 - Num col : 130 - Total : BV39+ - ajout : EA39
+[2017-06-09 19:46:09,597]-[ModalContext] INFO  Wycc  - BV39+EA39
+[2017-06-09 19:46:10,059]-[ModalContext] INFO  Wycc  - DONE ! setBeneficiaire
+[2017-06-09 20:50:18,436]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-09 20:50:18,461]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-09 20:50:18,698]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-09 20:50:18,761]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-09 20:50:18,764]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-09 20:50:18,765]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-09 20:50:18,765]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-09 20:50:18,768]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-09 20:50:19,084]-[main] INFO  hsqldb.db..ENGINE  - open start - state modified
+[2017-06-09 20:50:31,268]-[main] INFO  hsqldb.db..ENGINE  - checkpointClose start
+[2017-06-09 20:50:31,268]-[main] INFO  hsqldb.db..ENGINE  - checkpointClose synched
+[2017-06-09 20:50:33,550]-[main] INFO  hsqldb.db..ENGINE  - checkpointClose script done
+[2017-06-09 20:50:33,600]-[main] INFO  hsqldb.db..ENGINE  - checkpointClose end
+[2017-06-09 20:50:33,617]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-09 20:50:34,271]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-09 20:50:42,741]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-09 20:50:42,743]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-09 20:50:42,744]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-09 20:50:42,744]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-09 20:50:42,744]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-09 20:50:42,746]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-09 20:50:42,802]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-09 20:50:56,860]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-09 20:50:56,860]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-09 20:50:56,860]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-09 20:50:56,861]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-09 20:50:56,861]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-09 20:50:56,861]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-09 20:50:56,910]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-09 22:13:48,274]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-09 22:13:48,277]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-09 22:13:48,455]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-09 22:13:48,518]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-09 22:13:48,521]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-09 22:13:48,522]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-09 22:13:48,523]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-09 22:13:48,526]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-09 22:13:48,805]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-09 22:14:00,641]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-09 22:14:01,226]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 00:02:32,593]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 00:02:32,596]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 00:02:32,774]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 00:02:32,839]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 00:02:32,842]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 00:02:32,842]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 00:02:32,843]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 00:02:32,845]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 00:02:33,123]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 00:02:45,125]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 00:02:45,801]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 00:02:53,476]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 00:02:53,477]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 00:02:53,478]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 00:02:53,478]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 00:02:53,478]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 00:02:53,483]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 00:02:53,539]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 00:11:30,600]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 00:11:30,603]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 00:11:30,782]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 00:11:30,846]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 00:11:30,849]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 00:11:30,850]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 00:11:30,850]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 00:11:30,852]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 00:11:31,129]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 00:11:43,004]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 00:11:43,581]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 00:11:49,021]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 00:11:49,021]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 00:11:49,022]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 00:11:49,022]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 00:11:49,022]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 00:11:49,025]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 00:11:49,078]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 00:12:48,388]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 00:12:48,393]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 00:12:48,620]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 00:12:48,701]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 00:12:48,704]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 00:12:48,705]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 00:12:48,705]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 00:12:48,708]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 00:12:49,029]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 00:13:02,545]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 00:13:03,394]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 00:14:27,199]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 00:14:27,202]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 00:14:27,383]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 00:14:27,442]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 00:14:27,445]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 00:14:27,446]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 00:14:27,446]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 00:14:27,449]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 00:14:27,724]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 00:14:39,609]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 00:14:40,204]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 00:14:51,554]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 00:14:51,555]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 00:14:51,555]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 00:14:51,555]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 00:14:51,555]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 00:14:51,557]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 00:14:51,608]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 00:18:37,879]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 00:18:37,890]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 00:18:38,479]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 00:18:38,744]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 00:18:38,756]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 00:18:38,757]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 00:18:38,758]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 00:18:38,767]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 00:18:39,523]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 00:28:11,351]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 00:28:14,122]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 00:40:14,059]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 00:40:14,075]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 00:40:14,682]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 00:40:14,955]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 00:40:14,966]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 00:40:14,967]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 00:40:14,968]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 00:40:14,976]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 00:40:15,722]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 00:49:45,930]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 00:49:48,703]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 12:24:22,915]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 12:24:23,194]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 12:24:23,197]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 12:24:23,549]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 12:24:23,658]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 12:24:23,663]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 12:24:23,664]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 12:24:23,666]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 12:24:23,668]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 12:24:24,095]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 12:24:36,031]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 12:24:36,893]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 12:24:48,369]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 12:24:48,406]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 12:24:48,407]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 12:24:48,407]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 12:24:48,409]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 12:24:48,409]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 12:24:48,410]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 12:24:48,460]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 12:36:36,410]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 12:36:36,509]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 12:36:36,510]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 12:36:36,704]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 12:36:36,781]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 12:36:36,784]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 12:36:36,784]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 12:36:36,785]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 12:36:36,787]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 12:36:37,091]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 12:36:49,439]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 12:36:50,085]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 12:36:56,906]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 12:36:56,941]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 12:36:56,941]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 12:36:56,942]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 12:36:56,943]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 12:36:56,943]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 12:36:56,944]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 12:36:56,999]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 12:53:43,908]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 12:55:14,810]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 12:57:46,685]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 12:58:25,148]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 12:58:25,247]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 12:58:25,248]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 12:58:25,429]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 12:58:25,490]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 12:58:25,493]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 12:58:25,493]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 12:58:25,493]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 12:58:25,495]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 12:58:25,772]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 12:58:37,621]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 12:58:38,212]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 13:28:36,596]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 13:28:36,695]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 13:28:36,696]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 13:28:36,874]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 13:28:36,936]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 13:28:36,939]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 13:28:36,939]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 13:28:36,940]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 13:28:36,942]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 13:28:37,214]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 13:28:49,246]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 13:28:49,811]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 13:28:58,459]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 14:03:37,682]-[main] INFO  Wycc  - Window status :true
+[2017-06-10 14:03:42,844]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 14:03:46,345]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 17:59:26,529]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 17:59:26,626]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 17:59:26,627]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 17:59:26,798]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 17:59:26,862]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 17:59:26,865]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 17:59:26,865]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 17:59:26,866]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 17:59:26,868]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 17:59:27,137]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 17:59:39,116]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 17:59:39,716]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 18:09:59,442]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 18:09:59,543]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 18:09:59,544]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 18:09:59,721]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 18:09:59,785]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 18:09:59,787]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 18:09:59,788]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 18:09:59,788]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 18:09:59,791]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 18:10:00,070]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 18:10:12,004]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 18:10:12,590]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 18:12:09,254]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 18:12:09,416]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 18:12:09,417]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 18:12:09,640]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 18:12:09,721]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 18:12:09,724]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 18:12:09,725]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 18:12:09,725]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 18:12:09,728]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 18:12:10,033]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 18:12:23,545]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 18:12:24,246]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 18:14:54,954]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 18:15:00,208]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 18:15:00,210]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 18:15:00,427]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 18:15:00,508]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 18:15:00,511]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 18:15:00,512]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 18:15:00,512]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 18:15:00,515]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 18:15:00,815]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 18:15:14,372]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 18:15:15,082]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 18:16:20,087]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 18:16:20,206]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 18:16:20,207]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 18:16:20,417]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 18:16:20,476]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 18:16:20,478]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 18:16:20,479]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 18:16:20,480]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 18:16:20,482]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 18:16:20,755]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 18:16:32,653]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 18:16:33,213]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 18:18:13,072]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 18:18:13,191]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 18:18:13,193]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 18:18:13,394]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 18:18:13,476]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 18:18:13,480]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 18:18:13,480]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 18:18:13,480]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 18:18:13,483]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 18:18:13,787]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 18:18:27,333]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 18:18:28,024]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 18:21:47,521]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 18:21:47,669]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 18:21:47,670]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 18:21:47,879]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 18:21:47,965]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 18:21:47,968]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 18:21:47,969]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 18:21:47,970]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 18:21:47,972]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 18:21:48,294]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 18:22:01,827]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 18:22:02,515]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 18:25:39,634]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 18:25:39,753]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 18:25:39,754]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 18:25:39,955]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 18:25:40,032]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 18:25:40,036]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 18:25:40,036]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 18:25:40,036]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 18:25:40,039]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 18:25:40,358]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 18:25:53,755]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 18:25:54,449]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 18:26:01,331]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 18:26:01,333]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 18:26:01,334]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 18:26:01,335]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 18:26:01,342]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 18:26:01,344]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 18:26:01,922]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 18:32:13,236]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 18:32:13,335]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 18:32:13,336]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 18:32:13,510]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 18:32:13,569]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 18:32:13,571]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 18:32:13,571]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 18:32:13,572]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 18:32:13,574]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 18:32:13,848]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 18:32:25,752]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 18:32:26,339]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 18:48:06,865]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 18:48:07,153]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 18:48:07,155]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 18:48:07,409]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 18:48:07,516]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 18:48:07,520]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 18:48:07,520]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 18:48:07,521]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 18:48:07,523]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 18:48:07,992]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 18:48:20,884]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 18:48:21,782]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-10 18:50:27,886]-[main] INFO  Wycc  - Window status :false
+[2017-06-10 18:50:28,015]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-10 18:50:28,016]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-10 18:50:28,221]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-10 18:50:28,300]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-10 18:50:28,303]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-10 18:50:28,304]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-10 18:50:28,304]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-10 18:50:28,306]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-10 18:50:28,602]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-10 18:50:42,016]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-10 18:50:42,796]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 12:16:26,025]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 12:16:26,299]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 12:16:26,324]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 12:16:26,655]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 12:16:26,765]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 12:16:26,770]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 12:16:26,771]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 12:16:26,771]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 12:16:26,773]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 12:16:27,201]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 12:16:39,173]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 12:16:40,033]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 12:18:07,792]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 12:18:07,900]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 12:18:07,901]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 12:18:08,081]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 12:18:08,140]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 12:18:08,143]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 12:18:08,143]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 12:18:08,143]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 12:18:08,146]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 12:18:08,427]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 12:18:20,542]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 12:18:21,191]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 12:18:21,344]-[main] INFO  Wycc  - Data binding start
+[2017-06-11 12:18:21,354]-[main] INFO  Wycc  - Data binding end
+[2017-06-11 12:19:39,682]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 12:19:39,787]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 12:19:39,788]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 12:19:39,975]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 12:19:40,044]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 12:19:40,047]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 12:19:40,047]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 12:19:40,048]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 12:19:40,051]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 12:19:40,390]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 12:19:52,462]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 12:19:53,066]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 12:19:53,195]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 12:22:07,892]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 12:22:08,023]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 12:22:08,025]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 12:22:08,236]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 12:22:08,323]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 12:22:08,326]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 12:22:08,326]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 12:22:08,327]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 12:22:08,329]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 12:22:08,653]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 12:22:22,200]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 12:22:22,921]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 12:22:31,398]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 12:29:59,386]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 12:29:59,529]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 12:29:59,531]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 12:29:59,749]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 12:29:59,835]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 12:29:59,838]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 12:29:59,838]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 12:29:59,838]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 12:29:59,841]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 12:30:00,171]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 12:30:13,634]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 12:30:14,340]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 12:30:19,120]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 12:30:50,547]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 12:30:50,588]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 12:30:50,588]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 12:30:50,590]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 12:30:50,590]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 12:30:50,591]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 12:30:50,592]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 12:30:50,663]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 12:30:53,827]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 12:57:44,556]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 12:57:44,658]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 12:57:44,659]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 12:57:44,846]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 12:57:44,906]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 12:57:44,909]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 12:57:44,910]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 12:57:44,910]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 12:57:44,913]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 12:57:45,189]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 12:57:57,141]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 12:57:57,747]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 12:57:57,889]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 12:59:37,906]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 12:59:37,947]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 12:59:37,947]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 12:59:37,949]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 12:59:37,949]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 12:59:37,949]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 12:59:37,950]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 12:59:38,006]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 12:59:38,020]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 13:00:04,043]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 13:00:04,152]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 13:00:04,153]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 13:00:04,336]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 13:00:04,397]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 13:00:04,401]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 13:00:04,401]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 13:00:04,401]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 13:00:04,404]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 13:00:04,696]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 13:00:16,891]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 13:00:17,517]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 13:00:17,649]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 13:01:06,116]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 13:01:06,224]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 13:01:06,225]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 13:01:06,429]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 13:01:06,498]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 13:01:06,500]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 13:01:06,501]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 13:01:06,501]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 13:01:06,503]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 13:01:06,785]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 13:01:18,950]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 13:01:19,541]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 13:01:19,675]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 13:02:38,823]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 13:02:38,928]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 13:02:38,929]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 13:02:39,123]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 13:02:39,190]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 13:02:39,193]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 13:02:39,194]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 13:02:39,194]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 13:02:39,196]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 13:02:39,491]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 13:02:51,547]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 13:02:52,152]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 13:02:52,278]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 13:09:38,996]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 13:09:39,095]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 13:09:39,096]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 13:09:39,286]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 13:09:39,356]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 13:09:39,360]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 13:09:39,361]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 13:09:39,361]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 13:09:39,364]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 13:09:39,643]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 13:09:51,608]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 13:09:52,199]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 13:09:52,323]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 13:35:35,881]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 13:35:35,984]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 13:35:35,986]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 13:35:36,175]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 13:35:36,239]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 13:35:36,242]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 13:35:36,243]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 13:35:36,243]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 13:35:36,246]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 13:35:46,749]-[main] FATAL hsqldb.db..ENGINE  - could not reopen database
+org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@2e277fc4[file =/Volumes/LaCie/ProjetDev/WrkSpaceEclipse/WyccExcel/db/hsql.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2017-06-11 11:35:45 heartbeat - read: -6085 ms.
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.persist.LockFile.newLockFileLock(Unknown Source)
+	at org.hsqldb.persist.Logger.acquireLock(Unknown Source)
+	at org.hsqldb.persist.Logger.open(Unknown Source)
+	at org.hsqldb.Database.reopen(Unknown Source)
+	at org.hsqldb.Database.open(Unknown Source)
+	at org.hsqldb.DatabaseManager.getDatabase(Unknown Source)
+	at org.hsqldb.DatabaseManager.newSession(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.addConnections(PooledConnections.java:123)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:42)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:20)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections$Builder.build(PooledConnections.java:161)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:109)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:72)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:240)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:145)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:257)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:231)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:240)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:418)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:87)
+	at com.dlas.dao.hibernateutils.getSessionFactory(hibernateutils.java:19)
+	at com.dlas.dao.ObjectDao.getSessionDao(ObjectDao.java:18)
+	at com.dlas.gui.ModulDialog.getListmodul(ModulDialog.java:373)
+	at com.dlas.gui.ModulDialog.setDefaultValues(ModulDialog.java:108)
+	at com.dlas.gui.accueil.OpenItem.widgetOpen(OpenItem.java:113)
+	at com.dlas.gui.accueil.OpenItem.widgetSelected(OpenItem.java:99)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(Unknown Source)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(Unknown Source)
+	at org.eclipse.swt.widgets.Display.sendEvent(Unknown Source)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Unknown Source)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Unknown Source)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Unknown Source)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Unknown Source)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Unknown Source)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Unknown Source)
+	at com.dlas.gui.EcranAccueil.open(EcranAccueil.java:315)
+	at com.dlas.gui.EcranAccueil$1.run(EcranAccueil.java:168)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at com.dlas.gui.EcranAccueil.main(EcranAccueil.java:163)
+[2017-06-11 14:01:46,859]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 14:01:46,961]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 14:01:46,962]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 14:01:47,139]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 14:01:47,200]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 14:01:47,204]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 14:01:47,204]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 14:01:47,204]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 14:01:47,206]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 14:01:47,484]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 14:01:59,626]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 14:02:00,329]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 14:02:00,454]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 14:15:40,020]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 14:15:40,150]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 14:15:40,151]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 14:15:40,357]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 14:15:40,449]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 14:15:40,452]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 14:15:40,453]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 14:15:40,453]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 14:15:40,456]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 14:15:40,769]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 14:15:54,278]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 14:15:55,036]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 14:16:00,038]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 14:55:34,788]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 14:55:35,060]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 14:55:35,062]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 14:55:35,424]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 14:55:35,537]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 14:55:35,544]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 14:55:35,544]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 14:55:35,544]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 14:55:35,546]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 14:55:35,960]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 14:55:48,091]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 14:55:48,977]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 14:55:49,154]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 15:03:20,031]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 15:03:20,164]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 15:03:20,165]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 15:03:20,378]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 15:03:20,464]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 15:03:20,468]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 15:03:20,468]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 15:03:20,468]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 15:03:20,471]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 15:03:20,799]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 15:03:34,505]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 15:03:35,269]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 15:03:49,207]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 15:10:39,524]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 15:10:39,626]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 15:10:39,627]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 15:10:39,808]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 15:10:39,867]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 15:10:39,870]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 15:10:39,871]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 15:10:39,871]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 15:10:39,873]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 15:10:40,166]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 15:10:52,216]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 15:10:52,730]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 15:10:52,863]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 16:21:37,995]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 16:21:38,098]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 16:21:38,099]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 16:21:38,285]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 16:21:38,348]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 16:21:38,351]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 16:21:38,352]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 16:21:38,352]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 16:21:38,355]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 16:21:38,646]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 16:21:50,803]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 16:21:51,441]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 16:21:51,561]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 16:26:25,637]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 16:26:25,740]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 16:26:25,742]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 16:26:25,931]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 16:26:26,000]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 16:26:26,003]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 16:26:26,003]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 16:26:26,004]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 16:26:26,007]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 16:26:26,294]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 16:26:38,382]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 16:26:39,006]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 16:26:39,130]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 16:30:45,930]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 16:30:46,045]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 16:30:46,046]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 16:30:46,235]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 16:30:46,299]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 16:30:46,301]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 16:30:46,302]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 16:30:46,302]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 16:30:46,304]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 16:30:46,614]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 16:30:58,991]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 16:30:59,622]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 16:30:59,763]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 16:38:00,224]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 16:38:00,361]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 16:38:00,362]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 16:38:00,586]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 16:38:00,673]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 16:38:00,677]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 16:38:00,678]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 16:38:00,678]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 16:38:00,682]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 16:38:01,020]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 16:38:14,704]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 16:38:15,528]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 16:38:23,840]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 16:44:06,040]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 16:44:06,174]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 16:44:06,176]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 16:44:06,390]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 16:44:06,477]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 16:44:06,480]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 16:44:06,481]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 16:44:06,481]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 16:44:06,483]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 16:44:06,808]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 16:44:20,347]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 16:44:21,105]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 16:44:21,261]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 16:47:01,699]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 16:47:09,788]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 16:47:09,795]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 16:47:10,408]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 16:47:10,686]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 16:47:10,697]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 16:47:10,698]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 16:47:10,699]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 16:47:10,707]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 16:47:11,470]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 16:55:24,565]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 16:55:24,670]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 16:55:24,671]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 16:55:24,870]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 16:55:24,932]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 16:55:24,936]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 16:55:24,936]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 16:55:24,938]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 16:55:24,941]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 16:55:25,231]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 16:55:37,266]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 16:55:37,883]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 16:55:37,997]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 16:55:57,108]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 16:55:57,276]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 16:55:57,278]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 16:55:57,542]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 16:55:57,634]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 16:55:57,638]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 16:55:57,638]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 16:55:57,639]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 16:55:57,642]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 16:55:57,963]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 16:56:11,895]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 16:56:12,812]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 16:56:52,277]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 17:01:55,719]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 17:01:55,850]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 17:01:55,851]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 17:01:56,099]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 17:01:56,169]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 17:01:56,172]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 17:01:56,172]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 17:01:56,172]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 17:01:56,175]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 17:01:56,479]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 17:02:08,582]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 17:02:09,264]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 17:02:09,386]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 17:02:44,116]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 17:02:44,295]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 17:02:44,297]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 17:02:44,559]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 17:02:44,656]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 17:02:44,659]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 17:02:44,659]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 17:02:44,660]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 17:02:44,662]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 17:02:45,001]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 17:02:58,665]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 17:02:59,484]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 17:03:31,348]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 17:06:11,016]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 17:06:11,115]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 17:06:11,116]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 17:06:11,303]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 17:06:11,368]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 17:06:11,370]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 17:06:11,371]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 17:06:11,371]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 17:06:11,373]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 17:06:11,662]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 17:06:23,870]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 17:06:24,489]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 17:06:24,604]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 17:07:02,033]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 17:07:02,194]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 17:07:02,196]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 17:07:02,474]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 17:07:02,577]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 17:07:02,582]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 17:07:02,582]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 17:07:02,583]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 17:07:02,586]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 17:07:02,922]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 17:07:16,496]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 17:07:17,305]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 17:07:39,036]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 17:13:11,178]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 17:13:11,283]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 17:13:11,284]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 17:13:11,471]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 17:13:11,535]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 17:13:11,537]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 17:13:11,538]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 17:13:11,538]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 17:13:11,541]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 17:13:11,845]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 17:13:24,281]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 17:13:24,919]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 17:13:25,060]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 17:13:42,673]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 17:13:42,717]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 17:13:42,718]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 17:13:42,719]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 17:13:42,720]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 17:13:42,720]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 17:13:42,721]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 17:13:42,785]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 17:13:42,794]-[main] INFO  Wycc  - Window open start 
+[2017-06-11 17:17:32,539]-[main] INFO  Wycc  - Window status :false
+[2017-06-11 17:17:32,732]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-11 17:17:32,735]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-11 17:17:33,017]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-11 17:17:33,136]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-11 17:17:33,140]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-11 17:17:33,140]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-11 17:17:33,141]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-11 17:17:33,144]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-11 17:17:33,478]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-11 17:17:47,146]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-11 17:17:47,950]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-11 17:18:11,553]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 19:00:39,238]-[main] INFO  Wycc  - Window status :false
+[2017-06-12 19:00:39,510]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-12 19:00:39,512]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-12 19:00:39,825]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-12 19:00:39,939]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-12 19:00:39,944]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-12 19:00:39,945]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-12 19:00:39,945]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-12 19:00:39,947]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-12 19:00:40,336]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-12 19:00:52,352]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-12 19:00:53,194]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-12 19:00:53,361]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 19:08:10,830]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 19:39:20,169]-[main] INFO  Wycc  - Window status :false
+[2017-06-12 19:39:20,285]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-12 19:39:20,286]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-12 19:39:20,474]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-12 19:39:20,541]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-12 19:39:20,545]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-12 19:39:20,545]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-12 19:39:20,545]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-12 19:39:20,548]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-12 19:39:20,878]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-12 19:39:32,835]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-12 19:39:33,371]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-12 19:39:33,483]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 19:40:15,876]-[main] INFO  Wycc  - Window status :false
+[2017-06-12 19:40:15,983]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-12 19:40:15,984]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-12 19:40:16,224]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-12 19:40:16,297]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-12 19:40:16,300]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-12 19:40:16,300]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-12 19:40:16,301]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-12 19:40:16,303]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-12 19:40:16,569]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-12 19:40:28,422]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-12 19:40:28,960]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-12 19:40:29,073]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 19:41:58,263]-[main] INFO  Wycc  - Window status :false
+[2017-06-12 19:41:58,299]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-12 19:41:58,300]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-12 19:41:58,301]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-12 19:41:58,302]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-12 19:41:58,302]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-12 19:41:58,303]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-12 19:41:58,358]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-12 19:41:58,367]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 22:44:38,805]-[main] INFO  Wycc  - Window status :false
+[2017-06-12 22:44:39,072]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-12 22:44:39,074]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-12 22:44:39,555]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-12 22:44:39,671]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-12 22:44:39,677]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-12 22:44:39,677]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-12 22:44:39,677]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-12 22:44:39,680]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-12 22:44:40,124]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-12 22:44:52,148]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-12 22:44:53,170]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-12 22:44:53,349]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 22:49:08,460]-[main] INFO  Wycc  - Window status :false
+[2017-06-12 22:49:08,496]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-12 22:49:08,497]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-12 22:49:08,499]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-12 22:49:08,499]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-12 22:49:08,500]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-12 22:49:08,501]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-12 22:49:08,556]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-12 22:49:08,565]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 23:06:40,411]-[main] INFO  Wycc  - Window status :false
+[2017-06-12 23:06:40,523]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-12 23:06:40,524]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-12 23:06:40,707]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-12 23:06:40,774]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-12 23:06:40,778]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-12 23:06:40,779]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-12 23:06:40,779]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-12 23:06:40,782]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-12 23:06:41,056]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-12 23:06:53,039]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-12 23:06:53,592]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-12 23:06:53,707]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 23:07:50,397]-[main] INFO  Wycc  - Window status :false
+[2017-06-12 23:07:50,431]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-12 23:07:50,432]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-12 23:07:50,433]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-12 23:07:50,434]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-12 23:07:50,435]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-12 23:07:50,436]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-12 23:07:50,491]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-12 23:07:50,499]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 23:07:55,079]-[main] INFO  Wycc  - Window status :false
+[2017-06-12 23:07:55,107]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-12 23:07:55,108]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-12 23:07:55,108]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-12 23:07:55,108]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-12 23:07:55,109]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-12 23:07:55,109]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-12 23:07:55,159]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-12 23:07:55,165]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 23:10:39,824]-[main] INFO  Wycc  - Window status :false
+[2017-06-12 23:10:39,856]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-12 23:10:39,856]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-12 23:10:39,857]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-12 23:10:39,857]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-12 23:10:39,857]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-12 23:10:39,858]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-12 23:10:39,919]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-12 23:10:39,927]-[main] INFO  Wycc  - Window open start 
+[2017-06-12 23:12:32,416]-[main] INFO  Wycc  - Window status :false
+[2017-06-12 23:12:32,517]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-12 23:12:32,518]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-12 23:12:32,708]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-12 23:12:32,774]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-12 23:12:32,778]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-12 23:12:32,779]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-12 23:12:32,779]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-12 23:12:32,781]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-12 23:12:33,060]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-12 23:12:44,960]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-12 23:12:45,562]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-12 23:12:45,676]-[main] INFO  Wycc  - Window open start 
+[2017-06-17 12:03:25,269]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-17 12:03:25,292]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-17 12:03:25,633]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-17 12:03:25,791]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-17 12:03:25,796]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-17 12:03:25,796]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-17 12:03:25,796]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-17 12:03:25,798]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-17 12:03:26,154]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-17 12:03:38,033]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-17 12:03:38,873]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-17 12:03:39,040]-[main] INFO  Wycc  - Window open start 

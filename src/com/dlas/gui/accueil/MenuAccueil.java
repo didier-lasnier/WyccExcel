@@ -11,6 +11,16 @@ import com.dlas.gui.accueil.SaveItem;
 
 
 public class MenuAccueil {
+	private Integer DisplayStatus =0;
+	
+	
+	public Integer getDisplayStatus() {
+		return DisplayStatus;
+	}
+
+	public void setDisplayStatus(Integer displayStatus) {
+		DisplayStatus = displayStatus;
+	}
 
 	public MenuAccueil(){};
 	
@@ -36,7 +46,8 @@ public class MenuAccueil {
 	exitItem.setText("&Quit\tCRTL+Q");
 	exitItem.setAccelerator(SWT.CTRL + 'Q');
 	
-	openItem.addSelectionListener(new OpenItem(d,s));
+	OpenItem oitem = new OpenItem(d,s);
+	openItem.addSelectionListener(oitem);
 	
 	saveItem.addSelectionListener(new SaveItem(s,StartD,EndD));
 	
