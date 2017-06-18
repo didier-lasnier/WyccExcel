@@ -23816,3 +23816,123 @@ org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqld
 [2017-06-18 10:20:42,300]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
 [2017-06-18 10:20:42,813]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
 [2017-06-18 10:20:42,912]-[main] INFO  Wycc  - Window open start 
+[2017-06-18 10:33:45,400]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-18 10:33:45,403]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-18 10:33:45,582]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-18 10:33:45,648]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-18 10:33:45,651]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-18 10:33:45,651]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-18 10:33:45,652]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-18 10:33:45,654]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-18 10:33:45,931]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-18 10:33:58,063]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-18 10:33:58,691]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-18 10:33:58,790]-[main] INFO  Wycc  - Window open start 
+[2017-06-18 10:36:50,524]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-18 10:36:50,527]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-18 10:36:50,707]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-18 10:36:50,775]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-18 10:36:50,779]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-18 10:36:50,780]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-18 10:36:50,780]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-18 10:36:50,782]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-18 10:36:51,070]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-18 10:37:03,482]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-18 10:37:04,068]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-18 10:37:04,187]-[main] INFO  Wycc  - Window open start 
+[2017-06-18 10:41:29,636]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-18 10:41:29,639]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-18 10:41:29,826]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-18 10:41:29,888]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-18 10:41:29,890]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-18 10:41:29,891]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-18 10:41:29,891]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-18 10:41:29,893]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-18 10:41:30,163]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-18 10:41:42,079]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-18 10:41:42,611]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-18 10:41:42,728]-[main] INFO  Wycc  - Window open start 
+[2017-06-18 10:48:37,563]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-18 10:48:37,567]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-18 10:48:37,737]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-18 10:48:37,799]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-18 10:48:37,802]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-18 10:48:37,802]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-18 10:48:37,802]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-18 10:48:37,804]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-18 10:48:38,085]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-18 10:48:50,032]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-18 10:48:50,559]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-18 10:48:50,682]-[main] INFO  Wycc  - Window open start 
+[2017-06-18 10:52:40,226]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-18 10:52:40,229]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-18 10:52:40,410]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-18 10:52:40,475]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-18 10:52:40,478]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-18 10:52:40,478]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-18 10:52:40,478]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-18 10:52:40,480]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-18 10:52:40,760]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-18 10:52:53,193]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-18 10:52:53,728]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-18 10:52:53,835]-[main] INFO  Wycc  - Window open start 
+[2017-06-18 10:54:06,556]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-18 10:54:06,559]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-18 10:54:06,728]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-18 10:54:06,789]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-18 10:54:06,793]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-18 10:54:06,793]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-18 10:54:06,793]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-18 10:54:06,797]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-18 10:54:07,070]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-18 10:54:19,036]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-18 10:54:19,554]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-18 10:54:19,674]-[main] INFO  Wycc  - Window open start 
+[2017-06-18 10:55:55,851]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-18 10:55:55,854]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-18 10:55:56,033]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-18 10:55:56,095]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-18 10:55:56,099]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-18 10:55:56,099]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-18 10:55:56,099]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-18 10:55:56,101]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-18 10:55:56,384]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-18 10:56:08,508]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-18 10:56:09,030]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-18 10:56:09,136]-[main] INFO  Wycc  - Window open start 
+[2017-06-18 10:57:11,571]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-18 10:57:11,575]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-18 10:57:11,783]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-18 10:57:11,864]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-18 10:57:11,868]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-18 10:57:11,868]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-18 10:57:11,868]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-18 10:57:11,870]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-18 10:57:12,149]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-18 10:57:24,015]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-18 10:57:24,550]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-18 10:57:24,648]-[main] INFO  Wycc  - Window open start 
+[2017-06-18 10:59:07,678]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-18 10:59:07,681]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-18 10:59:07,866]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-18 10:59:07,934]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-18 10:59:07,936]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-18 10:59:07,936]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-18 10:59:07,937]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-18 10:59:07,939]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-18 10:59:08,214]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-18 10:59:20,602]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-18 10:59:21,154]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-18 10:59:21,275]-[main] INFO  Wycc  - Window open start 
+[2017-06-18 10:59:51,245]-[main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.6.Final}
+[2017-06-18 10:59:51,248]-[main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+[2017-06-18 10:59:51,433]-[main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-06-18 10:59:51,499]-[main] WARN  org.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2017-06-18 10:59:51,502]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:./db/hsql]
+[2017-06-18 10:59:51,502]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {user=wycc, password=****}
+[2017-06-18 10:59:51,502]-[main] INFO  org.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+[2017-06-18 10:59:51,504]-[main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 1 (min=1)
+[2017-06-18 10:59:51,780]-[main] INFO  hsqldb.db..ENGINE  - open start - state not modified
+[2017-06-18 11:00:03,734]-[main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2017-06-18 11:00:04,277]-[main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+[2017-06-18 11:00:04,387]-[main] INFO  Wycc  - Window open start 

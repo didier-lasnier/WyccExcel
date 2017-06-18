@@ -10,9 +10,11 @@ import javax.persistence.Table;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
+import com.dlas.gui.model.AbstractModelObject;
+
 @Entity
 @Table(name = "MODUL", schema = "PUBLIC")
-public class Modul {
+public class Modul extends AbstractModelObject{
 
 	@Id
 	@Column(name = "MODUL_ID")

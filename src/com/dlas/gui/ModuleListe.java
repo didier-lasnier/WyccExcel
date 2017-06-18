@@ -186,7 +186,7 @@ public class ModuleListe {
 		lblSupplier.setText("Supplier:");
 		
 		Label lblFormula = new Label(recordcomposite, SWT.NONE);
-		lblFormula.setBounds(167, 10, 59, 14);
+		lblFormula.setBounds(188, 10, 59, 14);
 		lblFormula.setText("Formula:");
 		
 		Label lblCategory = new Label(recordcomposite, SWT.NONE);
@@ -194,7 +194,7 @@ public class ModuleListe {
 		lblCategory.setText("Category:");
 		
 		txtmodulid = new Text(recordcomposite, SWT.BORDER);
-		txtmodulid.setBounds(96, 10, 64, 19);
+		txtmodulid.setBounds(96, 10, 86, 19);
 		
 		txtfournisseur = new Text(recordcomposite, SWT.BORDER);
 		txtfournisseur.setBounds(96, 64, 301, 19);
@@ -226,16 +226,16 @@ public class ModuleListe {
 		lblForfaitpercentage.setText("Forfait/percentage:");
 		
 		txtcalculmode = new Text(recordcomposite, SWT.BORDER);
-		txtcalculmode.setBounds(183, 119, 64, 19);
+		txtcalculmode.setBounds(183, 119, 105, 19);
 		
 		txtprice = new Text(recordcomposite, SWT.BORDER);
-		txtprice.setBounds(183, 151, 64, 19);
+		txtprice.setBounds(183, 151, 105, 19);
 		
 		txtscope = new Text(recordcomposite, SWT.BORDER);
-		txtscope.setBounds(396, 119, 64, 19);
+		txtscope.setBounds(396, 119, 147, 19);
 		
 		txtforfait = new Text(recordcomposite, SWT.BORDER);
-		txtforfait.setBounds(454, 151, 64, 19);
+		txtforfait.setBounds(454, 151, 89, 19);
 		
 		Group group = new Group(recordcomposite, SWT.NONE);
 		group.setBounds(50, 108, 505, 93);
@@ -257,16 +257,40 @@ public class ModuleListe {
        //
 		IObservableList ModulObserveList = BeanProperties.list("m_moduls").observe(m_modulmodels);		
 		Modulviewer_1.setInput(ModulObserveList);
-		
-		//
 
 		IObservableValue observeSingleSelectionModulviewer = ViewerProperties.singleSelection().observe(Modulviewer_1);
 		IObservableValue modulviewercalculmodeObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewer,"calculmode",String.class);
 		IObservableValue textCalculmodeTextObserveValue = SWTObservables.observeText(txtcalculmode,SWT.Modify);
 		bindingContext.bindValue(modulviewercalculmodeObservableDetailValue, textCalculmodeTextObserveValue, null, new ViewerUpdateValueStrategy());
 
-	//ObservableValuecalculmode(  Modulviewer_1,bindingContext ,"calculmode",txtcalculmode );
-			
+	
+		IObservableValue observeSingleSelectionModulviewermodulid = ViewerProperties.singleSelection().observe(Modulviewer_1);
+		IObservableValue modulviewermodulidObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewermodulid,"modulid",String.class);
+		IObservableValue textmodulidTextObserveValue = SWTObservables.observeText(txtmodulid,SWT.Modify);
+		bindingContext.bindValue(modulviewermodulidObservableDetailValue, textmodulidTextObserveValue, null, new ViewerUpdateValueStrategy());
+		
+		/*			
+		IObservableValue observeSingleSelectionModulviewerforfaitpercentage = ViewerProperties.singleSelection().observe(Modulviewer_1);
+		IObservableValue modulviewerforfaitpercentageObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewerforfaitpercentage,"forfaitpercentage",String.class);
+		IObservableValue textforfaitpercentageTextObserveValue = SWTObservables.observeText(txtforfait,SWT.Modify);
+		bindingContext.bindValue(modulviewerforfaitpercentageObservableDetailValue, textforfaitpercentageTextObserveValue, null, new ViewerUpdateValueStrategy());
+		
+*/		
+
+		
+/*
+		ObservableValuecalculmode( Modulviewer_1,bindingContext,"modulfournisseur",txtfournisseur );
+	
+		ObservableValuecalculmode( Modulviewer_1,bindingContext,"modulcategory",txtcategory );
+		ObservableValuecalculmode( Modulviewer_1,bindingContext,"modullabel",txtlabel );
+		ObservableValuecalculmode( Modulviewer_1,bindingContext,"modulscope",txtscope );
+		ObservableValuecalculmode( Modulviewer_1,bindingContext,"modulprice",txtprice );
+		*/
+/*		IObservableValue observeSingleSelectionModulviewerdisplayorder = ViewerProperties.singleSelection().observe(Modulviewer_1);
+		IObservableValue modulviewerdisplayorderObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewer,"displayorder",String.class);
+		IObservableValue textdisplayorderTextObserveValue = SWTObservables.observeText(txtdisplayorder,SWT.Modify);
+		bindingContext.bindValue(modulviewerdisplayorderObservableDetailValue, textdisplayorderTextObserveValue, null, new ViewerUpdateValueStrategy());*/
+		
 		//
 		
 
