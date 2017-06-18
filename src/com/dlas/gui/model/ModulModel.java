@@ -13,7 +13,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
-import com.dlas.gui.ModulDialog;
+//import com.dlas.gui.ModulDialog;
 import com.dlas.gui.ModuleListe;
 
 
@@ -30,17 +30,12 @@ public class ModulModel extends AbstractModelObject {
 		firePropertyChange("modulmodel", null, m_moduls);
 	}
 	
-	
-	public void addModuls(Shell s, List<Modul> listmodul, ModulDialog window){
-		m_moduls.addAll(listmodul);
-		firePropertyChange("modulmodel", null, m_moduls);
-	}
 	public void removeBenefit(Modul modul) {
 		m_moduls.remove(modul);
 		firePropertyChange("modulmodel", null, m_moduls);
 	}
 	
-	public List getModuls(){
+	public List getM_moduls(){
 		return m_moduls;
 	}
 	

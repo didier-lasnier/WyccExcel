@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.beans.BeanProperties;
+import org.eclipse.core.databinding.beans.BeansObservables;
 import org.eclipse.core.databinding.beans.PojoObservables;
 import org.eclipse.core.databinding.observable.Realm;
 import org.eclipse.core.databinding.observable.list.IObservableList;
@@ -78,7 +79,7 @@ public class ModuleListe {
 	protected void createContents() {
 		shellModul=new Shell();
 		shellModul.setBackground(SWTResourceManager.getColor(255, 255, 255));
-		shellModul.setSize(647, 591);
+		shellModul.setSize(649, 591);
 		shellModul.setLayout(new RowLayout(SWT.HORIZONTAL));
 		
 		SashForm buttonBar = new SashForm(shellModul, SWT.BORDER | SWT.SMOOTH);
@@ -134,7 +135,7 @@ public class ModuleListe {
 		
 		
 		TableColumn tblclmnCalculMode = new TableColumn(ModulTable, SWT.NONE);
-		tblclmnCalculMode.setWidth(40);
+		tblclmnCalculMode.setWidth(80);
 		tblclmnCalculMode.setText("Mode");
 		
 		TableColumn tblclmnDispalyOrder = new TableColumn(ModulTable, SWT.NONE);
@@ -142,7 +143,7 @@ public class ModuleListe {
 		tblclmnDispalyOrder.setText("Order");
 		
 		TableColumn tblclmnForfaitPercentage = new TableColumn(ModulTable, SWT.NONE);
-		tblclmnForfaitPercentage.setWidth(80);
+		tblclmnForfaitPercentage.setWidth(40);
 		tblclmnForfaitPercentage.setText("Fft/Pct");
 		
 		TableColumn tblclmnModulCategory = new TableColumn(ModulTable, SWT.NONE);
@@ -162,7 +163,7 @@ public class ModuleListe {
 		tblclmnModulLabel.setText("Label");
 		
 		TableColumn tblclmnModulPrice = new TableColumn(ModulTable, SWT.NONE);
-		tblclmnModulPrice.setWidth(40);
+		tblclmnModulPrice.setWidth(80);
 		tblclmnModulPrice.setText("Price");
 		
 		TableColumn tblclmnModulScope = new TableColumn(ModulTable, SWT.NONE);
@@ -246,14 +247,13 @@ public class ModuleListe {
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
 		ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
+		Modulviewer_1.setContentProvider(listContentProvider);
 		//
 		IObservableMap[] observeMaps = PojoObservables.observeMaps(listContentProvider.getKnownElements(), Modul.class, new String[]{"calculmode", "displayorder", "forfaitpercentage", "modulcategory", "modulfournisseur", "modulid", "modullabel", "modulprice", "modulscope"});
 		Modulviewer_1.setLabelProvider(new ObservableMapLabelProvider(observeMaps));		
-		Modulviewer_1.setContentProvider(listContentProvider);
-		
-		//
-		IObservableList ModulObserveList = BeanProperties.list("ModulModel").observe(m_modulmodels);
-		
+
+       //
+		IObservableList ModulObserveList = BeanProperties.list("m_moduls").observe(m_modulmodels);		
 		Modulviewer_1.setInput(ModulObserveList);
 		//
 /*		IObservableValue observeSingleSelectionModulviewer_1 = ViewerProperties.singleSelection().observe(Modulviewer_1);
@@ -291,6 +291,7 @@ public class ModuleListe {
 		Display.setAppName(APP_NAME);
 		shellModul.open();
 		shellModul.layout();
+		Modulviewer_1.refresh();
 		while (!shellModul.isDisposed()) {
 			if (!display.readAndDispatch())
 				display.sleep();
