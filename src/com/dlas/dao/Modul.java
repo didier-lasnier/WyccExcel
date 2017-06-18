@@ -23,7 +23,7 @@ public class Modul {
 	@Column(name = "MODUL_LABEL")
 	private String modullabel;
 	@Column(name = "MODUL_PRICE")
-	private String modulprice;
+	private Float modulprice;
 	@Column(name = "MODUL_SCOPE")
 	private String modulscope;
 	@Column(name = "FORFAIT_PERCENTAGE")
@@ -35,7 +35,7 @@ public class Modul {
 	@Column(name = "MODULE_CATEGORY")
 	private String modulcategory;
 
-	public Modul(long modulid, String modulfournisseur, String modullabel, String modulprice, String modulscope,
+	public Modul(long modulid, String modulfournisseur, String modullabel, Float modulprice, String modulscope,
 			int forfaitpercentage, String calculmode, String dispalyorder, String modulcategory) {
 		super();
 		this.modulid = modulid;
@@ -49,7 +49,7 @@ public class Modul {
 		this.modulcategory = modulcategory;
 	}
 
-	public Modul(long modulid, String modulfournisseur, String modullabel, String modulprice, String modulscope,
+	public Modul(long modulid, String modulfournisseur, String modullabel, Float modulprice, String modulscope,
 			int forfaitpercentage, String calculmode, String dispalyorder) {
 		super();
 		this.modulid = modulid;
@@ -91,7 +91,7 @@ public class Modul {
 	/**
 	 * @return the modulprice
 	 */
-	public String getModulprice() {
+	public Float getModulprice() {
 		return modulprice;
 	}
 
@@ -130,7 +130,7 @@ public class Modul {
 	 * @param modulprice
 	 *            the modulprice to set
 	 */
-	public void setModulprice(String modulprice) {
+	public void setModulprice(Float modulprice) {
 		this.modulprice = modulprice;
 	}
 

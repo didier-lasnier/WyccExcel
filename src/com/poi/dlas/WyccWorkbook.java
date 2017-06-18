@@ -458,7 +458,7 @@ public class WyccWorkbook  extends JPanel {
 				try {
 					if( modul!=null) {
 						// en fonction du mode de calcul on recupére la valeur de 
-						Amount=Float.parseFloat(modul.getModulprice());
+						Amount=modul.getModulprice();//Float.parseFloat();
 					}
 					else { Amount= 0f;}
 					
@@ -858,7 +858,7 @@ public class WyccWorkbook  extends JPanel {
 				Float Amount;
 				try {
 					if( modul!=null) {
-						Amount=Float.parseFloat(modul.getModulprice());
+						Amount=modul.getModulprice();//Float.parseFloat(modul.getModulprice());
 					}
 					else { Amount= 0f;}
 					
@@ -946,7 +946,7 @@ public class WyccWorkbook  extends JPanel {
 						if (modul.getCalculmode().equals("MONTHLY")) {
 							lavaleur = event.getValeurcell();
 						} else if (modul.getCalculmode().equals("DAILY")) {
-							lavaleur = modul.getModulprice();// valuecell;
+							lavaleur = modul.getModulprice().toString();// valuecell;
 							float myfloat = Float.parseFloat(lavaleur);
 							cell.setCellValue(myfloat);
 						}
@@ -968,11 +968,11 @@ public class WyccWorkbook  extends JPanel {
 						}
 					} else if (nocol == (StartColumnformule+9 + (OffsetColumn * (itera - 1)))) {
 						if (modul.getCalculmode().equals("MONTHLY")) {
-							lavaleur = modul.getModulprice();// valuecell;
+							lavaleur = modul.getModulprice().toString();// valuecell;
 							float myfloat = Float.parseFloat(lavaleur);
 							cell.setCellValue(myfloat);
 						} else if (modul.getCalculmode().equals("DAILY")) {
-							lavaleur = modul.getModulprice();// valuecell;
+							lavaleur = modul.getModulprice().toString();// valuecell;
 							float myfloat = Float.parseFloat(lavaleur);
 							cell.setCellValue(myfloat);
 						}
@@ -1440,7 +1440,7 @@ public class WyccWorkbook  extends JPanel {
 						try {
 							if( modul!=null) {
 								// en fonction du mode de calcul on recupére la valeur de 
-								Amount=Float.parseFloat(modul.getModulprice());
+								Amount=modul.getModulprice();//Float.parseFloat(modul.getModulprice());
 							}
 							else { Amount= 0f;}
 							

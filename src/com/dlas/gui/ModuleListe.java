@@ -19,6 +19,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.jface.databinding.swt.SWTObservables;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
+import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
@@ -43,6 +44,7 @@ import org.hibernate.query.Query;
 
 import com.dlas.dao.Modul;
 import com.dlas.dao.ObjectDao;
+import com.dlas.gui.EcranAccueil.ViewerUpdateValueStrategy;
 import com.dlas.gui.model.ModulModel;
 import org.eclipse.swt.layout.GridLayout;
 
@@ -255,12 +257,16 @@ public class ModuleListe {
        //
 		IObservableList ModulObserveList = BeanProperties.list("m_moduls").observe(m_modulmodels);		
 		Modulviewer_1.setInput(ModulObserveList);
+		
 		//
-/*		IObservableValue observeSingleSelectionModulviewer_1 = ViewerProperties.singleSelection().observe(Modulviewer_1);
-		IObservableValue benefitsViewermodulfournisseurObserveDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewer_1, "modulfournisseur", String.class);
 
-		IObservableValue modulfournisseurTextObserveValue = SWTObservables.observeText(txtfournisseur, SWT.Modify);
-		bindingContext.bindValue(benefitsViewermodulfournisseurObserveDetailValue, modulfournisseurTextObserveValue, null, null);*/
+		IObservableValue observeSingleSelectionModulviewer = ViewerProperties.singleSelection().observe(Modulviewer_1);
+		IObservableValue modulviewercalculmodeObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewer,"calculmode",String.class);
+		IObservableValue textCalculmodeTextObserveValue = SWTObservables.observeText(txtcalculmode,SWT.Modify);
+		bindingContext.bindValue(modulviewercalculmodeObservableDetailValue, textCalculmodeTextObserveValue, null, new ViewerUpdateValueStrategy());
+
+	//ObservableValuecalculmode(  Modulviewer_1,bindingContext ,"calculmode",txtcalculmode );
+			
 		//
 		
 
@@ -311,8 +317,7 @@ public class ModuleListe {
 		ObjectDao myobj = new ObjectDao();
 		Session lasession = myobj.getSessionDao();
 		lasession.beginTransaction();
-		Query query = lasession.createQuery("from Modul");
-		
+		Query query = lasession.createQuery("from Modul");		
 		List<Modul> resultdistinct = query.list();
 		lasession.getTransaction().commit();
 		return resultdistinct;
@@ -349,4 +354,16 @@ public class ModuleListe {
 			}
 		});
 	}	
+
+
+    public void ObservableValuecalculmode( TableViewer modulviewer,DataBindingContext bindingContext,String attr,Text displayzone ){
+		IObservableValue observeSingleSelectionModulviewer = ViewerProperties.singleSelection().observe(modulviewer);
+		IObservableValue modulviewercalculmodeObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewer,attr,String.class);
+		IObservableValue textCalculmodeTextObserveValue = SWTObservables.observeText(displayzone,SWT.Modify);
+		bindingContext.bindValue(modulviewercalculmodeObservableDetailValue, textCalculmodeTextObserveValue, null, new ViewerUpdateValueStrategy());
+	
+    }
+
+
 }
+
