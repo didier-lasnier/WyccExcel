@@ -33,14 +33,19 @@ public class MenuAccueil {
 	final Menu filemenu = new Menu(s, SWT.DROP_DOWN);
 	file.setMenu(filemenu);
 	final MenuItem openItem = new MenuItem(filemenu, SWT.PUSH);
-	openItem.setText("&Open Csv file\tCTRL+O");
+	openItem.setText("&Module\tCTRL+O");
 	openItem.setAccelerator(SWT.CTRL + 'O');
-	final MenuItem saveItem = new MenuItem(filemenu, SWT.PUSH);
-	saveItem.setText("&Save Invoice file\tCTRL+S");
-	saveItem.setAccelerator(SWT.CTRL + 'S');
-	MenuItem readItem = new MenuItem(filemenu, SWT.PUSH);
-	readItem.setText("&Read formula\tCTRL+B");
-	readItem.setAccelerator(SWT.CTRL + 'B');
+//	final MenuItem saveItem = new MenuItem(filemenu, SWT.PUSH);
+//	saveItem.setText("&Save Invoice file\tCTRL+S");
+//	saveItem.setAccelerator(SWT.CTRL + 'S');
+//	saveItem.addSelectionListener(new SaveItem(s,StartD,EndD));	
+	
+//	MenuItem readItem = new MenuItem(filemenu, SWT.PUSH);
+//	readItem.setText("&Read formula\tCTRL+B");
+//	readItem.setAccelerator(SWT.CTRL + 'B');
+//	readItem.addSelectionListener(new ReadItem(s,StartD,EndD));
+	
+	
 	final MenuItem separator = new MenuItem(filemenu, SWT.SEPARATOR);
 	final MenuItem exitItem = new MenuItem(filemenu, SWT.PUSH);
 	exitItem.setText("&Quit\tCRTL+Q");
@@ -49,9 +54,9 @@ public class MenuAccueil {
 	OpenItem oitem = new OpenItem(d,s);
 	openItem.addSelectionListener(oitem);
 	
-	saveItem.addSelectionListener(new SaveItem(s,StartD,EndD));
+
 	
-	readItem.addSelectionListener(new ReadItem(s,StartD,EndD));
+
 	
     exitItem.addSelectionListener(new ExitItem(s,d));
     

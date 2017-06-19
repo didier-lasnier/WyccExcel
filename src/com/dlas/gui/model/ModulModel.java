@@ -30,9 +30,25 @@ public class ModulModel extends AbstractModelObject {
 		firePropertyChange("modulmodel", null, m_moduls);
 	}
 	
-	public void removeBenefit(Modul modul) {
+	public void addOneModul(Shell s, Modul modul, ModuleListe window){
+		m_moduls.add(modul);
+		
+		firePropertyChange("modulmodel", null, m_moduls);
+	}
+	
+	public void removeModul(Modul modul) {
 		m_moduls.remove(modul);
 		firePropertyChange("modulmodel", null, m_moduls);
+	}
+	
+	public void removeModulofIndex (int index) {
+		m_moduls.remove(index);
+	
+		firePropertyChange("modulmodel", null, m_moduls);
+	}
+	
+	public Integer getSize(){
+		return 	m_moduls.size();
 	}
 	
 	public List getM_moduls(){

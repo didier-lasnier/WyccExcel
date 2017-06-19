@@ -3,6 +3,7 @@ package com.dlas.gui;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLDecoder;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -20,6 +21,8 @@ import org.eclipse.jface.databinding.swt.SWTObservables;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
@@ -46,14 +49,17 @@ import com.dlas.dao.Modul;
 import com.dlas.dao.ObjectDao;
 import com.dlas.gui.EcranAccueil.ViewerUpdateValueStrategy;
 import com.dlas.gui.model.ModulModel;
+import com.dlas.gui.model.Benefit;
+import com.dlas.gui.model.IntegerToString;
 import org.eclipse.swt.layout.GridLayout;
 
 public class ModuleListe {
 	private DataBindingContext m_bindingContext;
-	private com.dlas.dao.Modul modul = new com.dlas.dao.Modul();
+	private Modul modul = new Modul();
 	//private static Display display = new Display();
 	private static Shell shellModul  ;
 	static  ModuleListe window ;
+		private TableViewer Modulviewer_1;
 	private Text txtmodulid;
 	private Text txtfournisseur;
 	private Text txtlabel;
@@ -65,12 +71,13 @@ public class ModuleListe {
 	private Table ModulTable;
     private TableViewer Modulviewer;
     private DataBindingContext m_modulcontext;
+    
 	private ModulModel m_modulmodels = new ModulModel();
 	protected static Shell shell;
 	private static String APP_NAME = "Wycc invoice";
-	private TableViewer Modulviewer_1;
+
 	private static Integer DisplayStatus =0;
-	
+	private List<Modul> deletemodul =new ArrayList();
 	public ModuleListe(){
 
 	}
@@ -90,16 +97,36 @@ public class ModuleListe {
 		Composite btnrecord = new Composite(buttonBar, SWT.NONE);
 		btnrecord.setLayout(new FillLayout(SWT.HORIZONTAL));
 		
-		Button btnModifyRecord = new Button(btnrecord, SWT.NONE);
-		btnModifyRecord.setText("Modify");
-		
 		Button btnDeleteRecord = new Button(btnrecord, SWT.NONE);
+		btnDeleteRecord.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				int index = Modulviewer_1.getTable().getSelectionIndex();
+				if (index >=0){
+				Modul lemodultodel=(Modul) Modulviewer_1.getElementAt(index);
+				deletemodul.add(lemodultodel);
+				m_modulmodels.removeModulofIndex(index);
+				}
+				Modulviewer_1.refresh();
+			}
+		});
 		btnDeleteRecord.setText("Delete");
 		
 		Button btnAddRecord = new Button(btnrecord, SWT.NONE);
 		btnAddRecord.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
+				Modul newmodul=new Modul();
+			
+				m_modulmodels.addOneModul(shellModul, newmodul, window);
+				Modulviewer_1.refresh();
+				
+				Integer selection= m_modulmodels.getSize()-1;			
+				newmodul=(Modul) Modulviewer_1.getElementAt(selection);
+				ISelection Sel = (ISelection) new StructuredSelection(Modulviewer_1.getElementAt(selection));
+				Modulviewer_1.setSelection(Sel,true);
+				
+
 			}
 		});
 		btnAddRecord.setText("Add");
@@ -120,6 +147,29 @@ public class ModuleListe {
 		btnCancel.setText("Cancel (close)");
 		
 		Button btnSave = new Button(btncollection, SWT.NONE);
+		btnSave.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				//shellModul.close();
+				// We have to save the modification
+				ObjectDao myobj = new ObjectDao();
+				Session lasession = myobj.getSessionDao();
+				lasession.beginTransaction(); 
+				 for ( Modul modul : (List<Modul>) m_modulmodels.getM_moduls() ){
+					 lasession.saveOrUpdate(modul);
+				 }
+				 if (deletemodul!= null) {
+					 for ( Modul modul : deletemodul){
+						 lasession.delete(modul);
+					 }
+				 }
+				  lasession.flush();
+				  lasession.getTransaction().commit(); 
+				  lasession.close();
+				
+				shellModul.getShell().setVisible(false);
+			}
+		});
 		btnSave.setBounds(176, 0, 127, 26);
 		btnSave.setText("Save (and close)");
 		//buttonBar.setWeights(new int[] {1, 1, 1});
@@ -144,7 +194,7 @@ public class ModuleListe {
 		tblclmnDispalyOrder.setWidth(40);
 		tblclmnDispalyOrder.setText("Order");
 		
-		TableColumn tblclmnForfaitPercentage = new TableColumn(ModulTable, SWT.NONE);
+		TableColumn tblclmnForfaitPercentage = new TableColumn(ModulTable, SWT.RIGHT);
 		tblclmnForfaitPercentage.setWidth(40);
 		tblclmnForfaitPercentage.setText("Fft/Pct");
 		
@@ -164,7 +214,7 @@ public class ModuleListe {
 		tblclmnModulLabel.setWidth(120);
 		tblclmnModulLabel.setText("Label");
 		
-		TableColumn tblclmnModulPrice = new TableColumn(ModulTable, SWT.NONE);
+		TableColumn tblclmnModulPrice = new TableColumn(ModulTable, SWT.RIGHT);
 		tblclmnModulPrice.setWidth(80);
 		tblclmnModulPrice.setText("Price");
 		
@@ -178,32 +228,32 @@ public class ModuleListe {
 		recordcomposite.setLayoutData(new RowData(633, 225));
 		
 		Label lblModulId = new Label(recordcomposite, SWT.NONE);
-		lblModulId.setBounds(10, 10, 59, 14);
+		lblModulId.setBounds(38, 207, 59, 14);
 		lblModulId.setText("Modul id");
 		
 		Label lblSupplier = new Label(recordcomposite, SWT.NONE);
-		lblSupplier.setBounds(10, 64, 59, 14);
+		lblSupplier.setBounds(38, 6, 59, 14);
 		lblSupplier.setText("Supplier:");
 		
 		Label lblFormula = new Label(recordcomposite, SWT.NONE);
-		lblFormula.setBounds(188, 10, 59, 14);
+		lblFormula.setBounds(38, 30, 59, 14);
 		lblFormula.setText("Formula:");
 		
 		Label lblCategory = new Label(recordcomposite, SWT.NONE);
-		lblCategory.setBounds(10, 44, 59, 14);
+		lblCategory.setBounds(38, 60, 59, 14);
 		lblCategory.setText("Category:");
 		
-		txtmodulid = new Text(recordcomposite, SWT.BORDER);
-		txtmodulid.setBounds(96, 10, 86, 19);
+		txtmodulid = new Text(recordcomposite, SWT.BORDER | SWT.READ_ONLY);
+		txtmodulid.setBounds(124, 207, 86, 19);
 		
 		txtfournisseur = new Text(recordcomposite, SWT.BORDER);
-		txtfournisseur.setBounds(96, 64, 301, 19);
+		txtfournisseur.setBounds(103, 0, 501, 26);
 		
 		txtlabel = new Text(recordcomposite, SWT.BORDER);
-		txtlabel.setBounds(253, 10, 301, 19);
+		txtlabel.setBounds(103, 28, 501, 26);
 		
 		txtcategory = new Text(recordcomposite, SWT.BORDER);
-		txtcategory.setBounds(96, 39, 301, 19);
+		txtcategory.setBounds(103, 58, 501, 26);
 		
 		Label lblCalculMode = new Label(recordcomposite, SWT.NONE);
 		lblCalculMode.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
@@ -215,30 +265,30 @@ public class ModuleListe {
 		lblPrice.setBounds(60, 153, 59, 14);
 		lblPrice.setText("Price:");
 		
-		Label lblScope = new Label(recordcomposite, SWT.NONE);
-		lblScope.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblScope.setBounds(331, 121, 59, 14);
-		lblScope.setText("Scope:");
-		
-		Label lblForfaitpercentage = new Label(recordcomposite, SWT.NONE);
-		lblForfaitpercentage.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblForfaitpercentage.setBounds(331, 153, 113, 14);
-		lblForfaitpercentage.setText("Forfait/percentage:");
-		
 		txtcalculmode = new Text(recordcomposite, SWT.BORDER);
-		txtcalculmode.setBounds(183, 119, 105, 19);
+		txtcalculmode.setBounds(183, 115, 105, 26);
 		
-		txtprice = new Text(recordcomposite, SWT.BORDER);
-		txtprice.setBounds(183, 151, 105, 19);
-		
-		txtscope = new Text(recordcomposite, SWT.BORDER);
-		txtscope.setBounds(396, 119, 147, 19);
-		
-		txtforfait = new Text(recordcomposite, SWT.BORDER);
-		txtforfait.setBounds(454, 151, 89, 19);
+		txtprice = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
+		txtprice.setBounds(183, 151, 105, 26);
 		
 		Group group = new Group(recordcomposite, SWT.NONE);
-		group.setBounds(50, 108, 505, 93);
+		group.setBounds(10, 90, 613, 111);
+		
+		txtscope = new Text(group, SWT.BORDER);
+		txtscope.setBounds(383, 25, 147, 26);
+		
+		txtforfait = new Text(group, SWT.BORDER | SWT.RIGHT);
+		txtforfait.setBounds(441, 61, 89, 26);
+		
+		Label lblScope = new Label(group, SWT.NONE);
+		lblScope.setBounds(318, 31, 59, 14);
+		lblScope.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+		lblScope.setText("Scope:");
+		
+		Label lblForfaitpercentage = new Label(group, SWT.NONE);
+		lblForfaitpercentage.setBounds(318, 67, 113, 14);
+		lblForfaitpercentage.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+		lblForfaitpercentage.setText("Forfait/percentage:");
 
 		m_modulcontext= initDataBindings();
 	}
@@ -265,31 +315,57 @@ public class ModuleListe {
 
 	
 		IObservableValue observeSingleSelectionModulviewermodulid = ViewerProperties.singleSelection().observe(Modulviewer_1);
-		IObservableValue modulviewermodulidObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewermodulid,"modulid",String.class);
+		IObservableValue modulviewermodulidObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewermodulid,"modulid",Integer.class);
 		IObservableValue textmodulidTextObserveValue = SWTObservables.observeText(txtmodulid,SWT.Modify);
 		bindingContext.bindValue(modulviewermodulidObservableDetailValue, textmodulidTextObserveValue, null, new ViewerUpdateValueStrategy());
 		
-		/*			
+//		UpdateValueStrategy strategy1 =  new ViewerUpdateValueStrategy();
+//		strategy1.setConverter(new com.dlas.gui.model.StringToInteger());
+//		
+//		UpdateValueStrategy strategy2 =  new ViewerUpdateValueStrategy();
+//		strategy2.setConverter(new com.dlas.gui.model.IntegerToString());
+		
 		IObservableValue observeSingleSelectionModulviewerforfaitpercentage = ViewerProperties.singleSelection().observe(Modulviewer_1);
-		IObservableValue modulviewerforfaitpercentageObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewerforfaitpercentage,"forfaitpercentage",String.class);
+		IObservableValue modulviewerforfaitpercentageObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewerforfaitpercentage,"forfaitpercentage",Integer.class);
 		IObservableValue textforfaitpercentageTextObserveValue = SWTObservables.observeText(txtforfait,SWT.Modify);
 		bindingContext.bindValue(modulviewerforfaitpercentageObservableDetailValue, textforfaitpercentageTextObserveValue, null, new ViewerUpdateValueStrategy());
 		
-*/		
+		IObservableValue observeSingleSelectionModulviewermodulfournisseur = ViewerProperties.singleSelection().observe(Modulviewer_1);
+		IObservableValue modulviewermodulfournisseurObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewermodulfournisseur,"modulfournisseur",String.class);
+		IObservableValue textmodulfournisseurTextObserveValue = SWTObservables.observeText(txtfournisseur,SWT.Modify);
+		bindingContext.bindValue(modulviewermodulfournisseurObservableDetailValue, textmodulfournisseurTextObserveValue, null, new ViewerUpdateValueStrategy());
+		
+		
+		IObservableValue observeSingleSelectionModulviewermodulcategory = ViewerProperties.singleSelection().observe(Modulviewer_1);
+		IObservableValue modulviewermodulcategoryObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewermodulcategory,"modulcategory",String.class);
+		IObservableValue textmodulcategoryTextObserveValue = SWTObservables.observeText(txtcategory,SWT.Modify);
+		bindingContext.bindValue(modulviewermodulcategoryObservableDetailValue, textmodulcategoryTextObserveValue, null, new ViewerUpdateValueStrategy());
+		
+		IObservableValue observeSingleSelectionModulviewermodullabel = ViewerProperties.singleSelection().observe(Modulviewer_1);
+		IObservableValue modulviewermodullabelObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewermodullabel,"modullabel",String.class);
+		IObservableValue textmodullabelTextObserveValue = SWTObservables.observeText(txtlabel,SWT.Modify);
+		bindingContext.bindValue(modulviewermodullabelObservableDetailValue, textmodullabelTextObserveValue, null, new ViewerUpdateValueStrategy());
+		
+		IObservableValue observeSingleSelectionModulviewermodulscope = ViewerProperties.singleSelection().observe(Modulviewer_1);
+		IObservableValue modulviewermodulscopeObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewermodulscope,"modulscope",String.class);
+		IObservableValue textmodulscopeTextObserveValue = SWTObservables.observeText(txtscope,SWT.Modify);
+		bindingContext.bindValue(modulviewermodulscopeObservableDetailValue, textmodulscopeTextObserveValue, null, new ViewerUpdateValueStrategy());
+		
+		IObservableValue observeSingleSelectionModulviewermodulprice = ViewerProperties.singleSelection().observe(Modulviewer_1);
+		IObservableValue modulviewermodulpriceObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewermodulprice,"modulprice",Float.class);
+		IObservableValue textmodulpriceTextObserveValue = SWTObservables.observeText(txtprice,SWT.Modify);
+		bindingContext.bindValue(modulviewermodulpriceObservableDetailValue, textmodulpriceTextObserveValue, null, new ViewerUpdateValueStrategy());
+		
+		
 
 		
 /*
 		ObservableValuecalculmode( Modulviewer_1,bindingContext,"modulfournisseur",txtfournisseur );
-	
 		ObservableValuecalculmode( Modulviewer_1,bindingContext,"modulcategory",txtcategory );
 		ObservableValuecalculmode( Modulviewer_1,bindingContext,"modullabel",txtlabel );
 		ObservableValuecalculmode( Modulviewer_1,bindingContext,"modulscope",txtscope );
 		ObservableValuecalculmode( Modulviewer_1,bindingContext,"modulprice",txtprice );
-		*/
-/*		IObservableValue observeSingleSelectionModulviewerdisplayorder = ViewerProperties.singleSelection().observe(Modulviewer_1);
-		IObservableValue modulviewerdisplayorderObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionModulviewer,"displayorder",String.class);
-		IObservableValue textdisplayorderTextObserveValue = SWTObservables.observeText(txtdisplayorder,SWT.Modify);
-		bindingContext.bindValue(modulviewerdisplayorderObservableDetailValue, textdisplayorderTextObserveValue, null, new ViewerUpdateValueStrategy());*/
+*/
 		
 		//
 		

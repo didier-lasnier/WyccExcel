@@ -18,7 +18,7 @@ public class Modul extends AbstractModelObject{
 
 	@Id
 	@Column(name = "MODUL_ID")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long modulid;
 	@Column(name = "MODUL_FOURNISSEUR")
 	private String modulfournisseur;
