@@ -7,6 +7,14 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.log4j.Appender;
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+import org.apache.log4j.PropertyConfigurator;
+
 import javax.swing.JProgressBar;
 
 import java.io.UnsupportedEncodingException;
@@ -133,8 +141,58 @@ public class EcranAccueil {
 	public void setFilepath(String filepath) {
 		this.filepath = filepath;
 	}
-
+	
+	Logger logger = Logger.getLogger(EcranAccueil.class);
+	
+	
 	public static void main(String[] args) {
+		/*
+		 *  On détermine le dossier d'execution du jar
+		 * 
+		 */
+		URL url = EcranAccueil.class.getProtectionDomain().getCodeSource().getLocation(); //Gets the path
+	  	String jarPath = null;
+			try {
+				jarPath = URLDecoder.decode(url.getFile(), "UTF-8"); //Should fix it to be read correctly by the system
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			}
+			
+			appDir = new File(jarPath).getParentFile().getPath(); //Path of the jar
+			appDir = appDir + File.separator;
+
+		 // ======================================================
+	     // Create appender for log4j
+	     // ======================================================
+		    String log4jConfigFile = appDir  + File.separator +"config"+ File.separator + "log4j.properties";
+	        PropertyConfigurator.configure(log4jConfigFile);		
+/*		
+		 // creates pattern layout
+        PatternLayout layout = new PatternLayout();
+        String conversionPattern = "%-7p %d [%t] %c %x - %m%n";
+        layout.setConversionPattern(conversionPattern);
+ 
+        // creates console appender
+        ConsoleAppender consoleAppender = new ConsoleAppender();
+        consoleAppender.setLayout(layout);
+        consoleAppender.activateOptions();
+ 
+        // creates file appender
+        FileAppender fileAppender = new FileAppender();
+        //fileAppender.setFile("applog3.txt");
+        fileAppender.setLayout(layout);
+        fileAppender.activateOptions();
+ 
+        // configures the root logger
+        Logger rootLogger = Logger.getRootLogger();
+        rootLogger.setLevel(Level.DEBUG);
+        rootLogger.addAppender(consoleAppender);
+        rootLogger.addAppender(fileAppender);
+ 
+*/        // creates a custom logger and log messages
+      
+        
+		
 	     // ======================================================
 	     // Create the main Display object that represents the UI
 	     // subsystem and contains the single UI handling thread
@@ -179,20 +237,6 @@ public class EcranAccueil {
 	     
 		 shell.setBackground(SWTResourceManager.getColor(255, 255, 255));
 		 shell.setSize(638, 382);
-		/*
-		 *  On détermine le dossier d'execution du jar
-		 * 
-		 */
-		URL url = EcranAccueil.class.getProtectionDomain().getCodeSource().getLocation(); //Gets the path
-	  	String jarPath = null;
-			try {
-				jarPath = URLDecoder.decode(url.getFile(), "UTF-8"); //Should fix it to be read correctly by the system
-			} catch (UnsupportedEncodingException e) {
-				e.printStackTrace();
-			}
-			
-			appDir = new File(jarPath).getParentFile().getPath(); //Path of the jar
-			appDir = appDir + File.separator;
 	    
 		Menu menusy=display.getSystemMenu();
      	Realm.runWithDefault(SWTObservables.getRealm(display), new Runnable() {

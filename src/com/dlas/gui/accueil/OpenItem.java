@@ -2,6 +2,7 @@ package com.dlas.gui.accueil;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
@@ -96,18 +97,23 @@ public class OpenItem implements SelectionListener {
 	}
 	@Override
 	public void widgetSelected(SelectionEvent event) {
-		widgetOpen(s,StartD,EndD);
+		try {
+			widgetOpen(s,StartD,EndD);
+		} catch (InvocationTargetException | InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void widgetDefaultSelected(SelectionEvent event) {
 	}
 
-	public void widgetSelectedBtn(SelectionEvent event) {
+	public void widgetSelectedBtn(SelectionEvent event) throws InvocationTargetException, InterruptedException {
 		widgetOpen( s,StartD,  EndD);
 	}
 	
-	public void widgetOpen(Shell s,DateTime StartD, DateTime EndD){
+	public void widgetOpen(Shell s,DateTime StartD, DateTime EndD) throws InvocationTargetException, InterruptedException{
 		this.setCountSelectedItem(this.getCountSelectedItem()+1);
 		ModuleListe moduldia = new ModuleListe () ;	
 		moduldia.setDefaultValues(d);

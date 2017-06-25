@@ -1,8 +1,10 @@
 package com.dlas.gui;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.net.URLDecoder;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,11 +18,14 @@ import org.eclipse.core.databinding.observable.Realm;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.jface.databinding.swt.SWTObservables;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
+import org.eclipse.jface.dialogs.ProgressMonitorDialog;
+import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableViewer;
@@ -47,8 +52,12 @@ import org.hibernate.query.Query;
 
 import com.dlas.dao.Modul;
 import com.dlas.dao.ObjectDao;
+import com.dlas.dao.h2db;
+import com.dlas.dao.hsqltext;
 import com.dlas.gui.EcranAccueil.ViewerUpdateValueStrategy;
 import com.dlas.gui.model.ModulModel;
+import com.poi.actionuser.Actionuser;
+import com.poi.actionuser.Actionuser.ProgressBarDb;
 import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.IntegerToString;
 import org.eclipse.swt.layout.GridLayout;
@@ -87,12 +96,14 @@ public class ModuleListe {
 	 */
 	protected void createContents() {
 		shellModul=new Shell();
-		shellModul.setBackground(SWTResourceManager.getColor(255, 255, 255));
-		shellModul.setSize(649, 591);
-		shellModul.setLayout(new RowLayout(SWT.HORIZONTAL));
+		shellModul.setBackground(SWTResourceManager.getColor(245, 255, 250));
+		shellModul.setSize(753, 562);
+		RowLayout rl_shellModul = new RowLayout(SWT.HORIZONTAL);
+		rl_shellModul.marginLeft = 15;
+		shellModul.setLayout(rl_shellModul);
 		
 		SashForm buttonBar = new SashForm(shellModul, SWT.BORDER | SWT.SMOOTH);
-		buttonBar.setLayoutData(new RowData(633, SWT.DEFAULT));
+		buttonBar.setLayoutData(new RowData(722, SWT.DEFAULT));
 		
 		Composite btnrecord = new Composite(buttonBar, SWT.NONE);
 		btnrecord.setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -175,14 +186,15 @@ public class ModuleListe {
 		//buttonBar.setWeights(new int[] {1, 1, 1});
 		
 		SashForm Tablearea = new SashForm(shellModul, SWT.VERTICAL);
-		Tablearea.setLayoutData(new RowData(636, 228));
+		Tablearea.setLayoutData(new RowData(722, 228));
 		
 		Composite tableareacomposite = new Composite(Tablearea, SWT.NONE);
 		Modulviewer_1 = new TableViewer(tableareacomposite, SWT.FULL_SELECTION);
 		ModulTable = Modulviewer_1.getTable();
+		ModulTable.setLocation(0, 0);
 		ModulTable.setHeaderVisible(true);
 		ModulTable.setLinesVisible(true);
-		ModulTable.setSize(636, 218);
+		ModulTable.setSize(721, 218);
 		ModulTable.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 		
 		
@@ -225,7 +237,7 @@ public class ModuleListe {
 		Tablearea.setWeights(new int[] {1});
 		
 		Composite recordcomposite = new Composite(shellModul, SWT.BORDER);
-		recordcomposite.setLayoutData(new RowData(633, 225));
+		recordcomposite.setLayoutData(new RowData(722, 225));
 		
 		Label lblModulId = new Label(recordcomposite, SWT.NONE);
 		lblModulId.setBounds(38, 207, 59, 14);
@@ -243,7 +255,9 @@ public class ModuleListe {
 		lblCategory.setBounds(38, 60, 59, 14);
 		lblCategory.setText("Category:");
 		
-		txtmodulid = new Text(recordcomposite, SWT.BORDER | SWT.READ_ONLY);
+		txtmodulid = new Text(recordcomposite, SWT.READ_ONLY);
+		txtmodulid.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_BACKGROUND));
+		txtmodulid.setEnabled(false);
 		txtmodulid.setBounds(124, 207, 86, 19);
 		
 		txtfournisseur = new Text(recordcomposite, SWT.BORDER);
@@ -257,22 +271,22 @@ public class ModuleListe {
 		
 		Label lblCalculMode = new Label(recordcomposite, SWT.NONE);
 		lblCalculMode.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblCalculMode.setBounds(60, 121, 79, 14);
+		lblCalculMode.setBounds(82, 121, 79, 14);
 		lblCalculMode.setText("Calcul mode:");
 		
 		Label lblPrice = new Label(recordcomposite, SWT.NONE);
 		lblPrice.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblPrice.setBounds(60, 153, 59, 14);
+		lblPrice.setBounds(82, 153, 59, 14);
 		lblPrice.setText("Price:");
 		
 		txtcalculmode = new Text(recordcomposite, SWT.BORDER);
-		txtcalculmode.setBounds(183, 115, 105, 26);
+		txtcalculmode.setBounds(205, 115, 105, 26);
 		
 		txtprice = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
-		txtprice.setBounds(183, 151, 105, 26);
+		txtprice.setBounds(205, 151, 105, 26);
 		
 		Group group = new Group(recordcomposite, SWT.NONE);
-		group.setBounds(10, 90, 613, 111);
+		group.setBounds(76, 90, 550, 111);
 		
 		txtscope = new Text(group, SWT.BORDER);
 		txtscope.setBounds(383, 25, 147, 26);
@@ -405,11 +419,17 @@ public class ModuleListe {
 		return 0;
 	}	
 	
-	public void setDefaultValues(Display display) {
+	public void setDefaultValues(Display display) throws InvocationTargetException, InterruptedException {
 		window=this;
-		//logger.info("Window status :"+shellModul.getShell().getVisible());
-		List<Modul> templist= getListmodul();
-		m_modulmodels.addModuls(shellModul, templist, window);
+		
+//		List<Modul> templist= getListmodul();
+//		m_modulmodels.addModuls(shellModul, templist, window);
+		Shell shell = new Shell();
+		IRunnableWithProgress op = new ProgressBarDb("Database initialisation",shell, window);
+		
+		new ProgressMonitorDialog(shell).run(true, true, op);
+		shell.close();
+		
 	}
 		
 	public List<Modul> getListmodul() {
@@ -465,5 +485,37 @@ public class ModuleListe {
     }
 
 
+    public  class ProgressBarDb implements IRunnableWithProgress {
+		 private String       message;
+		 private Shell        shellModul;
+		 private ModuleListe  moduleliste;
+		 
+		 
+		public ProgressBarDb(String message,Shell        shellModul, ModuleListe  moduleliste){
+			
+           this.message       = message;
+           this.shellModul    = shellModul;
+           this.moduleliste   = moduleliste;
+           
+		}
+		@Override
+		public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+			    monitor.beginTask(message, IProgressMonitor.UNKNOWN);
+			    monitor.worked(1);
+				
+				
+			    List<Modul> templist= getListmodul();
+			  	m_modulmodels.addModuls(shellModul, templist, moduleliste);
+				monitor.worked(1);
+
+			 monitor.done();
+		}
+		
+	}
+
+ 
+    
+    
+    
 }
 
