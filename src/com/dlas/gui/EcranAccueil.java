@@ -7,6 +7,14 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.log4j.Appender;
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+import org.apache.log4j.PropertyConfigurator;
+
 import javax.swing.JProgressBar;
 
 import java.io.UnsupportedEncodingException;
@@ -60,6 +68,7 @@ import com.dlas.dao.BenefitDb;
 import com.dlas.gui.accueil.MenuAccueil;
 import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Companies;
+import com.dlas.windowmanager.WindowsManager;
 import com.poi.actionuser.Actionuser;
 import com.poi.actionuser.ReadFileXlsx;
 
@@ -67,12 +76,14 @@ import com.poi.actionuser.ReadFileXlsx;
 
 import com.dlas.gui.model.Benefits;
 import org.eclipse.swt.widgets.Menu;
+import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 
 //
 
 public class EcranAccueil {
+	
 	static  EcranAccueil window = new EcranAccueil();
 	private Button deleteCompanyButton;
 	private Button AggregateButton;
@@ -130,18 +141,11 @@ public class EcranAccueil {
 	public void setFilepath(String filepath) {
 		this.filepath = filepath;
 	}
-
+	
+	Logger logger = Logger.getLogger(EcranAccueil.class);
+	
+	
 	public static void main(String[] args) {
-		//final String APP_NAME = "Wycc invoice";
-
-		
-		
-		Display.setAppName(APP_NAME);
-		Display display = new Display();
-		d=display;
-		shell = new Shell();
-		shell.setBackground(SWTResourceManager.getColor(255, 255, 255));
-		shell.setSize(638, 382);
 		/*
 		 *  On détermine le dossier d'execution du jar
 		 * 
@@ -156,6 +160,83 @@ public class EcranAccueil {
 			
 			appDir = new File(jarPath).getParentFile().getPath(); //Path of the jar
 			appDir = appDir + File.separator;
+
+		 // ======================================================
+	     // Create appender for log4j
+	     // ======================================================
+		    String log4jConfigFile = appDir  + File.separator +"config"+ File.separator + "log4j.properties";
+	        PropertyConfigurator.configure(log4jConfigFile);		
+/*		
+		 // creates pattern layout
+        PatternLayout layout = new PatternLayout();
+        String conversionPattern = "%-7p %d [%t] %c %x - %m%n";
+        layout.setConversionPattern(conversionPattern);
+ 
+        // creates console appender
+        ConsoleAppender consoleAppender = new ConsoleAppender();
+        consoleAppender.setLayout(layout);
+        consoleAppender.activateOptions();
+ 
+        // creates file appender
+        FileAppender fileAppender = new FileAppender();
+        //fileAppender.setFile("applog3.txt");
+        fileAppender.setLayout(layout);
+        fileAppender.activateOptions();
+ 
+        // configures the root logger
+        Logger rootLogger = Logger.getRootLogger();
+        rootLogger.setLevel(Level.DEBUG);
+        rootLogger.addAppender(consoleAppender);
+        rootLogger.addAppender(fileAppender);
+ 
+*/        // creates a custom logger and log messages
+      
+        
+		
+	     // ======================================================
+	     // Create the main Display object that represents the UI
+	     // subsystem and contains the single UI handling thread
+	     // ======================================================
+	    
+		Display.setAppName(APP_NAME);
+		final Display display = Display.getDefault();
+		d=display;
+		 // ====================================================
+	     // create a shell for the main window from the Display
+	     // ====================================================
+	    shell = new Shell(display, SWT.CLOSE);
+	     // =====================
+	     // Set the Window Title
+	     // =====================
+	     shell.setText("Main Shell");
+	     
+	     // =============================================================
+	     // Register a listener for the Close event on the main Shell.
+	     // This disposes the Display which will cause the entire child
+	     // tree to dispose
+	     // =============================================================
+	     shell.addListener(SWT.Close, new Listener()
+	     {
+	        @Override
+	        public void handleEvent(Event event)
+	        {
+	        	MessageBox messageBox = new MessageBox(shell, SWT.ICON_QUESTION | SWT.YES | SWT.NO);					
+	    		messageBox.setMessage("Do you really want to exit? ");
+	    		messageBox.setText("Exiting Application");
+	    		int response = messageBox.open();
+	    		
+	    		if (response == SWT.YES){
+	    			shell.dispose();
+	    			d.dispose();
+	    			System.exit(0);
+	    		}
+
+	        }
+	     });
+	     
+	     
+		 shell.setBackground(SWTResourceManager.getColor(255, 255, 255));
+		 shell.setSize(638, 382);
 	    
 		Menu menusy=display.getSystemMenu();
      	Realm.runWithDefault(SWTObservables.getRealm(display), new Runnable() {
@@ -656,6 +737,7 @@ public class EcranAccueil {
 			return super.doSet(observableValue, value);
 		}
 	}
+	
 	protected DataBindingContext initDataBindings() {
 		DataBindingContext bindingContext = new DataBindingContext();
 		//

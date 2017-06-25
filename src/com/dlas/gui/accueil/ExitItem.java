@@ -32,7 +32,7 @@ public class ExitItem implements SelectionListener {
 		int response = messageBox.open();
 		
 		if (response == SWT.YES){
-			s.close();
+			s.dispose();
 			d.dispose();
 			System.exit(0);
 		}

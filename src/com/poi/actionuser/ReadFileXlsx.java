@@ -7,11 +7,15 @@ import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.eclipse.swt.widgets.Monitor;
+
 import org.apache.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
+import org.eclipse.swt.graphics.Rectangle;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.wb.swt.SWTResourceManager;
 
@@ -81,14 +85,24 @@ public class ReadFileXlsx {
 	public void generexls(String filepath,String rootdirDb) throws InvalidFormatException, SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InterruptedException {
 		WyccWorkbook wyccwrkbk = new WyccWorkbook();	
 		Shell shell = new Shell();
-		shell.setSize(100, 400);
+		final Display display = Display.getCurrent();		
+		shell.setSize(50, 100);
+		
+		Monitor primary = display.getPrimaryMonitor();
+	    Rectangle bounds = primary.getBounds();
+	    Rectangle rect = shell.getBounds();
+	    
+	    int x = bounds.x + (bounds.width - rect.width) / 2;
+	    int y = bounds.y + (bounds.height - rect.height) / 2;
+	    
+	    shell.setLocation(x, y);
 		IRunnableWithProgress op1 = new WyccWorkbook.ProgressBarDb("Database initialisation", wyccwrkbk);
 		ProgressMonitorDialog porgressbar=new ProgressMonitorDialog(shell);	
+		
 		porgressbar.run(true, true, op1);
-//		shell.close();
-//		
-//		 shell = new Shell();
-		 shell.setSize(100, 400);
+
+		 shell.setSize(50, 100);
+
 		result =wyccwrkbk.getResultdistinct();
 		
 		IRunnableWithProgress op = new WyccWorkbook.ProgressBarBeneficiaries(result.size(),"Processing Beneficiaries ",wyccwrkbk,filepath,rootdirDb,result);

@@ -184,7 +184,9 @@ public class Actionuser {
 //			PreparedStatement prepStmt = dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt());
 			Shell shell = new Shell();
 			IRunnableWithProgress op = new ProgressBarDb("Database initialisation",dbconn, this);
+			
 			new ProgressMonitorDialog(shell).run(true, true, op);
+			
 			shell.close();
 			logger.info("Select file csv : " + theCSVfile.getAbsolutePath());
 			CsvTools csfile = new CsvTools();
@@ -264,14 +266,16 @@ public class Actionuser {
 		 
 		 
 		public ProgressBarDb(String message,h2db dbconn, Actionuser actionuser){
-			
+		
            this.message      = message;
            this.dbconn       = dbconn;
            this.actionuser   = actionuser;
-           
+        
+          
 		}
 		@Override
 		public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+				
 			    monitor.beginTask(message, IProgressMonitor.UNKNOWN);
 			    monitor.worked(1);
 				hsqltext sqlstmt = new hsqltext();
@@ -288,4 +292,5 @@ public class Actionuser {
 		}
 		
 	}
+
 }
