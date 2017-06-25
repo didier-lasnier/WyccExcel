@@ -1146,6 +1146,9 @@ public class WyccWorkbook  extends JPanel {
 				String    addresslastcell = null;
 				ObjectDao myobj = new ObjectDao();
 				Session lasession = myobj.getSessionDao();
+				SXSSFRow row = null;
+				beneficiaries rs1=null;
+				Modul modul = null;
 				
 				int keyindex=0;
 				int introw = 3;
@@ -1181,47 +1184,39 @@ public class WyccWorkbook  extends JPanel {
 				companys=companys.stream().filter(line->!"".equals(line))
 											.filter(line->line!=null)
 						                  .collect(Collectors.toList());
-			
+				companys.add(0, "Total WYCC");
+				
 				SXSSFWorkbook newworkbook = new SXSSFWorkbook(2);
 				HashMap<String,Integer> mspreadsheets=new HashMap<String,Integer>();
-				HashMap<SetBeneficiaries,Integer> mSetBeneficiaries=new HashMap<SetBeneficiaries,Integer>();
+				HashMap<Integer,SetBeneficiaries> mSetBeneficiaries=new HashMap<Integer,SetBeneficiaries>();
 				
-				//List<SXSSFSheet> arspreadsheet =  new ArrayList<SXSSFSheet>() ;
-				SXSSFSheet spreadsheet = newworkbook.createSheet("Total WYCC");
-				mspreadsheets.put("Total WYCC",0);
-				//mSetBeneficiaries.put(key, value);
-				//arspreadsheet.add(spreadsheet);
-				keyindex++;
+				SXSSFSheet spreadsheet1=null;
 				for (String spreadsheetstr :companys ){
-					//spreadsheet1 = newworkbook.createSheet(spreadsheetstr);
-					newworkbook.createSheet(spreadsheetstr);	
+					spreadsheet1 = newworkbook.createSheet(spreadsheetstr);
 					mspreadsheets.put( spreadsheetstr,keyindex);
+					mSetBeneficiaries.put(keyindex,new SetBeneficiaries( wb,  newworkbook,  monitor,  rs1,
+							spreadsheet1,  row,  introw,  nbmodule,  modul,  lasession,  result,
+							 lastcellule,  firstcellul,  addressfirstcell));
+					// on positionne les entêtes
+					row =mSetBeneficiaries.get(keyindex).getSpreadsheet().createRow(introw);
+					
+					wb.setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, 0);
+					
+					// numéro de colonnes de début des calculs beneficiaires
+					//start = wb.getStartColumnformule()+1;
+					// numéro de colonnes de fin des calculs beneficiaires
+					//end = wb.getEndColumnFormule();
+
+					for ( myIterator = 1; myIterator <= nbmodule; myIterator++) {
+						wb.setFormulaHeader(introw, result, newworkbook, row, myIterator, wb.getStartColumnformule()+1,  wb.getEndColumnFormule(), myOffset);
+					}
+					
 					keyindex++;
 				}
 				
-
-				SXSSFRow row = spreadsheet.createRow(introw);
 				
-				/*
-				 * lectures des entêtes de colonnes
-				 * 
-				 */
-
-				// on lit les infos d'entête pour les infos beneficiares.
-				wb.setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, 0);
 				
-				/*
-				 * lectures des entêtes de colonne de calcul pour cahque ligne de beneficiares 
-				 * 
-				 */
-				// numéro de colonnes de début des calculs beneficiaires
-				start = wb.getStartColumnformule()+1;
-				// numéro de colonnes de fin des calculs beneficiaires
-				end = wb.getEndColumnFormule();
-
-				for ( myIterator = 1; myIterator <= nbmodule; myIterator++) {
-					wb.setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, myOffset);
-				}
+				SXSSFSheet spreadsheet=mSetBeneficiaries.get(0).getSpreadsheet();
 				
 				/*
 				 * on recupére la liste des beneficiaires
@@ -1242,9 +1237,10 @@ public class WyccWorkbook  extends JPanel {
 				// ATTENTION LA NUMEROTATION DES LIGNES COMMENCE A ZERO
 				
 				introw = 4;
+				
 				wb.setCurrentbeneficiaire(0);
-				Modul modul = new Modul();
-				beneficiaries rs1=null;
+				modul = new Modul();
+				
 				
 				SetBeneficiaries setbenef=new SetBeneficiaries( wb,  newworkbook,  monitor,  rs1,
 						 spreadsheet,  row,  introw,  nbmodule,  modul,  lasession,  result,
