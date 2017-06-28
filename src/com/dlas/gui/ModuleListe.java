@@ -90,7 +90,7 @@ public class ModuleListe {
 	public ModuleListe(){
 
 	}
-	public static Logger logger = Logger.getLogger("Wycc");
+	public static Logger logger = Logger.getLogger(ModuleListe.class);
 	/**
 	 * @wbp.parser.entryPoint
 	 */

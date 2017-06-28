@@ -194,7 +194,7 @@ public class WyccWorkbook  extends JPanel {
 
 	}
 
-	public static Logger logger = Logger.getLogger("Wycc");
+	public static Logger logger = Logger.getLogger(WyccWorkbook.class);
 
 	public void createWorkbook(File xlsfileWycc) throws IOException, InvalidFormatException {
 
@@ -275,20 +275,14 @@ public class WyccWorkbook  extends JPanel {
 	}
 
 			
-	public static void setBeneficiairies(SetBeneficiaries setBenef
-//			                      WyccWorkbook wb,SXSSFWorkbook newworkbook,
-//			                      IProgressMonitor monitor,beneficiaries rs,
-//			                      SXSSFSheet spreadsheet,SXSSFRow row,
-//			                      int introw,int nbmodule,Modul modul,
-//			                      Session lasession, List result,
-//			                      SXSSFCell lastcellule,SXSSFCell firstcellul,String addressfirstcell 
-			                      
-			)  throws SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InvalidFormatException {
-		setBenef.getWb().setCurrentbeneficiaire(setBenef.getWb().getCurrentbeneficiaire()+1);
-//		wb.setCurrentbeneficiaire(wb.getCurrentbeneficiaire()+1);
+	public static void setBeneficiairies(SetBeneficiaries setBenef	)  throws SQLException, IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InvalidFormatException {
+		
+		//setBenef.getWb().setCurrentbeneficiaire(setBenef.getWb().getCurrentbeneficiaire()+1);
+		
 		setBenef.getMonitor().subTask("Processing beneficiaries "+setBenef.getRs().getFirstname()+" " +setBenef.getRs().getName()+ " : "+ setBenef.getWb().getCurrentbeneficiaire() + " of "+  setBenef.getWb().getCountbeneficiaire() + "...");
-//		monitor.subTask("Processing beneficiaries "+rs.getFirstname()+" " +rs.getName()+ " : "+ wb.getCurrentbeneficiaire() + " of "+  wb.getCountbeneficiaire() + "...");
+		
 		setBenef.setRow(setBenef.getSpreadsheet().createRow(setBenef.getIntrow()));
+		
 		SXSSFCell cell = null;
 		int j = 0;
 		// position Colonne A
@@ -370,99 +364,146 @@ public class WyccWorkbook  extends JPanel {
 		cell.setCellValue(setBenef.getRs().getToinvoice());
 		setBenef.getWb().setXldformuleaggaregate("");
 		
+		setBenef.setCompteur(1);
 		// On traite les modules. on repete les cellules de formule pour le nombre de module possible.
 		for (int i = 1; i <= setBenef.getNbmodule(); i++) {
-		// on regupére certaine information du module en fonction des infos 
-		//du nom de la company, du nom du module, du nom de la formule et de la couverure familliale
-			Method fieldGetter = null;
-			try {
-				fieldGetter = setBenef.getRs().getClass().getMethod("getCompany"+i);
-			} catch (NoSuchMethodException | SecurityException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			String fCompany = "";
-			try {
-				if ( fieldGetter.invoke(setBenef.getRs()) !=null ){
-					fCompany = fieldGetter.invoke(setBenef.getRs()).toString();
-				}
-			} catch (IllegalAccessException | IllegalArgumentException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+	
+  				Boolean proceed =false;
+  				
+				// on recupére certaine information du module en fonction des infos 
+				//du nom de la company, du nom du module, du nom de la formule et de la couverure familliale
 			
-			try {
+	
+				Method fieldGetter = null;
 				
-				fieldGetter = setBenef.getRs().getClass().getMethod("getFormule"+i);
-			} catch (NoSuchMethodException | SecurityException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			String fFormule = "";
-			try {
-				
-				if (fieldGetter.invoke(setBenef.getRs())!= null) {
-					fFormule = fieldGetter.invoke(setBenef.getRs()).toString();
+				try {
+					fieldGetter = setBenef.getRs().getClass().getMethod("getCompany" + i);
+				} catch (NoSuchMethodException | SecurityException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
-				
-				
-			} catch (IllegalAccessException | IllegalArgumentException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			
-			try {
-				fieldGetter = setBenef.getRs().getClass().getMethod("getFormulename"+i);
-			} catch (NoSuchMethodException | SecurityException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			String fFormulename = "";
-			try {
-				if (fieldGetter.invoke(setBenef.getRs())!=null) {
-					fFormulename = fieldGetter.invoke(setBenef.getRs()).toString();
+				String fCompany = "";
+				try {
+					if (fieldGetter.invoke(setBenef.getRs()) != null) {
+						fCompany = fieldGetter.invoke(setBenef.getRs()).toString();
+					}
+				} catch (IllegalAccessException | IllegalArgumentException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
-			} catch (IllegalAccessException | IllegalArgumentException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+				try {
 
-			String fFamilycovered = setBenef.getRs().getFamilycovered();
-
-			setBenef.setModul(setBenef.getWb().getBenefits(setBenef.getLasession(), fCompany, fFormule,fFormulename, fFamilycovered));
-			Float Amount;
-			try {
-				if( setBenef.getModul()!=null) {
-					// en fonction du mode de calcul on recupére la valeur de 
-					Amount=setBenef.getModul().getModulprice();//Float.parseFloat(modul.getModulprice());
+					fieldGetter = setBenef.getRs().getClass().getMethod("getFormule" + i);
+				} catch (NoSuchMethodException | SecurityException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
-				else { Amount= 0f;}
-				
-			} catch (NumberFormatException e) {
-				// TODO Auto-generated catch block
-				//e.printStackTrace();
-				 Amount= 0f;
-			}
-			// il faut recupérer les aggregate. 
-			//si la valeur est différente de zéro on prend la valeur saisie sion on prend la valeur calculée.
+				String fFormule = "";
+				try {
 
-//			String aggregate =readaggregate(  rs.getString("COMPANY" + i), rs.getString("FORMULE" + i), rs.getString("formule_name" + i), rs.getString("police_number"+i) );
+					if (fieldGetter.invoke(setBenef.getRs()) != null) {
+						fFormule = fieldGetter.invoke(setBenef.getRs()).toString();
+					}
+
+				} catch (IllegalAccessException | IllegalArgumentException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				try {
+					fieldGetter = setBenef.getRs().getClass().getMethod("getFormulename" + i);
+				} catch (NoSuchMethodException | SecurityException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				String fFormulename = "";
+				try {
+					if (fieldGetter.invoke(setBenef.getRs()) != null) {
+						fFormulename = fieldGetter.invoke(setBenef.getRs()).toString();
+					}
+				} catch (IllegalAccessException | IllegalArgumentException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				try {
+					fieldGetter = setBenef.getRs().getClass().getMethod("getPolicenumber" + i);
+				} catch (NoSuchMethodException | SecurityException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				String fpolicenumber = "";
+				try {
+					if (fieldGetter.invoke(setBenef.getRs()) != null) {
+						fpolicenumber = fieldGetter.invoke(setBenef.getRs()).toString();
+					}
+				} catch (IllegalAccessException | IllegalArgumentException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				String fFamilycovered = setBenef.getRs().getFamilycovered();
+				setBenef.setModul(setBenef.getWb().getBenefits(setBenef.getLasession(), fCompany, fFormule,
+						fFormulename, fFamilycovered));
+				Float Amount;
+				try {
+					if (setBenef.getModul() != null) {
+						// en fonction du mode de calcul on recupére la valeur de 
+						Amount = setBenef.getModul().getModulprice();//Float.parseFloat(modul.getModulprice());
+					} else {
+						Amount = 0f;
+					}
+
+				} catch (NumberFormatException e) {
+					// TODO Auto-generated catch block
+					//e.printStackTrace();
+					Amount = 0f;
+				}
+				// il faut recupérer les aggregate. 
+				//si la valeur est différente de zéro on prend la valeur saisie sion on prend la valeur calculée.
+				String aggregate = setBenef.getWb().readaggregate(setBenef.getLasession(), fCompany, fFormule, fFormulename, fpolicenumber);
+				
+				
+				if (setBenef.getModul() != null) {
+					if (setBenef.getSpreadsheet().getSheetName().equals("Total WYCC") ){
+						proceed=true;
+					}
+					
+					else if (setBenef.getSpreadsheet().getSheetName().equals(fCompany) ){
+						proceed=true;	
+						}
+					else {
+						proceed=false;
+					}
+					
+					if (proceed) {
+						
+						setBenef.setResult(setBenef.getWb().readformula(setBenef.getLasession(),
+								setBenef.getModul().getCalculmode(), 1));
+						
+						setBenef.getWb().setFormula(setBenef.getIntrow(), setBenef.getResult(), setBenef.getNewworkbook(),
+								setBenef.getRow(), setBenef.getCompteur(), setBenef.getModul(), aggregate);
+						
+						setBenef.setCompteur(setBenef.getCompteur()+1);
+						
+					}
+					// on vient de positionner les forumles pour un beneficiaires.
+					// on ajoute les aggegate.
+					// on détermine la colonne de la cellule 
+				} 
+		
 			
-			String aggregate = setBenef.getWb().readaggregate(setBenef.getLasession(),  setBenef.getRs().getCompany1(), setBenef.getRs().getFormule1(), setBenef.getRs().getFormulename1(), setBenef.getRs().getPolicenumber1() );
 			
-			if (setBenef.getModul() != null) {
-				setBenef.setResult( setBenef.getWb().readformula(setBenef.getLasession(),setBenef.getModul().getCalculmode(), 1));
-				setBenef.getWb().setFormula(setBenef.getIntrow(), setBenef.getResult(), setBenef.getNewworkbook(), setBenef.getRow(), i, setBenef.getModul(),aggregate);
-				// on vient de positionner les forumles pour un beneficiaires.
-				// on ajoute les aggegate.
-				// on determine la colonne de la cellule 
-			}
+			
 		}
+		
 		setBenef.getMonitor().worked(1);
+		
 		j=(setBenef.getWb().getStartColumnformule()+(setBenef.getWb().getOffsetColumn()*setBenef.getNbmodule()));
 		cell = setBenef.getRow().createCell(j);
 		
-		setBenef.getWb().setXldformuleaggaregate( setBenef.getWb().getXldformuleaggaregate().substring(0,setBenef.getWb().getXldformuleaggaregate().length()-1));
+		int stringlength =setBenef.getWb().getXldformuleaggaregate().length();
+		if (stringlength>0){
+			String form = setBenef.getWb().getXldformuleaggaregate().substring(0,stringlength-1);
+			setBenef.getWb().setXldformuleaggaregate( setBenef.getWb().getXldformuleaggaregate().substring(0,setBenef.getWb().getXldformuleaggaregate().length()-1));
+		}
 		//xldformuleaggaregate=xldformuleaggaregate.substring(0, xldformuleaggaregate.length()-1);
 		logger.info(setBenef.getWb().getXldformuleaggaregate());
 		cell.setCellFormula(setBenef.getWb().getXldformuleaggaregate());
@@ -1137,24 +1178,23 @@ public class WyccWorkbook  extends JPanel {
 		 
 		@Override
 		public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
-			    Tools mytools = new Tools();
-			    File directory = new File(rootdirDb);
-				String fileCharSep = System.getProperty("file.separator");
-				SXSSFCell lastcellule = null;
-				SXSSFCell firstcellul = null;
-				String    addressfirstcell = null;
-				String    addresslastcell = null;
-				ObjectDao myobj = new ObjectDao();
-				Session lasession = myobj.getSessionDao();
-				SXSSFRow row = null;
-				beneficiaries rs1=null;
-				Modul modul = null;
-				
+			    Tools              mytools = new Tools();
+			    File               directory = new File(rootdirDb);
+				String             fileCharSep = System.getProperty("file.separator");
+				SXSSFCell          lastcellule = null;
+				SXSSFCell          firstcellul = null;
+				String             addressfirstcell = null;
+				String             addresslastcell = null;
+				ObjectDao          myobj = new ObjectDao();
+				Session            lasession = myobj.getSessionDao();
+				SXSSFRow           row = null;
+				beneficiaries      rs1=null;
+				Modul              modul = null;
+				Integer            compteurbeneficiairies=0;
 				int keyindex=0;
 				int introw = 3;
-				//definit le nombre de module à traiter.
-				int nbmodule=8;
-				int myIterator = 1;
+				int nbmodule=8;              //definit le nombre de module à traiter.
+				int myIterator = 1;          
 				// numero de colonne de cellule de départ des infos beneficiaires
 				int start = 0;
 				
@@ -1193,6 +1233,7 @@ public class WyccWorkbook  extends JPanel {
 				SXSSFSheet spreadsheet1=null;
 				for (String spreadsheetstr :companys ){
 					spreadsheet1 = newworkbook.createSheet(spreadsheetstr);
+					
 					mspreadsheets.put( spreadsheetstr,keyindex);
 					mSetBeneficiaries.put(keyindex,new SetBeneficiaries( wb,  newworkbook,  monitor,  rs1,
 							spreadsheet1,  row,  introw,  nbmodule,  modul,  lasession,  result,
@@ -1201,13 +1242,9 @@ public class WyccWorkbook  extends JPanel {
 					row =mSetBeneficiaries.get(keyindex).getSpreadsheet().createRow(introw);
 					
 					wb.setFormulaHeader(introw, result, newworkbook, row, myIterator, start, end, 0);
-					
-					// numéro de colonnes de début des calculs beneficiaires
-					//start = wb.getStartColumnformule()+1;
-					// numéro de colonnes de fin des calculs beneficiaires
-					//end = wb.getEndColumnFormule();
 
 					for ( myIterator = 1; myIterator <= nbmodule; myIterator++) {
+						
 						wb.setFormulaHeader(introw, result, newworkbook, row, myIterator, wb.getStartColumnformule()+1,  wb.getEndColumnFormule(), myOffset);
 					}
 					
@@ -1221,11 +1258,8 @@ public class WyccWorkbook  extends JPanel {
 				/*
 				 * on recupére la liste des beneficiaires
 				 */
-				
-				
 				wb.setCountbeneficiaire(resultdistinct.size());
 				monitor.setTaskName("Processing beneficiaries.");
-
 				monitor.subTask("Processing beneficiaries " + wb.getCurrentbeneficiaire() + " of "+  wb.getCountbeneficiaire() + "...");
 				monitor.worked(1);
 				
@@ -1244,15 +1278,23 @@ public class WyccWorkbook  extends JPanel {
 				
 				SetBeneficiaries setbenef=new SetBeneficiaries( wb,  newworkbook,  monitor,  rs1,
 						 spreadsheet,  row,  introw,  nbmodule,  modul,  lasession,  result,
-						 lastcellule,  firstcellul,  addressfirstcell);
+						 lastcellule,  firstcellul,  addressfirstcell,1);
 				
 				
 				for (beneficiaries rs : resultdistinct)
 				{
+					compteurbeneficiairies++;
+					
 					try {
-						setbenef.setRs(rs);
-						setBeneficiairies(setbenef);
-						
+						for (String lacompanie :companys){
+						//index=mspreadsheets.get(lacompanie);
+							setbenef=mSetBeneficiaries.get(mspreadsheets.get(lacompanie));
+							setbenef.setRs(rs);
+							setbenef.setIntrow(setbenef.getIntrow()+1);
+							setbenef.setModul(modul);
+							setbenef.getWb().setCurrentbeneficiaire(compteurbeneficiairies);
+							setBeneficiairies(setbenef);
+						}						
 						
 						
 					} catch (NoSuchMethodException | SecurityException | IllegalAccessException
@@ -1262,22 +1304,27 @@ public class WyccWorkbook  extends JPanel {
 					}
 					
 				}
-				setbenef.setIntrow(setbenef.getIntrow()+1);	
-				setbenef.setRow(setbenef.getSpreadsheet().createRow(setbenef.getIntrow()));
-				int j=0;
-				SXSSFCell cell = null;
-				cell = setbenef.getRow().createCell(j);
-				cell.setCellValue("TOTAL :");
 				
-				j++;
-				cell = setbenef.getRow().createCell(j);
-				String lasomme = "SUM("+setbenef.getAddressfirstcell()+":"+setbenef.getLastcellule().getAddress()+")";
-				cell.setCellFormula(lasomme);
+				for (String lacompanie :companys){
+					setbenef=mSetBeneficiaries.get(mspreadsheets.get(lacompanie));
+					setbenef.setIntrow(setbenef.getIntrow()+1);	
+					setbenef.setRow(setbenef.getSpreadsheet().createRow(setbenef.getIntrow()));
+					int j=0;
+					SXSSFCell cell = null;
+					cell = setbenef.getRow().createCell(j);
+					cell.setCellValue("TOTAL :");
+					
+					j++;
+					cell = setbenef.getRow().createCell(j);
+					String lasomme = "SUM("+setbenef.getAddressfirstcell()+":"+setbenef.getLastcellule().getAddress()+")";
+					cell.setCellFormula(lasomme);
+					
+//					Name namedCell = setbenef.getNewworkbook().createName();
+//					namedCell.setNameName("Total");
+//					String reference = "'Total WYCC'"+"!"+cell.getAddress(); // area reference
+//					namedCell.setRefersToFormula(reference);
+				}
 				
-				Name namedCell = setbenef.getNewworkbook().createName();
-				namedCell.setNameName("Total");
-				String reference = "'Total WYCC'"+"!"+cell.getAddress(); // area reference
-				namedCell.setRefersToFormula(reference);
 				// Flushed last line 
 				try {
 					((SXSSFSheet) setbenef.getSpreadsheet()).flushRows(0);
@@ -1287,30 +1334,26 @@ public class WyccWorkbook  extends JPanel {
 				}
 				// 1. create named range for a single cell using areareference
 				
-				//Cmlose the db session
-				setbenef.getLasession().close();
+				//Close the db session
+				mSetBeneficiaries.get(0).getLasession().close();
 				// Write the finale file
 				FileOutputStream out;
 
 				try {
 					out = new FileOutputStream(new File(filepath));
-					setbenef.getNewworkbook().write(out);
+					mSetBeneficiaries.get(0).getNewworkbook().write(out);
 					out.close();
 					newworkbook.dispose();
 				} catch (FileNotFoundException e) {
-					setbenef.getNewworkbook().dispose();
+					mSetBeneficiaries.get(0).getNewworkbook().dispose();
 					e.printStackTrace();
 				} catch (IOException e) {
-					setbenef.getNewworkbook().dispose();
+					mSetBeneficiaries.get(0).getNewworkbook().dispose();
 					e.printStackTrace();
 				}
 
+			    monitor.done();
 				logger.info("DONE ! setBeneficiaire");
-
-			 
-			 
-			 
-			 monitor.done();
 		}
 		
 	}

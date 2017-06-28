@@ -182,14 +182,17 @@ public class EcranAccueil {
         //fileAppender.setFile("applog3.txt");
         fileAppender.setLayout(layout);
         fileAppender.activateOptions();
- 
+
         // configures the root logger
-        Logger rootLogger = Logger.getRootLogger();
-        rootLogger.setLevel(Level.DEBUG);
+
         rootLogger.addAppender(consoleAppender);
         rootLogger.addAppender(fileAppender);
- 
-*/        // creates a custom logger and log messages
+ */
+	        
+	        Logger rootLogger = Logger.getRootLogger();
+	        rootLogger.setLevel(Level.INFO);   
+	        
+        // creates a custom logger and log messages
       
         
 		

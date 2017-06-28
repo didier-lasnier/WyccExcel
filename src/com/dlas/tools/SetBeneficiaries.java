@@ -28,6 +28,7 @@ public class SetBeneficiaries {
 	private SXSSFCell lastcellule;
 	private SXSSFCell firstcellul;
 	private String addressfirstcell;
+	private int    compteur;
 	
 	
 	public SetBeneficiaries() {
@@ -54,6 +55,29 @@ public class SetBeneficiaries {
 		this.lastcellule = lastcellule;
 		this.firstcellul = firstcellul;
 		this.addressfirstcell = addressfirstcell;
+	}
+
+	
+
+	public SetBeneficiaries(WyccWorkbook wb, SXSSFWorkbook newworkbook, IProgressMonitor monitor, beneficiaries rs,
+			SXSSFSheet spreadsheet, SXSSFRow row, int introw, int nbmodule, Modul modul, Session lasession, List result,
+			SXSSFCell lastcellule, SXSSFCell firstcellul, String addressfirstcell, int compteur) {
+		super();
+		this.wb = wb;
+		this.newworkbook = newworkbook;
+		this.monitor = monitor;
+		this.rs = rs;
+		this.spreadsheet = spreadsheet;
+		this.row = row;
+		this.introw = introw;
+		this.nbmodule = nbmodule;
+		this.modul = modul;
+		this.lasession = lasession;
+		this.result = result;
+		this.lastcellule = lastcellule;
+		this.firstcellul = firstcellul;
+		this.addressfirstcell = addressfirstcell;
+		this.compteur = compteur;
 	}
 
 
@@ -140,6 +164,12 @@ public class SetBeneficiaries {
 	}
 	public void setAddressfirstcell(String addressfirstcell) {
 		this.addressfirstcell = addressfirstcell;
+	}
+	public int getCompteur() {
+		return compteur;
+	}
+	public void setCompteur(int compteur) {
+		this.compteur = compteur;
 	}
 
 	
