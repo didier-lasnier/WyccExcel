@@ -48,8 +48,8 @@ public class Benefits extends AbstractModelObject {
 					// le fichier csv est lu et est en mémoire
 					window.setListCsv(a.getcsvfile(selected));
 					//on construit une collections avec les données des companies 
-					List<LimitAggCsv>	listviewer=  b.readAggregate(window.getListCsv());
-					List<LimitAggCsv>	listdistinct	= distinctList(listviewer,LimitAggCsv::getPolicynumber,LimitAggCsv::getFormula,LimitAggCsv::getFormulename,LimitAggCsv::getCompany);
+					List<LimitAggCsv>	listviewer   = b.readAggregate(window.getListCsv());
+					List<LimitAggCsv>	listdistinct = distinctList(listviewer,LimitAggCsv::getPolicynumber,LimitAggCsv::getFormula,LimitAggCsv::getFormulename,LimitAggCsv::getCompany);
 					if (false) {
 
 					} else {
@@ -59,7 +59,7 @@ public class Benefits extends AbstractModelObject {
 						//for (LimitAggCsv distinct : listviewer) 
 							for (LimitAggCsv distinct :listdistinct){
 							// on recupére les données précédement enregistrées
-							String amount = wyccwb.readaggregate(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber() );
+							String amount = wyccwb.getAggregate(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber() );
 							
 							m_benefits.add(new Benefit(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),amount));
 						}

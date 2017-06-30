@@ -288,80 +288,110 @@ public class WyccWorkbook  extends JPanel {
 		// position Colonne A
 		
 		cell = setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getPositioncrew());
-
+		if (setBenef.getRs().getPositioncrew()!=null) {
+			cell.setCellValue(setBenef.getRs().getPositioncrew());
+		}
 		// Name Colonne B
 		j++;
 		cell = setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getName());
+		if (setBenef.getRs().getName()!=null) {
+			cell.setCellValue(setBenef.getRs().getName());
+		}
 		// first name Colonne C
 		j++;
 		cell = setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getFirstname());
+		if (setBenef.getRs().getFirstname()!=null) {
+			cell.setCellValue(setBenef.getRs().getFirstname());
+		}
 		// structure name vessel Colonne D
 		j++;
 		cell = setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getStructurename());
+		
+		if (setBenef.getRs().getStructurename()!=null) {
+			cell.setCellValue(setBenef.getRs().getStructurename());
+		}
 		// crew manning agency Colonne
 		j++;
 		// periode de couverture Colonne E
 		j++;
 		cell = setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getPeriodeinsurance());
+		if (setBenef.getRs().getPeriodeinsurance()!=null) {
+			cell.setCellValue(setBenef.getRs().getPeriodeinsurance());
+		}
 		// Single Ou Family Colonne F
 		j++;
 		cell =setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getFamilycovered());
+		if (setBenef.getRs().getFamilycovered()!=null) {
+			cell.setCellValue(setBenef.getRs().getFamilycovered());
+		}
 		// Nationalité Colonne G
 		j++;
 		cell = setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getNationality());
+		if (setBenef.getRs().getNationality()!=null) {
+			cell.setCellValue(setBenef.getRs().getNationality());
+		}
 		// Pays Colonne H
 		j++;
 		cell =setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getCountry());
+		if (setBenef.getRs().getCountry()!=null) {
+			cell.setCellValue(setBenef.getRs().getCountry());
+		}
 		// Nbre d'enfant Colonne I
 		j++;
 		cell = setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getChildren());
+		if (setBenef.getRs().getChildren()!=null) {
+			cell.setCellValue(setBenef.getRs().getChildren());
+		}
 		// Debut de mouvement Colonne J
 		j++;
 		cell =setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getStartmovement());
-		CellStyle cellStyle  = setBenef.getNewworkbook().createCellStyle();
+		CellStyle cellStyle;
+		if (setBenef.getRs().getStartmovement()!=null) {
+			cell.setCellValue(setBenef.getRs().getStartmovement());
+		}
+		cellStyle = setBenef.getNewworkbook().createCellStyle();
 		cellStyle.setDataFormat(HSSFDataFormat.getBuiltinFormat("m/d/yy"));
 		cell.setCellStyle(cellStyle);
-		
-		
+	
 		// Fin de mouvement Colonne K
 		j++;
 		cell =setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getEndmovement());
+		if (setBenef.getRs().getEndmovement()!=null) {
+			cell.setCellValue(setBenef.getRs().getEndmovement());
+		}
 		cell.setCellStyle(cellStyle);
 		// Salaire_Currency Colonne L
 		j++;
 		cell = setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getSalarycurrency());
-
+		if (setBenef.getRs().getSalarycurrency()!=null) {
+			cell.setCellValue(setBenef.getRs().getSalarycurrency());
+		}
 		// Nbre de mois Colonne M
 		j++;
 		cell =setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getMois());
-
+		if (setBenef.getRs().getMois()!=null){
+			cell.setCellValue(setBenef.getRs().getMois());
+		}
+		
 		// Salaire Mensuel Colonne N
 		j++;
 		cell = setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getMonthlysalary());
-
+		
+		if (setBenef.getRs().getMonthlysalary()!=null) {
+			cell.setCellValue(setBenef.getRs().getMonthlysalary());
+		}
 		// nbre de jour Colonne O
 		j++;
 		cell = setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getJour());
-
+		if (setBenef.getRs().getJour()!=null) {
+			cell.setCellValue(setBenef.getRs().getJour());
+		}
 		// TO_INVOICE Colonne P
 		j++;
 		cell = setBenef.getRow().createCell(j);
-		cell.setCellValue(setBenef.getRs().getToinvoice());
+		if (setBenef.getRs().getToinvoice()!=null) {
+			cell.setCellValue(setBenef.getRs().getToinvoice());
+		}
 		setBenef.getWb().setXldformuleaggaregate("");
 		
 		setBenef.setCompteur(1);
@@ -627,7 +657,7 @@ public class WyccWorkbook  extends JPanel {
 		// }
 	}
 	
-	public String readaggregate( String company,String formuma,String formulenumber,String policynumber ) {
+	public String getAggregate( String company,String formuma,String formulenumber,String policynumber ) {
 
 		List resultdistinct;
 		String ValueReturn ;

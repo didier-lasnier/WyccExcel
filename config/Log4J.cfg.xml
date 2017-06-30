@@ -1,0 +1,39 @@
+	<appender name="RollingFile" type="log4j.Appender.RollingFileAppender">
+		<file value="log/wycc.log" />
+		<appendToFile value="true" />
+		<maximumFileSize value="20480KB" />
+		<maxSizeRollBackups value="20" />
+		<rollingStyle value="Composite" />
+		<datePattern value="yyyyMMdd" />
+		<layout type="log4j.Layout.PatternLayout">
+			<conversionPattern value="%date %level %thread - %logger - %message%newline" />
+		</layout>
+	</appender>
+	
+	<appender name="RollingFileHibernate" type="log4j.Appender.RollingFileAppender">
+		<file value="log/Hibernate.log" />
+		<appendToFile value="true" />
+		<maximumFileSize value="20480KB" />
+		<maxSizeRollBackups value="20" />
+		<rollingStyle value="Composite" />
+		<datePattern value="yyyyMMdd" />
+		<layout type="log4j.Layout.PatternLayout">
+			<conversionPattern value="%date %level %thread - %logger - %message%newline" />
+		</layout>
+	</appender>
+
+
+
+	<!-- Utilisation d'un MemoryAppender déclaré dans l'application -->
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="RollingFile" />
+	</root>
+	
+	<logger name="com.dlas.gui.EcranAccueil" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="RollingFileNHibernate" />
+	</logger>
+
+</log4net>
