@@ -41,7 +41,7 @@ public class Benefits extends AbstractModelObject {
 			
 
 			if (selected !=null) {
-				 window.setFilepath(selected );
+					window.setFilepath(selected );
 					try {
 					CsvTools a = new CsvTools();
 					Actionuser b = new Actionuser();
@@ -53,17 +53,14 @@ public class Benefits extends AbstractModelObject {
 					if (false) {
 
 					} else {
-						
-					//for (LimitAggCsv agg :listdistinct){
-						
-						//for (LimitAggCsv distinct : listviewer) 
+
 							for (LimitAggCsv distinct :listdistinct){
 							// on recupére les données précédement enregistrées
 							String amount = wyccwb.getAggregate(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber() );
 							
 							m_benefits.add(new Benefit(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),amount));
 						}
-					//}
+
 					}
 					
 					} catch (Exception e1) {
