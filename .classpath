@@ -36,7 +36,7 @@
 	<classpathentry exported="true" kind="lib" path="lib/com.ibm.icu-4.4.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.core.commands_3.8.1.v20161221-1651.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.equinox.common_3.8.0.v20160509-1230.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.jface_3.12.2.v20170113-2113.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.jface_3.12.2.v20170113-2113.jar" sourcepath="/Users/didierlasnier/.m2/repository/org/eclipse/platform/org.eclipse.jface/3.12.2/org.eclipse.jface-3.12.2-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.jface.databinding_1.8.1.v20161026-1531.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.jface.text_3.11.2.v20170220-1911.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.osgi_3.11.3.v20170209-1843.jar"/>

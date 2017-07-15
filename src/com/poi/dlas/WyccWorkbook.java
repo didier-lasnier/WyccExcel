@@ -68,7 +68,7 @@ import com.dlas.tools.Tools;
 import com.dlas.dao.Wycccell;
 import com.dlas.dao.LimitAggCsv;
 import com.dlas.dao.Modul;
-
+import com.dlas.dao.ModulBoat;
 
 //import au.com.ozblog.hibernate.h2.example.User;
 
@@ -306,8 +306,9 @@ public class WyccWorkbook  extends JPanel {
 		// structure name vessel Colonne D
 		j++;
 		cell = setBenef.getRow().createCell(j);
-		
+		String fstrutcurename ="";
 		if (setBenef.getRs().getStructurename()!=null) {
+			fstrutcurename=setBenef.getRs().getStructurename();
 			cell.setCellValue(setBenef.getRs().getStructurename());
 		}
 		// crew manning agency Colonne
@@ -470,8 +471,14 @@ public class WyccWorkbook  extends JPanel {
 					e1.printStackTrace();
 				}
 				String fFamilycovered = setBenef.getRs().getFamilycovered();
-				setBenef.setModul(setBenef.getWb().getBenefits(setBenef.getLasession(), fCompany, fFormule,
-						fFormulename, fFamilycovered));
+				
+				
+//				setBenef.setModul(setBenef.getWb().getBenefits(setBenef.getLasession(), fCompany, fFormule,
+//						fFormulename, fFamilycovered));
+				
+				setBenef.setModulboat(setBenef.getWb().getboatBenefits(setBenef.getLasession(), fCompany, fFormule,
+						fFormulename, fstrutcurename));
+				
 				Float Amount;
 				try {
 					if (setBenef.getModul() != null) {
@@ -506,7 +513,7 @@ public class WyccWorkbook  extends JPanel {
 					if (proceed) {
 						
 						setBenef.setResult(setBenef.getWb().readformula(setBenef.getLasession(),
-								setBenef.getModul().getCalculmode(), 1));
+								setBenef.getModulboat().getCalculmode(), 1));
 						
 						setBenef.getWb().setFormula(setBenef.getIntrow(), setBenef.getResult(), setBenef.getNewworkbook(),
 								setBenef.getRow(), setBenef.getCompteur(), setBenef.getModul(), aggregate);
@@ -514,9 +521,7 @@ public class WyccWorkbook  extends JPanel {
 						setBenef.setCompteur(setBenef.getCompteur()+1);
 						
 					}
-					// on vient de positionner les forumles pour un beneficiaires.
-					// on ajoute les aggegate.
-					// on détermine la colonne de la cellule 
+
 				} 
 		
 			
@@ -1126,7 +1131,23 @@ public class WyccWorkbook  extends JPanel {
 
 		return modul;
 	}
-	
+
+	public ModulBoat getboatBenefits(Session lasession, String modulFournisseur, String modulLabel, String modulCategory,
+			String modulboat) {
+		// Third benefits
+		lasession.beginTransaction();
+		Query query = lasession.createQuery( "from ModulBoat where modul_fournisseur=:modul_fournisseur and modullabel = :modullabel and modulecategory= :modulcategory  and modulboat = :modulboat ");
+		query.setString("modul_fournisseur", modulFournisseur);
+		query.setString("modullabel", modulLabel);
+		query.setString("modulcategory", modulCategory);
+		// modulscope= "Single";
+		query.setString("modulboat", modulboat);
+		query.setMaxResults(1);
+		ModulBoat modul = (ModulBoat) query.uniqueResult();
+		lasession.getTransaction().commit();
+
+		return modul;
+	}
 	public String getFormuleRegex(String inFormule, String paternregex, String subpaternregex ) {
 
 		  Pattern p = Pattern.compile(paternregex) ; //("([$A-Z]+)([$0-9]+)") ;  		   
@@ -1220,6 +1241,7 @@ public class WyccWorkbook  extends JPanel {
 				SXSSFRow           row = null;
 				beneficiaries      rs1=null;
 				Modul              modul = null;
+				ModulBoat          modulboat = null;
 				Integer            compteurbeneficiairies=0;
 				int keyindex=0;
 				int introw = 3;
@@ -1265,9 +1287,16 @@ public class WyccWorkbook  extends JPanel {
 					spreadsheet1 = newworkbook.createSheet(spreadsheetstr);
 					
 					mspreadsheets.put( spreadsheetstr,keyindex);
-					mSetBeneficiaries.put(keyindex,new SetBeneficiaries( wb,  newworkbook,  monitor,  rs1,
-							spreadsheet1,  row,  introw,  nbmodule,  modul,  lasession,  result,
-							 lastcellule,  firstcellul,  addressfirstcell));
+					
+					
+//					mSetBeneficiaries.put(keyindex,new SetBeneficiaries( wb,  newworkbook,  monitor,  rs1,
+//							spreadsheet1,  row,  introw,  nbmodule,  modul,  lasession,  result,
+//							 lastcellule,  firstcellul,  addressfirstcell));
+					
+					mSetBeneficiaries.put(keyindex,new SetBeneficiaries(  wb,  newworkbook,  monitor,  rs1,
+							 spreadsheet1,  row,  introw,  nbmodule,  modul,  lasession,  result,
+							 lastcellule,  firstcellul,  addressfirstcell,  0,  modulboat));
+					
 					// on positionne les entêtes
 					row =mSetBeneficiaries.get(keyindex).getSpreadsheet().createRow(introw);
 					
@@ -1304,12 +1333,15 @@ public class WyccWorkbook  extends JPanel {
 				
 				wb.setCurrentbeneficiaire(0);
 				modul = new Modul();
+				modulboat = new ModulBoat();
 				
+//				SetBeneficiaries setbenef=new SetBeneficiaries( wb,  newworkbook,  monitor,  rs1,
+//						 spreadsheet,  row,  introw,  nbmodule,  modul,  lasession,  result,
+//						 lastcellule,  firstcellul,  addressfirstcell,1);
 				
-				SetBeneficiaries setbenef=new SetBeneficiaries( wb,  newworkbook,  monitor,  rs1,
-						 spreadsheet,  row,  introw,  nbmodule,  modul,  lasession,  result,
-						 lastcellule,  firstcellul,  addressfirstcell,1);
-				
+				SetBeneficiaries setbenef=new SetBeneficiaries(  wb,  newworkbook,  monitor,  rs1,
+						 spreadsheet1,  row,  introw,  nbmodule,  modul,  lasession,  result,
+						 lastcellule,  firstcellul,  addressfirstcell,  1,  modulboat);
 				
 				for (beneficiaries rs : resultdistinct)
 				{

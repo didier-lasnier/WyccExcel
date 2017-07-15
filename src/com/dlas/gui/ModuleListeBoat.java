@@ -114,21 +114,6 @@ public class ModuleListeBoat {
 		Composite btnrecord = new Composite(buttonBar, SWT.NONE);
 		btnrecord.setLayout(new FillLayout(SWT.HORIZONTAL));
 		
-		Button btnDeleteRecord = new Button(btnrecord, SWT.NONE);
-		btnDeleteRecord.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent arg0) {
-				int index = modulboatviewer_1.getTable().getSelectionIndex();
-				if (index >=0){
-				ModulBoat lemodultodel=(ModulBoat) modulboatviewer_1.getElementAt(index);
-				deletemodulboat.add(lemodultodel);
-				m_modulboatmodels.removeModulofIndex(index);
-				}
-				modulboatviewer_1.refresh();
-			}
-		});
-		btnDeleteRecord.setText("Delete");
-		
 		Button btnAddRecord = new Button(btnrecord, SWT.NONE);
 		btnAddRecord.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -147,6 +132,32 @@ public class ModuleListeBoat {
 			}
 		});
 		btnAddRecord.setText("Add");
+		
+		Button btnDeleteRecord = new Button(btnrecord, SWT.NONE);
+		btnDeleteRecord.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				int index = modulboatviewer_1.getTable().getSelectionIndex();
+				if (index >=0){
+				ModulBoat lemodultodel=(ModulBoat) modulboatviewer_1.getElementAt(index);
+				deletemodulboat.add(lemodultodel);
+				m_modulboatmodels.removeModulofIndex(index);
+				}
+				modulboatviewer_1.refresh();
+			}
+		});
+		btnDeleteRecord.setText("Delete");
+		
+		Button btnImport = new Button(btnrecord, SWT.NONE);
+		btnImport.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+			}
+		});
+		btnImport.setText("Import");
+		
+		Button btnExport = new Button(btnrecord, SWT.NONE);
+		btnExport.setText("Export");
 		
 		Composite btncollection = new Composite(buttonBar, SWT.BORDER);
 		btncollection.setLayout(null);
@@ -571,10 +582,5 @@ public class ModuleListeBoat {
 		}
 		
 	}
-
- 
-    
-    
-    
 }
 
