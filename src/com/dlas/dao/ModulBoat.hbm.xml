@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 juil. 2017 12:14:17 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.dlas.dao.ModulBoat" table="MODULBOAT">
+        <id name="modulid" type="java.lang.Integer">
+            <column name="MODULID" />
+            <generator class="assigned" />
+        </id>
+        <property name="modul_fournisseur" type="java.lang.String">
+            <column name="MODUL_FOURNISSEUR" />
+        </property>
+        <property name="modullabel" type="java.lang.String">
+            <column name="MODULLABEL" />
+        </property>
+        <property name="modulboat" type="java.lang.String">
+            <column name="MODULBOAT" />
+        </property>
+        <property name="modulpricesingle" type="java.lang.Double">
+            <column name="MODULPRICESINGLE" />
+        </property>
+        <property name="modulpricefamily" type="java.lang.Double">
+            <column name="MODULPRICEFAMILY" />
+        </property>
+        <property name="modulscope" type="java.lang.String">
+            <column name="MODULSCOPE" />
+        </property>
+        <property name="modulecategory" type="java.lang.String">
+            <column name="MODULECATEGORY" />
+        </property>
+        <property name="forfaitpercentage" type="java.lang.Integer">
+            <column name="FORFAITPERCENTAGE" />
+        </property>
+        <property name="calculmode" type="java.lang.String">
+            <column name="CALCULMODE" />
+        </property>
+        <property name="bankfee" type="java.lang.Float">
+            <column name="BANKFEE" />
+        </property>
+        <property name="surcom" type="java.lang.Float">
+            <column name="SURCOM" />
+        </property>
+        <property name="invoiceperiod" type="java.lang.Float">
+            <column name="INVOICEPERIOD" />
+        </property>
+    </class>
+</hibernate-mapping>

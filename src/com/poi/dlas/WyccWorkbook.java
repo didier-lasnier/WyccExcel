@@ -60,7 +60,7 @@ import org.apache.poi.xssf.streaming.SXSSFRow;
 import org.apache.poi.xssf.streaming.SXSSFSheet;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 
-import com.dlas.dao.h2db;
+import com.dlas.dao.H2db;
 
 import com.dlas.dao.beneficiaries;
 import com.dlas.tools.SetBeneficiaries;
@@ -240,7 +240,7 @@ public class WyccWorkbook  extends JPanel {
 				 * lasession.getTransaction().commit(); lasession.close();
 				 */
 
-				h2db db = new h2db();
+				H2db db = new H2db();
 				db.getDatabase(directory);
 				String sqlstmt1 = "DELETE FROM PUBLIC.SETTINGSCELL";
 
@@ -763,7 +763,7 @@ public class WyccWorkbook  extends JPanel {
 				File directory = new File(".");
 				String fileCharSep = System.getProperty("file.separator");
 
-				h2db db = new h2db();
+				H2db db = new H2db();
 				db.getDatabase(directory);
 				String sqlstmt1 = "INSERT INTO PUBLIC.SETTINGSCELL (";
 				sqlstmt1 = sqlstmt1 + " CELL_ID,";

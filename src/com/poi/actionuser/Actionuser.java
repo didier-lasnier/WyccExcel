@@ -29,8 +29,8 @@ import org.eclipse.swt.widgets.Shell;
 
 import com.dlas.dao.MvtCsv;
 import com.dlas.dao.beneficiaries;
-import com.dlas.dao.h2db;
-import com.dlas.dao.hsqltext;
+import com.dlas.dao.H2db;
+import com.dlas.dao.HsqlText;
 import com.dlas.tools.CsvTools;
 //import com.dlas.tools.CsvTools.ProgressBarDb;
 import com.dlas.dao.LimitAggCsv;
@@ -172,7 +172,7 @@ public class Actionuser {
 			logger.info("DONE !");
 			*/
 			Shell shell = new Shell();
-			IRunnableWithProgress op = new ProcessCsv("Database initialisation",new h2db(), dir,Filepath, StartD, EndD);
+			IRunnableWithProgress op = new ProcessCsv("Database initialisation",new H2db(), dir,Filepath, StartD, EndD);
 			
 			new ProgressMonitorDialog(shell).run(false, true, op);
 			
@@ -187,7 +187,7 @@ public class Actionuser {
 
 	
 	
-	public void lireCSV(File theCSVfile, h2db dbconn) throws Exception {
+	public void lireCSV(File theCSVfile, H2db dbconn) throws Exception {
 
 		// Workbook wb;
 
@@ -200,7 +200,7 @@ public class Actionuser {
 //			
 //			new ProgressMonitorDialog(shell).run(true, true, op);
 //						shell.close();
-			hsqltext sqlstmt = new hsqltext();
+			HsqlText sqlstmt = new HsqlText();
 			
 
 			this.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
@@ -277,11 +277,11 @@ public class Actionuser {
 	
 	public  class ProgressBarDb implements IRunnableWithProgress {
 		 private String       message;
-		 private h2db         dbconn;
+		 private H2db         dbconn;
 		 private Actionuser   actionuser;
 		 
 		 
-		public ProgressBarDb(String message,h2db dbconn, Actionuser actionuser){
+		public ProgressBarDb(String message,H2db dbconn, Actionuser actionuser){
 		
            this.message      = message;
            this.dbconn       = dbconn;
@@ -294,7 +294,7 @@ public class Actionuser {
 				
 			    monitor.beginTask(message, IProgressMonitor.UNKNOWN);
 			    monitor.worked(1);
-				hsqltext sqlstmt = new hsqltext();
+				HsqlText sqlstmt = new HsqlText();
 				
 			  try {
 				  actionuser.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
@@ -312,14 +312,14 @@ public class Actionuser {
 	
 	public  class ProcessCsv implements IRunnableWithProgress {
 		 private String       message;
-		 private h2db         dbconn;
+		 private H2db         dbconn;
 		 private String       filepath;
 		 private DateTime     startD;
 		 private DateTime     endD;
 		 private String       dir;
 		 
 		 
-		public ProcessCsv(String message,h2db dbconn,String dir,String Filepath,DateTime StartD,DateTime EndD){
+		public ProcessCsv(String message,H2db dbconn,String dir,String Filepath,DateTime StartD,DateTime EndD){
 		
           this.message      = message ;
           this.dbconn       = dbconn  ;
@@ -377,9 +377,9 @@ public class Actionuser {
 					csvdata.setRowToFile(csvrows, theSavefile);
 
 					// Write the output to a file
-					h2db db = null;
+					H2db db = null;
 					try {
-						db = new h2db();
+						db = new H2db();
 					} catch (SQLException e1) {
 						logger.error(e1);
 						e1.printStackTrace();
@@ -391,7 +391,7 @@ public class Actionuser {
 						e1.printStackTrace();
 					}
 					
-					hsqltext sqlstmt = new hsqltext();
+					HsqlText sqlstmt = new HsqlText();
 					// Statement stmt = db.connectiondb.createStatement();
 					PreparedStatement stmt = null;
 					try {

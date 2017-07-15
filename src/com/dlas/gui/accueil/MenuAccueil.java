@@ -35,6 +35,11 @@ public class MenuAccueil {
 	final MenuItem openItem = new MenuItem(filemenu, SWT.PUSH);
 	openItem.setText("&Module\tCTRL+O");
 	openItem.setAccelerator(SWT.CTRL + 'O');
+	final MenuItem separator = new MenuItem(filemenu, SWT.SEPARATOR);
+	final MenuItem modulelisteitem = new MenuItem(filemenu, SWT.PUSH);
+	modulelisteitem.setText("&Module Client\tCTRL+M");
+	modulelisteitem.setAccelerator(SWT.CTRL + 'M');
+	
 //	final MenuItem saveItem = new MenuItem(filemenu, SWT.PUSH);
 //	saveItem.setText("&Save Invoice file\tCTRL+S");
 //	saveItem.setAccelerator(SWT.CTRL + 'S');
@@ -46,7 +51,7 @@ public class MenuAccueil {
 //	readItem.addSelectionListener(new ReadItem(s,StartD,EndD));
 	
 	
-	final MenuItem separator = new MenuItem(filemenu, SWT.SEPARATOR);
+	final MenuItem separator1 = new MenuItem(filemenu, SWT.SEPARATOR);
 	final MenuItem exitItem = new MenuItem(filemenu, SWT.PUSH);
 	exitItem.setText("&Quit\tCRTL+Q");
 	exitItem.setAccelerator(SWT.CTRL + 'Q');
@@ -54,9 +59,8 @@ public class MenuAccueil {
 	OpenItem oitem = new OpenItem(d,s);
 	openItem.addSelectionListener(oitem);
 	
-
-	
-
+	ModulBoatItem Mbitem = new ModulBoatItem(d,s);
+	modulelisteitem.addSelectionListener(Mbitem);
 	
     exitItem.addSelectionListener(new ExitItem(s,d));
     

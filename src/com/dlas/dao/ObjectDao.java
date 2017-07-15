@@ -1,6 +1,6 @@
 package com.dlas.dao;
 
-import com.dlas.dao.hibernateutils;
+import com.dlas.dao.HibernateUtils;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class ObjectDao {
 
 	public Session getSessionDao() {
 
-		SessionFactory factory = hibernateutils.getSessionFactory();
+		SessionFactory factory = HibernateUtils.getSessionFactory();
 		Session lasession = factory.openSession();
 		return lasession;
 	};
