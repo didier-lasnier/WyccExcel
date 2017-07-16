@@ -1,5 +1,6 @@
 package com.dlas.tools;
 
+import com.dlas.dao.ModulBoat;
 import com.dlas.dao.Mvt;
 import com.opencsv.bean.ColumnPositionMappingStrategy;
 
@@ -32,4 +33,20 @@ public class MappingStrategy {
 		strategy.setColumnMapping(columns);
 		return strategy;
 	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public ColumnPositionMappingStrategy setColumMapping(Object filecategory) {
+		ColumnPositionMappingStrategy strategy = new ColumnPositionMappingStrategy();
+		strategy.setType(Object.class);
+		String[] columns;
+		if (filecategory.getClass().equals(ModulBoat.class) )
+		{
+		        columns = new String[] { "modulid","modul_fournisseur","modullabel","modulecategory","modulboat",
+		        		                 "modulpricesingle","modulpricefamily","forfaitpercentage","modulscope","invoiceperiod","calculmode","bankfee","surcom"
+		};
+		strategy.setColumnMapping(columns);
+		}
+		return strategy;
+	}
+	
 }

@@ -52,8 +52,8 @@ import org.hibernate.query.Query;
 
 import com.dlas.dao.Modul;
 import com.dlas.dao.ObjectDao;
-import com.dlas.dao.h2db;
-import com.dlas.dao.hsqltext;
+import com.dlas.dao.H2db;
+import com.dlas.dao.HsqlText;
 import com.dlas.gui.EcranAccueil.ViewerUpdateValueStrategy;
 import com.dlas.gui.model.ModulModel;
 import com.poi.actionuser.Actionuser;
@@ -64,7 +64,7 @@ import org.eclipse.swt.layout.GridLayout;
 
 public class ModuleListe {
 	private DataBindingContext m_bindingContext;
-	private Modul modul = new Modul();
+	private Modul modul ; //= new Modul()
 	//private static Display display = new Display();
 	private static Shell shellModul  ;
 	static  ModuleListe window ;
@@ -90,7 +90,7 @@ public class ModuleListe {
 	public ModuleListe(){
 
 	}
-	public static Logger logger = Logger.getLogger("Wycc");
+	public static Logger logger = Logger.getLogger(ModuleListe.class);
 	/**
 	 * @wbp.parser.entryPoint
 	 */

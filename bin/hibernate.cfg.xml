@@ -35,6 +35,7 @@
 	    <mapping class="com.dlas.dao.beneficiaries"/>
 	    <mapping class="com.dlas.dao.Wycccell"/>
 	    <mapping class="com.dlas.dao.Modul"/>
+	    <mapping class="com.dlas.dao.ModulBoat"/>
 	    <mapping class="com.dlas.dao.BenefitDb"/>
     </session-factory>
 

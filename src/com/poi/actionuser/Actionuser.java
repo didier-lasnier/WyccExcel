@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.widgets.DateTime;
@@ -28,10 +29,10 @@ import org.eclipse.swt.widgets.Shell;
 
 import com.dlas.dao.MvtCsv;
 import com.dlas.dao.beneficiaries;
-import com.dlas.dao.h2db;
-import com.dlas.dao.hsqltext;
+import com.dlas.dao.H2db;
+import com.dlas.dao.HsqlText;
 import com.dlas.tools.CsvTools;
-import com.dlas.tools.CsvTools.ProgressBarDb;
+//import com.dlas.tools.CsvTools.ProgressBarDb;
 import com.dlas.dao.LimitAggCsv;
 import com.poi.dlas.WyccWorkbook;
 import com.poi.dlas.managecsv;
@@ -55,7 +56,8 @@ public class Actionuser {
 
 	public  void lanceLecture(String dir,String Filepath,DateTime StartD,DateTime EndD ) throws Exception {
 
-            File theOpenfile=new File(Filepath);
+/*           
+ *          File theOpenfile=new File(Filepath);
             File directory  =new File(dir);
           	String fileCharSep = System.getProperty("file.separator");
             managecsv csvdata = new managecsv();
@@ -91,6 +93,7 @@ public class Actionuser {
 			// Write the output to a file
 			h2db db = new h2db();
 			db.getDatabase(directory);
+			
 			hsqltext sqlstmt = new hsqltext();
 			// Statement stmt = db.connectiondb.createStatement();
 			PreparedStatement stmt = db.connectiondb.prepareStatement("DELETE FROM MVT");
@@ -99,8 +102,8 @@ public class Actionuser {
 			stmt.close();		
 			
 			logger.info("read csv file into from mvt");
-			lireCSV(theOpenfile, db);
 			
+			lireCSV(theOpenfile, db);
 			
 			stmt = db.connectiondb.prepareStatement("DELETE FROM MVT_NUM"); // db.connectiondb.createStatement();
 			logger.info("delete from mvt_num");
@@ -165,16 +168,26 @@ public class Actionuser {
 			
 			db.closeDbConnection(db.connectiondb);
 			theSavefile.deleteOnExit();
+			
 			logger.info("DONE !");
+			*/
+			Shell shell = new Shell();
+			IRunnableWithProgress op = new ProcessCsv("Database initialisation",new H2db(), dir,Filepath, StartD, EndD);
+			
+			new ProgressMonitorDialog(shell).run(false, true, op);
+			
+			shell.close();
+			
+			Shell shell1 = new Shell();
+			MessageDialog.openInformation(shell1, "Info", "DONE ! \r The csv file "+Filepath +" is completely processed");
+			shell1.close();
 
 
-
-		// System.exit(0);
 	}
 
 	
 	
-	public void lireCSV(File theCSVfile, h2db dbconn) throws Exception {
+	public void lireCSV(File theCSVfile, H2db dbconn) throws Exception {
 
 		// Workbook wb;
 
@@ -182,12 +195,15 @@ public class Actionuser {
 
 //			hsqltext sqlstmt = new hsqltext();
 //			PreparedStatement prepStmt = dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt());
-			Shell shell = new Shell();
-			IRunnableWithProgress op = new ProgressBarDb("Database initialisation",dbconn, this);
+//			Shell shell = new Shell();
+//			IRunnableWithProgress op = new ProgressBarDb("Database initialisation",dbconn, this);
+//			
+//			new ProgressMonitorDialog(shell).run(true, true, op);
+//						shell.close();
+			HsqlText sqlstmt = new HsqlText();
 			
-			new ProgressMonitorDialog(shell).run(true, true, op);
-			
-			shell.close();
+
+			this.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
 			logger.info("Select file csv : " + theCSVfile.getAbsolutePath());
 			CsvTools csfile = new CsvTools();
 			csfile.readcsvfile(this.getPrepStmt(), theCSVfile.getAbsolutePath());
@@ -261,11 +277,11 @@ public class Actionuser {
 	
 	public  class ProgressBarDb implements IRunnableWithProgress {
 		 private String       message;
-		 private h2db         dbconn;
+		 private H2db         dbconn;
 		 private Actionuser   actionuser;
 		 
 		 
-		public ProgressBarDb(String message,h2db dbconn, Actionuser actionuser){
+		public ProgressBarDb(String message,H2db dbconn, Actionuser actionuser){
 		
            this.message      = message;
            this.dbconn       = dbconn;
@@ -278,7 +294,7 @@ public class Actionuser {
 				
 			    monitor.beginTask(message, IProgressMonitor.UNKNOWN);
 			    monitor.worked(1);
-				hsqltext sqlstmt = new hsqltext();
+				HsqlText sqlstmt = new HsqlText();
 				
 			  try {
 				  actionuser.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
@@ -293,4 +309,299 @@ public class Actionuser {
 		
 	}
 
+	
+	public  class ProcessCsv implements IRunnableWithProgress {
+		 private String       message;
+		 private H2db         dbconn;
+		 private String       filepath;
+		 private DateTime     startD;
+		 private DateTime     endD;
+		 private String       dir;
+		 
+		 
+		public ProcessCsv(String message,H2db dbconn,String dir,String Filepath,DateTime StartD,DateTime EndD){
+		
+          this.message      = message ;
+          this.dbconn       = dbconn  ;
+          this.filepath     = Filepath;
+          this.startD       = StartD  ;
+          this.endD         = EndD    ;
+          this.dir          = dir     ;
+       
+         
+		}
+		
+		@Override
+		public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+				
+			    monitor.beginTask(message, IProgressMonitor.UNKNOWN);
+			    monitor.worked(1);
+			    
+		            File theOpenfile=new File(filepath);
+		            File directory  =new File(dir);
+		          	String fileCharSep = System.getProperty("file.separator");
+		            managecsv csvdata = new managecsv();
+		            
+		            
+		            Calendar instance = Calendar.getInstance();
+					instance.set(Calendar.DAY_OF_MONTH, startD.getDay());
+					instance.set(Calendar.MONTH, startD.getMonth());
+					instance.set(Calendar.YEAR, startD.getYear());
+					String StartDateStr  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(instance.getTime());
+					
+					instance = Calendar.getInstance();
+					instance.set(Calendar.DAY_OF_MONTH, endD.getDay());
+					instance.set(Calendar.MONTH, endD.getMonth());
+					instance.set(Calendar.YEAR, endD.getYear());
+					String EndDateStr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(instance.getTime());
+					
+					// read file csv
+		            theOpenfile.getParent();
+
+					logger.info("read file csv");
+					List<String[]> csvrows = csvdata.getRowsFromFile(theOpenfile);
+					System.out.print(dir + "tmp"); 
+					
+					
+					File theSavefile = null;
+					try {
+						theSavefile = File.createTempFile("tmp", null,
+								new File(dir +  "tmp"));
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					
+					String file = theSavefile.getAbsolutePath();
+					logger.info("theSavefile Done : " + file);
+					csvdata.setRowToFile(csvrows, theSavefile);
+
+					// Write the output to a file
+					H2db db = null;
+					try {
+						db = new H2db();
+					} catch (SQLException e1) {
+						logger.error(e1);
+						e1.printStackTrace();
+					}
+					try {
+						db.getDatabase(directory);
+					} catch (IOException e1) {
+						logger.error(e1);
+						e1.printStackTrace();
+					}
+					
+					HsqlText sqlstmt = new HsqlText();
+					// Statement stmt = db.connectiondb.createStatement();
+					PreparedStatement stmt = null;
+					try {
+						stmt = db.connectiondb.prepareStatement("DELETE FROM MVT");
+					} catch (SQLException e1) {
+						logger.error(e1);
+						e1.printStackTrace();
+					}
+					logger.info("delete from mvt");
+					try {
+						stmt.executeUpdate();
+					} catch (SQLException e1) {
+						logger.error(e1);
+						e1.printStackTrace();
+					}
+					try {
+						stmt.close();
+					} catch (SQLException e1) {
+						logger.error(e1);
+						e1.printStackTrace();
+					}		
+					
+					logger.info("read csv file into from mvt");
+					
+					try {
+						lireCSV(theOpenfile, db);
+					} catch (Exception e1) {
+						logger.error(e1);
+						e1.printStackTrace();
+					}
+					
+					try {
+						stmt = db.connectiondb.prepareStatement("DELETE FROM MVT_NUM");
+					} catch (SQLException e1) {
+						logger.error(e1);
+						e1.printStackTrace();
+					} // db.connectiondb.createStatement();
+					logger.info("delete from mvt_num");
+					try {
+						stmt.executeUpdate();
+					} catch (SQLException e1) {
+						logger.error(e1);
+						e1.printStackTrace();
+					}
+					try {
+						stmt.close();
+					} catch (SQLException e1) {
+						logger.error(e1);
+						e1.printStackTrace();
+					}
+
+					// stmt = db.connectiondb.createStatement();
+					try {
+						stmt = db.connectiondb.prepareStatement(sqlstmt.insertmvtnum());
+					} catch (SQLException e1) {
+					    logger.error(e1);
+						e1.printStackTrace();
+					}
+					logger.info("read csv file into from mvt");
+				
+					try {
+						stmt.executeUpdate();// , null, 'charset=UTF-8 fieldSeparator=;')");
+					} catch (Exception e) {
+						logger.info(sqlstmt.insertmvtnum());
+						e.printStackTrace();
+					}
+					try {
+						stmt.close();
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+
+					// stmt = db.connectiondb.createStatement();
+					try {
+						stmt = db.connectiondb.prepareStatement("DELETE FROM PUBLIC.LISTMVTHIER");
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+					logger.info("delete from lismvthier");
+					try {
+						stmt.executeUpdate();
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+					try {
+						stmt.close();
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+
+					PreparedStatement prepStmt = null;
+					try {
+						prepStmt = db.connectiondb.prepareStatement(sqlstmt.insertRootListMvthier(StartDateStr,EndDateStr));
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+					logger.info("insert from lismvthier");
+					try {
+						prepStmt.executeUpdate();
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+					try {
+						prepStmt.close();
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+					int numberOfRows = 0;
+					int lvl = 1;
+					do {
+
+						try {
+							prepStmt = db.connectiondb.prepareStatement(sqlstmt.isLevelNListMvthier());
+						} catch (SQLException e) {
+							logger.error(e);
+							e.printStackTrace();
+						}
+						try {
+							prepStmt.setInt(1, lvl);
+						} catch (SQLException e) {
+							logger.error(e);
+							e.printStackTrace();
+						}
+						ResultSet rs = null;
+						try {
+							rs = prepStmt.executeQuery();
+						} catch (SQLException e) {
+							logger.error(e);
+							e.printStackTrace();
+						}
+						try {
+							if (rs.next()) {
+								numberOfRows = rs.getInt(1);
+								prepStmt.close();
+								if (numberOfRows > 0) {
+									prepStmt = db.connectiondb.prepareStatement(sqlstmt.insertLevelNListMvthier(StartDateStr,EndDateStr));
+									prepStmt.setInt(1, lvl + 1);
+									prepStmt.setInt(2, lvl);
+									prepStmt.executeUpdate();
+									prepStmt.close();
+								}
+							} else {
+								prepStmt.close();
+								System.out.println("error: could not get the record counts");
+							}
+						} catch (SQLException e) {
+							logger.error(e);
+							e.printStackTrace();
+						}
+						lvl++;
+					} while (numberOfRows != 0);
+
+					try {
+						stmt = db.connectiondb.prepareStatement("DELETE FROM BENEFICIARIES_TAB");
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+					logger.info("delete from beneficiaire");
+					try {
+						stmt.executeUpdate();
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+					try {
+						stmt.close();
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+
+					try {
+						stmt = db.connectiondb.prepareStatement(sqlstmt.insertbeneficiairies());
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+					logger.info("Insert Beneficiaries");
+					try {
+						stmt.executeUpdate();
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}// , null, 'charset=UTF-8 fieldSeparator=;')");
+					try {
+						stmt.close();
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+					
+					try {
+						db.closeDbConnection(db.connectiondb);
+					} catch (SQLException e) {
+						logger.error(e);
+						e.printStackTrace();
+					}
+					theSavefile.deleteOnExit();
+					logger.info("DONE !");
+					monitor.done();
+			}
+			        
+		}
 }
+

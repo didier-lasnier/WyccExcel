@@ -15,7 +15,7 @@ public class beneficiaries {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "BENEFICIARIES_ID")
-	private double beneficiairiesid;
+	private Double beneficiairiesid;
 	@Column(name = "WYCC_ID")
 	private String wyccid;
 	@Column(name = "NAME")
@@ -59,7 +59,7 @@ public class beneficiaries {
 	@Column(name = "ERESTEJ")
 	private Integer erestej;
 	@Column(name = "TO_INVOICE")
-	private float toinvoice;
+	private Float toinvoice;
 	@Column(name = "JOUR")
 	private Integer jour;
 	@Column(name = "MOIS")
@@ -163,7 +163,7 @@ public class beneficiaries {
 			String familycovered, String children, String nationality, String country, String positioncrew,
 			String periodeinsurance, Integer line, Date startmovement, Date prevmvt, Integer endcomp, Date endmovement,
 			Date nextmvt, Integer nextcomp, Integer monthlysalary, String salarycurrency, Integer drestej,
-			Integer erestej, float toinvoice, Integer jour, Integer mois, String company1, String formule1,
+			Integer erestej, Float toinvoice, Integer jour, Integer mois, String company1, String formule1,
 			String formulename1, String policenumber1, String totalamountinsured1, String company2, String formule2,
 			String formulename2, String policenumber2, String totalamountinsured2, String company3, String formule3,
 			String formulename3, String policenumber3, String totalamountinsured3, String company4, String formule4,
@@ -373,10 +373,10 @@ public class beneficiaries {
 	public void setErestej(Integer erestej) {
 		this.erestej = erestej;
 	}
-	public float getToinvoice() {
+	public Float getToinvoice() {
 		return toinvoice;
 	}
-	public void setToinvoice(float toinvoice) {
+	public void setToinvoice(Float toinvoice) {
 		this.toinvoice = toinvoice;
 	}
 	public Integer getJour() {

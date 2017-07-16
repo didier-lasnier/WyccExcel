@@ -39,7 +39,7 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
-
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -159,13 +159,14 @@ public class EcranAccueil {
 			}
 			
 			appDir = new File(jarPath).getParentFile().getPath(); //Path of the jar
-			appDir = appDir + File.separator;
+			appDir=appDir+ File.separator;
 
 		 // ======================================================
 	     // Create appender for log4j
 	     // ======================================================
-		    String log4jConfigFile = appDir  + File.separator +"config"+ File.separator + "log4j.properties";
-	        PropertyConfigurator.configure(log4jConfigFile);		
+		    String log4jConfigFile = appDir   +"config"+ File.separator + "log4j.properties";
+	        PropertyConfigurator.configure(log4jConfigFile);
+
 /*		
 		 // creates pattern layout
         PatternLayout layout = new PatternLayout();
@@ -182,14 +183,17 @@ public class EcranAccueil {
         //fileAppender.setFile("applog3.txt");
         fileAppender.setLayout(layout);
         fileAppender.activateOptions();
- 
+
         // configures the root logger
-        Logger rootLogger = Logger.getRootLogger();
-        rootLogger.setLevel(Level.DEBUG);
+
         rootLogger.addAppender(consoleAppender);
         rootLogger.addAppender(fileAppender);
- 
-*/        // creates a custom logger and log messages
+
+	        
+	        Logger rootLogger = Logger.getRootLogger();
+	        rootLogger.setLevel(Level.INFO);   
+	 */        
+        // creates a custom logger and log messages
       
         
 		
@@ -535,6 +539,9 @@ public class EcranAccueil {
         				  lasession.flush();
         				  lasession.getTransaction().commit(); 
         				  lasession.close();
+    				  	Shell shell1 = new Shell();
+    					MessageDialog.openInformation(shell1, "Info", "DONE ! \r Data are saved");
+    					shell1.close();
         			}
         		});
         
