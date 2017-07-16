@@ -18,9 +18,9 @@ public class ModulBoat extends AbstractModelObject {
 	@Id
 	@Column(name = "MODUL_ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer         modulid                   ;
+	private Double         modulid                   ;
 	@Column(name = "MODUL_FOURNISSEUR")
-	private String          modul_fournisseur          ;
+	private String          modul_fournisseur         ;
 	@Column(name = "MODUL_LABEL")
 	private String          modullabel                ;
 	@Column(name = "MODUL_BOAT")
@@ -34,7 +34,7 @@ public class ModulBoat extends AbstractModelObject {
 	@Column(name = "MODULE_CATEGORY")
 	private String          modulecategory            ;
 	@Column(name = "FORFAIT_PERCENTAGE")
-	private Integer         forfaitpercentage         ;
+	private Double         forfaitpercentage         ;
 	@Column(name = "CALCULMODE")
 	private String          calculmode                 ;
 	@Column(name = "BANK_FEE")
@@ -42,14 +42,22 @@ public class ModulBoat extends AbstractModelObject {
 	@Column(name = "SUR_COM")
 	private Float          surcom                      ;	
 	@Column(name = "INVOICE_PERIOD")
-	private Float          invoiceperiod               ;
+	private String          invoiceperiod               ;
+	@Column(name = "POLICY_NUMBER")
+	private String          policynumber                ;
+	@Column(name = "AGGREGATE_AMOUNT")
+	private Float          aggregateamount                     ;
+	
+	
+	
 	public ModulBoat() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public ModulBoat(Integer modulid, String modul_fournisseur, String modullabel, String modulboat,
+	
+	public ModulBoat(Double modulid, String modul_fournisseur, String modullabel, String modulboat,
 			Float modulpricesingle, Float modulpricefamily, String modulscope, String modulecategory,
-			Integer forfaitpercentage, String calculmode, Float bankfee, Float surcom, Float invoiceperiod) {
+			Double forfaitpercentage, String calculmode, Float bankfee, Float surcom, String invoiceperiod) {
 		super();
 		this.modulid = modulid;
 		this.modul_fournisseur = modul_fournisseur;
@@ -65,7 +73,31 @@ public class ModulBoat extends AbstractModelObject {
 		this.surcom = surcom;
 		this.invoiceperiod = invoiceperiod;
 	}
-	public Integer getModulid() {
+	
+	
+	public ModulBoat(Double modulid, String modul_fournisseur, String modullabel, String modulboat,
+			Float modulpricesingle, Float modulpricefamily, String modulscope, String modulecategory,
+			Double forfaitpercentage, String calculmode, Float bankfee, Float surcom, String invoiceperiod,
+			String policynumber, Float aggregateamount) {
+		super();
+		this.modulid = modulid;
+		this.modul_fournisseur = modul_fournisseur;
+		this.modullabel = modullabel;
+		this.modulboat = modulboat;
+		this.modulpricesingle = modulpricesingle;
+		this.modulpricefamily = modulpricefamily;
+		this.modulscope = modulscope;
+		this.modulecategory = modulecategory;
+		this.forfaitpercentage = forfaitpercentage;
+		this.calculmode = calculmode;
+		this.bankfee = bankfee;
+		this.surcom = surcom;
+		this.invoiceperiod = invoiceperiod;
+		this.policynumber = policynumber;
+		this.aggregateamount = aggregateamount;
+	}
+
+	public Double getModulid() {
 		return modulid;
 	}
 	public String getModul_fournisseur() {
@@ -89,7 +121,7 @@ public class ModulBoat extends AbstractModelObject {
 	public String getModulecategory() {
 		return modulecategory;
 	}
-	public Integer getForfaitpercentage() {
+	public Double getForfaitpercentage() {
 		return forfaitpercentage;
 	}
 	public String getCalculmode() {
@@ -101,10 +133,16 @@ public class ModulBoat extends AbstractModelObject {
 	public Float getSurcom() {
 		return surcom;
 	}
-	public Float getInvoiceperiod() {
+	public String getInvoiceperiod() {
 		return invoiceperiod;
 	}
-	public void setModulid(Integer modulid) {
+	public String getPolicynumber() {
+		return policynumber;
+	}
+	public Float getAggregateamount() {
+		return aggregateamount;
+	}
+	public void setModulid(Double modulid) {
 		this.modulid = modulid;
 	}
 	public void setModul_fournisseur(String modul_fournisseur) {
@@ -128,7 +166,7 @@ public class ModulBoat extends AbstractModelObject {
 	public void setModulecategory(String modulecategory) {
 		this.modulecategory = modulecategory;
 	}
-	public void setForfaitpercentage(Integer forfaitpercentage) {
+	public void setForfaitpercentage(Double forfaitpercentage) {
 		this.forfaitpercentage = forfaitpercentage;
 	}
 	public void setCalculmode(String calculmode) {
@@ -140,11 +178,16 @@ public class ModulBoat extends AbstractModelObject {
 	public void setSurcom(Float surcom) {
 		this.surcom = surcom;
 	}
-	public void setInvoiceperiod(Float invoiceperiod) {
+	public void setInvoiceperiod(String invoiceperiod) {
 		this.invoiceperiod = invoiceperiod;
-	}	
-	
-	
+	}
+	public void setPolicynumber(String policynumber) {
+		this.policynumber = policynumber;
+	}
+	public void setAggregateamount(Float aggregateamount) {
+		this.aggregateamount = aggregateamount;
+	}
+
 
 	
 }

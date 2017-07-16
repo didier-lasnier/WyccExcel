@@ -57,6 +57,7 @@ import com.dlas.dao.HsqlText;
 import com.dlas.dao.Modul;
 import com.dlas.gui.EcranAccueil.ViewerUpdateValueStrategy;
 import com.dlas.gui.model.ModulBoatModel;
+import com.dlas.tools.XlsImpExp;
 import com.poi.actionuser.Actionuser;
 import com.poi.actionuser.Actionuser.ProgressBarDb;
 import com.dlas.gui.model.Benefit;
@@ -82,7 +83,7 @@ public class ModuleListeBoat {
 	private    Table                          modulboattable                                ;
     private    TableViewer                    modulboatviewer                               ;
     private    DataBindingContext             m_modulcontext                                ;
-            
+	private    Display                        display                                       ;        
 	private    ModulBoatModel                 m_modulboatmodels       =new ModulBoatModel() ;
 	protected  static Shell                   shell                                         ;
 	private    static String                  APP_NAME                = "Wycc invoice"      ;
@@ -97,6 +98,8 @@ public class ModuleListeBoat {
 	private Text textbankfee;
 	private Text textsurcom;
 	private Text textinvoicingperiod;
+	private Text textPolicyNumber;
+	private Text textAggregateAmount;
 	/**
 	 * @wbp.parser.entryPoint
 	 */
@@ -152,11 +155,30 @@ public class ModuleListeBoat {
 		btnImport.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
+				XlsImpExp xlsprocess = new XlsImpExp();
+				xlsprocess.getFileXlstoImp("open");
+				xlsprocess.readxlsFileToList(xlsprocess.getFiletoprocess());
+				xlsprocess.setDisplay(display);
+				 m_modulboatmodels.getM_modulboats().removeAll(m_modulboatmodels.getM_modulboats());
+				 try {
+					window.setDefaultValues(display);
+				} catch (InvocationTargetException | InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});
 		btnImport.setText("Import");
 		
 		Button btnExport = new Button(btnrecord, SWT.NONE);
+		btnExport.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				XlsImpExp xlsprocess = new XlsImpExp();
+				xlsprocess.getFileXlstoImp("save");
+				xlsprocess.writexlsFileToList(xlsprocess.getFiletoprocess(), m_modulboatmodels.getM_modulboats());
+			}
+		});
 		btnExport.setText("Export");
 		
 		Composite btncollection = new Composite(buttonBar, SWT.BORDER);
@@ -267,6 +289,15 @@ public class ModuleListeBoat {
 		TableColumn tblclmnsurcom = new TableColumn(modulboattable, SWT.RIGHT);
 		tblclmnsurcom.setWidth(100);
 		tblclmnsurcom.setText("Sur Com");
+
+		TableColumn tblpolicynumbercom = new TableColumn(modulboattable, SWT.RIGHT);
+		tblpolicynumbercom.setWidth(100);
+		tblpolicynumbercom.setText("Policy number");
+		
+		TableColumn tblclmnaggregateamount = new TableColumn(modulboattable, SWT.RIGHT);
+		tblclmnaggregateamount.setWidth(100);
+		tblclmnaggregateamount.setText("Aggregate Amount");
+		
 		
 		Tablearea.setWeights(new int[] {1});
 		
@@ -274,7 +305,7 @@ public class ModuleListeBoat {
 		recordcomposite.setLayoutData(new RowData(937, 225));
 		
 		Label lblModulId = new Label(recordcomposite, SWT.NONE);
-		lblModulId.setBounds(10, 0, 59, 14);
+		lblModulId.setBounds(5, 20, 59, 14);
 		lblModulId.setText("Identifier :");
 		txtmodulid = new Text(recordcomposite, SWT.READ_ONLY);
 		txtmodulid.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_BACKGROUND));
@@ -282,23 +313,23 @@ public class ModuleListeBoat {
 		txtmodulid.setBounds(96, 0, 86, 19);
 		
 		Label lblSupplier = new Label(recordcomposite, SWT.NONE);
-		lblSupplier.setBounds(38, 34, 59, 14);
+		lblSupplier.setBounds(5, 54, 59, 14);
 		lblSupplier.setText("Supplier:");
 		txtfournisseur = new Text(recordcomposite, SWT.BORDER);
-		txtfournisseur.setBounds(103, 24, 501, 26);
+		txtfournisseur.setBounds(113, 16, 501, 26);
 		
 		Label lblFormula = new Label(recordcomposite, SWT.NONE);
-		lblFormula.setBounds(38, 82, 59, 14);
+		lblFormula.setBounds(5, 88, 59, 14);
 		lblFormula.setText("Formula:");
 		txtformula = new Text(recordcomposite, SWT.BORDER);
-		txtformula.setBounds(103, 74, 501, 26);
+		txtformula.setBounds(113, 58, 501, 26);
 		
 		
 		Label lblmodule = new Label(recordcomposite, SWT.NONE);
-		lblmodule.setBounds(38, 130, 59, 14);
+		lblmodule.setBounds(5, 122, 59, 14);
 		lblmodule.setText("Module:");
 		txtmodule = new Text(recordcomposite, SWT.BORDER);
-		txtmodule.setBounds(103, 124, 501, 26);
+		txtmodule.setBounds(113, 100, 501, 26);
 				
 				Label lblCalculMode = new Label(recordcomposite, SWT.NONE);
 				lblCalculMode.setBounds(643, 16, 97, 14);
@@ -323,7 +354,7 @@ public class ModuleListeBoat {
 						txtpricesingle.setBounds(786, 67, 105, 26);
 						
 						Label lblScope = new Label(recordcomposite, SWT.NONE);
-						lblScope.setBounds(38, 209, 59, 14);
+						lblScope.setBounds(382, 0, 59, 14);
 						lblScope.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
 						lblScope.setText("Scope:");
 						
@@ -331,7 +362,7 @@ public class ModuleListeBoat {
 						txtscope.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_BACKGROUND));
 						txtscope.setEnabled(false);
 						txtscope.setEditable(false);
-						txtscope.setBounds(113, 206, 147, 17);
+						txtscope.setBounds(457, -3, 147, 17);
 						
 						Label lblForfaitpercentage = new Label(recordcomposite, SWT.NONE);
 						lblForfaitpercentage.setBounds(643, 106, 119, 14);
@@ -343,9 +374,9 @@ public class ModuleListeBoat {
 						
 						Label labelBoat = new Label(recordcomposite, SWT.NONE);
 						labelBoat.setText("Boat:");
-						labelBoat.setBounds(38, 178, 59, 14);
+						labelBoat.setBounds(5, 156, 59, 14);
 						txtboat = new Text(recordcomposite, SWT.BORDER);
-						txtboat.setBounds(103, 174, 501, 26);
+						txtboat.setBounds(113, 142, 501, 26);
 						
 						Label lblBankFee = new Label(recordcomposite, SWT.NONE);
 						lblBankFee.setText("Bank fee :");
@@ -370,6 +401,22 @@ public class ModuleListeBoat {
 						lblInvoicingPeriod.setText("Invoicing period:");
 						lblInvoicingPeriod.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
 						lblInvoicingPeriod.setBounds(643, 137, 139, 14);
+						
+						textPolicyNumber = new Text(recordcomposite, SWT.BORDER);
+						textPolicyNumber.setBounds(113, 188, 147, 26);
+						
+						Label lblPolicyNumber = new Label(recordcomposite, SWT.NONE);
+						lblPolicyNumber.setText("Policy number :");
+						lblPolicyNumber.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+						lblPolicyNumber.setBounds(5, 194, 97, 14);
+						
+						Label lblAggregateAmount = new Label(recordcomposite, SWT.NONE);
+						lblAggregateAmount.setText("Aggregate amount :");
+						lblAggregateAmount.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+						lblAggregateAmount.setBounds(432, 196, 59, 14);
+						
+						textAggregateAmount = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
+						textAggregateAmount.setBounds(509, 188, 105, 26);
 
 		m_modulcontext= initDataBindings();
 	}
@@ -382,7 +429,7 @@ public class ModuleListeBoat {
 		ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
 		modulboatviewer_1.setContentProvider(listContentProvider);
 		//
-		IObservableMap[] observeMaps = PojoObservables.observeMaps(listContentProvider.getKnownElements(), ModulBoat.class, new String[]{"modulid","modul_fournisseur","modullabel","modulecategory","modulboat","modulpricesingle","modulpricefamily","forfaitpercentage","modulscope","invoiceperiod","calculmode","bankfee","surcom"});
+		IObservableMap[] observeMaps = PojoObservables.observeMaps(listContentProvider.getKnownElements(), ModulBoat.class, new String[]{"modulid","modul_fournisseur","modullabel","modulecategory","modulboat","modulpricesingle","modulpricefamily","forfaitpercentage","modulscope","invoiceperiod","calculmode","bankfee","surcom","policynumber","aggregateamount"});
 		modulboatviewer_1.setLabelProvider(new ObservableMapLabelProvider(observeMaps));		
 
        //
@@ -391,7 +438,7 @@ public class ModuleListeBoat {
 		
 
 		IObservableValue observeSingleSelectionmodulboatviewerid = ViewerProperties.singleSelection().observe(modulboatviewer_1);
-		IObservableValue modulboatvieweridObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionmodulboatviewerid,"modulid",Integer.class);
+		IObservableValue modulboatvieweridObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionmodulboatviewerid,"modulid",Double.class);
 		IObservableValue textidTextObserveValue = SWTObservables.observeText(txtmodulid,SWT.NONE);
 		bindingContext.bindValue(modulboatvieweridObservableDetailValue, textidTextObserveValue, null, new ViewerUpdateValueStrategy());
 			
@@ -431,7 +478,7 @@ public class ModuleListeBoat {
 		bindingContext.bindValue(modulboatviewersingleObservableDetailValue, textsingleTextObserveValue, null, new ViewerUpdateValueStrategy());		
 	
 		IObservableValue observeSingleSelectionmodulboatviewerpercentage = ViewerProperties.singleSelection().observe(modulboatviewer_1);
-		IObservableValue modulboatviewerpercentageObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionmodulboatviewerpercentage,"forfaitpercentage",Integer.class);
+		IObservableValue modulboatviewerpercentageObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionmodulboatviewerpercentage,"forfaitpercentage",Double.class);
 		IObservableValue textpercentageTextObserveValue = SWTObservables.observeText(txtforfait,SWT.Modify);
 		bindingContext.bindValue(modulboatviewerpercentageObservableDetailValue, textpercentageTextObserveValue, null, new ViewerUpdateValueStrategy());	
 
@@ -442,18 +489,31 @@ public class ModuleListeBoat {
 
 		IObservableValue observeSingleSelectionmodulboatviewerbankfee = ViewerProperties.singleSelection().observe(modulboatviewer_1);
 		IObservableValue modulboatviewerbankfeeObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionmodulboatviewerbankfee,"bankfee",Float.class);
-		IObservableValue textbankfeeTextObserveValue = SWTObservables.observeText(txtforfait,SWT.Modify);
+		IObservableValue textbankfeeTextObserveValue = SWTObservables.observeText(textbankfee,SWT.Modify);
 		bindingContext.bindValue(modulboatviewerbankfeeObservableDetailValue, textbankfeeTextObserveValue, null, new ViewerUpdateValueStrategy());
 		
 		IObservableValue observeSingleSelectionmodulboatviewersurcom = ViewerProperties.singleSelection().observe(modulboatviewer_1);
 		IObservableValue modulboatviewersurcomObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionmodulboatviewersurcom,"surcom",Float.class);
-		IObservableValue textsurcomTextObserveValue = SWTObservables.observeText(txtforfait,SWT.Modify);
+		IObservableValue textsurcomTextObserveValue = SWTObservables.observeText(textsurcom,SWT.Modify);
 		bindingContext.bindValue(modulboatviewersurcomObservableDetailValue, textsurcomTextObserveValue, null, new ViewerUpdateValueStrategy());
 		
 		IObservableValue observeSingleSelectionmodulboatviewerinvoiceperiod = ViewerProperties.singleSelection().observe(modulboatviewer_1);
 		IObservableValue modulboatviewerinvoiceperiodObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionmodulboatviewerinvoiceperiod,"invoiceperiod",String.class);
-		IObservableValue textinvoiceperiodTextObserveValue = SWTObservables.observeText(txtforfait,SWT.Modify);
+		IObservableValue textinvoiceperiodTextObserveValue = SWTObservables.observeText(textinvoicingperiod,SWT.Modify);
 		bindingContext.bindValue(modulboatviewerinvoiceperiodObservableDetailValue, textinvoiceperiodTextObserveValue, null, new ViewerUpdateValueStrategy());
+		
+		IObservableValue observeSingleSelectionmodulboatviewerpolicynumber = ViewerProperties.singleSelection().observe(modulboatviewer_1);
+		IObservableValue modulboatviewerpolicynumberObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionmodulboatviewerpolicynumber,"policynumber",String.class);
+		IObservableValue textpolicynumberTextObserveValue = SWTObservables.observeText(textPolicyNumber,SWT.Modify);
+		bindingContext.bindValue(modulboatviewerpolicynumberObservableDetailValue, textpolicynumberTextObserveValue, null, new ViewerUpdateValueStrategy());
+		
+		IObservableValue observeSingleSelectionmodulboatvieweraggregateamount = ViewerProperties.singleSelection().observe(modulboatviewer_1);
+		IObservableValue modulboatvieweraggregateamountObservableDetailValue = BeansObservables.observeDetailValue(observeSingleSelectionmodulboatvieweraggregateamount,"aggregateamount",Float.class);
+		IObservableValue textaggregateamountTextObserveValue = SWTObservables.observeText(textAggregateAmount,SWT.Modify);
+		bindingContext.bindValue(modulboatvieweraggregateamountObservableDetailValue, textaggregateamountTextObserveValue, null, new ViewerUpdateValueStrategy());
+		
+		
+		
 		
 		return bindingContext;
 	}
@@ -492,7 +552,7 @@ public class ModuleListeBoat {
 	
 	public void setDefaultValues(Display display) throws InvocationTargetException, InterruptedException {
 		window=this;
-		
+		this.display=display;
 
 		Shell shell = new Shell();
 		IRunnableWithProgress op = new ProgressBarDb("Database initialisation",shell, window);
