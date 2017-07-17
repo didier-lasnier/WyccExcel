@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <jardesc>
-    <jar path="/Volumes/LaCie/ProjetDev/App/WyccApp.jar"/>
+    <jar path="WyccExcel/build/WyccApp.jar"/>
     <options buildIfNeeded="true" compress="true" descriptionLocation="/WyccExcel/descriptionfile.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
@@ -14,6 +14,5 @@
         <folder path="/WyccExcel/META-INF"/>
         <folder path="/WyccExcel/wbp-meta"/>
         <javaElement handleIdentifier="=WyccExcel/src"/>
-        <folder path="/WyccExcel/res"/>
     </selectedElements>
 </jardesc>
