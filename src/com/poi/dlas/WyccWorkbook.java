@@ -1073,11 +1073,13 @@ public class WyccWorkbook extends JPanel {
 						String formuleagg = "";
 						// modul.getForfaitpercentage();
 						// on recupére le pourcentage et la valeur de l'aggregate
+						
 						if (modul.getForfaitpercentage() == 1) {
 							formuleagg = cell.getAddress().toString();
 						} else {
-							if (aggregate!="0") {
-								formuleagg = "(if(" + cell.getAddress().toString() + ">(" + aggregate + "/12)," + aggregate
+							Float aggregateamount = modul.getAggregateamount();
+							if (aggregateamount!=null) {
+								formuleagg = "(if(" + cell.getAddress().toString() + ">(" + aggregateamount + "/12)," + aggregateamount
 										+ "/12," + cell.getAddress().toString() + ")*" + Amount.toString() + ")";
 							}
 							else {
