@@ -5,7 +5,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Appender;
 import org.apache.log4j.ConsoleAppender;
@@ -63,8 +69,9 @@ import org.eclipse.swt.widgets.Listener;
 
 import com.dlas.dao.ObjectDao;
 import com.dlas.dao.beneficiaries;
+import com.apple.mrj.MRJApplicationUtils;
 import com.dlas.dao.BenefitDb;
-
+import com.dlas.gui.accueil.MacOSXController;
 import com.dlas.gui.accueil.MenuAccueil;
 import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Companies;
@@ -146,6 +153,15 @@ public class EcranAccueil {
 	
 	
 	public static void main(String[] args) {
+		
+		MacOSXController macController = new MacOSXController();
+		boolean isMacOS = System.getProperty("mrj.version") != null;
+		if (isMacOS)
+		{
+		  MRJApplicationUtils.registerAboutHandler(macController);
+		  MRJApplicationUtils.registerPrefsHandler(macController);
+		  MRJApplicationUtils.registerQuitHandler(macController);
+		}
 		/*
 		 *  On détermine le dossier d'execution du jar
 		 * 
@@ -783,4 +799,31 @@ public class EcranAccueil {
 		//
 		return bindingContext;
 	}
+	
+	
+	public static <T> List<T> distinctList(List<T> list, Function<? super T, ?>... keyExtractors) {
+
+	    return list
+	        .stream()
+	        .filter(distinctByKeys(keyExtractors))
+	        .collect(Collectors.toList());
+	}
+
+	private static <T> Predicate<T> distinctByKeys(Function<? super T, ?>... keyExtractors) {
+
+	    final Map<List<?>, Boolean> seen = new ConcurrentHashMap<>();
+
+	    return t -> {
+
+	        final List<?> keys = Arrays.stream(keyExtractors)
+	            .map(ke -> ke.apply(t))
+	            .collect(Collectors.toList());
+
+	        return seen.putIfAbsent(keys, Boolean.TRUE) == null;
+
+	    };
+
+	}
+	
+	
 }

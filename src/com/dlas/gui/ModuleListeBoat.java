@@ -6,7 +6,13 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.databinding.DataBindingContext;
@@ -180,6 +186,26 @@ public class ModuleListeBoat {
 			}
 		});
 		btnExport.setText("Export");
+		
+		Button btnSearch = new Button(btnrecord, SWT.NONE);
+		btnSearch.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				SearchFormula frame = new SearchFormula();
+				frame.setVisible(true);
+				List<ModulBoat> resultboat =  (List<ModulBoat>) m_modulboatmodels.getM_modulboats().stream()               
+			                .filter(b -> ((ModulBoat) b).getModul_fournisseur().equals(frame.getTextSupplier()))     
+			                .filter(b -> ((ModulBoat) b).getModullabel().equals(frame.getTextFormula()))     
+			                .filter(b -> ((ModulBoat) b).getModulecategory().equals(frame.getTextModule())) 
+			                .filter(b -> ((ModulBoat) b).getPolicynumber().equals(frame.getTextPolicy()))
+			                .filter(b -> ((ModulBoat) b).getModulboat().equals(frame.getTextBoat()))
+			                .filter(b -> ((ModulBoat) b).getCalculmode().equals(frame.getTextCalculMode()))
+			                .collect(Collectors.toList());           
+				
+				
+			}
+		});
+		btnSearch.setText("Search");
 		
 		Composite btncollection = new Composite(buttonBar, SWT.BORDER);
 		btncollection.setLayout(null);
@@ -614,6 +640,32 @@ public class ModuleListeBoat {
 	
     }
 
+	
+	public static <T> List<T> distinctList(List<T> list, Function<? super T, ?>... keyExtractors) {
+
+	    return list
+	        .stream()
+	        .filter(distinctByKeys(keyExtractors))
+	        .collect(Collectors.toList());
+	}
+
+	private static <T> Predicate<T> distinctByKeys(Function<? super T, ?>... keyExtractors) {
+
+	    final Map<List<?>, Boolean> seen = new ConcurrentHashMap<>();
+
+	    return t -> {
+
+	        final List<?> keys = Arrays.stream(keyExtractors)
+	            .map(ke -> ke.apply(t))
+	            .collect(Collectors.toList());
+
+	        return seen.putIfAbsent(keys, Boolean.TRUE) == null;
+
+	    };
+
+	}
+	
+	
 
     public  class ProgressBarDb implements IRunnableWithProgress {
 		 private String           message;
@@ -642,5 +694,6 @@ public class ModuleListeBoat {
 		}
 		
 	}
+    
 }
 
