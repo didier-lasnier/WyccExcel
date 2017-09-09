@@ -21,6 +21,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
 import org.apache.log4j.PropertyConfigurator;
 
+import javax.swing.ImageIcon;
 import javax.swing.JProgressBar;
 
 import java.io.UnsupportedEncodingException;
@@ -69,6 +70,9 @@ import org.eclipse.swt.widgets.Listener;
 
 import com.dlas.dao.ObjectDao;
 import com.dlas.dao.beneficiaries;
+import com.apple.eawt.AboutHandler;
+import com.apple.eawt.AppEvent.AboutEvent;
+import com.apple.eawt.Application;
 import com.apple.mrj.MRJApplicationUtils;
 import com.dlas.dao.BenefitDb;
 import com.dlas.gui.accueil.MacOSXController;
@@ -155,6 +159,10 @@ public class EcranAccueil {
 	public static void main(String[] args) {
 		
 		MacOSXController macController = new MacOSXController();
+		
+		  Application macApplication = Application.getApplication();
+
+		
 		boolean isMacOS = System.getProperty("mrj.version") != null;
 		if (isMacOS)
 		{
