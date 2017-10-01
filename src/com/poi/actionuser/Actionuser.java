@@ -19,13 +19,14 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Shell;
+import org.hibernate.Session;
 
 import com.dlas.dao.MvtCsv;
 import com.dlas.dao.beneficiaries;
@@ -38,7 +39,7 @@ import com.poi.dlas.WyccWorkbook;
 import com.poi.dlas.managecsv;
 
 public class Actionuser {
-	static Logger logger = Logger.getLogger("wycc");
+	static Logger logger = LogManager.getLogger("wycc");
 	
 	private PreparedStatement prepStmt;
 	
@@ -56,121 +57,7 @@ public class Actionuser {
 
 	public  void lanceLecture(String dir,String Filepath,DateTime StartD,DateTime EndD ) throws Exception {
 
-/*           
- *          File theOpenfile=new File(Filepath);
-            File directory  =new File(dir);
-          	String fileCharSep = System.getProperty("file.separator");
-            managecsv csvdata = new managecsv();
-            
-            
-            Calendar instance = Calendar.getInstance();
-			instance.set(Calendar.DAY_OF_MONTH, StartD.getDay());
-			instance.set(Calendar.MONTH, StartD.getMonth());
-			instance.set(Calendar.YEAR, StartD.getYear());
-			String StartDateStr  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(instance.getTime());
-			
-			instance = Calendar.getInstance();
-			instance.set(Calendar.DAY_OF_MONTH, EndD.getDay());
-			instance.set(Calendar.MONTH, EndD.getMonth());
-			instance.set(Calendar.YEAR, EndD.getYear());
-			String EndDateStr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(instance.getTime());
-			
-			// read file csv
-            theOpenfile.getParent();
 
-			logger.info("read file csv");
-			List<String[]> csvrows = csvdata.getRowsFromFile(theOpenfile);
-			System.out.print(dir + "tmp"); 
-			
-			
-			File theSavefile = File.createTempFile("tmp", null,
-					new File(dir +  "tmp"));
-			
-			String file = theSavefile.getAbsolutePath();
-			logger.info("theSavefile Done : " + file);
-			csvdata.setRowToFile(csvrows, theSavefile);
-
-			// Write the output to a file
-			h2db db = new h2db();
-			db.getDatabase(directory);
-			
-			hsqltext sqlstmt = new hsqltext();
-			// Statement stmt = db.connectiondb.createStatement();
-			PreparedStatement stmt = db.connectiondb.prepareStatement("DELETE FROM MVT");
-			logger.info("delete from mvt");
-			stmt.executeUpdate();
-			stmt.close();		
-			
-			logger.info("read csv file into from mvt");
-			
-			lireCSV(theOpenfile, db);
-			
-			stmt = db.connectiondb.prepareStatement("DELETE FROM MVT_NUM"); // db.connectiondb.createStatement();
-			logger.info("delete from mvt_num");
-			stmt.executeUpdate();
-			stmt.close();
-
-			// stmt = db.connectiondb.createStatement();
-			stmt = db.connectiondb.prepareStatement(sqlstmt.insertmvtnum());
-			logger.info("read csv file into from mvt");
-		
-			try {
-				stmt.executeUpdate();// , null, 'charset=UTF-8 fieldSeparator=;')");
-			} catch (Exception e) {
-				logger.info(sqlstmt.insertmvtnum());
-				e.printStackTrace();
-			}
-			stmt.close();
-
-			// stmt = db.connectiondb.createStatement();
-			stmt = db.connectiondb.prepareStatement("DELETE FROM PUBLIC.LISTMVTHIER");
-			logger.info("delete from lismvthier");
-			stmt.executeUpdate();
-			stmt.close();
-
-			PreparedStatement prepStmt = db.connectiondb.prepareStatement(sqlstmt.insertRootListMvthier(StartDateStr,EndDateStr));
-			logger.info("insert from lismvthier");
-			prepStmt.executeUpdate();
-			prepStmt.close();
-			int numberOfRows = 0;
-			int lvl = 1;
-			do {
-
-				prepStmt = db.connectiondb.prepareStatement(sqlstmt.isLevelNListMvthier());
-				prepStmt.setInt(1, lvl);
-				ResultSet rs = prepStmt.executeQuery();
-				if (rs.next()) {
-					numberOfRows = rs.getInt(1);
-					prepStmt.close();
-					if (numberOfRows > 0) {
-						prepStmt = db.connectiondb.prepareStatement(sqlstmt.insertLevelNListMvthier(StartDateStr,EndDateStr));
-						prepStmt.setInt(1, lvl + 1);
-						prepStmt.setInt(2, lvl);
-						prepStmt.executeUpdate();
-						prepStmt.close();
-					}
-				} else {
-					prepStmt.close();
-					System.out.println("error: could not get the record counts");
-				}
-				lvl++;
-			} while (numberOfRows != 0);
-
-			stmt = db.connectiondb.prepareStatement("DELETE FROM BENEFICIARIES_TAB");
-			logger.info("delete from beneficiaire");
-			stmt.executeUpdate();
-			stmt.close();
-
-			stmt = db.connectiondb.prepareStatement(sqlstmt.insertbeneficiairies());
-			logger.info("Insert Beneficiaries");
-			stmt.executeUpdate();// , null, 'charset=UTF-8 fieldSeparator=;')");
-			stmt.close();
-			
-			db.closeDbConnection(db.connectiondb);
-			theSavefile.deleteOnExit();
-			
-			logger.info("DONE !");
-			*/
 			Shell shell = new Shell();
 			IRunnableWithProgress op = new ProcessCsv("Database initialisation",new H2db(), dir,Filepath, StartD, EndD);
 			
@@ -187,7 +74,7 @@ public class Actionuser {
 
 	
 	
-	public void lireCSV(File theCSVfile, H2db dbconn) throws Exception {
+	public void lireCSV(File theCSVfile, H2db dbconn,IProgressMonitor monitor) throws Exception {
 
 		// Workbook wb;
 
@@ -202,13 +89,17 @@ public class Actionuser {
 //						shell.close();
 			HsqlText sqlstmt = new HsqlText();
 			
-
-			this.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
+			WyccWorkbook wyccwb = new WyccWorkbook();
+			Session lasession=wyccwb.CreateDataSession();
+			lasession.beginTransaction();
+			//this.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
+			
 			logger.info("Select file csv : " + theCSVfile.getAbsolutePath());
 			CsvTools csfile = new CsvTools();
-			csfile.readcsvfile(this.getPrepStmt(), theCSVfile.getAbsolutePath());
-			this.getPrepStmt().close();
+			csfile.readcsvfile(this.getPrepStmt(), theCSVfile.getAbsolutePath(),monitor, lasession);
+			//this.getPrepStmt().close();
 		}
+		
 	}
 
 	public List readAggregate(List<MvtCsv> list){
@@ -243,6 +134,44 @@ public class Actionuser {
 		
 		return listnotnull;
 	}
+	
+	public List readAggregate(List<MvtCsv> list,IProgressMonitor monitor ){
+		 List<LimitAggCsv> listagg=new ArrayList<>();
+		 List<LimitAggCsv> listaggDistinct=null;
+		 List<LimitAggCsv> listnotnull=null;
+		 // on construit la liste  des plan
+		 
+		String[] nextLine;
+		int i = 5;
+		MvtCsv recordmodule = null;
+		for (MvtCsv object : list) {
+			if (i == 5) {
+				recordmodule = object;
+			} else if (i >= 7) {
+				monitor.setTaskName("Processing csv file.");
+				monitor.subTask("Process line n# :  "+i);
+				monitor.worked(1);
+				
+				listagg.add(new LimitAggCsv(object.getCompany1(),object.getFormula1(),recordmodule.getCompany1(),object.getPolicynumber1(),0f));	
+				listagg.add(new LimitAggCsv(object.getCompany2(),object.getFormula2(),recordmodule.getCompany2(),object.getPolicynumber2(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany3(),object.getFormula3(),recordmodule.getCompany3(),object.getPolicynumber3(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany4(),object.getFormula4(),recordmodule.getCompany4(),object.getPolicynumber4(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany5(),object.getFormula5(),recordmodule.getCompany5(),object.getPolicynumber5(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany6(),object.getFormula(),recordmodule.getCompany6(),object.getPolicynumber6(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany7(),object.getFormula7(),recordmodule.getCompany7(),object.getPolicynumber7(),0f));
+				listagg.add(new LimitAggCsv(object.getCompany8(),object.getFormula8(),recordmodule.getCompany8(),object.getPolicynumber8(),0f));
+			
+			}
+			i++;
+		}
+		// Get distinct only
+       listaggDistinct = listagg.stream().distinct().collect(Collectors.toList());
+       listnotnull = listaggDistinct.stream().filter(c -> c.getCompany()!= null && !c.getCompany().equals("") ).collect(Collectors.toList());
+
+		
+		return listnotnull;
+	}
+
 	
 	public void readcsvheader(List<MvtCsv> list) throws IOException, SQLException {
 		// Build reader instance
@@ -334,7 +263,7 @@ public class Actionuser {
 		@Override
 		public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 				
-			    monitor.beginTask(message, IProgressMonitor.UNKNOWN);
+				monitor.beginTask(message, IProgressMonitor.UNKNOWN);
 			    monitor.worked(1);
 			    
 		            File theOpenfile=new File(filepath);
@@ -355,28 +284,29 @@ public class Actionuser {
 					instance.set(Calendar.YEAR, endD.getYear());
 					String EndDateStr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(instance.getTime());
 					
-					// read file csv
-		            theOpenfile.getParent();
-
-					logger.info("read file csv");
-					List<String[]> csvrows = csvdata.getRowsFromFile(theOpenfile);
-					System.out.print(dir + "tmp"); 
+					// on sauvegarde la lecture du csv dans un fichier temporaire
+					File theSavefile;
 					
-					
-					File theSavefile = null;
-					try {
-						theSavefile = File.createTempFile("tmp", null,
-								new File(dir +  "tmp"));
-					} catch (IOException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
+					if (false) {
+						// read file csv
+						theOpenfile.getParent();
+						logger.info("read file csv");
+						List<String[]> csvrows = csvdata.getRowsFromFile(theOpenfile);
+						System.out.print(dir + "tmp");
+						theSavefile = null;
+						try {
+							theSavefile = File.createTempFile("tmp", null, new File(dir + "tmp"));
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						String file = theSavefile.getAbsolutePath();
+						logger.info("theSavefile Done : " + file);
+						csvdata.setRowToFile(csvrows, theSavefile);
 					}
-					
-					String file = theSavefile.getAbsolutePath();
-					logger.info("theSavefile Done : " + file);
-					csvdata.setRowToFile(csvrows, theSavefile);
-
 					// Write the output to a file
+					theSavefile=this.saveIntempFile (  theOpenfile, csvdata);
+					
 					H2db db = null;
 					try {
 						db = new H2db();
@@ -384,6 +314,8 @@ public class Actionuser {
 						logger.error(e1);
 						e1.printStackTrace();
 					}
+					
+					
 					try {
 						db.getDatabase(directory);
 					} catch (IOException e1) {
@@ -417,7 +349,7 @@ public class Actionuser {
 					logger.info("read csv file into from mvt");
 					
 					try {
-						lireCSV(theOpenfile, db);
+						lireCSV(theOpenfile, db,monitor);
 					} catch (Exception e1) {
 						logger.error(e1);
 						e1.printStackTrace();
@@ -601,7 +533,30 @@ public class Actionuser {
 					logger.info("DONE !");
 					monitor.done();
 			}
-			        
+			
+		private File saveIntempFile ( File theOpenfile,managecsv csvdata){
+			// read file csv
+            theOpenfile.getParent();
+
+			logger.info("read file csv");
+			List<String[]> csvrows = csvdata.getRowsFromFile(theOpenfile);
+			System.out.print(dir + "tmp"); 
+			
+			// on sauvegarde la lecture du csv dans un fichier temporaire
+			File theSavefile = null;
+			try {
+				theSavefile = File.createTempFile("tmp", null,
+						new File(dir +  "tmp"));
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
+			String file = theSavefile.getAbsolutePath();
+			logger.info("theSavefile Done : " + file);
+			csvdata.setRowToFile(csvrows, theSavefile);
+			return  theSavefile;
+			}
 		}
 }
 

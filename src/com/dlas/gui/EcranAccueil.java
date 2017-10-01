@@ -5,24 +5,32 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.concurrent.BlockingQueue;
+import org.apache.logging.log4j.*;
 
-import org.apache.log4j.Appender;
-import org.apache.log4j.ConsoleAppender;
-import org.apache.log4j.FileAppender;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PatternLayout;
-import org.apache.log4j.PropertyConfigurator;
-
+import javax.swing.ImageIcon;
 import javax.swing.JProgressBar;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.net.URLDecoder;
+import java.sql.PreparedStatement;
+import java.sql.Timestamp;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+import org.hsqldb.server.Server;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.beans.BeansObservables;
@@ -40,6 +48,8 @@ import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.jface.dialogs.ProgressMonitorDialog;
+import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -63,28 +73,38 @@ import org.eclipse.swt.widgets.Listener;
 
 import com.dlas.dao.ObjectDao;
 import com.dlas.dao.beneficiaries;
+import com.apple.eawt.AboutHandler;
+import com.apple.eawt.AppEvent.AboutEvent;
+import com.apple.eawt.Application;
+import com.apple.mrj.MRJApplicationUtils;
 import com.dlas.dao.BenefitDb;
-
+import com.dlas.dao.H2db;
+import com.dlas.gui.accueil.MacOSXControllerAbout;
+import com.dlas.gui.accueil.MacOSXControllerPrefs;
+import com.dlas.gui.accueil.MacOSXControllerQuit;
 import com.dlas.gui.accueil.MenuAccueil;
+import com.dlas.gui.accueil.MenuMsg;
+
 import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Companies;
 import com.dlas.windowmanager.WindowsManager;
+import com.ibm.icu.text.DateFormat;
+import com.ibm.icu.text.SimpleDateFormat;
 import com.poi.actionuser.Actionuser;
+import com.poi.actionuser.ReadCSVFile;
 import com.poi.actionuser.ReadFileXlsx;
-
-
-
+import com.poi.actionuser.Actionuser.ProcessCsv;
 import com.dlas.gui.model.Benefits;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.wb.swt.SWTResourceManager;
-
+import com.dlas.tools.ThreadUtilities;
 
 //
 
 public class EcranAccueil {
 	
-	static  EcranAccueil window = new EcranAccueil();
+	private EcranAccueil window = this;
 	private Button deleteCompanyButton;
 	private Button AggregateButton;
 	private Button SaveButton;
@@ -117,11 +137,11 @@ public class EcranAccueil {
 	
 	static Display d;
 	Shell s;
+	static BlockingQueue<MenuMsg> queue;
 	
-	
-	public EcranAccueil() {
-		// TODO Auto-generated constructor stub
-	}
+//	public EcranAccueil() {
+//		// TODO Auto-generated constructor stub
+//	}
 	
 	public List getListCsv() {
 		return listCsv;
@@ -142,10 +162,18 @@ public class EcranAccueil {
 		this.filepath = filepath;
 	}
 	
-	Logger logger = Logger.getLogger(EcranAccueil.class);
+	Logger logger = LogManager.getLogger("wycc");
 	
 	
-	public static void main(String[] args) {
+	//public static void main(String[] args) {
+	public EcranAccueil(Display display ) {
+		
+		MacOSXControllerAbout macControllerahout = new MacOSXControllerAbout();
+		MacOSXControllerPrefs macControllerprefs = new MacOSXControllerPrefs();
+		MacOSXControllerQuit macControllerquit = new MacOSXControllerQuit();
+		
+		 Application macApplication = Application.getApplication();
+		 
 		/*
 		 *  On détermine le dossier d'execution du jar
 		 * 
@@ -165,36 +193,7 @@ public class EcranAccueil {
 	     // Create appender for log4j
 	     // ======================================================
 		    String log4jConfigFile = appDir   +"config"+ File.separator + "log4j.properties";
-	        PropertyConfigurator.configure(log4jConfigFile);
-
-/*		
-		 // creates pattern layout
-        PatternLayout layout = new PatternLayout();
-        String conversionPattern = "%-7p %d [%t] %c %x - %m%n";
-        layout.setConversionPattern(conversionPattern);
- 
-        // creates console appender
-        ConsoleAppender consoleAppender = new ConsoleAppender();
-        consoleAppender.setLayout(layout);
-        consoleAppender.activateOptions();
- 
-        // creates file appender
-        FileAppender fileAppender = new FileAppender();
-        //fileAppender.setFile("applog3.txt");
-        fileAppender.setLayout(layout);
-        fileAppender.activateOptions();
-
-        // configures the root logger
-
-        rootLogger.addAppender(consoleAppender);
-        rootLogger.addAppender(fileAppender);
-
-	        
-	        Logger rootLogger = Logger.getRootLogger();
-	        rootLogger.setLevel(Level.INFO);   
-	 */        
-        // creates a custom logger and log messages
-      
+	 
         
 		
 	     // ======================================================
@@ -202,8 +201,7 @@ public class EcranAccueil {
 	     // subsystem and contains the single UI handling thread
 	     // ======================================================
 	    
-		Display.setAppName(APP_NAME);
-		final Display display = Display.getDefault();
+
 		d=display;
 		 // ====================================================
 	     // create a shell for the main window from the Display
@@ -213,51 +211,40 @@ public class EcranAccueil {
 	     // Set the Window Title
 	     // =====================
 	     shell.setText("Main Shell");
-	     
-	     // =============================================================
-	     // Register a listener for the Close event on the main Shell.
-	     // This disposes the Display which will cause the entire child
-	     // tree to dispose
-	     // =============================================================
-	     shell.addListener(SWT.Close, new Listener()
-	     {
-	        @Override
-	        public void handleEvent(Event event)
-	        {
-	        	MessageBox messageBox = new MessageBox(shell, SWT.ICON_QUESTION | SWT.YES | SWT.NO);					
-	    		messageBox.setMessage("Do you really want to exit? ");
-	    		messageBox.setText("Exiting Application");
-	    		int response = messageBox.open();
-	    		
-	    		if (response == SWT.YES){
-	    			shell.dispose();
-	    			d.dispose();
-	    			System.exit(0);
-	    		}
 
-	        }
-	     });
+		 String osName = System.getProperty("os.name").toLowerCase();
+		 boolean isMacOs = osName.startsWith("mac os x");
+		if (isMacOs)
+		{
+		
+		  MRJApplicationUtils.registerAboutHandler(macControllerahout);
+		  MRJApplicationUtils.registerPrefsHandler(macControllerprefs);
+		  MRJApplicationUtils.registerQuitHandler(macControllerquit);
+		  
+		}
+		macControllerquit.setD(d);
+		macControllerquit.setS(shell);
+
 	     
 	     
 		 shell.setBackground(SWTResourceManager.getColor(255, 255, 255));
 		 shell.setSize(638, 382);
-	    
-		Menu menusy=display.getSystemMenu();
+
+		//Menu menusy=display.getSystemMenu();
      	Realm.runWithDefault(SWTObservables.getRealm(display), new Runnable() {
+     		
+     		//d.asyncExec( new Runnable() {
 			@Override
 			public void run() {
-
 				try {
 					window.open();
+					logger.info("Fermeture de l'écran accueil");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
 	}
-
-	
-
 
 
 	class Open implements SelectionListener {
@@ -387,20 +374,49 @@ public class EcranAccueil {
 	}
 
 	public void open() {
-		final Display display = Display.getDefault();		
-//		setDefaultValues();
+		final Display display = d; 	
+
 		createContents();
 		MenuAccueil menuaccueil=new MenuAccueil(shell,display,startdate,enddate,appDir);
 		Display.setAppName(APP_NAME);
 		shell.open();
-		shell.layout();
+		shell.layout();	
 		while (!shell.isDisposed()) {
 			if (!display.readAndDispatch())
 				display.sleep();
+			    
 		}
+		display.dispose();
+		logger.info("Le shell est fermé");
+		logger.debug("Le shell est fermé");
+		
+		 Thread[] lesThreads=ThreadUtilities.getAllThreads();
+		 for (Thread thread: lesThreads){
+			
+			 ThreadUtilities.getThreadInfo(thread).getLockName();
+			 ThreadUtilities.getThreadInfo(thread).getThreadState().name();
+			 logger.debug("Thread name :"+ThreadUtilities.getThreadInfo(thread).getThreadName());
+			 logger.debug("Thread status :"+ThreadUtilities.getThreadInfo(thread).getThreadState().name());
+			 logger.debug("Lock name :"+ThreadUtilities.getThreadInfo(thread).getLockName() );
+			 //thread.stop();
+		 }
+
 	}	
 	
-	
+	public String chooseFile(Shell s) throws IOException {
+		
+		
+		File directory = new File(".");
+		String fileCharSep = System.getProperty("file.separator");
+		FileDialog fd = new FileDialog(s, SWT.OPEN);
+		fd.setText("Choose a file");
+		fd.setFilterPath(directory.getCanonicalPath());
+		String[] filterExt = { "*.csv"};
+		fd.setFilterExtensions(filterExt);
+		String selected=fd.open();
+		
+		return selected;
+	}	
 	protected void createContents() {
 		shell.setLayout(new FillLayout());
 		shell.setSize(789, 517);
@@ -438,20 +454,34 @@ public class EcranAccueil {
 		AggregateButton.addSelectionListener(new SelectionAdapter() {
 				@Override
 				public void widgetSelected(SelectionEvent e) {
-					Benefit benefit = new Benefit();
-					Actionuser a = new Actionuser();
-						m_benefits.addBenefit(shell,benefit,window);	
+					
+					try {
+						filepath = window.chooseFile(shell);
+					} catch (IOException e2) {
+						// TODO Auto-generated catch block
+						e2.printStackTrace();
+					}
+					
+					if (filepath !=null) {
+						//Shell shell = new Shell();
+						logger.info("Creation du ReadCSVFILE");
+						String startdateStr =startdate.toString();
+
+						Timestamp TsStart=getTimestampFromDateTime(startdate);
+						Timestamp TsEnd=getTimestampFromDateTime(startdate);
+						//IRunnableWithProgress op = new ReadCSVFile(window, " reading CSV file !", TsStart, TsEnd,shell, m_benefits, appDir, filepath);
+						IRunnableWithProgress op = new ReadCSVFile(window, " reading CSV file !", TsStart, TsEnd,shell, m_benefits, appDir, filepath);
 						try {
-							
-							a.lanceLecture(appDir,window.getFilepath(), startdate,enddate);
-							
-						} catch (Exception e1) {
+							new ProgressMonitorDialog(shell).run(true, true, op);
+						} catch (InvocationTargetException | InterruptedException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
-						m_benefitsViewer.setSelection(new StructuredSelection(benefit),
-								true);
-						m_bindingContext.updateModels();
+						//shell.close();
+					}
+					Benefit benefit = new Benefit();
+					m_benefitsViewer.setSelection(new StructuredSelection(benefit),true);
+					m_bindingContext.updateModels();
 						
 					
 				}
@@ -783,4 +813,55 @@ public class EcranAccueil {
 		//
 		return bindingContext;
 	}
+	
+	
+	public static <T> List<T> distinctList(List<T> list, Function<? super T, ?>... keyExtractors) {
+
+	    return list
+	        .stream()
+	        .filter(distinctByKeys(keyExtractors))
+	        .collect(Collectors.toList());
+	}
+
+	private static <T> Predicate<T> distinctByKeys(Function<? super T, ?>... keyExtractors) {
+
+	    final Map<List<?>, Boolean> seen = new ConcurrentHashMap<>();
+
+	    return t -> {
+
+	        final List<?> keys = Arrays.stream(keyExtractors)
+	            .map(ke -> ke.apply(t))
+	            .collect(Collectors.toList());
+
+	        return seen.putIfAbsent(keys, Boolean.TRUE) == null;
+
+	    };
+
+	}
+
+  public Timestamp getTimestampFromDateTime(DateTime dateime){
+	  Timestamp Dstartdate = null;
+	  try {
+		String Strstart=String.valueOf(dateime.getYear())
+			       +"-"
+			       +String.valueOf(dateime.getMonth()+1)
+				   +"-"
+				   +String.valueOf(dateime.getDay())
+				   + " "
+				   +String.valueOf(dateime.getHours())
+				   +":"
+				    +String.valueOf(dateime.getMinutes())
+				    +":"
+				    +String.valueOf(dateime.getSeconds());
+
+  
+		    Dstartdate=Timestamp.valueOf(Strstart);
+	} catch (Exception e) {
+		logger.error("Erreur sur conversion de date "+dateime);
+		logger.error("Error "+e);
+		e.printStackTrace();
+	}
+	  return Dstartdate;
+  }
+	
 }

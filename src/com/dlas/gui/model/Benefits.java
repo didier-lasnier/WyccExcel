@@ -11,18 +11,22 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
+import org.hibernate.Session;
+
 import com.dlas.dao.LimitAggCsv;
 import com.dlas.gui.EcranAccueil;
 import com.dlas.tools.CsvTools;
 import com.poi.actionuser.Actionuser;
 import com.poi.dlas.WyccWorkbook;
-
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Benefits extends AbstractModelObject {
+	Logger logger=LogManager.getLogger("Wycc");
 	private final List/* <PhoneGroup> */m_benefits = new ArrayList();
 	
 	
@@ -41,6 +45,7 @@ public class Benefits extends AbstractModelObject {
 			
 
 			if (selected !=null) {
+				    logger.info("File selectd "+selected);
 					window.setFilepath(selected );
 					try {
 					CsvTools a = new CsvTools();
@@ -56,8 +61,9 @@ public class Benefits extends AbstractModelObject {
 
 							for (LimitAggCsv distinct :listdistinct){
 							// on recupére les données précédement enregistrées
-							String amount = wyccwb.getAggregate(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber() );
-							
+							Session lasession=wyccwb.CreateDataSession();	
+							String amount = wyccwb.getAggregate(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),lasession );
+							wyccwb.closedataSession(lasession);
 							m_benefits.add(new Benefit(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),amount));
 						}
 
@@ -65,19 +71,76 @@ public class Benefits extends AbstractModelObject {
 					
 					} catch (Exception e1) {
 						// TODO Auto-generated catch block
+						logger.error(e1);
 						e1.printStackTrace();
 					}
 				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
+				logger.error(e);
 				e.printStackTrace();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
+				logger.error(e);
 				e.printStackTrace();
 			}
 		firePropertyChange("benefits", null, m_benefits);
 	}
-	
+
+	public void addBenefits(String selected,Shell s, Benefit benefit, EcranAccueil window,IProgressMonitor monitor) {
+		  WyccWorkbook wyccwb = new WyccWorkbook();
+
+			File directory = new File(".");
+			String fileCharSep = System.getProperty("file.separator");
+			try {
+			if (selected !=null) {
+				    logger.info("File open : "+selected);
+					window.setFilepath(selected );
+					try {
+					CsvTools a = new CsvTools();
+					Actionuser b = new Actionuser();
+					// le fichier csv est lu et est en mémoire
+					window.setListCsv(a.getcsvfile(selected));
+					//on construit une collections avec les données des companies 
+					
+					 monitor.setTaskName("Processing file gettings the various formula and waranty.");
+					 monitor.worked(1);
+					 //monitor.subTask("Processing beneficiaries ");
+					List<LimitAggCsv>	listviewer   = b.readAggregate(window.getListCsv(),monitor);
+					List<LimitAggCsv>	listdistinct = distinctList(listviewer,LimitAggCsv::getPolicynumber,LimitAggCsv::getFormula,LimitAggCsv::getFormulename,LimitAggCsv::getCompany);
+					if (false) {
+
+					} else {
+						monitor.setTaskName("Processing data .");
+						monitor.subTask("Launch database this operation could take a while");
+						monitor.worked(1);
+						Session lasession=wyccwb.CreateDataSession();
+						for (LimitAggCsv distinct :listdistinct){
+						// on recupére les données précédement enregistrées							
+						monitor.worked(1);
+						String amount = wyccwb.getAggregate(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),lasession );
+                        monitor.subTask("process : "+distinct.getCompany());
+						monitor.worked(1);
+						m_benefits.add(new Benefit(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),amount));
+						
+					    }
+						wyccwb.closedataSession(lasession);
+
+					}
+					
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						logger.error(e1);
+						e1.printStackTrace();
+					}
+				}
+			} catch (Exception e) {
+				logger.error(e);
+				e.printStackTrace();
+			}
+		firePropertyChange("benefits", null, m_benefits);
+	}
+
 	public void removeBenefit(Benefit benefit) {
 		m_benefits.remove(benefit);
 		firePropertyChange("benefits", null, m_benefits);

@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.beans.BeanProperties;
@@ -90,11 +90,12 @@ public class ModuleListe {
 	public ModuleListe(){
 
 	}
-	public static Logger logger = Logger.getLogger(ModuleListe.class);
+	public static Logger logger = LogManager.getLogger("wycc");
 	/**
 	 * @wbp.parser.entryPoint
 	 */
 	protected void createContents() {
+		logger.info("Start create content");
 		shellModul=new Shell();
 		shellModul.setBackground(SWTResourceManager.getColor(245, 255, 250));
 		shellModul.setSize(753, 562);
@@ -303,13 +304,13 @@ public class ModuleListe {
 		lblForfaitpercentage.setBounds(318, 67, 113, 14);
 		lblForfaitpercentage.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
 		lblForfaitpercentage.setText("Forfait/percentage:");
-
+		logger.info("end create content");
 		m_modulcontext= initDataBindings();
 	}
 
 
 	protected DataBindingContext initDataBindings() {
-
+		logger.info("end initDataBindings");
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
 		ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
@@ -382,7 +383,7 @@ public class ModuleListe {
 */
 		
 		//
-		
+		logger.info("end initDataBindings");
 
 		return bindingContext;
 	}
@@ -406,6 +407,7 @@ public class ModuleListe {
 	public int open(Display display) {
 
 		//setDefaultValues(display);
+		logger.info("open window");
 		createContents();
 
 		Display.setAppName(APP_NAME);

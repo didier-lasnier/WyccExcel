@@ -6,9 +6,15 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.beans.BeanProperties;
@@ -93,7 +99,7 @@ public class ModuleListeBoat {
 	
 	public ModuleListeBoat(){
 	}
-	public static Logger logger = Logger.getLogger(ModuleListeBoat.class);
+	public static Logger logger = LogManager.getLogger("wycc");
 	private Text text;
 	private Text textbankfee;
 	private Text textsurcom;
@@ -565,11 +571,18 @@ public class ModuleListeBoat {
 	public List<ModulBoat> getListmodul() {
 		
 		ObjectDao myobj = new ObjectDao();
-		Session lasession = myobj.getSessionDao();
-		lasession.beginTransaction();
-		Query query = lasession.createQuery("from ModulBoat");		
-		List<ModulBoat> resultdistinct = query.list();
-		lasession.getTransaction().commit();
+		List<ModulBoat> resultdistinct = null;
+		try {
+			Session lasession = myobj.getSessionDao();
+			lasession.beginTransaction();
+			Query query = lasession.createQuery("from ModulBoat");		
+			resultdistinct = query.list();
+			lasession.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			logger.error(e);
+			e.printStackTrace();
+		}
 		return resultdistinct;
 	}
 	
@@ -614,6 +627,32 @@ public class ModuleListeBoat {
 	
     }
 
+	
+	public static <T> List<T> distinctList(List<T> list, Function<? super T, ?>... keyExtractors) {
+
+	    return list
+	        .stream()
+	        .filter(distinctByKeys(keyExtractors))
+	        .collect(Collectors.toList());
+	}
+
+	private static <T> Predicate<T> distinctByKeys(Function<? super T, ?>... keyExtractors) {
+
+	    final Map<List<?>, Boolean> seen = new ConcurrentHashMap<>();
+
+	    return t -> {
+
+	        final List<?> keys = Arrays.stream(keyExtractors)
+	            .map(ke -> ke.apply(t))
+	            .collect(Collectors.toList());
+
+	        return seen.putIfAbsent(keys, Boolean.TRUE) == null;
+
+	    };
+
+	}
+	
+	
 
     public  class ProgressBarDb implements IRunnableWithProgress {
 		 private String           message;
@@ -642,5 +681,6 @@ public class ModuleListeBoat {
 		}
 		
 	}
+    
 }
 

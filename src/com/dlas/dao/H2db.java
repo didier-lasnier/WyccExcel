@@ -1,6 +1,6 @@
 package com.dlas.dao;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -19,7 +19,7 @@ public class H2db {
 	public H2db() throws SQLException {
 	}
 
-	static Logger logger = Logger.getLogger("wycc");
+	static Logger logger = LogManager.getLogger("wycc");
 
 	public Session getSession() throws IOException {
 		SessionFactory sessionFactory;
