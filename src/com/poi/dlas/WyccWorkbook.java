@@ -695,7 +695,7 @@ public class WyccWorkbook extends JPanel {
 		ObjectDao myobj = new ObjectDao();
 		Session lasession = myobj.getSessionDao();
 		lasession.beginTransaction();
-				return lasession;
+		return lasession;
 	}
 	
 	public void closedataSession (Session lasession){
@@ -703,7 +703,9 @@ public class WyccWorkbook extends JPanel {
 		lasession.close();
 	}
 	
-	
+	public void closedataSessionwithcommit (Session lasession){
+		lasession.close();
+	}
 	public int getRowCount(XSSFWorkbook workbook, String sheetName) {
 		int index = workbook.getSheetIndex(sheetName);
 		if (index == -1)

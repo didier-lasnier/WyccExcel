@@ -216,7 +216,6 @@ public class HsqlText {
 		sqlstmt = sqlstmt + " ?,";
 		sqlstmt = sqlstmt + " ?";
 		sqlstmt = sqlstmt + " )";
-
 		return sqlstmt;
 	}
 

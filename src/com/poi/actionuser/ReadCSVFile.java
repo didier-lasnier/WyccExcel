@@ -252,19 +252,26 @@ public class ReadCSVFile implements IRunnableWithProgress {
 				
 				WyccWorkbook wyccwb = new WyccWorkbook();
 				Session lasession=wyccwb.CreateDataSession();
+				
 				Query query = lasession.createQuery(
 						"DELETE FROM Mvt2");
 				int result = query.executeUpdate();
-				wyccwb.closedataSession(lasession);
+				lasession.flush();
+				lasession.clear();
+				lasession.getTransaction().commit();
+				
 				//this.deletmvt();
-
+				lasession.beginTransaction();
 				try {
-					lireCSV(theOpenfile, db,monitor);
+					lireCSV(theOpenfile, db,monitor,lasession);
+					lasession.flush();
+					lasession.clear();
 				} catch (Exception e1) {
 					logger.error(e1);
 					e1.printStackTrace();
 				}
-
+				wyccwb.closedataSession(lasession);
+				
 				this.deletMvtNum();
 				this.insertmvtNum();
 				this.deleteListHier();
@@ -467,18 +474,18 @@ public class ReadCSVFile implements IRunnableWithProgress {
 			e.printStackTrace();
 		}
 	}
-	public void lireCSV(File theCSVfile, H2db dbconn,IProgressMonitor monitor) throws Exception {
+	public void lireCSV(File theCSVfile, H2db dbconn,IProgressMonitor monitor, Session lasession) throws Exception {
 
 		if (theCSVfile != null) {
 
 			HsqlText sqlstmt = new HsqlText();
 			
 
-			this.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
+			//this.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
 			logger.info("Select file csv : " + theCSVfile.getAbsolutePath());
 			CsvTools csfile = new CsvTools();
-			csfile.readcsvfile(this.getPrepStmt(), theCSVfile.getAbsolutePath(),monitor);
-			this.getPrepStmt().close();
+			csfile.readcsvfile(this.getPrepStmt(), theCSVfile.getAbsolutePath(),monitor,lasession);
+			//this.getPrepStmt().close();
 		}
 	}
 	

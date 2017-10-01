@@ -26,6 +26,7 @@ import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Shell;
+import org.hibernate.Session;
 
 import com.dlas.dao.MvtCsv;
 import com.dlas.dao.beneficiaries;
@@ -88,12 +89,15 @@ public class Actionuser {
 //						shell.close();
 			HsqlText sqlstmt = new HsqlText();
 			
-
-			this.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
+			WyccWorkbook wyccwb = new WyccWorkbook();
+			Session lasession=wyccwb.CreateDataSession();
+			lasession.beginTransaction();
+			//this.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
+			
 			logger.info("Select file csv : " + theCSVfile.getAbsolutePath());
 			CsvTools csfile = new CsvTools();
-			csfile.readcsvfile(this.getPrepStmt(), theCSVfile.getAbsolutePath(),monitor);
-			this.getPrepStmt().close();
+			csfile.readcsvfile(this.getPrepStmt(), theCSVfile.getAbsolutePath(),monitor, lasession);
+			//this.getPrepStmt().close();
 		}
 		
 	}
