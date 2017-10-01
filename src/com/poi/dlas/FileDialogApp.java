@@ -3,7 +3,7 @@ package com.poi.dlas;
 import java.util.List;
 import java.io.File;
 import java.io.IOException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -57,7 +57,7 @@ public class FileDialogApp {
 	private String filepathtxt;
 	private String filepath;
 	
-	static Logger logger = Logger.getLogger("wycc");
+	static Logger logger = LogManager.getLogger("wycc");
 	private Table table;
 	private List<LimitAggCsv>  listviewer;
 	private TableViewer tableViewer;

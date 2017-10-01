@@ -48,15 +48,16 @@ public class MenuAccueil {
 	modulelisteitem.addSelectionListener(Mbitem);
 	
 	
-	final MenuItem separator1 = new MenuItem(filemenu, SWT.SEPARATOR);
+/*	final MenuItem separator1 = new MenuItem(filemenu, SWT.SEPARATOR);
 	final MenuItem exitItem = new MenuItem(filemenu, SWT.PUSH);
 	exitItem.setText("&Quit\tCRTL+Q");
 	exitItem.setAccelerator(SWT.CTRL + 'Q');
 	
 
-    exitItem.addSelectionListener(new ExitItem(s,d));
+    exitItem.addSelectionListener(new ExitItem(s,d));*/
     
     s.setMenuBar(m);
+
 	}
 	
 

@@ -10,14 +10,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 public class Tools {
 
 	public Tools() {
 	}
 
-	public static Logger logger = Logger.getLogger("wycc");
+	public static Logger logger = LogManager.getLogger("wycc");
 
 	public static String getNewNumColonne(String formule, String pattern, int colStart, int colOffset) {
 		//logger.info("Formule entrante : " + formule);
@@ -102,5 +102,6 @@ public class Tools {
 	    };
 
 	}
+	
 	
 }

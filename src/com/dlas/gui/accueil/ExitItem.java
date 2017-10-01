@@ -10,7 +10,7 @@ import org.eclipse.swt.widgets.Shell;
 public class ExitItem implements SelectionListener {
 	private Display d;
 	private Shell    s;
-
+	private String exitMsg;
 	public void ExitItem(){
 
 	}
@@ -43,5 +43,13 @@ public class ExitItem implements SelectionListener {
 		// TODO Auto-generated method stub
 
 	}
+	public String getExitMsg() {
+		return exitMsg;
+	}
+	public void setExitMsg(String exitMsg) {
+		this.exitMsg = exitMsg;
+	}
+	
+	
 
 }

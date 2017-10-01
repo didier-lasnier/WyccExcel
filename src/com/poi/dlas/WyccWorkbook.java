@@ -30,7 +30,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -194,7 +194,7 @@ public class WyccWorkbook extends JPanel {
 
 	}
 
-	public static Logger logger = Logger.getLogger(WyccWorkbook.class);
+	public static Logger logger = LogManager.getLogger(WyccWorkbook.class);
 
 	public void createWorkbook(File xlsfileWycc) throws IOException, InvalidFormatException {
 
@@ -667,14 +667,11 @@ public class WyccWorkbook extends JPanel {
 		// }
 	}
 
-	public String getAggregate(String company, String formuma, String formulenumber, String policynumber) {
+	public String getAggregate(String company, String formuma, String formulenumber, String policynumber,Session lasession) {
 
 		List resultdistinct;
 		String ValueReturn;
 		try {
-			ObjectDao myobj = new ObjectDao();
-			Session lasession = myobj.getSessionDao();
-			lasession.beginTransaction();
 			Query query = lasession.createQuery(
 					"select amount from BenefitDb where company = :company and formula=:formula and formulename=:formulename and policynumber=:policynumber order by aggregateid asc");
 			query.setString("company", company);
@@ -682,8 +679,7 @@ public class WyccWorkbook extends JPanel {
 			query.setString("formulename", formulenumber);
 			query.setString("policynumber", policynumber);
 			resultdistinct = query.list();
-			lasession.getTransaction().commit();
-			lasession.close();
+			
 			ValueReturn = (String) resultdistinct.get(0);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -694,6 +690,20 @@ public class WyccWorkbook extends JPanel {
 		// }
 	}
 
+	public Session CreateDataSession ( ){
+		
+		ObjectDao myobj = new ObjectDao();
+		Session lasession = myobj.getSessionDao();
+		lasession.beginTransaction();
+				return lasession;
+	}
+	
+	public void closedataSession (Session lasession){
+		lasession.getTransaction().commit();
+		lasession.close();
+	}
+	
+	
 	public int getRowCount(XSSFWorkbook workbook, String sheetName) {
 		int index = workbook.getSheetIndex(sheetName);
 		if (index == -1)

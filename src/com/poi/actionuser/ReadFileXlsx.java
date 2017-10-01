@@ -9,7 +9,7 @@ import java.util.List;
 
 import org.eclipse.swt.widgets.Monitor;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
@@ -29,7 +29,7 @@ public class ReadFileXlsx {
 	private String lastSheetName = null;
 	private List<beneficiaries> result;
 
-	static Logger logger = Logger.getLogger("wycc");
+	static Logger logger = LogManager.getLogger("wycc");
 
 	public void ReadFileXlsx() {
 

@@ -14,7 +14,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.beans.BeanProperties;
@@ -99,7 +99,7 @@ public class ModuleListeBoat {
 	
 	public ModuleListeBoat(){
 	}
-	public static Logger logger = Logger.getLogger(ModuleListeBoat.class);
+	public static Logger logger = LogManager.getLogger("wycc");
 	private Text text;
 	private Text textbankfee;
 	private Text textsurcom;
@@ -186,26 +186,6 @@ public class ModuleListeBoat {
 			}
 		});
 		btnExport.setText("Export");
-		
-		Button btnSearch = new Button(btnrecord, SWT.NONE);
-		btnSearch.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent arg0) {
-				SearchFormula frame = new SearchFormula();
-				frame.setVisible(true);
-				List<ModulBoat> resultboat =  (List<ModulBoat>) m_modulboatmodels.getM_modulboats().stream()               
-			                .filter(b -> ((ModulBoat) b).getModul_fournisseur().equals(frame.getTextSupplier()))     
-			                .filter(b -> ((ModulBoat) b).getModullabel().equals(frame.getTextFormula()))     
-			                .filter(b -> ((ModulBoat) b).getModulecategory().equals(frame.getTextModule())) 
-			                .filter(b -> ((ModulBoat) b).getPolicynumber().equals(frame.getTextPolicy()))
-			                .filter(b -> ((ModulBoat) b).getModulboat().equals(frame.getTextBoat()))
-			                .filter(b -> ((ModulBoat) b).getCalculmode().equals(frame.getTextCalculMode()))
-			                .collect(Collectors.toList());           
-				
-				
-			}
-		});
-		btnSearch.setText("Search");
 		
 		Composite btncollection = new Composite(buttonBar, SWT.BORDER);
 		btncollection.setLayout(null);
@@ -591,11 +571,18 @@ public class ModuleListeBoat {
 	public List<ModulBoat> getListmodul() {
 		
 		ObjectDao myobj = new ObjectDao();
-		Session lasession = myobj.getSessionDao();
-		lasession.beginTransaction();
-		Query query = lasession.createQuery("from ModulBoat");		
-		List<ModulBoat> resultdistinct = query.list();
-		lasession.getTransaction().commit();
+		List<ModulBoat> resultdistinct = null;
+		try {
+			Session lasession = myobj.getSessionDao();
+			lasession.beginTransaction();
+			Query query = lasession.createQuery("from ModulBoat");		
+			resultdistinct = query.list();
+			lasession.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			logger.error(e);
+			e.printStackTrace();
+		}
 		return resultdistinct;
 	}
 	

@@ -19,7 +19,7 @@ limitations under the License.
 package com.poi.dlas;
 
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 /**
  * A business plan demo Usage: BusinessPlan -xls|xlsx
@@ -28,7 +28,7 @@ import org.apache.log4j.Logger;
  */
 public class WyccCsvFacturation {
 
-	static Logger logger = Logger.getLogger("wycc");
+	static Logger logger = LogManager.getLogger("wycc");
 
 /*	public static void main(String[] args) {
 		// Schedule a job for the event-dispatching thread:

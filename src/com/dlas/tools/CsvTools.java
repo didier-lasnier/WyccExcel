@@ -26,7 +26,7 @@ public class CsvTools {
 	public void CsvTools() {
 	}
 
-	public void readcsvfile(PreparedStatement stmt, String filenamecsv) throws IOException, SQLException, InvocationTargetException, InterruptedException {
+	public void readcsvfile(PreparedStatement stmt, String filenamecsv,IProgressMonitor monitor) throws IOException, SQLException, InvocationTargetException, InterruptedException {
 		// Build reader instance
 		// Read data.csv
 		// Default seperator is comma
@@ -35,12 +35,16 @@ public class CsvTools {
 
 		
 		List<MvtCsv> list=getcsvfile(filenamecsv);
-		Shell shell = new Shell();
+		saveCSVRecord(monitor,"",stmt,filenamecsv,list.size(),this,list);
+		
+	/*	Shell shell = new Shell();
 		IRunnableWithProgress op = new ProgressBarDb("",stmt,filenamecsv,list.size(),this,list);
 		new ProgressMonitorDialog(shell).run(true, true, op);
-		shell.close();
+		shell.close();*/
 
 	}
+	
+	
 	public List<MvtCsv> getcsvfile( String filenamecsv) throws IOException, SQLException {
 		// Build reader instance
 		// Read data.csv
@@ -179,6 +183,35 @@ public class CsvTools {
 
 	}
 	
+	
+	public void saveCSVRecord (IProgressMonitor monitor,String message,PreparedStatement stmt, String filenamecsv,int workload,CsvTools csvtools,List<MvtCsv> list ){
+		try {
+			list = csvtools.getcsvfile(filenamecsv);
+		} catch (IOException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		    int i = 5;
+		    int countor=1;
+			MvtCsv recordmodule = null;
+			for (MvtCsv object : list) {
+				monitor.subTask("Processing csv line : "+ countor + " of "+  workload + "...");
+				if (i == 5) {
+					recordmodule = object;
+				} else if (i >= 7) {
+					System.out.println(object.getWyccid());
+					try {
+						csvtools.saveRecord(stmt, object, recordmodule);
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				monitor.worked(1);
+				countor++;
+				i++;
+			}
+	}
 	public static class ProgressBarDb implements IRunnableWithProgress {
 		 private String              message;
 		 private PreparedStatement   stmt;

@@ -2,7 +2,7 @@ package com.dlas.dao;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.Session;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
@@ -10,12 +10,12 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public class HibernateUtils {
 	private static SessionFactory sessionFactory;
-	static Logger logger = Logger.getLogger("wycc");
+	static Logger logger = LogManager.getLogger("wycc");
 
 	public static SessionFactory getSessionFactory() {
 		try {
 			StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
-					.configure("hibernate.cfg.xml").build();
+					.configure().build();
 			Metadata metadata = new MetadataSources(standardRegistry).getMetadataBuilder().build();
 			return metadata.getSessionFactoryBuilder().build();
 		} finally {
