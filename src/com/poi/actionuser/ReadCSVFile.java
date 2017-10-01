@@ -252,15 +252,9 @@ public class ReadCSVFile implements IRunnableWithProgress {
 				
 				WyccWorkbook wyccwb = new WyccWorkbook();
 				Session lasession=wyccwb.CreateDataSession();
-				
-				Query query = lasession.createQuery(
-						"DELETE FROM Mvt2");
-				int result = query.executeUpdate();
-				lasession.flush();
-				lasession.clear();
+				this.deletmvt(lasession);
 				lasession.getTransaction().commit();
 				
-				//this.deletmvt();
 				lasession.beginTransaction();
 				try {
 					lireCSV(theOpenfile, db,monitor,lasession);
@@ -270,10 +264,15 @@ public class ReadCSVFile implements IRunnableWithProgress {
 					logger.error(e1);
 					e1.printStackTrace();
 				}
-				wyccwb.closedataSession(lasession);
+				lasession.getTransaction().commit();
+				//wyccwb.closedataSession(lasession);
+				lasession.beginTransaction();
+				this.deletMvtNum(lasession);
+				lasession.getTransaction().commit();
 				
-				this.deletMvtNum();
-				this.insertmvtNum();
+				lasession.beginTransaction();
+				this.insertmvtNum(lasession);
+				wyccwb.closedataSession(lasession);
 				this.deleteListHier();
 				this.insertListHierLevelzero();
 				try {
@@ -402,8 +401,14 @@ public class ReadCSVFile implements IRunnableWithProgress {
 	}
 	
 	
-	public void deletmvt () {
-		//HsqlText sqlstmt = new HsqlText();
+	public void deletmvt (Session lasession) {
+		Query query = lasession.createQuery(
+				"DELETE FROM Mvt2");
+		int result = query.executeUpdate();
+		lasession.flush();
+		lasession.clear();
+		lasession.getTransaction().commit();
+	/*	//HsqlText sqlstmt = new HsqlText();
 		// Statement stmt = db.connectiondb.createStatement();
 		PreparedStatement stmt = null;
 		try {
@@ -424,10 +429,18 @@ public class ReadCSVFile implements IRunnableWithProgress {
 		} catch (SQLException e1) {
 			logger.error(e1);
 			e1.printStackTrace();
-		}		
+		}	*/	
 	}
 	
-	public void deletMvtNum(){
+	public void deletMvtNum(Session lasession){
+		Query query = lasession.createQuery(
+				"DELETE FROM Mvt_num");
+		int result = query.executeUpdate();
+		lasession.flush();
+		lasession.clear();
+		lasession.getTransaction().commit();
+		
+		/*
 		PreparedStatement stmt = null;
 		try {
 			stmt = db.connectiondb.prepareStatement("DELETE FROM MVT_NUM");
@@ -447,10 +460,12 @@ public class ReadCSVFile implements IRunnableWithProgress {
 		} catch (SQLException e1) {
 			logger.error(e1);
 			e1.printStackTrace();
-		}
+		}*/
 	}
 	
-	public void insertmvtNum(){
+	public void insertmvtNum(Session lasession){
+		
+		
 		HsqlText sqlstmt = new HsqlText();
 		PreparedStatement stmt = null;
 		try {
