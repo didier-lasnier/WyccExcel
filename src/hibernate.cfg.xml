@@ -37,6 +37,7 @@
 	    <mapping class="com.dlas.dao.Modul"/>
 	    <mapping class="com.dlas.dao.ModulBoat"/>
 	    <mapping class="com.dlas.dao.BenefitDb"/>
+	    <mapping class="com.dlas.dao.Mvt2"/>
     </session-factory>
 
 </hibernate-configuration>

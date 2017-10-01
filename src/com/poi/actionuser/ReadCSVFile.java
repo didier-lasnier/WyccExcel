@@ -19,6 +19,8 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
+import org.hibernate.Session;
+import org.hibernate.query.Query;
 
 import com.dlas.dao.H2db;
 import com.dlas.dao.HsqlText;
@@ -26,6 +28,7 @@ import com.dlas.gui.EcranAccueil;
 import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Benefits;
 import com.dlas.tools.CsvTools;
+import com.poi.dlas.WyccWorkbook;
 import com.poi.dlas.managecsv;
 
 public class ReadCSVFile implements IRunnableWithProgress {
@@ -246,7 +249,14 @@ public class ReadCSVFile implements IRunnableWithProgress {
 			if (benefits.getBenefits().size() > 0) {
 				this.inittialise(this.getStartD(),this.getEndD());
 				theSavefile = this.saveIntempFile(theOpenfile, csvdata);
-				this.deletmvt();
+				
+				WyccWorkbook wyccwb = new WyccWorkbook();
+				Session lasession=wyccwb.CreateDataSession();
+				Query query = lasession.createQuery(
+						"DELETE FROM Mvt2");
+				int result = query.executeUpdate();
+				wyccwb.closedataSession(lasession);
+				//this.deletmvt();
 
 				try {
 					lireCSV(theOpenfile, db,monitor);
