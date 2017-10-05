@@ -267,29 +267,42 @@ public class ReadCSVFile implements IRunnableWithProgress {
 				lasession.getTransaction().commit();
 				//wyccwb.closedataSession(lasession);
 				lasession.beginTransaction();
-				this.deletMvtNum(lasession);
+				deletMvtNum(lasession);
 				lasession.getTransaction().commit();
 				
 				lasession.beginTransaction();
-				this.insertmvtNum(lasession);
+				insertmvtNum(lasession);
+				lasession.getTransaction().commit();
+				
+				lasession.beginTransaction();
+				deleteListHier(lasession);
+				lasession.getTransaction().commit();
+				
+				
+				lasession.beginTransaction();
+				insertListHierLevelzero(lasession);
+				lasession.getTransaction().commit();
+				
+				
+				lasession.beginTransaction();
+				try {
+					   insertListHierLevelN(lasession);
+					} catch (SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				lasession.getTransaction().commit();
+				
+				
+				lasession.beginTransaction();
+			    deleteBeneifiaries(lasession);
+			    lasession.getTransaction().commit();
+			    
+			    lasession.beginTransaction();
+				insertBeneficiaries(lasession);
 				wyccwb.closedataSession(lasession);
-				this.deleteListHier();
-				this.insertListHierLevelzero();
-				try {
-					this.insertListHierLevelN();
-				} catch (SQLException e1) {
-					logger.error(e1);
-					e1.printStackTrace();
-				}
-				this.deleteBeneifiaries();
-				this.insertBeneficiaries();
-
-				try {
-					db.closeDbConnection(db.connectiondb);
-				} catch (SQLException e) {
-					logger.error(e);
-					e.printStackTrace();
-				}
+				
+				
 				theSavefile.deleteOnExit();
 				logger.info("DONE !");
 			} 
@@ -407,87 +420,21 @@ public class ReadCSVFile implements IRunnableWithProgress {
 		int result = query.executeUpdate();
 		lasession.flush();
 		lasession.clear();
-		lasession.getTransaction().commit();
-	/*	//HsqlText sqlstmt = new HsqlText();
-		// Statement stmt = db.connectiondb.createStatement();
-		PreparedStatement stmt = null;
-		try {
-			stmt = db.connectiondb.prepareStatement("DELETE FROM MVT");
-		} catch (SQLException e1) {
-			logger.error(e1);
-			e1.printStackTrace();
-		}
-		logger.info("delete from mvt");
-		try {
-			stmt.executeUpdate();
-		} catch (SQLException e1) {
-			logger.error(e1);
-			e1.printStackTrace();
-		}
-		try {
-			stmt.close();
-		} catch (SQLException e1) {
-			logger.error(e1);
-			e1.printStackTrace();
-		}	*/	
+	
 	}
 	
 	public void deletMvtNum(Session lasession){
-		Query query = lasession.createQuery(
-				"DELETE FROM Mvt_num");
+		Query query = lasession.createQuery( "DELETE FROM Mvt_Num");
 		int result = query.executeUpdate();
 		lasession.flush();
 		lasession.clear();
-		lasession.getTransaction().commit();
-		
-		/*
-		PreparedStatement stmt = null;
-		try {
-			stmt = db.connectiondb.prepareStatement("DELETE FROM MVT_NUM");
-		} catch (SQLException e1) {
-			logger.error(e1);
-			e1.printStackTrace();
-		} // db.connectiondb.createStatement();
-		logger.info("delete from mvt_num");
-		try {
-			stmt.executeUpdate();
-		} catch (SQLException e1) {
-			logger.error(e1);
-			e1.printStackTrace();
-		}
-		try {
-			stmt.close();
-		} catch (SQLException e1) {
-			logger.error(e1);
-			e1.printStackTrace();
-		}*/
+
 	}
 	
 	public void insertmvtNum(Session lasession){
-		
-		
 		HsqlText sqlstmt = new HsqlText();
-		PreparedStatement stmt = null;
-		try {
-			stmt = db.connectiondb.prepareStatement(sqlstmt.insertmvtnum());
-		} catch (SQLException e1) {
-		    logger.error(e1);
-			e1.printStackTrace();
-		}
-		logger.info("read csv file into from mvt");
-	
-		try {
-			stmt.executeUpdate();// , null, 'charset=UTF-8 fieldSeparator=;')");
-		} catch (Exception e) {
-			logger.info(sqlstmt.insertmvtnum());
-			e.printStackTrace();
-		}
-		try {
-			stmt.close();
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
+		lasession.createSQLQuery(sqlstmt.insertmvtnum()).executeUpdate();
+
 	}
 	public void lireCSV(File theCSVfile, H2db dbconn,IProgressMonitor monitor, Session lasession) throws Exception {
 
@@ -504,155 +451,84 @@ public class ReadCSVFile implements IRunnableWithProgress {
 		}
 	}
 	
-	public void deleteListHier(){
-		PreparedStatement stmt = null;
-		try {
-			stmt = db.connectiondb.prepareStatement("DELETE FROM PUBLIC.LISTMVTHIER");
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
-		logger.info("delete from lismvthier");
-		try {
-			stmt.executeUpdate();
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
-		try {
-			stmt.close();
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
+	public void deleteListHier(Session lasession){
+		Query query = lasession.createQuery( "DELETE FROM ListMvtHier");
+		int result = query.executeUpdate();
+		lasession.flush();
+		lasession.clear();
+
 	}
 	
-	public void insertListHierLevelzero(){
+	public void insertListHierLevelzero(Session lasession){
+		
+		
+		
 		HsqlText sqlstmt = new HsqlText();
-		PreparedStatement prepStmt = null;
-		try {
-			prepStmt = db.connectiondb.prepareStatement(sqlstmt.insertRootListMvthier(StartDateStr,EndDateStr));
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
-		logger.info("insert from lismvthier");
-		try {
-			prepStmt.executeUpdate();
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
-		try {
-			prepStmt.close();
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
+		lasession.createSQLQuery(sqlstmt.insertRootListMvthier(StartDateStr,EndDateStr)).executeUpdate();
+
+//		PreparedStatement prepStmt = null;
+//		try {
+//			prepStmt = db.connectiondb.prepareStatement(sqlstmt.insertRootListMvthier(StartDateStr,EndDateStr));
+//		} catch (SQLException e) {
+//			logger.error(e);
+//			e.printStackTrace();
+//		}
+//		logger.info("insert from lismvthier");
+//		try {
+//			prepStmt.executeUpdate();
+//		} catch (SQLException e) {
+//			logger.error(e);
+//			e.printStackTrace();
+//		}
+//		try {
+//			prepStmt.close();
+//		} catch (SQLException e) {
+//			logger.error(e);
+//			e.printStackTrace();
+//		}
 	}
 	
-	public void insertListHierLevelN() throws SQLException{
-		int numberOfRows = 0;
-		int lvl = 1;
+	public void insertListHierLevelN(Session lasession) throws SQLException{
+		Integer numberOfRows = 0;
+		Float lvl =  1f;
 		HsqlText sqlstmt = new HsqlText();
-		PreparedStatement prepStmt = db.connectiondb.prepareStatement(sqlstmt.isLevelNListMvthier());// null;
-		PreparedStatement prepStmt1 = db.connectiondb.prepareStatement(sqlstmt.insertLevelNListMvthier(StartDateStr,EndDateStr));
+		
+		
+		Query query = null;
 		do {
-//
-//			try {
-//				prepStmt = db.connectiondb.prepareStatement(sqlstmt.isLevelNListMvthier());
-//			} catch (SQLException e) {
-//				logger.error(e);
-//				e.printStackTrace();
-//			}
-			try {
-				prepStmt.setInt(1, lvl);
-			} catch (SQLException e) {
-				logger.error(e);
-				e.printStackTrace();
-			}
 			
-			ResultSet rs = null;
-			try {
-				rs = prepStmt.executeQuery();
-			} catch (SQLException e) {
-				logger.error(e);
-				e.printStackTrace();
-			}
-			
-			try {
-				if (rs.next()) {
-					numberOfRows = rs.getInt(1);
-					//prepStmt.close();
-					if (numberOfRows > 0) {
-						//prepStmt = db.connectiondb.prepareStatement(sqlstmt.insertLevelNListMvthier(StartDateStr,EndDateStr));
-						prepStmt1.setInt(1, lvl + 1);
-						prepStmt1.setInt(2, lvl);
-						prepStmt1.executeUpdate();
-						//prepStmt1.close();
-					}
-				} else {
-					prepStmt1.close();
-					System.out.println("error: could not get the record counts");
-				}
-			} catch (SQLException e) {
-				logger.error(e);
-				e.printStackTrace();
+			query = lasession.createQuery(sqlstmt.isLevelNListMvthier());
+			query.setParameter("nextmvt", lvl);
+			numberOfRows = ((Long) query.uniqueResult()).intValue();
+
+			if (numberOfRows > 0) {
+				
+				query = lasession.createQuery(sqlstmt.insertLevelNListMvthier(StartDateStr,EndDateStr));
+				query.setParameter("lv1", lvl+1);
+				query.setParameter("nextmvt", lvl);
+				query.executeUpdate();
 			}
 			lvl++;
 		} while (numberOfRows != 0);
-		prepStmt1.close();
-		prepStmt.close();
+		
 		
 	}
 	
-	public void deleteBeneifiaries(){
+	public void deleteBeneifiaries(Session lasession){
 		
-		PreparedStatement stmt = null;
-		try {
-			stmt = db.connectiondb.prepareStatement("DELETE FROM BENEFICIARIES_TAB");
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
-		logger.info("delete from beneficiaire");
-		try {
-			stmt.executeUpdate();
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
-		try {
-			stmt.close();
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
+		Query query = lasession.createQuery( "DELETE FROM beneficiaries");
+		int result = query.executeUpdate();
+		lasession.flush();
+		lasession.clear();
+
 	}
 	
 	
-	public void insertBeneficiaries(){
+	public void insertBeneficiaries(Session lasession){
 		HsqlText sqlstmt = new HsqlText();
-		PreparedStatement stmt = null;
-		try {
-			stmt = db.connectiondb.prepareStatement(sqlstmt.insertbeneficiairies());
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
-		logger.info("Insert Beneficiaries");
-		try {
-			stmt.executeUpdate();
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}// , null, 'charset=UTF-8 fieldSeparator=;')");
-		try {
-			stmt.close();
-		} catch (SQLException e) {
-			logger.error(e);
-			e.printStackTrace();
-		}
+		lasession.createSQLQuery(sqlstmt.insertbeneficiairies()).executeUpdate();
+		   //sqlstmt.insertbeneficiairies();
+		
 		
 	}
 }

@@ -463,13 +463,12 @@ public class EcranAccueil {
 					}
 					
 					if (filepath !=null) {
-						//Shell shell = new Shell();
+						Shell shell = new Shell();
 						logger.info("Creation du ReadCSVFILE");
 						String startdateStr =startdate.toString();
-
 						Timestamp TsStart=getTimestampFromDateTime(startdate);
 						Timestamp TsEnd=getTimestampFromDateTime(startdate);
-						//IRunnableWithProgress op = new ReadCSVFile(window, " reading CSV file !", TsStart, TsEnd,shell, m_benefits, appDir, filepath);
+
 						IRunnableWithProgress op = new ReadCSVFile(window, " reading CSV file !", TsStart, TsEnd,shell, m_benefits, appDir, filepath);
 						try {
 							new ProgressMonitorDialog(shell).run(true, true, op);
@@ -477,12 +476,11 @@ public class EcranAccueil {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
-						//shell.close();
+						shell.close();
 					}
 					Benefit benefit = new Benefit();
 					m_benefitsViewer.setSelection(new StructuredSelection(benefit),true);
 					m_bindingContext.updateModels();
-						
 					
 				}
 			});

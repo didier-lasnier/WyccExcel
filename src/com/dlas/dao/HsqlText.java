@@ -668,7 +668,7 @@ public class HsqlText {
 
 	public String isLevelNListMvthier() {
 		String sqlstmt = null;
-		sqlstmt = " select count(*) from PUBLIC.mvt_num m where nextmvt = ? ";
+		sqlstmt = " select count(*) from Mvt_Num m where nextmvt = :nextmvt ";
 		return sqlstmt;
 	}
 
@@ -686,7 +686,7 @@ public class HsqlText {
 		sqlstmt = sqlstmt
 				+ " nationality, country, children, monthly_salary, salary_currency,  niveau, wycc_id, start_movement, end_movement,";
 		sqlstmt = sqlstmt + "dateofnextmvt, dateofprevmvt, rankmvt, rankparent, nextmvt)";
-		sqlstmt = sqlstmt + " select ? lv1, m.positioncrew,  m.name,  m.first_name,  m.structure_name,";
+		sqlstmt = sqlstmt + " select :lv1 lv1, m.positioncrew,  m.name,  m.first_name,  m.structure_name,";
 		sqlstmt = sqlstmt
 				+ "  m.company1,m.formula1,m.formule_name1,m.POLICY_NUMBER1, m.total_amount_insured1, m.company2,m.formula2, m.formule_name2,m.POLICY_NUMBER2, m.total_amount_insured2, m.company3,m.formula3, m.formule_name3,m.POLICY_NUMBER3, m.total_amount_insured3,";
 		sqlstmt = sqlstmt
@@ -704,7 +704,7 @@ public class HsqlText {
 				+ "					 case when ( m.end_movement > timestamp '"+EndDateStr+"') then timestamp '"+EndDateStr+"' else  m.end_movement end as end_movement,";
 		sqlstmt = sqlstmt
 				+ "					  m.dateofnextmvt,  m.dateofprevmvt,  m.rankmvt,  m.rankparent,  m.nextmvt";
-		sqlstmt = sqlstmt + "		from PUBLIC.mvt_num m where nextmvt = ? ";
+		sqlstmt = sqlstmt + "		from PUBLIC.mvt_num m where nextmvt = :nextmvt ";
 		sqlstmt = sqlstmt + "";
 		return sqlstmt;
 	}
