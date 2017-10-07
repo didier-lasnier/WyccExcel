@@ -110,11 +110,16 @@ public class Benefits extends AbstractModelObject {
 					 //monitor.subTask("Processing beneficiaries ");
 						List<LimitAggCsv>	listviewer   = b.readAggregate(window.getListCsv(),monitor);
 						List<LimitAggCsv>	listdistinct = distinctList(listviewer,LimitAggCsv::getPolicynumber,LimitAggCsv::getFormula,LimitAggCsv::getFormulename,LimitAggCsv::getCompany);
-						Session lasession=wyccwb.CreateDataSession();
-						Query query = lasession.createQuery( "FROM BenefitDb");
+						Session lasession=null;
+
+						/*
+						lasession=wyccwb.CreateDataSession();
+						Query query = lasession.createQuery( "FROM BenefitDb where (company,formula,formulename,policynumber,amount) in :listdistinct");
+						query.setParameterList("listdistinct", listdistinct);
 						List<BenefitDb> resultdistinct = query.list();
 						wyccwb.closedataSession(lasession);
 						
+*/
 						monitor.setTaskName("Processing data .");
 						monitor.subTask("Launch database this operation could take a while");
 						monitor.worked(1);
