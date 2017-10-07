@@ -518,7 +518,7 @@ public class ReadCSVFile implements IRunnableWithProgress {
 			if (numberOfRows > 0) {
 				
 				//query1 = lasession.createQuery(sqlstmt.insertLevelNListMvthier(StartDateStr,EndDateStr));
-				query1.setParameter("lv1", lvl+1);
+				query1.setParameter("lv1", lvl.intValue()+1);
 				query1.setParameter("nextmvt", lvl);
 				logger.info(" avant executeUpdate : " +lvl);
 				query1.executeUpdate();

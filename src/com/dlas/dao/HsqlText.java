@@ -698,21 +698,15 @@ public class HsqlText {
 		sqlstmt = sqlstmt
 				+ "					  m.children,  m.monthlysalary,  m.salarycurrency,   m.rankmvt as niveau,";
 		sqlstmt = sqlstmt + "					  m.wyccid,";
-		if (false) {
-		sqlstmt = sqlstmt
-				+ "					 case when ( m.startmovement < timestamp '"+StartDateStr+"') then timestamp '"+StartDateStr+"' else  m.startmovement end as startmovement,";
-		sqlstmt = sqlstmt
-				+ "					 case when ( m.endmovement > timestamp '"+EndDateStr+"') then timestamp '"+EndDateStr+"' else  m.endmovement end as endmovement,";
-		} else {
-			sqlstmt = sqlstmt
-					+ "					 case when ( m.startmovement < '"+StartDateStr+"') then  '"+StartDateStr+"' else  m.startmovement end as startmovement,";
-			sqlstmt = sqlstmt
-					+ "					 case when ( m.endmovement >  '"+EndDateStr+"') then  '"+EndDateStr+"' else  m.endmovement end as endmovement,";
 
-		}
+		sqlstmt = sqlstmt
+				+ "					 case when ( m.startmovement < TIMESTAMP('"+StartDateStr+"') ) then TIMESTAMP('"+StartDateStr+"') else  m.startmovement end as startmovement,";
+		sqlstmt = sqlstmt
+				+ "					 case when ( m.endmovement > TIMESTAMP('"+EndDateStr+"') ) then TIMESTAMP('"+EndDateStr+"') else  m.endmovement end as endmovement,";
+
 		sqlstmt = sqlstmt
 				+ "					  m.dateofnextmvt,  m.dateofprevmvt,  m.rankmvt,  m.rankparent,  m.nextmvt";
-		sqlstmt = sqlstmt + "		from PUBLIC.MvtNum m where nextmvt = :nextmvt ";
+		sqlstmt = sqlstmt + "		from Mvt_Num m where nextmvt = :nextmvt ";
 		sqlstmt = sqlstmt + "";
 		return sqlstmt;
 	}
