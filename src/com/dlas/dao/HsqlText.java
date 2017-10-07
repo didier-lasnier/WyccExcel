@@ -675,44 +675,44 @@ public class HsqlText {
 	public String insertLevelNListMvthier(String StartDateStr, String EndDateStr) {
 		String sqlstmt = null;
 		sqlstmt = " INSERT INTO ListMvtHier";
-		sqlstmt = sqlstmt + " (lv1, positioncrew, name, first_name, structure_name,";
+		sqlstmt = sqlstmt + " (lv1, positioncrew, name, firstname, structurename,";
 		sqlstmt = sqlstmt
-				+ " company1,formule1,formule_name1,POLICE_NUMBER1, total_amount_insured1,company2,formule2, formule_name2,POLICE_NUMBER2, total_amount_insured2,company3,formule3, formule_name3,POLICE_NUMBER3, total_amount_insured3,";
+				+ " company1,formule1,formulename1,policenumber1, totalamountinsured1,company2,formule2, formulename2,policenumber2, totalamountinsured2,company3,formule3, formulename3,policenumber3, totalamountinsured3,";
 		sqlstmt = sqlstmt
-				+ " company4,formule4,formule_name4,POLICE_NUMBER4, total_amount_insured4,company5,formule5, formule_name5,POLICE_NUMBER5, total_amount_insured5,company6,formule6, formule_name6,POLICE_NUMBER6, total_amount_insured6,";
+				+ " company4,formule4,formulename4,policenumber4, totalamountinsured4,company5,formule5, formulename5,policenumber5, totalamountinsured5,company6,formule6, formulename6,policenumber6, totalamountinsured6,";
 		sqlstmt = sqlstmt
-				+ " company7,formule7,formule_name7,POLICE_NUMBER7, total_amount_insured7,company8,formule8, formule_name8,POLICE_NUMBER8,total_amount_insured8,";
-		sqlstmt = sqlstmt + " crewmanning, period_insurance, family_covered,";
+				+ " company7,formule7,formulename7,policenumber7, totalamountinsured7,company8,formule8, formulename8,policenumber8,totalamountinsured8,";
+		sqlstmt = sqlstmt + " crewmanning, periodinsurance, familycovered,";
 		sqlstmt = sqlstmt
-				+ " nationality, country, children, monthly_salary, salary_currency,  niveau, wycc_id, start_movement, end_movement,";
+				+ " nationality, country, children, monthlysalary, salarycurrency,  niveau, wyccid, startmovement, endmovement,";
 		sqlstmt = sqlstmt + "dateofnextmvt, dateofprevmvt, rankmvt, rankparent, nextmvt)";
-		sqlstmt = sqlstmt + " select :lv1 , m.positioncrew,  m.name,  m.first_name,  m.structure_name,";
+		sqlstmt = sqlstmt + " select :lv1 , m.positioncrew,  m.name,  m.firstname,  m.structurename,";
 		sqlstmt = sqlstmt
-				+ "  m.company1,m.formula1,m.formule_name1,m.POLICY_NUMBER1, m.total_amount_insured1, m.company2,m.formula2, m.formule_name2,m.POLICY_NUMBER2, m.total_amount_insured2, m.company3,m.formula3, m.formule_name3,m.POLICY_NUMBER3, m.total_amount_insured3,";
+				+ "  m.company1,m.formula1,m.formulename1,m.policynumber1, m.totalamountinsured1, m.company2,m.formula2, m.formulename2,m.policynumber2, m.totalamountinsured2, m.company3,m.formula3, m.formulename3,m.policynumber3, m.totalamountinsured3,";
 		sqlstmt = sqlstmt
-				+ "  m.company4,m.formula4,m.formule_name4,m.POLICY_NUMBER4, m.total_amount_insured4, m.company5,m.formula5, m.formule_name5,m.POLICY_NUMBER5, m.total_amount_insured5, m.company6,m.formula6, m.formule_name6,m.POLICY_NUMBER6, m.total_amount_insured6,";
+				+ "  m.company4,m.formula4,m.formulename4,m.policynumber4, m.totalamountinsured4, m.company5,m.formula5, m.formulename5,m.policynumber5, m.totalamountinsured5, m.company6,m.formula6, m.formulename6,m.policynumber6, m.totalamountinsured6,";
 		sqlstmt = sqlstmt
-				+ "  m.company7,m.formula7,m.formule_name7,m.POLICY_NUMBER7, m.total_amount_insured7, m.company8,m.formula8, m.formule_name8,m.POLICY_NUMBER8, m.total_amount_insured8,";
+				+ "  m.company7,m.formula7,m.formulename7,m.policynumber7, m.totalamountinsured7, m.company8,m.formula8, m.formulename8,m.policynumber8, m.totalamountinsured8,";
 		sqlstmt = sqlstmt
-				+ "					 '' as crewmanning,  m.period_insurance,  m.family_covered,  m.nationality,  m.country,";
+				+ "					 '' as crewmanning,  m.periodinsurance,  m.familycovered,  m.nationality,  m.country,";
 		sqlstmt = sqlstmt
-				+ "					  m.children,  m.monthly_salary,  m.salary_currency,   m.rankmvt as niveau,";
-		sqlstmt = sqlstmt + "					  m.wycc_id,";
+				+ "					  m.children,  m.monthlysalary,  m.salarycurrency,   m.rankmvt as niveau,";
+		sqlstmt = sqlstmt + "					  m.wyccid,";
 		if (false) {
 		sqlstmt = sqlstmt
-				+ "					 case when ( m.start_movement < timestamp '"+StartDateStr+"') then timestamp '"+StartDateStr+"' else  m.start_movement end as start_movement,";
+				+ "					 case when ( m.startmovement < timestamp '"+StartDateStr+"') then timestamp '"+StartDateStr+"' else  m.startmovement end as startmovement,";
 		sqlstmt = sqlstmt
-				+ "					 case when ( m.end_movement > timestamp '"+EndDateStr+"') then timestamp '"+EndDateStr+"' else  m.end_movement end as end_movement,";
+				+ "					 case when ( m.endmovement > timestamp '"+EndDateStr+"') then timestamp '"+EndDateStr+"' else  m.endmovement end as endmovement,";
 		} else {
 			sqlstmt = sqlstmt
-					+ "					 case when ( m.start_movement < '"+StartDateStr+"') then  '"+StartDateStr+"' else  m.start_movement end as start_movement,";
+					+ "					 case when ( m.startmovement < '"+StartDateStr+"') then  '"+StartDateStr+"' else  m.startmovement end as startmovement,";
 			sqlstmt = sqlstmt
-					+ "					 case when ( m.end_movement >  '"+EndDateStr+"') then  '"+EndDateStr+"' else  m.end_movement end as end_movement,";
+					+ "					 case when ( m.endmovement >  '"+EndDateStr+"') then  '"+EndDateStr+"' else  m.endmovement end as endmovement,";
 
 		}
 		sqlstmt = sqlstmt
 				+ "					  m.dateofnextmvt,  m.dateofprevmvt,  m.rankmvt,  m.rankparent,  m.nextmvt";
-		sqlstmt = sqlstmt + "		from PUBLIC.Mvt_Num m where nextmvt = :nextmvt ";
+		sqlstmt = sqlstmt + "		from PUBLIC.MvtNum m where nextmvt = :nextmvt ";
 		sqlstmt = sqlstmt + "";
 		return sqlstmt;
 	}
