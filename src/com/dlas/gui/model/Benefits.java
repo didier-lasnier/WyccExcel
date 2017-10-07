@@ -16,7 +16,9 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 
+import com.dlas.dao.BenefitDb;
 import com.dlas.dao.LimitAggCsv;
 import com.dlas.gui.EcranAccueil;
 import com.dlas.tools.CsvTools;
@@ -106,15 +108,18 @@ public class Benefits extends AbstractModelObject {
 					 monitor.setTaskName("Processing file gettings the various formula and waranty.");
 					 monitor.worked(1);
 					 //monitor.subTask("Processing beneficiaries ");
-					List<LimitAggCsv>	listviewer   = b.readAggregate(window.getListCsv(),monitor);
-					List<LimitAggCsv>	listdistinct = distinctList(listviewer,LimitAggCsv::getPolicynumber,LimitAggCsv::getFormula,LimitAggCsv::getFormulename,LimitAggCsv::getCompany);
-					if (false) {
-
-					} else {
+						List<LimitAggCsv>	listviewer   = b.readAggregate(window.getListCsv(),monitor);
+						List<LimitAggCsv>	listdistinct = distinctList(listviewer,LimitAggCsv::getPolicynumber,LimitAggCsv::getFormula,LimitAggCsv::getFormulename,LimitAggCsv::getCompany);
+						Session lasession=wyccwb.CreateDataSession();
+						Query query = lasession.createQuery( "FROM BenefitDb");
+						List<BenefitDb> resultdistinct = query.list();
+						wyccwb.closedataSession(lasession);
+						
 						monitor.setTaskName("Processing data .");
 						monitor.subTask("Launch database this operation could take a while");
 						monitor.worked(1);
-						Session lasession=wyccwb.CreateDataSession();
+						
+						lasession=wyccwb.CreateDataSession();
 						for (LimitAggCsv distinct :listdistinct){
 						// on recupére les données précédement enregistrées							
 						monitor.worked(1);
@@ -122,11 +127,13 @@ public class Benefits extends AbstractModelObject {
                         monitor.subTask("process : "+distinct.getCompany());
 						monitor.worked(1);
 						m_benefits.add(new Benefit(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),amount));
+					
 						
 					    }
+						
 						wyccwb.closedataSession(lasession);
 
-					}
+				
 					
 					} catch (Exception e1) {
 						// TODO Auto-generated catch block

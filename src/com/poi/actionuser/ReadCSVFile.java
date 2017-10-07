@@ -254,7 +254,7 @@ public class ReadCSVFile implements IRunnableWithProgress {
 				Session lasession=wyccwb.CreateDataSession();
 				this.deletmvt(lasession);
 				lasession.getTransaction().commit();
-				
+
 				lasession.beginTransaction();
 				try {
 					lireCSV(theOpenfile, db,monitor,lasession);
@@ -278,9 +278,9 @@ public class ReadCSVFile implements IRunnableWithProgress {
 				lasession.getTransaction().commit();
 				
 				
-				lasession.beginTransaction();
+/*				lasession.beginTransaction();
 				insertListHierLevelzero(lasession);
-				lasession.getTransaction().commit();
+				lasession.getTransaction().commit();*/
 				
 				
 				lasession.beginTransaction();
@@ -491,7 +491,7 @@ public class ReadCSVFile implements IRunnableWithProgress {
 	
 	public void insertListHierLevelN(Session lasession) throws SQLException{
 		Integer numberOfRows = 0;
-		Float lvl =  1f;
+		Float lvl =  0f;
 		HsqlText sqlstmt = new HsqlText();
 		
 		
