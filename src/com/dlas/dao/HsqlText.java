@@ -631,7 +631,7 @@ public class HsqlText {
 
 	public String insertRootListMvthier(String StartDateStr, String EndDateStr) {
 		String sqlstmt = null;
-		sqlstmt = " INSERT INTO PUBLIC.LISTMVTHIER";
+		sqlstmt = " INSERT INTO ListMvtHier";
 		sqlstmt = sqlstmt + " (lv1, positioncrew, name, first_name, structure_name,";
 		sqlstmt = sqlstmt
 				+ " company1,formule1,formule_name1,POLICE_NUMBER1, total_amount_insured1,company2,formule2, formule_name2,POLICE_NUMBER2, total_amount_insured2,company3,formule3, formule_name3,POLICE_NUMBER3, total_amount_insured3,";
@@ -656,9 +656,9 @@ public class HsqlText {
 				+ "					  m.children,  m.monthly_salary,  m.salary_currency,   m.rankmvt as niveau,";
 		sqlstmt = sqlstmt + "					  m.wycc_id,";
 		sqlstmt = sqlstmt
-				+ "					 case when ( m.start_movement < timestamp '"+StartDateStr+"') then timestamp '"+StartDateStr+"' else  m.start_movement end as start_movement,";
+				+ "					 case when ( m.start_movement <  '"+StartDateStr+"') then  '"+StartDateStr+"' else  m.start_movement end as start_movement,";
 		sqlstmt = sqlstmt
-				+ "					 case when ( m.end_movement > timestamp '"+EndDateStr+"') then timestamp '"+EndDateStr+"' else  m.end_movement end as end_movement,";
+				+ "					 case when ( m.end_movement >  '"+EndDateStr+"') then  '"+EndDateStr+"' else  m.end_movement end as end_movement,";
 		sqlstmt = sqlstmt
 				+ "					  m.dateofnextmvt,  m.dateofprevmvt,  m.rankmvt,  m.rankparent,  m.nextmvt";
 		sqlstmt = sqlstmt + "		from PUBLIC.mvt_num m where nextmvt = 0 ";
@@ -674,7 +674,7 @@ public class HsqlText {
 
 	public String insertLevelNListMvthier(String StartDateStr, String EndDateStr) {
 		String sqlstmt = null;
-		sqlstmt = " INSERT INTO PUBLIC.LISTMVTHIER";
+		sqlstmt = " INSERT INTO ListMvtHier";
 		sqlstmt = sqlstmt + " (lv1, positioncrew, name, first_name, structure_name,";
 		sqlstmt = sqlstmt
 				+ " company1,formule1,formule_name1,POLICE_NUMBER1, total_amount_insured1,company2,formule2, formule_name2,POLICE_NUMBER2, total_amount_insured2,company3,formule3, formule_name3,POLICE_NUMBER3, total_amount_insured3,";
@@ -686,7 +686,7 @@ public class HsqlText {
 		sqlstmt = sqlstmt
 				+ " nationality, country, children, monthly_salary, salary_currency,  niveau, wycc_id, start_movement, end_movement,";
 		sqlstmt = sqlstmt + "dateofnextmvt, dateofprevmvt, rankmvt, rankparent, nextmvt)";
-		sqlstmt = sqlstmt + " select :lv1 lv1, m.positioncrew,  m.name,  m.first_name,  m.structure_name,";
+		sqlstmt = sqlstmt + " select :lv1 , m.positioncrew,  m.name,  m.first_name,  m.structure_name,";
 		sqlstmt = sqlstmt
 				+ "  m.company1,m.formula1,m.formule_name1,m.POLICY_NUMBER1, m.total_amount_insured1, m.company2,m.formula2, m.formule_name2,m.POLICY_NUMBER2, m.total_amount_insured2, m.company3,m.formula3, m.formule_name3,m.POLICY_NUMBER3, m.total_amount_insured3,";
 		sqlstmt = sqlstmt
@@ -698,13 +698,21 @@ public class HsqlText {
 		sqlstmt = sqlstmt
 				+ "					  m.children,  m.monthly_salary,  m.salary_currency,   m.rankmvt as niveau,";
 		sqlstmt = sqlstmt + "					  m.wycc_id,";
+		if (false) {
 		sqlstmt = sqlstmt
 				+ "					 case when ( m.start_movement < timestamp '"+StartDateStr+"') then timestamp '"+StartDateStr+"' else  m.start_movement end as start_movement,";
 		sqlstmt = sqlstmt
 				+ "					 case when ( m.end_movement > timestamp '"+EndDateStr+"') then timestamp '"+EndDateStr+"' else  m.end_movement end as end_movement,";
+		} else {
+			sqlstmt = sqlstmt
+					+ "					 case when ( m.start_movement < '"+StartDateStr+"') then  '"+StartDateStr+"' else  m.start_movement end as start_movement,";
+			sqlstmt = sqlstmt
+					+ "					 case when ( m.end_movement >  '"+EndDateStr+"') then  '"+EndDateStr+"' else  m.end_movement end as end_movement,";
+
+		}
 		sqlstmt = sqlstmt
 				+ "					  m.dateofnextmvt,  m.dateofprevmvt,  m.rankmvt,  m.rankparent,  m.nextmvt";
-		sqlstmt = sqlstmt + "		from PUBLIC.mvt_num m where nextmvt = :nextmvt ";
+		sqlstmt = sqlstmt + "		from PUBLIC.Mvt_Num m where nextmvt = :nextmvt ";
 		sqlstmt = sqlstmt + "";
 		return sqlstmt;
 	}

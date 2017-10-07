@@ -43,7 +43,7 @@ public void setS(Shell s) {
 public void handleQuit() throws IllegalStateException
   {
 	s.dispose();
-//	d.dispose();
+	d.dispose();
 	System.exit(0);
   }
 

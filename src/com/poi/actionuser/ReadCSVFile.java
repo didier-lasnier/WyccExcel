@@ -258,8 +258,7 @@ public class ReadCSVFile implements IRunnableWithProgress {
 				lasession.beginTransaction();
 				try {
 					lireCSV(theOpenfile, db,monitor,lasession);
-					lasession.flush();
-					lasession.clear();
+
 				} catch (Exception e1) {
 					logger.error(e1);
 					e1.printStackTrace();
@@ -300,6 +299,7 @@ public class ReadCSVFile implements IRunnableWithProgress {
 			    
 			    lasession.beginTransaction();
 				insertBeneficiaries(lasession);
+				
 				wyccwb.closedataSession(lasession);
 				
 				
@@ -428,13 +428,13 @@ public class ReadCSVFile implements IRunnableWithProgress {
 		int result = query.executeUpdate();
 		lasession.flush();
 		lasession.clear();
-
 	}
 	
 	public void insertmvtNum(Session lasession){
 		HsqlText sqlstmt = new HsqlText();
 		lasession.createSQLQuery(sqlstmt.insertmvtnum()).executeUpdate();
-
+		lasession.flush();
+		lasession.clear();
 	}
 	public void lireCSV(File theCSVfile, H2db dbconn,IProgressMonitor monitor, Session lasession) throws Exception {
 
@@ -465,7 +465,8 @@ public class ReadCSVFile implements IRunnableWithProgress {
 		
 		HsqlText sqlstmt = new HsqlText();
 		lasession.createSQLQuery(sqlstmt.insertRootListMvthier(StartDateStr,EndDateStr)).executeUpdate();
-
+		lasession.flush();
+		lasession.clear();
 //		PreparedStatement prepStmt = null;
 //		try {
 //			prepStmt = db.connectiondb.prepareStatement(sqlstmt.insertRootListMvthier(StartDateStr,EndDateStr));
@@ -495,18 +496,35 @@ public class ReadCSVFile implements IRunnableWithProgress {
 		
 		
 		Query query = null;
-		do {
-			
-			query = lasession.createQuery(sqlstmt.isLevelNListMvthier());
+		Query query1 = null;
+		query = lasession.createQuery(sqlstmt.isLevelNListMvthier());
+		logger.info("AVANT Date start :"+StartDateStr+" and End date :"+EndDateStr);
+
+		try {
+			query1 = lasession.createQuery(sqlstmt.insertLevelNListMvthier(StartDateStr,EndDateStr) );
+		} catch (Exception e) {
+			logger.info(e);
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		logger.warn("APRES Date start :"+StartDateStr+" and End date :"+EndDateStr);
+		do { 
+			logger.info(" lvl : "+lvl);
+			//query = lasession.createQuery(sqlstmt.isLevelNListMvthier());
 			query.setParameter("nextmvt", lvl);
 			numberOfRows = ((Long) query.uniqueResult()).intValue();
-
+			logger.info(" numberOfRows : "+numberOfRows);
 			if (numberOfRows > 0) {
 				
-				query = lasession.createQuery(sqlstmt.insertLevelNListMvthier(StartDateStr,EndDateStr));
-				query.setParameter("lv1", lvl+1);
-				query.setParameter("nextmvt", lvl);
-				query.executeUpdate();
+				//query1 = lasession.createQuery(sqlstmt.insertLevelNListMvthier(StartDateStr,EndDateStr));
+				query1.setParameter("lv1", lvl+1);
+				query1.setParameter("nextmvt", lvl);
+				logger.info(" avant executeUpdate : " +lvl);
+				query1.executeUpdate();
+				logger.info(" aprés executeUpdate : " +lvl);
+				lasession.flush();
+				lasession.clear();
 			}
 			lvl++;
 		} while (numberOfRows != 0);
@@ -520,14 +538,14 @@ public class ReadCSVFile implements IRunnableWithProgress {
 		int result = query.executeUpdate();
 		lasession.flush();
 		lasession.clear();
-
 	}
 	
 	
 	public void insertBeneficiaries(Session lasession){
 		HsqlText sqlstmt = new HsqlText();
 		lasession.createSQLQuery(sqlstmt.insertbeneficiairies()).executeUpdate();
-		   //sqlstmt.insertbeneficiairies();
+		lasession.flush();
+		lasession.clear();
 		
 		
 	}

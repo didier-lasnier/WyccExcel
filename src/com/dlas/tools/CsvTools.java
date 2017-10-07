@@ -39,10 +39,6 @@ public class CsvTools {
 		List<MvtCsv> list=getcsvfile(filenamecsv);
 		saveCSVRecord(monitor,"",stmt,filenamecsv,list.size(),this,list,lasession);
 		
-	/*	Shell shell = new Shell();
-		IRunnableWithProgress op = new ProgressBarDb("",stmt,filenamecsv,list.size(),this,list);
-		new ProgressMonitorDialog(shell).run(true, true, op);
-		shell.close();*/
 
 	}
 	
@@ -205,6 +201,8 @@ public class CsvTools {
 					System.out.println(object.getWyccid());
 					saveMvt(lemvt,object, recordmodule);
 					lasession.save(lemvt);
+					lasession.flush();
+					lasession.clear();
 //					try {
 //						csvtools.saveRecord(stmt, object, recordmodule);
 //					} catch (SQLException e) {
