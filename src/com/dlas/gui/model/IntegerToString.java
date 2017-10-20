@@ -7,7 +7,7 @@ public class IntegerToString  implements IConverter {
 	@Override
 	public Object convert(Object fromObject) {
 		// TODO Auto-generated method stub
-		return String.valueOf((String) fromObject);
+		return String.valueOf(fromObject);
 	}
 
 	@Override

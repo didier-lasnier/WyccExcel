@@ -10,14 +10,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.eclipse.swt.widgets.Shell;
-import org.hibernate.Session;
-import org.hibernate.query.Query;
-
-//import com.dlas.gui.ModulDialog;
-import com.dlas.gui.ModuleListe;
 import com.dlas.gui.ModuleListeBoat;
 import com.dlas.dao.ModulBoat;
-import com.dlas.dao.ObjectDao;
 
 
 public class ModulBoatModel extends AbstractModelObject {

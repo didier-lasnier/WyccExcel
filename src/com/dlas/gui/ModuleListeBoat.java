@@ -4,7 +4,6 @@ import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -46,7 +45,6 @@ import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
@@ -58,17 +56,8 @@ import org.hibernate.query.Query;
 
 import com.dlas.dao.ModulBoat;
 import com.dlas.dao.ObjectDao;
-import com.dlas.dao.H2db;
-import com.dlas.dao.HsqlText;
-import com.dlas.dao.Modul;
-import com.dlas.gui.EcranAccueil.ViewerUpdateValueStrategy;
 import com.dlas.gui.model.ModulBoatModel;
 import com.dlas.tools.XlsImpExp;
-import com.poi.actionuser.Actionuser;
-import com.poi.actionuser.Actionuser.ProgressBarDb;
-import com.dlas.gui.model.Benefit;
-import com.dlas.gui.model.IntegerToString;
-import org.eclipse.swt.layout.GridLayout;
 
 public class ModuleListeBoat {
 	private    DataBindingContext             m_bindingContext                              ;
@@ -134,7 +123,7 @@ public class ModuleListeBoat {
 				
 				Integer selection= m_modulboatmodels.getSize()-1;			
 				newmodul=(ModulBoat) modulboatviewer_1.getElementAt(selection);
-				ISelection Sel = (ISelection) new StructuredSelection(modulboatviewer_1.getElementAt(selection));
+				ISelection Sel = new StructuredSelection(modulboatviewer_1.getElementAt(selection));
 				modulboatviewer_1.setSelection(Sel,true);
 				
 
@@ -187,6 +176,19 @@ public class ModuleListeBoat {
 		});
 		btnExport.setText("Export");
 		
+		Button btnSearch = new Button(btnrecord, SWT.NONE);
+		btnExport.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				//
+				String info=" The feature is under development !";
+				javax.swing.JOptionPane.showMessageDialog(null,info); 
+			}
+		});
+		btnSearch.setText("Search");
+
+		
+		
 		Composite btncollection = new Composite(buttonBar, SWT.BORDER);
 		btncollection.setLayout(null);
 		
@@ -209,7 +211,8 @@ public class ModuleListeBoat {
 				//shellModul.close();
 				// We have to save the modification
 				ObjectDao myobj = new ObjectDao();
-				Session lasession = myobj.getSessionDao();
+				myobj.setLafactory(myobj.getFactory());
+				Session lasession = myobj.getSession(myobj.getLafactory());
 				lasession.beginTransaction(); 
 				 for ( ModulBoat modulboat : (List<ModulBoat>) m_modulboatmodels.getM_modulboats() ){
 					 lasession.saveOrUpdate(modulboat);
@@ -222,8 +225,8 @@ public class ModuleListeBoat {
 				  lasession.flush();
 				  lasession.getTransaction().commit(); 
 				  lasession.close();
-				
-				shellModul.getShell().setVisible(false);
+				  myobj.getLafactory().close();
+				 shellModul.getShell().setVisible(false);
 			}
 		});
 		btnSave.setBounds(176, 0, 127, 26);
@@ -571,13 +574,18 @@ public class ModuleListeBoat {
 	public List<ModulBoat> getListmodul() {
 		
 		ObjectDao myobj = new ObjectDao();
+		myobj.setLafactory(myobj.getFactory());
+		Session lasession = myobj.getSession(myobj.getLafactory());
+		
+		
 		List<ModulBoat> resultdistinct = null;
 		try {
-			Session lasession = myobj.getSessionDao();
 			lasession.beginTransaction();
 			Query query = lasession.createQuery("from ModulBoat");		
 			resultdistinct = query.list();
 			lasession.getTransaction().commit();
+			lasession.close();
+			myobj.getLafactory().close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			logger.error(e);

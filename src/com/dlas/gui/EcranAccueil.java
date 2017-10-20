@@ -1,36 +1,29 @@
 package com.dlas.gui;
 
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.concurrent.BlockingQueue;
 import org.apache.logging.log4j.*;
 
-import javax.swing.ImageIcon;
 import javax.swing.JProgressBar;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.sql.PreparedStatement;
 import java.sql.Timestamp;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-import org.hsqldb.server.Server;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.beans.BeansObservables;
@@ -72,13 +65,9 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 
 import com.dlas.dao.ObjectDao;
-import com.dlas.dao.beneficiaries;
-import com.apple.eawt.AboutHandler;
-import com.apple.eawt.AppEvent.AboutEvent;
 import com.apple.eawt.Application;
 import com.apple.mrj.MRJApplicationUtils;
 import com.dlas.dao.BenefitDb;
-import com.dlas.dao.H2db;
 import com.dlas.gui.accueil.MacOSXControllerAbout;
 import com.dlas.gui.accueil.MacOSXControllerPrefs;
 import com.dlas.gui.accueil.MacOSXControllerQuit;
@@ -87,16 +76,10 @@ import com.dlas.gui.accueil.MenuMsg;
 
 import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Companies;
-import com.dlas.windowmanager.WindowsManager;
-import com.ibm.icu.text.DateFormat;
-import com.ibm.icu.text.SimpleDateFormat;
 import com.poi.actionuser.Actionuser;
 import com.poi.actionuser.ReadCSVFile;
 import com.poi.actionuser.ReadFileXlsx;
-import com.poi.actionuser.Actionuser.ProcessCsv;
 import com.dlas.gui.model.Benefits;
-import org.eclipse.swt.widgets.Menu;
-import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.wb.swt.SWTResourceManager;
 import com.dlas.tools.ThreadUtilities;
 
@@ -133,6 +116,10 @@ public class EcranAccueil {
 	private List listCsv;
 	private static String APP_NAME = "Wycc invoice";
 	
+	private Session mysession;
+	private SessionFactory myfactory;
+	private ObjectDao myconnection;
+	
 	static JProgressBar barDo;
 	
 	static Display d;
@@ -162,6 +149,15 @@ public class EcranAccueil {
 		this.filepath = filepath;
 	}
 	
+	public ObjectDao getMyconnection() {
+		return myconnection;
+	}
+
+
+	public void setMyconnection(ObjectDao myconnection) {
+		this.myconnection = myconnection;
+	}
+
 	Logger logger = LogManager.getLogger("wycc");
 	
 	
@@ -178,6 +174,9 @@ public class EcranAccueil {
 		 *  On détermine le dossier d'execution du jar
 		 * 
 		 */
+		 setMyconnection(new ObjectDao());
+		 
+		 myfactory= myconnection.getFactory();
 		URL url = EcranAccueil.class.getProtectionDomain().getCodeSource().getLocation(); //Gets the path
 	  	String jarPath = null;
 			try {
@@ -239,6 +238,7 @@ public class EcranAccueil {
 				try {
 					window.open();
 					logger.info("Fermeture de l'écran accueil");
+					myfactory.close();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -469,14 +469,24 @@ public class EcranAccueil {
 						Timestamp TsStart=getTimestampFromDateTime(startdate);
 						Timestamp TsEnd=getTimestampFromDateTime(startdate);
 
-						IRunnableWithProgress op = new ReadCSVFile(window, " reading CSV file !", TsStart, TsEnd,shell, m_benefits, appDir, filepath);
+						IRunnableWithProgress op = new ReadCSVFile(window, " reading CSV file !", TsStart, TsEnd,shell, m_benefits, appDir, filepath,myconnection);
 						try {
+							 Thread[] lesThreads=ThreadUtilities.getAllThreads();
+							 for (Thread thread: lesThreads){
+								
+								 ThreadUtilities.getThreadInfo(thread).getLockName();
+								 ThreadUtilities.getThreadInfo(thread).getThreadState().name();
+								 logger.debug("EcranAccueil / Thread name :"+ThreadUtilities.getThreadInfo(thread).getThreadName());
+								 logger.debug("EcranAccueil / Thread status :"+ThreadUtilities.getThreadInfo(thread).getThreadState().name());
+								 logger.debug("EcranAccueil / Lock name :"+ThreadUtilities.getThreadInfo(thread).getLockName() );
+								 //thread.stop();
+							 }
 							new ProgressMonitorDialog(shell).run(true, true, op);
 						} catch (InvocationTargetException | InterruptedException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
-						shell.close();
+						shell.dispose();
 					}
 					Benefit benefit = new Benefit();
 					m_benefitsViewer.setSelection(new StructuredSelection(benefit),true);

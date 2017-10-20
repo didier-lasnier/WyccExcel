@@ -5,9 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Iterator;
 import java.util.List;
 
@@ -29,7 +26,6 @@ import org.hibernate.Session;
 
 import com.dlas.dao.ModulBoat;
 import com.dlas.dao.ObjectDao;
-import com.poi.dlas.WyccWorkbook;
 
 public class XlsImpExp {
 	private File                         filetoprocess;
@@ -440,7 +436,7 @@ public class XlsImpExp {
 		SXSSFCell cell = null;
 		SXSSFRow row = null;
 		int nbfield = ModulBoat.class.getDeclaredFields().length;
-		String[] header = new String[]{"MODUL ID","MODUL FOURNISSEUR","MODUL LABEL","MODULE CATEGORY","MODUL BAOT","MODUL PRICE SINGLE","MODUL PRICE FAMILY","FORFAIT PERCENTAGE","MODUL SCOPE","INVOICE PERIOD","CALCUL MODE","BANK FEE","SUR COM","POLICY NUMBER","AGGREGATE AMOUNT"};
+		String[] header = new String[]{"MODUL ID","MODUL FOURNISSEUR","MODUL LABEL","MODULE CATEGORY","MODUL BOAT","MODUL PRICE SINGLE","MODUL PRICE FAMILY","FORFAIT PERCENTAGE","MODUL SCOPE","INVOICE PERIOD","CALCUL MODE","BANK FEE","SUR COM","POLICY NUMBER","AGGREGATE AMOUNT"};
 		
 		 row = spreadsheet.createRow(counterrow);
 		for (int ifield=0;ifield<nbfield;ifield++){
@@ -460,15 +456,17 @@ public class XlsImpExp {
 			cell= row.createCell(ifield);
 			cell.setCellValue(mymodulboat.getModul_fournisseur());
 			
-			ifield++;
-			cell= row.createCell(ifield);
-			cell.setCellValue(mymodulboat.getModul_fournisseur());
 			
 			ifield++;
 			cell= row.createCell(ifield);
 			if (mymodulboat.getModullabel()!=null) {
 				cell.setCellValue(mymodulboat.getModullabel());
 			}
+			
+			ifield++;
+			cell= row.createCell(ifield);
+			cell.setCellValue(mymodulboat.getModulboat());
+			
 			ifield++;
 			cell= row.createCell(ifield);
 			if (mymodulboat.getModulecategory()!=null) {

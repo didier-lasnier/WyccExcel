@@ -33,6 +33,7 @@ public class ModulBoatListe implements IDetailsPage {
 	 * Initialize the details page.
 	 * @param form
 	 */
+	@Override
 	public void initialize(IManagedForm form) {
 		managedForm = form;
 	}
@@ -41,6 +42,7 @@ public class ModulBoatListe implements IDetailsPage {
 	 * Create contents of the details page.
 	 * @param parent
 	 */
+	@Override
 	public void createContents(Composite parent) {
 		FormToolkit toolkit = managedForm.getToolkit();
 		parent.setLayout(new FillLayout());
@@ -88,6 +90,7 @@ public class ModulBoatListe implements IDetailsPage {
 		tblclmnpricefamily.setText("Price (Family)");
 	}
 
+	@Override
 	public void dispose() {
 		Shell s = new Shell();
 		MessageBox messageBox = new MessageBox(s, SWT.ICON_QUESTION | SWT.YES | SWT.NO);					
@@ -97,6 +100,7 @@ public class ModulBoatListe implements IDetailsPage {
 		s.close();
 	}
 
+	@Override
 	public void setFocus() {
 		// Set focus
 	}
@@ -105,27 +109,33 @@ public class ModulBoatListe implements IDetailsPage {
 		// Update
 	}
 
+	@Override
 	public boolean setFormInput(Object input) {
 		return false;
 	}
 
+	@Override
 	public void selectionChanged(IFormPart part, ISelection selection) {
 		IStructuredSelection structuredSelection = (IStructuredSelection) selection;
 		update();
 	}
 
+	@Override
 	public void commit(boolean onSave) {
 		// Commit
 	}
 
+	@Override
 	public boolean isDirty() {
 		return false;
 	}
 
+	@Override
 	public boolean isStale() {
 		return false;
 	}
 
+	@Override
 	public void refresh() {
 		update();
 	}

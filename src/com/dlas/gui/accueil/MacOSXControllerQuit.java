@@ -1,12 +1,8 @@
 package com.dlas.gui.accueil;
 
-import javax.swing.JOptionPane;
-
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
-import com.apple.mrj.MRJAboutHandler;
-import com.apple.mrj.MRJPrefsHandler;
 import com.apple.mrj.MRJQuitHandler;
 
 public class MacOSXControllerQuit implements MRJQuitHandler
@@ -40,6 +36,7 @@ public void setS(Shell s) {
 }
 
 
+@Override
 public void handleQuit() throws IllegalStateException
   {
 	s.dispose();

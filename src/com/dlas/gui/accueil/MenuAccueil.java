@@ -7,8 +7,6 @@ import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Shell;
 
-import com.dlas.gui.accueil.SaveItem;
-
 
 public class MenuAccueil {
 	private Integer DisplayStatus =0;

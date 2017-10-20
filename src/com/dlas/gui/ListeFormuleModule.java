@@ -6,11 +6,6 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JSplitPane;
-import javax.swing.JButton;
-import javax.swing.SwingConstants;
-import javax.swing.JTabbedPane;
-import javax.swing.JInternalFrame;
 import net.miginfocom.swing.MigLayout;
 import java.awt.Button;
 
@@ -23,6 +18,7 @@ public class ListeFormuleModule extends JFrame {
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+			@Override
 			public void run() {
 				try {
 					ListeFormuleModule frame = new ListeFormuleModule();

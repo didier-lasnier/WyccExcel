@@ -3,9 +3,6 @@ package com.poi.actionuser;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Modifier;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,7 +16,8 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import org.apache.logging.log4j.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
@@ -28,13 +26,12 @@ import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Shell;
 import org.hibernate.Session;
 
-import com.dlas.dao.MvtCsv;
-import com.dlas.dao.beneficiaries;
+import com.dlas.dao.FormuleEmbedded;
 import com.dlas.dao.H2db;
-import com.dlas.dao.HsqlText;
-import com.dlas.tools.CsvTools;
-//import com.dlas.tools.CsvTools.ProgressBarDb;
 import com.dlas.dao.LimitAggCsv;
+import com.dlas.dao.MvtCsv;
+import com.dlas.dao.TextSql;
+import com.dlas.tools.CsvTools;
 import com.poi.dlas.WyccWorkbook;
 import com.poi.dlas.managecsv;
 
@@ -87,7 +84,7 @@ public class Actionuser {
 //			
 //			new ProgressMonitorDialog(shell).run(true, true, op);
 //						shell.close();
-			HsqlText sqlstmt = new HsqlText();
+			TextSql sqlstmt = new TextSql();
 			
 			WyccWorkbook wyccwb = new WyccWorkbook();
 			Session lasession=wyccwb.CreateDataSession();
@@ -136,9 +133,9 @@ public class Actionuser {
 	}
 	
 	public List readAggregate(List<MvtCsv> list,IProgressMonitor monitor ){
-		 List<LimitAggCsv> listagg=new ArrayList<>();
-		 List<LimitAggCsv> listaggDistinct=null;
-		 List<LimitAggCsv> listnotnull=null;
+		 List<FormuleEmbedded> listagg=new ArrayList<>();
+		 List<FormuleEmbedded> listaggDistinct=null;
+		 List<FormuleEmbedded> listnotnull=null;
 		 // on construit la liste  des plan
 		 
 		String[] nextLine;
@@ -152,14 +149,14 @@ public class Actionuser {
 				monitor.subTask("Process line n# :  "+i);
 				monitor.worked(1);
 				
-				listagg.add(new LimitAggCsv(object.getCompany1(),object.getFormula1(),recordmodule.getCompany1(),object.getPolicynumber1(),0f));	
-				listagg.add(new LimitAggCsv(object.getCompany2(),object.getFormula2(),recordmodule.getCompany2(),object.getPolicynumber2(),0f));
-				listagg.add(new LimitAggCsv(object.getCompany3(),object.getFormula3(),recordmodule.getCompany3(),object.getPolicynumber3(),0f));
-				listagg.add(new LimitAggCsv(object.getCompany4(),object.getFormula4(),recordmodule.getCompany4(),object.getPolicynumber4(),0f));
-				listagg.add(new LimitAggCsv(object.getCompany5(),object.getFormula5(),recordmodule.getCompany5(),object.getPolicynumber5(),0f));
-				listagg.add(new LimitAggCsv(object.getCompany6(),object.getFormula(),recordmodule.getCompany6(),object.getPolicynumber6(),0f));
-				listagg.add(new LimitAggCsv(object.getCompany7(),object.getFormula7(),recordmodule.getCompany7(),object.getPolicynumber7(),0f));
-				listagg.add(new LimitAggCsv(object.getCompany8(),object.getFormula8(),recordmodule.getCompany8(),object.getPolicynumber8(),0f));
+				listagg.add(new FormuleEmbedded(object.getCompany1(),object.getFormula1(),recordmodule.getCompany1(),object.getPolicynumber1() ) );	
+				listagg.add(new FormuleEmbedded(object.getCompany2(),object.getFormula2(),recordmodule.getCompany2(),object.getPolicynumber2()));
+				listagg.add(new FormuleEmbedded(object.getCompany3(),object.getFormula3(),recordmodule.getCompany3(),object.getPolicynumber3()));
+				listagg.add(new FormuleEmbedded(object.getCompany4(),object.getFormula4(),recordmodule.getCompany4(),object.getPolicynumber4()));
+				listagg.add(new FormuleEmbedded(object.getCompany5(),object.getFormula5(),recordmodule.getCompany5(),object.getPolicynumber5()));
+				listagg.add(new FormuleEmbedded(object.getCompany6(),object.getFormula(),recordmodule.getCompany6(),object.getPolicynumber6()));
+				listagg.add(new FormuleEmbedded(object.getCompany7(),object.getFormula7(),recordmodule.getCompany7(),object.getPolicynumber7()));
+				listagg.add(new FormuleEmbedded(object.getCompany8(),object.getFormula8(),recordmodule.getCompany8(),object.getPolicynumber8()));
 			
 			}
 			i++;
@@ -223,7 +220,7 @@ public class Actionuser {
 				
 			    monitor.beginTask(message, IProgressMonitor.UNKNOWN);
 			    monitor.worked(1);
-				HsqlText sqlstmt = new HsqlText();
+			    TextSql sqlstmt = new TextSql();
 				
 			  try {
 				  actionuser.setPrepStmt( dbconn.connectiondb.prepareStatement(sqlstmt.insertmvt()));
@@ -323,7 +320,7 @@ public class Actionuser {
 						e1.printStackTrace();
 					}
 					
-					HsqlText sqlstmt = new HsqlText();
+					TextSql sqlstmt = new TextSql();
 					// Statement stmt = db.connectiondb.createStatement();
 					PreparedStatement stmt = null;
 					try {

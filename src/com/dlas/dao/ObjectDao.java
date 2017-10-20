@@ -10,6 +10,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 public class ObjectDao {
+	private SessionFactory lafactory ;
+	
 	public ObjectDao() {
 	};
 
@@ -18,6 +20,30 @@ public class ObjectDao {
 		SessionFactory factory = HibernateUtils.getSessionFactory();
 		Session lasession = factory.openSession();
 		return lasession;
+	};
+
+	public Session getSession(SessionFactory factory) {
+		Session lasession = factory.openSession();
+		return lasession;
+	};
+
+	public SessionFactory getLafactory() {
+		return lafactory;
+	}
+
+	public void setLafactory(SessionFactory lafactory) {
+		this.lafactory = lafactory;
+	}
+
+	public void setFactory(SessionFactory factory) {
+		this.lafactory=factory;
+	}
+	
+	
+	public SessionFactory getFactory() {
+
+		SessionFactory factory = HibernateUtils.getSessionFactory();
+		return factory;
 	};
 
 	public void saveDao(Session session, Object object) {

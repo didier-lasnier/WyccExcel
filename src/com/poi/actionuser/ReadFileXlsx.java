@@ -17,8 +17,6 @@ import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.wb.swt.SWTResourceManager;
-
 import com.dlas.dao.beneficiaries;
 import com.poi.dlas.WyccWorkbook;
 

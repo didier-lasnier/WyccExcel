@@ -30,6 +30,7 @@ public class WyccApp {
 		//Maindisplay=new Display();
 		Maindisplay=Display.getDefault();
 		logger.info("Start app");
+		//SplashWycc test = new SplashWycc();
        new EcranAccueil(Maindisplay);
        logger.info("Fermeture de l'appli");
        StopServerHsql();

@@ -3,9 +3,6 @@ package com.dlas.gui.accueil;
 import javax.swing.JOptionPane;
 import com.apple.eawt.ApplicationAdapter;
 import com.apple.eawt.ApplicationEvent;
-import com.apple.eawt.AboutHandler;
-import com.apple.eawt.QuitHandler;
-import com.apple.eawt.PreferencesHandler;
 
 /**
  * MacAdapter.java
@@ -37,12 +34,14 @@ public class MenuHandlerApple extends ApplicationAdapter
     this.handler = handler;
   }*/
 
-  public void handleQuit(ApplicationEvent e)
+  @Override
+public void handleQuit(ApplicationEvent e)
   {
     System.exit(0);
   }
 
-  public void handleAbout(ApplicationEvent e)
+  @Override
+public void handleAbout(ApplicationEvent e)
   {
     // tell the system we're handling this, so it won't display
     // the default system "about" dialog after ours is shown.
@@ -50,7 +49,8 @@ public class MenuHandlerApple extends ApplicationAdapter
     JOptionPane.showMessageDialog(null, "Show About dialog here");
   }
 
-  public void handlePreferences(ApplicationEvent e)
+  @Override
+public void handlePreferences(ApplicationEvent e)
   {
     JOptionPane.showMessageDialog(null, "Show Preferences dialog here");
   }

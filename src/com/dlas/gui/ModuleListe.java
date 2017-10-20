@@ -4,7 +4,6 @@ import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,15 +51,7 @@ import org.hibernate.query.Query;
 
 import com.dlas.dao.Modul;
 import com.dlas.dao.ObjectDao;
-import com.dlas.dao.H2db;
-import com.dlas.dao.HsqlText;
-import com.dlas.gui.EcranAccueil.ViewerUpdateValueStrategy;
 import com.dlas.gui.model.ModulModel;
-import com.poi.actionuser.Actionuser;
-import com.poi.actionuser.Actionuser.ProgressBarDb;
-import com.dlas.gui.model.Benefit;
-import com.dlas.gui.model.IntegerToString;
-import org.eclipse.swt.layout.GridLayout;
 
 public class ModuleListe {
 	private DataBindingContext m_bindingContext;
@@ -135,7 +126,7 @@ public class ModuleListe {
 				
 				Integer selection= m_modulmodels.getSize()-1;			
 				newmodul=(Modul) Modulviewer_1.getElementAt(selection);
-				ISelection Sel = (ISelection) new StructuredSelection(Modulviewer_1.getElementAt(selection));
+				ISelection Sel = new StructuredSelection(Modulviewer_1.getElementAt(selection));
 				Modulviewer_1.setSelection(Sel,true);
 				
 

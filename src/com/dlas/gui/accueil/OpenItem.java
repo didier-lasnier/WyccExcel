@@ -1,18 +1,13 @@
 package com.dlas.gui.accueil;
 
-import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 
-import com.poi.actionuser.Actionuser;
 import com.dlas.gui.ModuleListe;
 
 public class OpenItem implements SelectionListener {
@@ -117,7 +112,7 @@ public class OpenItem implements SelectionListener {
 		this.setCountSelectedItem(this.getCountSelectedItem()+1);
 		ModuleListe moduldia = new ModuleListe () ;	
 		moduldia.setDefaultValues(d);
-		moduldia.Moduldisplay(d);
+		ModuleListe.Moduldisplay(d);
 
 	}
 

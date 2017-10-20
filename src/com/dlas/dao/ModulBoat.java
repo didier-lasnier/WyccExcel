@@ -7,9 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.Session;
-import org.hibernate.query.Query;
-
 import com.dlas.gui.model.AbstractModelObject;
 
 @Entity

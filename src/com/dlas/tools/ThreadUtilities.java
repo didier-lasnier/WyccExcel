@@ -207,6 +207,7 @@ public final class ThreadUtilities
 		java.util.Arrays.sort( allThreads,
 		new java.util.Comparator<Thread>( )
 		{
+			@Override
 			public int compare( final Thread t1, final Thread t2 )
 			{ return t2.getPriority( ) - t1.getPriority( ); }
 		} );
