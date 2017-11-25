@@ -19,6 +19,7 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import com.dlas.dao.BenefitDb;
+import com.dlas.dao.FormuleEmbedded;
 import com.dlas.dao.LimitAggCsv;
 import com.dlas.gui.EcranAccueil;
 import com.dlas.tools.CsvTools;
@@ -108,24 +109,26 @@ public class Benefits extends AbstractModelObject {
 					 monitor.setTaskName("Processing file gettings the various formula and waranty.");
 					 monitor.worked(1);
 					 //monitor.subTask("Processing beneficiaries ");
-						List<LimitAggCsv>	listviewer   = b.readAggregate(window.getListCsv(),monitor);
-						List<LimitAggCsv>	listdistinct = distinctList(listviewer,LimitAggCsv::getPolicynumber,LimitAggCsv::getFormula,LimitAggCsv::getFormulename,LimitAggCsv::getCompany);
+						List<FormuleEmbedded>	listviewer   = b.readAggregate(window.getListCsv(),monitor);
+						List<FormuleEmbedded>	listdistinct = distinctList(listviewer,FormuleEmbedded::getPolicynumber,FormuleEmbedded::getFormula,FormuleEmbedded::getFormulename,FormuleEmbedded::getCompany);
 						Session lasession=null;
 
-						/*
+						
 						lasession=wyccwb.CreateDataSession();
-						Query query = lasession.createQuery( "FROM BenefitDb where (company,formula,formulename,policynumber,amount) in :listdistinct");
+						Query query = lasession.createQuery( "FROM BenefitDb  where  tupleformule in :listdistinct");
+						//query.setParameterList("listdistinct", listdistinct,LimitAggCsv.class);
 						query.setParameterList("listdistinct", listdistinct);
+						
 						List<BenefitDb> resultdistinct = query.list();
 						wyccwb.closedataSession(lasession);
 						
-*/
+
 						monitor.setTaskName("Processing data .");
 						monitor.subTask("Launch database this operation could take a while");
 						monitor.worked(1);
 						
 						lasession=wyccwb.CreateDataSession();
-						for (LimitAggCsv distinct :listdistinct){
+						for (FormuleEmbedded distinct :listdistinct){
 						// on recupére les données précédement enregistrées							
 						monitor.worked(1);
 						String amount = wyccwb.getAggregate(distinct.getCompany(),distinct.getFormula(),distinct.getFormulename(),distinct.getPolicynumber(),lasession );

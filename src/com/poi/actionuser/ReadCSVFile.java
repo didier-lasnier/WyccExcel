@@ -4,26 +4,25 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import org.apache.logging.log4j.*;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
 import com.dlas.dao.H2db;
 import com.dlas.dao.HsqlText;
+import com.dlas.dao.ObjectDao;
 import com.dlas.gui.EcranAccueil;
 import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Benefits;
@@ -52,6 +51,8 @@ public class ReadCSVFile implements IRunnableWithProgress {
      private H2db              db;
 	 private String            StartDateStr;
 	 private String            EndDateStr;
+	 private SessionFactory    myfactory;
+	 private ObjectDao         myconnection;
 	 
 	 
 
@@ -208,7 +209,7 @@ public class ReadCSVFile implements IRunnableWithProgress {
 	}
 
 	public ReadCSVFile(EcranAccueil window, String message,   Timestamp startD,
-			Timestamp endD, Shell shell, Benefits benefits,  String appDir,String filepath) {
+			Timestamp endD, Shell shell, Benefits benefits,  String appDir,String filepath,ObjectDao myconnection) {
 		super();
 		this.window = window;
 		this.message = message;
@@ -221,6 +222,8 @@ public class ReadCSVFile implements IRunnableWithProgress {
 		this.dir   = appDir;
 		this.directory  =new File(appDir);
 		this.csvdata = new managecsv();
+		this.myfactory= myconnection.getFactory();
+		this.myconnection= myconnection;
 	}
 
 	public PreparedStatement getPrepStmt() {
@@ -249,12 +252,16 @@ public class ReadCSVFile implements IRunnableWithProgress {
 			if (benefits.getBenefits().size() > 0) {
 				this.inittialise(this.getStartD(),this.getEndD());
 				theSavefile = this.saveIntempFile(theOpenfile, csvdata);
-				
+					 
 				WyccWorkbook wyccwb = new WyccWorkbook();
-				Session lasession=wyccwb.CreateDataSession();
+				Session lasession=myconnection.getSession(myfactory);
+				
+				lasession.beginTransaction();
 				this.deletmvt(lasession);
 				lasession.getTransaction().commit();
-
+				
+				//wyccwb.closedataSession(lasession);
+				 
 				lasession.beginTransaction();
 				try {
 					lireCSV(theOpenfile, db,monitor,lasession);
@@ -264,20 +271,26 @@ public class ReadCSVFile implements IRunnableWithProgress {
 					e1.printStackTrace();
 				}
 				lasession.getTransaction().commit();
+				
+
+				 
+				 
 				//wyccwb.closedataSession(lasession);
 				lasession.beginTransaction();
 				deletMvtNum(lasession);
 				lasession.getTransaction().commit();
 				
+				
+				 
 				lasession.beginTransaction();
 				insertmvtNum(lasession);
 				lasession.getTransaction().commit();
 				
+				 
 				lasession.beginTransaction();
 				deleteListHier(lasession);
 				lasession.getTransaction().commit();
-				
-				
+								
 /*				lasession.beginTransaction();
 				insertListHierLevelzero(lasession);
 				lasession.getTransaction().commit();*/
@@ -297,12 +310,17 @@ public class ReadCSVFile implements IRunnableWithProgress {
 			    deleteBeneifiaries(lasession);
 			    lasession.getTransaction().commit();
 			    
+				 
 			    lasession.beginTransaction();
 				insertBeneficiaries(lasession);
+				lasession.getTransaction().commit();
 				
-				wyccwb.closedataSession(lasession);
+				lasession.close();
 				
 				
+				//wyccwb.closedataSession(lasession);
+				
+				 
 				theSavefile.deleteOnExit();
 				logger.info("DONE !");
 			} 

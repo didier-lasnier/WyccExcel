@@ -1,6 +1,7 @@
 package com.dlas.dao;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,7 +28,10 @@ public class BenefitDb {
 	public String policynumber;
 	@Column(name = "AMOUNT")
 	public String amount;
-
+	
+	@Embedded
+	public FormuleEmbedded tupleformule ;
+	
 	public Integer getAggregateid() {
 		return aggregateid;
 	}

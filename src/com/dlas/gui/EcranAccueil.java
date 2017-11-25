@@ -1,17 +1,12 @@
 package com.dlas.gui;
 
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -25,12 +20,11 @@ import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.sql.PreparedStatement;
 import java.sql.Timestamp;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-import org.hsqldb.server.Server;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.beans.BeansObservables;
@@ -71,14 +65,11 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 
+import com.apple.eio.*;
 import com.dlas.dao.ObjectDao;
-import com.dlas.dao.beneficiaries;
-import com.apple.eawt.AboutHandler;
-import com.apple.eawt.AppEvent.AboutEvent;
 import com.apple.eawt.Application;
 import com.apple.mrj.MRJApplicationUtils;
 import com.dlas.dao.BenefitDb;
-import com.dlas.dao.H2db;
 import com.dlas.gui.accueil.MacOSXControllerAbout;
 import com.dlas.gui.accueil.MacOSXControllerPrefs;
 import com.dlas.gui.accueil.MacOSXControllerQuit;
@@ -87,16 +78,10 @@ import com.dlas.gui.accueil.MenuMsg;
 
 import com.dlas.gui.model.Benefit;
 import com.dlas.gui.model.Companies;
-import com.dlas.windowmanager.WindowsManager;
-import com.ibm.icu.text.DateFormat;
-import com.ibm.icu.text.SimpleDateFormat;
 import com.poi.actionuser.Actionuser;
 import com.poi.actionuser.ReadCSVFile;
 import com.poi.actionuser.ReadFileXlsx;
-import com.poi.actionuser.Actionuser.ProcessCsv;
 import com.dlas.gui.model.Benefits;
-import org.eclipse.swt.widgets.Menu;
-import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.wb.swt.SWTResourceManager;
 import com.dlas.tools.ThreadUtilities;
 
@@ -133,11 +118,17 @@ public class EcranAccueil {
 	private List listCsv;
 	private static String APP_NAME = "Wycc invoice";
 	
+	private Session mysession;
+	private SessionFactory myfactory;
+	private ObjectDao myconnection;
+	
 	static JProgressBar barDo;
 	
 	static Display d;
 	Shell s;
 	static BlockingQueue<MenuMsg> queue;
+	
+	SplashScreen screen;
 	
 //	public EcranAccueil() {
 //		// TODO Auto-generated constructor stub
@@ -162,6 +153,26 @@ public class EcranAccueil {
 		this.filepath = filepath;
 	}
 	
+	public ObjectDao getMyconnection() {
+		return myconnection;
+	}
+
+
+	public void setMyconnection(ObjectDao myconnection) {
+		this.myconnection = myconnection;
+	}
+
+	
+	public SessionFactory getMyfactory() {
+		return myfactory;
+	}
+
+
+	public void setMyfactory(SessionFactory myfactory) {
+		this.myfactory = myfactory;
+	}
+
+
 	Logger logger = LogManager.getLogger("wycc");
 	
 	
@@ -173,11 +184,13 @@ public class EcranAccueil {
 		MacOSXControllerQuit macControllerquit = new MacOSXControllerQuit();
 		
 		 Application macApplication = Application.getApplication();
-		 
+	
 		/*
 		 *  On détermine le dossier d'execution du jar
 		 * 
 		 */
+
+		 
 		URL url = EcranAccueil.class.getProtectionDomain().getCodeSource().getLocation(); //Gets the path
 	  	String jarPath = null;
 			try {
@@ -185,10 +198,15 @@ public class EcranAccueil {
 			} catch (UnsupportedEncodingException e) {
 				e.printStackTrace();
 			}
-			
+		
 			appDir = new File(jarPath).getParentFile().getPath(); //Path of the jar
 			appDir=appDir+ File.separator;
-
+			
+			 //splashScreenInit(appDir+"images/spash.gif");
+			 setMyconnection(new ObjectDao());
+			 myfactory= myconnection.getFactory();
+			 myconnection.setLafactory(myfactory);
+			 //splashScreenDestruct();
 		 // ======================================================
 	     // Create appender for log4j
 	     // ======================================================
@@ -239,6 +257,7 @@ public class EcranAccueil {
 				try {
 					window.open();
 					logger.info("Fermeture de l'écran accueil");
+					myfactory.close();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -377,7 +396,7 @@ public class EcranAccueil {
 		final Display display = d; 	
 
 		createContents();
-		MenuAccueil menuaccueil=new MenuAccueil(shell,display,startdate,enddate,appDir);
+		MenuAccueil menuaccueil=new MenuAccueil(shell,display,startdate,enddate,appDir,myconnection);
 		Display.setAppName(APP_NAME);
 		shell.open();
 		shell.layout();	
@@ -417,6 +436,8 @@ public class EcranAccueil {
 		
 		return selected;
 	}	
+	
+	
 	protected void createContents() {
 		shell.setLayout(new FillLayout());
 		shell.setSize(789, 517);
@@ -469,14 +490,24 @@ public class EcranAccueil {
 						Timestamp TsStart=getTimestampFromDateTime(startdate);
 						Timestamp TsEnd=getTimestampFromDateTime(startdate);
 
-						IRunnableWithProgress op = new ReadCSVFile(window, " reading CSV file !", TsStart, TsEnd,shell, m_benefits, appDir, filepath);
+						IRunnableWithProgress op = new ReadCSVFile(window, " reading CSV file !", TsStart, TsEnd,shell, m_benefits, appDir, filepath,myconnection);
 						try {
+							 Thread[] lesThreads=ThreadUtilities.getAllThreads();
+							 for (Thread thread: lesThreads){
+								
+								 ThreadUtilities.getThreadInfo(thread).getLockName();
+								 ThreadUtilities.getThreadInfo(thread).getThreadState().name();
+								 logger.debug("EcranAccueil / Thread name :"+ThreadUtilities.getThreadInfo(thread).getThreadName());
+								 logger.debug("EcranAccueil / Thread status :"+ThreadUtilities.getThreadInfo(thread).getThreadState().name());
+								 logger.debug("EcranAccueil / Lock name :"+ThreadUtilities.getThreadInfo(thread).getLockName() );
+								 //thread.stop();
+							 }
 							new ProgressMonitorDialog(shell).run(true, true, op);
 						} catch (InvocationTargetException | InterruptedException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
-						shell.close();
+						shell.dispose();
 					}
 					Benefit benefit = new Benefit();
 					m_benefitsViewer.setSelection(new StructuredSelection(benefit),true);
@@ -861,5 +892,26 @@ public class EcranAccueil {
 	}
 	  return Dstartdate;
   }
-	
+  
+  static public String documentsDirectory()
+          throws java.io.FileNotFoundException {
+      // From CarbonCore/Folders.h
+      final String kDocumentsDirectory = "docs";
+      return com.apple.eio.FileManager.findFolder(
+          com.apple.eio.FileManager.kUserDomain,
+          com.apple.eio.FileManager.OSTypeToInt(kDocumentsDirectory)
+      );
+  }
+  
+//	 private void splashScreenInit(String filename) {
+//		  ImageIcon myImage = new ImageIcon(filename);
+//		  screen = new SplashScreen(myImage);
+//		  screen.setLocationRelativeTo(null);
+//		  screen.setProgressMax(100);
+//		  screen.setScreenVisible(true);
+//		}
+//	 
+//	 private void splashScreenDestruct() {
+//		    screen.setScreenVisible(false);
+//		  }
 }

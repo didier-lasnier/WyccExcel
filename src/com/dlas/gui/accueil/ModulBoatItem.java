@@ -1,20 +1,14 @@
 package com.dlas.gui.accueil;
 
-import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 
-import com.poi.actionuser.Actionuser;
-import com.dlas.gui.ModulBoatListe;
-import com.dlas.gui.ModuleListe;
+import com.dlas.dao.ObjectDao;
 import com.dlas.gui.ModuleListeBoat;
 
 public class ModulBoatItem implements SelectionListener {
@@ -24,6 +18,7 @@ public class ModulBoatItem implements SelectionListener {
 	private String      Dirpath;
 	private Display     d;
 	private Integer     CountSelectedItem=0;
+	private ObjectDao   theconnection;
 	
 	
 	public DateTime getStartD() {
@@ -90,9 +85,10 @@ public class ModulBoatItem implements SelectionListener {
 
 
 	//public OpenItem(Shell s,DateTime StartD, DateTime EndD,String Dirpath){
-	public ModulBoatItem(Display  d,Shell s){
+	public ModulBoatItem(Display  d,Shell s,ObjectDao myconnection){
 		this.s=s;
 		this.d=d;
+		this.theconnection=myconnection;
 //		this.StartD=StartD;
 //		this.EndD=EndD;
 //		this.Dirpath=Dirpath;
@@ -100,7 +96,7 @@ public class ModulBoatItem implements SelectionListener {
 	@Override
 	public void widgetSelected(SelectionEvent event) {
 		try {
-			widgetOpen(s,StartD,EndD);
+			widgetOpen(s,StartD,EndD,theconnection);
 		} catch (InvocationTargetException | InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -112,13 +108,14 @@ public class ModulBoatItem implements SelectionListener {
 	}
 
 	public void widgetSelectedBtn(SelectionEvent event) throws InvocationTargetException, InterruptedException {
-		widgetOpen( s,StartD,  EndD);
+		widgetOpen( s,StartD,  EndD,theconnection);
 	}
 	
-	public void widgetOpen(Shell s,DateTime StartD, DateTime EndD) throws InvocationTargetException, InterruptedException{
+	public void widgetOpen(Shell s,DateTime StartD, DateTime EndD,ObjectDao theconnection) throws InvocationTargetException, InterruptedException{
 		this.setCountSelectedItem(this.getCountSelectedItem()+1);
+		this.theconnection=theconnection;
 		ModuleListeBoat modulboatdia = new ModuleListeBoat () ;	
-		modulboatdia.setDefaultValues(d);
+		modulboatdia.setDefaultValues(d,theconnection);
 		modulboatdia.Moduldisplay(d);
 
 	}

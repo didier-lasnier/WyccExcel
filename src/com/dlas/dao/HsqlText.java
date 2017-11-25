@@ -1,6 +1,8 @@
 package com.dlas.dao;
 
 public class HsqlText {
+	
+	
 	public HsqlText() {
 
 	}

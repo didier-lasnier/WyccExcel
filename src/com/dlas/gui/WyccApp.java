@@ -1,12 +1,15 @@
 package com.dlas.gui;
 
 
+//import java.awt.SplashScreen;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.sql.Connection;
+
+import javax.swing.ImageIcon;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,10 +29,11 @@ public class WyccApp {
 	public static void main(String[] args) throws ClassNotFoundException, IOException, AclFormatException {
 		Logger logger = LogManager.getLogger("wycc");
 		Display.setAppName(APP_NAME);
-		Maindisplay = Display.getDefault();
+		//Maindisplay = Display.getDefault();
 		//Maindisplay=new Display();
 		Maindisplay=Display.getDefault();
 		logger.info("Start app");
+		//SplashWycc test = new SplashWycc();
        new EcranAccueil(Maindisplay);
        logger.info("Fermeture de l'appli");
        StopServerHsql();
@@ -72,4 +76,12 @@ public class WyccApp {
 	   	     server.shutdown(); 
 	   	}
 	
+//	 private void splashScreenInit() {
+//		  ImageIcon myImage = new ImageIcon();
+//		  SplashScreen screen = new SplashScreen(myImage);
+//		  screen.setLocationRelativeTo(null);
+//		  screen.setProgressMax(100);
+//		  screen.setScreenVisible(true);
+//		}
+	 
 }

@@ -1,12 +1,10 @@
 package Test;
 
-import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.apache.logging.log4j.*;
 
 import com.dlas.dao.HsqlText;
-import com.dlas.dao.Mvt2;
 import com.poi.dlas.WyccWorkbook;
 
 public class InsertMvtNum {

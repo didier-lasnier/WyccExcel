@@ -1,21 +1,14 @@
 package com.poi.dlas;
 
-import java.awt.BorderLayout;
-import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 //import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
@@ -24,37 +17,22 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-
 import org.apache.logging.log4j.*;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.openxml4j.exceptions.OpenXML4JException;
-import org.apache.poi.openxml4j.opc.OPCPackage;
 //import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
-import org.apache.poi.ss.usermodel.Name;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.apache.xmlbeans.XmlException;
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
-import org.eclipse.swt.widgets.Shell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
-import org.apache.poi.xssf.usermodel.XSSFCreationHelper;
 import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.extractor.XSSFExcelExtractor;
 import org.apache.poi.xssf.streaming.SXSSFCell;
 import org.apache.poi.xssf.streaming.SXSSFRow;
 import org.apache.poi.xssf.streaming.SXSSFSheet;
@@ -66,7 +44,6 @@ import com.dlas.dao.beneficiaries;
 import com.dlas.tools.SetBeneficiaries;
 import com.dlas.tools.Tools;
 import com.dlas.dao.Wycccell;
-import com.dlas.dao.LimitAggCsv;
 import com.dlas.dao.Modul;
 import com.dlas.dao.ModulBoat;
 
@@ -518,7 +495,8 @@ public class WyccWorkbook extends JPanel {
 					ModulBoat mymodulboat = setBenef.getModulboat();
 					if (mymodulboat != null) {
 						String mycaclulmode = mymodulboat.getCalculmode();
-						setBenef.setResult(setBenef.getWb().readformula(mysession, mycaclulmode, 1));
+						setBenef.getWb();
+						setBenef.setResult(WyccWorkbook.readformula(mysession, mycaclulmode, 1));
 					}
 
 					setBenef.getWb().setFormula(setBenef.getIntrow(), setBenef.getResult(), setBenef.getNewworkbook(),
@@ -565,18 +543,22 @@ public class WyccWorkbook extends JPanel {
 
 	public List<beneficiaries> getBeneficiaries() {
 		ObjectDao myobj = new ObjectDao();
-		Session lasession = myobj.getSessionDao();
+		myobj.setLafactory(myobj.getFactory());
+		Session lasession = myobj.getSession(myobj.getLafactory());
 		lasession.beginTransaction();
 		Query query = lasession.createQuery("from beneficiaries");
 		List<beneficiaries> resultdistinct = query.list();
 		lasession.getTransaction().commit();
+		myobj.getLafactory().close();
 		return resultdistinct;
 	}
 
 	public List readformula() {
 
 		ObjectDao myobj = new ObjectDao();
-		Session lasession = myobj.getSessionDao();
+		myobj.setLafactory(myobj.getFactory());
+		Session lasession = myobj.getSession(myobj.getLafactory());
+		
 		// now lets pull events from the database and list them
 		lasession.beginTransaction();
 		List resultdistinct = lasession.createQuery("select distinct cellrow from Wycccell").list();
@@ -588,7 +570,8 @@ public class WyccWorkbook extends JPanel {
 		}
 		lasession.close();
 
-		lasession = myobj.getSessionDao();
+		//lasession = myobj.getSessionDao();
+		lasession = myobj.getSession(myobj.getLafactory());
 		int introw = (int) resultdistinct.get(1);
 		// for (int introw : (List<Integer>) resultdistinct){
 		lasession.beginTransaction();
@@ -599,7 +582,8 @@ public class WyccWorkbook extends JPanel {
 		lasession.getTransaction().commit();
 
 		lasession.close();
-
+		myobj.getLafactory().close();
+		
 		return result;
 		// }
 	}
@@ -1425,8 +1409,11 @@ public class WyccWorkbook extends JPanel {
 			SXSSFCell firstcellul = null;
 			String addressfirstcell = null;
 			String addresslastcell = null;
+			
 			ObjectDao myobj = new ObjectDao();
-			Session lasession = myobj.getSessionDao();
+			myobj.setLafactory(myobj.getFactory());
+			Session lasession = myobj.getSession(myobj.getLafactory());
+			
 			SXSSFRow row = null;
 			beneficiaries rs1 = null;
 			Modul modul = null;
@@ -1579,7 +1566,7 @@ public class WyccWorkbook extends JPanel {
 
 			// Flushed last line
 			try {
-				((SXSSFSheet) setbenef.getSpreadsheet()).flushRows(0);
+				setbenef.getSpreadsheet().flushRows(0);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -1587,7 +1574,10 @@ public class WyccWorkbook extends JPanel {
 			// 1. create named range for a single cell using areareference
 
 			// Close the db session
-			mSetBeneficiaries.get(0).getLasession().close();
+			
+			//mSetBeneficiaries.get(0).getLasession().close();
+			lasession.close();
+			myobj.getLafactory().close();
 			// Write the finale file
 			FileOutputStream out;
 

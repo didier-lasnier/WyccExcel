@@ -3,13 +3,24 @@ package com.dlas.dao;
 import java.awt.List;
 import java.util.Objects;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "AGGREGATE_TAB", schema = "PUBLIC")
 public class LimitAggCsv {
 
-		public String company;
-		public String formula;
-		public String formulename;
-		public String policynumber;
-		public float  amount;
+	@Column(name = "COMPANY")
+	public String company;
+	@Column(name = "FORMULA")
+	public String formula;
+	@Column(name = "FORMULE_NAME")
+	public String formulename;
+	@Column(name = "POLICY_NUMBER")
+	public String policynumber;
+	@Column(name = "AMOUNT")
+	public float  amount;
 		
 		public LimitAggCsv() {
 		}
