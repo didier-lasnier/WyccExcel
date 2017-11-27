@@ -2,6 +2,7 @@ package com.dlas.gui;
 
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -176,8 +177,9 @@ public class EcranAccueil {
 	Logger logger = LogManager.getLogger("wycc");
 	
 	
+	
 	//public static void main(String[] args) {
-	public EcranAccueil(Display display ) {
+	public EcranAccueil(Display display ) throws FileNotFoundException {
 		
 		MacOSXControllerAbout macControllerahout = new MacOSXControllerAbout();
 		MacOSXControllerPrefs macControllerprefs = new MacOSXControllerPrefs();
@@ -189,8 +191,11 @@ public class EcranAccueil {
 		 *  On détermine le dossier d'execution du jar
 		 * 
 		 */
-
 		 
+		 FileManager MyFileManager =new FileManager();
+		 String directorypath = documentsDirectory("docs");
+		        directorypath = documentsDirectory("prefs");
+		        
 		URL url = EcranAccueil.class.getProtectionDomain().getCodeSource().getLocation(); //Gets the path
 	  	String jarPath = null;
 			try {
@@ -328,7 +333,8 @@ public class EcranAccueil {
 			FileDialog fd = new FileDialog(shell, SWT.SAVE);
 			fd.setText("Save");
 			try {
-				fd.setFilterPath(directory.getCanonicalPath());
+				
+				fd.setFilterPath(documentsDirectory("docs"));//directory.getCanonicalPath());
 				String[] filterExt = { "*.xlsx" };
 				fd.setFilterExtensions(filterExt);
 				String selected = fd.open();
@@ -353,18 +359,23 @@ public class EcranAccueil {
 	class Read implements SelectionListener {
 		@Override
 		public void widgetSelected(SelectionEvent event) {
-			widgetRead();
+			try {
+				widgetRead();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		@Override
 		public void widgetDefaultSelected(SelectionEvent event) {
 		}
 		
-		public void widgetSelectedBtn(SelectionEvent e) {
+		public void widgetSelectedBtn(SelectionEvent e) throws FileNotFoundException {
 			widgetRead();
 		}
-		public void widgetRead(){
-			File directory = new File(".");
+		public void widgetRead() throws FileNotFoundException{
+			File directory = new File(documentsDirectory("docs"));
 			String fileCharSep = System.getProperty("file.separator");
 			try {
 			FileDialog fd = new FileDialog(shell, SWT.OPEN);
@@ -425,7 +436,7 @@ public class EcranAccueil {
 	public String chooseFile(Shell s) throws IOException {
 		
 		
-		File directory = new File(".");
+		File directory = new File(documentsDirectory("docs"));
 		String fileCharSep = System.getProperty("file.separator");
 		FileDialog fd = new FileDialog(s, SWT.OPEN);
 		fd.setText("Choose a file");
@@ -534,7 +545,12 @@ public class EcranAccueil {
 		btnReadFormula.addSelectionListener(new SelectionAdapter() {
 	    @Override
 		public void widgetSelected(SelectionEvent e) {
-		        		 new Read().widgetRead();
+		        		 try {
+							new Read().widgetRead();
+						} catch (FileNotFoundException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
 		        	}
 		        });
 		btnReadFormula.setText("Read xls file...");
@@ -893,10 +909,10 @@ public class EcranAccueil {
 	  return Dstartdate;
   }
   
-  static public String documentsDirectory()
+  static public String documentsDirectory(String typefolder)
           throws java.io.FileNotFoundException {
       // From CarbonCore/Folders.h
-      final String kDocumentsDirectory = "docs";
+      final String kDocumentsDirectory = typefolder;//"docs";
       return com.apple.eio.FileManager.findFolder(
           com.apple.eio.FileManager.kUserDomain,
           com.apple.eio.FileManager.OSTypeToInt(kDocumentsDirectory)

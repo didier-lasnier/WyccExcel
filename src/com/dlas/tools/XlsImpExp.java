@@ -566,8 +566,8 @@ public class XlsImpExp {
 		
 	}
 
-	public void getFileXlstoImp(String mode){
-			File directory = new File(".");
+	public void getFileXlstoImp(String mode) throws FileNotFoundException{
+			File directory = new File(documentsDirectory("docs"));
 			String fileCharSep = System.getProperty("file.separator");
 		
 			Shell shell = new Shell();
@@ -595,5 +595,13 @@ public class XlsImpExp {
 				
 	}
 
-
+	  static public String documentsDirectory(String typefolder)
+	          throws java.io.FileNotFoundException {
+	      // From CarbonCore/Folders.h
+	      final String kDocumentsDirectory = typefolder;//"docs";
+	      return com.apple.eio.FileManager.findFolder(
+	          com.apple.eio.FileManager.kUserDomain,
+	          com.apple.eio.FileManager.OSTypeToInt(kDocumentsDirectory)
+	      );
+	  }
 }

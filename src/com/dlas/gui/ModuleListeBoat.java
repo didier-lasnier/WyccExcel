@@ -1,5 +1,6 @@
 package com.dlas.gui;
 
+import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
@@ -154,15 +155,22 @@ public class ModuleListeBoat {
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
 				XlsImpExp xlsprocess = new XlsImpExp();
-				xlsprocess.getFileXlstoImp("open");
-				xlsprocess.readxlsFileToList(xlsprocess.getFiletoprocess(),theconnection);
-				xlsprocess.setDisplay(display);
-				 m_modulboatmodels.getM_modulboats().removeAll(m_modulboatmodels.getM_modulboats());
-				 try {
-					window.setDefaultValues(display,theconnection);
-				} catch (InvocationTargetException | InterruptedException e) {
+				try {
+					xlsprocess.getFileXlstoImp("open");
+				} catch (FileNotFoundException e1) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					e1.printStackTrace();
+				}
+				if (xlsprocess.getFiletoprocess()!=null ) {
+					xlsprocess.readxlsFileToList(xlsprocess.getFiletoprocess(),theconnection);
+					xlsprocess.setDisplay(display);
+					 m_modulboatmodels.getM_modulboats().removeAll(m_modulboatmodels.getM_modulboats());
+					 try {
+						window.setDefaultValues(display,theconnection);
+					} catch (InvocationTargetException | InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
 			}
 		});
@@ -173,8 +181,15 @@ public class ModuleListeBoat {
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
 				XlsImpExp xlsprocess = new XlsImpExp();
-				xlsprocess.getFileXlstoImp("save");
-				xlsprocess.writexlsFileToList(xlsprocess.getFiletoprocess(), m_modulboatmodels.getM_modulboats());
+				try {
+					xlsprocess.getFileXlstoImp("save");
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				if (xlsprocess.getFiletoprocess()!=null) {
+					xlsprocess.writexlsFileToList(xlsprocess.getFiletoprocess(), m_modulboatmodels.getM_modulboats());
+				}
 			}
 		});
 		btnExport.setText("Export");
@@ -697,6 +712,15 @@ public class ModuleListeBoat {
 		
 	}
 
-    
+	  static public String documentsDirectory(String typefolder)
+	          throws java.io.FileNotFoundException {
+	      // From CarbonCore/Folders.h
+	      final String kDocumentsDirectory = typefolder;//"docs";
+	      return com.apple.eio.FileManager.findFolder(
+	          com.apple.eio.FileManager.kUserDomain,
+	          com.apple.eio.FileManager.OSTypeToInt(kDocumentsDirectory)
+	      );
+	  }
+	  
 }
 
