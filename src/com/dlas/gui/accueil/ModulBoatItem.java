@@ -8,7 +8,6 @@ import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
-import com.dlas.dao.ObjectDao;
 import com.dlas.gui.ModuleListeBoat;
 
 public class ModulBoatItem implements SelectionListener {
@@ -18,7 +17,6 @@ public class ModulBoatItem implements SelectionListener {
 	private String      Dirpath;
 	private Display     d;
 	private Integer     CountSelectedItem=0;
-	private ObjectDao   theconnection;
 	
 	
 	public DateTime getStartD() {
@@ -85,10 +83,9 @@ public class ModulBoatItem implements SelectionListener {
 
 
 	//public OpenItem(Shell s,DateTime StartD, DateTime EndD,String Dirpath){
-	public ModulBoatItem(Display  d,Shell s,ObjectDao myconnection){
+	public ModulBoatItem(Display  d,Shell s){
 		this.s=s;
 		this.d=d;
-		this.theconnection=myconnection;
 //		this.StartD=StartD;
 //		this.EndD=EndD;
 //		this.Dirpath=Dirpath;
@@ -96,7 +93,7 @@ public class ModulBoatItem implements SelectionListener {
 	@Override
 	public void widgetSelected(SelectionEvent event) {
 		try {
-			widgetOpen(s,StartD,EndD,theconnection);
+			widgetOpen(s,StartD,EndD);
 		} catch (InvocationTargetException | InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -108,15 +105,14 @@ public class ModulBoatItem implements SelectionListener {
 	}
 
 	public void widgetSelectedBtn(SelectionEvent event) throws InvocationTargetException, InterruptedException {
-		widgetOpen( s,StartD,  EndD,theconnection);
+		widgetOpen( s,StartD,  EndD);
 	}
 	
-	public void widgetOpen(Shell s,DateTime StartD, DateTime EndD,ObjectDao theconnection) throws InvocationTargetException, InterruptedException{
+	public void widgetOpen(Shell s,DateTime StartD, DateTime EndD) throws InvocationTargetException, InterruptedException{
 		this.setCountSelectedItem(this.getCountSelectedItem()+1);
-		this.theconnection=theconnection;
 		ModuleListeBoat modulboatdia = new ModuleListeBoat () ;	
-		modulboatdia.setDefaultValues(d,theconnection);
-		modulboatdia.Moduldisplay(d);
+		modulboatdia.setDefaultValues(d);
+		ModuleListeBoat.Moduldisplay(d);
 
 	}
 

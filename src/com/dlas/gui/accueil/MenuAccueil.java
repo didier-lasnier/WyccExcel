@@ -7,8 +7,6 @@ import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Shell;
 
-import com.dlas.dao.ObjectDao;
-
 
 public class MenuAccueil {
 	private Integer DisplayStatus =0;
@@ -24,7 +22,7 @@ public class MenuAccueil {
 
 	public MenuAccueil(){};
 	
-	public MenuAccueil(Shell s,Display d,DateTime StartD, DateTime EndD,String dirpath,ObjectDao myconnection){
+	public MenuAccueil(Shell s,Display d,DateTime StartD, DateTime EndD,String dirpath){
 		
 	Menu m = new Menu(s, SWT.BAR);
 	// create a file menu and add an exit item
@@ -44,7 +42,7 @@ public class MenuAccueil {
 	final MenuItem modulelisteitem = new MenuItem(filemenu, SWT.PUSH);
 	modulelisteitem.setText("&Module Client\tCTRL+M");
 	modulelisteitem.setAccelerator(SWT.CTRL + 'M');
-	ModulBoatItem Mbitem = new ModulBoatItem(d,s, myconnection);
+	ModulBoatItem Mbitem = new ModulBoatItem(d,s);
 	modulelisteitem.addSelectionListener(Mbitem);
 	
 	

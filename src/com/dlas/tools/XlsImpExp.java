@@ -97,7 +97,7 @@ public class XlsImpExp {
 	/**
 	 * @param xlsfiletoread
 	 */
-	public void readxlsFileToList(File xlsfiletoread,ObjectDao myobj){
+	public void readxlsFileToList(File xlsfiletoread){
 		// Read the current sheet.
 		Integer currentsheet =0;
 		// open a stream to read the xls file
@@ -108,31 +108,66 @@ public class XlsImpExp {
 			XSSFSheet sheet = this.getWrkbk().getSheetAt(currentsheet);
 			
 			Iterator<Row> iterator = sheet.iterator();
-			ModulBoat modulboatnull = new ModulBoat();
-			ModulBoat modulboat = modulboatnull;
+			ModulBoat modulboat = new ModulBoat();
 			String[] header = new String[]{"Modulid","modul_fournisseur","modullabel","modulecategory","modulboat","modulpricesingle","modulpricefamily","forfaitpercentage","modulscope","invoiceperiod","calculmode","bankfee","surcom","policynumber","aggregateamount"};
      
 			//String prmier=header[0];
-
-			//ObjectDao myobj = new ObjectDao();
-			Session lasession = myobj.getSession(myobj.getLafactory());
+			
+			
+			/*
+			 * 
+			 * 
+			 *  ObjectDao myobj = new ObjectDao();
+				Session lasession = myobj.getSessionDao();
+				lasession.beginTransaction(); 
+				 for ( ModulBoat modulboat : (List<ModulBoat>) m_modulboatmodels.getM_modulboats() ){
+					 lasession.saveOrUpdate(modulboat);
+				 }
+				 if (deletemodulboat!= null) {
+					 for ( ModulBoat modulboat : deletemodulboat){
+						 lasession.delete(modulboat);
+					 }
+				 }
+				  lasession.flush();
+				  lasession.getTransaction().commit(); 
+				  lasession.close();
+				
+			 * 
+			 * */
+			ObjectDao myobj = new ObjectDao();
+			Session lasession = myobj.getSessionDao();
 			lasession.beginTransaction(); 
 			while (iterator.hasNext()) {
             	Row currentRow = iterator.next();
             	// First row contains header we pass.
             	// 
             	int counterrow =0;
-            	Cell currentCell =null;
             	if ( currentRow.getRowNum()>0 ) {
-					 modulboat = modulboatnull;
 					Iterator<Cell> cellIterator = currentRow.iterator();
 					while (cellIterator.hasNext()) {
 
-						 currentCell = cellIterator.next();
-						Integer columnindex=0;
-						
+						Cell currentCell = cellIterator.next();
+						//getCellTypeEnum shown as deprecated for version 3.15
+						//getCellTypeEnum ill be renamed to getCellType starting from version 4.0
+/*
+ * 
+ * 						if (currentCell.getColumnIndex() ==0) {
+							if (currentCell.getCellTypeEnum() == CellType.STRING) {
+								System.out.print(currentCell.getStringCellValue() + "--");
+							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
+								modulboat.setModulid(currentCell.getNumericCellValue());
+								System.out.print(currentCell.getNumericCellValue() + "--");
+							} else if (currentCell.getCellTypeEnum() == CellType.BLANK) {
+								System.out.print("VIDE--");
+							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
+								System.out.print("FORMULE--");
+							} 
+						}
+
+ * 						
+ */
 						//modulid
-						if (currentCell.getColumnIndex() ==columnindex) {
+						if (currentCell.getColumnIndex() ==0) {
 							if (currentCell.getCellTypeEnum() == CellType.STRING) {
 								System.out.print(currentCell.getStringCellValue() + "--");
 							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
@@ -146,8 +181,7 @@ public class XlsImpExp {
 						}
 	
 						//modul_fournisseur
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
+						if (currentCell.getColumnIndex() ==1) {
 							if (currentCell.getCellTypeEnum() == CellType.STRING) {
 								System.out.print(currentCell.getStringCellValue() + "--");
 								modulboat.setModul_fournisseur(currentCell.getStringCellValue());
@@ -162,8 +196,7 @@ public class XlsImpExp {
 						}						
 						
 						//modullabel
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
+						if (currentCell.getColumnIndex() ==2) {
 							if (currentCell.getCellTypeEnum() == CellType.STRING) {
 								System.out.print(currentCell.getStringCellValue() + "--");
 								modulboat.setModullabel(currentCell.getStringCellValue());
@@ -176,27 +209,9 @@ public class XlsImpExp {
 								System.out.print("FORMULE--");
 							} 
 						}
-	
-						
-						//modulecategory
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
-							if (currentCell.getCellTypeEnum() == CellType.STRING) {
-								System.out.print(currentCell.getStringCellValue() + "--");
-								modulboat.setModulecategory(currentCell.getStringCellValue());
-							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
-								
-								System.out.print(currentCell.getNumericCellValue() + "--");
-							} else if (currentCell.getCellTypeEnum() == CellType.BLANK) {
-								System.out.print("VIDE--");
-							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
-								System.out.print("FORMULE--");
-							} 
-						}
 						
 						//modulboat
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
+						if (currentCell.getColumnIndex() ==3) {
 							if (currentCell.getCellTypeEnum() == CellType.STRING) {
 								System.out.print(currentCell.getStringCellValue() + "--");
 								modulboat.setModulboat(currentCell.getStringCellValue());
@@ -211,8 +226,7 @@ public class XlsImpExp {
 					
 						
 						//modulpricesingle
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
+						if (currentCell.getColumnIndex() ==4) {
 							if (currentCell.getCellTypeEnum() == CellType.STRING) {
 								System.out.print(currentCell.getStringCellValue() + "--");
 								
@@ -227,8 +241,7 @@ public class XlsImpExp {
 						}
 						
 						//modulpricefamily
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
+						if (currentCell.getColumnIndex() ==5) {
 							if (currentCell.getCellTypeEnum() == CellType.STRING) {
 								System.out.print(currentCell.getStringCellValue() + "--");
 								
@@ -242,9 +255,43 @@ public class XlsImpExp {
 							} 
 						}	
 						
+						//modulscope
+						if (currentCell.getColumnIndex() ==6) {
+							if (currentCell.getCellTypeEnum() == CellType.STRING) {
+								System.out.print(currentCell.getStringCellValue() + "--");
+								modulboat.setModulscope(currentCell.getStringCellValue());
+							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
+								
+								System.out.print(currentCell.getNumericCellValue() + "--");
+							} else if (currentCell.getCellTypeEnum() == CellType.BLANK) {
+								System.out.print("VIDE--");
+							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
+								System.out.print("FORMULE--");
+							} 
+						}	
+						
+						//modulecategory
+						if (currentCell.getColumnIndex() ==7) {
+							if (currentCell.getCellTypeEnum() == CellType.STRING) {
+								System.out.print(currentCell.getStringCellValue() + "--");
+								modulboat.setModulecategory(currentCell.getStringCellValue());
+							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
+								
+								System.out.print(currentCell.getNumericCellValue() + "--");
+							} else if (currentCell.getCellTypeEnum() == CellType.BLANK) {
+								System.out.print("VIDE--");
+							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
+								System.out.print("FORMULE--");
+							} 
+						}
+
+
+						
+
+						
+						
 						//forfaitpercentage
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
+						if (currentCell.getColumnIndex() ==8) {
 							if (currentCell.getCellTypeEnum() == CellType.STRING) {
 								System.out.print(currentCell.getStringCellValue() + "--");
 								
@@ -258,12 +305,11 @@ public class XlsImpExp {
 							} 
 						}	
 						
-						//modulscope
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
+						//,"calculmode","bankfee","surcom"
+						if (currentCell.getColumnIndex() ==9) {
 							if (currentCell.getCellTypeEnum() == CellType.STRING) {
 								System.out.print(currentCell.getStringCellValue() + "--");
-								modulboat.setModulscope(currentCell.getStringCellValue());
+								modulboat.setCalculmode(currentCell.getStringCellValue());
 							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
 								
 								System.out.print(currentCell.getNumericCellValue() + "--");
@@ -272,11 +318,44 @@ public class XlsImpExp {
 							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
 								System.out.print("FORMULE--");
 							} 
-						}	
+						}		
 
+				
+						
+						//"bankfee"
+						if (currentCell.getColumnIndex() ==10) {
+							if (currentCell.getCellTypeEnum() == CellType.STRING) {
+								System.out.print(currentCell.getStringCellValue() + "--");
+								modulboat.setCalculmode(currentCell.getStringCellValue());
+							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
+								modulboat.setBankfee(Float.parseFloat(currentCell.getStringCellValue()));
+								
+								System.out.print(currentCell.getNumericCellValue() + "--");
+							} else if (currentCell.getCellTypeEnum() == CellType.BLANK) {
+								System.out.print("VIDE--");
+							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
+								System.out.print("FORMULE--");
+							} 
+						}	
+						
+						//"surcom"
+						if (currentCell.getColumnIndex() ==11) {
+							if (currentCell.getCellTypeEnum() == CellType.STRING) {
+								System.out.print(currentCell.getStringCellValue() + "--");
+								modulboat.setCalculmode(currentCell.getStringCellValue());
+							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
+								modulboat.setSurcom(Float.parseFloat(currentCell.getStringCellValue()));
+								
+								System.out.print(currentCell.getNumericCellValue() + "--");
+							} else if (currentCell.getCellTypeEnum() == CellType.BLANK) {
+								System.out.print("VIDE--");
+							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
+								System.out.print("FORMULE--");
+							} 
+						}	
+						
 						//"invoiceperiod"
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
+						if (currentCell.getColumnIndex() ==12) {
 							if (currentCell.getCellTypeEnum() == CellType.STRING) {
 								System.out.print(currentCell.getStringCellValue() + "--");
 								modulboat.setInvoiceperiod(currentCell.getStringCellValue());
@@ -289,72 +368,12 @@ public class XlsImpExp {
 							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
 								System.out.print("FORMULE--");
 							} 
-						}else  {
-							modulboat.setInvoiceperiod(null);								
-						}
-						//,"calculmode"
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
-							if (currentCell.getCellTypeEnum() == CellType.STRING) {
-								System.out.print(currentCell.getStringCellValue() + "--");
-								modulboat.setCalculmode(currentCell.getStringCellValue());
-							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
-								
-								System.out.print(currentCell.getNumericCellValue() + "--");
-							} else if (currentCell.getCellTypeEnum() == CellType.BLANK) {
-								System.out.print("VIDE--");
-							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
-								System.out.print("FORMULE--");
-							} 
-						}	else  {
-							modulboat.setCalculmode(null);								
-						}	
-
-				
-						
-						//"bankfee"
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
-							if (currentCell.getCellTypeEnum() == CellType.STRING) {
-								System.out.print(currentCell.getStringCellValue() + "--");
-							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
-								modulboat.setBankfee(Float.parseFloat(currentCell.getStringCellValue()));
-								
-								System.out.print(currentCell.getNumericCellValue() + "--");
-							} else if (currentCell.getCellTypeEnum() == CellType.BLANK) {
-								System.out.print("VIDE--");
-							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
-								System.out.print("FORMULE--");
-							} 
-						}	else  {
-							modulboat.setBankfee(null);								
-						}	
-
-						
-						//"surcom"
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
-							if (currentCell.getCellTypeEnum() == CellType.STRING) {
-								System.out.print(currentCell.getStringCellValue() + "--");
-							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
-								modulboat.setSurcom(Float.parseFloat(currentCell.getStringCellValue()));
-								
-								System.out.print(currentCell.getNumericCellValue() + "--");
-							} else if (currentCell.getCellTypeEnum() == CellType.BLANK) {
-								System.out.print("VIDE--");
-							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
-								System.out.print("FORMULE--");
-							} 
-						}	else  {
-							modulboat.setSurcom(null);								
-						}	
+						}							
 								
 						//"policynumber"
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
+						if (currentCell.getColumnIndex() ==13) {
 							if (currentCell.getCellTypeEnum() == CellType.STRING) {
 								System.out.print(currentCell.getStringCellValue() + "--");
-								modulboat.setPolicynumber(currentCell.getStringCellValue());
 							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
 							
 								
@@ -364,29 +383,7 @@ public class XlsImpExp {
 							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
 								System.out.print("FORMULE--");
 							} 
-						}	else  {
-							modulboat.setPolicynumber(null);								
 						}												
-
-						//"Aggregate "
-						columnindex++;
-						if (currentCell.getColumnIndex() ==columnindex) {
-							if (currentCell.getCellTypeEnum() == CellType.STRING) {
-								System.out.print(currentCell.getStringCellValue() + "--");
-							} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
-								modulboat.setAggregateamount((float) currentCell.getNumericCellValue());
-								System.out.println(currentCell.getNumericCellValue() + "--");
-							} else if (currentCell.getCellTypeEnum() == CellType.BLANK) {
-								System.out.print("VIDE--");
-							} else if (currentCell.getCellTypeEnum() == CellType.FORMULA) {
-								System.out.print("FORMULE--");
-							} else if (currentCell.getCellTypeEnum() == CellType._NONE) {
-								modulboat.setAggregateamount(null);
-								System.out.println("Aggregate Null");
-							} 
-						}	else  {
-							modulboat.setAggregateamount(null);								
-						}
 						
 /*						Method fieldGetter = null;
 
@@ -414,15 +411,13 @@ public class XlsImpExp {
 						
 					} 
 					 lasession.merge(modulboat);
-					 currentCell=null;
-
 				}
             	
             }
 			  lasession.flush();
 			  lasession.getTransaction().commit(); 
 			  lasession.close();
-               out.close();
+            out.close();
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -470,14 +465,13 @@ public class XlsImpExp {
 			
 			ifield++;
 			cell= row.createCell(ifield);
-			if (mymodulboat.getModulecategory()!=null) {
-				cell.setCellValue(mymodulboat.getModulecategory());
-			}
+			cell.setCellValue(mymodulboat.getModulboat());
 			
 			ifield++;
 			cell= row.createCell(ifield);
-			cell.setCellValue(mymodulboat.getModulboat());
-			
+			if (mymodulboat.getModulecategory()!=null) {
+				cell.setCellValue(mymodulboat.getModulecategory());
+			}
 			ifield++;
 			cell= row.createCell(ifield);
 			if (mymodulboat.getModulpricesingle()!=null) {
@@ -566,9 +560,10 @@ public class XlsImpExp {
 		
 	}
 
-	public void getFileXlstoImp(String mode) throws FileNotFoundException{
-			File directory = new File(documentsDirectory("docs"));
+	public void getFileXlstoImp(String mode){
+			File directory = new File(".");
 			String fileCharSep = System.getProperty("file.separator");
+
 		
 			Shell shell = new Shell();
 			FileDialog fd =null;
@@ -595,13 +590,5 @@ public class XlsImpExp {
 				
 	}
 
-	  static public String documentsDirectory(String typefolder)
-	          throws java.io.FileNotFoundException {
-	      // From CarbonCore/Folders.h
-	      final String kDocumentsDirectory = typefolder;//"docs";
-	      return com.apple.eio.FileManager.findFolder(
-	          com.apple.eio.FileManager.kUserDomain,
-	          com.apple.eio.FileManager.OSTypeToInt(kDocumentsDirectory)
-	      );
-	  }
+
 }

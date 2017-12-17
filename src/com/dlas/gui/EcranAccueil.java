@@ -2,7 +2,6 @@ package com.dlas.gui;
 
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +13,6 @@ import java.util.stream.Collectors;
 import java.util.concurrent.BlockingQueue;
 import org.apache.logging.log4j.*;
 
-import javax.swing.ImageIcon;
 import javax.swing.JProgressBar;
 
 import java.io.UnsupportedEncodingException;
@@ -66,7 +64,6 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 
-import com.apple.eio.*;
 import com.dlas.dao.ObjectDao;
 import com.apple.eawt.Application;
 import com.apple.mrj.MRJApplicationUtils;
@@ -129,8 +126,6 @@ public class EcranAccueil {
 	Shell s;
 	static BlockingQueue<MenuMsg> queue;
 	
-	SplashScreen screen;
-	
 //	public EcranAccueil() {
 //		// TODO Auto-generated constructor stub
 //	}
@@ -163,39 +158,25 @@ public class EcranAccueil {
 		this.myconnection = myconnection;
 	}
 
-	
-	public SessionFactory getMyfactory() {
-		return myfactory;
-	}
-
-
-	public void setMyfactory(SessionFactory myfactory) {
-		this.myfactory = myfactory;
-	}
-
-
 	Logger logger = LogManager.getLogger("wycc");
 	
 	
-	
 	//public static void main(String[] args) {
-	public EcranAccueil(Display display ) throws FileNotFoundException {
+	public EcranAccueil(Display display ) {
 		
 		MacOSXControllerAbout macControllerahout = new MacOSXControllerAbout();
 		MacOSXControllerPrefs macControllerprefs = new MacOSXControllerPrefs();
 		MacOSXControllerQuit macControllerquit = new MacOSXControllerQuit();
 		
 		 Application macApplication = Application.getApplication();
-	
+		 
 		/*
 		 *  On détermine le dossier d'execution du jar
 		 * 
 		 */
+		 setMyconnection(new ObjectDao());
 		 
-		 FileManager MyFileManager =new FileManager();
-		 String directorypath = documentsDirectory("docs");
-		        directorypath = documentsDirectory("prefs");
-		        
+		 myfactory= myconnection.getFactory();
 		URL url = EcranAccueil.class.getProtectionDomain().getCodeSource().getLocation(); //Gets the path
 	  	String jarPath = null;
 			try {
@@ -203,15 +184,10 @@ public class EcranAccueil {
 			} catch (UnsupportedEncodingException e) {
 				e.printStackTrace();
 			}
-		
+			
 			appDir = new File(jarPath).getParentFile().getPath(); //Path of the jar
 			appDir=appDir+ File.separator;
-			
-			 //splashScreenInit(appDir+"images/spash.gif");
-			 setMyconnection(new ObjectDao());
-			 myfactory= myconnection.getFactory();
-			 myconnection.setLafactory(myfactory);
-			 //splashScreenDestruct();
+
 		 // ======================================================
 	     // Create appender for log4j
 	     // ======================================================
@@ -333,8 +309,7 @@ public class EcranAccueil {
 			FileDialog fd = new FileDialog(shell, SWT.SAVE);
 			fd.setText("Save");
 			try {
-				
-				fd.setFilterPath(documentsDirectory("docs"));//directory.getCanonicalPath());
+				fd.setFilterPath(directory.getCanonicalPath());
 				String[] filterExt = { "*.xlsx" };
 				fd.setFilterExtensions(filterExt);
 				String selected = fd.open();
@@ -359,23 +334,18 @@ public class EcranAccueil {
 	class Read implements SelectionListener {
 		@Override
 		public void widgetSelected(SelectionEvent event) {
-			try {
-				widgetRead();
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			widgetRead();
 		}
 
 		@Override
 		public void widgetDefaultSelected(SelectionEvent event) {
 		}
 		
-		public void widgetSelectedBtn(SelectionEvent e) throws FileNotFoundException {
+		public void widgetSelectedBtn(SelectionEvent e) {
 			widgetRead();
 		}
-		public void widgetRead() throws FileNotFoundException{
-			File directory = new File(documentsDirectory("docs"));
+		public void widgetRead(){
+			File directory = new File(".");
 			String fileCharSep = System.getProperty("file.separator");
 			try {
 			FileDialog fd = new FileDialog(shell, SWT.OPEN);
@@ -407,7 +377,7 @@ public class EcranAccueil {
 		final Display display = d; 	
 
 		createContents();
-		MenuAccueil menuaccueil=new MenuAccueil(shell,display,startdate,enddate,appDir,myconnection);
+		MenuAccueil menuaccueil=new MenuAccueil(shell,display,startdate,enddate,appDir);
 		Display.setAppName(APP_NAME);
 		shell.open();
 		shell.layout();	
@@ -436,7 +406,7 @@ public class EcranAccueil {
 	public String chooseFile(Shell s) throws IOException {
 		
 		
-		File directory = new File(documentsDirectory("docs"));
+		File directory = new File(".");
 		String fileCharSep = System.getProperty("file.separator");
 		FileDialog fd = new FileDialog(s, SWT.OPEN);
 		fd.setText("Choose a file");
@@ -447,8 +417,6 @@ public class EcranAccueil {
 		
 		return selected;
 	}	
-	
-	
 	protected void createContents() {
 		shell.setLayout(new FillLayout());
 		shell.setSize(789, 517);
@@ -545,12 +513,7 @@ public class EcranAccueil {
 		btnReadFormula.addSelectionListener(new SelectionAdapter() {
 	    @Override
 		public void widgetSelected(SelectionEvent e) {
-		        		 try {
-							new Read().widgetRead();
-						} catch (FileNotFoundException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
+		        		 new Read().widgetRead();
 		        	}
 		        });
 		btnReadFormula.setText("Read xls file...");
@@ -908,26 +871,5 @@ public class EcranAccueil {
 	}
 	  return Dstartdate;
   }
-  
-  static public String documentsDirectory(String typefolder)
-          throws java.io.FileNotFoundException {
-      // From CarbonCore/Folders.h
-      final String kDocumentsDirectory = typefolder;//"docs";
-      return com.apple.eio.FileManager.findFolder(
-          com.apple.eio.FileManager.kUserDomain,
-          com.apple.eio.FileManager.OSTypeToInt(kDocumentsDirectory)
-      );
-  }
-  
-//	 private void splashScreenInit(String filename) {
-//		  ImageIcon myImage = new ImageIcon(filename);
-//		  screen = new SplashScreen(myImage);
-//		  screen.setLocationRelativeTo(null);
-//		  screen.setProgressMax(100);
-//		  screen.setScreenVisible(true);
-//		}
-//	 
-//	 private void splashScreenDestruct() {
-//		    screen.setScreenVisible(false);
-//		  }
+	
 }

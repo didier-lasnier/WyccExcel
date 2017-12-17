@@ -567,15 +567,4 @@ public class ReadCSVFile implements IRunnableWithProgress {
 		
 		
 	}
-	
-	  static public String documentsDirectory(String typefolder)
-	          throws java.io.FileNotFoundException {
-	      // From CarbonCore/Folders.h
-	      final String kDocumentsDirectory = typefolder;//"docs";
-	      return com.apple.eio.FileManager.findFolder(
-	          com.apple.eio.FileManager.kUserDomain,
-	          com.apple.eio.FileManager.OSTypeToInt(kDocumentsDirectory)
-	      );
-	  }
-	  
 }

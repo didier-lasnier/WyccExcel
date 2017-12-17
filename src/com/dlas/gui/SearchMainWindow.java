@@ -18,9 +18,6 @@ import org.eclipse.jface.databinding.swt.SWTObservables;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
 
 public class SearchMainWindow extends Composite {
 
@@ -35,11 +32,7 @@ public class SearchMainWindow extends Composite {
 	 */
 	
 	public static Logger logger = LogManager.getLogger("wycc");
-	private Text textcompany;
-	private Text textFormula;
-	private Text textModul;
-	private Text textPolicy;
-	private Text textBoat;
+	private Text text;
 	
 	public SearchMainWindow(Composite parent, int style) {
 		super(parent, style);
@@ -63,66 +56,19 @@ public class SearchMainWindow extends Composite {
 		toolkit.adapt(composite);
 		toolkit.paintBordersFor(composite);
 		
+/*		txtSupplier = new Text(composite, SWT.BORDER);
+		txtSupplier.setText("Supplier");
+		txtSupplier.setBounds(35, 28, 64, 19);
+		toolkit.adapt(txtSupplier, true, true);*/
 		
-		textcompany = new Text(composite, SWT.BORDER);
-		textcompany.setBounds(162, 76, 372, 19);
-		toolkit.adapt(textcompany, true, true);
+		text = new Text(composite, SWT.BORDER);
+		text.setBounds(160, 60, 372, 19);
+		toolkit.adapt(text, true, true);
 		
 		Label lblCompany = new Label(composite, SWT.NONE);
-		lblCompany.setBounds(35, 76, 119, 19);
+		lblCompany.setBounds(35, 60, 64, 19);
 		toolkit.adapt(lblCompany, true, true);
 		lblCompany.setText("Company");
-		
-		Label lblFormula = new Label(composite, SWT.NONE);
-		lblFormula.setBounds(35, 104, 119, 15);
-		toolkit.adapt(lblFormula, true, true);
-		lblFormula.setText("Formula");
-		
-		textFormula = new Text(composite, SWT.BORDER);
-		textFormula.setBounds(162, 101, 307, 21);
-		toolkit.adapt(textFormula, true, true);
-		
-		Label lblmodule = new Label(composite, SWT.NONE);
-		lblmodule.setText("Modul");
-		lblmodule.setBounds(35, 131, 119, 15);
-		toolkit.adapt(lblmodule, true, true);
-		
-		textModul = new Text(composite, SWT.BORDER);
-		textModul.setBounds(162, 128, 307, 21);
-		toolkit.adapt(textModul, true, true);
-		
-		Label lblPolicy = new Label(composite, SWT.NONE);
-		lblPolicy.setText("Policy");
-		lblPolicy.setBounds(35, 162, 119, 15);
-		toolkit.adapt(lblPolicy, true, true);
-		
-		textPolicy = new Text(composite, SWT.BORDER);
-		textPolicy.setBounds(162, 159, 307, 21);
-		toolkit.adapt(textPolicy, true, true);
-		
-		Label lblBoat = new Label(composite, SWT.NONE);
-		lblBoat.setText("Boat");
-		lblBoat.setBounds(35, 189, 119, 15);
-		toolkit.adapt(lblBoat, true, true);
-		
-		textBoat = new Text(composite, SWT.BORDER);
-		textBoat.setBounds(162, 186, 307, 21);
-		toolkit.adapt(textBoat, true, true);
-		
-		Button btnNewsearch = new Button(composite, SWT.NONE);
-		btnNewsearch.setBounds(239, 240, 91, 25);
-		toolkit.adapt(btnNewsearch, true, true);
-		btnNewsearch.setText("New search");
-		
-		Button vtnsearch = new Button(composite, SWT.NONE);
-		vtnsearch.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent arg0) {
-			}
-		});
-		vtnsearch.setText("Search");
-		vtnsearch.setBounds(367, 240, 91, 25);
-		toolkit.adapt(vtnsearch, true, true);
 		
 		scrolledComposite.setContent(composite);
 		scrolledComposite.setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));

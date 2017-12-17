@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="connection.url">jdbc:hsqldb:file:./db/hsql</property>
+        <property name="connection.username">wycc</property>
+        <property name="connection.password">wycc</property>
+        
+        <property name="hibernate.default_schema">PUBLIC</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- SQL dialect -->
+       <!--  <property name="dialect">org.hibernate.dialect.H2Dialect</property> -->
+		<property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">false</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+       <!-- <property name="hbm2ddl.auto">create</property> -->
+
+
+	    <mapping class="com.dlas.dao.beneficiaries"/>
+	    <mapping class="com.dlas.dao.Wycccell"/>
+	    <mapping class="com.dlas.dao.Modul"/>
+	    <mapping class="com.dlas.dao.ModulBoat"/>
+	    <mapping class="com.dlas.dao.BenefitDb"/>
+	    <mapping class="com.dlas.dao.Mvt2"/>
+	    <mapping class="com.dlas.dao.Mvt_Num"/>
+	    <mapping class="com.dlas.dao.ListMvtHier"/>
+    </session-factory>
+
+</hibernate-configuration>

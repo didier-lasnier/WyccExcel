@@ -1,6 +1,5 @@
 package com.dlas.gui;
 
-import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
@@ -87,7 +86,8 @@ public class ModuleListeBoat {
 	private    static Integer                DisplayStatus            =0                    ;
 	private    List<ModulBoat>               deletemodulboat          =new ArrayList()      ;
 	
-
+	public ModuleListeBoat(){
+	}
 	public static Logger logger = LogManager.getLogger("wycc");
 	private Text text;
 	private Text textbankfee;
@@ -95,10 +95,6 @@ public class ModuleListeBoat {
 	private Text textinvoicingperiod;
 	private Text textPolicyNumber;
 	private Text textAggregateAmount;
-	public ObjectDao theconnection;
-	
-		public ModuleListeBoat(){
-	}
 	/**
 	 * @wbp.parser.entryPoint
 	 */
@@ -155,22 +151,15 @@ public class ModuleListeBoat {
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
 				XlsImpExp xlsprocess = new XlsImpExp();
-				try {
-					xlsprocess.getFileXlstoImp("open");
-				} catch (FileNotFoundException e1) {
+				xlsprocess.getFileXlstoImp("open");
+				xlsprocess.readxlsFileToList(xlsprocess.getFiletoprocess());
+				xlsprocess.setDisplay(display);
+				 m_modulboatmodels.getM_modulboats().removeAll(m_modulboatmodels.getM_modulboats());
+				 try {
+					window.setDefaultValues(display);
+				} catch (InvocationTargetException | InterruptedException e) {
 					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				if (xlsprocess.getFiletoprocess()!=null ) {
-					xlsprocess.readxlsFileToList(xlsprocess.getFiletoprocess(),theconnection);
-					xlsprocess.setDisplay(display);
-					 m_modulboatmodels.getM_modulboats().removeAll(m_modulboatmodels.getM_modulboats());
-					 try {
-						window.setDefaultValues(display,theconnection);
-					} catch (InvocationTargetException | InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					e.printStackTrace();
 				}
 			}
 		});
@@ -181,15 +170,8 @@ public class ModuleListeBoat {
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
 				XlsImpExp xlsprocess = new XlsImpExp();
-				try {
-					xlsprocess.getFileXlstoImp("save");
-				} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				if (xlsprocess.getFiletoprocess()!=null) {
-					xlsprocess.writexlsFileToList(xlsprocess.getFiletoprocess(), m_modulboatmodels.getM_modulboats());
-				}
+				xlsprocess.getFileXlstoImp("save");
+				xlsprocess.writexlsFileToList(xlsprocess.getFiletoprocess(), m_modulboatmodels.getM_modulboats());
 			}
 		});
 		btnExport.setText("Export");
@@ -200,7 +182,7 @@ public class ModuleListeBoat {
 			public void widgetSelected(SelectionEvent arg0) {
 				//
 				String info=" The feature is under development !";
-
+				javax.swing.JOptionPane.showMessageDialog(null,info); 
 			}
 		});
 		btnSearch.setText("Search");
@@ -358,92 +340,92 @@ public class ModuleListeBoat {
 		txtmodule = new Text(recordcomposite, SWT.BORDER);
 		txtmodule.setBounds(113, 100, 501, 26);
 				
-		Label lblCalculMode = new Label(recordcomposite, SWT.NONE);
-		lblCalculMode.setBounds(643, 16, 97, 14);
-		lblCalculMode.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblCalculMode.setText("Calcul mode:");
+				Label lblCalculMode = new Label(recordcomposite, SWT.NONE);
+				lblCalculMode.setBounds(643, 16, 97, 14);
+				lblCalculMode.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+				lblCalculMode.setText("Calcul mode:");
 				//txtpricefamily
-		Label lblPricefamily = new Label(recordcomposite, SWT.NONE);
-		lblPricefamily.setBounds(643, 46, 97, 14);
-		lblPricefamily.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblPricefamily.setText("Price family :");
-		
-		
-		Label lblPricesingle = new Label(recordcomposite, SWT.NONE);
-		lblPricesingle.setBounds(643, 76, 97, 14);
-		lblPricesingle.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblPricesingle.setText("Price single :");
-		txtcalculmode = new Text(recordcomposite, SWT.BORDER);
-		txtcalculmode.setBounds(786, 5, 105, 26);
-		txtpricefamily = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
-		txtpricefamily.setBounds(786, 36, 105, 26);
-		txtpricesingle = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
-		txtpricesingle.setBounds(786, 67, 105, 26);
-		
-		Label lblScope = new Label(recordcomposite, SWT.NONE);
-		lblScope.setBounds(382, 0, 59, 14);
-		lblScope.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblScope.setText("Scope:");
-		
-		txtscope = new Text(recordcomposite, SWT.READ_ONLY);
-		txtscope.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_BACKGROUND));
-		txtscope.setEnabled(false);
-		txtscope.setEditable(false);
-		txtscope.setBounds(457, -3, 147, 17);
-		
-		Label lblForfaitpercentage = new Label(recordcomposite, SWT.NONE);
-		lblForfaitpercentage.setBounds(643, 106, 119, 14);
-		lblForfaitpercentage.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblForfaitpercentage.setText("Forfait/percentage:");
-		
-		txtforfait = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
-		txtforfait.setBounds(786, 98, 105, 26);
-		
-		Label labelBoat = new Label(recordcomposite, SWT.NONE);
-		labelBoat.setText("Boat:");
-		labelBoat.setBounds(5, 156, 59, 14);
-		txtboat = new Text(recordcomposite, SWT.BORDER);
-		txtboat.setBounds(113, 142, 501, 26);
-		
-		Label lblBankFee = new Label(recordcomposite, SWT.NONE);
-		lblBankFee.setText("Bank fee :");
-		lblBankFee.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblBankFee.setBounds(643, 166, 97, 14);
-		
-		textbankfee = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
-		textbankfee.setBounds(786, 160, 105, 26);
-		
-		Label lblSurCom = new Label(recordcomposite, SWT.NONE);
-		lblSurCom.setText("Sur com :");
-		lblSurCom.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblSurCom.setBounds(643, 196, 97, 14);
-		
-		textsurcom = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
-		textsurcom.setBounds(786, 191, 105, 26);
-		
-		textinvoicingperiod = new Text(recordcomposite, SWT.BORDER);
-		textinvoicingperiod.setBounds(786, 130, 147, 26);
-		
-		Label lblInvoicingPeriod = new Label(recordcomposite, SWT.NONE);
-		lblInvoicingPeriod.setText("Invoicing period:");
-		lblInvoicingPeriod.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblInvoicingPeriod.setBounds(643, 137, 139, 14);
-		
-		textPolicyNumber = new Text(recordcomposite, SWT.BORDER);
-		textPolicyNumber.setBounds(113, 188, 147, 26);
-		
-		Label lblPolicyNumber = new Label(recordcomposite, SWT.NONE);
-		lblPolicyNumber.setText("Policy number :");
-		lblPolicyNumber.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblPolicyNumber.setBounds(5, 194, 97, 14);
-		
-		Label lblAggregateAmount = new Label(recordcomposite, SWT.NONE);
-		lblAggregateAmount.setText("Aggregate amount :");
-		lblAggregateAmount.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
-		lblAggregateAmount.setBounds(432, 196, 59, 14);
-		
-		textAggregateAmount = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
-		textAggregateAmount.setBounds(509, 188, 105, 26);
+						Label lblPricefamily = new Label(recordcomposite, SWT.NONE);
+						lblPricefamily.setBounds(643, 46, 97, 14);
+						lblPricefamily.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+						lblPricefamily.setText("Price family :");
+						
+						
+						Label lblPricesingle = new Label(recordcomposite, SWT.NONE);
+						lblPricesingle.setBounds(643, 76, 97, 14);
+						lblPricesingle.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+						lblPricesingle.setText("Price single :");
+						txtcalculmode = new Text(recordcomposite, SWT.BORDER);
+						txtcalculmode.setBounds(786, 5, 105, 26);
+						txtpricefamily = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
+						txtpricefamily.setBounds(786, 36, 105, 26);
+						txtpricesingle = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
+						txtpricesingle.setBounds(786, 67, 105, 26);
+						
+						Label lblScope = new Label(recordcomposite, SWT.NONE);
+						lblScope.setBounds(382, 0, 59, 14);
+						lblScope.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+						lblScope.setText("Scope:");
+						
+						txtscope = new Text(recordcomposite, SWT.READ_ONLY);
+						txtscope.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_BACKGROUND));
+						txtscope.setEnabled(false);
+						txtscope.setEditable(false);
+						txtscope.setBounds(457, -3, 147, 17);
+						
+						Label lblForfaitpercentage = new Label(recordcomposite, SWT.NONE);
+						lblForfaitpercentage.setBounds(643, 106, 119, 14);
+						lblForfaitpercentage.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+						lblForfaitpercentage.setText("Forfait/percentage:");
+						
+						txtforfait = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
+						txtforfait.setBounds(786, 98, 105, 26);
+						
+						Label labelBoat = new Label(recordcomposite, SWT.NONE);
+						labelBoat.setText("Boat:");
+						labelBoat.setBounds(5, 156, 59, 14);
+						txtboat = new Text(recordcomposite, SWT.BORDER);
+						txtboat.setBounds(113, 142, 501, 26);
+						
+						Label lblBankFee = new Label(recordcomposite, SWT.NONE);
+						lblBankFee.setText("Bank fee :");
+						lblBankFee.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+						lblBankFee.setBounds(643, 166, 97, 14);
+						
+						textbankfee = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
+						textbankfee.setBounds(786, 160, 105, 26);
+						
+						Label lblSurCom = new Label(recordcomposite, SWT.NONE);
+						lblSurCom.setText("Sur com :");
+						lblSurCom.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+						lblSurCom.setBounds(643, 196, 97, 14);
+						
+						textsurcom = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
+						textsurcom.setBounds(786, 191, 105, 26);
+						
+						textinvoicingperiod = new Text(recordcomposite, SWT.BORDER);
+						textinvoicingperiod.setBounds(786, 130, 147, 26);
+						
+						Label lblInvoicingPeriod = new Label(recordcomposite, SWT.NONE);
+						lblInvoicingPeriod.setText("Invoicing period:");
+						lblInvoicingPeriod.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+						lblInvoicingPeriod.setBounds(643, 137, 139, 14);
+						
+						textPolicyNumber = new Text(recordcomposite, SWT.BORDER);
+						textPolicyNumber.setBounds(113, 188, 147, 26);
+						
+						Label lblPolicyNumber = new Label(recordcomposite, SWT.NONE);
+						lblPolicyNumber.setText("Policy number :");
+						lblPolicyNumber.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+						lblPolicyNumber.setBounds(5, 194, 97, 14);
+						
+						Label lblAggregateAmount = new Label(recordcomposite, SWT.NONE);
+						lblAggregateAmount.setText("Aggregate amount :");
+						lblAggregateAmount.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
+						lblAggregateAmount.setBounds(432, 196, 59, 14);
+						
+						textAggregateAmount = new Text(recordcomposite, SWT.BORDER | SWT.RIGHT);
+						textAggregateAmount.setBounds(509, 188, 105, 26);
 
 		m_modulcontext= initDataBindings();
 	}
@@ -561,7 +543,7 @@ public class ModuleListeBoat {
 		}
 	}
 	
-	public int open(Display display,ObjectDao   theconnection) {
+	public int open(Display display) {
 
 		//setDefaultValues(display);
 		createContents();
@@ -577,41 +559,43 @@ public class ModuleListeBoat {
 		return 0;
 	}	
 	
-	public void setDefaultValues(Display display,ObjectDao theconnection) throws InvocationTargetException, InterruptedException {
+	public void setDefaultValues(Display display) throws InvocationTargetException, InterruptedException {
 		window=this;
 		this.display=display;
-		this.theconnection =theconnection;
-		
+
 		Shell shell = new Shell();
-		IRunnableWithProgress op = new ProgressBarDb("Database initialisation",shell, window,theconnection);
+		IRunnableWithProgress op = new ProgressBarDb("Database initialisation",shell, window);
 		
 		new ProgressMonitorDialog(shell).run(true, true, op);
 		shell.close();
 		
 	}
 		
-	public List<ModulBoat> getListmodul(ObjectDao theconnection) {
+	public List<ModulBoat> getListmodul() {
 		
-		Session lasession = theconnection.getSession(theconnection.getLafactory());
+		ObjectDao myobj = new ObjectDao();
+		myobj.setLafactory(myobj.getFactory());
+		Session lasession = myobj.getSession(myobj.getLafactory());
+		
+		
 		List<ModulBoat> resultdistinct = null;
 		try {
 			lasession.beginTransaction();
 			Query query = lasession.createQuery("from ModulBoat");		
 			resultdistinct = query.list();
 			lasession.getTransaction().commit();
-			
-//			theconnection.getLafactory().close();
+			lasession.close();
+			myobj.getLafactory().close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			logger.error(e);
 			e.printStackTrace();
 		}
-		lasession.close();
 		return resultdistinct;
 	}
 	
 	
-	public void Moduldisplay(Display display) {		
+	public static void Moduldisplay(Display display) {		
 		Display.setAppName(APP_NAME);
 
 		/*
@@ -634,7 +618,7 @@ public class ModuleListeBoat {
 
 				try {
 					logger.info("Window open start ");
-					window.open(display,theconnection);
+					window.open(display);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -682,15 +666,13 @@ public class ModuleListeBoat {
 		 private String           message;
 		 private Shell            shellModul;
 		 private ModuleListeBoat  moduleliste;
-		 private ObjectDao        theconnection;
 		 
 		 
-		public ProgressBarDb(String message,Shell        shellModul, ModuleListeBoat  moduleliste,ObjectDao        theconnection){
+		public ProgressBarDb(String message,Shell        shellModul, ModuleListeBoat  moduleliste){
 			
            this.message       = message;
            this.shellModul    = shellModul;
            this.moduleliste   = moduleliste;
-           this.theconnection = theconnection;
            
 		}
 		@Override
@@ -699,7 +681,7 @@ public class ModuleListeBoat {
 			    monitor.worked(1);
 				
 				
-			    List<ModulBoat> templist= getListmodul(theconnection);
+			    List<ModulBoat> templist= getListmodul();
 			  	m_modulboatmodels.addModuls(shellModul, templist, moduleliste);
 				monitor.worked(1);
 
@@ -707,16 +689,6 @@ public class ModuleListeBoat {
 		}
 		
 	}
-
-	  static public String documentsDirectory(String typefolder)
-	          throws java.io.FileNotFoundException {
-	      // From CarbonCore/Folders.h
-	      final String kDocumentsDirectory = typefolder;//"docs";
-	      return com.apple.eio.FileManager.findFolder(
-	          com.apple.eio.FileManager.kUserDomain,
-	          com.apple.eio.FileManager.OSTypeToInt(kDocumentsDirectory)
-	      );
-	  }
-	  
+    
 }
 
