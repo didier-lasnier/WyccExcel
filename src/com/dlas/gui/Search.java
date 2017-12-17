@@ -1,127 +1,222 @@
 package com.dlas.gui;
 
-import org.eclipse.swt.widgets.Dialog;
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.core.databinding.observable.Realm;
+import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.jface.dialogs.ProgressMonitorDialog;
+import org.eclipse.jface.operation.IRunnableWithProgress;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.SashForm;
+import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Text;
 import org.eclipse.wb.swt.SWTResourceManager;
+
+import com.dlas.gui.ModuleListeBoat.ProgressBarDb;
+import com.dlas.gui.ModuleListeBoat.Searchinfo;
+
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.custom.CLabel;
+import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.layout.RowData;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.ShellAdapter;
+import org.eclipse.swt.events.ShellEvent;
 
-public class Search extends Dialog {
+public class Search extends Shell {
+	private Search              window;
+	private Text                txtCompany;
+	private Text                txtForumula;
+	private Text                txtModule;
+	private Text                txtPolicyNumber;
+	private Text                txtBoat;
 
-	protected Object      result;
-	protected Shell       shell;
-	private   Text        txtcompany;
-	private   Text        txtformule ;
-	private   Text        txtmodul;
-	private   Text        txtpolicy;
-	private   Text        txtboat;
-	
-	
+	private static String       APP_NAME                = "Wycc invoice"      ;
+	private static Shell        shellMSearch                                  ; 
+	private Display             display                                       ;
+	private Text                text                                          ;
 	/**
-	 * Create the dialog.
-	 * @param parent
-	 * @param style
+	 * Launch the application.
+	 * @param args
 	 */
 	
-	public Search(Shell parent, int style) {
-		super(parent, style);
-		setText("SWT Dialog");
-		open();
+	public int open (Display display) {
+		
+	//	createContents();
+		Display.setAppName(APP_NAME);
+		shellMSearch.open();
+		shellMSearch.layout();
+		shellMSearch.update();
+		while (!shellMSearch.isDisposed()) {
+			if (!display.readAndDispatch())
+				display.sleep();
+		}
+		return 0;
+
 	}
 
-	/**
-	 * Open the dialog.
-	 * @return the result
-	 */
-	public Object open() {
+	public  Search(Display display,Searchinfo theinfo) {
+		super(display, SWT.SHELL_TRIM);
+		addShellListener(new ShellAdapter() {
+			@Override
+			public void shellClosed(ShellEvent arg0) {
+			}
+		});
+		shellMSearch=this;
 		createContents();
-		shell.open();
-		shell.layout();
-		Display display = getParent().getDisplay();
-		while (!shell.isDisposed()) {
-			if (!display.readAndDispatch()) {
-				display.sleep();
+	}
+	/**
+	 * Create the shell.
+	 * @param display
+	 */
+	
+	
+	
+	public void SearchDisplay(Display display) {
+		
+ 	    Realm.runWithDefault(SWTObservables.getRealm(display), new Runnable() {
+		@Override
+		public void run() {
+
+			try {
+				//logger.info("Window open start ");
+				window.open(display);
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
-		return result;
+	});
+	}
+
+	public Text getTxtCompany() {
+		return txtCompany;
+	}
+
+	public Text getTxtForumula() {
+		return txtForumula;
+	}
+
+	public Text getTxtModule() {
+		return txtModule;
+	}
+
+	public Text getTxtPolicyNumber() {
+		return txtPolicyNumber;
+	}
+
+	public Text getTxtBoat() {
+		return txtBoat;
+	}
+
+	public void setTxtCompany(Text txtCompany) {
+		this.txtCompany = txtCompany;
+	}
+
+	public void setTxtForumula(Text txtForumula) {
+		this.txtForumula = txtForumula;
+	}
+
+	public void setTxtModule(Text txtModule) {
+		this.txtModule = txtModule;
+	}
+
+	public void setTxtPolicyNumber(Text txtPolicyNumber) {
+		this.txtPolicyNumber = txtPolicyNumber;
+	}
+
+	public void setTxtBoat(Text txtBoat) {
+		this.txtBoat = txtBoat;
 	}
 
 	/**
-	 * Create contents of the dialog.
+	 * Create contents of the shell.
 	 */
-	private void createContents() {
-		shell = new Shell(getParent(), getStyle());
-		shell.setSize(450, 300);
-		shell.setText(getText());
+	protected void createContents() {
+		setText("SWT Application");
+		setSize(616, 462);
+		setLayout(null);
 		
-		Label lblcompany = new Label(shell, SWT.NONE);
-		lblcompany.setForeground(SWTResourceManager.getColor(0, 0, 0));
-		lblcompany.setFont(SWTResourceManager.getFont("Helvetica Neue", 12, SWT.NORMAL));
-		lblcompany.setBounds(10, 70, 163, 19);
-		lblcompany.setText("Insurance Company : ");
+		Label lblCompany = new Label(this, SWT.NONE);
+		lblCompany.setBounds(15, 3, 66, 18);
+		lblCompany.setFont(SWTResourceManager.getFont("Arial", 12, SWT.NORMAL));
+		lblCompany.setBounds(10, 44, 106, 25);
+		lblCompany.setText("Company : ");
 		
-		txtcompany = new Text(shell, SWT.BORDER);
-		txtcompany.setFont(SWTResourceManager.getFont("Helvetica Neue", 12, SWT.NORMAL));
-		txtcompany.setBounds(164, 70, 246, 19);
-
-		Label lblformule = new Label(shell, SWT.NONE);
-		lblformule.setForeground(SWTResourceManager.getColor(0, 0, 0));
-		lblformule.setFont(SWTResourceManager.getFont("Helvetica Neue", 12, SWT.NORMAL));
-		lblformule.setBounds(10, 100, 163, 19);
-		lblformule.setText("Formula : ");
+		Label lblFormula = new Label(this, SWT.NONE);
+		lblFormula.setBounds(15, 24, 59, 18);
+		lblFormula.setText("Formula : ");
+		lblFormula.setFont(SWTResourceManager.getFont("Arial", 12, SWT.NORMAL));
+		lblFormula.setBounds(10, 113, 106, 25);
 		
-		txtformule = new Text(shell, SWT.BORDER);
-		txtformule.setFont(SWTResourceManager.getFont("Helvetica Neue", 12, SWT.NORMAL));
-		txtformule.setBounds(164, 100, 246, 19);
+		Label lblModule = new Label(this, SWT.NONE);
+		lblModule.setBounds(15, 45, 54, 18);
+		lblModule.setText("Module : ");
+		lblModule.setFont(SWTResourceManager.getFont("Arial", 12, SWT.NORMAL));
+		lblModule.setBounds(10, 182, 106, 25);
 		
-		Label lblmodul = new Label(shell, SWT.NONE);
-		lblmodul.setForeground(SWTResourceManager.getColor(0, 0, 0));
-		lblmodul.setFont(SWTResourceManager.getFont("Helvetica Neue", 12, SWT.NORMAL));
-		lblmodul.setBounds(10, 130, 163, 19);
-		lblmodul.setText("Modul : ");
+		Label lblPolicyNumber = new Label(this, SWT.NONE);
+		lblPolicyNumber.setBounds(15, 66, 91, 18);
+		lblPolicyNumber.setText("Policy number : ");
+		lblPolicyNumber.setFont(SWTResourceManager.getFont("Arial", 12, SWT.NORMAL));
+		lblPolicyNumber.setBounds(10, 251, 106, 25);
 		
-		txtmodul = new Text(shell, SWT.BORDER);
-		txtmodul.setFont(SWTResourceManager.getFont("Helvetica Neue", 12, SWT.NORMAL));
-		txtmodul.setBounds(164, 130, 246, 19);
+		Label lblBoat = new Label(this, SWT.NONE);
+		lblBoat.setBounds(15, 87, 39, 18);
+		lblBoat.setText("Boat : ");
+		lblBoat.setFont(SWTResourceManager.getFont("Arial", 12, SWT.NORMAL));
+		lblBoat.setBounds(10, 320, 106, 25);
 		
-		Label lblpolicy = new Label(shell, SWT.NONE);
-		lblpolicy.setForeground(SWTResourceManager.getColor(0, 0, 0));
-		lblpolicy.setFont(SWTResourceManager.getFont("Helvetica Neue", 12, SWT.NORMAL));
-		lblpolicy.setBounds(10, 160, 163, 19);
-		lblpolicy.setText("policy : ");
-		
-		txtpolicy = new Text(shell, SWT.BORDER);
-		txtpolicy.setFont(SWTResourceManager.getFont("Helvetica Neue", 12, SWT.NORMAL));
-		txtpolicy.setBounds(164, 160, 246, 19);
-		
-		Label lblboat = new Label(shell, SWT.NONE);
-		lblboat.setForeground(SWTResourceManager.getColor(0, 0, 0));
-		lblboat.setFont(SWTResourceManager.getFont("Helvetica Neue", 12, SWT.NORMAL));
-		lblboat.setBounds(10, 190, 163, 19);
-		lblboat.setText("Boat : ");
-		
-		txtboat = new Text(shell, SWT.BORDER);
-		txtboat.setFont(SWTResourceManager.getFont("Helvetica Neue", 12, SWT.NORMAL));
-		txtboat.setBounds(164, 190, 246, 19);
-		
-		Button btnCancel = new Button(shell, SWT.NONE);
-		btnCancel.setBounds(200, 240, 94, 28);
+		Button btnCancel = new Button(this, SWT.NONE);
+		btnCancel.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				shellMSearch.getShell().setVisible(false);
+			}
+		});
+		btnCancel.setBounds(15, 108, 68, 28);
+		btnCancel.setBounds(10, 389, 170, 25);
 		btnCancel.setText("Cancel");
 		
-		Button btnSearch = new Button(shell, SWT.BORDER);
-		btnSearch.setSelection(true);
-		btnSearch.setBounds(314, 240, 94, 28);
+		Button btnSearch = new Button(this, SWT.NONE);
+		btnSearch.setBounds(15, 139, 69, 28);
 		btnSearch.setText("Search");
+		btnSearch.setBounds(336, 388, 228, 25);
 		
-		CLabel lblNewLabel = new CLabel(shell, SWT.NONE);
-		lblNewLabel.setFont(SWTResourceManager.getFont("Diwan Kufi", 24, SWT.NORMAL));
-		lblNewLabel.setBounds(10, 10, 350, 60);
-		lblNewLabel.setText("Search...");
+		txtCompany = new Text(this, SWT.BORDER);
+		txtCompany.setBounds(15, 170, 64, 23);
+		txtCompany.setFont(SWTResourceManager.getFont("Arial", 12, SWT.NORMAL));
+		txtCompany.setBounds(241, 44, 323, 25);
 		
+		txtForumula = new Text(this, SWT.BORDER);
+		txtForumula.setBounds(15, 196, 64, 19);
+		txtForumula.setBounds(241, 113, 323, 25);
+		
+		txtModule = new Text(this, SWT.BORDER);
+		txtModule.setBounds(15, 218, 64, 19);
+		txtModule.setBounds(241, 182, 323, 25);
+		
+		txtPolicyNumber = new Text(this, SWT.BORDER);
+		txtPolicyNumber.setBounds(15, 240, 64, 19);
+		txtPolicyNumber.setBounds(241, 251, 323, 25);
+		
+		txtBoat = new Text(this, SWT.BORDER);
+		txtBoat.setBounds(15, 262, 64, 19);
+		txtBoat.setBounds(241, 320, 323, 25);
+
+	}
+
+	@Override
+	protected void checkSubclass() {
+		// Disable the check that prevents subclassing of SWT components
+	}
+	
+	
+	public void setDefaultValues(Display display) throws InvocationTargetException, InterruptedException {
+		window=this;
+		this.display=display;
+
 		
 	}
 }

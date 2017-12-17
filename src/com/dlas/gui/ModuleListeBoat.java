@@ -58,6 +58,8 @@ import com.dlas.dao.ModulBoat;
 import com.dlas.dao.ObjectDao;
 import com.dlas.gui.model.ModulBoatModel;
 import com.dlas.tools.XlsImpExp;
+import org.eclipse.swt.events.ShellAdapter;
+import org.eclipse.swt.events.ShellEvent;
 
 public class ModuleListeBoat {
 	private    DataBindingContext             m_bindingContext                              ;
@@ -82,12 +84,68 @@ public class ModuleListeBoat {
 	private    ModulBoatModel                 m_modulboatmodels       =new ModulBoatModel() ;
 	protected  static Shell                   shell                                         ;
 	private    static String                  APP_NAME                = "Wycc invoice"      ;
-   
-	private    static Integer                DisplayStatus            =0                    ;
-	private    List<ModulBoat>               deletemodulboat          =new ArrayList()      ;
+	private    static  Search                 search                                        ;
+	private    static Integer                 DisplayStatus            =0                   ;
+	private    List<ModulBoat>                deletemodulboat          =new ArrayList()     ;
+	private    Searchinfo                     infosearch                                    ;
+	
 	
 	public ModuleListeBoat(){
 	}
+	
+	
+	
+	public ModulBoat getModulboat() {
+		return modulboat;
+	}
+
+
+	public Text getTxtfournisseur() {
+		return txtfournisseur;
+	}
+
+
+	public Text getTxtmodule() {
+		return txtmodule;
+	}
+
+
+	public Text getTxtboat() {
+		return txtboat;
+	}
+
+
+	public Text getTextPolicyNumber() {
+		return textPolicyNumber;
+	}
+
+
+	public void setModulboat(ModulBoat modulboat) {
+		this.modulboat = modulboat;
+	}
+
+
+	public void setTxtfournisseur(Text txtfournisseur) {
+		this.txtfournisseur = txtfournisseur;
+	}
+
+
+	public void setTxtmodule(Text txtmodule) {
+		this.txtmodule = txtmodule;
+	}
+
+
+	public void setTxtboat(Text txtboat) {
+		this.txtboat = txtboat;
+	}
+
+
+	public void setTextPolicyNumber(Text textPolicyNumber) {
+		this.textPolicyNumber = textPolicyNumber;
+	}
+
+
+
 	public static Logger logger = LogManager.getLogger("wycc");
 	private Text text;
 	private Text textbankfee;
@@ -98,8 +156,33 @@ public class ModuleListeBoat {
 	/**
 	 * @wbp.parser.entryPoint
 	 */
+	
+	
 	protected void createContents() {
 		shellModul=new Shell();
+		shellModul.addShellListener(new ShellAdapter() {
+			@Override
+			public void shellDeactivated(ShellEvent arg0) {
+				logger.info("Desactivation de la fenêtre !");
+			}
+			@Override
+			public void shellActivated(ShellEvent arg0) {
+				logger.info("Activation de la fenêtre !");
+				if  (infosearch==null) {
+					infosearch=new Searchinfo("","","","","");
+				}
+						if (search!=null) {
+							infosearch.setCompany(search.getTxtCompany().getText());
+							infosearch.setFormula(search.getTxtForumula().getText());
+							infosearch.setModule(search.getTxtModule().getText());
+							infosearch.setPolicynumebr(search.getTxtPolicyNumber().getText());
+							infosearch.setBoat(search.getTxtBoat().getText());
+							
+							logger.info("search.getTxtCompany().getText() ="+search.getTxtCompany().getText());
+						}
+				
+			}
+		});
 		shellModul.setBackground(SWTResourceManager.getColor(245, 255, 250));
 		shellModul.setSize(961, 562);
 		RowLayout rl_shellModul = new RowLayout(SWT.HORIZONTAL);
@@ -177,12 +260,27 @@ public class ModuleListeBoat {
 		btnExport.setText("Export");
 		
 		Button btnSearch = new Button(btnrecord, SWT.NONE);
-		btnExport.addSelectionListener(new SelectionAdapter() {
+		btnSearch.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
 				//
 				String info=" The feature is under development !";
-				javax.swing.JOptionPane.showMessageDialog(null,info); 
+				if (search==null){
+					search =new Search(display,infosearch);
+				try {
+					search.setDefaultValues(display);
+					search.SearchDisplay(display);
+					
+					//search.dispose();
+					} catch (InvocationTargetException | InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				
+					}
+				} else 
+				{
+					search.setVisible(true);	
+				}
 			}
 		});
 		btnSearch.setText("Search");
@@ -544,10 +642,10 @@ public class ModuleListeBoat {
 	}
 	
 	public int open(Display display) {
-
-		//setDefaultValues(display);
+		if (infosearch==null){
+			infosearch=new Searchinfo("","","","","");
+		}
 		createContents();
-
 		Display.setAppName(APP_NAME);
 		shellModul.open();
 		shellModul.layout();
@@ -690,5 +788,53 @@ public class ModuleListeBoat {
 		
 	}
     
+
+    public class Searchinfo {
+    		public String company;
+    		public String formula;
+    		public String module;
+    		public String policynumebr;
+    		public String boat;
+			public Searchinfo(String company, String formula, String module, String policynumebr, String boat) {
+				super();
+				this.company = company;
+				this.formula = formula;
+				this.module = module;
+				this.policynumebr = policynumebr;
+				this.boat = boat;
+			}
+			public String getCompany() {
+				return company;
+			}
+			public String getFormula() {
+				return formula;
+			}
+			public String getModule() {
+				return module;
+			}
+			public String getPolicynumebr() {
+				return policynumebr;
+			}
+			public String getBoat() {
+				return boat;
+			}
+			public void setCompany(String company) {
+				this.company = company;
+			}
+			public void setFormula(String formula) {
+				this.formula = formula;
+			}
+			public void setModule(String module) {
+				this.module = module;
+			}
+			public void setPolicynumebr(String policynumebr) {
+				this.policynumebr = policynumebr;
+			}
+			public void setBoat(String boat) {
+				this.boat = boat;
+			}
+    		
+    }
+
 }
 
