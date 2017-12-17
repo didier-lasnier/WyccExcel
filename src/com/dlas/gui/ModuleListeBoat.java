@@ -194,21 +194,17 @@ public class ModuleListeBoat {
 		});
 		btnExport.setText("Export");
 		
-/*		Button btnSearch = new Button(btnrecord, SWT.NONE);
+		Button btnSearch = new Button(btnrecord, SWT.NONE);
 		btnExport.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
 				//
 				String info=" The feature is under development !";
-				Shell myshell=new Shell();
-				
-				//new SearchMainWindow();
-				
-				myshell.dispose();
+
 			}
 		});
 		btnSearch.setText("Search");
-*/
+
 		
 		
 		Composite btncollection = new Composite(buttonBar, SWT.BORDER);
